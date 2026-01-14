@@ -10,6 +10,12 @@ export const translations = {
       cta: "Download for Windows",
       secondary: "Frequent updates. Community-driven development. Join the journey."
     },
+    // Beta Notice
+    betaNotice: {
+      badge: "Beta Version",
+      title: "Currently Free!",
+      description: "ENDURE is in public beta and completely free to use (for now). We're building this together with the cycling community — enjoy full access while we continue to improve."
+    },
     // Features
     features: {
       sectionTitle: "Everything you need for",
@@ -89,6 +95,12 @@ export const translations = {
       subline: "Die <strong>wissenschaftlich fundierte Indoor Cycling App</strong>, die die echte Frage beantwortet: <em>\"Werde ich besser?\"</em> — Verfolge FTP- & VO2max-Trends, trainiere mit physiologisch gezielten Workouts und sieh deinen Fortschritt über die Zeit.",
       cta: "Download für Windows",
       secondary: "Häufige Updates. Community-getriebene Entwicklung. Sei dabei."
+    },
+    // Beta Notice
+    betaNotice: {
+      badge: "Beta Version",
+      title: "Aktuell Gratis!",
+      description: "ENDURE befindet sich in der öffentlichen Beta und ist komplett kostenlos nutzbar (aktuell). Wir bauen das gemeinsam mit der Radsport-Community — genieße vollen Zugriff während wir weiter verbessern."
     },
     // Features
     features: {
