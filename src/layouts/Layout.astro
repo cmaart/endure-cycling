@@ -12,6 +12,13 @@ const t = getTranslations(lang);
 
 const title = Astro.props.title || t.seo.title;
 const description = Astro.props.description || t.seo.description;
+
+// SEO URLs
+const siteUrl = 'https://www.endure-cycling.com';
+const currentPath = lang === 'de' ? '/de' : '/';
+const canonicalUrl = `${siteUrl}${currentPath}`;
+const enUrl = siteUrl;
+const deUrl = `${siteUrl}/de`;
 ---
 
 <!doctype html>
@@ -34,19 +41,37 @@ const description = Astro.props.description || t.seo.description;
     <!-- SEO Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl} />
+    
+    <!-- Hreflang for Multilingual SEO -->
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="de" href={deUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="ENDURE" />
+    <meta name="keywords" content="indoor cycling, FTP, VO2max, smart trainer, cycling app, training analysis, Windows cycling app, Bluetooth trainer" />
     <meta name="keywords" content="cycling, FTP, VO2max, power training, indoor cycling, smart trainer, cycling app, Windows" />
     <meta name="author" content="ENDURE" />
     
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/assets/ENDURE_lockup_exact_icon_4k_white_transparent.png" />
+    <meta property="og:image" content={`${siteUrl}/assets/screenshots/2026-01-14 10_18_41-Endure.png`} />
+    <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'de' ? 'en_US' : 'de_DE'} />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}/assets/screenshots/2026-01-14 10_18_41-Endure.png`} />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,6 +82,31 @@ const description = Astro.props.description || t.seo.description;
     <style is:global>
       @import "../styles/global.css";
     </style>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ENDURE",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Windows 10, Windows 11",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": description,
+      "screenshot": `${siteUrl}/assets/screenshots/2026-01-14 10_18_41-Endure.png`,
+      "softwareVersion": "Beta",
+      "inLanguage": lang,
+      "about": "Indoor cycling analysis app for tracking FTP and VO2max trends with smart trainer support",
+      "featureList": [
+        "FTP & VO2max tracking",
+        "Structured workouts",
+        "Smart trainer connectivity",
+        "Strava integration"
+      ]
+    })} />
   </head>
   <body class="antialiased">
     <slot />
