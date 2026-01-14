@@ -1,0 +1,79 @@
+---
+// Lightbox Component
+---
+
+<div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm transition-opacity duration-300 opacity-0" aria-hidden="true">
+  <div class="absolute top-4 right-4 z-50">
+    <button id="lightbox-close" class="text-white/70 hover:text-white p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  
+  <div class="w-full h-full flex items-center justify-center p-4 md:p-12">
+    <img id="lightbox-img" src="" alt="Zoomed view" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl transform scale-95 transition-transform duration-300" />
+  </div>
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const closeBtn = document.getElementById('lightbox-close');
+  const zoomableImages = document.querySelectorAll('[data-zoomable]');
+  
+  // Open lightbox
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = e.target as HTMLImageElement;
+      const src = target.src;
+      const alt = target.alt;
+      
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      
+      lightbox?.classList.remove('hidden');
+      // Small timeout to allow transition
+      setTimeout(() => {
+        lightbox?.classList.remove('opacity-0');
+        lightboxImg.classList.remove('scale-95');
+        lightboxImg.classList.add('scale-100');
+      }, 10);
+      
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+  });
+  
+  // Close lightbox functions
+  const closeLightbox = () => {
+    lightbox?.classList.add('opacity-0');
+    lightboxImg.classList.add('scale-95');
+    lightboxImg.classList.remove('scale-100');
+    
+    setTimeout(() => {
+      lightbox?.classList.add('hidden');
+      lightboxImg.src = '';
+    }, 300);
+    
+    document.body.style.overflow = ''; // Restore scrolling
+  };
+  
+  closeBtn?.addEventListener('click', closeLightbox);
+  
+  // Close on background click
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox || (e.target as HTMLElement).closest('.w-full')) {
+      if (e.target !== lightboxImg) {
+        closeLightbox();
+      }
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox?.classList.contains('hidden')) {
+      closeLightbox();
+    }
+  });
+</script>
