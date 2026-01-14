@@ -5,7 +5,7 @@ export const translations = {
     hero: {
       badge: "Indoor Cycling App for Smart Trainers",
       headline1: "Is your training working?",
-      headline2: "Track it. Know it. Improve.",
+      headline2: "Track it. Understand it. Improve.",
       subline: "The <strong>science-first indoor cycling app</strong> that answers the real question: <em>\"Am I getting better?\"</em> — Track FTP & VO2max trends, train with physiologically targeted workouts, and see your progress over time.",
       cta: "Download for Windows",
       secondary: "Frequent updates. Community-driven development. Join the journey."
@@ -85,7 +85,7 @@ export const translations = {
     hero: {
       badge: "Indoor Cycling App für Smart Trainer",
       headline1: "Funktioniert dein Training?",
-      headline2: "Tracke es. Wisse es. Verbessere dich.",
+      headline2: "Tracke es. Verstehe es. Verbessere dich.",
       subline: "Die <strong>wissenschaftlich fundierte Indoor Cycling App</strong>, die die echte Frage beantwortet: <em>\"Werde ich besser?\"</em> — Verfolge FTP- & VO2max-Trends, trainiere mit physiologisch gezielten Workouts und sieh deinen Fortschritt über die Zeit.",
       cta: "Download für Windows",
       secondary: "Häufige Updates. Community-getriebene Entwicklung. Sei dabei."
