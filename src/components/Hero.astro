@@ -1,5 +1,12 @@
 ---
-// Hero Section Component
+import { getTranslations } from '../i18n/translations';
+
+interface Props {
+  lang?: 'en' | 'de';
+}
+
+const { lang = 'en' } = Astro.props;
+const t = getTranslations(lang).hero;
 ---
 
 <section class="relative min-h-screen flex items-center overflow-hidden">
@@ -25,21 +32,17 @@
         <!-- Badge -->
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2f3340] border border-white/10 mb-6">
           <span class="w-2 h-2 bg-[#F05D23] rounded-full animate-pulse"></span>
-          <span class="text-sm text-[#a0a5b5]">Indoor Cycling App for Smart Trainers</span>
+          <span class="text-sm text-[#a0a5b5]">{t.badge}</span>
         </div>
         
         <!-- Headline -->
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-          <span class="gradient-text">Is your training working?</span>
-          <span class="block mt-2 text-white">Track it. Know it. Improve.</span>
+          <span class="gradient-text">{t.headline1}</span>
+          <span class="block mt-2 text-white">{t.headline2}</span>
         </h1>
         
         <!-- Subline -->
-        <p class="text-lg md:text-xl text-[#a0a5b5] mb-8 max-w-xl mx-auto lg:mx-0">
-          The <strong class="text-white">science-first indoor cycling app</strong> that answers the real question: 
-          <em class="text-[#d63c6b]">"Am I getting better?"</em> — Track FTP & VO2max trends, 
-          train with physiologically targeted workouts, and see your progress over time.
-        </p>
+        <p class="text-lg md:text-xl text-[#a0a5b5] mb-8 max-w-xl mx-auto lg:mx-0" set:html={t.subline}></p>
         
         <!-- CTA Button -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
@@ -47,14 +50,14 @@
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
             </svg>
-            Download for Windows
+            {t.cta}
           </a>
         </div>
         
         <!-- Secondary text -->
         <p class="text-sm text-[#6b7280] flex items-center gap-2 justify-center lg:justify-start">
           <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-          Frequent updates. Community-driven development. Join the journey.
+          {t.secondary}
         </p>
       </div>
       

@@ -1,5 +1,13 @@
 ---
+import { getTranslations } from '../i18n/translations';
 import FeatureCard from './FeatureCard.astro';
+
+interface Props {
+  lang?: 'en' | 'de';
+}
+
+const { lang = 'en' } = Astro.props;
+const t = getTranslations(lang).features;
 ---
 
 <section id="features" class="py-24 relative">
@@ -7,10 +15,10 @@ import FeatureCard from './FeatureCard.astro';
     <!-- Section Header -->
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">
-        Everything you need for <span class="gradient-text">data-driven training</span>
+        {t.sectionTitle} <span class="gradient-text">{t.sectionTitleHighlight}</span>
       </h2>
       <p class="text-[#a0a5b5] text-lg max-w-2xl mx-auto">
-        No fluff, no gimmicks. Just the tools that actually matter for your cycling performance.
+        {t.sectionSubtitle}
       </p>
     </div>
     
@@ -18,12 +26,12 @@ import FeatureCard from './FeatureCard.astro';
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Analytics & Trends -->
       <FeatureCard 
-        title="Analytics & Trends"
+        title={t.analytics.title}
         iconColor="pink"
         features={[
-          "Current FTP & VO2max Estimates",
-          "Long-term Trend Analysis (FTP & VO2max)",
-          "Power Profile Visualization"
+          t.analytics.feature1,
+          t.analytics.feature2,
+          t.analytics.feature3
         ]}
       >
         <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,12 +41,12 @@ import FeatureCard from './FeatureCard.astro';
       
       <!-- Structured Training -->
       <FeatureCard 
-        title="Structured Training"
+        title={t.training.title}
         iconColor="orange"
         features={[
-          "<strong>No-Bullshit Library:</strong> Physiologically targeted workouts (VO2max, Threshold) only. No 'kitchen sink' junk.",
-          "<strong>Universal Import:</strong> Supports .ZWO, .MRC, and .ERG files.",
-          "<strong>Quick Free Ride:</strong> Optional ERG mode to ride by watts instantly."
+          t.training.feature1,
+          t.training.feature2,
+          t.training.feature3
         ]}
       >
         <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -48,11 +56,11 @@ import FeatureCard from './FeatureCard.astro';
       
       <!-- Connectivity & Sync -->
       <FeatureCard 
-        title="Connectivity & Sync"
+        title={t.connectivity.title}
         iconColor="blue"
         features={[
-          "<strong>Bluetooth Smart:</strong> Connects to Smart Trainers, Power Meters & HR Monitors.",
-          "<strong>Strava Integration:</strong> Auto-Upload & History Sync (more platforms coming)."
+          t.connectivity.feature1,
+          t.connectivity.feature2
         ]}
       >
         <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,7 +79,7 @@ import FeatureCard from './FeatureCard.astro';
           data-zoomable
           class="relative rounded-2xl border border-white/10 w-full cursor-zoom-in hover:shadow-lg transition-shadow"
         />
-        <p class="text-center mt-4 text-[#a0a5b5] text-sm">Curated workout library with physiological targets</p>
+        <p class="text-center mt-4 text-[#a0a5b5] text-sm">{t.screenshot1Caption}</p>
       </div>
       <div class="relative group">
         <div class="absolute inset-0 bg-gradient-to-r from-[#F05D23]/20 to-[#d63c6b]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
@@ -81,7 +89,7 @@ import FeatureCard from './FeatureCard.astro';
           data-zoomable
           class="relative rounded-2xl border border-white/10 w-full cursor-zoom-in hover:shadow-lg transition-shadow"
         />
-        <p class="text-center mt-4 text-[#a0a5b5] text-sm">Import your own workouts from any source</p>
+        <p class="text-center mt-4 text-[#a0a5b5] text-sm">{t.screenshot2Caption}</p>
       </div>
     </div>
   </div>

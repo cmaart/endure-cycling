@@ -4,15 +4,29 @@ import Hero from '../components/Hero.astro';
 import Features from '../components/Features.astro';
 import Roadmap from '../components/Roadmap.astro';
 import Lightbox from '../components/Lightbox.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout>
+<Layout lang="en">
+  <LanguageSwitcher currentLang="en" />
   <main>
-    <Hero />
-    <Features />
-    <Roadmap />
+    <Hero lang="en" />
+    <Features lang="en" />
+    <Roadmap lang="en" />
   </main>
   <Lightbox />
-  <Footer />
+  <Footer lang="en" />
 </Layout>
+
+<script>
+  // Auto-redirect to German if browser is German and no preference set
+  const preferredLang = localStorage.getItem('preferredLang');
+  
+  if (!preferredLang) {
+    const browserLang = navigator.language.toLowerCase();
+    if (browserLang.startsWith('de')) {
+      window.location.href = '/de';
+    }
+  }
+</script>

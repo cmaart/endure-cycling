@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Features from '../../components/Features.astro';
+import Roadmap from '../../components/Roadmap.astro';
+import Lightbox from '../../components/Lightbox.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout lang="de">
+  <LanguageSwitcher currentLang="de" />
+  <main>
+    <Hero lang="de" />
+    <Features lang="de" />
+    <Roadmap lang="de" />
+  </main>
+  <Lightbox />
+  <Footer lang="de" />
+</Layout>

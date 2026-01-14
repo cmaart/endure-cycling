@@ -1,0 +1,77 @@
+---
+const { currentLang } = Astro.props;
+const isGerman = currentLang === 'de';
+---
+
+<div id="lang-switcher" class="fixed top-4 right-4 z-40 transition-transform duration-300">
+  <div class="flex gap-2 bg-[#2f3340] rounded-full p-1 border border-white/10">
+    <a
+      href="/"
+      class={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${!isGerman ? 'bg-[#F05D23] text-white' : 'text-[#a0a5b5] hover:text-white'}`}
+      data-lang="en"
+    >
+      EN
+    </a>
+    <a
+      href="/de"
+      class={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${isGerman ? 'bg-[#F05D23] text-white' : 'text-[#a0a5b5] hover:text-white'}`}
+      data-lang="de"
+    >
+      DE
+    </a>
+  </div>
+</div>
+
+<script>
+  // Store language preference
+  const langLinks = document.querySelectorAll('[data-lang]');
+  
+  langLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const lang = (e.currentTarget as HTMLElement).dataset.lang;
+      if (lang) {
+        localStorage.setItem('preferredLang', lang);
+      }
+    });
+  });
+  
+  // Hide on scroll (mobile only)
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+  const switcher = document.getElementById('lang-switcher');
+  
+  const hideSwitcherOnScroll = () => {
+    const isMobile = window.innerWidth < 768; // md breakpoint
+    
+    if (!isMobile || !switcher) {
+      if (switcher) {
+        switcher.style.transform = 'translateY(0)';
+      }
+      return;
+    }
+    
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Scrolling down & past threshold
+      switcher.style.transform = 'translateY(-100px)';
+    } else {
+      // Scrolling up or near top
+      switcher.style.transform = 'translateY(0)';
+    }
+    
+    lastScrollY = currentScrollY;
+    ticking = false;
+  };
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(hideSwitcherOnScroll);
+      ticking = true;
+    }
+  });
+  
+  window.addEventListener('resize', () => {
+    hideSwitcherOnScroll();
+  });
+</script>

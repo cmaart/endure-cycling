@@ -1,17 +1,21 @@
 ---
+import { getTranslations } from '../i18n/translations';
+
 interface Props {
   title?: string;
   description?: string;
+  lang?: 'en' | 'de';
 }
 
-const { 
-  title = "Endure - Science-First Cycling App for Windows",
-  description = "Track your FTP & VO2max trends. Train with physiologically targeted workouts. Built for Windows cyclists who want data-driven training."
-} = Astro.props;
+const { lang = 'en' } = Astro.props;
+const t = getTranslations(lang);
+
+const title = Astro.props.title || t.seo.title;
+const description = Astro.props.description || t.seo.description;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
