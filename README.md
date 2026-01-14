@@ -1,43 +1,38 @@
-# Astro Starter Kit: Minimal
+<div align="center">
+  
+<img src="public/assets/ENDURE_lockup_exact_icon_4k_white_transparent.png" alt="ENDURE Logo" width="400"/>
 
-```sh
-npm create astro@latest -- --template minimal
-```
+# ENDURE Landing Page
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+**🌍 Live at [www.endure-cycling.com](https://www.endure-cycling.com)**
 
-## 🚀 Project Structure
+The science-first indoor cycling analysis app for Windows.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+<img src="public/assets/screenshots/2026-01-14 10_18_41-Endure.png" alt="ENDURE Dashboard" width="800"/>
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## What is ENDURE?
 
-Any static assets, like images, can be placed in the `public/` directory.
+ENDURE is an **indoor cycling app** that answers the real question: **"Is your training working?"**
 
-## 🧞 Commands
+Track FTP & VO2max trends, train with physiologically targeted workouts, and see your progress over time.
 
-All commands are run from the root of the project, from a terminal:
+✅ **Available Now** for Windows 10/11  
+🚧 **Coming Soon** to macOS, Android, iOS
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## Contributing
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Found a bug or have a feature request?
+
+👉 **[Create an Issue on GitHub](https://github.com/cmaart/endure-website/issues)**
+
+---
+
+© 2026 ENDURE. All rights reserved.
+
+</div>
