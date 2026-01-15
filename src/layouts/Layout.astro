@@ -26,7 +26,15 @@ const deUrl = `${siteUrl}/de`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/assets/ENDURE_E_icon_exact_from_screenshot.png" />
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/android-chrome-512x512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WFNG9Y90K"></script>
@@ -53,8 +61,7 @@ const deUrl = `${siteUrl}/de`;
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow" />
     <meta name="author" content="ENDURE" />
-    <meta name="keywords" content="indoor cycling, FTP, VO2max, smart trainer, cycling app, training analysis, Windows cycling app, Bluetooth trainer" />
-    <meta name="keywords" content="cycling, FTP, VO2max, power training, indoor cycling, smart trainer, cycling app, Windows" />
+    <meta name="keywords" content="indoor cycling, indoor trainer app, smart trainer, cycling app, Bluetooth trainer, FTP tracking, VO2max analysis, structured workouts, ride analytics" />
     <meta name="author" content="ENDURE" />
     
     <!-- Open Graph / Social -->
@@ -99,12 +106,13 @@ const deUrl = `${siteUrl}/de`;
       "screenshot": `${siteUrl}/assets/screenshots/2026-01-14 10_18_41-Endure.png`,
       "softwareVersion": "Beta",
       "inLanguage": lang,
-      "about": "Indoor cycling analysis app for tracking FTP and VO2max trends with smart trainer support",
+      "about": "Indoor cycling app with smart trainer connectivity and advanced ride analytics (FTP & VO2max tracking). No automated training plans.",
       "featureList": [
-        "FTP & VO2max tracking",
-        "Structured workouts",
-        "Smart trainer connectivity",
-        "Strava integration"
+        "FTP & VO2max trend tracking",
+        "Structured workout library",
+        "Smart trainer connectivity via Bluetooth",
+        "Strava auto-upload",
+        "Ride history analytics"
       ]
     })} />
   </head>

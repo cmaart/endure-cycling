@@ -19,8 +19,8 @@ export const translations = {
     // Features
     features: {
       sectionTitle: "Everything you need for",
-      sectionTitleHighlight: "data-driven training",
-      sectionSubtitle: "No fluff, no gimmicks. Just the tools that actually matter for your cycling performance.",
+      sectionTitleHighlight: "indoor training & analysis",
+      sectionSubtitle: "No fluff, no gimmicks. A curated workout library, advanced ride analytics, and seamless trainer connectivity.",
       
       analytics: {
         title: "Analytics & Trends",
@@ -66,7 +66,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      tagline: "The science-first cycling analysis app. Built for athletes who want real data, not gimmicks.",
+      tagline: "Driven by data. Built to endure.",
       
       requirementsTitle: "System Requirements",
       windows: "Windows 10 / 11",
@@ -82,8 +82,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "Endure - Science-First Cycling App for Windows",
-      description: "Track your FTP & VO2max trends. Train with physiologically targeted workouts. Built for Windows cyclists who want data-driven training."
+      title: "Endure - Indoor Cycling App with Advanced Ride Analytics",
+      description: "Indoor trainer app with smart trainer connectivity. Ride structured workouts and track your FTP & VO2max trends over time. No training plans — just ride and analyze."
     }
   },
   de: {
@@ -105,8 +105,8 @@ export const translations = {
     // Features
     features: {
       sectionTitle: "Alles was du brauchst für",
-      sectionTitleHighlight: "datenbasiertes Training",
-      sectionSubtitle: "Kein Schnickschnack, keine Spielereien. Nur die Tools, die wirklich wichtig sind für deine Rad-Performance.",
+      sectionTitleHighlight: "Indoor-Training & Analyse",
+      sectionSubtitle: "Kein Schnickschnack, keine Spielereien. Kuratierte Workout-Bibliothek, erweiterte Fahrt-Analysen und nahtlose Trainer-Anbindung.",
       
       analytics: {
         title: "Analysen & Trends",
@@ -152,7 +152,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      tagline: "Die wissenschaftlich fundierte Rad-Analyse-App. Gebaut für Athleten, die echte Daten wollen, keine Spielereien.",
+      tagline: "Driven by data. Built to endure.",
       
       requirementsTitle: "Systemvoraussetzungen",
       windows: "Windows 10 / 11",
@@ -168,8 +168,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "Endure - Wissenschaftliche Cycling App für Windows",
-      description: "Verfolge deine FTP- & VO2max-Trends. Trainiere mit physiologisch gezielten Workouts. Gebaut für Windows-Radfahrer, die datenbasiertes Training wollen."
+      title: "Endure - Indoor Cycling App mit erweiterter Fahrt-Analyse",
+      description: "Indoor Trainer App mit Smart Trainer Anbindung. Fahre strukturierte Workouts und verfolge deine FTP- & VO2max-Trends. Keine Trainingspläne — einfach fahren und analysieren."
     }
   }
 };
