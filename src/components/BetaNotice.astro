@@ -34,6 +34,16 @@ const isAvailable = config.isProductAvailable;
       <p class="text-[#a0a5b5] text-lg leading-relaxed">
         {isAvailable ? t.description : t.descriptionComingSoon}
       </p>
+
+      {isAvailable && (
+        <div class="mt-8 flex justify-center">
+          <img 
+            src="/assets/marketing/Available_Windows_Android_LandscapeFormat.png" 
+            alt="Available on Windows and Android" 
+            class="w-full max-w-lg md:max-w-xl h-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+          />
+        </div>
+      )}
     </div>
   </div>
 </section>
