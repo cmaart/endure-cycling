@@ -9,8 +9,26 @@ export const translations = {
       subline: "The <strong>fast, rock-solid indoor cycling app</strong> that just works. Connect your smart trainer, ride structured workouts, and track your FTP & VO2max trends over time — without the bloat.",
       cta: "Download for Windows",
       secondary: "Frequent updates. Community-driven development. Join the journey.",
-      comingSoon: "Coming Soon",
       comingSoonSecondary: "Windows release coming soon. Stay tuned for updates!"
+    },
+    // App Showcase
+    appShowcase: {
+      vo2max: {
+        title: "VO2Max Estimation",
+        description: "Analyze your potential with every ride."
+      },
+      crossPlatform: {
+        title: "Desktop & Mobile",
+        description: "Train on Windows, Android, and more."
+      },
+      smartTrainer: {
+        title: "Smart Trainer Control",
+        description: "Automatic resistance control for your workouts."
+      },
+      ftpTrend: {
+        title: "FTP Trend",
+        description: "Monitor your fitness progress visually."
+      }
     },
     // Beta Notice
     betaNotice: {
@@ -116,6 +134,25 @@ export const translations = {
       secondary: "Häufige Updates. Community-getriebene Entwicklung. Sei dabei.",
       comingSoon: "Demnächst Verfügbar",
       comingSoonSecondary: "Windows-Release kommt bald. Bleib dran für Updates!"
+    },
+    // App Showcase
+    appShowcase: {
+      vo2max: {
+        title: "VO2Max Schätzung",
+        description: "Analysiere dein Potenzial bei jeder Fahrt."
+      },
+      crossPlatform: {
+        title: "Desktop & Mobile",
+        description: "Trainiere auf Windows, Android und mehr."
+      },
+      smartTrainer: {
+        title: "Smart Trainer Steuerung",
+        description: "Automatische Widerstandssteuerung für deine Workouts."
+      },
+      ftpTrend: {
+        title: "FTP Entwicklung",
+        description: "Überwache deinen Fitnessfortschritt visuell."
+      }
     },
     // Beta Notice
     betaNotice: {
