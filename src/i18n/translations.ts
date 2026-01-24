@@ -116,7 +116,7 @@ export const translations = {
     videoDemo: {
       title: "See It",
       titleHighlight: "In Action",
-      subtitle: "From app start to riding in under 30 seconds. No bloat, no waiting.",
+      subtitle: "From app start to riding in under 30 seconds. Precise training, no detours.",
       caption: "App start to ride — real speed, no time-lapse"
     },
     // SEO
@@ -240,8 +240,8 @@ export const translations = {
     // Video Demo
     videoDemo: {
       title: "Erlebe Es",
-      titleHighlight: "In Aktion",
-      subtitle: "Vom App-Start bis zur Fahrt in unter 30 Sekunden. Kein Bloat, kein Warten.",
+      titleHighlight: "In Action",
+      subtitle: "Vom App-Start bis zur Fahrt in unter 30 Sekunden. Präzises Training, ohne Umwege.",
       caption: "App-Start bis Fahrt — echte Geschwindigkeit, kein Zeitraffer"
     },
     // SEO

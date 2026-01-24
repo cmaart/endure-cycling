@@ -84,6 +84,10 @@ body {
   box-shadow: 0 10px 30px rgba(240, 93, 35, 0.4);
 }
 
+.text-gradient-primary {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#F05D23] to-[#d63c6b];
+}
+
 /* Animation */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }

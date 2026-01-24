@@ -40,7 +40,7 @@ const isAvailable = config.isProductAvailable;
       <!-- Headline -->
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
         <span class="block text-xl md:text-2xl font-medium text-[#F05D23] mb-2 tracking-wide uppercase">{t.tagline}</span>
-        <span class="gradient-text">{t.headline1}</span>
+        <span class="text-gradient-primary">{t.headline1}</span>
         <span class="block mt-2 text-white">{t.headline2}</span>
       </h1>
       
@@ -226,11 +226,7 @@ const isAvailable = config.isProductAvailable;
   </div>
 </section>
 
-<style>
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#F05D23] to-[#d63c6b];
-  }
-</style>
+
 
 <script>
   // Track download clicks
