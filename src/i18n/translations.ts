@@ -111,6 +111,8 @@ export const translations = {
       linksTitle: "Links",
       github: "GitHub",
       privacy: "Privacy Policy",
+      terms: "Terms of Use",
+      imprint: "Imprint / Legal Notice",
       contact: "Contact",
       
       copyright: "ENDURE. All rights reserved.",
@@ -240,6 +242,8 @@ export const translations = {
       linksTitle: "Links",
       github: "GitHub",
       privacy: "Datenschutz",
+      terms: "Nutzungsbedingungen",
+      imprint: "Impressum / Legal Notice",
       contact: "Kontakt",
       
       copyright: "ENDURE. Alle Rechte vorbehalten.",
