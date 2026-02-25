@@ -88,9 +88,9 @@ export const translations = {
       subtitle: "Frequent Updates — To the moon 🚀",
       
       windows: "Windows",
-      windowsStatus: "Available Now",
+      windowsStatus: "Coming Soon",
       macos: "macOS",
-      macosStatus: "Coming Soon",
+      macosStatus: "Planned",
       android: "Android",
       androidStatus: "Coming Soon",
       ios: "iOS",
@@ -227,9 +227,9 @@ export const translations = {
       subtitle: "Häufige Updates — To the moon 🚀",
       
       windows: "Windows",
-      windowsStatus: "Jetzt Verfügbar",
+      windowsStatus: "Demnächst",
       macos: "macOS",
-      macosStatus: "Demnächst",
+      macosStatus: "Geplant",
       android: "Android",
       androidStatus: "Demnächst",
       ios: "iOS",

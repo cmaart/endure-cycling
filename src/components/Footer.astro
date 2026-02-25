@@ -21,27 +21,8 @@ const currentYear = new Date().getFullYear();
         </p>
       </div>
       
-      <!-- System Requirements -->
-      <div>
-        <h4 class="font-bold mb-4 text-slate-900">{t.requirementsTitle}</h4>
-        <ul class="space-y-2 text-slate-600 font-medium text-sm">
-          <li class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-[#F05D23]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
-            </svg>
-            {t.windows}
-          </li>
-          <li class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-[#3b82f6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.143 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
-            </svg>
-            {t.bluetooth}
-          </li>
-        </ul>
-      </div>
-      
       <!-- Links -->
-      <div>
+      <div class="lg:col-start-4">
         <h4 class="font-bold mb-4 text-slate-900">{t.linksTitle}</h4>
         <ul class="space-y-2">
           <li>

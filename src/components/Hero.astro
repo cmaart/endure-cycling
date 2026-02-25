@@ -11,7 +11,7 @@ const isAvailable = config.isProductAvailable;
 <section class="relative min-h-screen flex flex-col pt-32 overflow-hidden">
   <!-- Background decoration -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-b from-[#d63c6b]/10 to-[#6b4c9a]/10 rounded-full blur-3xl animate-pulse-glow"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-b from-[#F05D23]/5 to-slate-200/20 rounded-full blur-3xl"></div>
   </div>
   
   <div class="container mx-auto px-6 relative z-10">
@@ -77,9 +77,9 @@ const isAvailable = config.isProductAvailable;
     <div class="relative max-w-6xl mx-auto mt-12 mb-20">
       <!-- Central Phone Image -->
       <div class="relative z-20 mx-auto w-full max-w-[280px] lg:max-w-[400px]">
-        <div class="relative overflow-hidden" style="mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);">
+        <div class="relative overflow-hidden">
           <img 
-            src="/assets/marketing/Hand_app.min.min.webp" 
+            src="/assets/marketing/Hand_app.min.min.crop.webp" 
             alt="Endure App Interface" 
             title="Endure App Dashboard"
             class="w-full h-auto"
@@ -91,9 +91,9 @@ const isAvailable = config.isProductAvailable;
       <svg class="absolute inset-0 w-full h-full pointer-events-none hidden lg:block z-0" viewBox="0 0 100 100" preserveAspectRatio="none" style="stroke-dasharray: 10; stroke-dashoffset: 10;">
           <defs>
               <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="rgba(240, 93, 35, 0.1)" />
-                  <stop offset="50%" stop-color="rgba(214, 60, 107, 0.4)" />
-                  <stop offset="100%" stop-color="rgba(240, 93, 35, 0.1)" />
+                  <stop offset="0%" stop-color="rgba(240, 93, 35, 0.05)" />
+                  <stop offset="50%" stop-color="rgba(240, 93, 35, 0.2)" />
+                  <stop offset="100%" stop-color="rgba(240, 93, 35, 0.05)" />
               </linearGradient>
           </defs>
           <!-- Top Left -->
@@ -109,14 +109,14 @@ const isAvailable = config.isProductAvailable;
       <!-- Mobile Connected Layout -->
       <div class="relative lg:hidden mt-8">
         <!-- Vertical Line -->
-        <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#F05D23]/50 to-[#d63c6b]/10 md:left-1/2 md:-ml-px"></div>
+        <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#F05D23]/30 to-slate-200 md:left-1/2 md:-ml-px"></div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
            <!-- Refactored Feature Nodes for Mobile List -->
           {/* VO2Max Estimate */}
           <div class="relative pl-16 md:pl-0 md:pr-12 md:text-right">
              <!-- Dot -->
-             <div class="absolute left-[21px] top-6 w-3 h-3 bg-[#F05D23] rounded-full shadow-lg shadow-[#F05D23]/50 md:left-auto md:right-[-42px] md:top-6 z-10"></div>
+             <div class="absolute left-[21px] top-6 w-3 h-3 bg-[#F05D23] rounded-full shadow-md shadow-[#F05D23]/20 md:left-auto md:right-[-42px] md:top-6 z-10"></div>
              
              <div class="bg-white/90 backdrop-blur-sm border border-slate-200 shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow">
                 <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center gap-3 md:justify-end">
@@ -130,11 +130,11 @@ const isAvailable = config.isProductAvailable;
           {/* Cross Platform */}
           <div class="relative pl-16 md:pl-12 md:mt-24">
              <!-- Dot -->
-             <div class="absolute left-[21px] top-6 w-3 h-3 bg-[#d63c6b] rounded-full shadow-lg shadow-[#d63c6b]/50 md:left-[-42px] md:top-6 z-10"></div>
+             <div class="absolute left-[21px] top-6 w-3 h-3 bg-slate-400 rounded-full shadow-md shadow-slate-200 md:left-[-42px] md:top-6 z-10"></div>
              
              <div class="bg-white/90 backdrop-blur-sm border border-slate-200 shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow">
                 <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center gap-3">
-                   <span class="text-[#d63c6b]">{ts.crossPlatform.title}</span>
+                   <span class="text-slate-800">{ts.crossPlatform.title}</span>
                 </h3>
                 <p class="text-slate-600 font-medium text-sm leading-relaxed">{ts.crossPlatform.description}</p>
             </div>
@@ -143,7 +143,7 @@ const isAvailable = config.isProductAvailable;
           {/* Smart Trainer Control */}
            <div class="relative pl-16 md:pl-0 md:pr-12 md:text-right">
              <!-- Dot -->
-             <div class="absolute left-[21px] top-6 w-3 h-3 bg-[#F05D23] rounded-full shadow-lg shadow-[#F05D23]/50 md:left-auto md:right-[-42px] md:top-6 z-10"></div>
+             <div class="absolute left-[21px] top-6 w-3 h-3 bg-[#F05D23] rounded-full shadow-md shadow-[#F05D23]/20 md:left-auto md:right-[-42px] md:top-6 z-10"></div>
              
              <div class="bg-white/90 backdrop-blur-sm border border-slate-200 shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow">
                  <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center gap-3 md:justify-end">
@@ -157,11 +157,11 @@ const isAvailable = config.isProductAvailable;
           {/* FTP Trend */}
            <div class="relative pl-16 md:pl-12 md:mt-24">
              <!-- Dot -->
-             <div class="absolute left-[21px] top-6 w-3 h-3 bg-[#d63c6b] rounded-full shadow-lg shadow-[#d63c6b]/50 md:left-[-42px] md:top-6 z-10"></div>
+             <div class="absolute left-[21px] top-6 w-3 h-3 bg-slate-400 rounded-full shadow-md shadow-slate-200 md:left-[-42px] md:top-6 z-10"></div>
 
              <div class="bg-white/90 backdrop-blur-sm border border-slate-200 shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow">
                  <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center gap-3">
-                   <span class="text-[#d63c6b]">{ts.ftpTrend.title}</span>
+                   <span class="text-slate-800">{ts.ftpTrend.title}</span>
                  </h3>
                 <p class="text-slate-600 font-medium text-sm leading-relaxed">{ts.ftpTrend.description}</p>
             </div>
@@ -175,7 +175,7 @@ const isAvailable = config.isProductAvailable;
         <div class="group relative p-6 lg:p-0 my-4 lg:my-0 flex flex-col lg:max-w-xs lg:absolute lg:top-[12%] lg:left-[-4%] lg:text-right">
              <div class="lg:hidden absolute inset-0 bg-white border border-slate-200 rounded-xl -z-10 shadow-sm"></div>
              <div class="flex flex-col lg:items-end relative z-10"> 
-                <div class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-[#F05D23] to-[#d63c6b] flex items-center justify-center text-white shadow-lg shadow-[#F05D23]/20">
+                <div class="w-12 h-12 mb-4 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#F05D23] shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 mb-2">{ts.vo2max.title}</h3>
@@ -187,7 +187,7 @@ const isAvailable = config.isProductAvailable;
         <div class="group relative p-6 lg:p-0 my-4 lg:my-0 flex flex-col lg:max-w-xs lg:absolute lg:top-[12%] lg:right-[-4%] lg:text-left">
              <div class="lg:hidden absolute inset-0 bg-white border border-slate-200 rounded-xl -z-10 shadow-sm"></div>
              <div class="flex flex-col lg:items-start relative z-10"> 
-                <div class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-[#F05D23] to-[#d63c6b] flex items-center justify-center text-white shadow-lg shadow-[#F05D23]/20">
+                <div class="w-12 h-12 mb-4 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#F05D23] shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 mb-2">{ts.crossPlatform.title}</h3>
@@ -199,7 +199,7 @@ const isAvailable = config.isProductAvailable;
         <div class="group relative p-6 lg:p-0 my-4 lg:my-0 flex flex-col lg:max-w-xs lg:absolute lg:bottom-[20%] lg:left-[-4%] lg:text-right">
              <div class="lg:hidden absolute inset-0 bg-white border border-slate-200 rounded-xl -z-10 shadow-sm"></div>
              <div class="flex flex-col lg:items-end relative z-10"> 
-                <div class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-[#F05D23] to-[#d63c6b] flex items-center justify-center text-white shadow-lg shadow-[#F05D23]/20">
+                <div class="w-12 h-12 mb-4 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#F05D23] shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10" /></svg>
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 mb-2">{ts.smartTrainer.title}</h3>
@@ -211,7 +211,7 @@ const isAvailable = config.isProductAvailable;
         <div class="group relative p-6 lg:p-0 my-4 lg:my-0 flex flex-col lg:max-w-xs lg:absolute lg:bottom-[20%] lg:right-[-4%] lg:text-left">
              <div class="lg:hidden absolute inset-0 bg-white border border-slate-200 rounded-xl -z-10 shadow-sm"></div>
              <div class="flex flex-col lg:items-start relative z-10"> 
-                <div class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-[#F05D23] to-[#d63c6b] flex items-center justify-center text-white shadow-lg shadow-[#F05D23]/20">
+                <div class="w-12 h-12 mb-4 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#F05D23] shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 mb-2">{ts.ftpTrend.title}</h3>

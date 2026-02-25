@@ -51,12 +51,12 @@ body {
 }
 
 .glow-pink {
-  box-shadow: 0 0 60px 20px rgba(214, 60, 107, 0.3),
-              0 0 100px 40px rgba(107, 76, 154, 0.2);
+  box-shadow: 0 0 60px 20px rgba(240, 93, 35, 0.05),
+              0 0 100px 40px rgba(71, 85, 105, 0.05);
 }
 
 .glow-orange {
-  box-shadow: 0 0 30px 10px rgba(240, 93, 35, 0.3);
+  box-shadow: 0 0 30px 10px rgba(240, 93, 35, 0.1);
 }
 
 .card-surface {
@@ -86,7 +86,7 @@ body {
 }
 
 .text-gradient-primary {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#F05D23] to-[#d63c6b];
+  @apply text-[#F05D23];
 }
 
 /* Animation */
