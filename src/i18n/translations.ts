@@ -129,6 +129,14 @@ export const translations = {
     seo: {
       title: "Endure - Fast, Stable Indoor Cycling App with Deep Analytics",
       description: "Ready to ride in under 30 seconds. Crash-proof sessions with auto-resume. Track FTP & VO2max trends from indoor and outdoor rides. No bloat, no training plans — just ride and analyze."
+    },
+    // Cookie Banner
+    cookieBanner: {
+      title: "We use cookies",
+      description: "We use cookies and Google Analytics to analyze traffic, improve your experience, and understand how the website is used. You can choose to accept or decline tracking cookies.",
+      accept: "Accept",
+      decline: "Decline",
+      privacyLink: "Read our Privacy Policy"
     }
   },
   de: {
@@ -260,6 +268,14 @@ export const translations = {
     seo: {
       title: "Endure - Schnelle, stabile Indoor Cycling App mit tiefgehender Analyse",
       description: "In unter 30 Sekunden fahrbereit. Crash-sichere Sessions mit Auto-Resume. Verfolge FTP- & VO2max-Trends von Indoor- und Outdoor-Fahrten. Kein Bloat, keine Trainingspläne — einfach fahren und analysieren."
+    },
+    // Cookie Banner
+    cookieBanner: {
+      title: "Wir verwenden Cookies",
+      description: "Wir verwenden Cookies und Google Analytics, um den Traffic zu analysieren, dein Erlebnis zu verbessern und zu verstehen, wie die Website genutzt wird. Du kannst Tracking-Cookies akzeptieren oder ablehnen.",
+      accept: "Akzeptieren",
+      decline: "Ablehnen",
+      privacyLink: "Zur Datenschutzerklärung"
     }
   }
 };
