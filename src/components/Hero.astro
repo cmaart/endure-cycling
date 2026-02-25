@@ -41,7 +41,18 @@ const isAvailable = config.isProductAvailable;
       </h1>
       
       <!-- Subline -->
-      <p class="text-xl md:text-2xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed font-medium" set:html={t.subline}></p>
+      <p class="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed font-medium" set:html={t.subline}></p>
+      
+      <!-- Integration -->
+      <div class="flex justify-center items-center mb-10 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <a href="https://www.strava.com" target="_blank" rel="noopener" aria-label="Powered by Strava">
+          <img 
+            src="/assets/pwrdBy_strava_orange/api_logo_pwrdBy_strava_horiz_orange.svg" 
+            alt="Powered by Strava" 
+            class="h-5 md:h-6 grayscale hover:grayscale-0 transition-all duration-300"
+          />
+        </a>
+      </div>
       
       {isAvailable ? (
         <!-- CTA Button -->
