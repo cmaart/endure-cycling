@@ -3,55 +3,55 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Privacy Policy">
-  <main class="container mx-auto px-6 py-32 max-w-4xl text-white/90">
-    <h1 class="text-3xl md:text-5xl font-bold text-white mb-8">PRIVACY POLICY</h1>
-    <p class="mb-8 text-[#a0a5b5]">Last updated: 2024-02-23</p>
+  <main class="container mx-auto px-6 py-32 max-w-4xl text-slate-800">
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">PRIVACY POLICY</h1>
+    <p class="mb-8 text-slate-500 font-medium">Last updated: 2024-02-23</p>
     
     <div class="space-y-6 text-lg">
       <p>This Privacy Policy explains how ENDURE (“we”, “us”, “our”) collects, uses, and shares data when you use the ENDURE mobile app, desktop app (if available), and website endure-cycling.com (together, the “Services”).</p>
       
-      <h2 class="text-2xl font-bold text-white pt-6">1. Controller / Contact</h2>
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">1. Controller / Contact</h2>
       <p>Controller: Christoph Martin (ENDURE)<br>
       Address: Fischerweg 8, 7503 Großpetersdorf, Austria<br>
       Email: <a href="mailto:info@endure-cycling.com" class="text-[#F05D23] hover:underline">info@endure-cycling.com</a></p>
 
-      <h2 class="text-2xl font-bold text-white pt-6">2. Data we collect</h2>
-      <h3 class="text-xl font-semibold text-white">2.1 Account & identity data</h3>
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">2. Data we collect</h2>
+      <h3 class="text-xl font-semibold text-slate-900">2.1 Account & identity data</h3>
       <ul class="list-disc pl-6 space-y-2">
         <li>Email address and authentication metadata (via Supabase Auth)</li>
         <li>User ID and basic account settings</li>
       </ul>
 
-      <h3 class="text-xl font-semibold text-white">2.2 Training, workout & performance data</h3>
+      <h3 class="text-xl font-semibold text-slate-900">2.2 Training, workout & performance data</h3>
       <ul class="list-disc pl-6 space-y-2">
         <li>Workouts you create or import (e.g., .zwo, .erg, .mrc, .fit and related metadata)</li>
         <li>Ride/session data recorded in ENDURE (e.g., power, cadence, heart rate, timestamps, intervals)</li>
         <li>Derived analytics and trends (e.g., FTP and VO₂max estimates, time-in-zone, training load)</li>
       </ul>
 
-      <h3 class="text-xl font-semibold text-white">2.3 Device & technical data</h3>
+      <h3 class="text-xl font-semibold text-slate-900">2.3 Device & technical data</h3>
       <ul class="list-disc pl-6 space-y-2">
         <li>Device model, OS version, app version/build, language, time zone</li>
         <li>Connectivity diagnostics needed for trainer/sensor integration (e.g., Bluetooth status, supported capabilities)</li>
         <li>Push notification token(s) (FCM/APNs)</li>
       </ul>
 
-      <h3 class="text-xl font-semibold text-white">2.4 Crash & error diagnostics (Sentry)</h3>
+      <h3 class="text-xl font-semibold text-slate-900">2.4 Crash & error diagnostics (Sentry)</h3>
       <ul class="list-disc pl-6 space-y-2">
         <li>Crash reports, error logs, stack traces, and performance traces</li>
         <li>Limited device/app context to diagnose issues (as configured)</li>
       </ul>
 
-      <h3 class="text-xl font-semibold text-white">2.5 Website analytics (Google Analytics)</h3>
+      <h3 class="text-xl font-semibold text-slate-900">2.5 Website analytics (Google Analytics)</h3>
       <ul class="list-disc pl-6 space-y-2">
         <li>Website usage data (e.g., page views, interactions, device/browser information, approximate location)</li>
         <li>Cookies and similar identifiers may be used depending on configuration and applicable consent requirements.</li>
       </ul>
 
-      <h2 class="text-2xl font-bold text-white pt-6">3. Why we process your data (purposes) and legal bases (GDPR)</h2>
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">3. Why we process your data (purposes) and legal bases (GDPR)</h2>
       <p>If you are located in the EEA/UK/Switzerland, we process personal data based on one or more of the following legal bases:</p>
 
-      <h3 class="text-xl font-semibold text-white">3.1 Provide the Services (GDPR Art. 6(1)(b) — contract necessity)</h3>
+      <h3 class="text-xl font-semibold text-slate-900">3.1 Provide the Services (GDPR Art. 6(1)(b) — contract necessity)</h3>
       <ul class="list-disc pl-6 space-y-2">
         <li>Create and manage your account</li>
         <li>Store, display, and analyze your workouts and sessions</li>
@@ -59,25 +59,25 @@ import Layout from '../layouts/Layout.astro';
         <li>Provide device connection features (trainer/sensors) where supported</li>
       </ul>
 
-      <h3 class="text-xl font-semibold text-white">3.2 Improve reliability, security, and support (GDPR Art. 6(1)(f) — legitimate interests)</h3>
+      <h3 class="text-xl font-semibold text-slate-900">3.2 Improve reliability, security, and support (GDPR Art. 6(1)(f) — legitimate interests)</h3>
       <ul class="list-disc pl-6 space-y-2">
         <li>Prevent abuse, maintain security, and debug issues</li>
         <li>Diagnose crashes and errors (Sentry)</li>
         <li>Improve performance, stability, and user experience</li>
       </ul>
 
-      <h3 class="text-xl font-semibold text-white">3.3 Consent (GDPR Art. 6(1)(a)) — where required</h3>
+      <h3 class="text-xl font-semibold text-slate-900">3.3 Consent (GDPR Art. 6(1)(a)) — where required</h3>
       <ul class="list-disc pl-6 space-y-2">
         <li>Non-essential website analytics cookies/trackers (Google Analytics), depending on your region and configuration</li>
         <li>Marketing emails/newsletters (if/when offered)</li>
       </ul>
 
-      <h3 class="text-xl font-semibold text-white">3.4 Special category data (health data) — explicit consent (GDPR Art. 9(2)(a))</h3>
+      <h3 class="text-xl font-semibold text-slate-900">3.4 Special category data (health data) — explicit consent (GDPR Art. 9(2)(a))</h3>
       <p>Some data processed in the app may qualify as data concerning health, such as heart rate data and related physiological signals (if you connect such sensors). Where this applies, we process such data only with your explicit consent in accordance with GDPR Art. 9(2)(a) and, where required, GDPR Art. 6(1)(a).</p>
       <p>You can withdraw your consent at any time in the app settings. If you withdraw consent, we will stop collecting and processing new health data for the affected features. You can also request deletion of existing data (see Section 8).</p>
       <p>If you do not provide consent, you may still use parts of the Services that do not require processing of health data (feature availability may be limited).</p>
 
-      <h2 class="text-2xl font-bold text-white pt-6">4. Sharing of data / Processors and recipients</h2>
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">4. Sharing of data / Processors and recipients</h2>
       <p>We share data only as necessary to operate the Services:</p>
       <ul class="list-disc pl-6 space-y-2">
         <li>Supabase (EU region) — authentication and database hosting (processor)</li>
@@ -98,10 +98,10 @@ import Layout from '../layouts/Layout.astro';
       If you make purchases through Apple App Store or Google Play, those platforms process payment and billing information as independent controllers under their own privacy policies. We do not receive full payment details (e.g., credit card numbers).</p>
       <p>We may also disclose data if required by law, or to protect rights, safety, and security.</p>
 
-      <h2 class="text-2xl font-bold text-white pt-6">5. International transfers</h2>
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">5. International transfers</h2>
       <p>Core app data is hosted in the EU (Supabase EU region). Some service providers may process data outside your country (potentially including the United States). Where required, we rely on appropriate safeguards (e.g., Standard Contractual Clauses) and vendor commitments.</p>
 
-      <h2 class="text-2xl font-bold text-white pt-6">6. Data retention</h2>
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">6. Data retention</h2>
       <ul class="list-disc pl-6 space-y-2">
         <li>Account + training data: retained while your account is active.</li>
         <li>Crash/error data (Sentry): typically retained for 90 days (depending on configuration).</li>
@@ -109,21 +109,21 @@ import Layout from '../layouts/Layout.astro';
       </ul>
       <p>You can request deletion (Section 8).</p>
 
-      <h2 class="text-2xl font-bold text-white pt-6">7. Security</h2>
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">7. Security</h2>
       <p>We use reasonable technical and organizational measures to protect data (encryption in transit, access controls, least privilege). No method of transmission or storage is 100% secure.</p>
 
-      <h2 class="text-2xl font-bold text-white pt-6">8. Your rights (EEA/UK/Switzerland)</h2>
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">8. Your rights (EEA/UK/Switzerland)</h2>
       <p>Depending on your location, you may have rights to access, rectify, delete, restrict, object, and port your data, and to withdraw consent.</p>
       <p>How to exercise rights: email <a href="mailto:info@endure-cycling.com" class="text-[#F05D23] hover:underline">info@endure-cycling.com</a> from the email address linked to your account.</p>
       <p>Account deletion: You can request account deletion by emailing <a href="mailto:info@endure-cycling.com" class="text-[#F05D23] hover:underline">info@endure-cycling.com</a> from your registered email address. We will delete or anonymize your account data unless we must retain certain information for legal obligations or to resolve disputes.</p>
 
-      <h2 class="text-2xl font-bold text-white pt-6">9. Cookies (website)</h2>
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">9. Cookies (website)</h2>
       <p>If we use cookies or similar identifiers for analytics, you may be asked for consent depending on local law and configuration. You can also control cookies via browser settings.</p>
 
-      <h2 class="text-2xl font-bold text-white pt-6">10. Children</h2>
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">10. Children</h2>
       <p>The Services are not intended for children under 16. If you believe a child provided data, contact us.</p>
 
-      <h2 class="text-2xl font-bold text-white pt-6">11. Changes</h2>
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">11. Changes</h2>
       <p>We may update this Privacy Policy. We will update the “Last updated” date and may provide notice for material changes.</p>
     </div>
   </main>

@@ -17,10 +17,10 @@ const isAvailable = config.isProductAvailable;
     <div class="max-w-4xl mx-auto">
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
           {t.title} <span class="text-gradient-primary">{t.titleHighlight}</span>
         </h2>
-        <p class="text-[#a0a5b5] text-lg">
+        <p class="text-slate-600 font-medium text-lg">
           {t.subtitle}
         </p>
       </div>
@@ -30,7 +30,7 @@ const isAvailable = config.isProductAvailable;
         <img 
           src="/assets/marketing/Devies_withbackground.min.webp" 
           alt="Endure on multiple devices" 
-          class="lg:w-5/6 w-full mx-auto rounded-2xl shadow-2xl border border-white/5"
+          class="lg:w-5/6 w-full mx-auto rounded-2xl shadow-xl shadow-slate-200 border border-slate-200"
         />
       </div>
 
@@ -38,18 +38,18 @@ const isAvailable = config.isProductAvailable;
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         <!-- Windows -->
         {isAvailable ? (
-          <div class="card-surface p-6 text-center border-green-500/30 bg-green-500/5">
+          <div class="card-surface p-6 text-center border-green-500/30 bg-green-50/50">
             <div class="text-4xl mb-3">✅</div>
-            <h3 class="font-bold text-lg mb-1">{t.windows}</h3>
-            <span class="inline-block px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm font-medium">
+            <h3 class="font-bold text-slate-900 text-lg mb-1">{t.windows}</h3>
+            <span class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-bold">
               {t.windowsStatus}
             </span>
           </div>
         ) : (
           <div class="card-surface p-6 text-center">
             <div class="text-4xl mb-3">🚧</div>
-            <h3 class="font-bold text-lg mb-1">{t.windows}</h3>
-            <span class="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm font-medium">
+            <h3 class="font-bold text-slate-900 text-lg mb-1">{t.windows}</h3>
+            <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-bold">
               {t.macosStatus}
             </span>
           </div>
@@ -58,8 +58,8 @@ const isAvailable = config.isProductAvailable;
         <!-- macOS -->
         <div class="card-surface p-6 text-center">
           <div class="text-4xl mb-3">🚧</div>
-          <h3 class="font-bold text-lg mb-1">{t.macos}</h3>
-          <span class="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm font-medium">
+          <h3 class="font-bold text-slate-900 text-lg mb-1">{t.macos}</h3>
+          <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-bold">
             {t.macosStatus}
           </span>
         </div>
@@ -67,8 +67,8 @@ const isAvailable = config.isProductAvailable;
         <!-- Android -->
         <div class="card-surface p-6 text-center">
           <div class="text-4xl mb-3">🚧</div>
-          <h3 class="font-bold text-lg mb-1">{t.android}</h3>
-          <span class="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm font-medium">
+          <h3 class="font-bold text-slate-900 text-lg mb-1">{t.android}</h3>
+          <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-bold">
             {t.androidStatus}
           </span>
         </div>
@@ -76,8 +76,8 @@ const isAvailable = config.isProductAvailable;
         <!-- iOS -->
         <div class="card-surface p-6 text-center">
           <div class="text-4xl mb-3">📅</div>
-          <h3 class="font-bold text-lg mb-1">{t.ios}</h3>
-          <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
+          <h3 class="font-bold text-slate-900 text-lg mb-1">{t.ios}</h3>
+          <span class="inline-block px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-bold">
             {t.iosStatus}
           </span>
         </div>
@@ -90,8 +90,8 @@ const isAvailable = config.isProductAvailable;
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
         </div>
-        <h3 class="text-2xl font-bold mb-4">{t.communityTitle}</h3>
-        <p class="text-[#a0a5b5] text-lg max-w-2xl mx-auto mb-6">
+        <h3 class="text-2xl font-bold mb-4 text-slate-900">{t.communityTitle}</h3>
+        <p class="text-slate-600 font-medium text-lg max-w-2xl mx-auto mb-6">
           {t.communityText}
         </p>
         <a href="https://github.com/cmaart/endure-website" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-[#F05D23] hover:text-[#ff6d33] font-medium transition-colors">

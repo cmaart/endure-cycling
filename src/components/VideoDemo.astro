@@ -15,10 +15,10 @@ const t = getTranslations(lang).videoDemo;
     <!-- Section Header -->
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">
-        <span class="text-white">{t.title}</span>
+        <span class="text-slate-900">{t.title}</span>
         <span class="text-gradient-primary"> {t.titleHighlight}</span>
       </h2>
-      <p class="text-[#a0a5b5] text-lg max-w-2xl mx-auto">
+      <p class="text-slate-600 font-medium text-lg max-w-2xl mx-auto">
         {t.subtitle}
       </p>
     </div>
@@ -27,11 +27,11 @@ const t = getTranslations(lang).videoDemo;
     <div class="max-w-4xl mx-auto">
       <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
         <!-- Glow effect behind video -->
-        <div class="absolute -inset-1 bg-gradient-to-r from-[#F05D23]/30 via-[#d63c6b]/30 to-[#6b4c9a]/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity"></div>
+        <div class="absolute -inset-1 bg-gradient-to-r from-[#F05D23]/30 via-[#d63c6b]/30 to-[#6b4c9a]/30 rounded-2xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity"></div>
         
         <!-- Video frame -->
         <!-- Video container with click-to-play -->
-        <div class="relative rounded-xl overflow-hidden border border-white/20 bg-[#0d0f14] aspect-video group/video cursor-pointer" id="video-container">
+        <div class="relative rounded-xl overflow-hidden border border-slate-200 bg-slate-50 aspect-video group/video cursor-pointer shadow-lg" id="video-container">
           <!-- Thumbnail & Play Button (Default State) -->
           <div id="video-placeholder" class="absolute inset-0 z-10">
             <img 
@@ -42,7 +42,7 @@ const t = getTranslations(lang).videoDemo;
             
             <!-- Play Button Overlay -->
             <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-20 h-20 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 group-hover/video:scale-110 group-hover/video:bg-white/20 transition-all duration-300 shadow-2xl">
+              <div class="w-20 h-20 flex items-center justify-center rounded-full bg-white/50 backdrop-blur-md border border-white/60 group-hover/video:scale-110 group-hover/video:bg-white/80 transition-all duration-300 shadow-xl">
                 <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg>
@@ -100,8 +100,8 @@ const t = getTranslations(lang).videoDemo;
       </div>
       
       <!-- Caption -->
-      <p class="text-center text-[#6b7280] text-sm mt-4 flex items-center justify-center gap-2">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <p class="text-center text-slate-500 font-medium text-sm mt-4 flex items-center justify-center gap-2">
+        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>

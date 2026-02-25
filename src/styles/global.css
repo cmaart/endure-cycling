@@ -2,29 +2,29 @@
 
 /* ENDURE Design System - Color Tokens */
 @theme {
-  /* Background Colors - Deep Navy (no pure black) */
-  --color-endure-bg-primary: #1a1c23;
-  --color-endure-bg-secondary: #20222a;
-  --color-endure-surface: #2f3340;
-  --color-endure-surface-light: #3a3f4f;
+  /* Background Colors - Clean Light Theme */
+  --color-endure-bg-primary: #f8fafc;
+  --color-endure-bg-secondary: #ffffff;
+  --color-endure-surface: #ffffff;
+  --color-endure-surface-light: #f1f5f9;
   
   /* Primary Action - Vibrant Orange */
   --color-endure-primary: #F05D23;
-  --color-endure-primary-hover: #ff6d33;
+  --color-endure-primary-hover: #e04c12;
   
   /* Accent Colors - Pink to Purple gradient */
   --color-endure-accent-pink: #d63c6b;
   --color-endure-accent-purple: #6b4c9a;
   
   /* Utility Colors */
-  --color-endure-success: #22c55e;
+  --color-endure-success: #10b981;
   --color-endure-warning: #f59e0b;
   --color-endure-info: #3b82f6;
   
   /* Text Colors */
-  --color-endure-text-primary: #ffffff;
-  --color-endure-text-secondary: #a0a5b5;
-  --color-endure-text-muted: #6b7280;
+  --color-endure-text-primary: #0f172a;
+  --color-endure-text-secondary: #475569;
+  --color-endure-text-muted: #64748b;
   
   /* Fonts */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -61,7 +61,8 @@ body {
 
 .card-surface {
   background: var(--color-endure-surface);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   border-radius: 16px;
 }
 
