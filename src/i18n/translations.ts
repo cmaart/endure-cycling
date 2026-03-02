@@ -188,13 +188,13 @@ export const translations = {
     climbingEfficiency: {
       badge: "Neues Feature",
       headline1: "Beherrsche den Anstieg.",
-      headline2: "Sieh, wie effizient du wirklich klimmst.",
-      description: "Climbing Efficiency ist eine wegweisende Kennzahl, die misst, wie effektiv du deine Ausdauer in gewonnene Höhenmeter umsetzt. ENDURE erkennt automatisch Anstiege in deinen Outdoor-Fahrten und berechnet deinen persönlichen Kletter-Score — wahrscheinlich eine der ersten Apps weltweit, die das bietet.",
+      headline2: "Sieh, wie effizient du wirklich bergauf fährst.",
+      description: "Climbing Efficiency ist eine wegweisende Kennzahl, die misst, wie effektiv du deine Kraft in gewonnene Höhenmeter umsetzt. ENDURE erkennt automatisch Anstiege in deinen Outdoor-Fahrten und berechnet deinen persönlichen Score — wahrscheinlich eine der ersten Apps weltweit, die das bietet.",
       stat1: "Vertikalgeschwindigkeit gemessen",
       stat2: "Einzigartiger weltweiter Wert",
       bullets: [
         "<strong>Automatische Anstiegserkennung:</strong> ENDURE identifiziert jeden Anstieg in deinen Outdoor-Fahrten.",
-        "<strong>VAM-basiertes Scoring:</strong> Deine vertikale Aufstiegsgeschwindigkeit (m/h) ist der Kern des Wertes — pure Kletterleistung."
+        "<strong>VAM-basiertes Scoring:</strong> Deine vertikale Aufstiegsgeschwindigkeit (m/h) ist der Kern des Wertes — pure Bergleistung."
       ]
     },
     // Beta Notice
