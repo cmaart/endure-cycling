@@ -32,6 +32,19 @@ export const translations = {
         description: "Monitor your fitness progress visually."
       }
     },
+    // Climbing Efficiency
+    climbingEfficiency: {
+      badge: "New Feature",
+      headline1: "Own the climb.",
+      headline2: "See how efficiently you really climb.",
+      description: "Climbing Efficiency is a pioneering metric that measures how effectively you convert your effort into vertical meters. ENDURE automatically detects climbs from your outdoor rides and calculates your personal climbing score — likely one of the first apps in the world to do so.",
+      stat1: "Vertical speed measured",
+      stat2: "Unique metric worldwide",
+      bullets: [
+        "<strong>Automatic climb detection:</strong> ENDURE identifies every climb in your outdoor rides.",
+        "<strong>VAM-based scoring:</strong> Your vertical ascent speed (m/h) is the core of the metric — pure climbing ability."
+      ]
+    },
     // Beta Notice
     betaNotice: {
       badge: "Beta Version",
@@ -170,6 +183,19 @@ export const translations = {
         title: "FTP Entwicklung",
         description: "Überwache deinen Fitnessfortschritt visuell."
       }
+    },
+    // Climbing Efficiency
+    climbingEfficiency: {
+      badge: "Neues Feature",
+      headline1: "Beherrsche den Anstieg.",
+      headline2: "Sieh, wie effizient du wirklich klimmst.",
+      description: "Climbing Efficiency ist eine wegweisende Kennzahl, die misst, wie effektiv du deine Ausdauer in gewonnene Höhenmeter umsetzt. ENDURE erkennt automatisch Anstiege in deinen Outdoor-Fahrten und berechnet deinen persönlichen Kletter-Score — wahrscheinlich eine der ersten Apps weltweit, die das bietet.",
+      stat1: "Vertikalgeschwindigkeit gemessen",
+      stat2: "Einzigartiger weltweiter Wert",
+      bullets: [
+        "<strong>Automatische Anstiegserkennung:</strong> ENDURE identifiziert jeden Anstieg in deinen Outdoor-Fahrten.",
+        "<strong>VAM-basiertes Scoring:</strong> Deine vertikale Aufstiegsgeschwindigkeit (m/h) ist der Kern des Wertes — pure Kletterleistung."
+      ]
     },
     // Beta Notice
     betaNotice: {
