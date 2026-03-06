@@ -111,7 +111,8 @@ export const translations = {
       
       communityTitle: "We're Building This Together",
       communityText: "Feature requests are welcome and integrated into our frequent update cycle. Your feedback directly shapes the future of ENDURE.",
-      communityLink: "Join us on GitHub"
+      communityLink: "Join us on GitHub",
+      instagramLink: "Follow us on Instagram"
     },
     // Footer
     footer: {
@@ -263,8 +264,9 @@ export const translations = {
       iosStatus: "Geplant",
       
       communityTitle: "Wir Bauen Das Gemeinsam",
-      communityText: "Feature-Wünsche sind willkommen und werden in unseren häufigen Update-Zyklus integriert. Dein Feedback formt direkt die Zukunft von ENDURE.",
-      communityLink: "Schließ dich uns auf GitHub an"
+      communityText: "Feature requests are welcome and integrated into our frequent update cycle. Dein Feedback formt direkt die Zukunft von ENDURE.",
+      communityLink: "Schließ dich uns auf GitHub an",
+      instagramLink: "Folge uns auf Instagram"
     },
     // Footer
     footer: {
