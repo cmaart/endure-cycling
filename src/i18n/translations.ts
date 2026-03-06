@@ -122,6 +122,7 @@ export const translations = {
       bluetooth: "Bluetooth Adapter Required",
       
       linksTitle: "Links",
+      instagram: "Instagram",
       github: "GitHub",
       privacy: "Privacy Policy",
       terms: "Terms of Use",
@@ -274,6 +275,7 @@ export const translations = {
       bluetooth: "Bluetooth Adapter Erforderlich",
       
       linksTitle: "Links",
+      instagram: "Instagram",
       github: "GitHub",
       privacy: "Datenschutz",
       terms: "Nutzungsbedingungen",
