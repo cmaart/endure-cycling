@@ -29,10 +29,18 @@ const deUrl = `${siteUrl}/de`;
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script is:inline>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light') {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
     <slot name="head" />
     
     <!-- Favicons -->

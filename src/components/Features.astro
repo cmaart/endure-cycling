@@ -10,18 +10,18 @@ const t = getTranslations(lang).features;
   <div class="container mx-auto px-6">
     <!-- Section Header -->
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
         {t.sectionTitle} <span class="text-gradient-primary">{t.sectionTitleHighlight}</span>
       </h2>
-      <p class="text-slate-600 font-medium text-lg max-w-2xl mx-auto">
+      <p class="text-slate-600 dark:text-gray-400 font-medium text-lg max-w-2xl mx-auto">
         {t.sectionSubtitle}
       </p>
     </div>
-    
+
     <!-- Feature Grid -->
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Fast & Rock-Solid -->
-      <FeatureCard 
+      <FeatureCard
         title={t.performance.title}
         iconColor="green"
         features={[
@@ -34,9 +34,9 @@ const t = getTranslations(lang).features;
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       </FeatureCard>
-      
+
       <!-- Deep Progress Analytics -->
-      <FeatureCard 
+      <FeatureCard
         title={t.analytics.title}
         iconColor="pink"
         features={[
@@ -49,9 +49,9 @@ const t = getTranslations(lang).features;
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
         </svg>
       </FeatureCard>
-      
+
       <!-- Structured Training -->
-      <FeatureCard 
+      <FeatureCard
         title={t.training.title}
         iconColor="orange"
         features={[
@@ -64,9 +64,9 @@ const t = getTranslations(lang).features;
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
         </svg>
       </FeatureCard>
-      
+
       <!-- Connectivity & Sync -->
-      <FeatureCard 
+      <FeatureCard
         title={t.connectivity.title}
         iconColor="blue"
         features={[
@@ -79,68 +79,104 @@ const t = getTranslations(lang).features;
         </svg>
       </FeatureCard>
     </div>
-    
+
     <!-- Screenshot showcase -->
     <div class="mt-20 grid md:grid-cols-2 gap-8">
       <div class="relative group">
-        <div class="absolute inset-0 bg-slate-200/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img 
-          src="/assets/screenshots/builtin_workouts.min.webp" 
-          alt="ENDURE Workout Library" 
+        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+        <img
+          src="/assets/screenshots/builtin_workouts.min.webp"
+          alt="ENDURE Workout Library"
           data-zoomable
-          class="relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
+          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
         />
-        <p class="text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot1Caption}</p>
+        <img
+          src="/assets/dark_theme/workout_library.png"
+          alt="ENDURE Workout Library"
+          data-zoomable
+          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
+        />
+        <p class="text-center mt-4 text-slate-600 dark:text-gray-400 font-medium text-sm">{t.screenshot1Caption}</p>
       </div>
       <div class="relative group">
-        <div class="absolute inset-0 bg-slate-200/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img 
-          src="/assets/screenshots/imported_workouts.min.webp" 
-          alt="ENDURE Import Workouts" 
+        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+        <img
+          src="/assets/screenshots/imported_workouts.min.webp"
+          alt="ENDURE Import Workouts"
           data-zoomable
-          class="relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
+          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
         />
-        <p class="text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot2Caption}</p>
+        <img
+          src="/assets/dark_theme/activity_history.png"
+          alt="ENDURE Activity History"
+          data-zoomable
+          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
+        />
+        <p class="text-center mt-4 text-slate-600 dark:text-gray-400 font-medium text-sm">{t.screenshot2Caption}</p>
       </div>
       <div class="relative group">
-        <div class="absolute inset-0 bg-slate-200/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img 
-          src="/assets/screenshots/2026-01-25 10_28_53-Endure.min.min.webp" 
-          alt="ENDURE Power Profile" 
+        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+        <img
+          src="/assets/screenshots/2026-01-25 10_28_53-Endure.min.min.webp"
+          alt="ENDURE Power Profile"
           data-zoomable
-          class="relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
+          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
         />
-        <p class="text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot3Caption}</p>
+        <img
+          src="/assets/dark_theme/dashboard_profile.png"
+          alt="ENDURE Dashboard Profile"
+          data-zoomable
+          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
+        />
+        <p class="text-center mt-4 text-slate-600 dark:text-gray-400 font-medium text-sm">{t.screenshot3Caption}</p>
       </div>
       <div class="relative group">
-        <div class="absolute inset-0 bg-slate-200/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img 
-          src="/assets/screenshots/the_ride.min.min.webp" 
-          alt="ENDURE Ride Screen" 
+        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+        <img
+          src="/assets/screenshots/the_ride.min.min.webp"
+          alt="ENDURE Ride Screen"
           data-zoomable
-          class="relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
+          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
         />
-        <p class="text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot4Caption}</p>
+        <img
+          src="/assets/dark_theme/workout_ride.png"
+          alt="ENDURE Workout Ride"
+          data-zoomable
+          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
+        />
+        <p class="text-center mt-4 text-slate-600 dark:text-gray-400 font-medium text-sm">{t.screenshot4Caption}</p>
       </div>
       <div class="relative group">
-        <div class="absolute inset-0 bg-slate-200/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img 
-          src="/assets/screenshots/smart_smoothing.min.webp" 
-          alt="ENDURE Smart Smoothing" 
+        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+        <img
+          src="/assets/screenshots/smart_smoothing.min.webp"
+          alt="ENDURE Smart Smoothing"
           data-zoomable
-          class="relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
+          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
         />
-        <p class="text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot5Caption}</p>
+        <img
+          src="/assets/dark_theme/performance_trends.png"
+          alt="ENDURE Performance Trends"
+          data-zoomable
+          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
+        />
+        <p class="text-center mt-4 text-slate-600 dark:text-gray-400 font-medium text-sm">{t.screenshot5Caption}</p>
       </div>
       <div class="relative group">
-        <div class="absolute inset-0 bg-slate-200/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img 
-          src="/assets/ZoneDistribution.min.webp" 
-          alt="ENDURE Time in Zones" 
+        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+        <img
+          src="/assets/ZoneDistribution.min.webp"
+          alt="ENDURE Time in Zones"
           data-zoomable
-          class="relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
+          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
         />
-        <p class="text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot6Caption}</p>
+        <img
+          src="/assets/dark_theme/training_status.png"
+          alt="ENDURE Training Status"
+          data-zoomable
+          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
+        />
+        <p class="text-center mt-4 text-slate-600 dark:text-gray-400 font-medium text-sm">{t.screenshot6Caption}</p>
       </div>
     </div>
   </div>
