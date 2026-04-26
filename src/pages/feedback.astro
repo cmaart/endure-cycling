@@ -1,0 +1,174 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import { getTranslations } from '../i18n/translations';
+
+const lang = Astro.currentLocale as 'en' | 'de' || 'en';
+const t = getTranslations(lang).feedback;
+const homeHref = lang === 'de' ? '/de' : '/';
+---
+
+<Layout title={t.seoTitle} description={t.seoDescription}>
+  <main class="min-h-screen flex flex-col items-center justify-center px-6 py-24">
+    <!-- Background decoration -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-gradient-to-br from-[#F05D23]/5 to-[#d63c6b]/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 -left-32 w-96 h-96 bg-gradient-to-tr from-[#3b82f6]/5 to-[#22c55e]/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Logo -->
+    <a href={homeHref} class="mb-4">
+      <img src="/assets/ENDURE_lockup_exact_icon_4k.png" alt="ENDURE" class="h-40 w-auto" />
+    </a>
+
+    <!-- Card -->
+    <div class="w-full max-w-lg">
+      <div class="card-surface p-8 md:p-10">
+        <!-- Header -->
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#F05D23] to-[#ff8c5a] flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <h1 class="text-2xl md:text-3xl font-bold text-slate-900">{t.headline}</h1>
+        </div>
+
+        <p class="text-slate-600 font-medium mb-8 leading-relaxed">{t.intro}</p>
+
+        <!-- Form -->
+        <form id="feedback-form" method="POST" class="space-y-5">
+          <!-- Honeypot (spam protection) -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">{t.emailLabel}</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder={t.emailPlaceholder}
+              class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#F05D23]/30 focus:border-[#F05D23] transition-all"
+            />
+          </div>
+
+          <!-- Feedback type -->
+          <div>
+            <label for="type" class="block text-sm font-semibold text-slate-700 mb-2">{t.typeLabel}</label>
+            <select
+              id="type"
+              name="type"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#F05D23]/30 focus:border-[#F05D23] transition-all appearance-none"
+              style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2394a3b8%22 stroke-width=%222%22%3E%3Cpath d=%22M6 9l6 6 6-6%22/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 12px center; background-size: 20px;"
+            >
+              <option value="bug">{t.typeBug}</option>
+              <option value="feature">{t.typeFeature}</option>
+              <option value="general">{t.typeGeneral}</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="block text-sm font-semibold text-slate-700 mb-2">{t.messageLabel}</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="5"
+              placeholder={t.messagePlaceholder}
+              class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#F05D23]/30 focus:border-[#F05D23] transition-all resize-y"
+            ></textarea>
+          </div>
+
+          <!-- Device info -->
+          <div>
+            <label for="device" class="block text-sm font-semibold text-slate-700 mb-2">{t.deviceLabel}</label>
+            <input
+              type="text"
+              id="device"
+              name="device"
+              placeholder={t.devicePlaceholder}
+              class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#F05D23]/30 focus:border-[#F05D23] transition-all"
+            />
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            id="submit-btn"
+            class="btn-primary w-full text-center text-lg py-4 mt-2"
+          >
+            {t.submit}
+          </button>
+        </form>
+
+        <!-- Success message (hidden) -->
+        <div id="success-msg" class="hidden text-center py-4">
+          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold text-slate-900 mb-3">{t.successTitle}</h2>
+          <p class="text-slate-600 font-medium leading-relaxed">{t.successMessage}</p>
+        </div>
+
+        <!-- Error message (hidden) -->
+        <div id="error-msg" class="hidden mt-4 p-4 rounded-xl bg-red-50 border border-red-200">
+          <p class="text-red-700 text-sm font-medium">
+            {t.errorMessage} <a href="mailto:info@endure-cycling.com" class="underline">info@endure-cycling.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Back link -->
+      <div class="text-center mt-6">
+        <a href={homeHref} class="text-slate-500 font-medium text-sm hover:text-[#F05D23] transition-colors">
+          &larr; {t.backHome}
+        </a>
+      </div>
+    </div>
+  </main>
+  <Footer />
+
+  <script is:inline>
+    const form = document.getElementById('feedback-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('success-msg');
+    const errorMsg = document.getElementById('error-msg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorMsg.classList.add('hidden');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.6';
+      submitBtn.textContent = submitBtn.dataset.submitting || 'Sending...';
+
+      const data = new FormData(form);
+
+      try {
+        const res = await fetch('https://formspree.io/f/mwvazaqe', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.classList.add('hidden');
+          successMsg.classList.remove('hidden');
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (err) {
+        errorMsg.classList.remove('hidden');
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        submitBtn.textContent = originalText;
+      }
+    });
+  </script>
+</Layout>

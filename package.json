@@ -7,12 +7,17 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "emails": "mjml email-templates/*.mjml -o email-templates/ && cp email-templates/*.html public/email-templates/",
+    "send-email": "node email-templates/send.mjs"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.9",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "mjml": "^5.1.0"
   }
 }

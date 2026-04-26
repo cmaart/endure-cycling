@@ -1,0 +1,78 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-all font-family="Arial, Helvetica, sans-serif" />
+      <mj-text font-size="17px" line-height="1.6" color="#1e293b" />
+      <mj-button font-size="17px" font-weight="600" border-radius="12px" inner-padding="14px 36px" />
+    </mj-attributes>
+    <mj-style>
+      .feedback-box td { background-color: #fff7ed !important; border: 1px solid #fed7aa !important; border-radius: 12px !important; }
+      a.footer-link { color: #F05D23 !important; text-decoration: none !important; }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f8fafc">
+
+    <!-- Logo -->
+    <mj-section padding="40px 0 0">
+      <mj-column>
+        <mj-image src="https://www.endure-cycling.com/assets/ENDURE_lockup_exact_icon_4k.png" alt="ENDURE" width="220px" padding-bottom="32px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Card -->
+    <mj-section background-color="#ffffff" border-radius="16px" border="1px solid #e2e8f0" padding="40px 36px">
+      <mj-column>
+
+        <!-- Greeting -->
+        <mj-text padding="0 0 20px">Hi,</mj-text>
+        <mj-text padding="0 0 20px">thanks for signing up to test ENDURE on Android!</mj-text>
+        <mj-text padding="0 0 24px">I've added your Google address to the closed test group. You can now join the test:</mj-text>
+
+        <!-- CTA Button -->
+        <mj-button href="https://play.google.com/store/apps/details?id=com.cmart.endure" background-color="#F05D23" color="#ffffff" padding="0 0 28px">
+          Join the Test &#8594;
+        </mj-button>
+
+        <!-- Divider -->
+        <mj-divider border-color="#e2e8f0" border-width="1px" padding="0 0 28px" />
+
+        <!-- Instructions -->
+        <mj-text font-size="14px" font-weight="600" padding="0 0 6px">Important:</mj-text>
+        <mj-text font-size="15px" line-height="1.7" color="#475569" padding="0 0 24px">
+          <ul style="margin:0;padding-left:20px;">
+            <li style="margin-bottom:6px;">Open the link with the <strong>same Google address</strong> you used when signing up.</li>
+            <li style="margin-bottom:6px;">After that, you can install the app from the Google Play Store.</li>
+            <li>Please open the app at least once so the closed test runs smoothly.</li>
+          </ul>
+        </mj-text>
+
+        <!-- Feedback note -->
+        <mj-text css-class="feedback-box" font-size="14px" color="#9a3412" padding="16px 20px">
+          <strong>Feedback?</strong> Just reply directly to this email or use our <a href="https://www.endure-cycling.com/feedback" style="color:#9a3412;text-decoration:underline;">feedback form</a>. Bugs, ideas, criticism — all welcome. Your input helps shape the first public release.
+        </mj-text>
+
+        <!-- Sign-off -->
+        <mj-text padding="28px 0 0">
+          Thanks and happy testing!<br/>
+          ENDURE Cycling Team. With &#10084;&#65039; for cycling and data.
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section padding="28px 0 40px">
+      <mj-column>
+        <mj-text align="center" font-size="13px" color="#94a3b8" padding="0 0 8px">
+          ENDURE — Driven by data. Built to endure.
+        </mj-text>
+        <mj-text align="center" font-size="13px" color="#94a3b8" padding="0">
+          <a href="https://www.endure-cycling.com" class="footer-link">endure-cycling.com</a>
+          &nbsp;&middot;&nbsp;
+          <a href="https://www.instagram.com/endure_cycling_com/" class="footer-link">Instagram</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

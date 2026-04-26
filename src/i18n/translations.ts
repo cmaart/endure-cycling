@@ -128,6 +128,8 @@ export const translations = {
       privacy: "Privacy Policy",
       terms: "Terms of Use",
       imprint: "Imprint / Legal Notice",
+      androidTest: "Android Test",
+      feedback: "Feedback",
       contact: "Contact",
       
       copyright: "ENDURE. All rights reserved.",
@@ -152,6 +154,47 @@ export const translations = {
       accept: "Accept",
       decline: "Decline",
       privacyLink: "Read our Privacy Policy"
+    },
+    // Android Test
+    androidTest: {
+      seoTitle: "Android Closed Test - ENDURE",
+      seoDescription: "Sign up for the ENDURE Android closed test on Google Play. Be among the first to test the indoor cycling app on Android.",
+      headline: "Android Closed Test",
+      intro: "ENDURE is launching a closed Android test via Google Play. If you have an Android device and want to test the app, enter the email address of the Google account you use in the Play Store below. This must be a Google account (e.g. Gmail or Google Workspace) — otherwise you won't be able to join the test. Once you're added to the test group, you'll receive the official Google Play test link via email.",
+      earlyNote: "Please note: The test version is early and may contain bugs. Your feedback is welcome and helps shape the first public release.",
+      emailLabel: "Google Play email address (must be linked to a Google account)",
+      emailPlaceholder: "your.email@gmail.com",
+      androidCheck: "I have an Android device",
+      indoorCheck: "I do indoor cycling / use a smart trainer",
+      submit: "Request Android Test Access",
+      submitting: "Sending...",
+      successTitle: "Thank you!",
+      successMessage: "Your request has been sent. I'll add you to the Google Play test group and send you the official test link via email. Please use the same Google address you entered here when opening the link.",
+      errorMessage: "Something went wrong. Please try again or send an email directly to",
+      backHome: "Back to Homepage"
+    },
+    // Feedback
+    feedback: {
+      seoTitle: "Feedback - ENDURE",
+      seoDescription: "Share your feedback about the ENDURE indoor cycling app. Report bugs, suggest features, or tell us what you think.",
+      headline: "Send Feedback",
+      intro: "Found a bug? Have an idea? Or just want to share your experience? Your feedback directly shapes the future of ENDURE.",
+      emailLabel: "Email address",
+      emailPlaceholder: "your.email@gmail.com",
+      typeLabel: "What kind of feedback?",
+      typeBug: "Bug Report",
+      typeFeature: "Feature Request",
+      typeGeneral: "General Feedback",
+      messageLabel: "Your message",
+      messagePlaceholder: "Describe what happened, what you expected, or what you'd like to see...",
+      deviceLabel: "Device information (optional)",
+      devicePlaceholder: "e.g. Samsung Galaxy S24, Android 15",
+      submit: "Send Feedback",
+      submitting: "Sending...",
+      successTitle: "Thank you!",
+      successMessage: "Your feedback has been received. If you left your email, I may follow up with questions or to let you know when your suggestion is implemented.",
+      errorMessage: "Something went wrong. Please try again or send an email directly to",
+      backHome: "Back to Homepage"
     }
   },
   de: {
@@ -282,6 +325,8 @@ export const translations = {
       privacy: "Datenschutz",
       terms: "Nutzungsbedingungen",
       imprint: "Impressum / Legal Notice",
+      androidTest: "Android Test",
+      feedback: "Feedback",
       contact: "Kontakt",
       
       copyright: "ENDURE. Alle Rechte vorbehalten.",
@@ -306,6 +351,47 @@ export const translations = {
       accept: "Akzeptieren",
       decline: "Ablehnen",
       privacyLink: "Zur Datenschutzerklärung"
+    },
+    // Android Test
+    androidTest: {
+      seoTitle: "Android Closed Test - ENDURE",
+      seoDescription: "Melde dich für den geschlossenen ENDURE Android-Test auf Google Play an. Sei unter den Ersten, die die Indoor-Cycling-App auf Android testen.",
+      headline: "Android Closed Test",
+      intro: "ENDURE startet den geschlossenen Android-Test über Google Play. Wenn du ein Android-Gerät hast und die App testen möchtest, trag bitte die E-Mail-Adresse des Google-Kontos ein, das du im Play Store verwendest. Das muss ein Google-Konto sein (z.B. Gmail oder Google Workspace) — sonst kannst du dem Test nicht beitreten. Sobald du zur Testgruppe hinzugefügt wurdest, bekommst du den offiziellen Google-Play-Testlink per E-Mail.",
+      earlyNote: "Bitte beachte: Die Testversion ist noch früh und kann Fehler enthalten. Feedback ist willkommen und hilft beim ersten öffentlichen Release.",
+      emailLabel: "Google Play E-Mail-Adresse (muss mit einem Google-Konto verknüpft sein)",
+      emailPlaceholder: "deine.email@gmail.com",
+      androidCheck: "Ich habe ein Android-Gerät",
+      indoorCheck: "Ich mache Indoor Cycling / nutze einen Smart Trainer",
+      submit: "Android-Test anfragen",
+      submitting: "Wird gesendet...",
+      successTitle: "Danke!",
+      successMessage: "Deine Anfrage wurde gesendet. Ich füge dich zur Google-Play-Testgruppe hinzu und schicke dir danach den offiziellen Testlink per E-Mail. Bitte verwende beim Öffnen des Links dieselbe Google-Adresse, die du hier angegeben hast.",
+      errorMessage: "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib direkt an",
+      backHome: "Zurück zur Startseite"
+    },
+    // Feedback
+    feedback: {
+      seoTitle: "Feedback - ENDURE",
+      seoDescription: "Teile dein Feedback zur ENDURE Indoor-Cycling-App. Melde Bugs, schlage Features vor oder sag uns deine Meinung.",
+      headline: "Feedback senden",
+      intro: "Bug gefunden? Eine Idee? Oder einfach deine Erfahrung teilen? Dein Feedback formt direkt die Zukunft von ENDURE.",
+      emailLabel: "E-Mail-Adresse",
+      emailPlaceholder: "deine.email@gmail.com",
+      typeLabel: "Art des Feedbacks",
+      typeBug: "Bug Report",
+      typeFeature: "Feature-Wunsch",
+      typeGeneral: "Allgemeines Feedback",
+      messageLabel: "Deine Nachricht",
+      messagePlaceholder: "Beschreibe was passiert ist, was du erwartet hast, oder was du dir wünschen würdest...",
+      deviceLabel: "Geräteinformationen (optional)",
+      devicePlaceholder: "z.B. Samsung Galaxy S24, Android 15",
+      submit: "Feedback senden",
+      submitting: "Wird gesendet...",
+      successTitle: "Danke!",
+      successMessage: "Dein Feedback ist angekommen. Wenn du deine E-Mail hinterlassen hast, melde ich mich eventuell mit Rückfragen oder wenn dein Vorschlag umgesetzt wurde.",
+      errorMessage: "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib direkt an",
+      backHome: "Zurück zur Startseite"
     }
   }
 };
