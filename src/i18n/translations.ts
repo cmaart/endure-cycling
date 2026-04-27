@@ -150,8 +150,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "Endure - Fast, Stable Indoor Cycling App with Deep Analytics",
-      description: "Ready to ride in under 30 seconds. Crash-proof sessions with auto-resume. Track FTP & VO2max trends from indoor and outdoor rides. No bloat, no training plans — just ride and analyze."
+      title: "Endure — Smart Trainer Indoor Cycling App with FTP & VO2max",
+      description: "Smart trainer indoor cycling app, ready to ride in 30 seconds. Crash-proof sessions with auto-resume. Track FTP & VO2max trends. Just ride and analyze."
     },
     // Cookie Banner
     cookieBanner: {
@@ -353,8 +353,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "Endure - Schnelle, stabile Indoor Cycling App mit tiefgehender Analyse",
-      description: "In unter 30 Sekunden fahrbereit. Crash-sichere Sessions mit Auto-Resume. Verfolge FTP- & VO2max-Trends von Indoor- und Outdoor-Fahrten. Kein Bloat, keine Trainingspläne — einfach fahren und analysieren."
+      title: "Endure — Smart-Trainer Indoor Cycling App mit FTP & VO2max",
+      description: "Smart-Trainer Indoor Cycling App, in 30 Sekunden fahrbereit. Crash-sichere Sessions mit Auto-Resume. FTP- & VO2max-Trends. Einfach fahren und analysieren."
     },
     // Cookie Banner
     cookieBanner: {
