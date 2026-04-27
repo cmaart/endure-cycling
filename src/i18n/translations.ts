@@ -92,7 +92,13 @@ export const translations = {
       screenshot3Caption: "Detailed Power Profile: Strengths, Weaknesses & FTP Estimate",
       screenshot4Caption: "Ride Screen: Precise Smart Trainer Control (ERG Mode)",
       screenshot5Caption: "Smart-Smoothing: Balances erratic power data for smooth trainer control.",
-      screenshot6Caption: "Time in Zones: Power & HR zone distribution with distribution summary"
+      screenshot6Caption: "Time in Zones: Power & HR zone distribution with distribution summary",
+      screenshotDark1Caption: "Performance Dashboard: FTP & VO2Max trends over time",
+      screenshotDark2Caption: "Workout Ride: Real-time interval control with smart trainer support",
+      screenshotDark3Caption: "Dashboard: Your personal fitness profile and key metrics",
+      screenshotDark4Caption: "AI Coaching: Personalized feedback and insights after every ride",
+      screenshotDark5Caption: "Workout Library: Structured workouts for every training goal",
+      screenshotDark6Caption: "Training Calendar: Your rides and activities month by month"
     },
     // Roadmap
     roadmap: {
@@ -289,7 +295,13 @@ export const translations = {
       screenshot3Caption: "Detailliertes Power Profile: Stärken, Schwächen & FTP-Einschätzung",
       screenshot4Caption: "Ride Screen: Präzise Smart Trainer Steuerung (ERG Modus)",
       screenshot5Caption: "Smart-Smoothing: Gleicht erratische Power-Daten aus für eine sanfte Trainer-Steuerung.",
-      screenshot6Caption: "Zeit in Zonen: Power- & HR-Zonenverteilung mit Verteilungs-Übersicht"
+      screenshot6Caption: "Zeit in Zonen: Power- & HR-Zonenverteilung mit Verteilungs-Übersicht",
+      screenshotDark1Caption: "Performance Dashboard: FTP- & VO2Max-Trends im Zeitverlauf",
+      screenshotDark2Caption: "Workout Ride: Echtzeit-Intervallsteuerung mit Smart-Trainer-Unterstützung",
+      screenshotDark3Caption: "Dashboard: Dein persönliches Fitnessprofil und wichtige Kennzahlen",
+      screenshotDark4Caption: "AI Coaching: Personalisiertes Feedback und Insights nach jeder Fahrt",
+      screenshotDark5Caption: "Workout-Bibliothek: Strukturierte Workouts für jedes Trainingsziel",
+      screenshotDark6Caption: "Trainingskalender: Deine Fahrten und Aktivitäten im Monatsüberblick"
     },
     // Roadmap
     roadmap: {
