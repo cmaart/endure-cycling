@@ -37,6 +37,21 @@ const privacyUrl = '/privacy';
 <script>
   // Setup Google Analytics injection
   const GA_TRACKING_ID = 'G-5WFNG9Y90K';
+  const ADSENSE_CLIENT = 'ca-pub-6061843247884777';
+
+  function signalConsentGranted() {
+    // Google Consent Mode v2: tell Google's stack that consent has been
+    // collected externally so Funding Choices (Google's CMP) stays hidden.
+    const w = window as any;
+    if (typeof w.gtag === 'function') {
+      w.gtag('consent', 'update', {
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        analytics_storage: 'granted',
+      });
+    }
+  }
 
   function loadGoogleAnalytics() {
     // Only load if not already loaded
@@ -58,10 +73,6 @@ const privacyUrl = '/privacy';
     w.gtag('config', GA_TRACKING_ID);
   }
 
-  // AdSense loader — used for site verification covering this domain + subdomains.
-  // No <ins> slots on this site; Auto Ads is scoped to events.endure-cycling.com in the AdSense console.
-  const ADSENSE_CLIENT = 'ca-pub-6061843247884777';
-
   function loadGoogleAdSense() {
     if (document.getElementById('adsense-script')) return;
     const s = document.createElement('script');
@@ -82,6 +93,7 @@ const privacyUrl = '/privacy';
     const consent = localStorage.getItem('cookie-consent');
     
     if (consent === 'true') {
+      signalConsentGranted();
       loadGoogleAnalytics();
       loadGoogleAdSense();
     } else if (consent === null) {
@@ -107,6 +119,7 @@ const privacyUrl = '/privacy';
     if (acceptBtn) {
       acceptBtn.addEventListener('click', () => {
         localStorage.setItem('cookie-consent', 'true');
+        signalConsentGranted();
         loadGoogleAnalytics();
         loadGoogleAdSense();
         hideBanner();

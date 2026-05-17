@@ -41,6 +41,25 @@ const deUrl = `${siteUrl}/de`;
         }
       })();
     </script>
+
+    <script is:inline>
+      // Google Consent Mode v2: default-denied in EEA/UK/CH until the cookie
+      // banner explicitly updates the state on user accept. This tells Google's
+      // ad stack that consent is being managed externally, so Funding Choices
+      // (Google's own CMP) won't inject its own banner.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500,
+        region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH']
+      });
+    </script>
+
     <slot name="head" />
     
     <!-- Favicons -->
