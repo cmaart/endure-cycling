@@ -58,6 +58,20 @@ const privacyUrl = '/privacy';
     w.gtag('config', GA_TRACKING_ID);
   }
 
+  // AdSense loader — used for site verification covering this domain + subdomains.
+  // No <ins> slots on this site; Auto Ads is scoped to events.endure-cycling.com in the AdSense console.
+  const ADSENSE_CLIENT = 'ca-pub-6061843247884777';
+
+  function loadGoogleAdSense() {
+    if (document.getElementById('adsense-script')) return;
+    const s = document.createElement('script');
+    s.id = 'adsense-script';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
+    document.head.appendChild(s);
+  }
+
   // Handle banner logic
   document.addEventListener('DOMContentLoaded', () => {
     const banner = document.getElementById('cookie-banner');
@@ -69,6 +83,7 @@ const privacyUrl = '/privacy';
     
     if (consent === 'true') {
       loadGoogleAnalytics();
+      loadGoogleAdSense();
     } else if (consent === null) {
       // Show banner if no consent choice has been made
       if (banner) {
@@ -93,6 +108,7 @@ const privacyUrl = '/privacy';
       acceptBtn.addEventListener('click', () => {
         localStorage.setItem('cookie-consent', 'true');
         loadGoogleAnalytics();
+        loadGoogleAdSense();
         hideBanner();
       });
     }

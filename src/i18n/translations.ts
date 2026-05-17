@@ -156,7 +156,7 @@ export const translations = {
     // Cookie Banner
     cookieBanner: {
       title: "We use cookies",
-      description: "We use cookies and Google Analytics to analyze traffic, improve your experience, and understand how the website is used. You can choose to accept or decline tracking cookies.",
+      description: "We use cookies, Google Analytics, and Google AdSense to analyze traffic, serve ads, and understand how the website is used. You can choose to accept or decline these cookies.",
       accept: "Accept",
       decline: "Decline",
       privacyLink: "Read our Privacy Policy"
@@ -361,7 +361,7 @@ export const translations = {
     // Cookie Banner
     cookieBanner: {
       title: "Wir verwenden Cookies",
-      description: "Wir verwenden Cookies und Google Analytics, um den Traffic zu analysieren, dein Erlebnis zu verbessern und zu verstehen, wie die Website genutzt wird. Du kannst Tracking-Cookies akzeptieren oder ablehnen.",
+      description: "Wir verwenden Cookies, Google Analytics und Google AdSense, um den Traffic zu analysieren, Anzeigen auszuspielen und zu verstehen, wie die Website genutzt wird. Du kannst diese Cookies akzeptieren oder ablehnen.",
       accept: "Akzeptieren",
       decline: "Ablehnen",
       privacyLink: "Zur Datenschutzerklärung"
