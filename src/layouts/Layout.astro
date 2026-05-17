@@ -60,6 +60,20 @@ const deUrl = `${siteUrl}/de`;
       });
     </script>
 
+    <!--
+      AdSense loader, placed statically so the AdSense verification crawler can
+      discover it. type="text/plain" prevents the browser from fetching or
+      executing it; CookieBanner re-inserts it as a real script on user accept.
+    -->
+    <script
+      is:inline
+      type="text/plain"
+      data-consent="adsense"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6061843247884777"
+      crossorigin="anonymous"
+    ></script>
+
     <slot name="head" />
     
     <!-- Favicons -->

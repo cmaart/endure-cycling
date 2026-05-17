@@ -37,7 +37,6 @@ const privacyUrl = '/privacy';
 <script>
   // Setup Google Analytics injection
   const GA_TRACKING_ID = 'G-5WFNG9Y90K';
-  const ADSENSE_CLIENT = 'ca-pub-6061843247884777';
 
   function signalConsentGranted() {
     // Google Consent Mode v2: tell Google's stack that consent has been
@@ -73,14 +72,22 @@ const privacyUrl = '/privacy';
     w.gtag('config', GA_TRACKING_ID);
   }
 
-  function loadGoogleAdSense() {
-    if (document.getElementById('adsense-script')) return;
-    const s = document.createElement('script');
-    s.id = 'adsense-script';
-    s.async = true;
-    s.crossOrigin = 'anonymous';
-    s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
-    document.head.appendChild(s);
+  function activateConsentScripts(consentType: string) {
+    // Swap the static <script type="text/plain" data-consent="..."> placeholder
+    // with an executable copy so the browser actually fetches and runs it.
+    const placeholders = document.querySelectorAll(
+      `script[type="text/plain"][data-consent="${consentType}"]`
+    );
+    placeholders.forEach((oldScript) => {
+      const newScript = document.createElement('script');
+      Array.from(oldScript.attributes).forEach((attr) => {
+        if (attr.name !== 'type' && attr.name !== 'data-consent') {
+          newScript.setAttribute(attr.name, attr.value);
+        }
+      });
+      if (oldScript.textContent) newScript.textContent = oldScript.textContent;
+      oldScript.parentNode?.replaceChild(newScript, oldScript);
+    });
   }
 
   // Handle banner logic
@@ -95,7 +102,7 @@ const privacyUrl = '/privacy';
     if (consent === 'true') {
       signalConsentGranted();
       loadGoogleAnalytics();
-      loadGoogleAdSense();
+      activateConsentScripts('adsense');
     } else if (consent === null) {
       // Show banner if no consent choice has been made
       if (banner) {
@@ -121,7 +128,7 @@ const privacyUrl = '/privacy';
         localStorage.setItem('cookie-consent', 'true');
         signalConsentGranted();
         loadGoogleAnalytics();
-        loadGoogleAdSense();
+        activateConsentScripts('adsense');
         hideBanner();
       });
     }
