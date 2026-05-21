@@ -1,10 +1,23 @@
 ---
 import { getTranslations } from '../i18n/translations';
-import { config } from '../config';
+import { config, type PlatformKey } from '../config';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).roadmap;
-const isAvailable = config.isProductAvailable;
+
+const platformOrder: PlatformKey[] = ['windows', 'android', 'macos', 'ios'];
+
+const platforms = platformOrder.map((key, idx) => {
+  const platform = config.platforms[key];
+  return {
+    key,
+    label: t[key],
+    status: t[`${key}Status` as const],
+    available: platform.available,
+    url: platform.url,
+    revealDelay: idx * 100,
+  };
+});
 ---
 
 <section id="roadmap" class="py-24 relative">
@@ -16,7 +29,7 @@ const isAvailable = config.isProductAvailable;
   <div class="container mx-auto px-6 relative z-10">
     <div class="max-w-4xl mx-auto">
       <!-- Section Header -->
-      <div class="text-center mb-16">
+      <div class="text-center mb-16" data-reveal>
         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
           {t.title} <span class="text-gradient-primary">{t.titleHighlight}</span>
         </h2>
@@ -26,7 +39,7 @@ const isAvailable = config.isProductAvailable;
       </div>
 
       <!-- Devices Image -->
-      <div class="mb-16">
+      <div class="mb-16" data-reveal data-reveal-delay="100">
         <img
           src="/assets/marketing/Devies_withbackground.min.webp"
           alt="Endure on multiple devices"
@@ -36,55 +49,40 @@ const isAvailable = config.isProductAvailable;
 
       <!-- Platform Status Grid -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-        <!-- Windows -->
-        {isAvailable ? (
-          <div class="card-surface p-6 text-center border-green-500/30 bg-green-50/50 dark:bg-green-900/20">
-            <div class="text-4xl mb-3">✅</div>
-            <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{t.windows}</h3>
-            <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 rounded-full text-sm font-bold">
-              {t.windowsStatus}
-            </span>
-          </div>
-        ) : (
-          <div class="card-surface p-6 text-center">
-            <div class="text-4xl mb-3">🚧</div>
-            <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{t.windows}</h3>
-            <span class="inline-block px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 rounded-full text-sm font-bold">
-              {t.windowsStatus}
-            </span>
-          </div>
-        )}
-
-        <!-- Android -->
-        <div class="card-surface p-6 text-center">
-          <div class="text-4xl mb-3">🚧</div>
-          <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{t.android}</h3>
-          <span class="inline-block px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 rounded-full text-sm font-bold">
-            {t.androidStatus}
-          </span>
-        </div>
-
-        <!-- macOS -->
-        <div class="card-surface p-6 text-center">
-          <div class="text-4xl mb-3">📅</div>
-          <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{t.macos}</h3>
-          <span class="inline-block px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-bold">
-            {t.macosStatus}
-          </span>
-        </div>
-
-        <!-- iOS -->
-        <div class="card-surface p-6 text-center">
-          <div class="text-4xl mb-3">📅</div>
-          <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{t.ios}</h3>
-          <span class="inline-block px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-bold">
-            {t.iosStatus}
-          </span>
-        </div>
+        {platforms.map((p) => (
+          p.available && p.url ? (
+            <a
+              href={p.url}
+              target="_blank"
+              rel="noopener"
+              class="card-surface hover-lift p-6 text-center border-green-500/30 bg-green-50/50 dark:bg-green-900/20 block transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F05D23]"
+              data-reveal
+              data-reveal-delay={p.revealDelay}
+            >
+              <div class="text-4xl mb-3">✅</div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{p.label}</h3>
+              <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 rounded-full text-sm font-bold">
+                {p.status}
+              </span>
+            </a>
+          ) : (
+            <div
+              class="card-surface hover-lift p-6 text-center"
+              data-reveal
+              data-reveal-delay={p.revealDelay}
+            >
+              <div class="text-4xl mb-3">📅</div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{p.label}</h3>
+              <span class="inline-block px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-bold">
+                {p.status}
+              </span>
+            </div>
+          )
+        ))}
       </div>
 
       <!-- Community Section -->
-      <div class="card-surface p-8 md:p-12 text-center">
+      <div class="card-surface p-8 md:p-12 text-center" data-reveal>
         <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-white dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 shadow-sm flex items-center justify-center">
           <svg class="w-8 h-8 text-[#F05D23]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />

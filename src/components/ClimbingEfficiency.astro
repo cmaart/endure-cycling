@@ -14,7 +14,7 @@ const t = getTranslations(lang).climbingEfficiency;
   <div class="container mx-auto px-6 relative z-10">
     <div class="max-w-5xl mx-auto">
     <!-- Section badge -->
-    <div class="flex justify-center mb-6">
+    <div class="flex justify-center mb-6" data-reveal>
       <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-700/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold tracking-wide uppercase">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -27,7 +27,7 @@ const t = getTranslations(lang).climbingEfficiency;
     <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
 
       <!-- Left: Text content -->
-      <div class="flex-1 text-center lg:text-left">
+      <div class="flex-1 text-center lg:text-left" data-reveal data-reveal-delay="100">
         <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight text-slate-900 dark:text-white">
           {t.headline1}<br/>
           <span class="text-gradient-primary">{t.headline2}</span>
@@ -65,7 +65,7 @@ const t = getTranslations(lang).climbingEfficiency;
       </div>
 
       <!-- Right: Marketing screenshot -->
-      <div class="flex-1 w-full max-w-lg mx-auto lg:mx-0">
+      <div class="flex-1 w-full max-w-lg mx-auto lg:mx-0" data-reveal data-reveal-delay="300">
         <div class="relative group">
           <!-- Glow effect -->
           <div class="absolute inset-0 bg-gradient-to-br from-emerald-200/40 dark:from-emerald-800/20 to-teal-200/30 dark:to-teal-800/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all scale-95"></div>

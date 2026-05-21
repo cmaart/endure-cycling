@@ -5,20 +5,28 @@ import { config } from '../config';
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).hero;
 const ts = getTranslations(lang).appShowcase;
-const isAvailable = config.isProductAvailable;
+const iosUrl = config.platforms.ios.url;
+const androidUrl = config.platforms.android.url;
+const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
+const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
 ---
 
 <section class="relative min-h-screen flex flex-col pt-12 overflow-hidden">
-  <!-- Background decoration -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-b from-[#F05D23]/5 to-slate-200/20 dark:to-white/5 rounded-full blur-3xl"></div>
+  <!-- Cinematic background image (parallax via fixed-attachment, falls back to scroll on mobile) -->
+  <div class="hero-bg-image" aria-hidden="true"></div>
+  <!-- Dark/light overlay to keep content readable and fade into the next section -->
+  <div class="hero-bg-overlay" aria-hidden="true"></div>
+
+  <!-- Background decoration (kept as an extra accent light above the image) -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-b from-[#F05D23]/10 to-slate-200/10 dark:to-white/5 rounded-full blur-3xl"></div>
   </div>
 
   <div class="container mx-auto px-6 relative z-10">
     <div class="flex flex-col items-center text-center max-w-4xl mx-auto mb-20">
 
       <!-- Logo -->
-      <div>
+      <div data-reveal>
         <img
           src="/assets/ENDURE_lockup_exact_icon_4k.png"
           alt="ENDURE Logo"
@@ -34,17 +42,17 @@ const isAvailable = config.isProductAvailable;
       </div>
 
       <!-- Headline -->
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight" data-reveal data-reveal-delay="100">
         <span class="text-gradient-primary">{t.headline1}</span>
         <span class="block mt-2 text-slate-900 dark:text-white">{t.headline2}</span>
         <span class="block text-xl md:text-xl font-bold text-[#F05D23] mt-6 tracking-wide uppercase">{t.tagline}</span>
       </h1>
 
       <!-- Subline -->
-      <p class="text-xl md:text-2xl text-slate-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed font-medium" set:html={t.subline}></p>
+      <p class="text-xl md:text-2xl text-slate-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed font-medium" data-reveal data-reveal-delay="200" set:html={t.subline}></p>
 
       <!-- Integration & Social -->
-      <div class="flex flex-wrap justify-center items-center gap-6 mb-10">
+      <div class="flex flex-wrap justify-center items-center gap-6 mb-10" data-reveal data-reveal-delay="300">
         <!-- Strava -->
         <a href="https://www.strava.com" target="_blank" rel="noopener" aria-label="Powered by Strava" class="opacity-60 hover:opacity-100 transition-opacity duration-300">
           <img
@@ -70,38 +78,56 @@ const isAvailable = config.isProductAvailable;
         </a>
       </div>
 
-      {isAvailable ? (
-        <!-- CTA Button -->
-        <div class="flex flex-col items-center gap-4 mb-2">
-          <a id="download-btn" href="#download" class="btn-primary text-xl px-8 py-4 shadow-lg shadow-[#F05D23]/20 hover:shadow-[#F05D23]/40 transition-all">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
-            </svg>
-            {t.cta}
+      <!-- Store badges (iOS + Android) -->
+      <div class="flex flex-col items-center gap-4 mb-2" data-reveal data-reveal-delay="400">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <a
+            id="download-btn-ios"
+            href={iosUrl}
+            target="_blank"
+            rel="noopener"
+            aria-label={t.appStoreBadgeAlt}
+            class="transition-transform duration-200 hover:scale-105 focus-visible:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F05D23] rounded-md"
+          >
+            <img
+              src={appStoreBadge}
+              alt={t.appStoreBadgeAlt}
+              width="135"
+              height="40"
+              class="h-12 sm:h-14 w-auto"
+            />
           </a>
-
-
-          <p class="text-sm text-slate-500 dark:text-gray-500 font-medium flex items-center gap-2 mt-4">
-            <span class="inline-block w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-            {t.secondary}
-          </p>
+          <a
+            id="download-btn-android"
+            href={androidUrl}
+            target="_blank"
+            rel="noopener"
+            aria-label={t.googlePlayBadgeAlt}
+            class="transition-transform duration-200 hover:scale-105 focus-visible:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F05D23] rounded-md"
+          >
+            <img
+              src={googlePlayBadge}
+              alt={t.googlePlayBadgeAlt}
+              width="135"
+              height="40"
+              class="h-12 sm:h-14 w-auto"
+            />
+          </a>
         </div>
-      ) : (
-        <!-- Coming Soon -->
-        <div class="flex flex-col items-center gap-4">
-          <div class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-slate-50 dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 shadow-sm backdrop-blur-md">
-            <span class="w-2 h-2 bg-[#F05D23] rounded-full animate-pulse"></span>
-            <span class="text-xl font-bold text-slate-800 dark:text-white">{t.comingSoon}</span>
-          </div>
-          <p class="text-sm font-medium text-slate-500 dark:text-gray-500">
-            {t.comingSoonSecondary}
-          </p>
-        </div>
-      )}
+
+        <p class="text-xs text-slate-500 dark:text-gray-500 font-medium mt-1">
+          {t.desktopNote}
+        </p>
+
+        <p class="text-sm text-slate-500 dark:text-gray-500 font-medium flex items-center gap-2 mt-2">
+          <span class="inline-block w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+          {t.secondary}
+        </p>
+      </div>
     </div>
 
     <!-- App Showcase Visualization -->
-    <div class="relative max-w-6xl mx-auto mt-12 mb-20">
+    <div class="relative max-w-6xl mx-auto mt-12 mb-20" data-reveal data-reveal-delay="500">
       <!-- Central Phone Image -->
       <div class="relative z-20 mx-auto w-full max-w-[280px] lg:max-w-[400px]">
         <div class="relative overflow-hidden">
@@ -253,20 +279,23 @@ const isAvailable = config.isProductAvailable;
 
 
 <script>
-  // Track download clicks
-  const downloadBtn = document.getElementById('download-btn');
+  const storeButtons: Array<{ id: string; label: string }> = [
+    { id: 'download-btn-ios', label: 'ios_app_store' },
+    { id: 'download-btn-android', label: 'google_play_store' },
+  ];
 
-  if (downloadBtn) {
-    downloadBtn.addEventListener('click', () => {
+  for (const { id, label } of storeButtons) {
+    const btn = document.getElementById(id);
+    if (!btn) continue;
+    btn.addEventListener('click', () => {
       // @ts-ignore
       if (typeof gtag !== 'undefined') {
         // @ts-ignore
         gtag('event', 'download_click', {
           'event_category': 'engagement',
-          'event_label': 'windows_installer',
-          'value': 1
+          'event_label': label,
+          'value': 1,
         });
-        console.log('Download event tracked');
       }
     });
   }

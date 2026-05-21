@@ -13,7 +13,7 @@ const t = getTranslations(lang).videoDemo;
 
   <div class="container mx-auto px-6 relative z-10">
     <!-- Section Header -->
-    <div class="text-center mb-12">
+    <div class="text-center mb-12" data-reveal>
       <h2 class="text-3xl md:text-4xl font-bold mb-4">
         <span class="text-slate-900 dark:text-white">{t.title}</span>
         <span class="text-gradient-primary"> {t.titleHighlight}</span>
@@ -24,7 +24,7 @@ const t = getTranslations(lang).videoDemo;
     </div>
 
     <!-- Video Container -->
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-4xl mx-auto" data-reveal data-reveal-delay="200">
       <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
         <!-- Glow effect behind video -->
         <div class="absolute -inset-1 bg-gradient-to-r from-[#F05D23]/30 via-[#d63c6b]/30 to-[#6b4c9a]/30 rounded-2xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity"></div>

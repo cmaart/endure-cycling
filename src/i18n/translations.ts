@@ -8,10 +8,10 @@ export const translations = {
       headline1: "Ride. Analyze.",
       headline2: "Improve.",
       subline: "The cycling app for the essentials. Connect your smart trainer or ride outside, start your workout, and keep track of your FTP and VO2max trends. No gimmicks, just progress.",
-      cta: "Download for Windows",
       secondary: "Frequent updates. Community-driven development. Join the journey.",
-      comingSoon: "Coming Soon",
-      comingSoonSecondary: "Windows release coming soon. Stay tuned for updates!"
+      desktopNote: "Desktop versions (Windows & macOS) planned",
+      appStoreBadgeAlt: "Download on the App Store",
+      googlePlayBadgeAlt: "Get it on Google Play"
     },
     // App Showcase
     appShowcase: {
@@ -45,14 +45,30 @@ export const translations = {
         "<strong>VAM-based scoring:</strong> Your vertical ascent speed (m/h) is the core of the metric — pure climbing ability."
       ]
     },
+    // Lactate (Industry First)
+    lactate: {
+      badge: "Industry first for cycling apps",
+      headline1: "Lactate, logged from your bike.",
+      headline2: "LT1 & LT2 estimated automatically.",
+      description: "ENDURE is the first cycling app that lets you log lactate readings directly during a ride — or add them afterwards. From those values we automatically estimate your LT1 and LT2 thresholds, complete with a confidence tunnel around the curve. No spreadsheets, no separate tools — your blood markers live next to your power.",
+      stat1Title: "LT1 + LT2",
+      stat1Sub: "Auto-estimated",
+      stat2Title: "In-ride · Post-ride",
+      stat2Sub: "Log when you want",
+      bullets: [
+        "<strong>In-ride logging:</strong> Capture lactate values mid-workout without leaving the ride screen.",
+        "<strong>Post-ride entry:</strong> Or add them later from your activity history — no rush.",
+        "<strong>Automatic LT1/LT2 estimation:</strong> A fitted curve with a confidence tunnel turns your readings into actionable thresholds."
+      ],
+      videoCaption: "Logging a lactate reading for a workout.",
+      resultLabel: "What you get out of it:",
+      resultCaption: "Lactate profile + LT1/LT2 with confidence tunnel."
+    },
     // Beta Notice
     betaNotice: {
-      badge: "Beta Version",
-      title: "Currently Free!",
-      description: "ENDURE is in public beta and completely free to use (for now). We're building this together with the cycling community — enjoy full access while we continue to improve.",
-      badgeComingSoon: "Coming Soon",
-      titleComingSoon: "Public Beta Starting Soon!",
-      descriptionComingSoon: "ENDURE is launching into public beta soon — and it will be completely free during the beta phase. We're building this together with the cycling community. Stay tuned!"
+      badge: "Early Release",
+      title: "Available Now — Free during Early Release",
+      description: "ENDURE is live on iOS and Android as an Early Release, and completely free to use while we continue to improve. Desktop versions for Windows and macOS are planned. We're building this together with the cycling community."
     },
     // Features
     features: {
@@ -107,13 +123,13 @@ export const translations = {
       subtitle: "Frequent Updates — To the moon 🚀",
       
       windows: "Windows",
-      windowsStatus: "Coming Soon",
+      windowsStatus: "Planned",
       macos: "macOS",
       macosStatus: "Planned",
       android: "Android",
-      androidStatus: "Coming Soon",
+      androidStatus: "Available",
       ios: "iOS",
-      iosStatus: "Planned",
+      iosStatus: "Available",
       
       communityTitle: "We're Building This Together",
       communityText: "Feature requests are welcome and integrated into our frequent update cycle. Your feedback directly shapes the future of ENDURE.",
@@ -213,10 +229,10 @@ export const translations = {
       headline1: "Fahren. Analysieren.",
       headline2: "Verbessern.",
       subline: "Die Cycling App für das Wesentliche. Verbinde deinen Smart Trainer oder fahr draußen, starte dein Workout und behalte deine FTP- sowie VO2max-Trends im Blick. Kein Schnickschnack, nur Fortschritt.",
-      cta: "Download für Windows",
       secondary: "Häufige Updates. Community-getriebene Entwicklung. Sei dabei.",
-      comingSoon: "Demnächst Verfügbar",
-      comingSoonSecondary: "Windows-Release kommt bald. Bleib dran für Updates!"
+      desktopNote: "Desktop-Versionen (Windows & macOS) geplant",
+      appStoreBadgeAlt: "Laden im App Store",
+      googlePlayBadgeAlt: "Jetzt bei Google Play"
     },
     // App Showcase
     appShowcase: {
@@ -250,14 +266,30 @@ export const translations = {
         "<strong>VAM-basiertes Scoring:</strong> Deine vertikale Aufstiegsgeschwindigkeit (m/h) ist der Kern des Wertes — pure Bergleistung."
       ]
     },
+    // Lactate (Industry First)
+    lactate: {
+      badge: "Erstmals in einer Cycling-App",
+      headline1: "Laktat. Direkt vom Rad.",
+      headline2: "LT1 & LT2 automatisch geschätzt.",
+      description: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte direkt während der Fahrt eintragen kannst — oder im Nachhinein. Aus deinen Werten schätzen wir automatisch LT1 und LT2 inklusive Konfidenztunnel um die Kurve. Keine Spreadsheets, keine Extra-Tools — deine Blutwerte leben neben deinen Watt.",
+      stat1Title: "LT1 + LT2",
+      stat1Sub: "Automatisch geschätzt",
+      stat2Title: "Während · Nach der Fahrt",
+      stat2Sub: "Eintrag wann du willst",
+      bullets: [
+        "<strong>Eintrag während der Fahrt:</strong> Laktatwerte mitten im Workout erfassen, ohne den Ride-Screen zu verlassen.",
+        "<strong>Eintrag im Nachhinein:</strong> Oder später aus der Aktivitätshistorie ergänzen — kein Stress.",
+        "<strong>Automatische LT1/LT2-Schätzung:</strong> Eine gefittete Kurve mit Konfidenztunnel macht aus deinen Werten greifbare Schwellen."
+      ],
+      videoCaption: "Laktatwert für ein Workout eintragen.",
+      resultLabel: "Das kommt raus:",
+      resultCaption: "Laktatprofil + LT1/LT2 mit Konfidenztunnel."
+    },
     // Beta Notice
     betaNotice: {
-      badge: "Beta Version",
-      title: "Aktuell Gratis!",
-      description: "ENDURE befindet sich in der öffentlichen Beta und ist komplett kostenlos nutzbar (aktuell). Wir bauen das gemeinsam mit der Radsport-Community — genieße vollen Zugriff während wir weiter verbessern.",
-      badgeComingSoon: "Demnächst",
-      titleComingSoon: "Public Beta startet bald!",
-      descriptionComingSoon: "ENDURE startet bald in die öffentliche Beta — und wird während der Beta-Phase komplett kostenlos sein. Wir bauen das gemeinsam mit der Radsport-Community. Bleib dran!"
+      badge: "Early Release",
+      title: "Jetzt verfügbar — Gratis im Early Release",
+      description: "ENDURE ist als Early Release für iOS und Android verfügbar — und komplett kostenlos, während wir die App weiter verbessern. Desktop-Versionen für Windows und macOS sind in Planung. Wir bauen das gemeinsam mit der Radsport-Community."
     },
     // Features
     features: {
@@ -312,13 +344,13 @@ export const translations = {
       subtitle: "Häufige Updates — To the moon 🚀",
       
       windows: "Windows",
-      windowsStatus: "Demnächst",
+      windowsStatus: "Geplant",
       macos: "macOS",
       macosStatus: "Geplant",
       android: "Android",
-      androidStatus: "Demnächst",
+      androidStatus: "Verfügbar",
       ios: "iOS",
-      iosStatus: "Geplant",
+      iosStatus: "Verfügbar",
       
       communityTitle: "Wir Bauen Das Gemeinsam",
       communityText: "Feature requests are welcome and integrated into our frequent update cycle. Dein Feedback formt direkt die Zukunft von ENDURE.",

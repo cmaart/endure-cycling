@@ -159,5 +159,51 @@ const deUrl = `${siteUrl}/de`;
   <body class="antialiased">
     <slot />
     <CookieBanner lang={lang} />
+
+    <script>
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Scroll-reveal via IntersectionObserver
+      const targets = document.querySelectorAll<HTMLElement>('[data-reveal]');
+      if (prefersReduced || !('IntersectionObserver' in window)) {
+        targets.forEach((el) => el.classList.add('is-revealed'));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-revealed');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }
+        );
+        targets.forEach((el) => observer.observe(el));
+      }
+
+      // JS-driven parallax for the hero background image — runs on all devices,
+      // GPU-accelerated via translate3d, rAF-throttled for smoothness.
+      const heroBg = document.querySelector<HTMLElement>('.hero-bg-image');
+      if (heroBg && !prefersReduced) {
+        let ticking = false;
+        const update = () => {
+          heroBg.style.transform = `translate3d(0, ${window.scrollY * 0.35}px, 0)`;
+          ticking = false;
+        };
+        // initial position
+        update();
+        window.addEventListener(
+          'scroll',
+          () => {
+            if (!ticking) {
+              requestAnimationFrame(update);
+              ticking = true;
+            }
+          },
+          { passive: true }
+        );
+      }
+    </script>
   </body>
 </html>

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Static marketing site for **ENDURE**, a Windows indoor cycling app. Live at https://www.endure-cycling.com. Built with Astro 5 + Tailwind CSS v4, deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `master`.
+Static marketing site for **ENDURE**, an indoor cycling app available on iOS and Android (Early Release), with Windows and macOS planned. Live at https://www.endure-cycling.com. Built with Astro 5 + Tailwind CSS v4, deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `master`.
 
 ## Commands
 
@@ -24,9 +24,9 @@ The `lang` flows top-down: `Layout.astro` resolves it from `Astro.props.lang ?? 
 
 `src/pages/index.astro` contains an inline script that auto-redirects German browsers to `/de` (gated by a `preferredLang` localStorage key set by `LanguageSwitcher`).
 
-### Product-availability flag
+### Per-platform availability
 
-`src/config.ts` exports `config.isProductAvailable`. Components (notably `Hero.astro`) branch on this to swap "Download for Windows" CTAs for "Coming Soon" copy. Flip this single flag at launch — do not hardcode availability state in components.
+`src/config.ts` exports `config.platforms` — an object keyed by `ios`, `android`, `windows`, `macos`, each with `{ available: boolean, url: string | null }`. Components (`Hero.astro`, `Roadmap.astro`) read these flags to render store badges + green ✅ "Available" cards versus blue 📅 "Planned" cards. Flip `available` and set `url` at platform launch — do not hardcode availability state in components. The `PlatformKey` type is exported for typed iteration.
 
 ### Layout owns SEO
 

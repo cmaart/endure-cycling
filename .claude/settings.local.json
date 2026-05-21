@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__kapture__list_tabs",
+      "mcp__kapture__keypress",
+      "mcp__kapture__screenshot",
+      "mcp__kapture__show",
+      "mcp__kapture__console_logs",
+      "mcp__kapture__navigate",
+      "mcp__kapture__hover",
+      "mcp__kapture__elements",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_console_messages",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_close"
+    ]
+  }
+}
