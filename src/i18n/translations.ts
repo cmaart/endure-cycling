@@ -7,8 +7,8 @@ export const translations = {
       tagline: "Precision over Gimmicks",
       headline1: "Ride. Analyze.",
       headline2: "Improve.",
-      subline: "The cycling app for the essentials. Connect your smart trainer or ride outside, start your workout, and keep track of your FTP and VO2max trends. No gimmicks, just progress.",
-      secondary: "Frequent updates. Community-driven development. Join the journey.",
+      subline: "Connect your smart trainer or ride outside, start your workout, and track your FTP and VO2max trends. Structured indoor training, no distractions.",
+      secondary: "Frequent updates. Built with the community. Come along for the ride.",
       desktopNote: "Desktop versions (Windows & macOS) planned",
       appStoreBadgeAlt: "Download on the App Store",
       googlePlayBadgeAlt: "Get it on Google Play"
@@ -17,7 +17,7 @@ export const translations = {
     appShowcase: {
       vo2max: {
         title: "VO2Max Estimation",
-        description: "Analyze your potential with every ride."
+        description: "Track your VO2max trend ride by ride."
       },
       crossPlatform: {
         title: "Desktop & Mobile",
@@ -29,15 +29,15 @@ export const translations = {
       },
       ftpTrend: {
         title: "FTP Trend",
-        description: "Monitor your fitness progress visually."
+        description: "See your FTP progress week by week."
       }
     },
     // Climbing Efficiency
     climbingEfficiency: {
       badge: "New Feature",
       headline1: "Own the climb.",
-      headline2: "See how efficiently you really climb.",
-      description: "Climbing Efficiency is a pioneering metric that measures how effectively you convert your effort into vertical meters. ENDURE automatically detects climbs from your outdoor rides and calculates your personal climbing score — likely one of the first apps in the world to do so.",
+      headline2: "Measure how efficiently you actually climb.",
+      description: "Climbing Efficiency measures how effectively you turn watts into vertical meters. ENDURE automatically detects climbs in your outdoor rides and calculates a personal climbing score — one of the first apps in the world to do this.",
       stat1: "Vertical speed measured",
       stat2: "Unique metric worldwide",
       bullets: [
@@ -61,7 +61,7 @@ export const translations = {
         "<strong>Automatic LT1/LT2 estimation:</strong> A fitted curve with a confidence tunnel turns your readings into actionable thresholds."
       ],
       videoCaption: "Logging a lactate reading for a workout.",
-      resultLabel: "What you get out of it:",
+      resultLabel: "What you get:",
       resultCaption: "Lactate profile + LT1/LT2 with confidence tunnel."
     },
     // Beta Notice
@@ -74,10 +74,10 @@ export const translations = {
     features: {
       sectionTitle: "Everything you need for",
       sectionTitleHighlight: "indoor training & analysis",
-      sectionSubtitle: "No fluff, no gimmicks. A curated workout library, advanced ride analytics, and seamless trainer connectivity.",
-      
+      sectionSubtitle: "A curated workout library, deep ride analytics, and rock-solid trainer connectivity. That's the whole pitch.",
+
       analytics: {
-        title: "Deep Progress Analytics",
+        title: "Progress Analytics",
         feature1: "<strong>FTP & VO2max Trends:</strong> Track your fitness evolution over weeks and months.",
         feature2: "<strong>Indoor + Outdoor:</strong> Syncs your Strava rides for a complete picture.",
         feature3: "<strong>Power Profile:</strong> Visualize your strengths across durations."
@@ -92,7 +92,7 @@ export const translations = {
       
       training: {
         title: "Structured Training",
-        feature1: "<strong>No-Bullshit Library:</strong> Physiologically targeted workouts (VO2max, Threshold) only. No 'kitchen sink' junk.",
+        feature1: "<strong>Targeted Workouts:</strong> Physiologically meaningful training only (VO2max, Threshold, Sweet Spot) — no filler.",
         feature2: "<strong>Universal Import:</strong> Supports .ZWO, .MRC, and .ERG files.",
         feature3: "<strong>Quick Free Ride:</strong> Optional ERG mode to ride by watts instantly."
       },
@@ -120,7 +120,7 @@ export const translations = {
     roadmap: {
       title: "Platform",
       titleHighlight: "Roadmap",
-      subtitle: "Frequent Updates — To the moon 🚀",
+      subtitle: "Frequent Updates — Full gas ahead 🚀",
       
       windows: "Windows",
       windowsStatus: "Planned",
@@ -132,7 +132,7 @@ export const translations = {
       iosStatus: "Available",
       
       communityTitle: "We're Building This Together",
-      communityText: "Feature requests are welcome and integrated into our frequent update cycle. Your feedback directly shapes the future of ENDURE.",
+      communityText: "Feature requests are welcome and feed straight into the update cycle. Your feedback shapes ENDURE.",
       communityLink: "Join us on GitHub",
       instagramLink: "Follow us on Instagram"
     },
@@ -202,7 +202,7 @@ export const translations = {
       seoTitle: "Feedback - ENDURE",
       seoDescription: "Share your feedback about the ENDURE indoor cycling app. Report bugs, suggest features, or tell us what you think.",
       headline: "Send Feedback",
-      intro: "Found a bug? Have an idea? Or just want to share your experience? Your feedback directly shapes the future of ENDURE.",
+      intro: "Found a bug? Got an idea? Want to share your experience? Your feedback shapes ENDURE.",
       emailLabel: "Email address",
       emailPlaceholder: "your.email@gmail.com",
       typeLabel: "What kind of feedback?",
@@ -228,8 +228,8 @@ export const translations = {
       tagline: "Präzision statt Spielerei",
       headline1: "Fahren. Analysieren.",
       headline2: "Verbessern.",
-      subline: "Die Cycling App für das Wesentliche. Verbinde deinen Smart Trainer oder fahr draußen, starte dein Workout und behalte deine FTP- sowie VO2max-Trends im Blick. Kein Schnickschnack, nur Fortschritt.",
-      secondary: "Häufige Updates. Community-getriebene Entwicklung. Sei dabei.",
+      subline: "Verbinde deinen Smart Trainer oder fahr draußen, starte dein Workout und behalte deine FTP- und VO2max-Trends im Blick. Strukturiertes Indoor-Training ohne Ablenkung.",
+      secondary: "Häufige Updates. Entwickelt mit der Community. Sei dabei.",
       desktopNote: "Desktop-Versionen (Windows & macOS) geplant",
       appStoreBadgeAlt: "Laden im App Store",
       googlePlayBadgeAlt: "Jetzt bei Google Play"
@@ -238,7 +238,7 @@ export const translations = {
     appShowcase: {
       vo2max: {
         title: "VO2Max Schätzung",
-        description: "Analysiere dein Potenzial bei jeder Fahrt."
+        description: "Verfolge deine VO2max-Entwicklung über jede Fahrt."
       },
       crossPlatform: {
         title: "Desktop & Mobile",
@@ -250,17 +250,17 @@ export const translations = {
       },
       ftpTrend: {
         title: "FTP Entwicklung",
-        description: "Überwache deinen Fitnessfortschritt visuell."
+        description: "Sieh deine FTP-Entwicklung über Wochen und Monate."
       }
     },
     // Climbing Efficiency
     climbingEfficiency: {
       badge: "Neues Feature",
       headline1: "Beherrsche den Anstieg.",
-      headline2: "Sieh, wie effizient du wirklich bergauf fährst.",
-      description: "Climbing Efficiency ist eine wegweisende Kennzahl, die misst, wie effektiv du deine Kraft in gewonnene Höhenmeter umsetzt. ENDURE erkennt automatisch Anstiege in deinen Outdoor-Fahrten und berechnet deinen persönlichen Score — wahrscheinlich eine der ersten Apps weltweit, die das bietet.",
+      headline2: "Miss, wie effizient du wirklich kletterst.",
+      description: "Climbing Efficiency misst, wie effektiv du deine Watt in Höhenmeter umsetzt. ENDURE erkennt Anstiege in deinen Outdoor-Fahrten automatisch und berechnet deinen persönlichen Kletter-Score — als eine der ersten Apps weltweit.",
       stat1: "Vertikalgeschwindigkeit gemessen",
-      stat2: "Einzigartiger weltweiter Wert",
+      stat2: "Weltweit einzigartige Metrik",
       bullets: [
         "<strong>Automatische Anstiegserkennung:</strong> ENDURE identifiziert jeden Anstieg in deinen Outdoor-Fahrten.",
         "<strong>VAM-basiertes Scoring:</strong> Deine vertikale Aufstiegsgeschwindigkeit (m/h) ist der Kern des Wertes — pure Bergleistung."
@@ -295,10 +295,10 @@ export const translations = {
     features: {
       sectionTitle: "Alles was du brauchst für",
       sectionTitleHighlight: "Indoor-Training & Analyse",
-      sectionSubtitle: "Kein Schnickschnack, keine Spielereien. Kuratierte Workout-Bibliothek, erweiterte Fahrt-Analysen und nahtlose Trainer-Anbindung.",
-      
+      sectionSubtitle: "Kuratierte Workout-Bibliothek, tiefe Fahrt-Analysen und stabile Trainer-Anbindung. Mehr braucht es nicht.",
+
       analytics: {
-        title: "Tiefgehende Fortschritts-Analyse",
+        title: "Fortschritts-Analyse",
         feature1: "<strong>FTP- & VO2max-Trends:</strong> Verfolge deine Fitness-Entwicklung über Wochen und Monate.",
         feature2: "<strong>Indoor + Outdoor:</strong> Synchronisiert deine Strava-Fahrten für ein komplettes Bild.",
         feature3: "<strong>Power Profil:</strong> Visualisiere deine Stärken über verschiedene Dauern."
@@ -313,7 +313,7 @@ export const translations = {
       
       training: {
         title: "Strukturiertes Training",
-        feature1: "<strong>Keine-Bullshit-Bibliothek:</strong> Nur physiologisch gezielte Workouts (VO2max, Threshold). Kein 'alles dabei' Müll.",
+        feature1: "<strong>Zielgerichtete Workouts:</strong> Nur physiologisch sinnvolle Trainings (VO2max, Schwelle, Sweet Spot) — kein Ballast.",
         feature2: "<strong>Universeller Import:</strong> Unterstützt .ZWO, .MRC und .ERG Dateien.",
         feature3: "<strong>Schnelles Freifahren:</strong> Optionaler ERG-Modus um sofort nach Watt zu fahren."
       },
@@ -341,7 +341,7 @@ export const translations = {
     roadmap: {
       title: "Plattform",
       titleHighlight: "Roadmap",
-      subtitle: "Häufige Updates — To the moon 🚀",
+      subtitle: "Häufige Updates — Vollgas voraus 🚀",
       
       windows: "Windows",
       windowsStatus: "Geplant",
@@ -352,15 +352,15 @@ export const translations = {
       ios: "iOS",
       iosStatus: "Verfügbar",
       
-      communityTitle: "Wir Bauen Das Gemeinsam",
-      communityText: "Feature requests are welcome and integrated into our frequent update cycle. Dein Feedback formt direkt die Zukunft von ENDURE.",
+      communityTitle: "Wir bauen das gemeinsam",
+      communityText: "Feature-Wünsche sind willkommen und fließen direkt in den Update-Zyklus ein. Dein Feedback gestaltet ENDURE mit.",
       communityLink: "Schließ dich uns auf GitHub an",
       instagramLink: "Folge uns auf Instagram"
     },
     // Footer
     footer: {
-      tagline: "Driven by data. Built to endure.",
-      
+      tagline: "Datengetrieben. Auf Ausdauer gebaut.",
+
       requirementsTitle: "Systemvoraussetzungen",
       windows: "Windows 10 / 11",
       bluetooth: "Bluetooth Adapter Erforderlich",
@@ -381,7 +381,7 @@ export const translations = {
     // Video Demo
     videoDemo: {
       title: "Erlebe Es",
-      titleHighlight: "In Action",
+      titleHighlight: "in Aktion",
       subtitle: "Vom App-Start bis zur Fahrt in unter 30 Sekunden. Präzises Training, ohne Umwege.",
       caption: "App-Start bis Fahrt — echte Geschwindigkeit, kein Zeitraffer"
     },
@@ -423,7 +423,7 @@ export const translations = {
       seoTitle: "Feedback - ENDURE",
       seoDescription: "Teile dein Feedback zur ENDURE Indoor-Cycling-App. Melde Bugs, schlage Features vor oder sag uns deine Meinung.",
       headline: "Feedback senden",
-      intro: "Bug gefunden? Eine Idee? Oder einfach deine Erfahrung teilen? Dein Feedback formt direkt die Zukunft von ENDURE.",
+      intro: "Bug gefunden? Eine Idee? Oder einfach deine Erfahrung teilen? Dein Feedback gestaltet ENDURE direkt mit.",
       emailLabel: "E-Mail-Adresse",
       emailPlaceholder: "deine.email@gmail.com",
       typeLabel: "Art des Feedbacks",
