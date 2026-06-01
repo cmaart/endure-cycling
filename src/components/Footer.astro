@@ -4,8 +4,8 @@ import { getTranslations } from '../i18n/translations';
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).footer;
 const currentYear = new Date().getFullYear();
-const androidTestHref = lang === 'de' ? '/de/android-test' : '/android-test';
-const feedbackHref = lang === 'de' ? '/de/feedback' : '/feedback';
+const androidTestHref = lang === 'de' ? '/de/android-test/' : '/android-test/';
+const feedbackHref = lang === 'de' ? '/de/feedback/' : '/feedback/';
 ---
 
 <footer class="py-16 border-t border-slate-200 dark:border-white/10 bg-white dark:bg-[#0d0f11]">
@@ -62,17 +62,17 @@ const feedbackHref = lang === 'de' ? '/de/feedback' : '/feedback';
             </a>
           </li>
           <li>
-            <a href="/privacy" class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
+            <a href="/privacy/" class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
               {t.privacy}
             </a>
           </li>
           <li>
-            <a href="/terms" class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
+            <a href="/terms/" class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
               {t.terms}
             </a>
           </li>
           <li>
-            <a href="/imprint" class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
+            <a href="/imprint/" class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
               {t.imprint}
             </a>
           </li>

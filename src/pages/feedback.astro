@@ -5,7 +5,7 @@ import { getTranslations } from '../i18n/translations';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).feedback;
-const homeHref = lang === 'de' ? '/de' : '/';
+const homeHref = lang === 'de' ? '/de/' : '/';
 ---
 
 <Layout title={t.seoTitle} description={t.seoDescription}>
