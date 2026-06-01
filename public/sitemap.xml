@@ -5,7 +5,7 @@
   <!-- English Homepage -->
   <url>
     <loc>https://www.endure-cycling.com/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/"/>
     <lastmod>2026-01-14</lastmod>
@@ -15,8 +15,8 @@
   
   <!-- German Homepage -->
   <url>
-    <loc>https://www.endure-cycling.com/de/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/"/>
+    <loc>https://www.endure-cycling.com/de</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/"/>
     <lastmod>2026-01-14</lastmod>

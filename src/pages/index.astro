@@ -20,10 +20,10 @@ import Footer from '../components/Footer.astro';
       if (!preferredLang) {
         const browserLang = navigator.language.toLowerCase();
         if (browserLang.startsWith('de')) {
-          window.location.href = '/de/';
+          window.location.href = '/de';
         }
       } else if (preferredLang === 'de') {
-        window.location.href = '/de/';
+        window.location.href = '/de';
       }
     })();
   </script>
