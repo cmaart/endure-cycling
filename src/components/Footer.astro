@@ -6,6 +6,7 @@ const t = getTranslations(lang).footer;
 const currentYear = new Date().getFullYear();
 const androidTestHref = lang === 'de' ? '/de/android-test' : '/android-test';
 const feedbackHref = lang === 'de' ? '/de/feedback' : '/feedback';
+const aboutHref = lang === 'de' ? '/de/about' : '/about';
 ---
 
 <footer class="py-16 border-t border-slate-200 dark:border-white/10 bg-white dark:bg-[#0d0f11]">
@@ -60,6 +61,11 @@ const feedbackHref = lang === 'de' ? '/de/feedback' : '/feedback';
             </a>
           </li>
           <li>
+            <a href={aboutHref} class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
+              {t.about}
+            </a>
+          </li>
+          <li>
             <a href={androidTestHref} class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm flex items-center gap-2">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.523 2.227l1.39-2.41a.29.29 0 00-.503-.29l-1.408 2.44a8.59 8.59 0 00-3.502-.734 8.59 8.59 0 00-3.502.734L8.59-.473a.29.29 0 00-.504.29l1.391 2.41C6.57 3.636 4.5 6.544 4.5 9.958h15c0-3.414-2.07-6.322-4.977-7.731zM8.5 7.458a.75.75 0 110-1.5.75.75 0 010 1.5zm7 0a.75.75 0 110-1.5.75.75 0 010 1.5zM4.5 10.958v8a1 1 0 001 1h1v3.5a1.5 1.5 0 003 0v-3.5h5v3.5a1.5 1.5 0 003 0v-3.5h1a1 1 0 001-1v-8h-15zm-3 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5zm21 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5z"/>
@@ -88,7 +94,7 @@ const feedbackHref = lang === 'de' ? '/de/feedback' : '/feedback';
             </a>
           </li>
           <li>
-            <a href="mailto:contact@endure.app" class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
+            <a href="mailto:info@endure-cycling.com" class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
               {t.contact}
             </a>
           </li>

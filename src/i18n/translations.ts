@@ -136,18 +136,96 @@ export const translations = {
       communityLink: "Join us on GitHub",
       instagramLink: "Follow us on Instagram"
     },
+    // Comparison / capability table
+    comparison: {
+      title: "ENDURE",
+      titleHighlight: "at a glance",
+      subtitle: "Everything the app does, in one place — no fine print.",
+      featureLabel: "Capability",
+      valueLabel: "What you get",
+      rows: [
+        { feature: "Price", value: "Free during Early Release — no subscription" },
+        { feature: "Platforms", value: "iOS & Android (Windows & macOS planned)" },
+        { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
+        { feature: "Workout import", value: ".ZWO, .MRC and .ERG files" },
+        { feature: "Analytics", value: "FTP & VO2max trends, power profile, time-in-zones" },
+        { feature: "Lactate LT1 / LT2", value: "In-ride & post-ride logging with auto-estimated thresholds" },
+        { feature: "Climbing Efficiency", value: "Automatic VAM-based climb scoring" },
+        { feature: "Strava", value: "Auto-upload & ride-history sync" },
+        { feature: "Startup", value: "From app start to riding in under 30 seconds" }
+      ]
+    },
+    // FAQ
+    faq: {
+      title: "Frequently Asked",
+      titleHighlight: "Questions",
+      subtitle: "Everything you need to know before your first ride.",
+      items: [
+        {
+          q: "Is ENDURE free?",
+          a: "Yes. ENDURE is completely free during its Early Release on iOS and Android while we keep improving it. There is no subscription and no paywalled features — download it and start riding."
+        },
+        {
+          q: "Which smart trainers and sensors work with ENDURE?",
+          a: "ENDURE connects over Bluetooth to smart trainers, power meters and heart-rate monitors. If your trainer supports standard Bluetooth resistance control, ENDURE can steer it automatically in ERG mode."
+        },
+        {
+          q: "Which platforms is ENDURE available on?",
+          a: "ENDURE is live on iOS and Android as an Early Release. Desktop versions for Windows and macOS are planned, so you will be able to train on the big screen later too."
+        },
+        {
+          q: "How does ENDURE estimate FTP and VO2max?",
+          a: "ENDURE analyses your recorded power and heart-rate data across rides to model your FTP and VO2max trends over time — so you see fitness evolve week by week instead of from a single all-out test."
+        },
+        {
+          q: "What is the lactate (LT1 / LT2) feature?",
+          a: "ENDURE is the first cycling app that lets you log lactate readings during or after a ride. From those values it fits a curve and automatically estimates your LT1 and LT2 thresholds, with a confidence tunnel around the result."
+        },
+        {
+          q: "Does ENDURE sync with Strava?",
+          a: "Yes. ENDURE auto-uploads your rides to Strava and can sync your ride history on first launch, combining indoor and outdoor activities into one complete performance picture."
+        }
+      ]
+    },
+    // About
+    about: {
+      seoTitle: "About ENDURE — Precision Indoor Cycling Analysis",
+      seoDescription: "The story behind ENDURE: who builds it, the precision-over-gimmicks philosophy, and how its FTP, VO2max, lactate and climbing metrics actually work.",
+      headline: "About ENDURE",
+      intro: "ENDURE is an indoor cycling app built around one idea: precision over gimmicks. No games, no filler — just the training and analysis that actually make you faster.",
+      sections: [
+        {
+          title: "Who's behind ENDURE",
+          body: "ENDURE is built by Christoph Martin, a cyclist and developer based in Austria. It started from a simple frustration — indoor cycling apps were full of gimmicks and games, but thin on the honest analysis that helps you improve. ENDURE is the app we wanted to train with ourselves."
+        },
+        {
+          title: "Precision over gimmicks",
+          body: "Every feature earns its place. The workout library carries only physiologically meaningful sessions — VO2max, threshold, sweet spot — with no filler. Sessions start in seconds, survive dropouts with auto-resume, and run smoothly without a gaming PC. We would rather do a few things exceptionally well than bury you in noise."
+        },
+        {
+          title: "How our metrics work",
+          body: "FTP and VO2max are modelled from your recorded power and heart-rate data across rides, so trends reflect real progress over time. LT1 and LT2 are estimated from lactate readings you log in-ride or afterwards, fitted to a curve with a confidence tunnel. Climbing Efficiency scores how effectively you turn watts into vertical metres using your ascent speed (VAM)."
+        },
+        {
+          title: "Built with the community",
+          body: "ENDURE ships frequent updates, and feature requests feed straight into the cycle. The direction of the app is shaped by the cyclists who ride with it — come along for the ride."
+        }
+      ],
+      backHome: "Back to Homepage"
+    },
     // Footer
     footer: {
       tagline: "Driven by data. Built to endure.",
-      
+
       requirementsTitle: "System Requirements",
       windows: "Windows 10 / 11",
       bluetooth: "Bluetooth Adapter Required",
-      
+
       linksTitle: "Links",
       eventsCalendar: "Race Calendar 2026 – Cycling & Triathlon",
       instagram: "Instagram",
       github: "GitHub",
+      about: "About",
       privacy: "Privacy Policy",
       terms: "Terms of Use",
       imprint: "Imprint / Legal Notice",
@@ -358,6 +436,83 @@ export const translations = {
       communityLink: "Schließ dich uns auf GitHub an",
       instagramLink: "Folge uns auf Instagram"
     },
+    // Comparison / capability table
+    comparison: {
+      title: "ENDURE",
+      titleHighlight: "auf einen Blick",
+      subtitle: "Alles, was die App kann — an einem Ort, ohne Kleingedrucktes.",
+      featureLabel: "Funktion",
+      valueLabel: "Das bekommst du",
+      rows: [
+        { feature: "Preis", value: "Gratis im Early Release — kein Abo" },
+        { feature: "Plattformen", value: "iOS & Android (Windows & macOS geplant)" },
+        { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
+        { feature: "Workout-Import", value: ".ZWO, .MRC und .ERG Dateien" },
+        { feature: "Analyse", value: "FTP- & VO2max-Trends, Power Profile, Zeit in Zonen" },
+        { feature: "Laktat LT1 / LT2", value: "Eintrag während & nach der Fahrt, Schwellen automatisch geschätzt" },
+        { feature: "Climbing Efficiency", value: "Automatisches VAM-basiertes Kletter-Scoring" },
+        { feature: "Strava", value: "Auto-Upload & Verlaufs-Sync" },
+        { feature: "Start", value: "Vom App-Start bis zur Fahrt in unter 30 Sekunden" }
+      ]
+    },
+    // FAQ
+    faq: {
+      title: "Häufige",
+      titleHighlight: "Fragen",
+      subtitle: "Alles, was du vor deiner ersten Fahrt wissen musst.",
+      items: [
+        {
+          q: "Ist ENDURE kostenlos?",
+          a: "Ja. ENDURE ist im Early Release auf iOS und Android komplett kostenlos, während wir die App weiter verbessern. Kein Abo, keine kostenpflichtigen Features — einfach herunterladen und losfahren."
+        },
+        {
+          q: "Welche Smart Trainer und Sensoren funktionieren mit ENDURE?",
+          a: "ENDURE verbindet sich per Bluetooth mit Smart Trainern, Power Metern und Herzfrequenz-Sensoren. Unterstützt dein Trainer die standardmäßige Bluetooth-Widerstandssteuerung, kann ENDURE ihn im ERG-Modus automatisch steuern."
+        },
+        {
+          q: "Auf welchen Plattformen ist ENDURE verfügbar?",
+          a: "ENDURE ist als Early Release für iOS und Android verfügbar. Desktop-Versionen für Windows und macOS sind in Planung, damit du später auch am großen Bildschirm trainieren kannst."
+        },
+        {
+          q: "Wie schätzt ENDURE FTP und VO2max?",
+          a: "ENDURE analysiert deine aufgezeichneten Power- und Herzfrequenzdaten über mehrere Fahrten hinweg und modelliert daraus deine FTP- und VO2max-Trends — du siehst deine Entwicklung Woche für Woche statt aus einem einzelnen Test."
+        },
+        {
+          q: "Was ist das Laktat-Feature (LT1 / LT2)?",
+          a: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte während oder nach der Fahrt eintragen kannst. Aus diesen Werten wird eine Kurve gefittet und LT1 und LT2 werden automatisch geschätzt — inklusive Konfidenztunnel um das Ergebnis."
+        },
+        {
+          q: "Synchronisiert ENDURE mit Strava?",
+          a: "Ja. ENDURE lädt deine Fahrten automatisch zu Strava hoch und kann beim ersten Start deinen Fahrtverlauf synchronisieren — Indoor- und Outdoor-Aktivitäten ergeben so ein komplettes Leistungsbild."
+        }
+      ]
+    },
+    // About
+    about: {
+      seoTitle: "Über ENDURE — Präzise Indoor-Cycling-Analyse",
+      seoDescription: "Die Geschichte hinter ENDURE: wer dahintersteht, die Philosophie „Präzision statt Spielerei“ und wie FTP-, VO2max-, Laktat- und Kletter-Metriken funktionieren.",
+      headline: "Über ENDURE",
+      intro: "ENDURE ist eine Indoor-Cycling-App mit einer klaren Idee: Präzision statt Spielerei. Keine Spiele, kein Ballast — nur das Training und die Analyse, die dich wirklich schneller machen.",
+      sections: [
+        {
+          title: "Wer hinter ENDURE steht",
+          body: "ENDURE wird von Christoph Martin entwickelt, einem Radfahrer und Entwickler aus Österreich. Der Auslöser war simpler Frust — Indoor-Cycling-Apps waren voller Spielereien und Games, aber dünn bei der ehrlichen Analyse, die beim Besserwerden hilft. ENDURE ist die App, mit der wir selbst trainieren wollten."
+        },
+        {
+          title: "Präzision statt Spielerei",
+          body: "Jedes Feature muss sich seinen Platz verdienen. Die Workout-Bibliothek enthält nur physiologisch sinnvolle Einheiten — VO2max, Schwelle, Sweet Spot — ohne Ballast. Sessions starten in Sekunden, überstehen Verbindungsabbrüche per Auto-Resume und laufen flüssig ohne Gaming-PC. Lieber wenige Dinge herausragend als viel Lärm."
+        },
+        {
+          title: "Wie unsere Metriken funktionieren",
+          body: "FTP und VO2max werden aus deinen aufgezeichneten Power- und Herzfrequenzdaten über mehrere Fahrten modelliert, damit Trends echten Fortschritt zeigen. LT1 und LT2 werden aus Laktatwerten geschätzt, die du während oder nach der Fahrt einträgst — gefittet an eine Kurve mit Konfidenztunnel. Climbing Efficiency bewertet über deine Aufstiegsgeschwindigkeit (VAM), wie effektiv du Watt in Höhenmeter umsetzt."
+        },
+        {
+          title: "Gemeinsam mit der Community gebaut",
+          body: "ENDURE bekommt häufige Updates, und Feature-Wünsche fließen direkt in den Zyklus ein. Die Richtung der App wird von den Radfahrern geprägt, die damit fahren — sei dabei."
+        }
+      ],
+      backHome: "Zurück zur Startseite"
+    },
     // Footer
     footer: {
       tagline: "Datengetrieben. Auf Ausdauer gebaut.",
@@ -365,11 +520,12 @@ export const translations = {
       requirementsTitle: "Systemvoraussetzungen",
       windows: "Windows 10 / 11",
       bluetooth: "Bluetooth Adapter Erforderlich",
-      
+
       linksTitle: "Links",
       eventsCalendar: "Radrennen & Triathlon Kalender 2026",
       instagram: "Instagram",
       github: "GitHub",
+      about: "Über uns",
       privacy: "Datenschutz",
       terms: "Nutzungsbedingungen",
       imprint: "Impressum / Legal Notice",

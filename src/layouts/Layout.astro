@@ -1,5 +1,6 @@
 ---
 import { getTranslations } from '../i18n/translations';
+import { config } from '../config';
 import CookieBanner from '../components/CookieBanner.astro';
 import '@fontsource/inter/300.css';
 import '@fontsource/inter/400.css';
@@ -20,12 +21,30 @@ const t = getTranslations(lang);
 const title = Astro.props.title || t.seo.title;
 const description = Astro.props.description || t.seo.description;
 
-// SEO URLs
+// SEO URLs — derive per-page so each route self-canonicalizes.
+// `trailingSlash: 'never'` + `build.format: 'file'` means pathname is slash-less
+// (homepage is '/', e.g. '/about', '/de/about').
 const siteUrl = 'https://www.endure-cycling.com';
-const currentPath = lang === 'de' ? '/de' : '/';
-const canonicalUrl = `${siteUrl}${currentPath}`;
-const enUrl = `${siteUrl}/`;
-const deUrl = `${siteUrl}/de`;
+// `build.format: 'file'` emits `about.html`, `de.html`, `de/about.html`, so
+// Astro.url.pathname carries the `.html` suffix. Normalize to the slash-less
+// URL GitHub Pages actually serves ('/', '/about', '/de', '/de/about').
+const path = (Astro.url.pathname
+  .replace(/index\.html$/, '')
+  .replace(/\.html$/, '')
+  .replace(/\/$/, '')) || '/';
+const basePath = path.replace(/^\/de(?=\/|$)/, '') || '/';
+const enUrl = `${siteUrl}${basePath}`;
+const deUrl = `${siteUrl}/de${basePath === '/' ? '' : basePath}`;
+const canonicalUrl = lang === 'de' ? deUrl : enUrl;
+
+// Store logo + preferred OG image, referenced from meta + JSON-LD below.
+const ogImage = `${siteUrl}/assets/screenshots/endure-dashboard.min.jpeg`;
+const orgLogo = `${siteUrl}/assets/ENDURE_lockup_exact_icon_4k.png`;
+// operatingSystem for schema, derived from actual availability so it never drifts.
+const availableOs = Object.entries(config.platforms)
+  .filter(([, p]) => p.available)
+  .map(([key]) => ({ ios: 'iOS', android: 'Android', windows: 'Windows', macos: 'macOS' }[key]))
+  .join(', ');
 ---
 
 <!doctype html>
@@ -110,7 +129,7 @@ const deUrl = `${siteUrl}/de`;
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={`${siteUrl}/assets/screenshots/2026-01-14 10_18_41-Endure.min.jpeg`} />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_US'} />
     <meta property="og:locale:alternate" content={lang === 'de' ? 'en_US' : 'de_DE'} />
     
@@ -119,7 +138,7 @@ const deUrl = `${siteUrl}/de`;
     <meta name="twitter:url" content={canonicalUrl} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`${siteUrl}/assets/screenshots/2026-01-14 10_18_41-Endure.min.jpeg`} />
+    <meta name="twitter:image" content={ogImage} />
     
     <!-- Fonts -->
     <!-- Fonts -->
@@ -136,15 +155,15 @@ const deUrl = `${siteUrl}/de`;
       "@type": "SoftwareApplication",
       "name": "ENDURE",
       "applicationCategory": "HealthApplication",
-      "operatingSystem": "Windows 10, Windows 11",
+      "operatingSystem": availableOs,
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
       },
       "description": description,
-      "screenshot": `${siteUrl}/assets/screenshots/2026-01-14 10_18_41-Endure.min.jpeg`,
-      "softwareVersion": "Beta",
+      "screenshot": ogImage,
+      "softwareVersion": "Early Release",
       "inLanguage": lang,
       "about": "Indoor cycling app with smart trainer connectivity and advanced ride analytics (FTP & VO2max tracking). No automated training plans.",
       "featureList": [
@@ -153,6 +172,19 @@ const deUrl = `${siteUrl}/de`;
         "Smart trainer connectivity via Bluetooth",
         "Strava auto-upload",
         "Ride history analytics"
+      ]
+    })} />
+
+    <!-- Structured Data (JSON-LD) — brand entity for search / AI answer engines -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ENDURE",
+      "url": siteUrl,
+      "logo": orgLogo,
+      "sameAs": [
+        "https://www.instagram.com/endure_cycling_com/",
+        "https://github.com/cmaart/endure-website"
       ]
     })} />
   </head>

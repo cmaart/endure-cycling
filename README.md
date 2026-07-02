@@ -10,7 +10,7 @@ The science-first indoor cycling analysis app for Windows.
 
 ---
 
-<img src="public/assets/screenshots/2026-01-14 10_18_41-Endure.png" alt="ENDURE Dashboard" width="800"/>
+<img src="public/assets/screenshots/endure-dashboard.png" alt="ENDURE Dashboard" width="800"/>
 
 ---
 

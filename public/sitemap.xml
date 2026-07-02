@@ -23,5 +23,27 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
+  <!-- English About -->
+  <url>
+    <loc>https://www.endure-cycling.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/about"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- German About -->
+  <url>
+    <loc>https://www.endure-cycling.com/de/about</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/about"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import { getTranslations } from '../i18n/translations';
+
+const lang = Astro.currentLocale as 'en' | 'de' || 'en';
+const t = getTranslations(lang).about;
+const homeHref = lang === 'de' ? '/de' : '/';
+---
+
+<Layout title={t.seoTitle} description={t.seoDescription}>
+  <LanguageSwitcher />
+  <main class="container mx-auto px-6 py-32 max-w-3xl text-slate-800 dark:text-gray-300">
+    <a href={homeHref} class="inline-block mb-10">
+      <img src="/assets/ENDURE_lockup_exact_icon_4k.png" alt="ENDURE" class="h-16 w-auto dark:hidden" />
+      <img src="/assets/ENDURE_lockup_exact_icon_4k_white_transparent.min.min.webp" alt="ENDURE" class="h-16 w-auto hidden dark:block" />
+    </a>
+
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">{t.headline}</h1>
+    <p class="text-lg md:text-xl text-slate-600 dark:text-gray-400 font-medium leading-relaxed mb-12">{t.intro}</p>
+
+    <div class="space-y-10">
+      {t.sections.map((section: { title: string; body: string }) => (
+        <section>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">{section.title}</h2>
+          <p class="text-lg leading-relaxed">{section.body}</p>
+        </section>
+      ))}
+    </div>
+
+    <a href={homeHref} class="inline-flex items-center gap-2 mt-14 text-[#F05D23] font-semibold hover:underline">
+      ← {t.backHome}
+    </a>
+  </main>
+  <Footer />
+</Layout>

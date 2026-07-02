@@ -1,0 +1,52 @@
+---
+import { getTranslations } from '../i18n/translations';
+
+const lang = Astro.currentLocale as 'en' | 'de' || 'en';
+const t = getTranslations(lang).faq;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": t.items.map((item: { q: string; a: string }) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a,
+    },
+  })),
+};
+---
+
+<section id="faq" class="py-24 relative">
+  <div class="container mx-auto px-6">
+    <div class="max-w-3xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16" data-reveal>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
+          {t.title} <span class="text-gradient-primary">{t.titleHighlight}</span>
+        </h2>
+        <p class="text-slate-600 dark:text-gray-400 font-medium text-lg">
+          {t.subtitle}
+        </p>
+      </div>
+
+      <!-- Q&A list -->
+      <div class="space-y-4">
+        {t.items.map((item: { q: string; a: string }, idx: number) => (
+          <div
+            class="bg-white dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 rounded-2xl p-6 shadow-sm"
+            data-reveal
+            data-reveal-delay={idx * 60}
+          >
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{item.q}</h3>
+            <p class="text-slate-600 dark:text-gray-400 font-medium leading-relaxed">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Structured Data (JSON-LD) — FAQ answers for answer engines / rich results -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</section>
