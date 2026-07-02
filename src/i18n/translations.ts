@@ -145,6 +145,7 @@ export const translations = {
       bluetooth: "Bluetooth Adapter Required",
       
       linksTitle: "Links",
+      eventsCalendar: "Race Calendar 2026 – Cycling & Triathlon",
       instagram: "Instagram",
       github: "GitHub",
       privacy: "Privacy Policy",
@@ -366,6 +367,7 @@ export const translations = {
       bluetooth: "Bluetooth Adapter Erforderlich",
       
       linksTitle: "Links",
+      eventsCalendar: "Radrennen & Triathlon Kalender 2026",
       instagram: "Instagram",
       github: "GitHub",
       privacy: "Datenschutz",
