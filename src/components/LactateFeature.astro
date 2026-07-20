@@ -5,65 +5,53 @@ const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).lactate;
 ---
 
-<section id="lactate" class="py-16 relative overflow-hidden">
-  <!-- Subtle orange/pink gradient blob — distinct from the emerald ClimbingEfficiency next door -->
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-br from-[#F05D23]/15 via-[#d63c6b]/10 to-[#6b4c9a]/5 dark:from-[#F05D23]/10 dark:via-[#d63c6b]/8 dark:to-[#6b4c9a]/5 rounded-full blur-3xl"></div>
-  </div>
+<section id="lactate" class="relative px-6 py-20 md:px-16 md:py-28 overflow-hidden">
+  <!-- Accent glow, bottom-left -->
+  <div class="absolute -bottom-48 -left-36 w-[600px] h-[500px] pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(194,85,43,0.04),transparent_70%)]" aria-hidden="true"></div>
 
-  <div class="container mx-auto px-6 relative z-10">
-    <div class="max-w-5xl mx-auto">
+  <div class="container mx-auto relative">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
-      <!-- Industry-first badge -->
-      <div class="flex justify-center mb-6" data-reveal>
-        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-[#1a1c22] border border-[#F05D23]/30 shadow-sm text-[#F05D23] text-sm font-semibold tracking-wide uppercase">
-          <span class="inline-block w-2 h-2 bg-[#F05D23] rounded-full animate-pulse"></span>
+      <!-- Left: copy + numbered steps -->
+      <div data-reveal="left" class="relative">
+        <div class="inline-block mono-label border border-accent/30 rounded-full px-4 py-1.5 mb-6 uppercase">
           {t.badge}
-        </span>
+        </div>
+
+        <h2 class="mb-5 font-bold text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] text-slate-900 text-balance">
+          {t.headline1}<br />
+          <span class="text-accent">{t.headline2}</span>
+        </h2>
+
+        <p class="mb-9 text-lg leading-relaxed text-slate-600 text-pretty">
+          {t.description}
+        </p>
+
+        <div class="flex flex-col gap-3.5">
+          {t.bullets.map((bullet: string, idx: number) => (
+            <div class="flex gap-4 items-start card-surface rounded-[14px] px-5 py-4 text-[15px]">
+              <span class="font-mono text-accent pt-0.5">{String(idx + 1).padStart(2, '0')}</span>
+              <span class="text-slate-700" set:html={bullet}></span>
+            </div>
+          ))}
+        </div>
+
+        <!-- Stat highlights -->
+        <div class="grid grid-cols-2 gap-3.5 mt-8">
+          <div class="card-surface hover-lift p-4 text-center">
+            <div class="text-xl font-bold text-accent mb-1">{t.stat1Title}</div>
+            <div class="text-xs text-slate-600">{t.stat1Sub}</div>
+          </div>
+          <div class="card-surface hover-lift p-4 text-center">
+            <div class="text-xl font-bold text-accent mb-1">{t.stat2Title}</div>
+            <div class="text-xs text-slate-600">{t.stat2Sub}</div>
+          </div>
+        </div>
       </div>
 
-      <!-- Headline -->
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight text-center text-slate-900 dark:text-white" data-reveal data-reveal-delay="100">
-        {t.headline1}<br/>
-        <span class="text-gradient-primary">{t.headline2}</span>
-      </h2>
-
-      <!-- Description -->
-      <p class="text-base md:text-lg text-slate-600 dark:text-gray-400 font-medium leading-relaxed text-center max-w-3xl mx-auto mb-8" data-reveal data-reveal-delay="200">
-        {t.description}
-      </p>
-
-      <!-- Stat highlights -->
-      <div class="grid grid-cols-2 gap-3 max-w-md mx-auto mb-8" data-reveal data-reveal-delay="300">
-        <div class="card-surface hover-lift p-4 text-center">
-          <div class="text-xl font-bold text-[#F05D23] mb-1">{t.stat1Title}</div>
-          <div class="text-xs text-slate-600 dark:text-gray-400 font-medium">{t.stat1Sub}</div>
-        </div>
-        <div class="card-surface hover-lift p-4 text-center">
-          <div class="text-xl font-bold text-[#d63c6b] mb-1">{t.stat2Title}</div>
-          <div class="text-xs text-slate-600 dark:text-gray-400 font-medium">{t.stat2Sub}</div>
-        </div>
-      </div>
-
-      <!-- Bullets -->
-      <ul class="space-y-3 max-w-2xl mx-auto mb-12" data-reveal data-reveal-delay="350">
-        {t.bullets.map((bullet: string) => (
-          <li class="flex items-start gap-3">
-            <span class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#F05D23]/10 dark:bg-[#F05D23]/20 border border-[#F05D23]/30 flex items-center justify-center">
-              <svg class="w-3 h-3 text-[#F05D23]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-            <span class="text-slate-600 dark:text-gray-400 font-medium" set:html={bullet}></span>
-          </li>
-        ))}
-      </ul>
-
-      <!-- Video (autoplay/loop/muted, portrait phone capture) -->
-      <div class="max-w-sm mx-auto" data-reveal data-reveal-delay="400">
-        <div class="relative group">
-          <!-- Glow behind the video -->
-          <div class="absolute -inset-1 bg-gradient-to-r from-[#F05D23]/30 via-[#d63c6b]/30 to-[#6b4c9a]/30 rounded-3xl blur-lg opacity-50 group-hover:opacity-80 transition-opacity"></div>
+      <!-- Right: in-app demo video in a floating phone frame -->
+      <div data-reveal="right" class="flex flex-col items-center">
+        <div class="w-[280px] md:w-[320px] phone-frame rounded-[42px] !border-[9px] animate-float">
           <video
             autoplay
             loop
@@ -72,39 +60,37 @@ const t = getTranslations(lang).lactate;
             preload="metadata"
             poster="/assets/screenshots/lactate_lt1_lt2_estimate.png"
             aria-label="Lactate entry demo"
-            class="relative w-full h-auto rounded-3xl border border-slate-200 dark:border-white/10 shadow-2xl shadow-slate-300/40 dark:shadow-black/40"
+            class="w-full h-auto"
           >
             <source src="/videos/lactate_entry.mp4" type="video/mp4" />
           </video>
         </div>
-        <p class="text-center text-slate-500 dark:text-gray-500 font-medium text-sm mt-3">
+        <p class="text-center text-slate-500 text-sm mt-4">
           {t.videoCaption}
         </p>
       </div>
+    </div>
 
-      <!-- Connector + Result Screenshot -->
-      <div class="mt-10 flex flex-col items-center" data-reveal data-reveal-delay="500">
-        <p class="text-sm font-semibold tracking-wide uppercase text-[#F05D23] mb-4 flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-          {t.resultLabel}
-        </p>
-        <div class="max-w-xs w-full">
-          <div class="relative group">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#F05D23]/20 to-[#d63c6b]/15 dark:from-[#F05D23]/15 dark:to-[#d63c6b]/10 rounded-2xl blur-2xl group-hover:blur-3xl transition-all scale-95"></div>
-            <img
-              src="/assets/screenshots/lactate_lt1_lt2_estimate.png"
-              alt="ENDURE Lactate Profile with LT1 and LT2 estimates"
-              class="relative w-full h-auto rounded-2xl border border-slate-200 dark:border-white/10 shadow-xl shadow-slate-300/40 dark:shadow-black/40"
-            />
-          </div>
-          <p class="text-center text-slate-500 dark:text-gray-500 font-medium text-sm mt-3">
-            {t.resultCaption}
-          </p>
+    <!-- Result screenshot -->
+    <div class="mt-16 flex flex-col items-center" data-reveal>
+      <p class="mono-label uppercase mb-5 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+        {t.resultLabel}
+      </p>
+      <div class="max-w-xs w-full">
+        <div class="phone-frame rounded-[32px]">
+          <img
+            src="/assets/screenshots/lactate_lt1_lt2_estimate.png"
+            alt="ENDURE Lactate Profile with LT1 and LT2 estimates"
+            class="w-full h-auto"
+          />
         </div>
+        <p class="text-center text-slate-500 text-sm mt-4">
+          {t.resultCaption}
+        </p>
       </div>
-
     </div>
   </div>
 </section>

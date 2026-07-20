@@ -23,10 +23,10 @@ const faqSchema = {
     <div class="max-w-3xl mx-auto">
       <!-- Section Header -->
       <div class="text-center mb-16" data-reveal>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-          {t.title} <span class="text-gradient-primary">{t.titleHighlight}</span>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-[-0.02em] mb-4 text-slate-900">
+          {t.title} <span class="text-accent">{t.titleHighlight}</span>
         </h2>
-        <p class="text-slate-600 dark:text-gray-400 font-medium text-lg">
+        <p class="text-slate-600 text-lg">
           {t.subtitle}
         </p>
       </div>
@@ -35,12 +35,12 @@ const faqSchema = {
       <div class="space-y-4">
         {t.items.map((item: { q: string; a: string }, idx: number) => (
           <div
-            class="bg-white dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 rounded-2xl p-6 shadow-sm"
+            class="card-surface p-6"
             data-reveal
-            data-reveal-delay={idx * 60}
+            data-reveal-delay={Math.min(idx, 3) * 100}
           >
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{item.q}</h3>
-            <p class="text-slate-600 dark:text-gray-400 font-medium leading-relaxed">{item.a}</p>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">{item.q}</h3>
+            <p class="text-slate-600 leading-relaxed">{item.a}</p>
           </div>
         ))}
       </div>

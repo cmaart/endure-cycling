@@ -13,7 +13,9 @@
     "send-email": "node email-templates/send.mjs"
   },
   "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.3.0",
     "@fontsource/inter": "^5.2.8",
+    "@fontsource/sora": "^5.3.0",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.9",
     "tailwindcss": "^4.1.18"

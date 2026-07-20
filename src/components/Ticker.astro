@@ -1,0 +1,21 @@
+---
+import { getTranslations } from '../i18n/translations';
+
+const lang = Astro.currentLocale as 'en' | 'de' || 'en';
+const items: string[] = getTranslations(lang).ticker;
+---
+
+<div class="border-y border-slate-900/10 py-4 overflow-hidden whitespace-nowrap" aria-hidden="true">
+  <div class="inline-flex gap-16 font-mono text-[15px] text-slate-600 animate-ticker">
+    {[0, 1].map(() => (
+      <span class="inline-flex gap-16">
+        {items.map((item) => (
+          <>
+            <span>{item}</span>
+            <span>·</span>
+          </>
+        ))}
+      </span>
+    ))}
+  </div>
+</div>

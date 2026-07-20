@@ -10,33 +10,33 @@ const t = getTranslations(lang).comparison;
     <div class="max-w-3xl mx-auto">
       <!-- Section Header -->
       <div class="text-center mb-16" data-reveal>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-          {t.title} <span class="text-gradient-primary">{t.titleHighlight}</span>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-[-0.02em] mb-4 text-slate-900">
+          {t.title} <span class="text-accent">{t.titleHighlight}</span>
         </h2>
-        <p class="text-slate-600 dark:text-gray-400 font-medium text-lg">
+        <p class="text-slate-600 text-lg">
           {t.subtitle}
         </p>
       </div>
 
       <!-- Capability table -->
       <div class="overflow-x-auto" data-reveal>
-        <table class="w-full text-left border-collapse rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10">
+        <table class="w-full text-left border-collapse rounded-2xl overflow-hidden border border-slate-200">
           <thead>
-            <tr class="bg-slate-100 dark:bg-white/5">
-              <th class="py-4 px-5 text-sm font-bold text-slate-900 dark:text-white">{t.featureLabel}</th>
-              <th class="py-4 px-5 text-sm font-bold text-slate-900 dark:text-white">{t.valueLabel}</th>
+            <tr class="bg-slate-100">
+              <th class="py-4 px-5 text-sm font-bold text-slate-900">{t.featureLabel}</th>
+              <th class="py-4 px-5 text-sm font-bold text-slate-900">{t.valueLabel}</th>
             </tr>
           </thead>
           <tbody>
             {t.rows.map((row: { feature: string; value: string }, idx: number) => (
-              <tr class={idx % 2 === 1 ? 'bg-slate-50 dark:bg-white/[0.02]' : ''}>
+              <tr class={idx % 2 === 1 ? 'bg-slate-50' : ''}>
                 <th
                   scope="row"
-                  class="py-4 px-5 align-top font-semibold text-slate-900 dark:text-white whitespace-nowrap border-t border-slate-200 dark:border-white/10"
+                  class="py-4 px-5 align-top font-semibold text-slate-900 whitespace-nowrap border-t border-slate-200"
                 >
                   {row.feature}
                 </th>
-                <td class="py-4 px-5 align-top text-slate-600 dark:text-gray-400 font-medium border-t border-slate-200 dark:border-white/10">
+                <td class="py-4 px-5 align-top text-slate-600 font-medium border-t border-slate-200">
                   {row.value}
                 </td>
               </tr>

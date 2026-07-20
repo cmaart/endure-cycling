@@ -2,12 +2,13 @@
 import { getTranslations } from '../i18n/translations';
 import { config } from '../config';
 import CookieBanner from '../components/CookieBanner.astro';
-import '@fontsource/inter/300.css';
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/500.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/inter/700.css';
-import '@fontsource/inter/800.css';
+import '@fontsource/sora/400.css';
+import '@fontsource/sora/500.css';
+import '@fontsource/sora/600.css';
+import '@fontsource/sora/700.css';
+import '@fontsource/sora/800.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
 
 interface Props {
   title?: string;
@@ -53,19 +54,10 @@ const storeUrls = Object.values(config.platforms)
 ---
 
 <!doctype html>
-<html lang={lang} class="dark">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script is:inline>
-      (function() {
-        var theme = localStorage.getItem('theme');
-        if (theme === 'light') {
-          document.documentElement.classList.remove('dark');
-        }
-      })();
-    </script>
-
     <script is:inline>
       // Google Consent Mode v2: default-denied in EEA/UK/CH until the cookie
       // banner explicitly updates the state on user accept. This tells Google's
@@ -235,28 +227,6 @@ const storeUrls = Object.values(config.platforms)
         targets.forEach((el) => observer.observe(el));
       }
 
-      // JS-driven parallax for the hero background image — runs on all devices,
-      // GPU-accelerated via translate3d, rAF-throttled for smoothness.
-      const heroBg = document.querySelector<HTMLElement>('.hero-bg-image');
-      if (heroBg && !prefersReduced) {
-        let ticking = false;
-        const update = () => {
-          heroBg.style.transform = `translate3d(0, ${window.scrollY * 0.35}px, 0)`;
-          ticking = false;
-        };
-        // initial position
-        update();
-        window.addEventListener(
-          'scroll',
-          () => {
-            if (!ticking) {
-              requestAnimationFrame(update);
-              ticking = true;
-            }
-          },
-          { passive: true }
-        );
-      }
     </script>
   </body>
 </html>

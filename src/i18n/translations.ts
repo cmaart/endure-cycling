@@ -1,37 +1,39 @@
 // Translation content for EN and DE
 export const translations = {
   en: {
+    // Nav
+    nav: {
+      features: "Features",
+      lactate: "Lactate",
+      roadmap: "Roadmap",
+      faq: "FAQ",
+      cta: "Get the app"
+    },
     // Hero
     hero: {
-      badge: "Indoor Cycling & Training App for Smart Trainers",
+      badge: "Early Release · iOS & Android",
       tagline: "Precision over Gimmicks",
-      headline1: "Ride. Analyze.",
-      headline2: "Improve.",
-      subline: "Connect your smart trainer or ride outside, start your workout, and track your FTP and VO2max trends. Structured indoor training, no distractions.",
+      headline1: "Train hard.",
+      headline2: "Know it's working.",
+      subline: "Smart trainer control, FTP & VO2max trends and lactate thresholds — from app start to riding in under 30 seconds.",
+      ctaIos: "Download for iOS",
+      ctaAndroid: "Android",
       secondary: "Frequent updates. Built with the community. Come along for the ride.",
       desktopNote: "Desktop versions (Windows & macOS) planned",
       appStoreBadgeAlt: "Download on the App Store",
       googlePlayBadgeAlt: "Get it on Google Play"
     },
-    // App Showcase
-    appShowcase: {
-      vo2max: {
-        title: "VO2Max Estimation",
-        description: "Track your VO2max trend ride by ride."
-      },
-      crossPlatform: {
-        title: "Desktop & Mobile",
-        description: "Train on Windows, Android, and more."
-      },
-      smartTrainer: {
-        title: "Smart Trainer Control",
-        description: "Automatic resistance control for your workouts."
-      },
-      ftpTrend: {
-        title: "FTP Trend",
-        description: "See your FTP progress week by week."
-      }
-    },
+    // Ticker strip
+    ticker: [
+      "Ready in <30 s",
+      "ERG mode",
+      "Crash-proof sessions",
+      "Lactate LT1/LT2",
+      "CORE heat zones",
+      "Strava sync",
+      ".ZWO import",
+      "Climbing Efficiency"
+    ],
     // Climbing Efficiency
     climbingEfficiency: {
       badge: "New Feature",
@@ -83,14 +85,14 @@ export const translations = {
     // Beta Notice
     betaNotice: {
       badge: "Early Release",
-      title: "Available Now — Free during Early Release",
+      title: "Available Now — Early Release on iOS & Android",
       description: "ENDURE is live on iOS and Android as an Early Release, and completely free to use while we continue to improve. Desktop versions for Windows and macOS are planned. We're building this together with the cycling community."
     },
     // Features
     features: {
-      sectionTitle: "Everything you need for",
-      sectionTitleHighlight: "indoor training & analysis",
-      sectionSubtitle: "A curated workout library, deep ride analytics, and rock-solid trainer connectivity. That's the whole pitch.",
+      sectionTitle: "Built for",
+      sectionTitleHighlight: "the work.",
+      sectionSubtitle: "No bloat, no gimmicks — the essentials for structured training, done properly.",
 
       analytics: {
         title: "Progress Analytics",
@@ -125,13 +127,7 @@ export const translations = {
       screenshot3Caption: "Detailed Power Profile: Strengths, Weaknesses & FTP Estimate",
       screenshot4Caption: "Ride Screen: Precise Smart Trainer Control (ERG Mode)",
       screenshot5Caption: "Smart-Smoothing: Balances erratic power data for smooth trainer control.",
-      screenshot6Caption: "Time in Zones: Power & HR zone distribution with distribution summary",
-      screenshotDark1Caption: "Performance Dashboard: FTP & VO2Max trends over time",
-      screenshotDark2Caption: "Workout Ride: Real-time interval control with smart trainer support",
-      screenshotDark3Caption: "Dashboard: Your personal fitness profile and key metrics",
-      screenshotDark4Caption: "AI Coaching: Personalized feedback and insights after every ride",
-      screenshotDark5Caption: "Workout Library: Structured workouts for every training goal",
-      screenshotDark6Caption: "Training Calendar: Your rides and activities month by month"
+      screenshot6Caption: "Time in Zones: Power & HR zone distribution with distribution summary"
     },
     // Roadmap
     roadmap: {
@@ -161,7 +157,7 @@ export const translations = {
       featureLabel: "Capability",
       valueLabel: "What you get",
       rows: [
-        { feature: "Price", value: "Free during Early Release — no subscription" },
+        { feature: "Price", value: "Free during Early Release — affordable subscription planned afterwards" },
         { feature: "Platforms", value: "iOS & Android (Windows & macOS planned)" },
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
         { feature: "Workout import", value: ".ZWO, .MRC and .ERG files" },
@@ -181,7 +177,7 @@ export const translations = {
       items: [
         {
           q: "Is ENDURE free?",
-          a: "Yes. ENDURE is completely free during its Early Release on iOS and Android while we keep improving it. There is no subscription and no paywalled features — download it and start riding."
+          a: "Yes — for now. ENDURE is completely free during its Early Release on iOS and Android while we keep improving it. After Early Release we plan an affordable subscription, so this is the best time to jump in."
         },
         {
           q: "Which smart trainers and sensors work with ENDURE?",
@@ -209,11 +205,11 @@ export const translations = {
         },
         {
           q: "Is ENDURE a good alternative to Zwift?",
-          a: "It depends on what you want. Zwift is built around virtual worlds and racing; ENDURE focuses on precise structured training and analysis — FTP and VO2max trends, lactate thresholds, CORE heat zones — and is free during Early Release. Many riders use ENDURE for training and analysis alongside or instead of Zwift."
+          a: "It depends on what you want. Zwift is built around virtual worlds and racing; ENDURE focuses on precise structured training and analysis — FTP and VO2max trends, lactate thresholds, CORE heat zones. Many riders use ENDURE for training and analysis alongside or instead of Zwift."
         },
         {
           q: "How does ENDURE compare to TrainerRoad?",
-          a: "TrainerRoad centres on algorithm-generated training plans behind a subscription. ENDURE offers a curated workout library plus deeper physiological analysis — lactate LT1/LT2, CORE body temperature with heat zones, climbing efficiency — and is free during Early Release."
+          a: "TrainerRoad centres on algorithm-generated training plans behind a subscription. ENDURE offers a curated workout library plus deeper physiological analysis — lactate LT1/LT2, CORE body temperature with heat zones and climbing efficiency."
         },
         {
           q: "Does ENDURE sync with Strava?",
@@ -250,6 +246,10 @@ export const translations = {
     // Footer
     footer: {
       tagline: "Driven by data. Built to endure.",
+      ctaTitle1: "Driven by data.",
+      ctaTitle2: "Built to endure.",
+      ctaAppStore: "App Store",
+      ctaGooglePlay: "Google Play",
 
       requirementsTitle: "System Requirements",
       windows: "Windows 10 / 11",
@@ -283,7 +283,7 @@ export const translations = {
     // SEO
     seo: {
       title: "Endure — Smart Trainer Indoor Cycling App with FTP & VO2max",
-      description: "Free cycling training app for smart trainers: ERG control, FTP & VO2max trends, lactate LT1/LT2 and native CORE heat zones. Ready to ride in 30 seconds."
+      description: "Cycling training app for smart trainers: ERG control, FTP & VO2max trends, lactate LT1/LT2 and native CORE heat zones. Ready to ride in 30 seconds."
     },
     // Cookie Banner
     cookieBanner: {
@@ -338,37 +338,39 @@ export const translations = {
     }
   },
   de: {
+    // Nav
+    nav: {
+      features: "Features",
+      lactate: "Laktat",
+      roadmap: "Roadmap",
+      faq: "FAQ",
+      cta: "App holen"
+    },
     // Hero
     hero: {
-      badge: "Indoor Cycling & Training App für Smart Trainer",
+      badge: "Early Release · iOS & Android",
       tagline: "Präzision statt Spielerei",
-      headline1: "Fahren. Analysieren.",
-      headline2: "Verbessern.",
-      subline: "Verbinde deinen Smart Trainer oder fahr draußen, starte dein Workout und behalte deine FTP- und VO2max-Trends im Blick. Strukturiertes Indoor-Training ohne Ablenkung.",
+      headline1: "Hart trainieren.",
+      headline2: "Sehen, dass es wirkt.",
+      subline: "Smart-Trainer-Steuerung, FTP- & VO2max-Trends und Laktatschwellen — vom App-Start bis zur Fahrt in unter 30 Sekunden.",
+      ctaIos: "Für iOS laden",
+      ctaAndroid: "Android",
       secondary: "Häufige Updates. Entwickelt mit der Community. Sei dabei.",
       desktopNote: "Desktop-Versionen (Windows & macOS) geplant",
       appStoreBadgeAlt: "Laden im App Store",
       googlePlayBadgeAlt: "Jetzt bei Google Play"
     },
-    // App Showcase
-    appShowcase: {
-      vo2max: {
-        title: "VO2Max Schätzung",
-        description: "Verfolge deine VO2max-Entwicklung über jede Fahrt."
-      },
-      crossPlatform: {
-        title: "Desktop & Mobile",
-        description: "Trainiere auf Windows, Android und mehr."
-      },
-      smartTrainer: {
-        title: "Smart Trainer Steuerung",
-        description: "Automatische Widerstandssteuerung für deine Workouts."
-      },
-      ftpTrend: {
-        title: "FTP Entwicklung",
-        description: "Sieh deine FTP-Entwicklung über Wochen und Monate."
-      }
-    },
+    // Ticker strip
+    ticker: [
+      "Fahrbereit in <30 s",
+      "ERG-Modus",
+      "Crash-sichere Sessions",
+      "Laktat LT1/LT2",
+      "CORE Heat Zones",
+      "Strava-Sync",
+      ".ZWO-Import",
+      "Climbing Efficiency"
+    ],
     // Climbing Efficiency
     climbingEfficiency: {
       badge: "Neues Feature",
@@ -420,14 +422,14 @@ export const translations = {
     // Beta Notice
     betaNotice: {
       badge: "Early Release",
-      title: "Jetzt verfügbar — Gratis im Early Release",
+      title: "Jetzt verfügbar — Early Release für iOS & Android",
       description: "ENDURE ist als Early Release für iOS und Android verfügbar — und komplett kostenlos, während wir die App weiter verbessern. Desktop-Versionen für Windows und macOS sind in Planung. Wir bauen das gemeinsam mit der Radsport-Community."
     },
     // Features
     features: {
-      sectionTitle: "Alles was du brauchst für",
-      sectionTitleHighlight: "Indoor-Training & Analyse",
-      sectionSubtitle: "Kuratierte Workout-Bibliothek, tiefe Fahrt-Analysen und stabile Trainer-Anbindung. Mehr braucht es nicht.",
+      sectionTitle: "Gemacht für",
+      sectionTitleHighlight: "echtes Training.",
+      sectionSubtitle: "Kein Ballast, keine Gimmicks — nur die Essentials für strukturiertes Training, sauber umgesetzt.",
 
       analytics: {
         title: "Fortschritts-Analyse",
@@ -462,13 +464,7 @@ export const translations = {
       screenshot3Caption: "Detailliertes Power Profile: Stärken, Schwächen & FTP-Einschätzung",
       screenshot4Caption: "Ride Screen: Präzise Smart Trainer Steuerung (ERG Modus)",
       screenshot5Caption: "Smart-Smoothing: Gleicht erratische Power-Daten aus für eine sanfte Trainer-Steuerung.",
-      screenshot6Caption: "Zeit in Zonen: Power- & HR-Zonenverteilung mit Verteilungs-Übersicht",
-      screenshotDark1Caption: "Performance Dashboard: FTP- & VO2Max-Trends im Zeitverlauf",
-      screenshotDark2Caption: "Workout Ride: Echtzeit-Intervallsteuerung mit Smart-Trainer-Unterstützung",
-      screenshotDark3Caption: "Dashboard: Dein persönliches Fitnessprofil und wichtige Kennzahlen",
-      screenshotDark4Caption: "AI Coaching: Personalisiertes Feedback und Insights nach jeder Fahrt",
-      screenshotDark5Caption: "Workout-Bibliothek: Strukturierte Workouts für jedes Trainingsziel",
-      screenshotDark6Caption: "Trainingskalender: Deine Fahrten und Aktivitäten im Monatsüberblick"
+      screenshot6Caption: "Zeit in Zonen: Power- & HR-Zonenverteilung mit Verteilungs-Übersicht"
     },
     // Roadmap
     roadmap: {
@@ -498,7 +494,7 @@ export const translations = {
       featureLabel: "Funktion",
       valueLabel: "Das bekommst du",
       rows: [
-        { feature: "Preis", value: "Gratis im Early Release — kein Abo" },
+        { feature: "Preis", value: "Gratis im Early Release — danach preiswertes Abo geplant" },
         { feature: "Plattformen", value: "iOS & Android (Windows & macOS geplant)" },
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
         { feature: "Workout-Import", value: ".ZWO, .MRC und .ERG Dateien" },
@@ -518,7 +514,7 @@ export const translations = {
       items: [
         {
           q: "Ist ENDURE kostenlos?",
-          a: "Ja. ENDURE ist im Early Release auf iOS und Android komplett kostenlos, während wir die App weiter verbessern. Kein Abo, keine kostenpflichtigen Features — einfach herunterladen und losfahren."
+          a: "Ja — vorerst. ENDURE ist im Early Release auf iOS und Android komplett kostenlos, während wir die App weiter verbessern. Nach dem Early Release ist ein preiswertes Abo geplant — jetzt ist also der beste Zeitpunkt zum Einsteigen."
         },
         {
           q: "Welche Smart Trainer und Sensoren funktionieren mit ENDURE?",
@@ -546,11 +542,11 @@ export const translations = {
         },
         {
           q: "Ist ENDURE eine gute Alternative zu Zwift?",
-          a: "Kommt darauf an, was du suchst. Zwift dreht sich um virtuelle Welten und Rennen; ENDURE fokussiert auf präzises strukturiertes Training und Analyse — FTP- und VO2max-Trends, Laktatschwellen, CORE Heat Zones — und ist im Early Release kostenlos. Viele fahren ENDURE fürs Training neben oder statt Zwift."
+          a: "Kommt darauf an, was du suchst. Zwift dreht sich um virtuelle Welten und Rennen; ENDURE fokussiert auf präzises strukturiertes Training und Analyse — FTP- und VO2max-Trends, Laktatschwellen, CORE Heat Zones. Viele fahren ENDURE fürs Training neben oder statt Zwift."
         },
         {
           q: "Wie schlägt sich ENDURE im Vergleich zu TrainerRoad?",
-          a: "TrainerRoad setzt auf algorithmisch generierte Trainingspläne im Abo. ENDURE bietet eine kuratierte Workout-Bibliothek plus tiefere physiologische Analyse — Laktat LT1/LT2, CORE Körpertemperatur mit Heat Zones, Climbing Efficiency — und ist im Early Release kostenlos."
+          a: "TrainerRoad setzt auf algorithmisch generierte Trainingspläne im Abo. ENDURE bietet eine kuratierte Workout-Bibliothek plus tiefere physiologische Analyse — Laktat LT1/LT2, CORE Körpertemperatur mit Heat Zones und Climbing Efficiency."
         },
         {
           q: "Synchronisiert ENDURE mit Strava?",
@@ -587,6 +583,10 @@ export const translations = {
     // Footer
     footer: {
       tagline: "Datengetrieben. Auf Ausdauer gebaut.",
+      ctaTitle1: "Datengetrieben.",
+      ctaTitle2: "Auf Ausdauer gebaut.",
+      ctaAppStore: "App Store",
+      ctaGooglePlay: "Google Play",
 
       requirementsTitle: "Systemvoraussetzungen",
       windows: "Windows 10 / 11",
@@ -620,7 +620,7 @@ export const translations = {
     // SEO
     seo: {
       title: "Endure — Smart-Trainer Indoor Cycling App mit FTP & VO2max",
-      description: "Kostenlose Cycling-Training-App für Smart Trainer: ERG-Steuerung, FTP- & VO2max-Trends, Laktat LT1/LT2 und native CORE Heat Zones. In 30 Sekunden fahrbereit."
+      description: "Cycling-Training-App für Smart Trainer: ERG-Steuerung, FTP- & VO2max-Trends, Laktat LT1/LT2 und native CORE Heat Zones. In 30 Sekunden fahrbereit."
     },
     // Cookie Banner
     cookieBanner: {

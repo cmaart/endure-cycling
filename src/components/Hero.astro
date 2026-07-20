@@ -4,279 +4,152 @@ import { config } from '../config';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).hero;
-const ts = getTranslations(lang).appShowcase;
 const iosUrl = config.platforms.ios.url;
 const androidUrl = config.platforms.android.url;
-const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
-const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
 ---
 
-<section class="relative min-h-screen flex flex-col pt-12 overflow-hidden">
-  <!-- Cinematic background image (parallax via fixed-attachment, falls back to scroll on mobile) -->
-  <div class="hero-bg-image" aria-hidden="true"></div>
-  <!-- Dark/light overlay to keep content readable and fade into the next section -->
-  <div class="hero-bg-overlay" aria-hidden="true"></div>
+<header class="relative px-6 pt-16 pb-20 md:px-16 md:pt-20 md:pb-28 overflow-hidden">
+  <!-- Accent glow behind the headline -->
+  <div class="absolute -top-56 left-1/2 -translate-x-1/2 w-[900px] h-[600px] pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(194,85,43,0.08),rgba(194,85,43,0.03)_45%,transparent_70%)]" aria-hidden="true"></div>
 
-  <!-- Background decoration (kept as an extra accent light above the image) -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-b from-[#F05D23]/10 to-slate-200/10 dark:to-white/5 rounded-full blur-3xl"></div>
+  <div class="relative text-center max-w-3xl mx-auto">
+    <!-- Badge -->
+    <div data-reveal class="inline-flex items-center gap-2.5 rounded-full border border-slate-900/15 bg-slate-900/5 backdrop-blur-md px-5 py-2 text-sm text-slate-600 mb-8">
+      <span class="w-[7px] h-[7px] rounded-full bg-accent"></span>
+      {t.badge}
+    </div>
+
+    <!-- Headline -->
+    <h1 data-reveal data-reveal-delay="100" class="mb-6 font-extrabold text-5xl md:text-7xl lg:text-[84px] leading-[1.04] tracking-[-0.03em] text-slate-900 text-balance">
+      {t.headline1}<br />
+      <span class="text-accent">{t.headline2}</span>
+    </h1>
+
+    <!-- Subline -->
+    <p data-reveal data-reveal-delay="200" class="mx-auto mb-10 max-w-xl text-lg md:text-xl leading-relaxed text-slate-600 text-pretty">
+      {t.subline}
+    </p>
+
+    <!-- CTAs -->
+    <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row gap-3.5 justify-center items-center">
+      <a id="download-btn-ios" href={iosUrl} target="_blank" rel="noopener" class="btn-primary w-full sm:w-auto">{t.ctaIos}</a>
+      <a id="download-btn-android" href={androidUrl} target="_blank" rel="noopener" class="btn-secondary w-full sm:w-auto">{t.ctaAndroid}</a>
+    </div>
+
+    <p data-reveal data-reveal-delay="400" class="mt-5 text-xs text-slate-500">{t.desktopNote}</p>
+    <p data-reveal data-reveal-delay="400" class="mt-2 text-sm text-slate-500 flex items-center justify-center gap-2">
+      <span class="inline-block w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+      {t.secondary}
+    </p>
   </div>
 
-  <div class="container mx-auto px-6 relative z-10">
-    <div class="flex flex-col items-center text-center max-w-4xl mx-auto mb-20">
-
-      <!-- Logo -->
-      <div data-reveal>
-        <img
-          src="/assets/ENDURE_lockup_exact_icon_4k.png"
-          alt="ENDURE Logo"
-          title="ENDURE - Indoor Cycling App"
-          class="h-50 md:h-60 w-auto mx-auto dark:hidden"
-        />
-        <img
-          src="/assets/ENDURE_lockup_exact_icon_4k_white_transparent.min.min.webp"
-          alt="ENDURE Logo"
-          title="ENDURE - Indoor Cycling App"
-          class="h-50 md:h-60 w-auto mx-auto hidden dark:block"
-        />
+  <!-- Floating phone trio — click a side phone (or swipe) to bring it into focus -->
+  <div id="phone-stage" data-reveal class="relative mt-16 md:mt-20 mx-auto w-full max-w-[820px] h-[460px] md:h-[680px]">
+    <div class="hero-phone slot-left" role="button" tabindex="0" aria-label="Show dashboard screenshot">
+      <div class="phone-frame rounded-[32px] md:rounded-[40px] animate-float-tilt">
+        <img src="/assets/dark_theme/dashboard_profile.png" alt="ENDURE dashboard with fitness profile" width="300" height="650" loading="eager" class="w-full" />
       </div>
-
-      <!-- Headline -->
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight" data-reveal data-reveal-delay="100">
-        <span class="text-gradient-primary">{t.headline1}</span>
-        <span class="block mt-2 text-slate-900 dark:text-white">{t.headline2}</span>
-        <span class="block text-xl md:text-xl font-bold text-[#F05D23] mt-6 tracking-wide uppercase">{t.tagline}</span>
-      </h1>
-
-      <!-- Subline -->
-      <p class="text-xl md:text-2xl text-slate-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed font-medium" data-reveal data-reveal-delay="200" set:html={t.subline}></p>
-
-      <!-- Integration & Social -->
-      <div class="flex flex-wrap justify-center items-center gap-6 mb-10" data-reveal data-reveal-delay="300">
-        <!-- Strava -->
-        <a href="https://www.strava.com" target="_blank" rel="noopener" aria-label="Powered by Strava" class="opacity-60 hover:opacity-100 transition-opacity duration-300">
-          <img
-            src="/assets/pwrdBy_strava_orange/api_logo_pwrdBy_strava_horiz_orange.svg"
-            alt="Powered by Strava"
-            class="h-5 md:h-6 grayscale hover:grayscale-0 transition-all duration-300 dark:hidden"
-          />
-          <img
-            src="/assets/pwrdBy_strava_white/api_logo_pwrdBy_strava_horiz_white.svg"
-            alt="Powered by Strava"
-            class="h-5 md:h-6 grayscale hover:grayscale-0 transition-all duration-300 hidden dark:block"
-          />
-        </a>
-
-        <div class="hidden sm:block w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-gray-600"></div>
-
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/endure_cycling_com/" target="_blank" rel="noopener" aria-label="Instagram" class="flex items-center gap-2 text-slate-500 dark:text-gray-400 hover:text-[#F05D23] transition-colors duration-300 font-medium text-sm">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-          </svg>
-          <span class="sr-only">Instagram</span>
-        </a>
+    </div>
+    <div class="hero-phone slot-center" role="button" tabindex="0" aria-label="Show ride screen screenshot">
+      <div class="phone-frame rounded-[32px] md:rounded-[40px] animate-float">
+        <img src="/assets/dark_theme/workout_ride.png" alt="ENDURE ride screen with smart trainer control" width="300" height="650" loading="eager" class="w-full" />
       </div>
-
-      <!-- Store badges (iOS + Android) -->
-      <div class="flex flex-col items-center gap-4 mb-2" data-reveal data-reveal-delay="400">
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <a
-            id="download-btn-ios"
-            href={iosUrl}
-            target="_blank"
-            rel="noopener"
-            aria-label={t.appStoreBadgeAlt}
-            class="transition-transform duration-200 hover:scale-105 focus-visible:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F05D23] rounded-md"
-          >
-            <img
-              src={appStoreBadge}
-              alt={t.appStoreBadgeAlt}
-              width="135"
-              height="40"
-              class="h-12 sm:h-14 w-auto"
-            />
-          </a>
-          <a
-            id="download-btn-android"
-            href={androidUrl}
-            target="_blank"
-            rel="noopener"
-            aria-label={t.googlePlayBadgeAlt}
-            class="transition-transform duration-200 hover:scale-105 focus-visible:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F05D23] rounded-md"
-          >
-            <img
-              src={googlePlayBadge}
-              alt={t.googlePlayBadgeAlt}
-              width="135"
-              height="40"
-              class="h-12 sm:h-14 w-auto"
-            />
-          </a>
-        </div>
-
-        <p class="text-xs text-slate-500 dark:text-gray-500 font-medium mt-1">
-          {t.desktopNote}
-        </p>
-
-        <p class="text-sm text-slate-500 dark:text-gray-500 font-medium flex items-center gap-2 mt-2">
-          <span class="inline-block w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-          {t.secondary}
-        </p>
+    </div>
+    <div class="hero-phone slot-right" role="button" tabindex="0" aria-label="Show performance trends screenshot">
+      <div class="phone-frame rounded-[32px] md:rounded-[40px] animate-float-tilt [animation-delay:0.6s]">
+        <img src="/assets/dark_theme/performance_trends.png" alt="ENDURE FTP and VO2max performance trends" width="300" height="650" loading="eager" class="w-full" />
       </div>
     </div>
 
-    <!-- App Showcase Visualization -->
-    <div class="relative max-w-6xl mx-auto mt-12 mb-20" data-reveal data-reveal-delay="500">
-      <!-- Central Phone Image -->
-      <div class="relative z-20 mx-auto w-full max-w-[280px] lg:max-w-[400px]">
-        <div class="relative overflow-hidden">
-          <img
-            src="/assets/marketing/Hand_app.min.min.crop.webp"
-            alt="Endure App Interface"
-            title="Endure App Dashboard"
-            class="w-full h-auto"
-          />
-        </div>
-      </div>
-
-      <!-- Connecting SVG Lines (Desktop) -->
-      <svg class="absolute inset-0 w-full h-full pointer-events-none hidden lg:block z-0" viewBox="0 0 100 100" preserveAspectRatio="none" style="stroke-dasharray: 10; stroke-dashoffset: 10;">
-          <defs>
-              <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="rgba(240, 93, 35, 0.05)" />
-                  <stop offset="50%" stop-color="rgba(240, 93, 35, 0.2)" />
-                  <stop offset="100%" stop-color="rgba(240, 93, 35, 0.05)" />
-              </linearGradient>
-          </defs>
-          <!-- Top Left -->
-          <path d="M22 25 Q 35 25, 38 35" fill="none" stroke="url(#line-gradient)" stroke-width="0.2" vector-effect="non-scaling-stroke" />
-          <!-- Top Right -->
-          <path d="M78 25 Q 65 25, 62 35" fill="none" stroke="url(#line-gradient)" stroke-width="0.2" vector-effect="non-scaling-stroke" />
-           <!-- Bottom Left -->
-           <path d="M22 65 Q 35 65, 38 55" fill="none" stroke="url(#line-gradient)" stroke-width="0.2" vector-effect="non-scaling-stroke" />
-           <!-- Bottom Right -->
-           <path d="M78 65 Q 65 65, 62 55" fill="none" stroke="url(#line-gradient)" stroke-width="0.2" vector-effect="non-scaling-stroke" />
-      </svg>
-
-      <!-- Mobile Connected Layout -->
-      <div class="relative lg:hidden mt-8">
-        <!-- Vertical Line -->
-        <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#F05D23]/30 to-slate-200 dark:to-white/10 md:left-1/2 md:-ml-px"></div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-           <!-- Refactored Feature Nodes for Mobile List -->
-          {/* VO2Max Estimate */}
-          <div class="relative pl-16 md:pl-0 md:pr-12 md:text-right">
-             <!-- Dot -->
-             <div class="absolute left-[21px] top-6 w-3 h-3 bg-[#F05D23] rounded-full shadow-md shadow-[#F05D23]/20 md:left-auto md:right-[-42px] md:top-6 z-10"></div>
-
-             <div class="bg-white/90 dark:bg-[#1a1c22]/90 backdrop-blur-sm border border-slate-200 dark:border-white/10 shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow">
-                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-3 md:justify-end">
-                  <span class="md:hidden text-[#F05D23]">{ts.vo2max.title}</span>
-                  <span class="hidden md:inline">{ts.vo2max.title}</span>
-                </h3>
-                <p class="text-slate-600 dark:text-gray-400 font-medium text-sm leading-relaxed">{ts.vo2max.description}</p>
-            </div>
-          </div>
-
-          {/* Cross Platform */}
-          <div class="relative pl-16 md:pl-12 md:mt-24">
-             <!-- Dot -->
-             <div class="absolute left-[21px] top-6 w-3 h-3 bg-slate-400 dark:bg-gray-600 rounded-full shadow-md shadow-slate-200 dark:shadow-black/30 md:left-[-42px] md:top-6 z-10"></div>
-
-             <div class="bg-white/90 dark:bg-[#1a1c22]/90 backdrop-blur-sm border border-slate-200 dark:border-white/10 shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow">
-                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-3">
-                   <span class="text-slate-800 dark:text-white">{ts.crossPlatform.title}</span>
-                </h3>
-                <p class="text-slate-600 dark:text-gray-400 font-medium text-sm leading-relaxed">{ts.crossPlatform.description}</p>
-            </div>
-          </div>
-
-          {/* Smart Trainer Control */}
-           <div class="relative pl-16 md:pl-0 md:pr-12 md:text-right">
-             <!-- Dot -->
-             <div class="absolute left-[21px] top-6 w-3 h-3 bg-[#F05D23] rounded-full shadow-md shadow-[#F05D23]/20 md:left-auto md:right-[-42px] md:top-6 z-10"></div>
-
-             <div class="bg-white/90 dark:bg-[#1a1c22]/90 backdrop-blur-sm border border-slate-200 dark:border-white/10 shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow">
-                 <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-3 md:justify-end">
-                   <span class="md:hidden text-[#F05D23]">{ts.smartTrainer.title}</span>
-                   <span class="hidden md:inline">{ts.smartTrainer.title}</span>
-                 </h3>
-                <p class="text-slate-600 dark:text-gray-400 font-medium text-sm leading-relaxed">{ts.smartTrainer.description}</p>
-            </div>
-          </div>
-
-          {/* FTP Trend */}
-           <div class="relative pl-16 md:pl-12 md:mt-24">
-             <!-- Dot -->
-             <div class="absolute left-[21px] top-6 w-3 h-3 bg-slate-400 dark:bg-gray-600 rounded-full shadow-md shadow-slate-200 dark:shadow-black/30 md:left-[-42px] md:top-6 z-10"></div>
-
-             <div class="bg-white/90 dark:bg-[#1a1c22]/90 backdrop-blur-sm border border-slate-200 dark:border-white/10 shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow">
-                 <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-3">
-                   <span class="text-slate-800 dark:text-white">{ts.ftpTrend.title}</span>
-                 </h3>
-                <p class="text-slate-600 dark:text-gray-400 font-medium text-sm leading-relaxed">{ts.ftpTrend.description}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature Nodes -->
-      <div class="hidden lg:block">
-        {/* VO2Max Estimate (Top Left) */}
-        <div class="group relative p-6 lg:p-0 my-4 lg:my-0 flex flex-col lg:max-w-xs lg:absolute lg:top-[12%] lg:left-[-4%] lg:text-right">
-             <div class="lg:hidden absolute inset-0 bg-white dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 rounded-xl -z-10 shadow-sm"></div>
-             <div class="flex flex-col lg:items-end relative z-10">
-                <div class="w-12 h-12 mb-4 rounded-xl bg-white dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#F05D23] shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">{ts.vo2max.title}</h3>
-                <p class="text-slate-600 dark:text-gray-400 font-medium leading-relaxed">{ts.vo2max.description}</p>
-            </div>
-        </div>
-
-        {/* Cross Platform (Top Right) */}
-        <div class="group relative p-6 lg:p-0 my-4 lg:my-0 flex flex-col lg:max-w-xs lg:absolute lg:top-[12%] lg:right-[-4%] lg:text-left">
-             <div class="lg:hidden absolute inset-0 bg-white dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 rounded-xl -z-10 shadow-sm"></div>
-             <div class="flex flex-col lg:items-start relative z-10">
-                <div class="w-12 h-12 mb-4 rounded-xl bg-white dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#F05D23] shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">{ts.crossPlatform.title}</h3>
-                <p class="text-slate-600 dark:text-gray-400 font-medium leading-relaxed">{ts.crossPlatform.description}</p>
-            </div>
-        </div>
-
-        {/* Smart Trainer Control (Bottom Left) */}
-        <div class="group relative p-6 lg:p-0 my-4 lg:my-0 flex flex-col lg:max-w-xs lg:absolute lg:bottom-[20%] lg:left-[-4%] lg:text-right">
-             <div class="lg:hidden absolute inset-0 bg-white dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 rounded-xl -z-10 shadow-sm"></div>
-             <div class="flex flex-col lg:items-end relative z-10">
-                <div class="w-12 h-12 mb-4 rounded-xl bg-white dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#F05D23] shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10" /></svg>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">{ts.smartTrainer.title}</h3>
-                <p class="text-slate-600 dark:text-gray-400 font-medium leading-relaxed">{ts.smartTrainer.description}</p>
-            </div>
-        </div>
-
-        {/* FTP Trend (Bottom Right) */}
-        <div class="group relative p-6 lg:p-0 my-4 lg:my-0 flex flex-col lg:max-w-xs lg:absolute lg:bottom-[20%] lg:right-[-4%] lg:text-left">
-             <div class="lg:hidden absolute inset-0 bg-white dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 rounded-xl -z-10 shadow-sm"></div>
-             <div class="flex flex-col lg:items-start relative z-10">
-                <div class="w-12 h-12 mb-4 rounded-xl bg-white dark:bg-[#1a1c22] border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#F05D23] shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">{ts.ftpTrend.title}</h3>
-                <p class="text-slate-600 dark:text-gray-400 font-medium leading-relaxed">{ts.ftpTrend.description}</p>
-            </div>
-        </div>
-      </div>
+    <!-- Stat chips -->
+    <div data-reveal class="stat-chip absolute z-20 top-2 left-0 md:top-10 md:-left-2 lg:-left-8 animate-float [animation-delay:0.3s]">
+      <div class="font-mono text-[10px] md:text-xs text-accent">FTP TREND</div>
+      <div class="font-bold text-base md:text-2xl text-slate-900">↗ 284 W</div>
+    </div>
+    <div data-reveal class="stat-chip absolute z-20 bottom-14 right-0 md:bottom-28 md:-right-2 lg:-right-10 animate-float [animation-delay:1s]">
+      <div class="font-mono text-[10px] md:text-xs text-accent">VO2MAX</div>
+      <div class="font-bold text-base md:text-2xl text-slate-900">58.2</div>
     </div>
   </div>
-</section>
+</header>
 
+<style>
+  /* Slot transforms live on the outer wrapper; the float keyframes animate the
+     inner .phone-frame, so the two transforms never fight. */
+  .hero-phone {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 200px;
+    transform: translateX(calc(-50% + var(--tx))) scale(var(--s));
+    transform-origin: bottom center;
+    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .slot-left   { --tx: -110px; --s: 0.64; z-index: 1; cursor: pointer; }
+  .slot-center { --tx: 0px;    --s: 1;    z-index: 10; cursor: default; }
+  .slot-right  { --tx: 110px;  --s: 0.64; z-index: 1; cursor: pointer; }
 
+  .slot-left:hover,
+  .slot-right:hover {
+    --s: 0.68;
+  }
+
+  @media (min-width: 768px) {
+    .hero-phone { width: 300px; }
+    .slot-left   { --tx: -265px; --s: 0.77; }
+    .slot-right  { --tx: 265px;  --s: 0.77; }
+    .slot-left:hover,
+    .slot-right:hover { --s: 0.81; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-phone { transition: none; }
+  }
+</style>
+
+<script>
+  const stage = document.getElementById('phone-stage');
+  const slots = ['slot-left', 'slot-center', 'slot-right'];
+
+  if (stage) {
+    const phones = Array.from(stage.querySelectorAll<HTMLElement>('.hero-phone'));
+
+    // dir = +1 brings the right phone to center, -1 brings the left one.
+    const rotate = (dir: number) => {
+      phones.forEach((p) => {
+        const idx = slots.findIndex((s) => p.classList.contains(s));
+        if (idx === -1) return;
+        p.classList.remove(slots[idx]);
+        p.classList.add(slots[(idx - dir + 3) % 3]);
+      });
+    };
+
+    phones.forEach((p) => {
+      p.addEventListener('click', () => {
+        if (p.classList.contains('slot-right')) rotate(1);
+        else if (p.classList.contains('slot-left')) rotate(-1);
+      });
+      p.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        e.preventDefault();
+        if (p.classList.contains('slot-right')) rotate(1);
+        else if (p.classList.contains('slot-left')) rotate(-1);
+      });
+    });
+
+    // Horizontal swipe on touch devices
+    let startX: number | null = null;
+    stage.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    stage.addEventListener('touchend', (e) => {
+      if (startX === null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      startX = null;
+      if (Math.abs(dx) < 40) return;
+      rotate(dx < 0 ? 1 : -1);
+    }, { passive: true });
+  }
+</script>
 
 <script>
   const storeButtons: Array<{ id: string; label: string }> = [

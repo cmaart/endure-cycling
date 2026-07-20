@@ -2,37 +2,24 @@
 interface Props {
   title: string;
   features: string[];
-  iconColor: 'pink' | 'orange' | 'blue' | 'green';
+  stat: string;
 }
 
-const { title, features, iconColor } = Astro.props;
-
-const iconColors = {
-  pink: 'from-[#d63c6b] to-[#6b4c9a]',
-  orange: 'from-[#F05D23] to-[#ff8c5a]',
-  blue: 'from-[#3b82f6] to-[#06b6d4]',
-  green: 'from-[#22c55e] to-[#10b981]'
-};
-
-const iconGradient = iconColors[iconColor];
+const { title, features, stat } = Astro.props;
 ---
 
-<div class="card-surface p-8 duration-300 hover:-translate-y-1 hover:border-[#F05D23]/30 hover:shadow-[0_20px_50px_-15px_rgba(240,93,35,0.25)] group bg-white dark:bg-[#1a1c22] shadow-sm">
-  <!-- Icon -->
-  <div class={`w-14 h-14 rounded-2xl bg-gradient-to-br ${iconGradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300`}>
-    <slot name="icon" />
-  </div>
+<div class="card-surface hover-lift p-8 md:p-9 h-full">
+  <!-- Big stat headline -->
+  <div class="font-bold text-[34px] leading-none text-accent">{stat}</div>
 
   <!-- Title -->
-  <h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">{title}</h3>
+  <h3 class="text-xl font-bold mt-4 mb-4 text-slate-900">{title}</h3>
 
   <!-- Features list -->
   <ul class="space-y-3">
     {features.map((feature) => (
-      <li class="flex items-start gap-3 text-slate-600 dark:text-gray-400 font-medium text-sm leading-relaxed">
-        <svg class="w-5 h-5 text-[#22c55e] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-        </svg>
+      <li class="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+        <span class="mt-[7px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent"></span>
         <span set:html={feature} />
       </li>
     ))}

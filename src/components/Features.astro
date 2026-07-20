@@ -4,195 +4,97 @@ import FeatureCard from './FeatureCard.astro';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).features;
+
+const screenshots = [
+  { src: '/assets/screenshots/builtin_workouts.min.webp', alt: 'ENDURE Workout Library', caption: t.screenshot1Caption },
+  { src: '/assets/screenshots/imported_workouts.min.webp', alt: 'ENDURE Import Workouts', caption: t.screenshot2Caption },
+  { src: '/assets/screenshots/2026-01-25 10_28_53-Endure.min.min.webp', alt: 'ENDURE Power Profile', caption: t.screenshot3Caption },
+  { src: '/assets/screenshots/the_ride.min.min.webp', alt: 'ENDURE Ride Screen', caption: t.screenshot4Caption },
+  { src: '/assets/screenshots/smart_smoothing.min.webp', alt: 'ENDURE Smart Smoothing', caption: t.screenshot5Caption },
+  { src: '/assets/ZoneDistribution.min.webp', alt: 'ENDURE Time in Zones', caption: t.screenshot6Caption },
+];
 ---
 
 <section id="features" class="py-24 relative">
   <div class="container mx-auto px-6">
     <!-- Section Header -->
     <div class="text-center mb-16" data-reveal>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-        {t.sectionTitle} <span class="text-gradient-primary">{t.sectionTitleHighlight}</span>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-[-0.02em] mb-4 text-slate-900">
+        {t.sectionTitle} <span class="text-accent">{t.sectionTitleHighlight}</span>
       </h2>
-      <p class="text-slate-600 dark:text-gray-400 font-medium text-lg max-w-2xl mx-auto">
+      <p class="text-slate-600 text-lg max-w-xl mx-auto">
         {t.sectionSubtitle}
       </p>
     </div>
 
     <!-- Feature Grid -->
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid md:grid-cols-2 gap-5">
       <!-- Fast & Rock-Solid -->
       <div data-reveal>
         <FeatureCard
           title={t.performance.title}
-          iconColor="green"
+          stat="< 30 s"
           features={[
             t.performance.feature1,
             t.performance.feature2,
             t.performance.feature3
           ]}
-        >
-          <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        </FeatureCard>
+        />
       </div>
 
       <!-- Deep Progress Analytics -->
       <div data-reveal data-reveal-delay="100">
         <FeatureCard
           title={t.analytics.title}
-          iconColor="pink"
+          stat="FTP · VO2"
           features={[
             t.analytics.feature1,
             t.analytics.feature2,
             t.analytics.feature3
           ]}
-        >
-          <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
-          </svg>
-        </FeatureCard>
+        />
       </div>
 
       <!-- Structured Training -->
       <div data-reveal data-reveal-delay="200">
         <FeatureCard
           title={t.training.title}
-          iconColor="orange"
+          stat="ERG"
           features={[
             t.training.feature1,
             t.training.feature2,
             t.training.feature3
           ]}
-        >
-          <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-          </svg>
-        </FeatureCard>
+        />
       </div>
 
       <!-- Connectivity & Sync -->
       <div data-reveal data-reveal-delay="300">
         <FeatureCard
           title={t.connectivity.title}
-          iconColor="blue"
+          stat="BLE"
           features={[
             t.connectivity.feature1,
             t.connectivity.feature2,
             t.connectivity.feature3
           ]}
-        >
-          <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.143 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
-          </svg>
-        </FeatureCard>
+        />
       </div>
     </div>
 
     <!-- Screenshot showcase -->
     <div class="mt-20 grid md:grid-cols-2 gap-8">
-      <div class="relative group" data-reveal>
-        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img
-          src="/assets/screenshots/builtin_workouts.min.webp"
-          alt="ENDURE Workout Library"
-          data-zoomable
-          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <img
-          src="/assets/dark_theme/workout_library.png"
-          alt="ENDURE Workout Library"
-          data-zoomable
-          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <p class="dark:hidden text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot1Caption}</p>
-        <p class="hidden dark:block text-center mt-4 text-gray-400 font-medium text-sm">{t.screenshotDark1Caption}</p>
-      </div>
-      <div class="relative group" data-reveal data-reveal-delay="100">
-        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img
-          src="/assets/screenshots/imported_workouts.min.webp"
-          alt="ENDURE Import Workouts"
-          data-zoomable
-          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <img
-          src="/assets/dark_theme/activity_history.png"
-          alt="ENDURE Activity History"
-          data-zoomable
-          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <p class="dark:hidden text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot2Caption}</p>
-        <p class="hidden dark:block text-center mt-4 text-gray-400 font-medium text-sm">{t.screenshotDark2Caption}</p>
-      </div>
-      <div class="relative group" data-reveal>
-        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img
-          src="/assets/screenshots/2026-01-25 10_28_53-Endure.min.min.webp"
-          alt="ENDURE Power Profile"
-          data-zoomable
-          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <img
-          src="/assets/dark_theme/dashboard_profile.png"
-          alt="ENDURE Dashboard Profile"
-          data-zoomable
-          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <p class="dark:hidden text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot3Caption}</p>
-        <p class="hidden dark:block text-center mt-4 text-gray-400 font-medium text-sm">{t.screenshotDark3Caption}</p>
-      </div>
-      <div class="relative group" data-reveal data-reveal-delay="100">
-        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img
-          src="/assets/screenshots/the_ride.min.min.webp"
-          alt="ENDURE Ride Screen"
-          data-zoomable
-          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <img
-          src="/assets/dark_theme/workout_ride.png"
-          alt="ENDURE Workout Ride"
-          data-zoomable
-          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <p class="dark:hidden text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot4Caption}</p>
-        <p class="hidden dark:block text-center mt-4 text-gray-400 font-medium text-sm">{t.screenshotDark4Caption}</p>
-      </div>
-      <div class="relative group" data-reveal>
-        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img
-          src="/assets/screenshots/smart_smoothing.min.webp"
-          alt="ENDURE Smart Smoothing"
-          data-zoomable
-          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <img
-          src="/assets/dark_theme/performance_trends.png"
-          alt="ENDURE Performance Trends"
-          data-zoomable
-          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <p class="dark:hidden text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot5Caption}</p>
-        <p class="hidden dark:block text-center mt-4 text-gray-400 font-medium text-sm">{t.screenshotDark5Caption}</p>
-      </div>
-      <div class="relative group" data-reveal data-reveal-delay="100">
-        <div class="absolute inset-0 bg-slate-200/50 dark:bg-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-        <img
-          src="/assets/ZoneDistribution.min.webp"
-          alt="ENDURE Time in Zones"
-          data-zoomable
-          class="dark:hidden relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <img
-          src="/assets/dark_theme/training_status.png"
-          alt="ENDURE Training Status"
-          data-zoomable
-          class="hidden dark:block relative rounded-2xl border border-white/10 shadow-xl shadow-black/30 max-w-[320px] mx-auto cursor-zoom-in hover:shadow-2xl transition-shadow"
-        />
-        <p class="dark:hidden text-center mt-4 text-slate-600 font-medium text-sm">{t.screenshot6Caption}</p>
-        <p class="hidden dark:block text-center mt-4 text-gray-400 font-medium text-sm">{t.screenshotDark6Caption}</p>
-      </div>
+      {screenshots.map((shot, idx) => (
+        <div class="relative group" data-reveal data-reveal-delay={idx % 2 === 1 ? 100 : undefined}>
+          <img
+            src={shot.src}
+            alt={shot.alt}
+            data-zoomable
+            class="relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
+          />
+          <p class="text-center mt-4 text-slate-600 text-sm">{shot.caption}</p>
+        </div>
+      ))}
     </div>
   </div>
 </section>
