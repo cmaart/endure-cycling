@@ -13,7 +13,7 @@ export const translations = {
     hero: {
       badge: "Early Release · iOS & Android",
       tagline: "Precision over gimmicks",
-      headline1: "Train hard.",
+      headline1: "Train right.",
       headline2: "See the progress.",
       subline: "Smart trainer control, FTP and VO2max trends, lactate thresholds. From app start to riding in under 30 seconds.",
       ctaIos: "Download on the App Store",
@@ -350,7 +350,7 @@ export const translations = {
     hero: {
       badge: "Early Release · iOS & Android",
       tagline: "Präzision statt Spielerei",
-      headline1: "Hart trainieren.",
+      headline1: "Richtig trainieren.",
       headline2: "Fortschritt sehen.",
       subline: "Smart-Trainer-Steuerung, FTP- und VO2max-Trends, Laktatschwellen. Vom App-Start bis aufs Rad in unter 30 Sekunden.",
       ctaIos: "Im App Store laden",
