@@ -12,13 +12,13 @@ export const translations = {
     // Hero
     hero: {
       badge: "Early Release · iOS & Android",
-      tagline: "Precision over Gimmicks",
+      tagline: "Precision over gimmicks",
       headline1: "Train hard.",
-      headline2: "Know it's working.",
-      subline: "Smart trainer control, FTP & VO2max trends and lactate thresholds — from app start to riding in under 30 seconds.",
-      ctaIos: "Download for iOS",
-      ctaAndroid: "Android",
-      secondary: "Frequent updates. Built with the community. Come along for the ride.",
+      headline2: "See the progress.",
+      subline: "Smart trainer control, FTP and VO2max trends, lactate thresholds. From app start to riding in under 30 seconds.",
+      ctaIos: "Download on the App Store",
+      ctaAndroid: "Get it on Google Play",
+      secondary: "Frequent updates, built together with the cycling community.",
       desktopNote: "Desktop versions (Windows & macOS) planned",
       appStoreBadgeAlt: "Download on the App Store",
       googlePlayBadgeAlt: "Get it on Google Play"
@@ -37,14 +37,14 @@ export const translations = {
     // Climbing Efficiency
     climbingEfficiency: {
       badge: "New Feature",
-      headline1: "Own the climb.",
-      headline2: "Measure how efficiently you actually climb.",
-      description: "Climbing Efficiency measures how effectively you turn watts into vertical meters. ENDURE automatically detects climbs in your outdoor rides and calculates a personal climbing score — one of the first apps in the world to do this.",
+      headline1: "How well do you actually climb?",
+      headline2: "Climbing Efficiency puts a number on it.",
+      description: "Climbing Efficiency scores how effectively you turn watts into vertical meters. ENDURE detects the climbs in your outdoor rides automatically and calculates a personal climbing score from them. It is one of the first apps worldwide to do this.",
       stat1: "Vertical speed measured",
       stat2: "Unique metric worldwide",
       bullets: [
         "<strong>Automatic climb detection:</strong> ENDURE identifies every climb in your outdoor rides.",
-        "<strong>VAM-based scoring:</strong> Your vertical ascent speed (m/h) is the core of the metric — pure climbing ability."
+        "<strong>VAM-based scoring:</strong> The score is built on your vertical ascent speed in meters per hour."
       ]
     },
     // Lactate (Industry First)
@@ -52,15 +52,15 @@ export const translations = {
       badge: "Industry first for cycling apps",
       headline1: "Lactate, logged from your bike.",
       headline2: "LT1 & LT2 estimated automatically.",
-      description: "ENDURE is the first cycling app that lets you log lactate readings directly during a ride — or add them afterwards. From those values we automatically estimate your LT1 and LT2 thresholds, complete with a confidence tunnel around the curve. No spreadsheets, no separate tools — your blood markers live next to your power.",
+      description: "ENDURE is the first cycling app that lets you log lactate readings during a ride, or add them afterwards. From those values it estimates your LT1 and LT2 thresholds automatically, with a confidence tunnel around the fitted curve. Your lactate data sits right next to your power data, so you don't need spreadsheets or a separate tool.",
       stat1Title: "LT1 + LT2",
       stat1Sub: "Auto-estimated",
       stat2Title: "In-ride · Post-ride",
       stat2Sub: "Log when you want",
       bullets: [
         "<strong>In-ride logging:</strong> Capture lactate values mid-workout without leaving the ride screen.",
-        "<strong>Post-ride entry:</strong> Or add them later from your activity history — no rush.",
-        "<strong>Automatic LT1/LT2 estimation:</strong> A fitted curve with a confidence tunnel turns your readings into actionable thresholds."
+        "<strong>Post-ride entry:</strong> Or add them later from your activity history.",
+        "<strong>Automatic LT1/LT2 estimation:</strong> A fitted curve with a confidence tunnel turns your readings into thresholds you can train with."
       ],
       videoCaption: "Logging a lactate reading for a workout.",
       resultLabel: "What you get:",
@@ -71,28 +71,28 @@ export const translations = {
       badge: "Industry first · Native CORE integration",
       headline1: "Heat is a metric.",
       headline2: "CORE body temperature & heat zones, live in your ride.",
-      description: "ENDURE is the first indoor cycling app to natively integrate the CORE body temperature sensor — including a live heat-zone display right on the ride screen. Pair it over Bluetooth like any other sensor, and your core temperature is recorded next to power and heart rate, ready for heat-training analysis after the ride.",
+      description: "ENDURE is the first indoor cycling app to natively integrate the CORE body temperature sensor, with a live heat-zone display right on the ride screen. Pair it over Bluetooth like any other sensor. Your core temperature is recorded next to power and heart rate, ready for heat-training analysis after the ride.",
       stat1Title: "Live core temp",
       stat1Sub: "On the ride screen",
       stat2Title: "Heat zones",
       stat2Sub: "Train heat like power",
       bullets: [
-        "<strong>Native sensor pairing:</strong> Connect your CORE sensor over Bluetooth like a power meter — no workarounds, no second app running.",
-        "<strong>Live heat zones:</strong> See your current heat zone during the ride and steer heat-training sessions with intent.",
+        "<strong>Native sensor pairing:</strong> Connect your CORE sensor over Bluetooth like a power meter, without running a second app.",
+        "<strong>Live heat zones:</strong> See your current heat zone during the ride and pace your heat sessions accordingly.",
         "<strong>Logged with your ride:</strong> Core temperature is stored alongside power and heart rate for post-ride analysis."
       ]
     },
     // Beta Notice
     betaNotice: {
       badge: "Early Release",
-      title: "Available Now — Early Release on iOS & Android",
-      description: "ENDURE is live on iOS and Android as an Early Release, and completely free to use while we continue to improve. Desktop versions for Windows and macOS are planned. We're building this together with the cycling community."
+      title: "Available now: Early Release on iOS & Android",
+      description: "ENDURE is live on iOS and Android as an Early Release, free to use while we keep improving it. Desktop versions for Windows and macOS are planned. We're building the app together with the cycling community."
     },
     // Features
     features: {
       sectionTitle: "Built for",
       sectionTitleHighlight: "the work.",
-      sectionSubtitle: "No bloat, no gimmicks — the essentials for structured training, done properly.",
+      sectionSubtitle: "The essentials for structured training, done properly.",
 
       analytics: {
         title: "Progress Analytics",
@@ -103,14 +103,14 @@ export const translations = {
       
       performance: {
         title: "Fast & Rock-Solid",
-        feature1: "<strong>Ready in Seconds:</strong> From app start to riding in under 30 seconds. No bloat.",
+        feature1: "<strong>Ready in Seconds:</strong> From app start to riding in under 30 seconds.",
         feature2: "<strong>Crash-Proof Sessions:</strong> Auto-resume, reconnect & buffer. Never lose a ride.",
         feature3: "<strong>Lightweight:</strong> Runs smooth, no gaming PC required."
       },
       
       training: {
         title: "Structured Training",
-        feature1: "<strong>Targeted Workouts:</strong> Physiologically meaningful training only (VO2max, Threshold, Sweet Spot) — no filler.",
+        feature1: "<strong>Targeted Workouts:</strong> Only physiologically meaningful sessions: VO2max, threshold, sweet spot.",
         feature2: "<strong>Universal Import:</strong> Supports .ZWO, .MRC, and .ERG files.",
         feature3: "<strong>Quick Free Ride:</strong> Optional ERG mode to ride by watts instantly."
       },
@@ -118,7 +118,7 @@ export const translations = {
       connectivity: {
         title: "Connectivity & Sync",
         feature1: "<strong>Bluetooth Smart:</strong> Connects to Smart Trainers, Power Meters & HR Monitors.",
-        feature2: "<strong>CORE Body Temperature:</strong> Native CORE sensor support with live heat zones — an industry first.",
+        feature2: "<strong>CORE Body Temperature:</strong> Native CORE sensor support with live heat zones, an industry first.",
         feature3: "<strong>Strava Integration:</strong> Auto-Upload & History Sync (more platforms coming)."
       },
       
@@ -133,7 +133,7 @@ export const translations = {
     roadmap: {
       title: "Platform",
       titleHighlight: "Roadmap",
-      subtitle: "Frequent Updates — Full gas ahead 🚀",
+      subtitle: "Frequent updates, full gas ahead.",
       
       windows: "Windows",
       windowsStatus: "Planned",
@@ -146,24 +146,24 @@ export const translations = {
       
       communityTitle: "We're Building This Together",
       communityText: "Feature requests are welcome and feed straight into the update cycle. Your feedback shapes ENDURE.",
-      communityLink: "Join us on GitHub",
-      instagramLink: "Follow us on Instagram"
+      communityLink: "ENDURE on GitHub",
+      instagramLink: "ENDURE on Instagram"
     },
     // Comparison / capability table
     comparison: {
       title: "ENDURE",
       titleHighlight: "at a glance",
-      subtitle: "Everything the app does, in one place — no fine print.",
+      subtitle: "Everything the app does, in one place.",
       featureLabel: "Capability",
       valueLabel: "What you get",
       rows: [
-        { feature: "Price", value: "Free during Early Release — affordable subscription planned afterwards" },
+        { feature: "Price", value: "Free during Early Release, with an affordable subscription planned afterwards" },
         { feature: "Platforms", value: "iOS & Android (Windows & macOS planned)" },
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
         { feature: "Workout import", value: ".ZWO, .MRC and .ERG files" },
         { feature: "Analytics", value: "FTP & VO2max trends, power profile, time-in-zones" },
         { feature: "Lactate LT1 / LT2", value: "In-ride & post-ride logging with auto-estimated thresholds" },
-        { feature: "CORE body temperature", value: "Native CORE sensor integration with live heat zones — industry first" },
+        { feature: "CORE body temperature", value: "Native CORE sensor integration with live heat zones, an industry first" },
         { feature: "Climbing Efficiency", value: "Automatic VAM-based climb scoring" },
         { feature: "Strava", value: "Auto-upload & ride-history sync" },
         { feature: "Startup", value: "From app start to riding in under 30 seconds" }
@@ -177,7 +177,7 @@ export const translations = {
       items: [
         {
           q: "Is ENDURE free?",
-          a: "Yes — for now. ENDURE is completely free during its Early Release on iOS and Android while we keep improving it. After Early Release we plan an affordable subscription, so this is the best time to jump in."
+          a: "Yes, for now. ENDURE is free during its Early Release on iOS and Android while we keep improving it. After Early Release we plan an affordable subscription, so this is a good time to jump in."
         },
         {
           q: "Which smart trainers and sensors work with ENDURE?",
@@ -189,7 +189,7 @@ export const translations = {
         },
         {
           q: "How does ENDURE estimate FTP and VO2max?",
-          a: "ENDURE analyses your recorded power and heart-rate data across rides to model your FTP and VO2max trends over time — so you see fitness evolve week by week instead of from a single all-out test."
+          a: "ENDURE analyses your recorded power and heart-rate data across rides to model your FTP and VO2max trends over time. You see your fitness evolve week by week instead of relying on a single all-out test."
         },
         {
           q: "What is the lactate (LT1 / LT2) feature?",
@@ -197,19 +197,19 @@ export const translations = {
         },
         {
           q: "Does ENDURE support the CORE body temperature sensor?",
-          a: "Yes — ENDURE is the first indoor cycling app with native CORE body temperature sensor integration. Pair it over Bluetooth and you get live core temperature and heat zones on the ride screen, recorded alongside power and heart rate."
+          a: "Yes. ENDURE is the first indoor cycling app with native CORE body temperature sensor integration. Pair it over Bluetooth and you get live core temperature and heat zones on the ride screen, recorded alongside power and heart rate."
         },
         {
           q: "What are heat zones and why do they matter?",
-          a: "Heat zones translate your core body temperature into training ranges, just like power or heart-rate zones. Spending controlled time in the right zone triggers heat adaptations — higher plasma volume and better cooling — that pay off in hot races and support aerobic performance."
+          a: "Heat zones translate your core body temperature into training ranges, just like power or heart-rate zones. Spending controlled time in the right zone triggers heat adaptations such as higher plasma volume and better cooling, which pay off in hot races and support aerobic performance."
         },
         {
           q: "Is ENDURE a good alternative to Zwift?",
-          a: "It depends on what you want. Zwift is built around virtual worlds and racing; ENDURE focuses on precise structured training and analysis — FTP and VO2max trends, lactate thresholds, CORE heat zones. Many riders use ENDURE for training and analysis alongside or instead of Zwift."
+          a: "It depends on what you want. Zwift is built around virtual worlds and racing; ENDURE focuses on precise structured training and analysis: FTP and VO2max trends, lactate thresholds, CORE heat zones. Many riders use ENDURE for training and analysis alongside or instead of Zwift."
         },
         {
           q: "How does ENDURE compare to TrainerRoad?",
-          a: "TrainerRoad centres on algorithm-generated training plans behind a subscription. ENDURE offers a curated workout library plus deeper physiological analysis — lactate LT1/LT2, CORE body temperature with heat zones and climbing efficiency."
+          a: "TrainerRoad centres on algorithm-generated training plans behind a subscription. ENDURE offers a curated workout library plus deeper physiological analysis: lactate LT1/LT2, CORE body temperature with heat zones and climbing efficiency."
         },
         {
           q: "Does ENDURE sync with Strava?",
@@ -271,14 +271,14 @@ export const translations = {
       contact: "Contact",
       
       copyright: "ENDURE. All rights reserved.",
-      made: "Made with ❤️ for cyclists who love data."
+      made: "Built in Austria for cyclists who love data."
     },
     // Video Demo
     videoDemo: {
-      title: "See It",
-      titleHighlight: "In Action",
-      subtitle: "From app start to riding in under 30 seconds. Precise training, no detours.",
-      caption: "App start to ride — real speed, no time-lapse"
+      title: "See it",
+      titleHighlight: "in action",
+      subtitle: "From app start to riding in under 30 seconds, recorded in real time.",
+      caption: "App start to ride, without a time-lapse"
     },
     // SEO
     seo: {
@@ -344,18 +344,18 @@ export const translations = {
       lactate: "Laktat",
       roadmap: "Roadmap",
       faq: "FAQ",
-      cta: "App holen"
+      cta: "App laden"
     },
     // Hero
     hero: {
       badge: "Early Release · iOS & Android",
       tagline: "Präzision statt Spielerei",
       headline1: "Hart trainieren.",
-      headline2: "Sehen, dass es wirkt.",
-      subline: "Smart-Trainer-Steuerung, FTP- & VO2max-Trends und Laktatschwellen — vom App-Start bis zur Fahrt in unter 30 Sekunden.",
-      ctaIos: "Für iOS laden",
-      ctaAndroid: "Android",
-      secondary: "Häufige Updates. Entwickelt mit der Community. Sei dabei.",
+      headline2: "Fortschritt sehen.",
+      subline: "Smart-Trainer-Steuerung, FTP- und VO2max-Trends, Laktatschwellen. Vom App-Start bis aufs Rad in unter 30 Sekunden.",
+      ctaIos: "Im App Store laden",
+      ctaAndroid: "Bei Google Play",
+      secondary: "Laufend neue Updates, entwickelt gemeinsam mit der Community.",
       desktopNote: "Desktop-Versionen (Windows & macOS) geplant",
       appStoreBadgeAlt: "Laden im App Store",
       googlePlayBadgeAlt: "Jetzt bei Google Play"
@@ -374,14 +374,14 @@ export const translations = {
     // Climbing Efficiency
     climbingEfficiency: {
       badge: "Neues Feature",
-      headline1: "Beherrsche den Anstieg.",
-      headline2: "Miss, wie effizient du wirklich kletterst.",
-      description: "Climbing Efficiency misst, wie effektiv du deine Watt in Höhenmeter umsetzt. ENDURE erkennt Anstiege in deinen Outdoor-Fahrten automatisch und berechnet deinen persönlichen Kletter-Score — als eine der ersten Apps weltweit.",
+      headline1: "Wie stark kletterst du wirklich?",
+      headline2: "Climbing Efficiency macht es messbar.",
+      description: "Climbing Efficiency bewertet, wie effektiv du Watt in Höhenmeter umsetzt. ENDURE erkennt Anstiege in deinen Outdoor-Fahrten automatisch und berechnet daraus deinen persönlichen Kletter-Score. Kaum eine andere App weltweit kann das.",
       stat1: "Vertikalgeschwindigkeit gemessen",
       stat2: "Weltweit einzigartige Metrik",
       bullets: [
         "<strong>Automatische Anstiegserkennung:</strong> ENDURE identifiziert jeden Anstieg in deinen Outdoor-Fahrten.",
-        "<strong>VAM-basiertes Scoring:</strong> Deine vertikale Aufstiegsgeschwindigkeit (m/h) ist der Kern des Wertes — pure Bergleistung."
+        "<strong>VAM-basiertes Scoring:</strong> Der Score basiert auf deiner vertikalen Aufstiegsgeschwindigkeit in Metern pro Stunde."
       ]
     },
     // Lactate (Industry First)
@@ -389,18 +389,18 @@ export const translations = {
       badge: "Erstmals in einer Cycling-App",
       headline1: "Laktat. Direkt vom Rad.",
       headline2: "LT1 & LT2 automatisch geschätzt.",
-      description: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte direkt während der Fahrt eintragen kannst — oder im Nachhinein. Aus deinen Werten schätzen wir automatisch LT1 und LT2 inklusive Konfidenztunnel um die Kurve. Keine Spreadsheets, keine Extra-Tools — deine Blutwerte leben neben deinen Watt.",
+      description: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte direkt während der Fahrt eintragen kannst oder später ergänzt. Aus deinen Werten schätzt die App LT1 und LT2 automatisch, inklusive Konfidenztunnel um die gefittete Kurve. Deine Laktatwerte stehen direkt neben deinen Leistungsdaten, ohne Tabellen und Zusatz-Tools.",
       stat1Title: "LT1 + LT2",
       stat1Sub: "Automatisch geschätzt",
       stat2Title: "Während · Nach der Fahrt",
-      stat2Sub: "Eintrag wann du willst",
+      stat2Sub: "Eintrag, wann du willst",
       bullets: [
         "<strong>Eintrag während der Fahrt:</strong> Laktatwerte mitten im Workout erfassen, ohne den Ride-Screen zu verlassen.",
-        "<strong>Eintrag im Nachhinein:</strong> Oder später aus der Aktivitätshistorie ergänzen — kein Stress.",
-        "<strong>Automatische LT1/LT2-Schätzung:</strong> Eine gefittete Kurve mit Konfidenztunnel macht aus deinen Werten greifbare Schwellen."
+        "<strong>Eintrag im Nachhinein:</strong> Oder du ergänzt die Werte später aus deiner Aktivitätshistorie.",
+        "<strong>Automatische LT1/LT2-Schätzung:</strong> Eine gefittete Kurve mit Konfidenztunnel macht aus deinen Werten Schwellen, mit denen du trainieren kannst."
       ],
       videoCaption: "Laktatwert für ein Workout eintragen.",
-      resultLabel: "Das kommt raus:",
+      resultLabel: "Das Ergebnis:",
       resultCaption: "Laktatprofil + LT1/LT2 mit Konfidenztunnel."
     },
     // CORE body temperature (Industry First)
@@ -408,28 +408,28 @@ export const translations = {
       badge: "Erstmals in einer Cycling-App · Native CORE-Integration",
       headline1: "Hitze ist eine Metrik.",
       headline2: "CORE Körpertemperatur & Heat Zones, live in deiner Fahrt.",
-      description: "ENDURE ist die erste Indoor-Cycling-App, die den CORE Körpertemperatur-Sensor nativ integriert — inklusive Live-Anzeige deiner Heat Zone direkt am Ride-Screen. Verbinde ihn per Bluetooth wie jeden anderen Sensor, und deine Körperkerntemperatur wird neben Watt und Herzfrequenz aufgezeichnet — bereit für die Hitzetraining-Analyse nach der Fahrt.",
+      description: "ENDURE ist die erste Indoor-Cycling-App, die den CORE Körpertemperatur-Sensor nativ integriert, inklusive Live-Anzeige deiner Heat Zone direkt am Ride-Screen. Du verbindest ihn per Bluetooth wie jeden anderen Sensor. Deine Kerntemperatur wird neben Watt und Herzfrequenz aufgezeichnet und steht nach der Fahrt für die Hitzetraining-Analyse bereit.",
       stat1Title: "Live Kerntemperatur",
       stat1Sub: "Direkt am Ride-Screen",
       stat2Title: "Heat Zones",
       stat2Sub: "Trainiere Hitze wie Watt",
       bullets: [
-        "<strong>Natives Sensor-Pairing:</strong> Verbinde deinen CORE-Sensor per Bluetooth wie einen Power Meter — keine Umwege, keine zweite App.",
-        "<strong>Live Heat Zones:</strong> Sieh deine aktuelle Heat Zone während der Fahrt und steuere Hitzetraining gezielt.",
-        "<strong>Mit der Fahrt gespeichert:</strong> Die Kerntemperatur wird neben Watt und Herzfrequenz aufgezeichnet — für die Analyse nach der Fahrt."
+        "<strong>Natives Sensor-Pairing:</strong> Du verbindest deinen CORE-Sensor per Bluetooth wie einen Powermeter, ohne zweite App.",
+        "<strong>Live Heat Zones:</strong> Du siehst deine aktuelle Heat Zone während der Fahrt und kannst dein Hitzetraining gezielt steuern.",
+        "<strong>Mit der Fahrt gespeichert:</strong> Die Kerntemperatur wird neben Watt und Herzfrequenz aufgezeichnet und ist nach der Fahrt bereit für die Analyse."
       ]
     },
     // Beta Notice
     betaNotice: {
       badge: "Early Release",
-      title: "Jetzt verfügbar — Early Release für iOS & Android",
-      description: "ENDURE ist als Early Release für iOS und Android verfügbar — und komplett kostenlos, während wir die App weiter verbessern. Desktop-Versionen für Windows und macOS sind in Planung. Wir bauen das gemeinsam mit der Radsport-Community."
+      title: "Jetzt verfügbar: Early Release für iOS & Android",
+      description: "ENDURE ist als Early Release für iOS und Android verfügbar und kostenlos, solange wir die App weiter ausbauen. Desktop-Versionen für Windows und macOS sind in Planung. Entwickelt wird gemeinsam mit der Radsport-Community."
     },
     // Features
     features: {
       sectionTitle: "Gemacht für",
       sectionTitleHighlight: "echtes Training.",
-      sectionSubtitle: "Kein Ballast, keine Gimmicks — nur die Essentials für strukturiertes Training, sauber umgesetzt.",
+      sectionSubtitle: "Das Wesentliche für strukturiertes Training, sauber umgesetzt.",
 
       analytics: {
         title: "Fortschritts-Analyse",
@@ -440,14 +440,14 @@ export const translations = {
       
       performance: {
         title: "Schnell & Stabil",
-        feature1: "<strong>Bereit in Sekunden:</strong> Vom App-Start bis zur Fahrt in unter 30 Sekunden. Kein Bloat.",
+        feature1: "<strong>Bereit in Sekunden:</strong> Vom App-Start bis zur Fahrt in unter 30 Sekunden.",
         feature2: "<strong>Crash-sichere Sessions:</strong> Auto-Resume, Reconnect & Buffer. Keine Fahrt geht verloren.",
         feature3: "<strong>Leichtgewichtig:</strong> Läuft flüssig, kein Gaming-PC nötig."
       },
       
       training: {
         title: "Strukturiertes Training",
-        feature1: "<strong>Zielgerichtete Workouts:</strong> Nur physiologisch sinnvolle Trainings (VO2max, Schwelle, Sweet Spot) — kein Ballast.",
+        feature1: "<strong>Zielgerichtete Workouts:</strong> Nur physiologisch sinnvolle Einheiten: VO2max, Schwelle, Sweet Spot.",
         feature2: "<strong>Universeller Import:</strong> Unterstützt .ZWO, .MRC und .ERG Dateien.",
         feature3: "<strong>Schnelles Freifahren:</strong> Optionaler ERG-Modus um sofort nach Watt zu fahren."
       },
@@ -455,7 +455,7 @@ export const translations = {
       connectivity: {
         title: "Konnektivität & Sync",
         feature1: "<strong>Bluetooth Smart:</strong> Verbindet sich mit Smart Trainern, Power Metern & HR Monitoren.",
-        feature2: "<strong>CORE Körpertemperatur:</strong> Native CORE-Sensor-Unterstützung mit Live Heat Zones — erstmals in einer Cycling-App.",
+        feature2: "<strong>CORE Körpertemperatur:</strong> Native CORE-Sensor-Unterstützung mit Live Heat Zones, erstmals in einer Cycling-App.",
         feature3: "<strong>Strava Integration:</strong> Auto-Upload & Verlaufs-Sync (weitere Plattformen folgen)."
       },
       
@@ -470,7 +470,7 @@ export const translations = {
     roadmap: {
       title: "Plattform",
       titleHighlight: "Roadmap",
-      subtitle: "Häufige Updates — Vollgas voraus 🚀",
+      subtitle: "Häufige Updates, Vollgas voraus.",
       
       windows: "Windows",
       windowsStatus: "Geplant",
@@ -483,24 +483,24 @@ export const translations = {
       
       communityTitle: "Wir bauen das gemeinsam",
       communityText: "Feature-Wünsche sind willkommen und fließen direkt in den Update-Zyklus ein. Dein Feedback gestaltet ENDURE mit.",
-      communityLink: "Schließ dich uns auf GitHub an",
-      instagramLink: "Folge uns auf Instagram"
+      communityLink: "ENDURE auf GitHub",
+      instagramLink: "ENDURE auf Instagram"
     },
     // Comparison / capability table
     comparison: {
       title: "ENDURE",
       titleHighlight: "auf einen Blick",
-      subtitle: "Alles, was die App kann — an einem Ort, ohne Kleingedrucktes.",
+      subtitle: "Alles, was die App kann, an einem Ort.",
       featureLabel: "Funktion",
       valueLabel: "Das bekommst du",
       rows: [
-        { feature: "Preis", value: "Gratis im Early Release — danach preiswertes Abo geplant" },
+        { feature: "Preis", value: "Gratis im Early Release, danach ist ein preiswertes Abo geplant" },
         { feature: "Plattformen", value: "iOS & Android (Windows & macOS geplant)" },
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
         { feature: "Workout-Import", value: ".ZWO, .MRC und .ERG Dateien" },
         { feature: "Analyse", value: "FTP- & VO2max-Trends, Power Profile, Zeit in Zonen" },
         { feature: "Laktat LT1 / LT2", value: "Eintrag während & nach der Fahrt, Schwellen automatisch geschätzt" },
-        { feature: "CORE Körpertemperatur", value: "Native CORE-Sensor-Integration mit Live Heat Zones — erstmals in einer Cycling-App" },
+        { feature: "CORE Körpertemperatur", value: "Native CORE-Sensor-Integration mit Live Heat Zones, erstmals in einer Cycling-App" },
         { feature: "Climbing Efficiency", value: "Automatisches VAM-basiertes Kletter-Scoring" },
         { feature: "Strava", value: "Auto-Upload & Verlaufs-Sync" },
         { feature: "Start", value: "Vom App-Start bis zur Fahrt in unter 30 Sekunden" }
@@ -514,7 +514,7 @@ export const translations = {
       items: [
         {
           q: "Ist ENDURE kostenlos?",
-          a: "Ja — vorerst. ENDURE ist im Early Release auf iOS und Android komplett kostenlos, während wir die App weiter verbessern. Nach dem Early Release ist ein preiswertes Abo geplant — jetzt ist also der beste Zeitpunkt zum Einsteigen."
+          a: "Ja, vorerst. ENDURE ist im Early Release auf iOS und Android kostenlos, während wir die App weiter verbessern. Nach dem Early Release ist ein preiswertes Abo geplant, jetzt ist also ein guter Zeitpunkt zum Einsteigen."
         },
         {
           q: "Welche Smart Trainer und Sensoren funktionieren mit ENDURE?",
@@ -526,31 +526,31 @@ export const translations = {
         },
         {
           q: "Wie schätzt ENDURE FTP und VO2max?",
-          a: "ENDURE analysiert deine aufgezeichneten Power- und Herzfrequenzdaten über mehrere Fahrten hinweg und modelliert daraus deine FTP- und VO2max-Trends — du siehst deine Entwicklung Woche für Woche statt aus einem einzelnen Test."
+          a: "ENDURE analysiert deine aufgezeichneten Power- und Herzfrequenzdaten über mehrere Fahrten hinweg und modelliert daraus deine FTP- und VO2max-Trends. Du siehst deine Entwicklung Woche für Woche statt aus einem einzelnen Test."
         },
         {
           q: "Was ist das Laktat-Feature (LT1 / LT2)?",
-          a: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte während oder nach der Fahrt eintragen kannst. Aus diesen Werten wird eine Kurve gefittet und LT1 und LT2 werden automatisch geschätzt — inklusive Konfidenztunnel um das Ergebnis."
+          a: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte während oder nach der Fahrt eintragen kannst. Aus diesen Werten wird eine Kurve gefittet und LT1 und LT2 werden automatisch geschätzt, inklusive Konfidenztunnel um das Ergebnis."
         },
         {
           q: "Unterstützt ENDURE den CORE Körpertemperatur-Sensor?",
-          a: "Ja — ENDURE ist die erste Indoor-Cycling-App mit nativer Integration des CORE Körpertemperatur-Sensors. Per Bluetooth verbunden siehst du Kerntemperatur und Heat Zones live am Ride-Screen, aufgezeichnet neben Watt und Herzfrequenz."
+          a: "Ja. ENDURE ist die erste Indoor-Cycling-App mit nativer Integration des CORE Körpertemperatur-Sensors. Per Bluetooth verbunden siehst du Kerntemperatur und Heat Zones live am Ride-Screen, aufgezeichnet neben Watt und Herzfrequenz."
         },
         {
           q: "Was sind Heat Zones und warum sind sie wichtig?",
-          a: "Heat Zones übersetzen deine Körperkerntemperatur in Trainingsbereiche — wie Watt- oder Herzfrequenzzonen. Kontrollierte Zeit in der richtigen Zone löst Hitzeadaptionen aus: mehr Plasmavolumen und bessere Kühlung. Das zahlt sich bei heißen Rennen aus und unterstützt die aerobe Leistung."
+          a: "Heat Zones übersetzen deine Körperkerntemperatur in Trainingsbereiche, ähnlich wie Watt- oder Herzfrequenzzonen. Kontrollierte Zeit in der richtigen Zone löst Hitzeadaptionen aus: mehr Plasmavolumen und bessere Kühlung. Das zahlt sich bei heißen Rennen aus und unterstützt die aerobe Leistung."
         },
         {
           q: "Ist ENDURE eine gute Alternative zu Zwift?",
-          a: "Kommt darauf an, was du suchst. Zwift dreht sich um virtuelle Welten und Rennen; ENDURE fokussiert auf präzises strukturiertes Training und Analyse — FTP- und VO2max-Trends, Laktatschwellen, CORE Heat Zones. Viele fahren ENDURE fürs Training neben oder statt Zwift."
+          a: "Kommt darauf an, was du suchst. Zwift dreht sich um virtuelle Welten und Rennen; ENDURE fokussiert auf präzises strukturiertes Training und Analyse: FTP- und VO2max-Trends, Laktatschwellen, CORE Heat Zones. Viele fahren ENDURE fürs Training neben oder statt Zwift."
         },
         {
           q: "Wie schlägt sich ENDURE im Vergleich zu TrainerRoad?",
-          a: "TrainerRoad setzt auf algorithmisch generierte Trainingspläne im Abo. ENDURE bietet eine kuratierte Workout-Bibliothek plus tiefere physiologische Analyse — Laktat LT1/LT2, CORE Körpertemperatur mit Heat Zones und Climbing Efficiency."
+          a: "TrainerRoad setzt auf algorithmisch generierte Trainingspläne im Abo. ENDURE bietet eine kuratierte Workout-Bibliothek plus tiefere physiologische Analyse: Laktat LT1/LT2, CORE Körpertemperatur mit Heat Zones und Climbing Efficiency."
         },
         {
           q: "Synchronisiert ENDURE mit Strava?",
-          a: "Ja. ENDURE lädt deine Fahrten automatisch zu Strava hoch und kann beim ersten Start deinen Fahrtverlauf synchronisieren — Indoor- und Outdoor-Aktivitäten ergeben so ein komplettes Leistungsbild."
+          a: "Ja. ENDURE lädt deine Fahrten automatisch zu Strava hoch und kann beim ersten Start deinen Fahrtverlauf synchronisieren. Indoor- und Outdoor-Aktivitäten ergeben so ein komplettes Leistungsbild."
         }
       ]
     },
@@ -582,9 +582,9 @@ export const translations = {
     },
     // Footer
     footer: {
-      tagline: "Datengetrieben. Auf Ausdauer gebaut.",
-      ctaTitle1: "Datengetrieben.",
-      ctaTitle2: "Auf Ausdauer gebaut.",
+      tagline: "Für alle, die es genau wissen wollen.",
+      ctaTitle1: "Für alle,",
+      ctaTitle2: "die es genau wissen wollen.",
       ctaAppStore: "App Store",
       ctaGooglePlay: "Google Play",
 
@@ -608,14 +608,14 @@ export const translations = {
       contact: "Kontakt",
       
       copyright: "ENDURE. Alle Rechte vorbehalten.",
-      made: "Gemacht mit ❤️ für Radfahrer, die Daten lieben."
+      made: "Entwickelt in Österreich für Radfahrer, die Daten lieben."
     },
     // Video Demo
     videoDemo: {
-      title: "Erlebe Es",
-      titleHighlight: "in Aktion",
-      subtitle: "Vom App-Start bis zur Fahrt in unter 30 Sekunden. Präzises Training, ohne Umwege.",
-      caption: "App-Start bis Fahrt — echte Geschwindigkeit, kein Zeitraffer"
+      title: "So schnell",
+      titleHighlight: "geht's wirklich",
+      subtitle: "Vom App-Start bis aufs Rad in unter 30 Sekunden, aufgenommen in Echtzeit.",
+      caption: "App-Start bis Fahrt, ohne Zeitraffer"
     },
     // SEO
     seo: {
