@@ -45,6 +45,11 @@ const availableOs = Object.entries(config.platforms)
   .filter(([, p]) => p.available)
   .map(([key]) => ({ ios: 'iOS', android: 'Android', windows: 'Windows', macos: 'macOS' }[key]))
   .join(', ');
+// Store listing URLs, reused for schema downloadUrl/installUrl and the
+// Organization entity graph (sameAs) — derived from availability like the OS list.
+const storeUrls = Object.values(config.platforms)
+  .filter((p) => p.available && p.url)
+  .map((p) => p.url as string);
 ---
 
 <!doctype html>
@@ -121,8 +126,6 @@ const availableOs = Object.entries(config.platforms)
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow" />
     <meta name="author" content="ENDURE" />
-    <meta name="keywords" content="indoor cycling, indoor trainer app, smart trainer, cycling app, Bluetooth trainer, FTP tracking, VO2max analysis, structured workouts, ride analytics" />
-    <meta name="author" content="ENDURE" />
     
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
@@ -165,9 +168,14 @@ const availableOs = Object.entries(config.platforms)
       "screenshot": ogImage,
       "softwareVersion": "Early Release",
       "inLanguage": lang,
-      "about": "Indoor cycling app with smart trainer connectivity and advanced ride analytics (FTP & VO2max tracking). No automated training plans.",
+      "downloadUrl": storeUrls,
+      "installUrl": storeUrls,
+      "about": "Indoor cycling training app with smart trainer connectivity and advanced ride analytics (FTP & VO2max tracking). No automated training plans.",
       "featureList": [
         "FTP & VO2max trend tracking",
+        "In-ride lactate logging with automatic LT1/LT2 estimation",
+        "Native CORE body temperature sensor integration with live heat zones",
+        "Climbing Efficiency (VAM-based climb scoring)",
         "Structured workout library",
         "Smart trainer connectivity via Bluetooth",
         "Strava auto-upload",
@@ -184,9 +192,22 @@ const availableOs = Object.entries(config.platforms)
       "logo": orgLogo,
       "sameAs": [
         "https://www.instagram.com/endure_cycling_com/",
-        "https://github.com/cmaart/endure-website"
+        "https://github.com/cmaart/endure-website",
+        ...storeUrls
       ]
     })} />
+
+    <!-- Structured Data (JSON-LD) — breadcrumb trail on inner pages -->
+    {basePath !== '/' && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": lang === 'de' ? 'Startseite' : 'Home', "item": lang === 'de' ? `${siteUrl}/de` : `${siteUrl}/` },
+          { "@type": "ListItem", "position": 2, "name": title, "item": canonicalUrl }
+        ]
+      })} />
+    )}
   </head>
   <body class="antialiased">
     <slot />

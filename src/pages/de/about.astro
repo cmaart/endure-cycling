@@ -7,9 +7,22 @@ import { getTranslations } from '../../i18n/translations';
 const lang = 'de' as const;
 const t = getTranslations(lang).about;
 const homeHref = '/de';
+
+// Founder entity for E-E-A-T / AI answer engines — mirrors the "Wer hinter
+// ENDURE steht" section content.
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Christoph Martin",
+  "jobTitle": "Founder & Developer",
+  "worksFor": { "@type": "Organization", "name": "ENDURE", "url": "https://www.endure-cycling.com" },
+  "knowsAbout": ["Indoor cycling", "Cycling training", "Lactate threshold analysis", "Software development"],
+  "url": "https://www.endure-cycling.com/de/about"
+};
 ---
 
 <Layout lang="de" title={t.seoTitle} description={t.seoDescription}>
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)} slot="head" />
   <LanguageSwitcher />
   <main class="container mx-auto px-6 py-32 max-w-3xl text-slate-800 dark:text-gray-300">
     <a href={homeHref} class="inline-block mb-10">

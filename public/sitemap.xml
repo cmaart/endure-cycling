@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
+
   <!-- English Homepage -->
   <url>
     <loc>https://www.endure-cycling.com/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/"/>
-    <lastmod>2026-01-14</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
   <!-- German Homepage -->
   <url>
     <loc>https://www.endure-cycling.com/de</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/"/>
-    <lastmod>2026-01-14</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -30,7 +30,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/about"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/about"/>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -41,9 +41,163 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/about"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/about"/>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- English: ENDURE vs Zwift -->
+  <url>
+    <loc>https://www.endure-cycling.com/vs/zwift</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/vs/zwift"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/vs/zwift"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/vs/zwift"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- German: ENDURE vs Zwift -->
+  <url>
+    <loc>https://www.endure-cycling.com/de/vs/zwift</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/vs/zwift"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/vs/zwift"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/vs/zwift"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- English: ENDURE vs TrainerRoad -->
+  <url>
+    <loc>https://www.endure-cycling.com/vs/trainerroad</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/vs/trainerroad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/vs/trainerroad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/vs/trainerroad"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- German: ENDURE vs TrainerRoad -->
+  <url>
+    <loc>https://www.endure-cycling.com/de/vs/trainerroad</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/vs/trainerroad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/vs/trainerroad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/vs/trainerroad"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- English: Guides index -->
+  <url>
+    <loc>https://www.endure-cycling.com/guides</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/guides"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/guides"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/guides"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- German: Guides index -->
+  <url>
+    <loc>https://www.endure-cycling.com/de/guides</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/guides"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/guides"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/guides"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- English: Lactate threshold guide -->
+  <url>
+    <loc>https://www.endure-cycling.com/guides/lactate-threshold-training</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/guides/lactate-threshold-training"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/guides/lactate-threshold-training"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/guides/lactate-threshold-training"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- German: Lactate threshold guide -->
+  <url>
+    <loc>https://www.endure-cycling.com/de/guides/lactate-threshold-training</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/guides/lactate-threshold-training"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/guides/lactate-threshold-training"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/guides/lactate-threshold-training"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- English: Heat training / CORE sensor guide -->
+  <url>
+    <loc>https://www.endure-cycling.com/guides/heat-training-core-sensor</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/guides/heat-training-core-sensor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/guides/heat-training-core-sensor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/guides/heat-training-core-sensor"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- German: Heat training / CORE sensor guide -->
+  <url>
+    <loc>https://www.endure-cycling.com/de/guides/heat-training-core-sensor</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/guides/heat-training-core-sensor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/guides/heat-training-core-sensor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/guides/heat-training-core-sensor"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- English: Feedback -->
+  <url>
+    <loc>https://www.endure-cycling.com/feedback</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/feedback"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/feedback"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/feedback"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- German: Feedback -->
+  <url>
+    <loc>https://www.endure-cycling.com/de/feedback</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/feedback"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/feedback"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/feedback"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- English: Android Test -->
+  <url>
+    <loc>https://www.endure-cycling.com/android-test</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/android-test"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/android-test"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/android-test"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- German: Android Test -->
+  <url>
+    <loc>https://www.endure-cycling.com/de/android-test</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.endure-cycling.com/de/android-test"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.endure-cycling.com/android-test"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.endure-cycling.com/android-test"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

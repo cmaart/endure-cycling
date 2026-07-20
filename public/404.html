@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Page not found — ENDURE</title>
+    <script>
+      // The site is built with slash-less URLs (build.format: 'file'), so
+      // GitHub Pages 404s any trailing-slash variant like /de/ or /about/.
+      // Recover by redirecting to the canonical slash-less URL.
+      (function () {
+        var path = window.location.pathname;
+        if (path.length > 1 && path.endsWith('/')) {
+          window.location.replace(
+            path.replace(/\/+$/, '') + window.location.search + window.location.hash
+          );
+        }
+      })();
+    </script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: #0d0f11;
+        color: #e2e8f0;
+        text-align: center;
+      }
+      main { padding: 2rem; }
+      h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+      p { color: #94a3b8; font-weight: 500; }
+      a { color: #f05d23; font-weight: 600; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>404 — Page not found</h1>
+      <p>This page doesn't exist. <a href="/">Back to the homepage</a></p>
+    </main>
+  </body>
+</html>

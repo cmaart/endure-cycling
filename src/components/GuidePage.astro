@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from './Footer.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { getTranslations } from '../i18n/translations';
+import { getGuide, type GuideKey } from '../i18n/guides';
+import { config } from '../config';
+
+interface Props {
+  lang: 'en' | 'de';
+  guide: GuideKey;
+}
+
+const { lang, guide } = Astro.props;
+const t = getGuide(lang, guide);
+const tr = getTranslations(lang);
+const homeHref = lang === 'de' ? '/de' : '/';
+const guidesHref = lang === 'de' ? '/de/guides' : '/guides';
+const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
+const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
+
+const siteUrl = 'https://www.endure-cycling.com';
+const canonicalPath = lang === 'de' ? `/de/guides/${guide}` : `/guides/${guide}`;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": t.h1,
+  "description": t.seoDescription,
+  "datePublished": t.datePublished,
+  "dateModified": t.dateModified,
+  "inLanguage": lang,
+  "mainEntityOfPage": `${siteUrl}${canonicalPath}`,
+  "author": {
+    "@type": "Organization",
+    "name": "ENDURE",
+    "url": siteUrl
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ENDURE",
+    "url": siteUrl,
+    "logo": { "@type": "ImageObject", "url": `${siteUrl}/assets/ENDURE_lockup_exact_icon_4k.png` }
+  }
+};
+---
+
+<Layout title={t.seoTitle} description={t.seoDescription} lang={lang}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+
+  <LanguageSwitcher />
+  <main class="container mx-auto px-6 py-32 max-w-3xl text-slate-800 dark:text-gray-300">
+    <a href={homeHref} class="inline-block mb-10">
+      <img src="/assets/ENDURE_lockup_exact_icon_4k.png" alt="ENDURE" class="h-16 w-auto dark:hidden" />
+      <img src="/assets/ENDURE_lockup_exact_icon_4k_white_transparent.min.min.webp" alt="ENDURE" class="h-16 w-auto hidden dark:block" />
+    </a>
+
+    <article>
+      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">{t.h1}</h1>
+
+      <!-- Direct answer (featured-snippet target) -->
+      <p class="text-lg leading-relaxed font-medium bg-slate-50 dark:bg-white/5 border-l-4 border-[#F05D23] rounded-r-xl px-6 py-5 mb-12">
+        {t.directAnswer}
+      </p>
+
+      <div class="space-y-12">
+        {t.sections.map((section) => (
+          <section>
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">{section.title}</h2>
+            <p class="text-lg leading-relaxed">{section.body}</p>
+            {section.bullets && (
+              <ul class="mt-4 space-y-3">
+                {section.bullets.map((bullet) => (
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#F05D23]/10 dark:bg-[#F05D23]/20 border border-[#F05D23]/30 flex items-center justify-center">
+                      <svg class="w-3 h-3 text-[#F05D23]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span class="text-lg leading-relaxed font-medium">{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        ))}
+      </div>
+
+      <!-- CTA -->
+      <section class="text-center card-surface p-8 mt-14 mb-10">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">{t.ctaTitle}</h2>
+        <p class="text-lg leading-relaxed mb-6">{t.ctaBody}</p>
+        <div class="flex flex-wrap justify-center items-center gap-4">
+          {config.platforms.ios.available && config.platforms.ios.url && (
+            <a href={config.platforms.ios.url} target="_blank" rel="noopener" aria-label={tr.hero.appStoreBadgeAlt}>
+              <img src={appStoreBadge} alt={tr.hero.appStoreBadgeAlt} class="h-12 w-auto" />
+            </a>
+          )}
+          {config.platforms.android.available && config.platforms.android.url && (
+            <a href={config.platforms.android.url} target="_blank" rel="noopener" aria-label={tr.hero.googlePlayBadgeAlt}>
+              <img src={googlePlayBadge} alt={tr.hero.googlePlayBadgeAlt} class="h-12 w-auto" />
+            </a>
+          )}
+        </div>
+      </section>
+    </article>
+
+    <a href={guidesHref} class="inline-flex items-center gap-2 text-[#F05D23] font-semibold hover:underline">
+      ← {t.backToGuides}
+    </a>
+  </main>
+  <Footer />
+</Layout>

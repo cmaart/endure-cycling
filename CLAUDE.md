@@ -22,6 +22,8 @@ Astro's i18n config (`astro.config.mjs`) defines `en` (default, no prefix) and `
 
 The `lang` flows top-down: `Layout.astro` resolves it from `Astro.props.lang ?? Astro.currentLocale ?? 'en'`. `src/pages/index.astro` is English; `src/pages/de/index.astro` is the same component tree wrapped in `<Layout lang="de">`. **When adding a new section/component, add the matching keys to both `en` and `de` in `translations.ts`** — there is no fallback per-key, only a whole-language fallback to `en`.
 
+Long-form SEO content lives in sibling files with the same en/de convention: `src/i18n/vs.ts` (competitor comparison pages rendered by `components/VsPage.astro` → `/vs/zwift`, `/vs/trainerroad`) and `src/i18n/guides.ts` (training guides rendered by `components/GuidePage.astro` + `GuidesIndexPage.astro` → `/guides/*`). New pages must also be added to the hand-maintained `public/sitemap.xml` (with hreflang alternates).
+
 `src/pages/index.astro` contains an inline script that auto-redirects German browsers to `/de` (gated by a `preferredLang` localStorage key set by `LanguageSwitcher`).
 
 ### Per-platform availability

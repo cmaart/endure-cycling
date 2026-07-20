@@ -7,6 +7,9 @@ const currentYear = new Date().getFullYear();
 const androidTestHref = lang === 'de' ? '/de/android-test' : '/android-test';
 const feedbackHref = lang === 'de' ? '/de/feedback' : '/feedback';
 const aboutHref = lang === 'de' ? '/de/about' : '/about';
+const guidesHref = lang === 'de' ? '/de/guides' : '/guides';
+const vsZwiftHref = lang === 'de' ? '/de/vs/zwift' : '/vs/zwift';
+const vsTrainerroadHref = lang === 'de' ? '/de/vs/trainerroad' : '/vs/trainerroad';
 ---
 
 <footer class="py-16 border-t border-slate-200 dark:border-white/10 bg-white dark:bg-[#0d0f11]">
@@ -63,6 +66,21 @@ const aboutHref = lang === 'de' ? '/de/about' : '/about';
           <li>
             <a href={aboutHref} class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
               {t.about}
+            </a>
+          </li>
+          <li>
+            <a href={guidesHref} class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
+              {t.guides}
+            </a>
+          </li>
+          <li>
+            <a href={vsZwiftHref} class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
+              {t.vsZwift}
+            </a>
+          </li>
+          <li>
+            <a href={vsTrainerroadHref} class="text-slate-600 dark:text-gray-400 font-medium hover:text-[#F05D23] transition-colors text-sm">
+              {t.vsTrainerroad}
             </a>
           </li>
           <li>

@@ -16,7 +16,9 @@
       "mcp__playwright__browser_snapshot",
       "mcp__playwright__browser_wait_for",
       "mcp__playwright__browser_evaluate",
-      "mcp__playwright__browser_close"
+      "mcp__playwright__browser_close",
+      "WebFetch(domain:www.endure-cycling.com)",
+      "Bash(node -e \"require\\('docx'\\); console.log\\('docx OK'\\)\")"
     ]
   }
 }
