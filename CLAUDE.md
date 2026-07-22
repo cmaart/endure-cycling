@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Static marketing site for **ENDURE**, an indoor cycling app available on iOS and Android (Early Release), with Windows and macOS planned. Live at https://www.endure-cycling.com. Built with Astro 5 + Tailwind CSS v4, deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `master`.
+Static marketing site for **ENDURE**, an indoor cycling app available on iOS and Android (currently free, subscription planned), with Windows and macOS planned. Live at https://www.endure-cycling.com. Built with Astro 5 + Tailwind CSS v4, deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `master`.
 
 ## Commands
 

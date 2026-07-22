@@ -11,7 +11,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      badge: "Early Release · iOS & Android",
+      badge: "Now on iOS & Android",
       tagline: "Precision over gimmicks",
       headline1: "Train right.",
       headline2: "See the progress.",
@@ -27,6 +27,7 @@ export const translations = {
     ticker: [
       "Ready in <30 s",
       "ERG mode",
+      "Zwift Click",
       "Crash-proof sessions",
       "Lactate LT1/LT2",
       "CORE heat zones",
@@ -82,11 +83,19 @@ export const translations = {
         "<strong>Logged with your ride:</strong> Core temperature is stored alongside power and heart rate for post-ride analysis."
       ]
     },
-    // Beta Notice
-    betaNotice: {
-      badge: "Early Release",
-      title: "Available now: Early Release on iOS & Android",
-      description: "ENDURE is live on iOS and Android as an Early Release, free to use while we keep improving it. Desktop versions for Windows and macOS are planned. We're building the app together with the cycling community."
+    // Zwift Click
+    zwiftClick: {
+      badge: "New · Zwift Click support",
+      headline1: "Hands on the bars.",
+      headline2: "Head in the ride.",
+      description: "ENDURE supports the Zwift Click, v1 and v2. Adjust your target watts in ERG workouts or the resistance in free ride straight from the handlebar — no reaching for your phone mid-interval. It pairs over Bluetooth like any other sensor, on iOS and Android.",
+      bullets: [
+        "<strong>ERG target from the bars:</strong> Nudge your target watts up or down without touching the phone.",
+        "<strong>Resistance in free ride:</strong> Click through resistance levels while you ride.",
+        "<strong>Pairs like any sensor:</strong> Standard Bluetooth pairing in ENDURE, no second app needed.",
+        "<strong>Already own a Click?</strong> It works with ENDURE right away — v1 and v2 alike."
+      ],
+      imageAlt: "Zwift Click v1 and v2 controllers next to a phone running an ENDURE workout"
     },
     // Features
     features: {
@@ -119,7 +128,8 @@ export const translations = {
         title: "Connectivity & Sync",
         feature1: "<strong>Bluetooth Smart:</strong> Connects to Smart Trainers, Power Meters & HR Monitors.",
         feature2: "<strong>CORE Body Temperature:</strong> Native CORE sensor support with live heat zones, an industry first.",
-        feature3: "<strong>Strava Integration:</strong> Auto-Upload & History Sync (more platforms coming)."
+        feature3: "<strong>Strava Integration:</strong> Auto-Upload & History Sync (more platforms coming).",
+        feature4: "<strong>Zwift Click:</strong> v1 & v2 supported — control your ERG target and resistance from the handlebar."
       },
       
       screenshot1Caption: "Curated workout library with physiological targets",
@@ -157,9 +167,10 @@ export const translations = {
       featureLabel: "Capability",
       valueLabel: "What you get",
       rows: [
-        { feature: "Price", value: "Free during Early Release, with an affordable subscription planned afterwards" },
+        { feature: "Price", value: "Free right now, with an affordable subscription planned" },
         { feature: "Platforms", value: "iOS & Android (Windows & macOS planned)" },
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
+        { feature: "Handlebar remote", value: "Zwift Click v1 & v2 — ERG target & resistance control from the bars" },
         { feature: "Workout import", value: ".ZWO, .MRC and .ERG files" },
         { feature: "Analytics", value: "FTP & VO2max trends, power profile, time-in-zones" },
         { feature: "Lactate LT1 / LT2", value: "In-ride & post-ride logging with auto-estimated thresholds" },
@@ -177,15 +188,19 @@ export const translations = {
       items: [
         {
           q: "Is ENDURE free?",
-          a: "Yes, for now. ENDURE is free during its Early Release on iOS and Android while we keep improving it. After Early Release we plan an affordable subscription, so this is a good time to jump in."
+          a: "Yes, right now ENDURE is free on iOS and Android while we keep improving it. An affordable subscription is planned, so this is a good time to jump in."
         },
         {
           q: "Which smart trainers and sensors work with ENDURE?",
           a: "ENDURE connects over Bluetooth to smart trainers, power meters and heart-rate monitors. If your trainer supports standard Bluetooth resistance control, ENDURE can steer it automatically in ERG mode."
         },
         {
+          q: "Does my Zwift Click work with ENDURE?",
+          a: "Yes. ENDURE supports the Zwift Click v1 and v2 on iOS and Android. Pair it over Bluetooth like any other sensor and adjust your ERG target in workouts or the resistance in free ride straight from the handlebar."
+        },
+        {
           q: "Which platforms is ENDURE available on?",
-          a: "ENDURE is live on iOS and Android as an Early Release. Desktop versions for Windows and macOS are planned, so you will be able to train on the big screen later too."
+          a: "ENDURE is available on iOS and Android. Desktop versions for Windows and macOS are planned, so you will be able to train on the big screen later too."
         },
         {
           q: "How does ENDURE estimate FTP and VO2max?",
@@ -214,6 +229,10 @@ export const translations = {
         {
           q: "Does ENDURE sync with Strava?",
           a: "Yes. ENDURE auto-uploads your rides to Strava and can sync your ride history on first launch, combining indoor and outdoor activities into one complete performance picture."
+        },
+        {
+          q: "Where do I report problems or send feedback?",
+          a: "Email us at info@endure-cycling.com, message us on Instagram (@endure_cycling_com), or use the feedback form on this site. Reports go straight to the team and feed into the next update."
         }
       ]
     },
@@ -348,7 +367,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      badge: "Early Release · iOS & Android",
+      badge: "Jetzt für iOS & Android",
       tagline: "Präzision statt Spielerei",
       headline1: "Richtig trainieren.",
       headline2: "Fortschritt sehen.",
@@ -364,6 +383,7 @@ export const translations = {
     ticker: [
       "Fahrbereit in <30 s",
       "ERG-Modus",
+      "Zwift Click",
       "Crash-sichere Sessions",
       "Laktat LT1/LT2",
       "CORE Heat Zones",
@@ -419,11 +439,19 @@ export const translations = {
         "<strong>Mit der Fahrt gespeichert:</strong> Die Kerntemperatur wird neben Watt und Herzfrequenz aufgezeichnet und ist nach der Fahrt bereit für die Analyse."
       ]
     },
-    // Beta Notice
-    betaNotice: {
-      badge: "Early Release",
-      title: "Jetzt verfügbar: Early Release für iOS & Android",
-      description: "ENDURE ist als Early Release für iOS und Android verfügbar und kostenlos, solange wir die App weiter ausbauen. Desktop-Versionen für Windows und macOS sind in Planung. Entwickelt wird gemeinsam mit der Radsport-Community."
+    // Zwift Click
+    zwiftClick: {
+      badge: "Neu · Zwift Click Support",
+      headline1: "Hände am Lenker.",
+      headline2: "Kopf im Training.",
+      description: "ENDURE unterstützt den Zwift Click, v1 und v2. Passe dein Watt-Ziel im ERG-Workout oder den Widerstand im Free Ride direkt vom Lenker an — ohne mitten im Intervall zum Handy zu greifen. Verbunden wird per Bluetooth wie jeder andere Sensor, auf iOS und Android.",
+      bullets: [
+        "<strong>ERG-Ziel vom Lenker:</strong> Watt-Ziel rauf oder runter, ohne das Handy anzufassen.",
+        "<strong>Widerstand im Free Ride:</strong> Klick dich während der Fahrt durch die Widerstandsstufen.",
+        "<strong>Pairing wie jeder Sensor:</strong> Standard-Bluetooth-Pairing in ENDURE, keine zweite App nötig.",
+        "<strong>Schon einen Click?</strong> Funktioniert sofort mit ENDURE — v1 und v2 gleichermaßen."
+      ],
+      imageAlt: "Zwift Click v1 und v2 Controller neben einem Smartphone mit laufendem ENDURE-Workout"
     },
     // Features
     features: {
@@ -456,7 +484,8 @@ export const translations = {
         title: "Konnektivität & Sync",
         feature1: "<strong>Bluetooth Smart:</strong> Verbindet sich mit Smart Trainern, Power Metern & HR Monitoren.",
         feature2: "<strong>CORE Körpertemperatur:</strong> Native CORE-Sensor-Unterstützung mit Live Heat Zones, erstmals in einer Cycling-App.",
-        feature3: "<strong>Strava Integration:</strong> Auto-Upload & Verlaufs-Sync (weitere Plattformen folgen)."
+        feature3: "<strong>Strava Integration:</strong> Auto-Upload & Verlaufs-Sync (weitere Plattformen folgen).",
+        feature4: "<strong>Zwift Click:</strong> v1 & v2 unterstützt — ERG-Ziel und Widerstand direkt vom Lenker steuern."
       },
       
       screenshot1Caption: "Kuratierte Workout-Bibliothek mit physiologischen Zielen",
@@ -494,9 +523,10 @@ export const translations = {
       featureLabel: "Funktion",
       valueLabel: "Das bekommst du",
       rows: [
-        { feature: "Preis", value: "Gratis im Early Release, danach ist ein preiswertes Abo geplant" },
+        { feature: "Preis", value: "Aktuell kostenlos, ein preiswertes Abo ist geplant" },
         { feature: "Plattformen", value: "iOS & Android (Windows & macOS geplant)" },
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
+        { feature: "Lenker-Remote", value: "Zwift Click v1 & v2 — ERG-Ziel & Widerstand direkt vom Lenker" },
         { feature: "Workout-Import", value: ".ZWO, .MRC und .ERG Dateien" },
         { feature: "Analyse", value: "FTP- & VO2max-Trends, Power Profile, Zeit in Zonen" },
         { feature: "Laktat LT1 / LT2", value: "Eintrag während & nach der Fahrt, Schwellen automatisch geschätzt" },
@@ -514,15 +544,19 @@ export const translations = {
       items: [
         {
           q: "Ist ENDURE kostenlos?",
-          a: "Ja, vorerst. ENDURE ist im Early Release auf iOS und Android kostenlos, während wir die App weiter verbessern. Nach dem Early Release ist ein preiswertes Abo geplant, jetzt ist also ein guter Zeitpunkt zum Einsteigen."
+          a: "Ja, aktuell ist ENDURE auf iOS und Android kostenlos, während wir die App weiter verbessern. Ein preiswertes Abo ist geplant, jetzt ist also ein guter Zeitpunkt zum Einsteigen."
         },
         {
           q: "Welche Smart Trainer und Sensoren funktionieren mit ENDURE?",
           a: "ENDURE verbindet sich per Bluetooth mit Smart Trainern, Power Metern und Herzfrequenz-Sensoren. Unterstützt dein Trainer die standardmäßige Bluetooth-Widerstandssteuerung, kann ENDURE ihn im ERG-Modus automatisch steuern."
         },
         {
+          q: "Funktioniert mein Zwift Click mit ENDURE?",
+          a: "Ja. ENDURE unterstützt den Zwift Click v1 und v2 auf iOS und Android. Du verbindest ihn per Bluetooth wie jeden anderen Sensor und passt dein ERG-Ziel im Workout oder den Widerstand im Free Ride direkt vom Lenker an."
+        },
+        {
           q: "Auf welchen Plattformen ist ENDURE verfügbar?",
-          a: "ENDURE ist als Early Release für iOS und Android verfügbar. Desktop-Versionen für Windows und macOS sind in Planung, damit du später auch am großen Bildschirm trainieren kannst."
+          a: "ENDURE ist für iOS und Android verfügbar. Desktop-Versionen für Windows und macOS sind in Planung, damit du später auch am großen Bildschirm trainieren kannst."
         },
         {
           q: "Wie schätzt ENDURE FTP und VO2max?",
@@ -551,6 +585,10 @@ export const translations = {
         {
           q: "Synchronisiert ENDURE mit Strava?",
           a: "Ja. ENDURE lädt deine Fahrten automatisch zu Strava hoch und kann beim ersten Start deinen Fahrtverlauf synchronisieren. Indoor- und Outdoor-Aktivitäten ergeben so ein komplettes Leistungsbild."
+        },
+        {
+          q: "Wo melde ich Probleme oder Feedback?",
+          a: "Schreib uns per E-Mail an info@endure-cycling.com, per Instagram (@endure_cycling_com) oder über das Feedback-Formular auf dieser Seite. Meldungen landen direkt beim Team und fließen ins nächste Update ein."
         }
       ]
     },

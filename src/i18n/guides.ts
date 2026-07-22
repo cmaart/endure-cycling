@@ -81,11 +81,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "How does ENDURE estimate LT1 and LT2?",
-          body: "ENDURE is the first cycling app that lets you log lactate readings directly during a ride — or add them afterwards from your activity history. The app fits a curve through your readings and automatically estimates LT1 and LT2, including a confidence tunnel that shows how solid the estimate is. Your blood markers live next to your power data instead of in a spreadsheet, and every new reading refines the picture. Available in Early Release on iOS and Android."
+          body: "ENDURE is the first cycling app that lets you log lactate readings directly during a ride — or add them afterwards from your activity history. The app fits a curve through your readings and automatically estimates LT1 and LT2, including a confidence tunnel that shows how solid the estimate is. Your blood markers live next to your power data instead of in a spreadsheet, and every new reading refines the picture. Available on iOS and Android."
         }
       ],
       ctaTitle: "Log your first lactate test in ENDURE",
-      ctaBody: "Now in Early Release on iOS and Android — in-ride lactate logging, automatic LT1/LT2 estimation, and your full training picture in one app.",
+      ctaBody: "Now on iOS and Android — in-ride lactate logging, automatic LT1/LT2 estimation, and your full training picture in one app.",
       backToGuides: "All guides"
     },
     'heat-training-core-sensor': {
@@ -125,11 +125,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "How does ENDURE integrate the CORE sensor?",
-          body: "ENDURE is the first indoor cycling app to natively integrate the CORE body temperature sensor — including a live heat-zone display right on the ride screen. Pair the sensor over Bluetooth like any power meter, watch your core temperature and current heat zone live while you ride, and find the full temperature trace stored with power and heart rate in your ride analysis afterwards. No second app, no workarounds — heat becomes a first-class training metric. Available in Early Release on iOS and Android."
+          body: "ENDURE is the first indoor cycling app to natively integrate the CORE body temperature sensor — including a live heat-zone display right on the ride screen. Pair the sensor over Bluetooth like any power meter, watch your core temperature and current heat zone live while you ride, and find the full temperature trace stored with power and heart rate in your ride analysis afterwards. No second app, no workarounds — heat becomes a first-class training metric. Available on iOS and Android."
         }
       ],
       ctaTitle: "Train heat like power — with ENDURE and CORE",
-      ctaBody: "Now in Early Release on iOS and Android — native CORE integration, live heat zones on the ride screen, full post-ride analysis.",
+      ctaBody: "Now on iOS and Android — native CORE integration, live heat zones on the ride screen, full post-ride analysis.",
       backToGuides: "All guides"
     }
   },
@@ -171,11 +171,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "Wie schätzt ENDURE LT1 und LT2?",
-          body: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte direkt während der Fahrt eintragen kannst — oder im Nachhinein aus deiner Aktivitätshistorie. Die App fittet eine Kurve durch deine Werte und schätzt LT1 und LT2 automatisch, inklusive Konfidenztunnel, der zeigt, wie belastbar die Schätzung ist. Deine Blutwerte leben neben deinen Leistungsdaten statt in einem Spreadsheet — und jeder neue Wert schärft das Bild. Verfügbar im Early Release auf iOS und Android."
+          body: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte direkt während der Fahrt eintragen kannst — oder im Nachhinein aus deiner Aktivitätshistorie. Die App fittet eine Kurve durch deine Werte und schätzt LT1 und LT2 automatisch, inklusive Konfidenztunnel, der zeigt, wie belastbar die Schätzung ist. Deine Blutwerte leben neben deinen Leistungsdaten statt in einem Spreadsheet — und jeder neue Wert schärft das Bild. Verfügbar auf iOS und Android."
         }
       ],
       ctaTitle: "Logge deinen ersten Laktattest in ENDURE",
-      ctaBody: "Jetzt im Early Release auf iOS und Android — Laktat-Eintrag während der Fahrt, automatische LT1/LT2-Schätzung und dein komplettes Trainingsbild in einer App.",
+      ctaBody: "Jetzt auf iOS und Android — Laktat-Eintrag während der Fahrt, automatische LT1/LT2-Schätzung und dein komplettes Trainingsbild in einer App.",
       backToGuides: "Alle Guides"
     },
     'heat-training-core-sensor': {
@@ -215,11 +215,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "Wie integriert ENDURE den CORE-Sensor?",
-          body: "ENDURE ist die erste Indoor-Cycling-App, die den CORE Körpertemperatur-Sensor nativ integriert — inklusive Live-Heat-Zone-Anzeige direkt am Ride-Screen. Kopple den Sensor per Bluetooth wie einen Power Meter, sieh Kerntemperatur und aktuelle Heat Zone live während der Fahrt und finde den kompletten Temperaturverlauf danach neben Watt und Herzfrequenz in deiner Analyse. Keine zweite App, keine Umwege — Hitze wird zur vollwertigen Trainingsmetrik. Verfügbar im Early Release auf iOS und Android."
+          body: "ENDURE ist die erste Indoor-Cycling-App, die den CORE Körpertemperatur-Sensor nativ integriert — inklusive Live-Heat-Zone-Anzeige direkt am Ride-Screen. Kopple den Sensor per Bluetooth wie einen Power Meter, sieh Kerntemperatur und aktuelle Heat Zone live während der Fahrt und finde den kompletten Temperaturverlauf danach neben Watt und Herzfrequenz in deiner Analyse. Keine zweite App, keine Umwege — Hitze wird zur vollwertigen Trainingsmetrik. Verfügbar auf iOS und Android."
         }
       ],
       ctaTitle: "Trainiere Hitze wie Watt — mit ENDURE und CORE",
-      ctaBody: "Jetzt im Early Release auf iOS und Android — native CORE-Integration, Live Heat Zones am Ride-Screen, volle Analyse nach der Fahrt.",
+      ctaBody: "Jetzt auf iOS und Android — native CORE-Integration, Live Heat Zones am Ride-Screen, volle Analyse nach der Fahrt.",
       backToGuides: "Alle Guides"
     }
   }

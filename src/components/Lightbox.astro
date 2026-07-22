@@ -21,28 +21,35 @@
   const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
   const closeBtn = document.getElementById('lightbox-close');
   const zoomableImages = document.querySelectorAll('[data-zoomable]');
-  
+
+  const openLightbox = (src: string, alt: string) => {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+
+    lightbox?.classList.remove('hidden');
+    // Small timeout to allow transition
+    setTimeout(() => {
+      lightbox?.classList.remove('opacity-0');
+      lightboxImg.classList.remove('scale-95');
+      lightboxImg.classList.add('scale-100');
+    }, 10);
+
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+  };
+
   // Open lightbox
   zoomableImages.forEach(img => {
     img.addEventListener('click', (e) => {
       e.preventDefault();
       const target = e.target as HTMLImageElement;
-      const src = target.src;
-      const alt = target.alt;
-      
-      lightboxImg.src = src;
-      lightboxImg.alt = alt;
-      
-      lightbox?.classList.remove('hidden');
-      // Small timeout to allow transition
-      setTimeout(() => {
-        lightbox?.classList.remove('opacity-0');
-        lightboxImg.classList.remove('scale-95');
-        lightboxImg.classList.add('scale-100');
-      }, 10);
-      
-      document.body.style.overflow = 'hidden'; // Prevent scrolling
+      openLightbox(target.src, target.alt);
     });
+  });
+
+  // Other components (e.g. the hero phone stage) can open the lightbox via event
+  document.addEventListener('lightbox:open', (e) => {
+    const { src, alt } = (e as CustomEvent<{ src: string; alt: string }>).detail;
+    openLightbox(src, alt);
   });
   
   // Close lightbox functions
