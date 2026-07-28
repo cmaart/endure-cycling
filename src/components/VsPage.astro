@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from './Footer.astro';
-import LanguageSwitcher from './LanguageSwitcher.astro';
 import { getTranslations } from '../i18n/translations';
 import { getVsContent, type VsKey } from '../i18n/vs';
 import { config } from '../config';
@@ -29,15 +28,10 @@ const faqSchema = {
 };
 ---
 
-<Layout title={t.seoTitle} description={t.seoDescription} lang={lang}>
+<Layout title={t.seoTitle} description={t.seoDescription} lang={lang} breadcrumb={t.breadcrumb}>
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
 
-  <LanguageSwitcher />
-  <main class="container mx-auto px-6 py-32 max-w-4xl text-slate-800">
-    <a href={homeHref} class="inline-block mb-10">
-      <img src="/assets/ENDURE_lockup_exact_icon_4k.png" alt="ENDURE" class="h-16 w-auto" />
-    </a>
-
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
     <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-3">{t.h1}</h1>
     <p class="text-xl md:text-2xl text-slate-600 font-semibold mb-8">{t.subtitle}</p>
 
@@ -76,6 +70,26 @@ const faqSchema = {
         </tbody>
       </table>
     </div>
+
+    <!--
+      Switch section: the "alternative" query is a migration intent, so the page
+      answers "what do I lose by leaving?" before it compares features further.
+    -->
+    <section class="card-surface p-6 md:p-8 mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-5">{t.switchTitle}</h2>
+      <ul class="space-y-3">
+        {t.switchBullets.map((item) => (
+          <li class="flex items-start gap-3">
+            <span class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
+              <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <span class="leading-relaxed font-medium text-slate-700" set:html={item} />
+          </li>
+        ))}
+      </ul>
+    </section>
 
     <!-- Choose lists -->
     <div class="grid md:grid-cols-2 gap-8 mb-14">

@@ -25,6 +25,16 @@ const screenshots = [
       <p class="text-slate-600 text-lg max-w-xl mx-auto">
         {t.sectionSubtitle}
       </p>
+
+      <!-- Links into the pages that expand on the two most-searched topics here -->
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm font-semibold">
+        <a href={lang === 'de' ? '/de/features/ftp-vo2max-tracking' : '/features/ftp-vo2max-tracking'} class="text-accent hover:underline">
+          {t.analyticsLink} →
+        </a>
+        <a href={lang === 'de' ? '/de/supported-trainers' : '/supported-trainers'} class="text-accent hover:underline">
+          {t.trainersLink} →
+        </a>
+      </div>
     </div>
 
     <!-- Feature Grid -->

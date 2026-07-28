@@ -26,9 +26,17 @@ const androidUrl = config.platforms.android.url;
     </h1>
 
     <!-- Subline -->
-    <p data-reveal data-reveal-delay="200" class="mx-auto mb-10 max-w-xl text-lg md:text-xl leading-relaxed text-slate-600 text-pretty">
+    <p data-reveal data-reveal-delay="200" class="mx-auto mb-5 max-w-xl text-lg md:text-xl leading-relaxed text-slate-600 text-pretty">
       {t.subline}
     </p>
+
+    <!--
+      Keyword-bearing H2. The H1 above carries the claim, so this is where the
+      terms riders search for live. Deliberately quiet in the visual hierarchy.
+    -->
+    <h2 data-reveal data-reveal-delay="250" class="mx-auto mb-10 max-w-xl text-sm md:text-base font-medium tracking-[0.01em] text-slate-500 text-pretty">
+      {t.seoLine}
+    </h2>
 
     <!-- CTAs -->
     <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row gap-3.5 justify-center items-center">

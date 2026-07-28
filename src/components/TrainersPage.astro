@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from './Footer.astro';
+import { getTranslations } from '../i18n/translations';
+import { getTrainersContent, testedModels } from '../i18n/trainers';
+import { config } from '../config';
+
+interface Props {
+  lang: 'en' | 'de';
+}
+
+const { lang } = Astro.props;
+const t = getTrainersContent(lang);
+const tr = getTranslations(lang);
+const prefix = lang === 'de' ? '/de' : '';
+const homeHref = lang === 'de' ? '/de' : '/';
+const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
+const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": t.faq.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a },
+  })),
+};
+---
+
+<Layout title={t.seoTitle} description={t.seoDescription} lang={lang} breadcrumb={t.breadcrumb}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
+
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-3xl text-slate-800">
+    <article>
+      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-3 leading-tight">{t.h1}</h1>
+      <p class="text-xl md:text-2xl text-slate-600 font-semibold mb-8">{t.subtitle}</p>
+
+      <!-- Direct answer (featured-snippet target) -->
+      <p class="text-lg leading-relaxed font-medium bg-slate-50 border-l-4 border-accent rounded-r-xl px-6 py-5 mb-12">
+        {t.directAnswer}
+      </p>
+
+      <div class="space-y-12">
+        <section>
+          <h2 class="text-2xl font-bold text-slate-900 mb-3">{t.standardTitle}</h2>
+          <p class="text-lg leading-relaxed">{t.standardBody}</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-slate-900 mb-3">{t.brandsTitle}</h2>
+          <p class="text-lg leading-relaxed">{t.brandsBody}</p>
+          <ul class="mt-5 grid sm:grid-cols-2 gap-3">
+            {t.brands.map((brand) => (
+              <li class="flex items-start gap-3 bg-white border border-slate-200 rounded-xl px-4 py-3 shadow-sm">
+                <span class="mt-1 flex-shrink-0 w-4 h-4 rounded-full bg-accent/10 border border-accent/30" />
+                <span class="font-medium text-slate-700">{brand}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {testedModels.length > 0 && (
+          <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-3">{t.testedTitle}</h2>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse rounded-2xl overflow-hidden border border-slate-200">
+                <thead>
+                  <tr class="bg-slate-100">
+                    <th class="py-3 px-4 text-sm font-bold text-slate-900">{t.testedBrandLabel}</th>
+                    <th class="py-3 px-4 text-sm font-bold text-accent">{t.testedErgLabel}</th>
+                    <th class="py-3 px-4 text-sm font-bold text-slate-900">{t.testedNoteLabel}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {testedModels.map((m, idx) => (
+                    <tr class={idx % 2 === 1 ? 'bg-slate-50' : ''}>
+                      <th scope="row" class="py-3 px-4 align-top font-semibold text-slate-900 border-t border-slate-200">
+                        {m.brand} {m.model}
+                      </th>
+                      <td class="py-3 px-4 align-top font-medium text-slate-700 border-t border-slate-200">
+                        {m.erg ? '✅' : '—'}
+                      </td>
+                      <td class="py-3 px-4 align-top font-medium text-slate-600 border-t border-slate-200">
+                        {m.note ?? ''}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+
+        <section>
+          <h2 class="text-2xl font-bold text-slate-900 mb-3">{t.checkTitle}</h2>
+          <p class="text-lg leading-relaxed">{t.checkBody}</p>
+          <ul class="mt-4 space-y-3">
+            {t.checkBullets.map((bullet) => (
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 flex-shrink-0 w-5 h-5 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
+                  <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span class="text-lg leading-relaxed font-medium" set:html={bullet} />
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-slate-900 mb-3">{t.dumbTitle}</h2>
+          <p class="text-lg leading-relaxed">{t.dumbBody}</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-slate-900 mb-3">{t.sensorsTitle}</h2>
+          <p class="text-lg leading-relaxed">{t.sensorsBody}</p>
+          <ul class="mt-4 space-y-3">
+            {t.sensorsBullets.map((bullet) => (
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 flex-shrink-0 w-5 h-5 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
+                  <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span class="text-lg leading-relaxed font-medium" set:html={bullet} />
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-slate-900 mb-3">{t.antTitle}</h2>
+          <p class="text-lg leading-relaxed">{t.antBody}</p>
+        </section>
+      </div>
+
+      <!-- FAQ -->
+      <section class="mt-14 space-y-6">
+        {t.faq.map((item) => (
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+            <h2 class="text-lg font-bold text-slate-900 mb-2">{item.q}</h2>
+            <p class="leading-relaxed font-medium text-slate-600">{item.a}</p>
+          </div>
+        ))}
+      </section>
+
+      <!-- CTA -->
+      <section class="text-center card-surface p-8 mt-14 mb-10">
+        <h2 class="text-2xl font-bold text-slate-900 mb-3">{t.ctaTitle}</h2>
+        <p class="text-lg leading-relaxed mb-6">{t.ctaBody}</p>
+        <div class="flex flex-wrap justify-center items-center gap-4">
+          {config.platforms.ios.available && config.platforms.ios.url && (
+            <a href={config.platforms.ios.url} target="_blank" rel="noopener" aria-label={tr.hero.appStoreBadgeAlt}>
+              <img src={appStoreBadge} alt={tr.hero.appStoreBadgeAlt} class="h-12 w-auto" />
+            </a>
+          )}
+          {config.platforms.android.available && config.platforms.android.url && (
+            <a href={config.platforms.android.url} target="_blank" rel="noopener" aria-label={tr.hero.googlePlayBadgeAlt}>
+              <img src={googlePlayBadge} alt={tr.hero.googlePlayBadgeAlt} class="h-12 w-auto" />
+            </a>
+          )}
+        </div>
+      </section>
+    </article>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-bold text-slate-900 mb-4">{t.relatedTitle}</h2>
+      <ul class="space-y-2">
+        {t.related.map((link) => (
+          <li>
+            <a href={`${prefix}${link.href}`} class="text-accent font-semibold hover:underline">
+              {link.label} →
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <a href={homeHref} class="inline-flex items-center gap-2 text-accent font-semibold hover:underline">
+      ← {t.backHome}
+    </a>
+  </main>
+  <Footer />
+</Layout>

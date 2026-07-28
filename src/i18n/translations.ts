@@ -4,7 +4,9 @@ export const translations = {
     // Nav
     nav: {
       features: "Features",
-      lactate: "Lactate",
+      virtualShifting: "Virtual Shifting",
+      comparison: "Comparison",
+      guides: "Guides",
       roadmap: "Roadmap",
       faq: "FAQ",
       cta: "Get the app"
@@ -16,6 +18,9 @@ export const translations = {
       headline1: "Train right.",
       headline2: "See the progress.",
       subline: "Smart trainer control, FTP and VO2max trends, lactate thresholds. From app start to riding in under 30 seconds.",
+      // Rendered as an H2 under the subline: the headline carries the claim, this
+      // line carries the terms riders actually search for.
+      seoLine: "Indoor cycling app for smart and turbo trainers — iOS & Android",
       ctaIos: "Download on the App Store",
       ctaAndroid: "Get it on Google Play",
       secondary: "Frequent updates, built together with the cycling community.",
@@ -27,7 +32,8 @@ export const translations = {
     ticker: [
       "Ready in <30 s",
       "ERG mode",
-      "Zwift Click",
+      "Virtual Shifting",
+      "SIM mode",
       "Crash-proof sessions",
       "Lactate LT1/LT2",
       "CORE heat zones",
@@ -46,7 +52,8 @@ export const translations = {
       bullets: [
         "<strong>Automatic climb detection:</strong> ENDURE identifies every climb in your outdoor rides.",
         "<strong>VAM-based scoring:</strong> The score is built on your vertical ascent speed in meters per hour."
-      ]
+      ],
+      moreLink: "How Climbing Efficiency is calculated"
     },
     // Lactate (Industry First)
     lactate: {
@@ -63,6 +70,7 @@ export const translations = {
         "<strong>Post-ride entry:</strong> Or add them later from your activity history.",
         "<strong>Automatic LT1/LT2 estimation:</strong> A fitted curve with a confidence tunnel turns your readings into thresholds you can train with."
       ],
+      moreLink: "How lactate logging and LT1/LT2 estimation work",
       videoCaption: "Logging a lactate reading for a workout.",
       resultLabel: "What you get:",
       resultCaption: "Lactate profile + LT1/LT2 with confidence tunnel."
@@ -81,21 +89,23 @@ export const translations = {
         "<strong>Native sensor pairing:</strong> Connect your CORE sensor over Bluetooth like a power meter, without running a second app.",
         "<strong>Live heat zones:</strong> See your current heat zone during the ride and pace your heat sessions accordingly.",
         "<strong>Logged with your ride:</strong> Core temperature is stored alongside power and heart rate for post-ride analysis."
-      ]
+      ],
+      moreLink: "More on CORE heat zones and heat training"
     },
     // Zwift Click
     zwiftClick: {
-      badge: "New · Zwift Click support",
-      headline1: "Hands on the bars.",
-      headline2: "Head in the ride.",
-      description: "ENDURE supports the Zwift Click, v1 and v2. Adjust your target watts in ERG workouts or the resistance in free ride straight from the handlebar — no reaching for your phone mid-interval. It pairs over Bluetooth like any other sensor, on iOS and Android.",
+      badge: "New · Virtual Shifting",
+      headline1: "Control from the bars.",
+      headline2: "Hands stay where they are.",
+      description: "Virtual Shifting puts your effort on the handlebar: with a Zwift Click you change your ERG target in structured workouts and trainer resistance in SIM mode — no reaching for the phone mid-interval. It pairs over Bluetooth like any other sensor. Verified with Click v1.",
       bullets: [
         "<strong>ERG target from the bars:</strong> Nudge your target watts up or down without touching the phone.",
-        "<strong>Resistance in free ride:</strong> Click through resistance levels while you ride.",
-        "<strong>Pairs like any sensor:</strong> Standard Bluetooth pairing in ENDURE, no second app needed.",
-        "<strong>Already own a Click?</strong> It works with ENDURE right away — v1 and v2 alike."
+        "<strong>Resistance in SIM mode:</strong> Click resistance up and down while you ride, no stopping.",
+        "<strong>Not a simulated cassette:</strong> The buttons act on resistance directly — same feel as shifting, no gear ratios modelled.",
+        "<strong>Click v1 verified:</strong> That is the hardware we have tested. A v2 is untested, so we do not claim it."
       ],
-      imageAlt: "Zwift Click v1 and v2 controllers next to a phone running an ENDURE workout"
+      moreLink: "Virtual Shifting without Zwift, in detail",
+      imageAlt: "Zwift handlebar remotes next to a phone running an ENDURE ERG workout"
     },
     // Features
     features: {
@@ -129,9 +139,12 @@ export const translations = {
         feature1: "<strong>Bluetooth Smart:</strong> Connects to Smart Trainers, Power Meters & HR Monitors.",
         feature2: "<strong>CORE Body Temperature:</strong> Native CORE sensor support with live heat zones, an industry first.",
         feature3: "<strong>Strava Integration:</strong> Auto-Upload & History Sync (more platforms coming).",
-        feature4: "<strong>Zwift Click:</strong> v1 & v2 supported — control your ERG target and resistance from the handlebar."
+        feature4: "<strong>Virtual Shifting:</strong> With a Zwift Click (v1 verified) you change your ERG target and trainer resistance straight from the handlebar."
       },
       
+      analyticsLink: "FTP & VO2max tracking in detail",
+      trainersLink: "Which smart trainers work with ENDURE",
+
       screenshot1Caption: "Curated workout library with physiological targets",
       screenshot2Caption: "Import your own workouts from any source",
       screenshot3Caption: "Detailed Power Profile: Strengths, Weaknesses & FTP Estimate",
@@ -170,7 +183,7 @@ export const translations = {
         { feature: "Price", value: "Free right now, with an affordable subscription planned" },
         { feature: "Platforms", value: "iOS & Android (Windows & macOS planned)" },
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
-        { feature: "Handlebar remote", value: "Zwift Click v1 & v2 — ERG target & resistance control from the bars" },
+        { feature: "Virtual Shifting", value: "Zwift Click (v1 verified) — ERG target & trainer resistance from the bars, no simulated cassette" },
         { feature: "Workout import", value: ".ZWO, .MRC and .ERG files" },
         { feature: "Analytics", value: "FTP & VO2max trends, power profile, time-in-zones" },
         { feature: "Lactate LT1 / LT2", value: "In-ride & post-ride logging with auto-estimated thresholds" },
@@ -195,8 +208,16 @@ export const translations = {
           a: "ENDURE connects over Bluetooth to smart trainers, power meters and heart-rate monitors. If your trainer supports standard Bluetooth resistance control, ENDURE can steer it automatically in ERG mode."
         },
         {
+          q: "Does ENDURE work with any turbo trainer?",
+          a: "For automatic resistance control, ENDURE needs a smart trainer that supports the Bluetooth standard FTMS — that covers the large majority of current models across all the well-known brands. A classic turbo trainer without electronic control cannot be steered, but you can still record the ride and all your analytics if you pair a power meter or heart-rate sensor."
+        },
+        {
+          q: "Does ENDURE support Virtual Shifting?",
+          a: "Yes, with a Zwift Click — but it is worth knowing what it does. The buttons change your ERG target inside a structured workout and trainer resistance in SIM mode; ENDURE does not simulate a cassette the way Zwift does with its Cog, so there is no gear number. The feel is the same, the mechanism is resistance. Verified with Click v1."
+        },
+        {
           q: "Does my Zwift Click work with ENDURE?",
-          a: "Yes. ENDURE supports the Zwift Click v1 and v2 on iOS and Android. Pair it over Bluetooth like any other sensor and adjust your ERG target in workouts or the resistance in free ride straight from the handlebar."
+          a: "A Click v1 does — that is the generation we have verified, on iOS and Android. It pairs over Bluetooth and changes your ERG target in workouts or trainer resistance in SIM mode. We have not tested a v2 yet, so we cannot promise it."
         },
         {
           q: "Which platforms is ENDURE available on?",
@@ -275,9 +296,16 @@ export const translations = {
       bluetooth: "Bluetooth Adapter Required",
 
       linksTitle: "Links",
-      vsZwift: "ENDURE vs Zwift",
-      vsTrainerroad: "ENDURE vs TrainerRoad",
+      vsZwift: "Zwift alternative",
+      vsTrainerroad: "TrainerRoad alternative",
       guides: "Training Guides",
+      supportedTrainers: "Supported trainers",
+      featureZwiftClick: "Virtual Shifting & Zwift Click",
+      featureLactate: "Lactate LT1 & LT2",
+      featureCoreTemp: "CORE heat zones",
+      featureFtp: "FTP & VO2max tracking",
+      featureClimbing: "Climbing Efficiency",
+      featuresTitle: "Features",
       eventsCalendar: "Race Calendar 2026 – Cycling & Triathlon",
       instagram: "Instagram",
       github: "GitHub",
@@ -301,8 +329,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "Endure — Smart Trainer Indoor Cycling App with FTP & VO2max",
-      description: "Cycling training app for smart trainers: ERG control, FTP & VO2max trends, lactate LT1/LT2 and native CORE heat zones. Ready to ride in 30 seconds."
+      title: "ENDURE — Indoor Cycling App for Smart & Turbo Trainers",
+      description: "Indoor cycling app for smart trainers: ERG control over Bluetooth, FTP & VO2max trends, lactate LT1/LT2 and native CORE heat zones. Ready to ride in 30 seconds."
     },
     // Cookie Banner
     cookieBanner: {
@@ -360,7 +388,9 @@ export const translations = {
     // Nav
     nav: {
       features: "Features",
-      lactate: "Laktat",
+      virtualShifting: "Virtual Shifting",
+      comparison: "Vergleich",
+      guides: "Guides",
       roadmap: "Roadmap",
       faq: "FAQ",
       cta: "App laden"
@@ -372,6 +402,9 @@ export const translations = {
       headline1: "Richtig trainieren.",
       headline2: "Fortschritt sehen.",
       subline: "Smart-Trainer-Steuerung, FTP- und VO2max-Trends, Laktatschwellen. Vom App-Start bis aufs Rad in unter 30 Sekunden.",
+      // Als H2 unter der Subline gerendert: die Headline trägt den Claim, diese
+      // Zeile trägt die Begriffe, mit denen tatsächlich gesucht wird.
+      seoLine: "Indoor-Cycling- und Rollentrainer-App für iOS & Android",
       ctaIos: "Im App Store laden",
       ctaAndroid: "Bei Google Play",
       secondary: "Laufend neue Updates, entwickelt gemeinsam mit der Community.",
@@ -383,7 +416,8 @@ export const translations = {
     ticker: [
       "Fahrbereit in <30 s",
       "ERG-Modus",
-      "Zwift Click",
+      "Virtual Shifting",
+      "SIM-Modus",
       "Crash-sichere Sessions",
       "Laktat LT1/LT2",
       "CORE Heat Zones",
@@ -402,7 +436,8 @@ export const translations = {
       bullets: [
         "<strong>Automatische Anstiegserkennung:</strong> ENDURE identifiziert jeden Anstieg in deinen Outdoor-Fahrten.",
         "<strong>VAM-basiertes Scoring:</strong> Der Score basiert auf deiner vertikalen Aufstiegsgeschwindigkeit in Metern pro Stunde."
-      ]
+      ],
+      moreLink: "Wie Climbing Efficiency berechnet wird"
     },
     // Lactate (Industry First)
     lactate: {
@@ -419,6 +454,7 @@ export const translations = {
         "<strong>Eintrag im Nachhinein:</strong> Oder du ergänzt die Werte später aus deiner Aktivitätshistorie.",
         "<strong>Automatische LT1/LT2-Schätzung:</strong> Eine gefittete Kurve mit Konfidenztunnel macht aus deinen Werten Schwellen, mit denen du trainieren kannst."
       ],
+      moreLink: "Wie Laktat-Eintrag und LT1/LT2-Schätzung funktionieren",
       videoCaption: "Laktatwert für ein Workout eintragen.",
       resultLabel: "Das Ergebnis:",
       resultCaption: "Laktatprofil + LT1/LT2 mit Konfidenztunnel."
@@ -437,21 +473,23 @@ export const translations = {
         "<strong>Natives Sensor-Pairing:</strong> Du verbindest deinen CORE-Sensor per Bluetooth wie einen Powermeter, ohne zweite App.",
         "<strong>Live Heat Zones:</strong> Du siehst deine aktuelle Heat Zone während der Fahrt und kannst dein Hitzetraining gezielt steuern.",
         "<strong>Mit der Fahrt gespeichert:</strong> Die Kerntemperatur wird neben Watt und Herzfrequenz aufgezeichnet und ist nach der Fahrt bereit für die Analyse."
-      ]
+      ],
+      moreLink: "Mehr zu CORE Heat Zones und Hitzetraining"
     },
     // Zwift Click
     zwiftClick: {
-      badge: "Neu · Zwift Click Support",
-      headline1: "Hände am Lenker.",
-      headline2: "Kopf im Training.",
-      description: "ENDURE unterstützt den Zwift Click, v1 und v2. Passe dein Watt-Ziel im ERG-Workout oder den Widerstand im Free Ride direkt vom Lenker an — ohne mitten im Intervall zum Handy zu greifen. Verbunden wird per Bluetooth wie jeder andere Sensor, auf iOS und Android.",
+      badge: "Neu · Virtual Shifting",
+      headline1: "Steuern vom Lenker.",
+      headline2: "Hände bleiben, wo sie sind.",
+      description: "Virtual Shifting legt deine Belastung an den Lenker: mit einem Zwift Click änderst du dein ERG-Ziel im strukturierten Workout und den Trainer-Widerstand im SIM-Modus — ohne mitten im Intervall zum Handy zu greifen. Verbunden wird per Bluetooth wie jeder andere Sensor. Mit Click v1 verifiziert.",
       bullets: [
         "<strong>ERG-Ziel vom Lenker:</strong> Watt-Ziel rauf oder runter, ohne das Handy anzufassen.",
-        "<strong>Widerstand im Free Ride:</strong> Klick dich während der Fahrt durch die Widerstandsstufen.",
-        "<strong>Pairing wie jeder Sensor:</strong> Standard-Bluetooth-Pairing in ENDURE, keine zweite App nötig.",
-        "<strong>Schon einen Click?</strong> Funktioniert sofort mit ENDURE — v1 und v2 gleichermaßen."
+        "<strong>Widerstand im SIM-Modus:</strong> Klick den Widerstand während der Fahrt rauf und runter, ohne anzuhalten.",
+        "<strong>Keine simulierte Kassette:</strong> Die Tasten wirken direkt auf den Widerstand — gleiches Gefühl wie Schalten, ohne modellierte Übersetzungen.",
+        "<strong>Click v1 verifiziert:</strong> Das ist die Hardware, die wir getestet haben. Ein v2 ist ungetestet, also behaupten wir ihn nicht."
       ],
-      imageAlt: "Zwift Click v1 und v2 Controller neben einem Smartphone mit laufendem ENDURE-Workout"
+      moreLink: "Virtual Shifting ohne Zwift, im Detail",
+      imageAlt: "Zwift Lenker-Fernbedienungen neben einem Smartphone mit laufendem ENDURE-ERG-Workout"
     },
     // Features
     features: {
@@ -485,9 +523,12 @@ export const translations = {
         feature1: "<strong>Bluetooth Smart:</strong> Verbindet sich mit Smart Trainern, Power Metern & HR Monitoren.",
         feature2: "<strong>CORE Körpertemperatur:</strong> Native CORE-Sensor-Unterstützung mit Live Heat Zones, erstmals in einer Cycling-App.",
         feature3: "<strong>Strava Integration:</strong> Auto-Upload & Verlaufs-Sync (weitere Plattformen folgen).",
-        feature4: "<strong>Zwift Click:</strong> v1 & v2 unterstützt — ERG-Ziel und Widerstand direkt vom Lenker steuern."
+        feature4: "<strong>Virtual Shifting:</strong> Mit einem Zwift Click (v1 verifiziert) änderst du ERG-Ziel und Trainer-Widerstand direkt vom Lenker."
       },
       
+      analyticsLink: "FTP- & VO2max-Tracking im Detail",
+      trainersLink: "Welche Rollentrainer mit ENDURE funktionieren",
+
       screenshot1Caption: "Kuratierte Workout-Bibliothek mit physiologischen Zielen",
       screenshot2Caption: "Importiere deine eigenen Workouts aus jeder Quelle",
       screenshot3Caption: "Detailliertes Power Profile: Stärken, Schwächen & FTP-Einschätzung",
@@ -526,7 +567,7 @@ export const translations = {
         { feature: "Preis", value: "Aktuell kostenlos, ein preiswertes Abo ist geplant" },
         { feature: "Plattformen", value: "iOS & Android (Windows & macOS geplant)" },
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
-        { feature: "Lenker-Remote", value: "Zwift Click v1 & v2 — ERG-Ziel & Widerstand direkt vom Lenker" },
+        { feature: "Virtual Shifting", value: "Zwift Click (v1 verifiziert) — ERG-Ziel & Trainer-Widerstand vom Lenker, ohne simulierte Kassette" },
         { feature: "Workout-Import", value: ".ZWO, .MRC und .ERG Dateien" },
         { feature: "Analyse", value: "FTP- & VO2max-Trends, Power Profile, Zeit in Zonen" },
         { feature: "Laktat LT1 / LT2", value: "Eintrag während & nach der Fahrt, Schwellen automatisch geschätzt" },
@@ -551,8 +592,16 @@ export const translations = {
           a: "ENDURE verbindet sich per Bluetooth mit Smart Trainern, Power Metern und Herzfrequenz-Sensoren. Unterstützt dein Trainer die standardmäßige Bluetooth-Widerstandssteuerung, kann ENDURE ihn im ERG-Modus automatisch steuern."
         },
         {
+          q: "Funktioniert ENDURE mit jedem Rollentrainer?",
+          a: "Für die automatische Widerstandssteuerung braucht ENDURE einen Smart Trainer, der den Bluetooth-Standard FTMS unterstützt — das trifft auf die große Mehrheit der aktuellen Modelle aller bekannten Hersteller zu. Eine klassische Rolle ohne elektronische Steuerung lässt sich nicht ansteuern; aufzeichnen und auswerten kannst du die Fahrt trotzdem, wenn du einen Powermeter oder Herzfrequenz-Sensor verbindest."
+        },
+        {
+          q: "Unterstützt ENDURE Virtual Shifting?",
+          a: "Ja, mit einem Zwift Click — es lohnt sich aber zu wissen, was dabei passiert. Die Tasten ändern dein ERG-Ziel im strukturierten Workout und den Trainer-Widerstand im SIM-Modus. ENDURE simuliert keine Kassette wie Zwift mit dem Cog, es gibt also keine Gangnummer. Das Gefühl ist dasselbe, der Mechanismus ist Widerstand. Mit Click v1 verifiziert."
+        },
+        {
           q: "Funktioniert mein Zwift Click mit ENDURE?",
-          a: "Ja. ENDURE unterstützt den Zwift Click v1 und v2 auf iOS und Android. Du verbindest ihn per Bluetooth wie jeden anderen Sensor und passt dein ERG-Ziel im Workout oder den Widerstand im Free Ride direkt vom Lenker an."
+          a: "Ein Click v1 ja — das ist die Generation, die wir verifiziert haben, auf iOS und Android. Er verbindet sich per Bluetooth und ändert dein ERG-Ziel im Workout oder den Trainer-Widerstand im SIM-Modus. Einen v2 haben wir nicht getestet, wir können ihn also nicht versprechen."
         },
         {
           q: "Auf welchen Plattformen ist ENDURE verfügbar?",
@@ -631,9 +680,16 @@ export const translations = {
       bluetooth: "Bluetooth Adapter Erforderlich",
 
       linksTitle: "Links",
-      vsZwift: "ENDURE vs Zwift",
-      vsTrainerroad: "ENDURE vs TrainerRoad",
+      vsZwift: "Zwift Alternative",
+      vsTrainerroad: "TrainerRoad Alternative",
       guides: "Trainings-Guides",
+      supportedTrainers: "Unterstützte Trainer",
+      featureZwiftClick: "Virtual Shifting & Zwift Click",
+      featureLactate: "Laktat LT1 & LT2",
+      featureCoreTemp: "CORE Heat Zones",
+      featureFtp: "FTP- & VO2max-Tracking",
+      featureClimbing: "Climbing Efficiency",
+      featuresTitle: "Features",
       eventsCalendar: "Radrennen & Triathlon Kalender 2026",
       instagram: "Instagram",
       github: "GitHub",
@@ -657,8 +713,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "Endure — Smart-Trainer Indoor Cycling App mit FTP & VO2max",
-      description: "Cycling-Training-App für Smart Trainer: ERG-Steuerung, FTP- & VO2max-Trends, Laktat LT1/LT2 und native CORE Heat Zones. In 30 Sekunden fahrbereit."
+      title: "ENDURE — Rollentrainer & Indoor Cycling App mit FTP & VO2max",
+      description: "Indoor-Cycling-App für deinen Rollentrainer: ERG-Steuerung per Bluetooth, FTP- & VO2max-Trends, Laktat LT1/LT2 und native CORE Heat Zones. In 30 Sekunden fahrbereit."
     },
     // Cookie Banner
     cookieBanner: {

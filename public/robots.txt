@@ -2,4 +2,5 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://www.endure-cycling.com/sitemap.xml
+# Generated at build time by @astrojs/sitemap.
+Sitemap: https://www.endure-cycling.com/sitemap-index.xml

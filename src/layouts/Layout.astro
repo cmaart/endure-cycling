@@ -1,6 +1,7 @@
 ---
 import { getTranslations } from '../i18n/translations';
 import { config } from '../config';
+import Nav from '../components/Nav.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import '@fontsource/sora/400.css';
 import '@fontsource/sora/500.css';
@@ -14,6 +15,8 @@ interface Props {
   title?: string;
   description?: string;
   lang?: 'en' | 'de';
+  /** Short label for the breadcrumb trail. Falls back to the full title. */
+  breadcrumb?: string;
 }
 
 const { lang = (Astro.currentLocale as 'en' | 'de') || 'en' } = Astro.props;
@@ -169,7 +172,7 @@ const storeUrls = Object.values(config.platforms)
         "Climbing Efficiency (VAM-based climb scoring)",
         "Structured workout library",
         "Smart trainer connectivity via Bluetooth",
-        "Zwift Click v1 & v2 handlebar remote support",
+        "Virtual Shifting — ERG target and trainer resistance from a Zwift Click (v1 verified)",
         "Strava auto-upload",
         "Ride history analytics"
       ]
@@ -196,12 +199,17 @@ const storeUrls = Object.values(config.platforms)
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": lang === 'de' ? 'Startseite' : 'Home', "item": lang === 'de' ? `${siteUrl}/de` : `${siteUrl}/` },
-          { "@type": "ListItem", "position": 2, "name": title, "item": canonicalUrl }
+          { "@type": "ListItem", "position": 2, "name": Astro.props.breadcrumb || title, "item": canonicalUrl }
         ]
       })} />
     )}
   </head>
   <body class="antialiased">
+    <!--
+      Nav renders on every page. `enUrl`/`deUrl` are already the current page's
+      locale counterparts, so the language switch keeps you on the same page.
+    -->
+    <Nav lang={lang} enPath={basePath} dePath={`/de${basePath === '/' ? '' : basePath}`} />
     <slot />
     <CookieBanner lang={lang} />
 

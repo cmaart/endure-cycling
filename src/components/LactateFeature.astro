@@ -47,6 +47,11 @@ const t = getTranslations(lang).lactate;
             <div class="text-xs text-slate-600">{t.stat2Sub}</div>
           </div>
         </div>
+
+        <!-- Link into the feature landing that expands on this section -->
+        <a href={lang === 'de' ? '/de/features/lactate-lt1-lt2' : '/features/lactate-lt1-lt2'} class="inline-flex items-center gap-2 mt-8 text-accent font-semibold hover:underline">
+          {t.moreLink} →
+        </a>
       </div>
 
       <!-- Right: in-app demo video in a floating phone frame -->

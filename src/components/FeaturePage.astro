@@ -2,60 +2,42 @@
 import Layout from '../layouts/Layout.astro';
 import Footer from './Footer.astro';
 import { getTranslations } from '../i18n/translations';
-import { getGuide, getGuidesIndex, guides, type GuideKey } from '../i18n/guides';
+import { getFeatureContent, type FeatureKey } from '../i18n/features';
 import { config } from '../config';
 
 interface Props {
   lang: 'en' | 'de';
-  guide: GuideKey;
+  feature: FeatureKey;
 }
 
-const { lang, guide } = Astro.props;
-const t = getGuide(lang, guide);
+const { lang, feature } = Astro.props;
+const t = getFeatureContent(lang, feature);
 const tr = getTranslations(lang);
-const guidesHref = lang === 'de' ? '/de/guides' : '/guides';
-const index = getGuidesIndex(lang);
-
-// Sibling guides, derived from the content map rather than maintained per guide —
-// adding a guide links it from every other one automatically.
-const siblings = (Object.entries(guides[lang]) as [GuideKey, typeof t][])
-  .filter(([slug]) => slug !== guide)
-  .slice(0, 3);
+const prefix = lang === 'de' ? '/de' : '';
+const homeHref = lang === 'de' ? '/de' : '/';
 const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
 const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
 
-const siteUrl = 'https://www.endure-cycling.com';
-const canonicalPath = lang === 'de' ? `/de/guides/${guide}` : `/guides/${guide}`;
-
-const articleSchema = {
+// FAQPage covers the question-phrased sections; the direct answer above them is
+// the featured-snippet target.
+const faqSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": t.h1,
-  "description": t.seoDescription,
-  "datePublished": t.datePublished,
-  "dateModified": t.dateModified,
-  "inLanguage": lang,
-  "mainEntityOfPage": `${siteUrl}${canonicalPath}`,
-  "author": {
-    "@type": "Organization",
-    "name": "ENDURE",
-    "url": siteUrl
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ENDURE",
-    "url": siteUrl,
-    "logo": { "@type": "ImageObject", "url": `${siteUrl}/assets/ENDURE_lockup_exact_icon_4k.png` }
-  }
+  "@type": "FAQPage",
+  "mainEntity": t.faq.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a },
+  })),
 };
 ---
 
-<Layout title={t.seoTitle} description={t.seoDescription} lang={lang} breadcrumb={t.h1}>
-  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+<Layout title={t.seoTitle} description={t.seoDescription} lang={lang} breadcrumb={t.breadcrumb}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
 
   <main class="container mx-auto px-6 pt-10 pb-24 max-w-3xl text-slate-800">
     <article>
-      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">{t.h1}</h1>
+      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-3 leading-tight">{t.h1}</h1>
+      <p class="text-xl md:text-2xl text-slate-600 font-semibold mb-8">{t.subtitle}</p>
 
       <!-- Direct answer (featured-snippet target) -->
       <p class="text-lg leading-relaxed font-medium bg-slate-50 border-l-4 border-accent rounded-r-xl px-6 py-5 mb-12">
@@ -76,7 +58,7 @@ const articleSchema = {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
-                    <span class="text-lg leading-relaxed font-medium">{bullet}</span>
+                    <span class="text-lg leading-relaxed font-medium" set:html={bullet} />
                   </li>
                 ))}
               </ul>
@@ -84,6 +66,16 @@ const articleSchema = {
           </section>
         ))}
       </div>
+
+      <!-- FAQ -->
+      <section class="mt-14 space-y-6">
+        {t.faq.map((item) => (
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+            <h2 class="text-lg font-bold text-slate-900 mb-2">{item.q}</h2>
+            <p class="leading-relaxed font-medium text-slate-600">{item.a}</p>
+          </div>
+        ))}
+      </section>
 
       <!-- CTA -->
       <section class="text-center card-surface p-8 mt-14 mb-10">
@@ -104,22 +96,22 @@ const articleSchema = {
       </section>
     </article>
 
-    <!-- Sibling guides: keeps the guide cluster internally linked -->
+    <!-- Related pages: keeps the new landings linked to each other and to the guides -->
     <section class="mb-10">
-      <h2 class="text-xl font-bold text-slate-900 mb-4">{index.moreGuides}</h2>
+      <h2 class="text-xl font-bold text-slate-900 mb-4">{t.relatedTitle}</h2>
       <ul class="space-y-2">
-        {siblings.map(([slug, sibling]) => (
+        {t.related.map((link) => (
           <li>
-            <a href={`${guidesHref}/${slug}`} class="text-accent font-semibold hover:underline">
-              {sibling.h1} →
+            <a href={`${prefix}${link.href}`} class="text-accent font-semibold hover:underline">
+              {link.label} →
             </a>
           </li>
         ))}
       </ul>
     </section>
 
-    <a href={guidesHref} class="inline-flex items-center gap-2 text-accent font-semibold hover:underline">
-      ← {t.backToGuides}
+    <a href={homeHref} class="inline-flex items-center gap-2 text-accent font-semibold hover:underline">
+      ← {t.backHome}
     </a>
   </main>
   <Footer />

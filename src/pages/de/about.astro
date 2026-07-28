@@ -1,7 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
-import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import { getTranslations } from '../../i18n/translations';
 
 const lang = 'de' as const;
@@ -23,12 +22,7 @@ const personSchema = {
 
 <Layout lang="de" title={t.seoTitle} description={t.seoDescription}>
   <script type="application/ld+json" set:html={JSON.stringify(personSchema)} slot="head" />
-  <LanguageSwitcher />
-  <main class="container mx-auto px-6 py-32 max-w-3xl text-slate-800">
-    <a href={homeHref} class="inline-block mb-10">
-      <img src="/assets/ENDURE_lockup_exact_icon_4k.png" alt="ENDURE" class="h-16 w-auto" />
-    </a>
-
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-3xl text-slate-800">
     <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">{t.headline}</h1>
     <p class="text-lg md:text-xl text-slate-600 font-medium leading-relaxed mb-12">{t.intro}</p>
 
