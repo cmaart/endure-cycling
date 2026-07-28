@@ -75,8 +75,8 @@ export const vsContent = {
           a: "Yes. ENDURE controls smart trainers over standard Bluetooth in ERG mode, and connects power meters and heart-rate monitors — the same hardware you use with Zwift. A Zwift Click v1 works too: it pairs like any sensor and controls your ERG target and trainer resistance from the handlebar, though ENDURE does not simulate a cassette the way Zwift does."
         }
       ],
-      ctaTitle: "Try ENDURE — free on iOS & Android",
-      ctaBody: "Download ENDURE on iOS or Android, connect your trainer, and see your FTP, VO2max, lactate and heat metrics in one place.",
+      ctaTitle: "Try ENDURE — free now on iOS & Android",
+      ctaBody: "Download ENDURE on iOS or Android, connect your trainer, and see your FTP, VO2max, lactate and heat metrics in one place. An affordable subscription is planned.",
       disclaimer: "Zwift is a trademark of Zwift, Inc. This comparison reflects publicly available information as of July 2026 and describes ENDURE's current feature set — check both vendors for current details.",
       backHome: "Back to Homepage"
     },
@@ -224,8 +224,8 @@ export const vsContent = {
           a: "Ja. ENDURE steuert Smart Trainer über Standard-Bluetooth im ERG-Modus und verbindet Power Meter und Herzfrequenz-Sensoren — dieselbe Hardware, die du mit Zwift nutzt. Ein Zwift Click v1 funktioniert ebenfalls: er verbindet sich wie jeder Sensor und steuert ERG-Ziel und Trainer-Widerstand vom Lenker, wobei ENDURE keine Kassette simuliert wie Zwift."
         }
       ],
-      ctaTitle: "Probier ENDURE — kostenlos für iOS & Android",
-      ctaBody: "Lade ENDURE für iOS oder Android, verbinde deinen Trainer und sieh FTP, VO2max, Laktat und Heat-Metriken an einem Ort.",
+      ctaTitle: "Probier ENDURE — aktuell kostenlos für iOS & Android",
+      ctaBody: "Lade ENDURE für iOS oder Android, verbinde deinen Trainer und sieh FTP, VO2max, Laktat und Heat-Metriken an einem Ort. Faires Abo ist geplant.",
       disclaimer: "Zwift ist eine Marke von Zwift, Inc. Dieser Vergleich basiert auf öffentlich verfügbaren Informationen (Stand Juli 2026) und beschreibt den aktuellen Funktionsumfang von ENDURE — aktuelle Details bitte bei beiden Anbietern prüfen.",
       backHome: "Zurück zur Startseite"
     },
