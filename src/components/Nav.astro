@@ -1,5 +1,6 @@
 ---
 import { getTranslations } from '../i18n/translations';
+import { localeHref } from '../utils/paths';
 
 interface Props {
   lang?: 'en' | 'de';
@@ -12,18 +13,17 @@ interface Props {
 const { lang = 'en', enPath, dePath } = Astro.props;
 const t = getTranslations(lang).nav;
 const isGerman = lang === 'de';
-const home = isGerman ? '/de' : '/';
-const prefix = isGerman ? '/de' : '';
+const home = localeHref(lang);
 
 // Section anchors are absolute: Nav renders on every page now, and those
 // sections only exist on the homepage. `#download` is the exception — it lives
 // in the footer, so it resolves on every page.
 const links = [
-  { href: `${home}#features`, label: t.features },
-  { href: `${prefix}/features/zwift-click`, label: t.virtualShifting },
-  { href: `${prefix}/vs/zwift`, label: t.comparison },
-  { href: `${prefix}/guides`, label: t.guides },
-  { href: `${home}#faq`, label: t.faq },
+  { href: localeHref(lang, '/#features'), label: t.features },
+  { href: localeHref(lang, '/features/zwift-click'), label: t.virtualShifting },
+  { href: localeHref(lang, '/vs/zwift'), label: t.comparison },
+  { href: localeHref(lang, '/guides'), label: t.guides },
+  { href: localeHref(lang, '/#faq'), label: t.faq },
 ];
 ---
 

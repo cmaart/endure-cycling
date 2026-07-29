@@ -6,14 +6,20 @@
     <meta name="robots" content="noindex" />
     <title>Page not found — ENDURE</title>
     <script>
-      // The site is built with slash-less URLs (build.format: 'file'), so
-      // GitHub Pages 404s any trailing-slash variant like /de/ or /about/.
-      // Recover by redirecting to the canonical slash-less URL.
+      // Safety net, not the mechanism. Every route builds as
+      // `<route>/index.html` (`build.format: 'directory'`) and GitHub Pages
+      // answers the slash-less form with a real 301 onto the slash form, so a
+      // request for /de never reaches this page. That redirect belongs to Pages,
+      // though, and nothing in this repo can assert it, so recover a slash-less
+      // URL here in case it ever stops happening.
+      //
+      // A path that genuinely does not exist cannot loop: the retry ends in a
+      // slash, and this branch only fires on paths that do not.
       (function () {
         var path = window.location.pathname;
-        if (path.length > 1 && path.endsWith('/')) {
+        if (path.length > 1 && !path.endsWith('/')) {
           window.location.replace(
-            path.replace(/\/+$/, '') + window.location.search + window.location.hash
+            path + '/' + window.location.search + window.location.hash
           );
         }
       })();

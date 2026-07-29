@@ -186,7 +186,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "How does ENDURE handle FTP and zones?",
-          body: "ENDURE models your FTP and VO2max continuously from recorded power and heart-rate data across indoor and Strava-synced outdoor rides, so you see a trend rather than a test result with an expiry date. ERG mode holds test steps precisely if you do want to ride a protocol, and the time-in-zones breakdown after each ride shows how the session was actually distributed. If you also log lactate readings, ENDURE estimates LT1 and LT2 so you can check your percentage-based zones against measured thresholds. Available on iOS and Android."
+          body: "ENDURE models your FTP and VO2max continuously from recorded power and heart-rate data across indoor and Strava- or intervals.icu-synced outdoor rides, so you see a trend rather than a test result with an expiry date. ERG mode holds test steps precisely if you do want to ride a protocol, and the time-in-zones breakdown after each ride shows how the session was actually distributed. If you also log lactate readings, ENDURE estimates LT1 and LT2 so you can check your percentage-based zones against measured thresholds. Available on iOS and Android."
         }
       ],
       ctaTitle: "Stop scheduling FTP tests",
@@ -198,41 +198,74 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       seoDescription: "What zone 2 training is, why it works, how to tell you are actually in it, and how to do it indoors without the session drifting upward.",
       h1: "Zone 2 Training: How Much, How Hard, and Why It Works",
       datePublished: "2026-07-27",
-      dateModified: "2026-07-27",
-      directAnswer: "Zone 2 is steady endurance riding below your first lactate threshold (LT1) — roughly 56–75% of FTP, an intensity you could hold for hours while still speaking in full sentences. It builds aerobic capacity at a low fatigue cost, which is why most endurance programmes put the majority of weekly volume there.",
+      dateModified: "2026-07-29",
+      directAnswer: "Zone 2 is steady endurance riding below your first lactate threshold (LT1), roughly 56 to 75% of FTP. It is an intensity you could hold for hours while still speaking in full sentences. It builds aerobic capacity at a low fatigue cost, which is why most endurance programmes put the majority of weekly volume there.",
       sections: [
         {
           title: "What is zone 2 training?",
-          body: "Zone 2 is the band between easy recovery spinning and tempo: hard enough to be a training stimulus, easy enough that you could keep going for a long time. Physiologically it sits below LT1, the point where blood lactate first climbs above baseline. That boundary is what actually defines the zone; the 56–75% of FTP figure is a convenient approximation of it."
+          body: "Zone 2 sits between easy recovery spinning and tempo: hard enough to be a training stimulus, easy enough that you could keep going for a long time. Physiologically it lies below LT1, the point where blood lactate first rises above baseline. That boundary is what defines the zone. The 56 to 75% of FTP figure is a convenient stand-in for it, and like any stand-in it is wrong for some riders by a margin that matters."
+        },
+        {
+          title: "Why do zone models disagree about what zone 2 is?",
+          body: "Because there is more than one model. In a three-zone system, everything below LT1 is zone 1 and zone 2 is the band between LT1 and LT2. In the seven-zone power model most cycling software uses, zone 2 is 56 to 75% of FTP and for most riders sits under LT1. Same physiology, different labels. It is why one coach's zone 2 is another coach's zone 1, and why the useful question about a prescribed session is which threshold it refers to rather than which number it carries."
         },
         {
           title: "Why does riding easy make you faster?",
-          body: "Low-intensity volume drives the adaptations that raise your ceiling for everything else: mitochondrial density, capillarisation, fat oxidation at a given power, and cardiac output. Crucially, it produces those adaptations at a fatigue cost low enough to repeat several times a week. Harder intensities produce their own adaptations faster but cannot be stacked — which is why a week of nothing but intervals stalls."
+          body: "Low-intensity volume drives the adaptations that raise the ceiling for everything else: more mitochondria in the muscle, denser capillary beds around the fibres, more fat burned at a given power, a larger stroke volume and a bigger plasma volume. What sets it apart is the fatigue cost. Those adaptations arrive cheaply enough that you can repeat the session two days later, and then again. Harder intensities produce their own adaptations faster but cannot be stacked the same way, which is why a week of nothing but intervals stalls after a month. The trade is patience. Easy riding pays out over weeks, and it will not lift your five-minute power on its own."
+        },
+        {
+          title: "What power and heart rate should zone 2 be?",
+          body: "On power, 56 to 75% of FTP is the standard band, and the honest version is that riders who measure LT1 often find their real ceiling nearer the middle of it than the top. On heart rate, roughly 60 to 75% of maximum gets you close, but heart rate is the weaker anchor indoors because heat pushes it up at unchanged power. If you have both, pace by power and read heart rate as feedback. One thing spoils either number: an FTP that is months old. Zones built on a stale test describe a rider you no longer are."
         },
         {
           title: "How do you know you are actually in zone 2?",
-          body: "This is where most zone 2 sessions fail, because riding slightly too hard feels productive. Three checks, in increasing order of precision:",
+          body: "This is where most zone 2 sessions fail, because riding slightly too hard feels productive. Four checks, in increasing order of precision:",
           bullets: [
-            "<strong>The talk test:</strong> full sentences without gasping. If you are clipping words, you are above the zone.",
-            "<strong>Heart-rate drift:</strong> in a genuine zone 2 ride, heart rate at a fixed power stays fairly flat after the first 20 minutes. A steady climb means the intensity is too high.",
-            "<strong>Lactate:</strong> the definitive check. A reading near baseline — often around 2 mmol/L or below — confirms you are under LT1. Anything drifting upward across the ride says otherwise."
+            "<strong>The talk test:</strong> full sentences without gasping. If you are clipping words to breathe, you are above the zone.",
+            "<strong>Heart-rate drift:</strong> at a fixed power, heart rate should stay fairly flat after the first 20 minutes. Comparing the first half of a long steady ride with the second, a rise beyond about 5% is the usual line between an easy ride and one that was not.",
+            "<strong>Lactate:</strong> the only direct check. A reading near baseline, often around 2 mmol/L or below, confirms you are under LT1. A value that climbs across the ride says the opposite, whatever the power meter shows.",
+            "<strong>Tomorrow:</strong> a true zone 2 ride leaves you able to do it again the next day. If it does not, it was a tempo session wearing a zone 2 label."
           ]
         },
         {
           title: "How much zone 2 do you need?",
-          body: "The common prescription is around 80% of weekly training time at low intensity, with the remaining 20% spent on genuinely hard work. What matters more than the ratio is duration per session: the adaptations respond to time spent, so two 90-minute rides do more than three 40-minute ones at the same intensity. If your week is short on hours, that is an argument for making the easy rides longer, not for making them harder."
+          body: "The familiar answer is about 80% of weekly training time at low intensity and 20% genuinely hard. That ratio came from observing what trained endurance athletes already did, so it describes a pattern more than it prescribes one. Two things weigh more than hitting it exactly. The first is total easy time, because the adaptations respond to accumulated hours. The second is how that time is divided: two 90-minute rides do more than three 40-minute ones at the same intensity. On a five-hour week the arithmetic gets awkward anyway, since 20% is a single interval session, and the sensible reading is to keep the rest easy and long rather than to police the percentage."
+        },
+        {
+          title: "How long should a single zone 2 ride be?",
+          body: "An hour is a real session and worth doing. Ninety minutes to two hours is the range the benefit is best described for, and it is also where fuelling starts to decide how the last third goes. Past about three hours indoors, heat, saddle pressure and boredom usually take more than the extra time gives back, so genuinely long endurance rides belong outdoors when that is an option. When it is not, two shorter rides on the same day beat one that falls apart."
+        },
+        {
+          title: "How do you fuel a zone 2 ride?",
+          body: "Under about 75 minutes, water is usually enough and the ride will not be limited by anything you eat. Longer than that, 30 to 60 grams of carbohydrate per hour is the common range, and its real job is keeping the final third at the same power as the first. Riding fasted is a separate question rather than a harder version of the same one. It reliably lowers the power you can hold, so treat it as a nutrition experiment with its own goals, not as a way to make an easy ride count for more."
         },
         {
           title: "What makes indoor zone 2 different?",
-          body: "Indoors there is no coasting, no descending and no traffic, so an hour of indoor zone 2 contains more pedalling than an hour outdoors — it is a denser stimulus than the clock suggests. Heat is the other difference: with less airflow, core temperature and therefore heart rate climb at the same power, which can make a correctly paced ride look too hard on the heart-rate monitor. Pace by power, use a fan, and read heart-rate drift with the heat in mind."
+          body: "Indoors there is no coasting, no descending and no junctions, so an hour on the trainer holds more pedalling than an hour on the road. It is a denser stimulus than the clock suggests, which is worth knowing before you copy a duration from an outdoor ride. Heat is the second difference: with little airflow, core temperature rises and heart rate follows at unchanged power, so a correctly paced ride can look too hard on the monitor. Put a fan in front of you, pace by power, and read drift with the heat in mind. Cadence is the third. No terrain forces it to vary, so choose one deliberately instead of settling into whatever the flywheel suggests."
+        },
+        {
+          title: "What are the most common zone 2 mistakes?",
+          body: "Almost all of them come from the same instinct, which is that a bit more effort ought to mean a bit more training.",
+          bullets: [
+            "<strong>Living at the top of the band,</strong> because 74% of FTP feels more like work than 62% does.",
+            "<strong>Sessions too short to accumulate anything,</strong> then made harder to compensate.",
+            "<strong>Chasing an outdoor heart-rate number indoors,</strong> which means riding below the intended power once the heat arrives.",
+            "<strong>Riding without cooling</strong> and then reading the resulting drift as poor fitness.",
+            "<strong>Zones from an FTP test done months ago,</strong> wrong in either direction.",
+            "<strong>Sharpening the last 15 minutes,</strong> which turns an easy ride into a mediocre tempo effort and costs tomorrow's session."
+          ]
+        },
+        {
+          title: "Do you need lactate testing to train zone 2?",
+          body: "No. The talk test and heart-rate drift get most riders close enough to train productively for years. What lactate adds is the location of your own LT1, which can sit well above or well below 75% of FTP, and no power number will tell you which. If you already test, the readings are worth keeping over time rather than treating each one as a verdict, because the threshold moves as you train."
         },
         {
           title: "How does ENDURE support zone 2 riding?",
-          body: "ERG mode holds a steady target so the ride cannot creep upward while your attention wanders, and the time-in-zones breakdown afterwards shows whether the session really stayed where you intended. If you log lactate readings, ENDURE estimates your LT1 so your zone 2 ceiling is a measured threshold rather than a percentage. Core temperature from a paired CORE sensor explains the heart-rate drift that indoor riding produces. Available on iOS and Android."
+          body: "ERG mode holds the target so the ride cannot creep upward while your attention wanders, and the time-in-zones breakdown afterwards shows whether the session stayed where you meant it to. Log lactate readings and ENDURE estimates your LT1, which turns the zone 2 ceiling into a measured threshold instead of a percentage. Core temperature from a paired CORE sensor explains the heart-rate drift indoor riding produces, and Heat Zones show it as a range rather than a raw number. Existing workouts import as .ZWO, .MRC or .ERG files, and finished rides sync to Strava and intervals.icu. ENDURE does not write your training plan; it measures what you actually did. Free on iOS and Android."
         }
       ],
       ctaTitle: "Keep your easy rides easy",
-      ctaBody: "Free on iOS and Android — steady ERG targets, time-in-zones after every ride, and LT1 estimated from your own lactate readings.",
+      ctaBody: "Free on iOS and Android. Steady ERG targets, time-in-zones after every ride, and LT1 estimated from your own lactate readings.",
       backToGuides: "All guides"
     },
     'sweet-spot-vs-polarized': {
@@ -456,7 +489,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "Wie geht ENDURE mit FTP und Zonen um?",
-          body: "ENDURE modelliert FTP und VO2max laufend aus aufgezeichneten Power- und Herzfrequenzdaten — Indoor und per Strava synchronisierte Outdoor-Fahrten. Du siehst also einen Trend statt eines Testergebnisses mit Ablaufdatum. Der ERG-Modus hält Teststufen präzise, wenn du doch ein Protokoll fahren willst, und die Zeit-in-Zonen-Auswertung zeigt danach, wie die Einheit tatsächlich verteilt war. Trägst du zusätzlich Laktatwerte ein, schätzt ENDURE LT1 und LT2 — dann kannst du deine prozentualen Zonen gegen gemessene Schwellen prüfen. Verfügbar auf iOS und Android."
+          body: "ENDURE modelliert FTP und VO2max laufend aus aufgezeichneten Power- und Herzfrequenzdaten — Indoor und per Strava oder intervals.icu synchronisierte Outdoor-Fahrten. Du siehst also einen Trend statt eines Testergebnisses mit Ablaufdatum. Der ERG-Modus hält Teststufen präzise, wenn du doch ein Protokoll fahren willst, und die Zeit-in-Zonen-Auswertung zeigt danach, wie die Einheit tatsächlich verteilt war. Trägst du zusätzlich Laktatwerte ein, schätzt ENDURE LT1 und LT2 — dann kannst du deine prozentualen Zonen gegen gemessene Schwellen prüfen. Verfügbar auf iOS und Android."
         }
       ],
       ctaTitle: "Hör auf, FTP-Tests zu planen",
@@ -468,41 +501,74 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       seoDescription: "Was Zone-2-Training ist, warum es wirkt, wie du erkennst, dass du wirklich drin bist, und wie du es indoor fährst, ohne nach oben zu driften.",
       h1: "Zone-2-Training: wie viel, wie hart und warum es wirkt",
       datePublished: "2026-07-27",
-      dateModified: "2026-07-27",
-      directAnswer: "Zone 2 ist gleichmäßiges Grundlagentraining unterhalb der ersten Laktatschwelle (LT1) — etwa 56–75 % der FTP, eine Intensität, die du stundenlang halten und dabei in vollen Sätzen sprechen kannst. Sie baut die aerobe Kapazität bei niedrigen Ermüdungskosten auf, weshalb die meisten Ausdauerprogramme den Großteil des Wochenvolumens dort platzieren.",
+      dateModified: "2026-07-29",
+      directAnswer: "Zone 2 ist gleichmäßiges Grundlagentraining unterhalb der ersten Laktatschwelle (LT1), etwa 56 bis 75 % der FTP. Es ist eine Intensität, die du stundenlang halten und dabei in vollen Sätzen sprechen kannst. Sie baut die aerobe Kapazität bei niedrigen Ermüdungskosten auf, weshalb die meisten Ausdauerprogramme den Großteil des Wochenvolumens dort platzieren.",
       sections: [
         {
           title: "Was ist Zone-2-Training?",
-          body: "Zone 2 liegt zwischen lockerem Ausrollen und Tempo: hart genug, um ein Trainingsreiz zu sein, locker genug, um lange durchzuhalten. Physiologisch liegt sie unter der LT1, dem Punkt, an dem Blutlaktat erstmals über das Grundniveau steigt. Diese Grenze definiert die Zone eigentlich; die 56–75 % der FTP sind nur eine praktische Annäherung daran."
+          body: "Zone 2 liegt zwischen lockerem Ausrollen und Tempo: hart genug für einen Trainingsreiz, locker genug, um lange durchzuhalten. Physiologisch liegt sie unter der LT1, dem Punkt, an dem das Blutlaktat erstmals über das Grundniveau steigt. Diese Grenze definiert die Zone. Die 56 bis 75 % der FTP sind eine praktische Annäherung daran, und wie jede Annäherung liegt sie bei manchen Fahrern um einen Betrag daneben, der zählt."
+        },
+        {
+          title: "Warum sind sich die Zonenmodelle nicht einig, was Zone 2 ist?",
+          body: "Weil es mehrere gibt. Im Dreizonenmodell ist alles unter der LT1 die Zone 1, und Zone 2 bezeichnet das Band zwischen LT1 und LT2. Im Siebenzonenmodell nach Leistung, das die meiste Radsoftware nutzt, sind Zone 2 genau 56 bis 75 % der FTP, und die liegen bei den meisten Fahrern unter der LT1. Gleiche Physiologie, andere Beschriftung. Deshalb ist die Zone 2 des einen Trainers die Zone 1 des anderen, und deshalb lautet die nützliche Frage zu einer vorgegebenen Einheit, auf welche Schwelle sie sich bezieht, nicht welche Zahl sie trägt."
         },
         {
           title: "Warum macht locker fahren schneller?",
-          body: "Volumen bei niedriger Intensität treibt die Anpassungen, die deine Obergrenze für alles andere heben: mitochondriale Dichte, Kapillarisierung, Fettverbrennung bei gegebener Leistung, Herzminutenvolumen. Entscheidend ist, dass diese Anpassungen bei so niedrigen Ermüdungskosten entstehen, dass du sie mehrmals pro Woche wiederholen kannst. Härtere Intensitäten liefern ihre eigenen Anpassungen schneller, lassen sich aber nicht stapeln — deshalb stagniert eine Woche aus lauter Intervallen."
+          body: "Volumen bei niedriger Intensität treibt die Anpassungen, die die Obergrenze für alles andere heben: mehr Mitochondrien im Muskel, dichtere Kapillarnetze um die Fasern, mehr Fettverbrennung bei gegebener Leistung, ein größeres Schlagvolumen und ein größeres Plasmavolumen. Der Unterschied liegt in den Ermüdungskosten. Diese Anpassungen entstehen so billig, dass du die Einheit zwei Tage später wiederholen kannst und danach noch einmal. Härtere Intensitäten liefern ihre eigenen Anpassungen schneller, lassen sich aber nicht so stapeln, weshalb eine Woche aus lauter Intervallen nach einem Monat stagniert. Der Preis ist Geduld. Locker fahren zahlt über Wochen aus und hebt deine Fünf-Minuten-Leistung nicht von allein."
+        },
+        {
+          title: "Welche Watt und welche Herzfrequenz sind Zone 2?",
+          body: "Auf der Leistungsseite sind 56 bis 75 % der FTP das übliche Band, und die ehrliche Version lautet: wer seine LT1 messen lässt, findet die tatsächliche Obergrenze oft näher an der Mitte als am oberen Rand. Auf der Herzfrequenzseite kommen etwa 60 bis 75 % des Maximums in die Nähe, aber die Herzfrequenz ist indoor der schwächere Anker, weil Hitze sie bei unveränderter Leistung nach oben schiebt. Hast du beides, fahre nach Watt und lies die Herzfrequenz als Rückmeldung. Eine Sache verdirbt beide Zahlen: eine FTP, die Monate alt ist. Zonen aus einem alten Test beschreiben einen Fahrer, der du nicht mehr bist."
         },
         {
           title: "Wie erkennst du, dass du wirklich in Zone 2 bist?",
-          body: "Hier scheitern die meisten Zone-2-Einheiten, weil ein bisschen zu hart sich produktiv anfühlt. Drei Prüfungen, aufsteigend nach Genauigkeit:",
+          body: "Hier scheitern die meisten Zone-2-Einheiten, weil ein bisschen zu hart sich produktiv anfühlt. Vier Prüfungen, aufsteigend nach Genauigkeit:",
           bullets: [
-            "<strong>Sprechtest:</strong> vollständige Sätze ohne Schnappen. Wenn du Wörter abschneidest, bist du über der Zone.",
-            "<strong>Herzfrequenz-Drift:</strong> in einer echten Zone-2-Fahrt bleibt die Herzfrequenz bei fester Leistung nach den ersten 20 Minuten recht flach. Ein stetiger Anstieg heißt: zu hoch.",
-            "<strong>Laktat:</strong> die definitive Prüfung. Ein Wert nahe dem Grundniveau — häufig um 2 mmol/L oder darunter — bestätigt, dass du unter der LT1 liegst. Steigt er über die Fahrt hinweg, eben nicht."
+            "<strong>Sprechtest:</strong> vollständige Sätze, ohne nach Luft zu schnappen. Wenn du Wörter abschneidest, um zu atmen, bist du über der Zone.",
+            "<strong>Herzfrequenz-Drift:</strong> bei fester Leistung sollte die Herzfrequenz nach den ersten 20 Minuten recht flach bleiben. Vergleicht man die erste Hälfte einer langen gleichmäßigen Fahrt mit der zweiten, gilt ein Anstieg über etwa 5 % als Grenze zwischen einer lockeren Fahrt und einer, die es nicht war.",
+            "<strong>Laktat:</strong> die einzige direkte Prüfung. Ein Wert nahe dem Grundniveau, häufig um 2 mmol/l oder darunter, bestätigt, dass du unter der LT1 liegst. Ein Wert, der über die Fahrt hinweg steigt, sagt das Gegenteil, egal was der Powermeter anzeigt.",
+            "<strong>Der nächste Tag:</strong> eine echte Zone-2-Fahrt lässt sich morgen wiederholen. Wenn nicht, war es eine Tempoeinheit mit Zone-2-Etikett."
           ]
         },
         {
           title: "Wie viel Zone 2 brauchst du?",
-          body: "Die verbreitete Vorgabe sind rund 80 % der Wochenzeit bei niedriger Intensität und die restlichen 20 % wirklich hart. Wichtiger als das Verhältnis ist die Dauer pro Einheit: die Anpassungen reagieren auf verbrachte Zeit, zwei 90-Minuten-Fahrten bringen also mehr als drei 40-Minuten-Fahrten bei gleicher Intensität. Wenn deine Woche wenig Stunden hat, spricht das dafür, die lockeren Fahrten länger zu machen — nicht härter."
+          body: "Die geläufige Antwort sind rund 80 % der Wochenzeit bei niedriger Intensität und 20 % wirklich hart. Dieses Verhältnis stammt aus der Beobachtung dessen, was trainierte Ausdauerathleten ohnehin taten, es beschreibt also ein Muster mehr als es eines vorschreibt. Zwei Dinge wiegen schwerer, als die Quote genau zu treffen. Erstens die gesamte locker gefahrene Zeit, denn die Anpassungen reagieren auf angesammelte Stunden. Zweitens ihre Aufteilung: zwei Fahrten über 90 Minuten bringen mehr als drei über 40 Minuten bei gleicher Intensität. In einer Fünf-Stunden-Woche wird die Rechnung ohnehin schief, weil 20 % genau eine Intervalleinheit sind, und die sinnvolle Lesart ist, den Rest locker und lang zu halten statt die Prozente zu verwalten."
+        },
+        {
+          title: "Wie lang sollte eine einzelne Zone-2-Fahrt sein?",
+          body: "Eine Stunde ist eine richtige Einheit und lohnt sich. Zwischen 90 Minuten und zwei Stunden liegt der Bereich, für den der Nutzen am besten beschrieben ist, und dort entscheidet auch die Verpflegung, wie das letzte Drittel läuft. Jenseits von etwa drei Stunden indoor nehmen Hitze, Satteldruck und Langeweile meist mehr, als die zusätzliche Zeit zurückgibt. Wirklich lange Grundlagenfahrten gehören nach draußen, wenn das eine Option ist. Wenn nicht, sind zwei kürzere Fahrten am selben Tag besser als eine, die zerfällt."
+        },
+        {
+          title: "Wie verpflegst du eine Zone-2-Fahrt?",
+          body: "Unter etwa 75 Minuten reicht Wasser in der Regel, die Fahrt scheitert an nichts, was du isst. Darüber sind 30 bis 60 Gramm Kohlenhydrate pro Stunde der übliche Bereich, und ihre eigentliche Aufgabe ist, das letzte Drittel auf derselben Leistung zu halten wie das erste. Nüchtern fahren ist eine eigene Frage, nicht die härtere Variante derselben. Es senkt die haltbare Leistung zuverlässig, ist also ein Ernährungsexperiment mit eigenen Zielen und kein Weg, eine locker gefahrene Einheit höher zu bewerten."
         },
         {
           title: "Was ist indoor anders?",
-          body: "Indoor gibt es kein Rollen, kein Abfahren und keinen Verkehr — eine Stunde Indoor-Zone-2 enthält also mehr Pedalarbeit als eine Stunde draußen und ist ein dichterer Reiz, als die Uhr vermuten lässt. Hitze ist der zweite Unterschied: mit weniger Luftstrom steigen Kerntemperatur und damit Herzfrequenz bei gleicher Leistung, was eine korrekt gefahrene Einheit am Pulsmesser zu hart aussehen lässt. Nach Watt fahren, Ventilator nutzen, und den Herzfrequenz-Drift im Licht der Hitze lesen."
+          body: "Indoor gibt es kein Rollen, keine Abfahrt und keine Kreuzung, eine Stunde auf dem Smart Trainer enthält also mehr Pedalarbeit als eine Stunde auf der Straße. Der Reiz ist dichter, als die Uhr vermuten lässt, und das ist wichtig zu wissen, bevor du eine Dauer von draußen übernimmst. Hitze ist der zweite Unterschied: bei wenig Luftstrom steigt die Kerntemperatur und die Herzfrequenz folgt bei unveränderter Leistung, eine korrekt gefahrene Einheit kann am Messgerät also zu hart aussehen. Stell einen Ventilator vor dich, fahre nach Watt und lies den Drift im Licht der Hitze. Die Trittfrequenz ist der dritte Punkt. Kein Gelände erzwingt Variation, wähle sie also bewusst statt sie dem Schwungrad zu überlassen."
+        },
+        {
+          title: "Was sind die häufigsten Fehler in Zone 2?",
+          body: "Fast alle entstehen aus demselben Reflex: ein bisschen mehr Anstrengung müsste ein bisschen mehr Training bedeuten.",
+          bullets: [
+            "<strong>Dauerhaft am oberen Rand des Bandes,</strong> weil sich 74 % der FTP mehr nach Arbeit anfühlen als 62 %.",
+            "<strong>Einheiten zu kurz, um etwas anzusammeln,</strong> und dann härter gefahren, um das auszugleichen.",
+            "<strong>Einer Outdoor-Herzfrequenz indoor nachjagen,</strong> was heißt: unter der vorgesehenen Leistung fahren, sobald die Hitze kommt.",
+            "<strong>Ohne Kühlung fahren</strong> und den entstehenden Drift dann als schlechte Form lesen.",
+            "<strong>Zonen aus einem Monate alten FTP-Test,</strong> in beide Richtungen falsch.",
+            "<strong>Die letzten 15 Minuten zuspitzen,</strong> was aus einer lockeren Fahrt eine mittelmäßige Tempoeinheit macht und die Einheit von morgen kostet."
+          ]
+        },
+        {
+          title: "Brauchst du Laktatmessung für Zone 2?",
+          body: "Nein. Sprechtest und Herzfrequenz-Drift bringen die meisten Fahrer jahrelang nah genug heran, um produktiv zu trainieren. Was Laktat hinzufügt, ist die Lage deiner eigenen LT1, und die kann deutlich über oder deutlich unter 75 % der FTP liegen. Kein Wattwert verrät dir, welches von beidem gilt. Wenn du ohnehin misst, lohnt es, die Werte über die Zeit zu führen statt jeden einzelnen als Urteil zu nehmen, denn die Schwelle wandert mit dem Training."
         },
         {
           title: "Wie unterstützt ENDURE Zone-2-Fahrten?",
-          body: "Der ERG-Modus hält ein festes Ziel, damit die Fahrt nicht nach oben kriecht, während die Aufmerksamkeit wandert — und die Zeit-in-Zonen-Auswertung zeigt danach, ob die Einheit wirklich dort geblieben ist, wo du sie wolltest. Trägst du Laktatwerte ein, schätzt ENDURE deine LT1, dann ist deine Zone-2-Obergrenze eine gemessene Schwelle statt eines Prozentwerts. Die Kerntemperatur eines gekoppelten CORE-Sensors erklärt den Herzfrequenz-Drift, den Indoor-Fahren erzeugt. Verfügbar auf iOS und Android."
+          body: "Der ERG-Modus hält das Ziel, damit die Fahrt nicht nach oben kriecht, während die Aufmerksamkeit wandert, und die Zeit-in-Zonen-Auswertung zeigt danach, ob die Einheit dort geblieben ist, wo du sie wolltest. Trägst du Laktatwerte ein, schätzt ENDURE deine LT1, und die Zone-2-Obergrenze wird eine gemessene Schwelle statt eines Prozentwerts. Die Kerntemperatur eines gekoppelten CORE-Sensors erklärt den Herzfrequenz-Drift, den Indoor-Fahren erzeugt, und Heat Zones zeigen sie als Bereich statt als rohe Zahl. Bestehende Workouts kommen als .ZWO-, .MRC- oder .ERG-Datei herein, fertige Fahrten gehen zu Strava und intervals.icu. ENDURE schreibt keinen Trainingsplan, ENDURE misst, was du tatsächlich gefahren bist. Kostenlos für iOS und Android."
         }
       ],
       ctaTitle: "Halte deine lockeren Fahrten locker",
-      ctaBody: "Kostenlos für iOS und Android — stabile ERG-Ziele, Zeit in Zonen nach jeder Fahrt und LT1 aus deinen eigenen Laktatwerten.",
+      ctaBody: "Kostenlos für iOS und Android. Stabile ERG-Ziele, Zeit in Zonen nach jeder Fahrt und LT1 aus deinen eigenen Laktatwerten.",
       backToGuides: "Alle Guides"
     },
     'sweet-spot-vs-polarized': {

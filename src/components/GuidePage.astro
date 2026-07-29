@@ -4,6 +4,7 @@ import Footer from './Footer.astro';
 import { getTranslations } from '../i18n/translations';
 import { getGuide, getGuidesIndex, guides, type GuideKey } from '../i18n/guides';
 import { config } from '../config';
+import { localeHref, localeUrl, siteUrl } from '../utils/paths';
 
 interface Props {
   lang: 'en' | 'de';
@@ -13,7 +14,7 @@ interface Props {
 const { lang, guide } = Astro.props;
 const t = getGuide(lang, guide);
 const tr = getTranslations(lang);
-const guidesHref = lang === 'de' ? '/de/guides' : '/guides';
+const guidesHref = localeHref(lang, '/guides');
 const index = getGuidesIndex(lang);
 
 // Sibling guides, derived from the content map rather than maintained per guide —
@@ -24,8 +25,7 @@ const siblings = (Object.entries(guides[lang]) as [GuideKey, typeof t][])
 const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
 const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
 
-const siteUrl = 'https://www.endure-cycling.com';
-const canonicalPath = lang === 'de' ? `/de/guides/${guide}` : `/guides/${guide}`;
+const canonicalUrl = localeUrl(lang, `/guides/${guide}`);
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -35,7 +35,7 @@ const articleSchema = {
   "datePublished": t.datePublished,
   "dateModified": t.dateModified,
   "inLanguage": lang,
-  "mainEntityOfPage": `${siteUrl}${canonicalPath}`,
+  "mainEntityOfPage": canonicalUrl,
   "author": {
     "@type": "Organization",
     "name": "ENDURE",
@@ -76,7 +76,12 @@ const articleSchema = {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
-                    <span class="text-lg leading-relaxed font-medium">{bullet}</span>
+                    <!--
+                      Bullets carry inline markup (`<strong>` on the lead-in
+                      term), so they render with set:html like every other
+                      bullet list on the site. Section bodies stay plain text.
+                    -->
+                    <span class="text-lg leading-relaxed font-medium" set:html={bullet} />
                   </li>
                 ))}
               </ul>
@@ -110,7 +115,7 @@ const articleSchema = {
       <ul class="space-y-2">
         {siblings.map(([slug, sibling]) => (
           <li>
-            <a href={`${guidesHref}/${slug}`} class="text-accent font-semibold hover:underline">
+            <a href={localeHref(lang, `/guides/${slug}`)} class="text-accent font-semibold hover:underline">
               {sibling.h1} →
             </a>
           </li>

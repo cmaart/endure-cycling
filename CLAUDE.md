@@ -22,13 +22,21 @@ Astro's i18n config (`astro.config.mjs`) defines `en` (default, no prefix) and `
 
 The `lang` flows top-down: `Layout.astro` resolves it from `Astro.props.lang ?? Astro.currentLocale ?? 'en'`. `src/pages/index.astro` is English; `src/pages/de/index.astro` is the same component tree wrapped in `<Layout lang="de">`. **When adding a new section/component, add the matching keys to both `en` and `de` in `translations.ts`** — there is no fallback per-key, only a whole-language fallback to `en`.
 
-Long-form SEO content lives in sibling files with the same en/de convention: `src/i18n/vs.ts` (competitor comparison pages rendered by `components/VsPage.astro` → `/vs/zwift`, `/vs/trainerroad`) and `src/i18n/guides.ts` (training guides rendered by `components/GuidePage.astro` + `GuidesIndexPage.astro` → `/guides/*`). New pages must also be added to the hand-maintained `public/sitemap.xml` (with hreflang alternates).
+Long-form SEO content lives in sibling files with the same en/de convention: `src/i18n/vs.ts` (competitor comparison pages rendered by `components/VsPage.astro` → `/vs/zwift/`, `/vs/trainerroad/`) and `src/i18n/guides.ts` (training guides rendered by `components/GuidePage.astro` + `GuidesIndexPage.astro` → `/guides/*`). The sitemap is generated at build time by `@astrojs/sitemap`, so a new page under `src/pages/` needs no separate sitemap entry.
 
 `src/pages/index.astro` contains an inline script that auto-redirects German browsers to `/de` (gated by a `preferredLang` localStorage key set by `LanguageSwitcher`).
 
 ### Per-platform availability
 
 `src/config.ts` exports `config.platforms` — an object keyed by `ios`, `android`, `windows`, `macos`, each with `{ available: boolean, url: string | null }`. Components (`Hero.astro`, `Roadmap.astro`) read these flags to render store badges + green ✅ "Available" cards versus blue 📅 "Planned" cards. Flip `available` and set `url` at platform launch — do not hardcode availability state in components. The `PlatformKey` type is exported for typed iteration.
+
+### Every URL ends in a slash
+
+`trailingSlash: 'always'` plus `build.format: 'directory'` means each route builds as `<route>/index.html`. GitHub Pages serves that at `/guides/` and answers `/guides` with a 301 onto it, so both spellings resolve and only one of them is canonical.
+
+Never hand-write an internal path. `src/utils/paths.ts` exports `localeHref(lang, path)` for hrefs and `localeUrl(lang, path)` for absolute URLs in canonical tags and JSON-LD, and both put the `/de` prefix and the trailing slash on for you. A link written as `/guides` instead of `localeHref(lang, '/guides')` still works, but every click and every crawl of it spends a redirect hop.
+
+`englishOnlyRoutes` in the same file lists the pages that have no German translation. It drives two things: the sitemap filter in `astro.config.mjs`, and whether `Layout.astro` emits an hreflang set at all. An English-only page gets none, because half a pair pointing at a URL that 404s is worse than no annotation.
 
 ### Layout owns SEO
 

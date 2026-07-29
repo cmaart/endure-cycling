@@ -6,7 +6,7 @@
 
 **🌍 Live at [www.endure-cycling.com](https://www.endure-cycling.com)**
 
-The science-first indoor cycling analysis app for Windows.
+The science-first indoor cycling analysis app for iOS and Android.
 
 ---
 
@@ -20,8 +20,8 @@ ENDURE is an **indoor cycling app** that answers the real question: **"Is your t
 
 Track FTP & VO2max trends, train with physiologically targeted workouts, and see your progress over time.
 
-✅ **Available Now** for Windows 10/11  
-🚧 **Coming Soon** to macOS, Android, iOS
+✅ **Available now** on iOS and Android, free while the subscription is being built  
+🚧 **Planned** for Windows and macOS
 
 ---
 

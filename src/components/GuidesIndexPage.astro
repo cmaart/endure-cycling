@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Footer from './Footer.astro';
 import { getGuidesIndex, guides, type GuideKey } from '../i18n/guides';
+import { localeHref, localeUrl } from '../utils/paths';
 
 interface Props {
   lang: 'en' | 'de';
@@ -9,13 +10,11 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = getGuidesIndex(lang);
-const homeHref = lang === 'de' ? '/de' : '/';
-const guideBase = lang === 'de' ? '/de/guides' : '/guides';
+const homeHref = localeHref(lang);
 const entries = Object.entries(guides[lang]) as [GuideKey, (typeof guides)['en'][GuideKey]][];
 
 // ItemList tells search engines this is a collection page and which articles it
 // holds, so the hub can surface as a list rather than a single result.
-const siteUrl = 'https://www.endure-cycling.com';
 const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
@@ -24,7 +23,7 @@ const itemListSchema = {
     "@type": "ListItem",
     "position": idx + 1,
     "name": guide.h1,
-    "url": `${siteUrl}${guideBase}/${slug}`
+    "url": localeUrl(lang, `/guides/${slug}`)
   }))
 };
 ---
@@ -38,7 +37,7 @@ const itemListSchema = {
 
     <div class="space-y-6">
       {entries.map(([slug, guide]) => (
-        <a href={`${guideBase}/${slug}`} class="block card-surface hover-lift p-6 group">
+        <a href={localeHref(lang, `/guides/${slug}`)} class="block card-surface hover-lift p-6 group">
           <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-accent transition-colors">{guide.h1}</h2>
           <p class="leading-relaxed font-medium text-slate-600 mb-3">{guide.seoDescription}</p>
           <span class="text-accent font-semibold">{t.readGuide} →</span>

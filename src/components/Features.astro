@@ -1,6 +1,7 @@
 ---
 import { getTranslations } from '../i18n/translations';
 import FeatureCard from './FeatureCard.astro';
+import { localeHref } from '../utils/paths';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).features;
@@ -28,10 +29,10 @@ const screenshots = [
 
       <!-- Links into the pages that expand on the two most-searched topics here -->
       <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm font-semibold">
-        <a href={lang === 'de' ? '/de/features/ftp-vo2max-tracking' : '/features/ftp-vo2max-tracking'} class="text-accent hover:underline">
+        <a href={localeHref(lang, '/features/ftp-vo2max-tracking')} class="text-accent hover:underline">
           {t.analyticsLink} →
         </a>
-        <a href={lang === 'de' ? '/de/supported-trainers' : '/supported-trainers'} class="text-accent hover:underline">
+        <a href={localeHref(lang, '/supported-trainers')} class="text-accent hover:underline">
           {t.trainersLink} →
         </a>
       </div>

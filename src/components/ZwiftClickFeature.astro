@@ -1,5 +1,6 @@
 ---
 import { getTranslations } from '../i18n/translations';
+import { localeHref } from '../utils/paths';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).zwiftClick;
@@ -44,7 +45,7 @@ const t = getTranslations(lang).zwiftClick;
         </ul>
 
         <!-- Link into the feature landing that expands on this section -->
-        <a href={lang === 'de' ? '/de/features/zwift-click' : '/features/zwift-click'} class="inline-flex items-center gap-2 mt-7 text-accent font-semibold hover:underline">
+        <a href={localeHref(lang, '/features/zwift-click')} class="inline-flex items-center gap-2 mt-7 text-accent font-semibold hover:underline">
           {t.moreLink} →
         </a>
       </div>

@@ -1,5 +1,6 @@
 ---
 import { getTranslations } from '../i18n/translations';
+import { localeHref } from '../utils/paths';
 
 interface Props {
   lang?: 'en' | 'de';
@@ -8,8 +9,9 @@ interface Props {
 const { lang = (Astro.currentLocale as 'en' | 'de') || 'en' } = Astro.props;
 const t = getTranslations(lang);
 
-// Use absolute paths for the privacy policy to ensure it works from any subpage
-const privacyUrl = '/privacy';
+// Absolute path so the link resolves the same from any subpage. The privacy
+// policy is English-only, so it never takes the /de prefix.
+const privacyUrl = localeHref('en', '/privacy');
 ---
 
 <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 transform translate-y-full transition-transform duration-500 ease-in-out p-4 md:p-6" style="display: none;">

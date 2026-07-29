@@ -4,6 +4,7 @@ import Footer from './Footer.astro';
 import { getTranslations } from '../i18n/translations';
 import { getFeatureContent, type FeatureKey } from '../i18n/features';
 import { config } from '../config';
+import { localeHref } from '../utils/paths';
 
 interface Props {
   lang: 'en' | 'de';
@@ -13,8 +14,7 @@ interface Props {
 const { lang, feature } = Astro.props;
 const t = getFeatureContent(lang, feature);
 const tr = getTranslations(lang);
-const prefix = lang === 'de' ? '/de' : '';
-const homeHref = lang === 'de' ? '/de' : '/';
+const homeHref = localeHref(lang);
 const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
 const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
 
@@ -102,7 +102,7 @@ const faqSchema = {
       <ul class="space-y-2">
         {t.related.map((link) => (
           <li>
-            <a href={`${prefix}${link.href}`} class="text-accent font-semibold hover:underline">
+            <a href={localeHref(lang, link.href)} class="text-accent font-semibold hover:underline">
               {link.label} →
             </a>
           </li>

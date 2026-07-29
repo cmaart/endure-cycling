@@ -2,7 +2,7 @@
   "name": "endure-website",
   "type": "module",
   "version": "1.0.0",
-  "description": "ENDURE - Science-First Cycling App for Windows",
+  "description": "ENDURE - Science-First Cycling App for iOS and Android",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

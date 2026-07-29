@@ -48,7 +48,7 @@
 
         <!-- Feedback note -->
         <mj-text css-class="feedback-box" font-size="14px" color="#9a3412" padding="16px 20px">
-          <strong>Feedback?</strong> Just reply directly to this email or use our <a href="https://www.endure-cycling.com/feedback" style="color:#9a3412;text-decoration:underline;">feedback form</a>. Bugs, ideas, criticism — all welcome. Your input helps shape the first public release.
+          <strong>Feedback?</strong> Just reply directly to this email or use our <a href="https://www.endure-cycling.com/feedback/" style="color:#9a3412;text-decoration:underline;">feedback form</a>. Bugs, ideas, criticism — all welcome. Your input helps shape the first public release.
         </mj-text>
 
         <!-- Sign-off -->

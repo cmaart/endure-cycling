@@ -37,7 +37,7 @@ export const translations = {
       "Crash-proof sessions",
       "Lactate LT1/LT2",
       "CORE heat zones",
-      "Strava sync",
+      "Strava / intervals.icu sync",
       ".ZWO import",
       "Climbing Efficiency"
     ],
@@ -116,7 +116,7 @@ export const translations = {
       analytics: {
         title: "Progress Analytics",
         feature1: "<strong>FTP & VO2max Trends:</strong> Track your fitness evolution over weeks and months.",
-        feature2: "<strong>Indoor + Outdoor:</strong> Syncs your Strava rides for a complete picture.",
+        feature2: "<strong>Indoor + Outdoor:</strong> Syncs your Strava or intervals.icu rides for a complete picture.",
         feature3: "<strong>Power Profile:</strong> Visualize your strengths across durations."
       },
       
@@ -138,7 +138,7 @@ export const translations = {
         title: "Connectivity & Sync",
         feature1: "<strong>Bluetooth Smart:</strong> Connects to Smart Trainers, Power Meters & HR Monitors.",
         feature2: "<strong>CORE Body Temperature:</strong> Native CORE sensor support with live heat zones, an industry first.",
-        feature3: "<strong>Strava Integration:</strong> Auto-Upload & History Sync (more platforms coming).",
+        feature3: "<strong>Strava & intervals.icu Integration:</strong> Auto-Upload & History Sync to either platform.",
         feature4: "<strong>Virtual Shifting:</strong> With a Zwift Click (v1 verified) you change your ERG target and trainer resistance straight from the handlebar."
       },
       
@@ -189,7 +189,7 @@ export const translations = {
         { feature: "Lactate LT1 / LT2", value: "In-ride & post-ride logging with auto-estimated thresholds" },
         { feature: "CORE body temperature", value: "Native CORE sensor integration with live heat zones, an industry first" },
         { feature: "Climbing Efficiency", value: "Automatic VAM-based climb scoring" },
-        { feature: "Strava", value: "Auto-upload & ride-history sync" },
+        { feature: "Strava / intervals.icu", value: "Auto-upload & ride-history sync to either platform" },
         { feature: "Startup", value: "From app start to riding in under 30 seconds" }
       ]
     },
@@ -248,8 +248,8 @@ export const translations = {
           a: "TrainerRoad centres on algorithm-generated training plans behind a subscription. ENDURE offers a curated workout library plus deeper physiological analysis: lactate LT1/LT2, CORE body temperature with heat zones and climbing efficiency."
         },
         {
-          q: "Does ENDURE sync with Strava?",
-          a: "Yes. ENDURE auto-uploads your rides to Strava and can sync your ride history on first launch, combining indoor and outdoor activities into one complete performance picture."
+          q: "Does ENDURE sync with Strava or intervals.icu?",
+          a: "Yes. ENDURE auto-uploads your rides to Strava and intervals.icu, and can sync your ride history from either on first launch, combining indoor and outdoor activities into one complete performance picture."
         },
         {
           q: "Where do I report problems or send feedback?",
@@ -313,7 +313,6 @@ export const translations = {
       privacy: "Privacy Policy",
       terms: "Terms of Use",
       imprint: "Imprint / Legal Notice",
-      androidTest: "Android Test",
       feedback: "Feedback",
       contact: "Contact",
       
@@ -339,26 +338,6 @@ export const translations = {
       accept: "Accept",
       decline: "Decline",
       privacyLink: "Read our Privacy Policy"
-    },
-    // Android Test
-    androidTest: {
-      seoTitle: "Android Closed Test - ENDURE",
-      seoDescription: "Sign up for the ENDURE Android closed test on Google Play. Be among the first to test the indoor cycling app on Android.",
-      headline: "Android Closed Test",
-      intro: "ENDURE is launching a closed Android test via Google Play. If you have an Android device and want to test the app, enter the email address of the Google account you use in the Play Store below. This must be a Google account (e.g. Gmail or Google Workspace) — otherwise you won't be able to join the test. Once you're added to the test group, you'll receive the official Google Play test link via email.",
-      earlyNote: "Please note: The test version is early and may contain bugs. Your feedback is welcome and helps shape the first public release.",
-      emailLabel: "Google Play email address (must be linked to a Google account)",
-      emailPlaceholder: "your.email@gmail.com",
-      androidCheck: "I have an Android device",
-      indoorCheck: "I do indoor cycling / use a smart trainer",
-      stravaCheck: "I use Strava",
-      stravaHint: "ENDURE can sync your historical Strava rides on first launch — recommended for a fast start with your real data.",
-      submit: "Request Android Test Access",
-      submitting: "Sending...",
-      successTitle: "Thank you!",
-      successMessage: "Your request has been sent. I'll add you to the Google Play test group and send you the official test link via email. Please use the same Google address you entered here when opening the link.",
-      errorMessage: "Something went wrong. Please try again or send an email directly to",
-      backHome: "Back to Homepage"
     },
     // Feedback
     feedback: {
@@ -421,7 +400,7 @@ export const translations = {
       "Crash-sichere Sessions",
       "Laktat LT1/LT2",
       "CORE Heat Zones",
-      "Strava-Sync",
+      "Strava- / intervals.icu-Sync",
       ".ZWO-Import",
       "Climbing Efficiency"
     ],
@@ -500,7 +479,7 @@ export const translations = {
       analytics: {
         title: "Fortschritts-Analyse",
         feature1: "<strong>FTP- & VO2max-Trends:</strong> Verfolge deine Fitness-Entwicklung über Wochen und Monate.",
-        feature2: "<strong>Indoor + Outdoor:</strong> Synchronisiert deine Strava-Fahrten für ein komplettes Bild.",
+        feature2: "<strong>Indoor + Outdoor:</strong> Synchronisiert deine Strava- oder intervals.icu-Fahrten für ein komplettes Bild.",
         feature3: "<strong>Power Profil:</strong> Visualisiere deine Stärken über verschiedene Dauern."
       },
       
@@ -522,7 +501,7 @@ export const translations = {
         title: "Konnektivität & Sync",
         feature1: "<strong>Bluetooth Smart:</strong> Verbindet sich mit Smart Trainern, Power Metern & HR Monitoren.",
         feature2: "<strong>CORE Körpertemperatur:</strong> Native CORE-Sensor-Unterstützung mit Live Heat Zones, erstmals in einer Cycling-App.",
-        feature3: "<strong>Strava Integration:</strong> Auto-Upload & Verlaufs-Sync (weitere Plattformen folgen).",
+        feature3: "<strong>Strava & intervals.icu Integration:</strong> Auto-Upload & Verlaufs-Sync zu beiden Plattformen.",
         feature4: "<strong>Virtual Shifting:</strong> Mit einem Zwift Click (v1 verifiziert) änderst du ERG-Ziel und Trainer-Widerstand direkt vom Lenker."
       },
       
@@ -573,7 +552,7 @@ export const translations = {
         { feature: "Laktat LT1 / LT2", value: "Eintrag während & nach der Fahrt, Schwellen automatisch geschätzt" },
         { feature: "CORE Körpertemperatur", value: "Native CORE-Sensor-Integration mit Live Heat Zones, erstmals in einer Cycling-App" },
         { feature: "Climbing Efficiency", value: "Automatisches VAM-basiertes Kletter-Scoring" },
-        { feature: "Strava", value: "Auto-Upload & Verlaufs-Sync" },
+        { feature: "Strava / intervals.icu", value: "Auto-Upload & Verlaufs-Sync zu beiden Plattformen" },
         { feature: "Start", value: "Vom App-Start bis zur Fahrt in unter 30 Sekunden" }
       ]
     },
@@ -632,8 +611,8 @@ export const translations = {
           a: "TrainerRoad setzt auf algorithmisch generierte Trainingspläne im Abo. ENDURE bietet eine kuratierte Workout-Bibliothek plus tiefere physiologische Analyse: Laktat LT1/LT2, CORE Körpertemperatur mit Heat Zones und Climbing Efficiency."
         },
         {
-          q: "Synchronisiert ENDURE mit Strava?",
-          a: "Ja. ENDURE lädt deine Fahrten automatisch zu Strava hoch und kann beim ersten Start deinen Fahrtverlauf synchronisieren. Indoor- und Outdoor-Aktivitäten ergeben so ein komplettes Leistungsbild."
+          q: "Synchronisiert ENDURE mit Strava oder intervals.icu?",
+          a: "Ja. ENDURE lädt deine Fahrten automatisch zu Strava und intervals.icu hoch und kann beim ersten Start deinen Fahrtverlauf aus beiden Quellen synchronisieren. Indoor- und Outdoor-Aktivitäten ergeben so ein komplettes Leistungsbild."
         },
         {
           q: "Wo melde ich Probleme oder Feedback?",
@@ -697,7 +676,6 @@ export const translations = {
       privacy: "Datenschutz",
       terms: "Nutzungsbedingungen",
       imprint: "Impressum / Legal Notice",
-      androidTest: "Android Test",
       feedback: "Feedback",
       contact: "Kontakt",
       
@@ -723,26 +701,6 @@ export const translations = {
       accept: "Akzeptieren",
       decline: "Ablehnen",
       privacyLink: "Zur Datenschutzerklärung"
-    },
-    // Android Test
-    androidTest: {
-      seoTitle: "Android Closed Test - ENDURE",
-      seoDescription: "Melde dich für den geschlossenen ENDURE Android-Test auf Google Play an. Sei unter den Ersten, die die Indoor-Cycling-App auf Android testen.",
-      headline: "Android Closed Test",
-      intro: "ENDURE startet den geschlossenen Android-Test über Google Play. Wenn du ein Android-Gerät hast und die App testen möchtest, trag bitte die E-Mail-Adresse des Google-Kontos ein, das du im Play Store verwendest. Das muss ein Google-Konto sein (z.B. Gmail oder Google Workspace) — sonst kannst du dem Test nicht beitreten. Sobald du zur Testgruppe hinzugefügt wurdest, bekommst du den offiziellen Google-Play-Testlink per E-Mail.",
-      earlyNote: "Bitte beachte: Die Testversion ist noch früh und kann Fehler enthalten. Feedback ist willkommen und hilft beim ersten öffentlichen Release.",
-      emailLabel: "Google Play E-Mail-Adresse (muss mit einem Google-Konto verknüpft sein)",
-      emailPlaceholder: "deine.email@gmail.com",
-      androidCheck: "Ich habe ein Android-Gerät",
-      indoorCheck: "Ich mache Indoor Cycling / nutze einen Smart Trainer",
-      stravaCheck: "Ich nutze Strava",
-      stravaHint: "ENDURE kann deine bisherigen Strava-Fahrten beim ersten Start synchronisieren — empfohlen für einen schnellen Einstieg mit echten Daten.",
-      submit: "Android-Test anfragen",
-      submitting: "Wird gesendet...",
-      successTitle: "Danke!",
-      successMessage: "Deine Anfrage wurde gesendet. Ich füge dich zur Google-Play-Testgruppe hinzu und schicke dir danach den offiziellen Testlink per E-Mail. Bitte verwende beim Öffnen des Links dieselbe Google-Adresse, die du hier angegeben hast.",
-      errorMessage: "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib direkt an",
-      backHome: "Zurück zur Startseite"
     },
     // Feedback
     feedback: {

@@ -247,12 +247,12 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'ftp-vo2max-tracking': {
       seoTitle: 'FTP & VO2max Tracking App for Cyclists — ENDURE',
       seoDescription:
-        'Track FTP and VO2max as trends instead of single test results. ENDURE models both from your recorded power and heart-rate data across indoor and Strava-synced outdoor rides.',
+        'Track FTP and VO2max as trends instead of single test results. ENDURE models both from your recorded power and heart-rate data across indoor and Strava- or intervals.icu-synced outdoor rides.',
       breadcrumb: 'FTP & VO2max',
       h1: 'FTP and VO2max as trends, not one-off test results',
       subtitle: 'Modelled continuously from the rides you already do.',
       directAnswer:
-        'ENDURE models your FTP and VO2max from recorded power and heart-rate data across rides, so both appear as trends over weeks and months rather than as a number from a single all-out test. Indoor rides and Strava-synced outdoor rides feed the same picture.',
+        'ENDURE models your FTP and VO2max from recorded power and heart-rate data across rides, so both appear as trends over weeks and months rather than as a number from a single all-out test. Indoor rides and Strava- or intervals.icu-synced outdoor rides feed the same picture.',
       sections: [
         {
           title: 'Why is a trend more useful than a test result?',
@@ -267,7 +267,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'How do indoor and outdoor rides fit together?',
           body:
-            'Strava sync pulls your outdoor rides in — including history on first launch — so the trend reflects your whole training load instead of only the indoor part. For most riders that is the difference between a curve that makes sense in July and one that appears to collapse every spring.'
+            'Strava or intervals.icu sync pulls your outdoor rides in — including history on first launch — so the trend reflects your whole training load instead of only the indoor part. For most riders that is the difference between a curve that makes sense in July and one that appears to collapse every spring.'
         },
         {
           title: 'What else does the power data tell you?',
@@ -291,7 +291,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Are outdoor rides included?',
-          a: 'Yes, via Strava sync — including your existing history when you first connect, so the trend does not start from zero.'
+          a: 'Yes, via Strava or intervals.icu sync — including your existing history when you first connect, so the trend does not start from zero.'
         }
       ],
       relatedTitle: 'Keep reading',
@@ -301,7 +301,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Start the trend',
       ctaBody:
-        'Free on iOS and Android — connect Strava, ride, and watch FTP and VO2max develop week by week.',
+        'Free on iOS and Android — connect Strava or intervals.icu, ride, and watch FTP and VO2max develop week by week.',
       backHome: 'Back to Homepage'
     },
     'climbing-efficiency': {
@@ -346,7 +346,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Where do the rides come from?',
-          a: 'Outdoor rides reach ENDURE through Strava sync, including your existing history when you first connect.'
+          a: 'Outdoor rides reach ENDURE through Strava or intervals.icu sync, including your existing history when you first connect.'
         }
       ],
       relatedTitle: 'Keep reading',
@@ -356,7 +356,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Score your climbs',
       ctaBody:
-        'Free on iOS and Android — connect Strava and let ENDURE find the climbs in the riding you already did.',
+        'Free on iOS and Android — connect Strava or intervals.icu and let ENDURE find the climbs in the riding you already did.',
       backHome: 'Back to Homepage'
     }
   },
@@ -557,12 +557,12 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'ftp-vo2max-tracking': {
       seoTitle: 'FTP- & VO2max-Tracking App für Radsportler — ENDURE',
       seoDescription:
-        'FTP und VO2max als Trend statt als Einzeltest. ENDURE modelliert beides aus deinen aufgezeichneten Power- und Herzfrequenzdaten — Indoor und per Strava synchronisierte Outdoor-Fahrten.',
+        'FTP und VO2max als Trend statt als Einzeltest. ENDURE modelliert beides aus deinen aufgezeichneten Power- und Herzfrequenzdaten — Indoor und per Strava oder intervals.icu synchronisierte Outdoor-Fahrten.',
       breadcrumb: 'FTP & VO2max',
       h1: 'FTP und VO2max als Trend, nicht als einmaliges Testergebnis',
       subtitle: 'Kontinuierlich modelliert aus den Fahrten, die du ohnehin machst.',
       directAnswer:
-        'ENDURE modelliert FTP und VO2max aus deinen aufgezeichneten Power- und Herzfrequenzdaten über mehrere Fahrten. Beides erscheint dadurch als Trend über Wochen und Monate statt als Zahl aus einem einzelnen Alles-oder-nichts-Test. Indoor-Fahrten und per Strava synchronisierte Outdoor-Fahrten füttern dasselbe Bild.',
+        'ENDURE modelliert FTP und VO2max aus deinen aufgezeichneten Power- und Herzfrequenzdaten über mehrere Fahrten. Beides erscheint dadurch als Trend über Wochen und Monate statt als Zahl aus einem einzelnen Alles-oder-nichts-Test. Indoor-Fahrten und per Strava oder intervals.icu synchronisierte Outdoor-Fahrten füttern dasselbe Bild.',
       sections: [
         {
           title: 'Warum ist ein Trend nützlicher als ein Testergebnis?',
@@ -577,7 +577,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'Wie passen Indoor- und Outdoor-Fahrten zusammen?',
           body:
-            'Der Strava-Sync holt deine Outdoor-Fahrten herein, beim ersten Start inklusive Historie. Der Trend spiegelt damit deine ganze Trainingslast und nicht nur den Indoor-Anteil. Für die meisten ist das der Unterschied zwischen einer Kurve, die im Juli Sinn ergibt, und einer, die jedes Frühjahr scheinbar zusammenbricht.'
+            'Der Strava- oder intervals.icu-Sync holt deine Outdoor-Fahrten herein, beim ersten Start inklusive Historie. Der Trend spiegelt damit deine ganze Trainingslast und nicht nur den Indoor-Anteil. Für die meisten ist das der Unterschied zwischen einer Kurve, die im Juli Sinn ergibt, und einer, die jedes Frühjahr scheinbar zusammenbricht.'
         },
         {
           title: 'Was sagen die Leistungsdaten noch?',
@@ -601,7 +601,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Sind Outdoor-Fahrten enthalten?',
-          a: 'Ja, über den Strava-Sync — beim ersten Verbinden inklusive deiner bestehenden Historie, damit der Trend nicht bei null anfängt.'
+          a: 'Ja, über den Strava- oder intervals.icu-Sync — beim ersten Verbinden inklusive deiner bestehenden Historie, damit der Trend nicht bei null anfängt.'
         }
       ],
       relatedTitle: 'Weiterlesen',
@@ -611,7 +611,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Starte den Trend',
       ctaBody:
-        'Kostenlos für iOS und Android — Strava verbinden, fahren, und FTP und VO2max Woche für Woche wachsen sehen.',
+        'Kostenlos für iOS und Android — Strava oder intervals.icu verbinden, fahren, und FTP und VO2max Woche für Woche wachsen sehen.',
       backHome: 'Zurück zur Startseite'
     },
     'climbing-efficiency': {
@@ -656,7 +656,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Woher kommen die Fahrten?',
-          a: 'Outdoor-Fahrten erreichen ENDURE über den Strava-Sync, beim ersten Verbinden inklusive bestehender Historie.'
+          a: 'Outdoor-Fahrten erreichen ENDURE über den Strava- oder intervals.icu-Sync, beim ersten Verbinden inklusive bestehender Historie.'
         }
       ],
       relatedTitle: 'Weiterlesen',
@@ -666,7 +666,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Bewerte deine Anstiege',
       ctaBody:
-        'Kostenlos für iOS und Android — Strava verbinden und ENDURE die Anstiege in den Fahrten finden lassen, die du schon gemacht hast.',
+        'Kostenlos für iOS und Android — Strava oder intervals.icu verbinden und ENDURE die Anstiege in den Fahrten finden lassen, die du schon gemacht hast.',
       backHome: 'Zurück zur Startseite'
     }
   }

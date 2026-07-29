@@ -2,10 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import { getTranslations } from '../../i18n/translations';
+import { localeHref, localeUrl } from '../../utils/paths';
 
 const lang = 'de' as const;
 const t = getTranslations(lang).about;
-const homeHref = '/de';
+const homeHref = localeHref('de');
 
 // Founder entity for E-E-A-T / AI answer engines — mirrors the "Wer hinter
 // ENDURE steht" section content.
@@ -16,7 +17,7 @@ const personSchema = {
   "jobTitle": "Founder & Developer",
   "worksFor": { "@type": "Organization", "name": "ENDURE", "url": "https://www.endure-cycling.com" },
   "knowsAbout": ["Indoor cycling", "Cycling training", "Lactate threshold analysis", "Software development"],
-  "url": "https://www.endure-cycling.com/de/about"
+  "url": localeUrl('de', '/about')
 };
 ---
 

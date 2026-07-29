@@ -4,6 +4,7 @@ import Footer from './Footer.astro';
 import { getTranslations } from '../i18n/translations';
 import { getVsContent, type VsKey } from '../i18n/vs';
 import { config } from '../config';
+import { localeHref } from '../utils/paths';
 
 interface Props {
   lang: 'en' | 'de';
@@ -13,7 +14,7 @@ interface Props {
 const { lang, competitor } = Astro.props;
 const t = getVsContent(lang, competitor);
 const tr = getTranslations(lang);
-const homeHref = lang === 'de' ? '/de' : '/';
+const homeHref = localeHref(lang);
 const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
 const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
 

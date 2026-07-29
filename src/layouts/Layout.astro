@@ -3,6 +3,7 @@ import { getTranslations } from '../i18n/translations';
 import { config } from '../config';
 import Nav from '../components/Nav.astro';
 import CookieBanner from '../components/CookieBanner.astro';
+import { hasGermanVersion, localeHref, localeUrl, siteUrl } from '../utils/paths';
 import '@fontsource/sora/400.css';
 import '@fontsource/sora/500.css';
 import '@fontsource/sora/600.css';
@@ -26,20 +27,21 @@ const title = Astro.props.title || t.seo.title;
 const description = Astro.props.description || t.seo.description;
 
 // SEO URLs — derive per-page so each route self-canonicalizes.
-// `trailingSlash: 'never'` + `build.format: 'file'` means pathname is slash-less
-// (homepage is '/', e.g. '/about', '/de/about').
-const siteUrl = 'https://www.endure-cycling.com';
-// `build.format: 'file'` emits `about.html`, `de.html`, `de/about.html`, so
-// Astro.url.pathname carries the `.html` suffix. Normalize to the slash-less
-// URL GitHub Pages actually serves ('/', '/about', '/de', '/de/about').
-const path = (Astro.url.pathname
+// `basePath` is the locale-independent route without slashes ('' for the
+// homepage, 'about', 'guides/zone-2-endurance-training'). Both locale URLs are
+// built from it through the shared helper, so canonical, hreflang, the language
+// switch and every internal link agree on one URL shape.
+const basePath = Astro.url.pathname
   .replace(/index\.html$/, '')
   .replace(/\.html$/, '')
-  .replace(/\/$/, '')) || '/';
-const basePath = path.replace(/^\/de(?=\/|$)/, '') || '/';
-const enUrl = `${siteUrl}${basePath}`;
-const deUrl = `${siteUrl}/de${basePath === '/' ? '' : basePath}`;
+  .replace(/^\/de(?=\/|$)/, '')
+  .replace(/^\/+|\/+$/g, '');
+const enUrl = localeUrl('en', basePath);
+const deUrl = localeUrl('de', basePath);
 const canonicalUrl = lang === 'de' ? deUrl : enUrl;
+// The legal pages are English-only, so they get no hreflang set at all rather
+// than one half of it pointing at a URL that does not exist.
+const isTranslated = hasGermanVersion(basePath);
 
 // Store logo + preferred OG image, referenced from meta + JSON-LD below.
 const ogImage = `${siteUrl}/assets/screenshots/endure-dashboard.min.jpeg`;
@@ -114,9 +116,13 @@ const storeUrls = Object.values(config.platforms)
     <link rel="canonical" href={canonicalUrl} />
     
     <!-- Hreflang for Multilingual SEO -->
-    <link rel="alternate" hreflang="en" href={enUrl} />
-    <link rel="alternate" hreflang="de" href={deUrl} />
-    <link rel="alternate" hreflang="x-default" href={enUrl} />
+    {isTranslated && (
+      <Fragment>
+        <link rel="alternate" hreflang="en" href={enUrl} />
+        <link rel="alternate" hreflang="de" href={deUrl} />
+        <link rel="alternate" hreflang="x-default" href={enUrl} />
+      </Fragment>
+    )}
     
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow" />
@@ -173,7 +179,7 @@ const storeUrls = Object.values(config.platforms)
         "Structured workout library",
         "Smart trainer connectivity via Bluetooth",
         "Virtual Shifting — ERG target and trainer resistance from a Zwift Click (v1 verified)",
-        "Strava auto-upload",
+        "Strava and intervals.icu auto-upload",
         "Ride history analytics"
       ]
     })} />
@@ -193,12 +199,12 @@ const storeUrls = Object.values(config.platforms)
     })} />
 
     <!-- Structured Data (JSON-LD) — breadcrumb trail on inner pages -->
-    {basePath !== '/' && (
+    {basePath !== '' && (
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": lang === 'de' ? 'Startseite' : 'Home', "item": lang === 'de' ? `${siteUrl}/de` : `${siteUrl}/` },
+          { "@type": "ListItem", "position": 1, "name": lang === 'de' ? 'Startseite' : 'Home', "item": localeUrl(lang) },
           { "@type": "ListItem", "position": 2, "name": Astro.props.breadcrumb || title, "item": canonicalUrl }
         ]
       })} />
@@ -209,7 +215,16 @@ const storeUrls = Object.values(config.platforms)
       Nav renders on every page. `enUrl`/`deUrl` are already the current page's
       locale counterparts, so the language switch keeps you on the same page.
     -->
-    <Nav lang={lang} enPath={basePath} dePath={`/de${basePath === '/' ? '' : basePath}`} />
+    <!--
+      On an English-only page there is no German counterpart to switch to, so the
+      DE button falls back to the German homepage rather than linking to a URL
+      that does not exist.
+    -->
+    <Nav
+      lang={lang}
+      enPath={localeHref('en', basePath)}
+      dePath={isTranslated ? localeHref('de', basePath) : localeHref('de')}
+    />
     <slot />
     <CookieBanner lang={lang} />
 

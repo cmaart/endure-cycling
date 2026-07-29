@@ -30,7 +30,7 @@ export const vsContent = {
         { feature: "Climbing metric", endure: "Automatic VAM-based Climbing Efficiency score", other: "Virtual climbs & climb portal" },
         { feature: "Racing & social", endure: "Not the focus", other: "Races, group rides, huge community" },
         { feature: "Hardware requirements", endure: "Runs smoothly on a phone — no gaming PC", other: "Graphics-heavy; benefits from strong hardware" },
-        { feature: "Strava", endure: "Auto-upload + history sync", other: "Auto-upload" }
+        { feature: "Strava / intervals.icu", endure: "Auto-upload + history sync to either", other: "Auto-upload" }
       ],
       chooseEndureTitle: "Choose ENDURE if you…",
       chooseEndure: [
@@ -52,11 +52,11 @@ export const vsContent = {
         "<strong>Your trainer:</strong> ENDURE controls smart trainers over the Bluetooth standard FTMS — the same hardware you already ride with, no new purchase.",
         "<strong>Your Zwift Click:</strong> a v1 pairs like any other sensor and changes your ERG target or trainer resistance from the bars. ENDURE does not simulate a cassette, so it is resistance control rather than gears.",
         "<strong>Your workouts:</strong> .ZWO files import directly, along with .MRC and .ERG — your existing session library comes with you.",
-        "<strong>Your history:</strong> ENDURE syncs your Strava rides on first launch, so indoor and outdoor training sit in one picture from day one.",
+        "<strong>Your history:</strong> ENDURE syncs your Strava or intervals.icu rides on first launch, so indoor and outdoor training sit in one picture from day one.",
         "<strong>Your hardware budget:</strong> ENDURE runs on the phone or tablet you already own — no gaming PC to keep fed."
       ],
       bothTitle: "Can you use both?",
-      bothBody: "Absolutely — many riders do. A common setup: ride Zwift for races and social events, and use ENDURE for structured training sessions and as the analysis home for FTP, VO2max, lactate and heat metrics. ENDURE syncs your rides via Strava, so nothing gets lost.",
+      bothBody: "Absolutely — many riders do. A common setup: ride Zwift for races and social events, and use ENDURE for structured training sessions and as the analysis home for FTP, VO2max, lactate and heat metrics. ENDURE syncs your rides via Strava or intervals.icu, so nothing gets lost.",
       faq: [
         {
           q: "Is there a free alternative to Zwift?",
@@ -104,7 +104,7 @@ export const vsContent = {
         { feature: "Lactate LT1 / LT2", endure: "In-ride logging + automatic threshold estimation — industry first", other: "Not available" },
         { feature: "CORE body temperature", endure: "Native sensor integration with live heat zones — industry first", other: "No native heat-zone display" },
         { feature: "Climbing metric", endure: "Automatic VAM-based Climbing Efficiency score", other: "Not available" },
-        { feature: "Strava", endure: "Auto-upload + history sync", other: "Auto-upload" }
+        { feature: "Strava / intervals.icu", endure: "Auto-upload + history sync to either", other: "Auto-upload" }
       ],
       chooseEndureTitle: "Choose ENDURE if you…",
       chooseEndure: [
@@ -123,12 +123,12 @@ export const vsContent = {
       switchBullets: [
         "<strong>Your trainer:</strong> ENDURE controls smart trainers over the Bluetooth standard FTMS — the same hardware, no new purchase.",
         "<strong>Your workouts:</strong> .ZWO, .MRC and .ERG files import directly, so structured sessions you already rely on carry over.",
-        "<strong>Your history:</strong> ENDURE syncs your Strava rides on first launch, combining indoor and outdoor training into one performance picture.",
+        "<strong>Your history:</strong> ENDURE syncs your Strava or intervals.icu rides on first launch, combining indoor and outdoor training into one performance picture.",
         "<strong>Your structure:</strong> the workout library is curated by physiological purpose — VO2max, threshold, sweet spot — so you can rebuild a week without an algorithm scheduling it for you.",
         "<strong>Your money:</strong> no subscription right now, and an affordable one when it arrives."
       ],
       bothTitle: "Can you use both?",
-      bothBody: "Yes. Some riders follow a TrainerRoad plan and use ENDURE as their physiological dashboard — logging lactate tests, tracking CORE heat zones and watching FTP and VO2max trends across all rides via Strava sync.",
+      bothBody: "Yes. Some riders follow a TrainerRoad plan and use ENDURE as their physiological dashboard — logging lactate tests, tracking CORE heat zones and watching FTP and VO2max trends across all rides via Strava or intervals.icu sync.",
       faq: [
         {
           q: "Is there a free alternative to TrainerRoad?",
@@ -179,7 +179,7 @@ export const vsContent = {
         { feature: "Kletter-Metrik", endure: "Automatischer VAM-basierter Climbing-Efficiency-Score", other: "Virtuelle Anstiege & Climb Portal" },
         { feature: "Rennen & Social", endure: "Nicht der Fokus", other: "Rennen, Gruppenfahrten, riesige Community" },
         { feature: "Hardware-Anforderungen", endure: "Läuft flüssig am Handy — kein Gaming-PC", other: "Grafiklastig; profitiert von starker Hardware" },
-        { feature: "Strava", endure: "Auto-Upload + Verlaufs-Sync", other: "Auto-Upload" }
+        { feature: "Strava / intervals.icu", endure: "Auto-Upload + Verlaufs-Sync mit beiden", other: "Auto-Upload" }
       ],
       chooseEndureTitle: "Wähle ENDURE, wenn du…",
       chooseEndure: [
@@ -201,11 +201,11 @@ export const vsContent = {
         "<strong>Deinen Trainer:</strong> ENDURE steuert Smart Trainer über den Bluetooth-Standard FTMS — dieselbe Hardware, die du schon fährst, kein Neukauf.",
         "<strong>Deinen Zwift Click:</strong> ein v1 verbindet sich wie jeder andere Sensor und ändert ERG-Ziel oder Trainer-Widerstand vom Lenker. ENDURE simuliert keine Kassette, es ist also Widerstandssteuerung statt Schaltung.",
         "<strong>Deine Workouts:</strong> .ZWO-Dateien lassen sich direkt importieren, ebenso .MRC und .ERG — deine bestehende Einheiten-Sammlung kommt mit.",
-        "<strong>Deine Historie:</strong> ENDURE synchronisiert deine Strava-Fahrten beim ersten Start, Indoor und Outdoor stehen ab Tag eins in einem Bild.",
+        "<strong>Deine Historie:</strong> ENDURE synchronisiert deine Strava- oder intervals.icu-Fahrten beim ersten Start, Indoor und Outdoor stehen ab Tag eins in einem Bild.",
         "<strong>Dein Hardware-Budget:</strong> ENDURE läuft auf dem Handy oder Tablet, das du schon hast — kein Gaming-PC zu füttern."
       ],
       bothTitle: "Kannst du beide nutzen?",
-      bothBody: "Klar — machen viele. Ein typisches Setup: Zwift für Rennen und Events, ENDURE für strukturierte Trainingseinheiten und als Analyse-Zuhause für FTP, VO2max, Laktat und Heat-Metriken. Über den Strava-Sync geht keine Fahrt verloren.",
+      bothBody: "Klar — machen viele. Ein typisches Setup: Zwift für Rennen und Events, ENDURE für strukturierte Trainingseinheiten und als Analyse-Zuhause für FTP, VO2max, Laktat und Heat-Metriken. Über den Strava- oder intervals.icu-Sync geht keine Fahrt verloren.",
       faq: [
         {
           q: "Gibt es eine kostenlose Alternative zu Zwift?",
@@ -253,7 +253,7 @@ export const vsContent = {
         { feature: "Laktat LT1 / LT2", endure: "Eintrag während der Fahrt + automatische Schwellen-Schätzung — erstmals in einer Cycling-App", other: "Nicht verfügbar" },
         { feature: "CORE Körpertemperatur", endure: "Native Sensor-Integration mit Live Heat Zones — erstmals in einer Cycling-App", other: "Keine native Heat-Zone-Anzeige" },
         { feature: "Kletter-Metrik", endure: "Automatischer VAM-basierter Climbing-Efficiency-Score", other: "Nicht verfügbar" },
-        { feature: "Strava", endure: "Auto-Upload + Verlaufs-Sync", other: "Auto-Upload" }
+        { feature: "Strava / intervals.icu", endure: "Auto-Upload + Verlaufs-Sync mit beiden", other: "Auto-Upload" }
       ],
       chooseEndureTitle: "Wähle ENDURE, wenn du…",
       chooseEndure: [
@@ -272,12 +272,12 @@ export const vsContent = {
       switchBullets: [
         "<strong>Deinen Trainer:</strong> ENDURE steuert Smart Trainer über den Bluetooth-Standard FTMS — dieselbe Hardware, kein Neukauf.",
         "<strong>Deine Workouts:</strong> .ZWO-, .MRC- und .ERG-Dateien lassen sich direkt importieren, deine strukturierten Einheiten kommen mit.",
-        "<strong>Deine Historie:</strong> ENDURE synchronisiert deine Strava-Fahrten beim ersten Start und führt Indoor und Outdoor in einem Leistungsbild zusammen.",
+        "<strong>Deine Historie:</strong> ENDURE synchronisiert deine Strava- oder intervals.icu-Fahrten beim ersten Start und führt Indoor und Outdoor in einem Leistungsbild zusammen.",
         "<strong>Deine Struktur:</strong> die Workout-Bibliothek ist nach physiologischem Zweck kuratiert — VO2max, Schwelle, Sweet Spot — du kannst eine Woche also selbst aufbauen, ohne dass ein Algorithmus sie verplant.",
         "<strong>Dein Geld:</strong> aktuell kein Abo, und ein preiswertes, wenn es kommt."
       ],
       bothTitle: "Kannst du beide nutzen?",
-      bothBody: "Ja. Manche fahren einen TrainerRoad-Plan und nutzen ENDURE als physiologisches Dashboard — Laktattests loggen, CORE Heat Zones tracken und FTP- und VO2max-Trends über alle Fahrten hinweg verfolgen, via Strava-Sync.",
+      bothBody: "Ja. Manche fahren einen TrainerRoad-Plan und nutzen ENDURE als physiologisches Dashboard — Laktattests loggen, CORE Heat Zones tracken und FTP- und VO2max-Trends über alle Fahrten hinweg verfolgen, via Strava- oder intervals.icu-Sync.",
       faq: [
         {
           q: "Gibt es eine kostenlose Alternative zu TrainerRoad?",
