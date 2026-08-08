@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
 >
   <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
     <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">PRIVACY POLICY</h1>
-    <p class="mb-8 text-slate-500 font-medium">Last updated: 2024-02-23</p>
+    <p class="mb-8 text-slate-500 font-medium">Last updated: 2026-08-07</p>
     
     <div class="space-y-6 text-lg">
       <p>This Privacy Policy explains how ENDURE (“we”, “us”, “our”) collects, uses, and shares data when you use the ENDURE mobile app, desktop app (if available), and website endure-cycling.com (together, the “Services”).</p>
@@ -45,7 +45,15 @@ import Layout from '../layouts/Layout.astro';
         <li>Limited device/app context to diagnose issues (as configured)</li>
       </ul>
 
-      <h3 class="text-xl font-semibold text-slate-900">2.5 Website analytics (Google Analytics)</h3>
+      <h3 class="text-xl font-semibold text-slate-900">2.5 Subscription data</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Your subscription tier and status (free, trial, active, cancelled, expired) and the relevant dates</li>
+        <li>Which store the subscription came from (Apple App Store or Google Play) and the purchased product</li>
+        <li>Purchase and renewal events reported to us by our subscription provider</li>
+      </ul>
+      <p>We never receive or store your payment details. See section 4 for who processes what.</p>
+
+      <h3 class="text-xl font-semibold text-slate-900">2.6 Website analytics (Google Analytics)</h3>
       <ul class="list-disc pl-6 space-y-2">
         <li>Website usage data (e.g., page views, interactions, device/browser information, approximate location)</li>
         <li>Cookies and similar identifiers may be used depending on configuration and applicable consent requirements.</li>
@@ -87,16 +95,17 @@ import Layout from '../layouts/Layout.astro';
         <li>Sentry — crash reporting and diagnostics (processor)</li>
         <li>Google Analytics — website analytics (processor)</li>
         <li>Firebase Cloud Messaging (FCM) / Apple Push Notification service (APNs) — delivery of push notifications (service providers)</li>
-        <li>Subscription management (RevenueCat) — if/when enabled</li>
+        <li>RevenueCat — subscription and entitlement management (processor)</li>
       </ul>
-      <p>If subscription functionality is enabled, we may use RevenueCat to manage subscription entitlement status (e.g., whether you have access to paid features) and to validate purchases. RevenueCat may process:</p>
+      <p>We use RevenueCat to validate purchases made in the app stores and to determine whether your account has access to paid features. RevenueCat processes:</p>
       <ul class="list-disc pl-6 space-y-2">
-        <li>an app user identifier (e.g., RevenueCat App User ID),</li>
-        <li>subscription/entitlement status,</li>
-        <li>purchase/receipt metadata from app stores for validation, and</li>
-        <li>limited device/app metadata (e.g., OS version).</li>
+        <li>an app user identifier — for ENDURE this is your ENDURE user ID, so that a purchase can be matched to your account across devices,</li>
+        <li>subscription and entitlement status, including trial and renewal dates,</li>
+        <li>purchase and receipt metadata from the app stores for validation,</li>
+        <li>the store country and currency of the purchase, and</li>
+        <li>limited device and app metadata (e.g., OS version).</li>
       </ul>
-      <p>RevenueCat acts as a processor for this purpose.</p>
+      <p>RevenueCat acts as a processor for this purpose. It notifies our servers of purchase events so your subscription status stays correct after a renewal, cancellation or refund.</p>
       <p><strong>App Stores (Apple / Google)</strong><br>
       If you make purchases through Apple App Store or Google Play, those platforms process payment and billing information as independent controllers under their own privacy policies. We do not receive full payment details (e.g., credit card numbers).</p>
       <p>We may also disclose data if required by law, or to protect rights, safety, and security.</p>

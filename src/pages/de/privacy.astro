@@ -1,0 +1,145 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  lang="de"
+  title="Datenschutzerklärung — ENDURE"
+  description="Wie ENDURE deine Daten in App und Website erhebt, nutzt und schützt — Konto-, Trainings-, Geräte-, Abo- und Analysedaten im Detail."
+>
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">DATENSCHUTZERKLÄRUNG</h1>
+    <p class="mb-8 text-slate-500 font-medium">Zuletzt aktualisiert: 07.08.2026</p>
+
+    <div class="space-y-6 text-lg">
+      <p>Diese Datenschutzerklärung erklärt, wie ENDURE („wir“, „uns“) Daten erhebt, nutzt und weitergibt, wenn du die ENDURE-App und die Website endure-cycling.com (zusammen die „Dienste“) nutzt.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">1. Verantwortlicher / Kontakt</h2>
+      <p>Verantwortlicher: Christoph Martin (ENDURE)<br>
+      Anschrift: Fischerweg 8, 7503 Großpetersdorf, Österreich<br>
+      E-Mail: <a href="mailto:info@endure-cycling.com" class="text-accent hover:underline">info@endure-cycling.com</a></p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">2. Welche Daten wir erheben</h2>
+      <h3 class="text-xl font-semibold text-slate-900">2.1 Konto- und Identitätsdaten</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>E-Mail-Adresse und Authentifizierungs-Metadaten (über Supabase Auth)</li>
+        <li>Nutzer-ID und grundlegende Kontoeinstellungen</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-slate-900">2.2 Trainings-, Workout- und Leistungsdaten</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Workouts, die du erstellst oder importierst (z. B. .zwo, .erg, .mrc, .fit samt Metadaten)</li>
+        <li>In ENDURE aufgezeichnete Ride- und Session-Daten (z. B. Leistung, Trittfrequenz, Herzfrequenz, Zeitstempel, Intervalle)</li>
+        <li>Abgeleitete Auswertungen und Verläufe (z. B. FTP- und VO₂max-Schätzungen, Zeit in Zonen, Trainingsbelastung)</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-slate-900">2.3 Geräte- und technische Daten</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Gerätemodell, Betriebssystemversion, App-Version und Build, Sprache, Zeitzone</li>
+        <li>Verbindungsdiagnose für die Trainer- und Sensoranbindung (z. B. Bluetooth-Status, unterstützte Funktionen)</li>
+        <li>Push-Token (FCM/APNs)</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-slate-900">2.4 Absturz- und Fehlerdiagnose (Sentry)</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Absturzberichte, Fehlerprotokolle, Stacktraces und Performance-Traces</li>
+        <li>Begrenzter Geräte- und App-Kontext zur Fehleranalyse (je nach Konfiguration)</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-slate-900">2.5 Abo-Daten</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Deine Abo-Stufe und dein Abo-Status (kostenlos, Testphase, aktiv, gekündigt, abgelaufen) samt zugehöriger Daten</li>
+        <li>Über welchen Store das Abo läuft (Apple App Store oder Google Play) und welches Produkt gekauft wurde</li>
+        <li>Kauf- und Verlängerungsereignisse, die uns unser Abo-Dienstleister meldet</li>
+      </ul>
+      <p>Deine Zahlungsdaten erhalten und speichern wir zu keinem Zeitpunkt. Wer was verarbeitet, steht in Abschnitt 4.</p>
+
+      <h3 class="text-xl font-semibold text-slate-900">2.6 Website-Analyse (Google Analytics)</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Nutzungsdaten der Website (z. B. Seitenaufrufe, Interaktionen, Geräte- und Browserinformationen, ungefährer Standort)</li>
+        <li>Je nach Konfiguration und geltenden Einwilligungspflichten können Cookies und ähnliche Kennungen eingesetzt werden.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">3. Zwecke und Rechtsgrundlagen (DSGVO)</h2>
+      <p>Wenn du dich im EWR, im Vereinigten Königreich oder in der Schweiz befindest, verarbeiten wir personenbezogene Daten auf Grundlage einer oder mehrerer der folgenden Rechtsgrundlagen:</p>
+
+      <h3 class="text-xl font-semibold text-slate-900">3.1 Bereitstellung der Dienste (Art. 6 Abs. 1 lit. b DSGVO — Vertragserfüllung)</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Konto anlegen und verwalten</li>
+        <li>Workouts und Sessions speichern, anzeigen und auswerten</li>
+        <li>Importe, Historie und Fortschrittsansichten bereitstellen</li>
+        <li>Geräteverbindungen (Trainer, Sensoren) bereitstellen, soweit unterstützt</li>
+        <li>Abo-Berechtigungen ermitteln und Käufe validieren</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-slate-900">3.2 Zuverlässigkeit, Sicherheit und Support (Art. 6 Abs. 1 lit. f DSGVO — berechtigte Interessen)</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Missbrauch verhindern, Sicherheit wahren, Fehler beheben</li>
+        <li>Abstürze und Fehler diagnostizieren (Sentry)</li>
+        <li>Performance, Stabilität und Nutzererlebnis verbessern</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-slate-900">3.3 Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) — soweit erforderlich</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Nicht notwendige Analyse-Cookies bzw. Tracker auf der Website (Google Analytics), abhängig von Region und Konfiguration</li>
+        <li>Marketing-E-Mails und Newsletter (sofern angeboten)</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-slate-900">3.4 Besondere Kategorien (Gesundheitsdaten) — ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO)</h3>
+      <p>Ein Teil der in der App verarbeiteten Daten kann als Gesundheitsdaten gelten, etwa Herzfrequenzdaten und verwandte physiologische Signale, wenn du entsprechende Sensoren verbindest. Soweit das zutrifft, verarbeiten wir diese Daten ausschließlich mit deiner ausdrücklichen Einwilligung nach Art. 9 Abs. 2 lit. a DSGVO und, soweit erforderlich, Art. 6 Abs. 1 lit. a DSGVO.</p>
+      <p>Du kannst deine Einwilligung jederzeit in den App-Einstellungen widerrufen. Nach einem Widerruf erheben und verarbeiten wir für die betroffenen Funktionen keine neuen Gesundheitsdaten mehr. Die Löschung bestehender Daten kannst du ebenfalls verlangen (siehe Abschnitt 8).</p>
+      <p>Ohne Einwilligung kannst du die Teile der Dienste weiter nutzen, die keine Verarbeitung von Gesundheitsdaten erfordern; der Funktionsumfang kann dann eingeschränkt sein.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">4. Weitergabe von Daten / Auftragsverarbeiter und Empfänger</h2>
+      <p>Wir geben Daten nur weiter, soweit das für den Betrieb der Dienste erforderlich ist:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Supabase (EU-Region) — Authentifizierung und Datenbank-Hosting (Auftragsverarbeiter)</li>
+        <li>Sentry — Absturzberichte und Diagnose (Auftragsverarbeiter)</li>
+        <li>Google Analytics — Website-Analyse (Auftragsverarbeiter)</li>
+        <li>Firebase Cloud Messaging (FCM) / Apple Push Notification service (APNs) — Zustellung von Push-Nachrichten (Dienstleister)</li>
+        <li>RevenueCat — Verwaltung von Abos und Berechtigungen (Auftragsverarbeiter)</li>
+      </ul>
+      <p>Wir setzen RevenueCat ein, um Käufe in den App-Stores zu validieren und festzustellen, ob dein Konto Zugriff auf kostenpflichtige Funktionen hat. RevenueCat verarbeitet:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>eine App-Nutzerkennung — bei ENDURE ist das deine ENDURE-Nutzer-ID, damit ein Kauf geräteübergreifend deinem Konto zugeordnet werden kann,</li>
+        <li>Abo- und Berechtigungsstatus einschließlich Test- und Verlängerungsdaten,</li>
+        <li>Kauf- und Beleg-Metadaten der App-Stores zur Validierung,</li>
+        <li>Land und Währung des Kaufs sowie</li>
+        <li>begrenzte Geräte- und App-Metadaten (z. B. Betriebssystemversion).</li>
+      </ul>
+      <p>RevenueCat handelt dabei als Auftragsverarbeiter und meldet unseren Servern Kaufereignisse, damit dein Abo-Status nach Verlängerung, Kündigung oder Rückerstattung korrekt bleibt.</p>
+      <p><strong>App-Stores (Apple / Google)</strong><br>
+      Wenn du über den Apple App Store oder Google Play kaufst, verarbeiten diese Plattformen Zahlungs- und Abrechnungsdaten als eigenständige Verantwortliche nach ihren eigenen Datenschutzerklärungen. Vollständige Zahlungsdaten (z. B. Kreditkartennummern) erhalten wir nicht.</p>
+      <p>Darüber hinaus geben wir Daten weiter, wenn wir gesetzlich dazu verpflichtet sind oder um Rechte, Sicherheit und Betrieb zu schützen.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">5. Internationale Übermittlungen</h2>
+      <p>Die zentralen App-Daten werden in der EU gehostet (Supabase EU-Region). Einzelne Dienstleister können Daten außerhalb deines Landes verarbeiten, möglicherweise auch in den USA. Soweit erforderlich stützen wir uns auf geeignete Garantien, etwa Standardvertragsklauseln, und auf entsprechende Zusagen der Anbieter.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">6. Speicherdauer</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Konto- und Trainingsdaten: solange dein Konto aktiv ist.</li>
+        <li>Absturz- und Fehlerdaten (Sentry): in der Regel 90 Tage, je nach Konfiguration.</li>
+        <li>Website-Analyse (Google Analytics): gemäß GA-Einstellungen, in der Regel 14 Monate.</li>
+        <li>Abo-Daten: solange dein Konto besteht sowie darüber hinaus, soweit gesetzliche Aufbewahrungspflichten bestehen.</li>
+      </ul>
+      <p>Eine Löschung kannst du jederzeit verlangen (Abschnitt 8).</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">7. Sicherheit</h2>
+      <p>Wir setzen angemessene technische und organisatorische Maßnahmen zum Schutz der Daten ein (Verschlüsselung bei der Übertragung, Zugriffskontrollen, Least Privilege). Keine Übertragungs- oder Speichermethode ist zu 100 % sicher.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">8. Deine Rechte (EWR / UK / Schweiz)</h2>
+      <p>Je nach Aufenthaltsort stehen dir Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit sowie auf Widerruf erteilter Einwilligungen zu.</p>
+      <p>Ausübung deiner Rechte: schreib von der mit deinem Konto verknüpften Adresse an <a href="mailto:info@endure-cycling.com" class="text-accent hover:underline">info@endure-cycling.com</a>.</p>
+      <p>Kontolöschung: Du kannst die Löschung deines Kontos per E-Mail von deiner registrierten Adresse an <a href="mailto:info@endure-cycling.com" class="text-accent hover:underline">info@endure-cycling.com</a> verlangen. Wir löschen oder anonymisieren deine Kontodaten, sofern wir bestimmte Informationen nicht aufgrund gesetzlicher Pflichten oder zur Klärung von Streitfällen aufbewahren müssen.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">9. Cookies (Website)</h2>
+      <p>Wenn wir Cookies oder ähnliche Kennungen zu Analysezwecken einsetzen, wirst du je nach Rechtslage und Konfiguration um Einwilligung gebeten. Cookies lassen sich zusätzlich über die Browsereinstellungen steuern.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">10. Kinder</h2>
+      <p>Die Dienste richten sich nicht an Kinder unter 16 Jahren. Wenn du vermutest, dass ein Kind Daten übermittelt hat, kontaktiere uns bitte.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">11. Änderungen</h2>
+      <p>Wir können diese Datenschutzerklärung anpassen. Wir aktualisieren dann das Datum „Zuletzt aktualisiert“ und weisen bei wesentlichen Änderungen gesondert darauf hin.</p>
+    </div>
+  </main>
+</Layout>
