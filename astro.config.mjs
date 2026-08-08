@@ -37,9 +37,9 @@ export default defineConfig({
     }
   },
   // Sitemap is generated at build time (sitemap-index.xml + sitemap-0.xml) with
-  // hreflang alternates derived from the `/de` prefix. The legal pages are
-  // excluded because they exist in English only, so there is no locale pair to
-  // emit — and they were never listed in the hand-maintained sitemap either.
+  // hreflang alternates derived from the `/de` prefix. Routes without a German
+  // counterpart (englishOnlyRoutes) are excluded, since there is no locale pair
+  // to emit — the list is currently empty.
   integrations: [
     sitemap({
       i18n: {
