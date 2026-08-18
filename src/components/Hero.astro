@@ -4,8 +4,31 @@ import { config } from '../config';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).hero;
+const screens = getTranslations(lang).appScreens;
 const iosUrl = config.platforms.ios.url;
 const androidUrl = config.platforms.android.url;
+
+/*
+ * The carousel phones, in ring order — the second one starts centered, its two
+ * neighbours sit left and right, the rest wait off-stage. The script below
+ * derives everything else (dots, rotation, lightbox) from this list's length,
+ * so adding or reordering entries here needs no other change.
+ */
+const shots = [
+  { key: 'today',         src: '/assets/app/today_dashboard.webp' },
+  { key: 'ride',          src: '/assets/app/ride_screen.webp' },
+  { key: 'vo2max',        src: '/assets/app/vo2max_detail.webp' },
+  { key: 'zones',         src: '/assets/app/time_in_zones.webp' },
+  { key: 'kpis',          src: '/assets/app/kpi_dashboard.webp' },
+  { key: 'library',       src: '/assets/app/workout_library.webp' },
+  { key: 'coaching',      src: '/assets/app/ai_coaching.webp' },
+  { key: 'calendarMonth', src: '/assets/app/calendar_month.webp' },
+  { key: 'calendarWeek',  src: '/assets/app/calendar_week.webp' },
+  { key: 'activity',      src: '/assets/app/activity_detail.webp' },
+] as const;
+
+// Only the first three are on stage at load, so only those are worth fetching eagerly.
+const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
 ---
 
 <header class="relative px-6 pt-16 pb-20 md:px-16 md:pt-20 md:pb-28 overflow-hidden">
@@ -51,42 +74,46 @@ const androidUrl = config.platforms.android.url;
     </p>
   </div>
 
-  <!-- Floating phone trio — click a side phone (or swipe) to bring it into focus -->
+  <!-- Floating phones — three on stage at a time; click a side phone (or swipe) to bring it into focus -->
   <div id="phone-stage" data-reveal class="relative mt-16 md:mt-20 mx-auto w-full max-w-[820px] h-[460px] md:h-[680px]">
-    <div class="hero-phone slot-left" role="button" tabindex="0" aria-label="Show dashboard screenshot">
-      <div class="phone-frame rounded-[32px] md:rounded-[40px] animate-float-tilt">
-        <img src="/assets/dark_theme/dashboard_profile.png" alt="ENDURE dashboard with fitness profile" width="300" height="650" loading="eager" class="w-full" />
-      </div>
-    </div>
-    <div class="hero-phone slot-center" role="button" tabindex="0" aria-label="Show ride screen screenshot">
-      <div class="phone-frame rounded-[32px] md:rounded-[40px] animate-float">
-        <img src="/assets/dark_theme/workout_ride.png" alt="ENDURE ride screen with smart trainer control" width="300" height="650" loading="eager" class="w-full" />
-      </div>
-    </div>
-    <div class="hero-phone slot-right" role="button" tabindex="0" aria-label="Show performance trends screenshot">
-      <div class="phone-frame rounded-[32px] md:rounded-[40px] animate-float-tilt [animation-delay:0.6s]">
-        <img src="/assets/dark_theme/performance_trends.png" alt="ENDURE FTP and VO2max performance trends" width="300" height="650" loading="eager" class="w-full" />
-      </div>
-    </div>
-    <div class="hero-phone slot-hidden" role="button" tabindex="0" aria-label="Show power analysis screenshot">
-      <div class="phone-frame rounded-[32px] md:rounded-[40px] animate-float-tilt [animation-delay:0.9s]">
-        <img src="/assets/screenshots/power_analysis.png" alt="ENDURE power profile and time in zones analysis" width="300" height="624" loading="lazy" class="w-full" />
-      </div>
-    </div>
-    <div class="hero-phone slot-hidden" role="button" tabindex="0" aria-label="Show workout player screenshot">
-      <div class="phone-frame rounded-[32px] md:rounded-[40px] animate-float-tilt [animation-delay:1.2s]">
-        <img src="/assets/screenshots/workout_player.png" alt="ENDURE workout player with interval targets" width="300" height="626" loading="lazy" class="w-full" />
-      </div>
-    </div>
+    {shots.map(({ key, src }, i) => {
+      const screen = screens[key];
+      return (
+        <div
+          class={`hero-phone ${SLOTS[i] ?? 'slot-hidden'}`}
+          role="button"
+          tabindex="0"
+          aria-label={t.screenshotAction.replace('{name}', screen.label)}
+        >
+          <div
+            class:list={[
+              'phone-frame rounded-[32px] md:rounded-[40px]',
+              i === 1 ? 'animate-float' : 'animate-float-tilt',
+            ]}
+            style={`animation-delay: ${(i * 0.3).toFixed(1)}s`}
+          >
+            <img
+              src={src}
+              alt={screen.alt}
+              width="300"
+              height="657"
+              loading={i < SLOTS.length ? 'eager' : 'lazy'}
+              decoding="async"
+              class="w-full"
+            />
+          </div>
+        </div>
+      );
+    })}
 
     <!-- Stat chips -->
     <div data-reveal class="stat-chip absolute z-20 top-2 left-0 md:top-10 md:-left-2 lg:-left-8 animate-float [animation-delay:0.3s]">
       <div class="font-mono text-[10px] md:text-xs text-accent">FTP TREND</div>
-      <div class="font-bold text-base md:text-2xl text-slate-900">↗ 284 W</div>
+      <div class="font-bold text-base md:text-2xl text-slate-900">↗ 306 W</div>
     </div>
     <div data-reveal class="stat-chip absolute z-20 bottom-14 right-0 md:bottom-28 md:-right-2 lg:-right-10 animate-float [animation-delay:1s]">
       <div class="font-mono text-[10px] md:text-xs text-accent">VO2MAX</div>
-      <div class="font-bold text-base md:text-2xl text-slate-900">58.2</div>
+      <div class="font-bold text-base md:text-2xl text-slate-900">59.0</div>
     </div>
   </div>
 

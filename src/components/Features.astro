@@ -5,14 +5,20 @@ import { localeHref } from '../utils/paths';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).features;
+const screens = getTranslations(lang).appScreens;
 
+/*
+ * The captioned screenshots below the feature cards. Alt text and captions come
+ * from the shared appScreens map, so the hero carousel and this showcase never
+ * drift apart. The screens listed here are the ones that read cleanly at this
+ * size — the rest of the set stays in the carousel.
+ */
 const screenshots = [
-  { src: '/assets/screenshots/builtin_workouts.min.webp', alt: 'ENDURE Workout Library', caption: t.screenshot1Caption },
-  { src: '/assets/screenshots/imported_workouts.min.webp', alt: 'ENDURE Import Workouts', caption: t.screenshot2Caption },
-  { src: '/assets/screenshots/2026-01-25 10_28_53-Endure.min.min.webp', alt: 'ENDURE Power Profile', caption: t.screenshot3Caption },
-  { src: '/assets/screenshots/the_ride.min.min.webp', alt: 'ENDURE Ride Screen', caption: t.screenshot4Caption },
-  { src: '/assets/screenshots/smart_smoothing.min.webp', alt: 'ENDURE Smart Smoothing', caption: t.screenshot5Caption },
-  { src: '/assets/ZoneDistribution.min.webp', alt: 'ENDURE Time in Zones', caption: t.screenshot6Caption },
+  { src: '/assets/app/ride_screen.webp', ...screens.ride },
+  { src: '/assets/app/vo2max_detail.webp', ...screens.vo2max },
+  { src: '/assets/app/time_in_zones.webp', ...screens.zones },
+  { src: '/assets/app/ai_coaching.webp', ...screens.coaching },
+  { src: '/assets/app/activity_detail.webp', ...screens.activity },
 ];
 ---
 
@@ -95,12 +101,16 @@ const screenshots = [
     </div>
 
     <!-- Screenshot showcase -->
-    <div class="mt-20 grid md:grid-cols-2 gap-8">
+    <div class="mt-20 mx-auto max-w-[900px] flex flex-wrap justify-center gap-x-8 gap-y-12">
       {screenshots.map((shot, idx) => (
-        <div class="relative group" data-reveal data-reveal-delay={idx % 2 === 1 ? 100 : undefined}>
+        <div class="w-[240px] md:w-[260px]" data-reveal data-reveal-delay={idx % 2 === 1 ? 100 : undefined}>
           <img
             src={shot.src}
             alt={shot.alt}
+            width="260"
+            height="569"
+            loading="lazy"
+            decoding="async"
             data-zoomable
             class="relative rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 w-full cursor-zoom-in hover:shadow-2xl transition-shadow"
           />

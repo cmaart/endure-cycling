@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "favicons": "node tools/generate-favicons.mjs",
+    "screenshots": "node tools/optimize-screenshots.mjs",
     "emails": "mjml email-templates/*.mjml -o email-templates/ && cp email-templates/*.html public/email-templates/",
     "send-email": "node email-templates/send.mjs"
   },
