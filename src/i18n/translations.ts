@@ -26,7 +26,59 @@ export const translations = {
       secondary: "Frequent updates, built together with the cycling community.",
       desktopNote: "Desktop versions (Windows & macOS) planned",
       appStoreBadgeAlt: "Download on the App Store",
-      googlePlayBadgeAlt: "Get it on Google Play"
+      googlePlayBadgeAlt: "Get it on Google Play",
+      // Aria-label for the carousel phones and their dots; {name} is an appScreens label.
+      screenshotAction: "Show {name} screenshot"
+    },
+    // App screenshots, shared by the hero carousel (Hero.astro) and the
+    // screenshot showcase (Features.astro). label = short name for aria-labels,
+    // alt = descriptive alt text, caption = only on the screens the grid shows.
+    appScreens: {
+      ride: {
+        label: "Ride screen",
+        alt: "ENDURE ride screen with ERG target power, heart rate, cadence and CORE heat zone",
+        caption: "Ride Screen: precise ERG control with live CORE heat zones"
+      },
+      vo2max: {
+        label: "VO2max trend",
+        alt: "ENDURE VO2max trend with age-group benchmark and the rides that moved it",
+        caption: "VO2max estimated from your rides — no lab test, with age-group benchmark"
+      },
+      zones: {
+        label: "Time in zones",
+        alt: "ENDURE time in zones with the weekly Z1 to Z7 power distribution",
+        caption: "Time in Zones: where your training time actually goes, week by week"
+      },
+      coaching: {
+        label: "AI coaching",
+        alt: "ENDURE AI coaching insights with training analysis and coach tips",
+        caption: "AI Coaching Insights: what worked, what to fix, what to do next"
+      },
+      activity: {
+        label: "Activity detail",
+        alt: "ENDURE activity detail with power, heart rate, TSS and efficiency metrics",
+        caption: "Every ride in detail: NP, IF, TSS, Pw:Hr and efficiency factor"
+      },
+      today: {
+        label: "Today view",
+        alt: "ENDURE today view with recovery score, load balance and the workout prescribed for today"
+      },
+      kpis: {
+        label: "KPI dashboard",
+        alt: "ENDURE KPI dashboard with form, fitness, weekly TSS, eFTP, VO2max and lactate threshold"
+      },
+      library: {
+        label: "Workout library",
+        alt: "ENDURE workout library with training categories and interval previews"
+      },
+      calendarMonth: {
+        label: "Training calendar",
+        alt: "ENDURE training calendar with a ride's route map and elevation profile"
+      },
+      calendarWeek: {
+        label: "Weekly calendar",
+        alt: "ENDURE training calendar with rides, runs and swims synced from Strava"
+      }
     },
     // Ticker strip
     ticker: [
@@ -143,14 +195,7 @@ export const translations = {
       },
       
       analyticsLink: "FTP & VO2max tracking in detail",
-      trainersLink: "Which smart trainers work with ENDURE",
-
-      screenshot1Caption: "Curated workout library with physiological targets",
-      screenshot2Caption: "Import your own workouts from any source",
-      screenshot3Caption: "Detailed Power Profile: Strengths, Weaknesses & FTP Estimate",
-      screenshot4Caption: "Ride Screen: Precise Smart Trainer Control (ERG Mode)",
-      screenshot5Caption: "Smart-Smoothing: Balances erratic power data for smooth trainer control.",
-      screenshot6Caption: "Time in Zones: Power & HR zone distribution with distribution summary"
+      trainersLink: "Which smart trainers work with ENDURE"
     },
     // Roadmap
     roadmap: {
@@ -389,7 +434,59 @@ export const translations = {
       secondary: "Laufend neue Updates, entwickelt gemeinsam mit der Community.",
       desktopNote: "Desktop-Versionen (Windows & macOS) geplant",
       appStoreBadgeAlt: "Laden im App Store",
-      googlePlayBadgeAlt: "Jetzt bei Google Play"
+      googlePlayBadgeAlt: "Jetzt bei Google Play",
+      // Aria-Label der Karussell-Phones und ihrer Dots; {name} ist ein appScreens-Label.
+      screenshotAction: "Screenshot {name} anzeigen"
+    },
+    // App-Screenshots, gemeinsam genutzt von Hero-Karussell (Hero.astro) und
+    // Screenshot-Showcase (Features.astro). label = Kurzname für Aria-Labels,
+    // alt = beschreibender Alt-Text, caption = nur bei den Screens im Grid.
+    appScreens: {
+      ride: {
+        label: "Ride Screen",
+        alt: "ENDURE Ride Screen mit ERG-Zielleistung, Herzfrequenz, Trittfrequenz und CORE Heat Zone",
+        caption: "Ride Screen: präzise ERG-Steuerung mit Live CORE Heat Zones"
+      },
+      vo2max: {
+        label: "VO2max-Trend",
+        alt: "ENDURE VO2max-Trend mit Altersklassen-Vergleich und den Rides, die ihn bewegt haben",
+        caption: "VO2max aus deinen Rides geschätzt — ohne Labortest, mit Altersklassen-Vergleich"
+      },
+      zones: {
+        label: "Zeit in Zonen",
+        alt: "ENDURE Zeit in Zonen mit der Wochenverteilung von Z1 bis Z7",
+        caption: "Zeit in Zonen: wo deine Trainingszeit wirklich landet, Woche für Woche"
+      },
+      coaching: {
+        label: "AI Coaching",
+        alt: "ENDURE AI Coaching Insights mit Trainingsanalyse und Coach-Tipps",
+        caption: "AI Coaching Insights: was funktioniert hat, was fehlt, was als Nächstes kommt"
+      },
+      activity: {
+        label: "Aktivitätsdetail",
+        alt: "ENDURE Aktivitätsdetail mit Power-, Herzfrequenz-, TSS- und Effizienzwerten",
+        caption: "Jede Einheit im Detail: NP, IF, TSS, Pw:Hr und Efficiency Factor"
+      },
+      today: {
+        label: "Tagesansicht",
+        alt: "ENDURE Tagesansicht mit Recovery-Score, Load Balance und dem Workout für heute"
+      },
+      kpis: {
+        label: "KPI-Dashboard",
+        alt: "ENDURE KPI-Dashboard mit Form, Fitness, Wochen-TSS, eFTP, VO2max und Laktatschwelle"
+      },
+      library: {
+        label: "Workout-Bibliothek",
+        alt: "ENDURE Workout-Bibliothek mit Trainingskategorien und Intervall-Vorschau"
+      },
+      calendarMonth: {
+        label: "Trainingskalender",
+        alt: "ENDURE Trainingskalender mit Streckenkarte und Höhenprofil einer Ausfahrt"
+      },
+      calendarWeek: {
+        label: "Wochenkalender",
+        alt: "ENDURE Trainingskalender mit Rides, Läufen und Schwimmeinheiten aus Strava"
+      }
     },
     // Ticker strip
     ticker: [
@@ -506,14 +603,7 @@ export const translations = {
       },
       
       analyticsLink: "FTP- & VO2max-Tracking im Detail",
-      trainersLink: "Welche Rollentrainer mit ENDURE funktionieren",
-
-      screenshot1Caption: "Kuratierte Workout-Bibliothek mit physiologischen Zielen",
-      screenshot2Caption: "Importiere deine eigenen Workouts aus jeder Quelle",
-      screenshot3Caption: "Detailliertes Power Profile: Stärken, Schwächen & FTP-Einschätzung",
-      screenshot4Caption: "Ride Screen: Präzise Smart Trainer Steuerung (ERG Modus)",
-      screenshot5Caption: "Smart-Smoothing: Gleicht erratische Power-Daten aus für eine sanfte Trainer-Steuerung.",
-      screenshot6Caption: "Zeit in Zonen: Power- & HR-Zonenverteilung mit Verteilungs-Übersicht"
+      trainersLink: "Welche Rollentrainer mit ENDURE funktionieren"
     },
     // Roadmap
     roadmap: {
