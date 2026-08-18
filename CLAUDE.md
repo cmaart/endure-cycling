@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Static marketing site for **ENDURE**, an indoor cycling app available on iOS and Android (currently free, subscription planned), with Windows and macOS planned. Live at https://www.endure-cycling.com. Built with Astro 5 + Tailwind CSS v4, deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `master`.
+Static marketing site for **ENDURE**, an indoor cycling app available on iOS and Android (currently free, subscription planned). Desktop versions are not currently planned and the site must not mention them. Live at https://www.endure-cycling.com. Built with Astro 5 + Tailwind CSS v4, deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `master`.
 
 ## Commands
 
@@ -28,7 +28,7 @@ Long-form SEO content lives in sibling files with the same en/de convention: `sr
 
 ### Per-platform availability
 
-`src/config.ts` exports `config.platforms` — an object keyed by `ios`, `android`, `windows`, `macos`, each with `{ available: boolean, url: string | null }`. Components (`Hero.astro`, `Roadmap.astro`) read these flags to render store badges + green ✅ "Available" cards versus blue 📅 "Planned" cards. Flip `available` and set `url` at platform launch — do not hardcode availability state in components. The `PlatformKey` type is exported for typed iteration.
+`src/config.ts` exports `config.platforms` — an object keyed by `ios`, `android`, `windows`, `macos`, each with `{ available: boolean, url: string | null }`. Components (`Hero.astro`, `Roadmap.astro`) read these flags to render official store badges and green ✅ "Available" cards. Windows/macOS entries exist in the config but are not rendered anywhere (desktop is not currently planned); `Roadmap.astro` lists only `ios` and `android` in its `platformOrder`. Flip `available`, set `url`, and re-add the platform to `platformOrder` (plus its `roadmap` translation keys) at platform launch — do not hardcode availability state in components. The `PlatformKey` type is exported for typed iteration.
 
 ### Every URL ends in a slash
 

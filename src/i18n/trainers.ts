@@ -81,7 +81,7 @@ export const trainersContent = {
       },
       {
         q: 'Do I need a special dongle or adapter?',
-        a: 'Not on a phone or tablet — Bluetooth is built in. The planned Windows and macOS versions will need a Bluetooth adapter if the computer does not have one.'
+        a: 'Not on a phone or tablet — Bluetooth is built in.'
       },
       {
         q: 'Can I use a smart trainer and a separate power meter at the same time?',
@@ -163,7 +163,7 @@ export const trainersContent = {
       },
       {
         q: 'Brauche ich einen speziellen Dongle oder Adapter?',
-        a: 'Am Handy oder Tablet nicht — Bluetooth ist eingebaut. Die geplanten Windows- und macOS-Versionen brauchen einen Bluetooth-Adapter, falls der Rechner keinen hat.'
+        a: 'Am Handy oder Tablet nicht — Bluetooth ist eingebaut.'
       },
       {
         q: 'Kann ich Smart Trainer und separaten Powermeter gleichzeitig nutzen?',

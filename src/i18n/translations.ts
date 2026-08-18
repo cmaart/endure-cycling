@@ -21,10 +21,7 @@ export const translations = {
       // Rendered as an H2 under the subline: the headline carries the claim, this
       // line carries the terms riders actually search for.
       seoLine: "Indoor cycling app for smart and turbo trainers — iOS & Android",
-      ctaIos: "Download on the App Store",
-      ctaAndroid: "Get it on Google Play",
       secondary: "Frequent updates, built together with the cycling community.",
-      desktopNote: "Desktop versions (Windows & macOS) planned",
       appStoreBadgeAlt: "Download on the App Store",
       googlePlayBadgeAlt: "Get it on Google Play",
       // Aria-label for the carousel phones and their dots; {name} is an appScreens label.
@@ -199,14 +196,10 @@ export const translations = {
     },
     // Roadmap
     roadmap: {
-      title: "Platform",
-      titleHighlight: "Roadmap",
+      title: "Available",
+      titleHighlight: "now",
       subtitle: "Frequent updates, full gas ahead.",
-      
-      windows: "Windows",
-      windowsStatus: "Planned",
-      macos: "macOS",
-      macosStatus: "Planned",
+
       android: "Android",
       androidStatus: "Available",
       ios: "iOS",
@@ -214,7 +207,7 @@ export const translations = {
       
       communityTitle: "We're Building This Together",
       communityText: "Feature requests are welcome and feed straight into the update cycle. Your feedback shapes ENDURE.",
-      communityLink: "ENDURE on GitHub",
+      feedbackLink: "Send feedback",
       instagramLink: "ENDURE on Instagram"
     },
     // Comparison / capability table
@@ -226,7 +219,7 @@ export const translations = {
       valueLabel: "What you get",
       rows: [
         { feature: "Price", value: "Free right now, with an affordable subscription planned" },
-        { feature: "Platforms", value: "iOS & Android (Windows & macOS planned)" },
+        { feature: "Platforms", value: "iOS & Android" },
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verified) — ERG target & trainer resistance from the bars, no simulated cassette" },
         { feature: "Workout import", value: ".ZWO, .MRC and .ERG files" },
@@ -266,7 +259,7 @@ export const translations = {
         },
         {
           q: "Which platforms is ENDURE available on?",
-          a: "ENDURE is available on iOS and Android. Desktop versions for Windows and macOS are planned, so you will be able to train on the big screen later too."
+          a: "ENDURE is available on iOS and Android."
         },
         {
           q: "How does ENDURE estimate FTP and VO2max?",
@@ -333,12 +326,6 @@ export const translations = {
       tagline: "Driven by data. Built to endure.",
       ctaTitle1: "Driven by data.",
       ctaTitle2: "Built to endure.",
-      ctaAppStore: "App Store",
-      ctaGooglePlay: "Google Play",
-
-      requirementsTitle: "System Requirements",
-      windows: "Windows 10 / 11",
-      bluetooth: "Bluetooth Adapter Required",
 
       linksTitle: "Links",
       vsZwift: "Zwift alternative",
@@ -353,7 +340,6 @@ export const translations = {
       featuresTitle: "Features",
       eventsCalendar: "Race Calendar 2026 – Cycling & Triathlon",
       instagram: "Instagram",
-      github: "GitHub",
       about: "About",
       privacy: "Privacy Policy",
       terms: "Terms of Use",
@@ -363,13 +349,6 @@ export const translations = {
       
       copyright: "ENDURE. All rights reserved.",
       made: "Built in Austria for cyclists who love data."
-    },
-    // Video Demo
-    videoDemo: {
-      title: "See it",
-      titleHighlight: "in action",
-      subtitle: "From app start to riding in under 30 seconds, recorded in real time.",
-      caption: "App start to ride, without a time-lapse"
     },
     // SEO
     seo: {
@@ -429,10 +408,7 @@ export const translations = {
       // Als H2 unter der Subline gerendert: die Headline trägt den Claim, diese
       // Zeile trägt die Begriffe, mit denen tatsächlich gesucht wird.
       seoLine: "Indoor-Cycling- und Rollentrainer-App für iOS & Android",
-      ctaIos: "Im App Store laden",
-      ctaAndroid: "Bei Google Play",
       secondary: "Laufend neue Updates, entwickelt gemeinsam mit der Community.",
-      desktopNote: "Desktop-Versionen (Windows & macOS) geplant",
       appStoreBadgeAlt: "Laden im App Store",
       googlePlayBadgeAlt: "Jetzt bei Google Play",
       // Aria-Label der Karussell-Phones und ihrer Dots; {name} ist ein appScreens-Label.
@@ -607,14 +583,10 @@ export const translations = {
     },
     // Roadmap
     roadmap: {
-      title: "Plattform",
-      titleHighlight: "Roadmap",
+      title: "Jetzt",
+      titleHighlight: "verfügbar",
       subtitle: "Häufige Updates, Vollgas voraus.",
-      
-      windows: "Windows",
-      windowsStatus: "Geplant",
-      macos: "macOS",
-      macosStatus: "Geplant",
+
       android: "Android",
       androidStatus: "Verfügbar",
       ios: "iOS",
@@ -622,7 +594,7 @@ export const translations = {
       
       communityTitle: "Wir bauen das gemeinsam",
       communityText: "Feature-Wünsche sind willkommen und fließen direkt in den Update-Zyklus ein. Dein Feedback gestaltet ENDURE mit.",
-      communityLink: "ENDURE auf GitHub",
+      feedbackLink: "Feedback senden",
       instagramLink: "ENDURE auf Instagram"
     },
     // Comparison / capability table
@@ -634,7 +606,7 @@ export const translations = {
       valueLabel: "Das bekommst du",
       rows: [
         { feature: "Preis", value: "Aktuell kostenlos, ein preiswertes Abo ist geplant" },
-        { feature: "Plattformen", value: "iOS & Android (Windows & macOS geplant)" },
+        { feature: "Plattformen", value: "iOS & Android" },
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verifiziert) — ERG-Ziel & Trainer-Widerstand vom Lenker, ohne simulierte Kassette" },
         { feature: "Workout-Import", value: ".ZWO, .MRC und .ERG Dateien" },
@@ -674,7 +646,7 @@ export const translations = {
         },
         {
           q: "Auf welchen Plattformen ist ENDURE verfügbar?",
-          a: "ENDURE ist für iOS und Android verfügbar. Desktop-Versionen für Windows und macOS sind in Planung, damit du später auch am großen Bildschirm trainieren kannst."
+          a: "ENDURE ist für iOS und Android verfügbar."
         },
         {
           q: "Wie schätzt ENDURE FTP und VO2max?",
@@ -741,12 +713,6 @@ export const translations = {
       tagline: "Für alle, die es genau wissen wollen.",
       ctaTitle1: "Für alle,",
       ctaTitle2: "die es genau wissen wollen.",
-      ctaAppStore: "App Store",
-      ctaGooglePlay: "Google Play",
-
-      requirementsTitle: "Systemvoraussetzungen",
-      windows: "Windows 10 / 11",
-      bluetooth: "Bluetooth Adapter Erforderlich",
 
       linksTitle: "Links",
       vsZwift: "Zwift Alternative",
@@ -761,7 +727,6 @@ export const translations = {
       featuresTitle: "Features",
       eventsCalendar: "Radrennen & Triathlon Kalender 2026",
       instagram: "Instagram",
-      github: "GitHub",
       about: "Über uns",
       privacy: "Datenschutz",
       terms: "Nutzungsbedingungen",
@@ -771,13 +736,6 @@ export const translations = {
       
       copyright: "ENDURE. Alle Rechte vorbehalten.",
       made: "Entwickelt in Österreich für Radfahrer, die Daten lieben."
-    },
-    // Video Demo
-    videoDemo: {
-      title: "So schnell",
-      titleHighlight: "geht's wirklich",
-      subtitle: "Vom App-Start bis aufs Rad in unter 30 Sekunden, aufgenommen in Echtzeit.",
-      caption: "App-Start bis Fahrt, ohne Zeitraffer"
     },
     // SEO
     seo: {

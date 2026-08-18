@@ -20,7 +20,7 @@ export const vsContent = {
       rows: [
         { feature: "Core focus", endure: "Precision training & physiological analysis", other: "Virtual worlds, racing & social riding" },
         { feature: "Price", endure: "Free right now — affordable subscription planned", other: "Paid monthly subscription" },
-        { feature: "Platforms", endure: "iOS & Android (Windows & macOS planned)", other: "PC, Mac, iOS, Android, Apple TV" },
+        { feature: "Platforms", endure: "iOS & Android", other: "PC, Mac, iOS, Android, Apple TV" },
         { feature: "Smart trainer control (ERG)", endure: "Yes — Bluetooth, with smart-smoothing", other: "Yes" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verified) — ERG target & resistance from the bars, no simulated cassette", other: "Yes — simulated gears via Zwift Cog & Click" },
         { feature: "Structured workouts", endure: "Curated physiological library + .ZWO/.MRC/.ERG import", other: "Large library + custom workouts" },
@@ -95,7 +95,7 @@ export const vsContent = {
       rows: [
         { feature: "Core focus", endure: "Precision training & physiological analysis", other: "Adaptive, algorithm-generated training plans" },
         { feature: "Price", endure: "Free right now — affordable subscription planned", other: "Paid monthly/annual subscription" },
-        { feature: "Platforms", endure: "iOS & Android (Windows & macOS planned)", other: "PC, Mac, iOS, Android" },
+        { feature: "Platforms", endure: "iOS & Android", other: "PC, Mac, iOS, Android" },
         { feature: "Smart trainer control (ERG)", endure: "Yes — Bluetooth, with smart-smoothing", other: "Yes" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verified) — ERG target & resistance from the bars", other: "Not available" },
         { feature: "Training plans", endure: "Curated workout library — you stay in charge", other: "Adaptive plans built by algorithms" },
@@ -169,7 +169,7 @@ export const vsContent = {
       rows: [
         { feature: "Kernfokus", endure: "Präzises Training & physiologische Analyse", other: "Virtuelle Welten, Rennen & Social Riding" },
         { feature: "Preis", endure: "Aktuell kostenlos — preiswertes Abo geplant", other: "Kostenpflichtiges Monatsabo" },
-        { feature: "Plattformen", endure: "iOS & Android (Windows & macOS geplant)", other: "PC, Mac, iOS, Android, Apple TV" },
+        { feature: "Plattformen", endure: "iOS & Android", other: "PC, Mac, iOS, Android, Apple TV" },
         { feature: "Smart-Trainer-Steuerung (ERG)", endure: "Ja — Bluetooth, mit Smart-Smoothing", other: "Ja" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verifiziert) — ERG-Ziel & Widerstand vom Lenker, ohne simulierte Kassette", other: "Ja — simulierte Gänge über Zwift Cog & Click" },
         { feature: "Strukturierte Workouts", endure: "Kuratierte physiologische Bibliothek + .ZWO/.MRC/.ERG-Import", other: "Große Bibliothek + eigene Workouts" },
@@ -244,7 +244,7 @@ export const vsContent = {
       rows: [
         { feature: "Kernfokus", endure: "Präzises Training & physiologische Analyse", other: "Adaptive, algorithmisch generierte Trainingspläne" },
         { feature: "Preis", endure: "Aktuell kostenlos — preiswertes Abo geplant", other: "Kostenpflichtiges Monats-/Jahresabo" },
-        { feature: "Plattformen", endure: "iOS & Android (Windows & macOS geplant)", other: "PC, Mac, iOS, Android" },
+        { feature: "Plattformen", endure: "iOS & Android", other: "PC, Mac, iOS, Android" },
         { feature: "Smart-Trainer-Steuerung (ERG)", endure: "Ja — Bluetooth, mit Smart-Smoothing", other: "Ja" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verifiziert) — ERG-Ziel & Widerstand vom Lenker", other: "Nicht verfügbar" },
         { feature: "Trainingspläne", endure: "Kuratierte Workout-Bibliothek — du bleibst am Steuer", other: "Adaptive Pläne vom Algorithmus" },

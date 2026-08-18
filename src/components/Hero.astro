@@ -7,6 +7,8 @@ const t = getTranslations(lang).hero;
 const screens = getTranslations(lang).appScreens;
 const iosUrl = config.platforms.ios.url;
 const androidUrl = config.platforms.android.url;
+const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
+const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
 
 /*
  * The carousel phones, in ring order — the second one starts centered, its two
@@ -62,13 +64,16 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
     </h2>
 
     <!-- CTAs -->
-    <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row gap-3.5 justify-center items-center">
-      <a id="download-btn-ios" href={iosUrl} target="_blank" rel="noopener" class="btn-primary w-full sm:w-auto">{t.ctaIos}</a>
-      <a id="download-btn-android" href={androidUrl} target="_blank" rel="noopener" class="btn-secondary w-full sm:w-auto">{t.ctaAndroid}</a>
+    <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a id="download-btn-ios" href={iosUrl} target="_blank" rel="noopener" aria-label={t.appStoreBadgeAlt}>
+        <img src={appStoreBadge} alt={t.appStoreBadgeAlt} class="h-12 w-auto" />
+      </a>
+      <a id="download-btn-android" href={androidUrl} target="_blank" rel="noopener" aria-label={t.googlePlayBadgeAlt}>
+        <img src={googlePlayBadge} alt={t.googlePlayBadgeAlt} class="h-12 w-auto" />
+      </a>
     </div>
 
-    <p data-reveal data-reveal-delay="400" class="mt-5 text-xs text-slate-500">{t.desktopNote}</p>
-    <p data-reveal data-reveal-delay="400" class="mt-2 text-sm text-slate-500 flex items-center justify-center gap-2">
+    <p data-reveal data-reveal-delay="400" class="mt-5 text-sm text-slate-500 flex items-center justify-center gap-2">
       <span class="inline-block w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
       {t.secondary}
     </p>
