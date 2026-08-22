@@ -4,6 +4,8 @@ Individuelle Anschreiben, keine Massenmail. Press Kit: https://www.endure-cyclin
 
 Empfänger-Adressen vor Versand gegenprüfen (Impressum/Kontaktseite der Medien).
 
+**Priorität 1 (zuerst senden):** tri-mag (1), Rennrad-News (2), TOUR (3), DC Rainmaker (5) — Mails sind final und beziehen sich auf konkrete Artikel der Redaktionen. Bikeboard (4) und GPLama (6) danach.
+
 ---
 
 ## 1. tri-mag.de / triathlon Magazin — news@tri-mag.de
@@ -16,7 +18,9 @@ ihr habt geschrieben, dass Anbieter euch in ihren Presseverteiler aufnehmen soll
 
 Ich bin Christoph Martin, Softwareentwickler und Ausdauersportler aus Österreich, und entwickle seit über einem Jahr ENDURE: eine Indoor-Cycling-Training-App für iOS und Android, die einen anderen Weg geht als Zwift oder TrainerRoad. Keine virtuelle Welt, stattdessen liegt die ganze Arbeit in der Leistungsdiagnostik und der Trainingssteuerung.
 
-Der für Triathleten vielleicht interessanteste Punkt: ENDURE schätzt FTP, VO2max und die Laktatschwellen (LT1/LT2) kontinuierlich aus den normalen Trainingseinheiten. Ramp- und 20-Minuten-Tests entfallen komplett. Dazu kommen eine ERG-Trainersteuerung mit eigener Power-Match-Logik, ein AI-Coach, der die gesamte Trainingshistorie kennt, und automatischer Sync mit Strava und intervals.icu. Rides, Läufe und Schwimmeinheiten landen in einem gemeinsamen Kalender.
+Euer Artikel "Indoor-Intervalle: Wann sie eher schaden als nützen" hat im Dezember genau das Problem beschrieben, an dem ich arbeite: Der Smarttrainer im ERG-Modus kennt keine Gnade, und wer mit veralteter FTP oder müden Beinen ins Intervall geht, trainiert sich eher kaputt als besser. ENDURE setzt genau dort an. Die App schätzt FTP, VO2max und die Laktatschwellen (LT1/LT2) kontinuierlich aus den normalen Trainingseinheiten, Ramp- und 20-Minuten-Tests entfallen komplett. Und vor dem Training schlägt sie auf Basis von Recovery-Daten und Morgen-Check-in vor, ob heute ein harter oder ein leichter Tag sinnvoll ist.
+
+Dazu kommen eine ERG-Steuerung mit eigener Power-Match-Logik, ein AI-Coach, der die gesamte Trainingshistorie kennt, und automatischer Sync mit Strava und intervals.icu. Rides, Läufe und Schwimmeinheiten landen in einem gemeinsamen Kalender.
 
 Die App ist derzeit kostenlos. Presse-Material (Fact Sheet, Screenshots, Logos) findet ihr unter https://www.endure-cycling.com/de/press/, und wenn ihr die App testen wollt, richte ich euch gerne vollen Testzugang ein.
 
@@ -29,15 +33,15 @@ info@endure-cycling.com
 
 ---
 
-## 2. Rennrad-News.de — (Kontakt lt. Website prüfen, i. d. R. Pressemitteilung an Redaktion)
+## 2. Rennrad-News.de — Chefredaktion Jan Gathmann: jan@mtb-news.de (Rennrad-News gehört zur MTB-News GmbH; Impressum: rennrad-news.de/news/impressum/)
 
 **Betreff:** Indoor-Saison: Österreichische App ENDURE ersetzt FTP-Tests durch kontinuierliche Leistungsdiagnostik
 
-Hallo liebe Redaktion,
+Hallo Jan, hallo liebe Redaktion,
 
-rechtzeitig zur Indoor-Saison eine Neuheit aus Österreich, die zu eurer datenaffinen Community passen könnte.
+rechtzeitig zur Indoor-Saison eine Neuheit aus Österreich, die zu eurer datenaffinen Community passen könnte. Ihr habt im Frühjahr über die Rouvy-Übernahme durch Zwift berichtet; der Markt der virtuellen Welten konsolidiert sich gerade. ENDURE geht bewusst in die andere Richtung: unabhängig entwickelt, und statt Welten und Rennen steht die Trainingssteuerung im Mittelpunkt.
 
-ENDURE (iOS/Android) ist eine Indoor-Cycling-Training-App, die bewusst keine virtuelle Welt baut, sondern das Training selbst intelligenter machen will. Kern ist eine kontinuierliche Leistungsdiagnostik: FTP, VO2max und Laktatschwellen werden laufend aus normalen Trainingsfahrten geschätzt, der klassische FTP-Test entfällt. Die Werte aktualisieren sich nach jeder Einheit, indoor wie outdoor (Sync via Strava und intervals.icu).
+ENDURE (iOS/Android) will das Training selbst intelligenter machen. Kern ist eine kontinuierliche Leistungsdiagnostik: FTP, VO2max und Laktatschwellen werden laufend aus normalen Trainingsfahrten geschätzt, der klassische FTP-Test entfällt. Die Werte aktualisieren sich nach jeder Einheit, indoor wie outdoor (Sync via Strava und intervals.icu).
 
 Weitere Punkte:
 - Eigene ERG-/Smart-Trainer-Steuerung inkl. Power Match (Abweichungen zwischen Powermeter und Trainer)
@@ -63,9 +67,9 @@ info@endure-cycling.com
 
 Sehr geehrte TOUR-Redaktion,
 
-ihr habt zuletzt mehrfach Indoor-Trainings-Apps verglichen. Dafür möchte ich euch eine neue App aus Österreich vorstellen, die in so einem Vergleich eine eigene Kategorie besetzt.
+ihr habt zuletzt mehrfach Rollentrainer-Software verglichen, unter anderem im großen Sieben-Apps-Vergleich mit Zwift, Rouvy und Wahoo. Für den nächsten Vergleich möchte ich euch eine neue App aus Österreich vorstellen, die eine eigene Kategorie besetzt: kein virtuelles Fahren, sondern Leistungsdiagnostik.
 
-ENDURE (iOS/Android) verzichtet auf virtuelle Welten und Rennen und konzentriert sich auf das, was die großen Plattformen eher am Rand behandeln: Leistungsdiagnostik und Trainingssteuerung. FTP, VO2max und Laktatschwellen werden kontinuierlich aus den normalen Trainingsfahrten geschätzt statt über wiederkehrende Ramp- oder 20-Minuten-Tests. Dazu kommen eine eigene ERG-Steuerung mit Power Match, eine tägliche Trainingsempfehlung auf Basis von Recovery und Load Balance sowie ein AI-Coach mit Zugriff auf die gesamte Historie. Strava und intervals.icu werden automatisch synchronisiert.
+ENDURE (iOS/Android) konzentriert sich auf das, was die großen Plattformen eher am Rand behandeln. FTP, VO2max und Laktatschwellen werden kontinuierlich aus den normalen Trainingsfahrten geschätzt statt über wiederkehrende Ramp- oder 20-Minuten-Tests. Dazu kommen eine eigene ERG-Steuerung mit Power Match, eine tägliche Trainingsempfehlung auf Basis von Recovery und Load Balance sowie ein AI-Coach mit Zugriff auf die gesamte Historie. Strava und intervals.icu werden automatisch synchronisiert.
 
 Entwickelt wird die App von einem einzelnen Softwareentwickler in Österreich. Sie ist derzeit kostenlos, ein leistbares Abo ist geplant.
 
@@ -79,7 +83,7 @@ info@endure-cycling.com
 
 ---
 
-## 4. Bikeboard.at — (Kontakt lt. Website prüfen)
+## 4. Bikeboard.at — Redaktion: martin@nyx.at (Martin Ganglberger) oder erwin@nyx.at (Erwin Haiden); allgemein: office@nyx.at (NYX Sportmanagement GmbH, Wiener Neustadt)
 
 **Betreff:** Cycling-Tech aus Österreich: ENDURE setzt auf Leistungsdiagnostik statt virtueller Welten
 
@@ -98,7 +102,7 @@ info@endure-cycling.com
 
 ---
 
-## 5. DC Rainmaker — (Kontaktformular / E-Mail lt. Website)
+## 5. DC Rainmaker — Kontaktformular: dcrainmaker.com/contact (keine öffentliche E-Mail; Formular ist der offizielle Weg)
 
 **Subject:** Austrian indie training app that estimates FTP, VO2max and lactate thresholds from normal rides
 
@@ -124,7 +128,7 @@ info@endure-cycling.com
 
 ---
 
-## 6. GPLama (Shane Miller) — (Kontakt lt. Website/YouTube prüfen)
+## 6. GPLama (Shane Miller) — keine öffentliche E-Mail; Business-Mail über YouTube-Kanal-Info ("Für geschäftliche Anfragen" auf youtube.com/@gplama → About) oder DM via X/Instagram (@gplama)
 
 **Subject:** Indie training app with its own ERG and power-match stack, estimates FTP and lactate thresholds from normal rides
 
@@ -147,8 +151,8 @@ info@endure-cycling.com
 
 ## Versand-Checkliste
 
-- [ ] Press-Seite live (Push auf master → GitHub Pages)
-- [ ] Empfänger-Adressen verifizieren (tri-mag: news@tri-mag.de, TOUR: redaktion@tour-magazin.de; Rennrad-News, Bikeboard, DCR, GPLama: Kontakt auf Website nachschlagen)
+- [x] Press-Seite live: https://www.endure-cycling.com/press/ (geprüft 2026-08-22)
+- [ ] Empfänger-Adressen final verifizieren (tri-mag: news@tri-mag.de, TOUR: redaktion@tour-magazin.de, Rennrad-News: jan@mtb-news.de, Bikeboard: martin@nyx.at / erwin@nyx.at, DCR: Kontaktformular, GPLama: YouTube-About/DM)
 - [ ] Absender: info@endure-cycling.com
 - [ ] Jede Mail einzeln senden, kein CC/BCC-Verteiler
 - [ ] Timing: jetzt (Ende August), Indoor-Saison steht bevor
