@@ -321,6 +321,65 @@ export const translations = {
       ],
       backHome: "Back to Homepage"
     },
+    press: {
+      seoTitle: "Press Kit — ENDURE Cycling",
+      seoDescription: "Press resources for ENDURE, the Austrian indoor cycling training app: fact sheet, story angles, founder bio, logos and screenshots.",
+      headline: "Press Kit",
+      intro: "ENDURE is a data-driven indoor cycling training app developed independently in Austria. Instead of virtual worlds, it focuses on performance diagnostics, individual training zones and intelligent smart-trainer control — with the ambition to compete technologically with the large international platforms. ENDURE is available for iOS and Android.",
+      factsTitle: "Fact sheet",
+      facts: [
+        { label: "Product", value: "ENDURE — indoor cycling training app" },
+        { label: "Platforms", value: "iOS & Android" },
+        { label: "Pricing", value: "Currently free (early access); an affordable subscription is planned" },
+        { label: "Developer", value: "Christoph Martin — independent software engineer, Austria" },
+        { label: "Website", value: "www.endure-cycling.com" },
+        { label: "Contact", value: "info@endure-cycling.com" }
+      ],
+      anglesTitle: "Story angles",
+      anglesIntro: "Three areas where ENDURE differs from established platforms — each works as a standalone story:",
+      angles: [
+        {
+          title: "No more FTP tests",
+          body: "Most training apps make riders repeat ramp or 20-minute tests to keep their FTP current. ENDURE estimates FTP, VO2max and lactate thresholds (LT1/LT2) continuously from normal training rides — fitness changes every ride, and the numbers follow automatically."
+        },
+        {
+          title: "From Austria, up against the big platforms",
+          body: "A single Austrian software engineer is building a training platform that competes with VC-funded products like Zwift, TrainerRoad and Rouvy. The big providers build virtual worlds; ENDURE focuses on making the training itself smarter — performance diagnostics, individual zones, honest analysis."
+        },
+        {
+          title: "The technology between app and trainer",
+          body: "What actually happens between a workout app and a smart trainer? ENDURE implements its own trainer control: Bluetooth FTMS, ERG-mode regulation, power-meter vs. trainer discrepancies and fluctuation damping. A story for readers who want to know why 250 watts on the trainer are not always 250 watts at the pedals."
+        }
+      ],
+      founderTitle: "About the founder",
+      founderBody: "Christoph Martin is a software engineer and endurance athlete based in Austria. He develops ENDURE independently and end to end — from the Bluetooth trainer control to the performance analytics. The app started from a simple frustration: indoor cycling apps were full of gimmicks, but thin on the honest analysis that actually makes riders faster.",
+      assetsTitle: "Logos & screenshots",
+      logosTitle: "Logos",
+      logos: [
+        { label: "ENDURE lockup (black, transparent PNG)", href: "/assets/ENDURE_lockup_exact_icon_4k.png" },
+        { label: "ENDURE lockup (white, transparent PNG)", href: "/assets/ENDURE_lockup_exact_icon_4k_white_transparent.png" },
+        { label: "App icon (black, transparent PNG)", href: "/assets/ENDURE_E_icon_black_transparent_4k.png" },
+        { label: "App icon (white, transparent PNG)", href: "/assets/ENDURE_E_icon_white_transparent_4k.png" },
+        { label: "App icon (store, PNG)", href: "/assets/press/endure-app-icon.png" }
+      ],
+      screenshotsTitle: "Screenshots",
+      screenshotsIntro: "Store screenshots in full resolution (1290 × 2796). Click to open, download link below each image.",
+      downloadPng: "Download PNG",
+      screenshots: [
+        { file: "01-ftp-engine", caption: "FTP Engine: FTP and VO2max estimated from normal rides — no more 20-minute tests" },
+        { file: "02-live-ride", caption: "Live ride: power targets, heart rate and core body temperature with heat zones" },
+        { file: "03-daily-readiness", caption: "Daily readiness: recovery, load balance and today's prescription" },
+        { file: "04-workout-library", caption: "Workout library: goal-based sessions, scaled to the current FTP" },
+        { file: "05-ride-analysis", caption: "Ride analysis: power, heart rate and pacing broken down" },
+        { file: "06-your-engine", caption: "KPI board: form, fitness and VO2max update after every session" },
+        { file: "07-ai-coach", caption: "AI coach that knows the full training history" },
+        { file: "08-calendar", caption: "One calendar: rides, runs and swims sync in from Strava and intervals.icu" }
+      ],
+      assetsNote: "High-resolution originals and additional material are available on request.",
+      contactTitle: "Press contact",
+      contactBody: "Email us at info@endure-cycling.com — we respond quickly. Journalists and testers get full review access to ENDURE on request, including all analysis features.",
+      backHome: "Back to Homepage"
+    },
     // Footer
     footer: {
       tagline: "Driven by data. Built to endure.",
@@ -706,6 +765,65 @@ export const translations = {
           body: "ENDURE bekommt häufige Updates, und Feature-Wünsche fließen direkt in den Zyklus ein. Die Richtung der App wird von den Radfahrern geprägt, die damit fahren — sei dabei."
         }
       ],
+      backHome: "Zurück zur Startseite"
+    },
+    press: {
+      seoTitle: "Presse — ENDURE Cycling",
+      seoDescription: "Presse-Material zu ENDURE, der österreichischen Indoor-Cycling-Training-App: Fact Sheet, Story-Ideen, Gründer-Bio, Logos und Screenshots.",
+      headline: "Presse",
+      intro: "ENDURE ist eine datengetriebene Indoor-Cycling-Training-App, die unabhängig in Österreich entwickelt wird. Statt virtueller Welten liegt der Fokus auf Leistungsdiagnostik, individuellen Trainingszonen und intelligenter Smart-Trainer-Steuerung — mit dem Anspruch, technologisch mit den großen internationalen Plattformen mitzuhalten. ENDURE ist für iOS und Android verfügbar.",
+      factsTitle: "Fact Sheet",
+      facts: [
+        { label: "Produkt", value: "ENDURE — Indoor-Cycling-Training-App" },
+        { label: "Plattformen", value: "iOS & Android" },
+        { label: "Preis", value: "Derzeit kostenlos (Early Access); ein leistbares Abo ist geplant" },
+        { label: "Entwickler", value: "Christoph Martin — unabhängiger Softwareentwickler, Österreich" },
+        { label: "Website", value: "www.endure-cycling.com" },
+        { label: "Kontakt", value: "info@endure-cycling.com" }
+      ],
+      anglesTitle: "Story-Ideen",
+      anglesIntro: "Drei Bereiche, in denen sich ENDURE von etablierten Plattformen unterscheidet — jeder trägt eine eigene Geschichte:",
+      angles: [
+        {
+          title: "Schluss mit FTP-Tests",
+          body: "Die meisten Training-Apps lassen ihre Nutzer regelmäßig Ramp- oder 20-Minuten-Tests fahren, um die FTP aktuell zu halten. ENDURE schätzt FTP, VO2max und Laktatschwellen (LT1/LT2) kontinuierlich aus normalen Trainingsfahrten — die Form ändert sich mit jeder Fahrt, und die Zahlen ziehen automatisch nach."
+        },
+        {
+          title: "Aus Österreich gegen die großen Plattformen",
+          body: "Ein einzelner österreichischer Softwareentwickler baut eine Trainingsplattform, die mit VC-finanzierten Produkten wie Zwift, TrainerRoad und Rouvy konkurriert. Die großen Anbieter bauen virtuelle Welten; ENDURE konzentriert sich darauf, das Training selbst intelligenter zu machen — Leistungsdiagnostik, individuelle Zonen, ehrliche Analyse."
+        },
+        {
+          title: "Die Technik zwischen App und Trainer",
+          body: "Was passiert eigentlich zwischen Workout-App und Smart-Trainer? ENDURE implementiert die Trainersteuerung selbst: Bluetooth FTMS, ERG-Regelung, Abweichungen zwischen Powermeter und Trainer, Glättung von Leistungsschwankungen. Eine Geschichte für alle, die wissen wollen, warum 250 Watt am Trainer nicht immer 250 Watt an den Pedalen sind."
+        }
+      ],
+      founderTitle: "Über den Gründer",
+      founderBody: "Christoph Martin ist Softwareentwickler und Ausdauersportler aus Österreich. Er entwickelt ENDURE unabhängig und komplett selbst — von der Bluetooth-Trainersteuerung bis zur Leistungsanalyse. Die App entstand aus einem simplen Frust: Indoor-Cycling-Apps waren voller Spielereien, aber dünn bei der ehrlichen Analyse, die Sportler wirklich schneller macht.",
+      assetsTitle: "Logos & Screenshots",
+      logosTitle: "Logos",
+      logos: [
+        { label: "ENDURE Lockup (schwarz, transparentes PNG)", href: "/assets/ENDURE_lockup_exact_icon_4k.png" },
+        { label: "ENDURE Lockup (weiß, transparentes PNG)", href: "/assets/ENDURE_lockup_exact_icon_4k_white_transparent.png" },
+        { label: "App-Icon (schwarz, transparentes PNG)", href: "/assets/ENDURE_E_icon_black_transparent_4k.png" },
+        { label: "App-Icon (weiß, transparentes PNG)", href: "/assets/ENDURE_E_icon_white_transparent_4k.png" },
+        { label: "App-Icon (Store, PNG)", href: "/assets/press/endure-app-icon.png" }
+      ],
+      screenshotsTitle: "Screenshots",
+      screenshotsIntro: "Store-Screenshots in voller Auflösung (1290 × 2796). Klick öffnet das Bild, Download-Link unter jedem Bild.",
+      downloadPng: "PNG herunterladen",
+      screenshots: [
+        { file: "01-ftp-engine", caption: "FTP Engine: FTP und VO2max aus normalen Fahrten geschätzt — keine 20-Minuten-Tests mehr" },
+        { file: "02-live-ride", caption: "Live Ride: Leistungsziele, Herzfrequenz und Körperkerntemperatur mit Heat Zones" },
+        { file: "03-daily-readiness", caption: "Daily Readiness: Recovery, Load Balance und Tagesempfehlung" },
+        { file: "04-workout-library", caption: "Workout-Bibliothek: zielgerichtete Einheiten, skaliert auf die aktuelle FTP" },
+        { file: "05-ride-analysis", caption: "Ride-Analyse: Leistung, Herzfrequenz und Pacing im Detail" },
+        { file: "06-your-engine", caption: "KPI-Board: Form, Fitness und VO2max aktualisieren sich nach jeder Einheit" },
+        { file: "07-ai-coach", caption: "AI Coach, der die gesamte Trainingshistorie kennt" },
+        { file: "08-calendar", caption: "Ein Kalender: Rides, Läufe und Schwimmeinheiten synchronisieren sich aus Strava und intervals.icu" }
+      ],
+      assetsNote: "Hochauflösende Originale und weiteres Material stellen wir auf Anfrage gerne bereit.",
+      contactTitle: "Pressekontakt",
+      contactBody: "Schreib uns an info@endure-cycling.com — wir antworten schnell. Journalistinnen und Journalisten erhalten auf Anfrage vollen Testzugang zu ENDURE inklusive aller Analyse-Features.",
       backHome: "Zurück zur Startseite"
     },
     // Footer
