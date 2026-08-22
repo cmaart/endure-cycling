@@ -330,7 +330,7 @@ export const translations = {
       facts: [
         { label: "Product", value: "ENDURE, indoor cycling training app" },
         { label: "Platforms", value: "iOS & Android" },
-        { label: "Pricing", value: "Currently free (early access); an affordable subscription is planned" },
+        { label: "Pricing", value: "ENDURE Premium subscription (monthly or annual) with a 14-day free trial" },
         { label: "Developer", value: "Christoph Martin, independent software engineer, Austria" },
         { label: "Website", value: "www.endure-cycling.com" },
         { label: "Contact", value: "info@endure-cycling.com" }
@@ -776,7 +776,7 @@ export const translations = {
       facts: [
         { label: "Produkt", value: "ENDURE, Indoor-Cycling-Training-App" },
         { label: "Plattformen", value: "iOS & Android" },
-        { label: "Preis", value: "Derzeit kostenlos (Early Access); ein leistbares Abo ist geplant" },
+        { label: "Preis", value: "ENDURE-Premium-Abo (monatlich oder jährlich) mit 14 Tagen Gratis-Test" },
         { label: "Entwickler", value: "Christoph Martin, unabhängiger Softwareentwickler, Österreich" },
         { label: "Website", value: "www.endure-cycling.com" },
         { label: "Kontakt", value: "info@endure-cycling.com" }
