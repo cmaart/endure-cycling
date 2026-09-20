@@ -218,7 +218,7 @@ export const translations = {
       featureLabel: "Capability",
       valueLabel: "What you get",
       rows: [
-        { feature: "Price", value: "Free right now, with an affordable subscription planned" },
+        { feature: "Price", value: "ENDURE Premium subscription, monthly or annual, with a 14-day free trial" },
         { feature: "Platforms", value: "iOS & Android" },
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verified) — ERG target & trainer resistance from the bars, no simulated cassette" },
@@ -239,7 +239,7 @@ export const translations = {
       items: [
         {
           q: "Is ENDURE free?",
-          a: "Yes, right now ENDURE is free on iOS and Android while we keep improving it. An affordable subscription is planned, so this is a good time to jump in."
+          a: "The trial is free, the app is not. ENDURE Premium is billed monthly or annually through the App Store or Google Play, and the price is deliberately kept at the low end of what training apps cost. Every new account starts with 14 days free, so you can pair your trainer and ride a few sessions before you decide. Accounts created before Premium launched keep full access at no cost."
         },
         {
           q: "Which smart trainers and sensors work with ENDURE?",
@@ -664,7 +664,7 @@ export const translations = {
       featureLabel: "Funktion",
       valueLabel: "Das bekommst du",
       rows: [
-        { feature: "Preis", value: "Aktuell kostenlos, ein preiswertes Abo ist geplant" },
+        { feature: "Preis", value: "ENDURE-Premium-Abo, monatlich oder jährlich, mit 14 Tagen Gratis-Test" },
         { feature: "Plattformen", value: "iOS & Android" },
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verifiziert) — ERG-Ziel & Trainer-Widerstand vom Lenker, ohne simulierte Kassette" },
@@ -685,7 +685,7 @@ export const translations = {
       items: [
         {
           q: "Ist ENDURE kostenlos?",
-          a: "Ja, aktuell ist ENDURE auf iOS und Android kostenlos, während wir die App weiter verbessern. Ein preiswertes Abo ist geplant, jetzt ist also ein guter Zeitpunkt zum Einsteigen."
+          a: "Gratis ist der Test, nicht die App. ENDURE Premium wird monatlich oder jährlich über den App Store oder Google Play abgerechnet, und der Preis liegt bewusst am unteren Ende dessen, was Trainings-Apps kosten. Jedes neue Konto startet mit 14 Tagen gratis, du kannst also deinen Trainer koppeln und ein paar Einheiten fahren, bevor du dich entscheidest. Konten, die vor dem Start von Premium angelegt wurden, behalten den vollen Zugriff dauerhaft kostenlos."
         },
         {
           q: "Welche Smart Trainer und Sensoren funktionieren mit ENDURE?",

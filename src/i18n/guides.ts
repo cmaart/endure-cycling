@@ -190,7 +190,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         }
       ],
       ctaTitle: "Stop scheduling FTP tests",
-      ctaBody: "Free on iOS and Android — FTP and VO2max modelled from the rides you already do, plus precise ERG control when you do want to test.",
+      ctaBody: "On iOS and Android, free for the first 14 days: FTP and VO2max modelled from the rides you already do, plus precise ERG control when you do want to test.",
       backToGuides: "All guides"
     },
     'zone-2-endurance-training': {
@@ -261,11 +261,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "How does ENDURE support zone 2 riding?",
-          body: "ERG mode holds the target so the ride cannot creep upward while your attention wanders, and the time-in-zones breakdown afterwards shows whether the session stayed where you meant it to. Log lactate readings and ENDURE estimates your LT1, which turns the zone 2 ceiling into a measured threshold instead of a percentage. Core temperature from a paired CORE sensor explains the heart-rate drift indoor riding produces, and Heat Zones show it as a range rather than a raw number. Existing workouts import as .ZWO, .MRC or .ERG files, and finished rides sync to Strava and intervals.icu. ENDURE does not write your training plan; it measures what you actually did. Free on iOS and Android."
+          body: "ERG mode holds the target so the ride cannot creep upward while your attention wanders, and the time-in-zones breakdown afterwards shows whether the session stayed where you meant it to. Log lactate readings and ENDURE estimates your LT1, which turns the zone 2 ceiling into a measured threshold instead of a percentage. Core temperature from a paired CORE sensor explains the heart-rate drift indoor riding produces, and Heat Zones show it as a range rather than a raw number. Existing workouts import as .ZWO, .MRC or .ERG files, and finished rides sync to Strava and intervals.icu. ENDURE does not write your training plan; it measures what you actually did. On iOS and Android, free for the first 14 days."
         }
       ],
       ctaTitle: "Keep your easy rides easy",
-      ctaBody: "Free on iOS and Android. Steady ERG targets, time-in-zones after every ride, and LT1 estimated from your own lactate readings.",
+      ctaBody: "On iOS and Android, free for the first 14 days. Steady ERG targets, time-in-zones after every ride, and LT1 estimated from your own lactate readings.",
       backToGuides: "All guides"
     },
     'sweet-spot-vs-polarized': {
@@ -309,7 +309,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         }
       ],
       ctaTitle: "Build the week you decided on",
-      ctaBody: "Free on iOS and Android — a curated library of physiologically meaningful sessions, plus the analysis to check what you actually rode.",
+      ctaBody: "On iOS and Android, free for the first 14 days: a curated library of physiologically meaningful sessions, plus the analysis to check what you actually rode.",
       backToGuides: "All guides"
     },
     'zwo-mrc-erg-files': {
@@ -351,7 +351,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         }
       ],
       ctaTitle: "Bring your workouts with you",
-      ctaBody: "Free on iOS and Android — import .ZWO, .MRC and .ERG files and ride them in ERG mode on any FTMS smart trainer.",
+      ctaBody: "On iOS and Android, free for the first 14 days: import .ZWO, .MRC and .ERG files and ride them in ERG mode on any FTMS smart trainer.",
       backToGuides: "All guides"
     }
   },
@@ -493,7 +493,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         }
       ],
       ctaTitle: "Hör auf, FTP-Tests zu planen",
-      ctaBody: "Kostenlos für iOS und Android — FTP und VO2max aus den Fahrten modelliert, die du ohnehin machst, plus präzise ERG-Steuerung, wenn du testen willst.",
+      ctaBody: "Für iOS und Android, die ersten 14 Tage gratis: FTP und VO2max aus den Fahrten modelliert, die du ohnehin machst, plus präzise ERG-Steuerung, wenn du testen willst.",
       backToGuides: "Alle Guides"
     },
     'zone-2-endurance-training': {
@@ -564,11 +564,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "Wie unterstützt ENDURE Zone-2-Fahrten?",
-          body: "Der ERG-Modus hält das Ziel, damit die Fahrt nicht nach oben kriecht, während die Aufmerksamkeit wandert, und die Zeit-in-Zonen-Auswertung zeigt danach, ob die Einheit dort geblieben ist, wo du sie wolltest. Trägst du Laktatwerte ein, schätzt ENDURE deine LT1, und die Zone-2-Obergrenze wird eine gemessene Schwelle statt eines Prozentwerts. Die Kerntemperatur eines gekoppelten CORE-Sensors erklärt den Herzfrequenz-Drift, den Indoor-Fahren erzeugt, und Heat Zones zeigen sie als Bereich statt als rohe Zahl. Bestehende Workouts kommen als .ZWO-, .MRC- oder .ERG-Datei herein, fertige Fahrten gehen zu Strava und intervals.icu. ENDURE schreibt keinen Trainingsplan, ENDURE misst, was du tatsächlich gefahren bist. Kostenlos für iOS und Android."
+          body: "Der ERG-Modus hält das Ziel, damit die Fahrt nicht nach oben kriecht, während die Aufmerksamkeit wandert, und die Zeit-in-Zonen-Auswertung zeigt danach, ob die Einheit dort geblieben ist, wo du sie wolltest. Trägst du Laktatwerte ein, schätzt ENDURE deine LT1, und die Zone-2-Obergrenze wird eine gemessene Schwelle statt eines Prozentwerts. Die Kerntemperatur eines gekoppelten CORE-Sensors erklärt den Herzfrequenz-Drift, den Indoor-Fahren erzeugt, und Heat Zones zeigen sie als Bereich statt als rohe Zahl. Bestehende Workouts kommen als .ZWO-, .MRC- oder .ERG-Datei herein, fertige Fahrten gehen zu Strava und intervals.icu. ENDURE schreibt keinen Trainingsplan, ENDURE misst, was du tatsächlich gefahren bist. Für iOS und Android, die ersten 14 Tage gratis."
         }
       ],
       ctaTitle: "Halte deine lockeren Fahrten locker",
-      ctaBody: "Kostenlos für iOS und Android. Stabile ERG-Ziele, Zeit in Zonen nach jeder Fahrt und LT1 aus deinen eigenen Laktatwerten.",
+      ctaBody: "Für iOS und Android, die ersten 14 Tage gratis. Stabile ERG-Ziele, Zeit in Zonen nach jeder Fahrt und LT1 aus deinen eigenen Laktatwerten.",
       backToGuides: "Alle Guides"
     },
     'sweet-spot-vs-polarized': {
@@ -612,7 +612,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         }
       ],
       ctaTitle: "Bau die Woche, für die du dich entschieden hast",
-      ctaBody: "Kostenlos für iOS und Android — kuratierte Bibliothek physiologisch sinnvoller Einheiten plus die Analyse, um zu prüfen, was du wirklich gefahren bist.",
+      ctaBody: "Für iOS und Android, die ersten 14 Tage gratis: kuratierte Bibliothek physiologisch sinnvoller Einheiten plus die Analyse, um zu prüfen, was du wirklich gefahren bist.",
       backToGuides: "Alle Guides"
     },
     'zwo-mrc-erg-files': {
@@ -654,7 +654,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         }
       ],
       ctaTitle: "Nimm deine Workouts mit",
-      ctaBody: "Kostenlos für iOS und Android — .ZWO-, .MRC- und .ERG-Dateien importieren und im ERG-Modus auf jedem FTMS-Smart-Trainer fahren.",
+      ctaBody: "Für iOS und Android, die ersten 14 Tage gratis: .ZWO-, .MRC- und .ERG-Dateien importieren und im ERG-Modus auf jedem FTMS-Smart-Trainer fahren.",
       backToGuides: "Alle Guides"
     }
   }

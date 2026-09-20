@@ -87,7 +87,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
             'We name what we have actually tested rather than assuming the generations behave the same:',
           bullets: [
             '<strong>Click v1 — verified.</strong> Pairing and handlebar control are confirmed end to end with v1 hardware.',
-            '<strong>Click v2 — not verified yet.</strong> We have not tested it, so we do not claim it. The app is free, so pairing one is the fastest way to find out — and we would like to hear the result.'
+            '<strong>Click v2 — not verified yet.</strong> We have not tested it, so we do not claim it. The trial is free, so pairing one is the fastest way to find out, and we would like to hear the result.'
           ]
         },
         {
@@ -126,7 +126,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Put your Click to work',
       ctaBody:
-        'ENDURE is free on iOS and Android. Pair your trainer, pair your Click, and start the first workout in under 30 seconds.',
+        'ENDURE is on iOS and Android, free for the first 14 days. Pair your trainer, pair your Click, and start the first workout in under 30 seconds.',
       backHome: 'Back to Homepage'
     },
     'lactate-lt1-lt2': {
@@ -186,7 +186,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Log your first test',
       ctaBody:
-        'Free on iOS and Android — in-ride lactate logging, automatic LT1/LT2 estimation, and your power data in the same place.',
+        'On iOS and Android, free for the first 14 days: in-ride lactate logging, automatic LT1/LT2 estimation, and your power data in the same place.',
       backHome: 'Back to Homepage'
     },
     'core-heat-zones': {
@@ -241,7 +241,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Train heat like power',
       ctaBody:
-        'Free on iOS and Android — native CORE pairing, live heat zones on the ride screen, full post-ride analysis.',
+        'On iOS and Android, free for the first 14 days: native CORE pairing, live heat zones on the ride screen, full post-ride analysis.',
       backHome: 'Back to Homepage'
     },
     'ftp-vo2max-tracking': {
@@ -301,7 +301,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Start the trend',
       ctaBody:
-        'Free on iOS and Android — connect Strava or intervals.icu, ride, and watch FTP and VO2max develop week by week.',
+        'On iOS and Android, free for the first 14 days: connect Strava or intervals.icu, ride, and watch FTP and VO2max develop week by week.',
       backHome: 'Back to Homepage'
     },
     'climbing-efficiency': {
@@ -356,7 +356,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Score your climbs',
       ctaBody:
-        'Free on iOS and Android — connect Strava or intervals.icu and let ENDURE find the climbs in the riding you already did.',
+        'On iOS and Android, free for the first 14 days: connect Strava or intervals.icu and let ENDURE find the climbs in the riding you already did.',
       backHome: 'Back to Homepage'
     }
   },
@@ -397,7 +397,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
             'Wir nennen, was wir tatsächlich getestet haben, statt anzunehmen, dass sich die Generationen gleich verhalten:',
           bullets: [
             '<strong>Click v1 — verifiziert.</strong> Pairing und Lenkersteuerung sind mit v1-Hardware durchgehend bestätigt.',
-            '<strong>Click v2 — noch nicht verifiziert.</strong> Wir haben ihn nicht getestet, also behaupten wir es nicht. Die App ist kostenlos, Koppeln ist der schnellste Weg zur Antwort — und wir hören das Ergebnis gern.'
+            '<strong>Click v2 — noch nicht verifiziert.</strong> Wir haben ihn nicht getestet, also behaupten wir es nicht. Der Test ist gratis, Koppeln ist der schnellste Weg zur Antwort, und wir hören das Ergebnis gern.'
           ]
         },
         {
@@ -436,7 +436,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Setz deinen Click ein',
       ctaBody:
-        'ENDURE ist kostenlos für iOS und Android. Trainer verbinden, Click verbinden, erstes Workout in unter 30 Sekunden starten.',
+        'ENDURE gibt es für iOS und Android, die ersten 14 Tage gratis. Trainer verbinden, Click verbinden, erstes Workout in unter 30 Sekunden starten.',
       backHome: 'Zurück zur Startseite'
     },
     'lactate-lt1-lt2': {
@@ -496,7 +496,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Logge deinen ersten Test',
       ctaBody:
-        'Kostenlos für iOS und Android — Laktat-Eintrag während der Fahrt, automatische LT1/LT2-Schätzung, Leistungsdaten am selben Ort.',
+        'Für iOS und Android, die ersten 14 Tage gratis: Laktat-Eintrag während der Fahrt, automatische LT1/LT2-Schätzung, Leistungsdaten am selben Ort.',
       backHome: 'Zurück zur Startseite'
     },
     'core-heat-zones': {
@@ -551,7 +551,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Trainiere Hitze wie Watt',
       ctaBody:
-        'Kostenlos für iOS und Android — natives CORE-Pairing, Live Heat Zones am Ride-Screen, volle Analyse nach der Fahrt.',
+        'Für iOS und Android, die ersten 14 Tage gratis: natives CORE-Pairing, Live Heat Zones am Ride-Screen, volle Analyse nach der Fahrt.',
       backHome: 'Zurück zur Startseite'
     },
     'ftp-vo2max-tracking': {
@@ -611,7 +611,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Starte den Trend',
       ctaBody:
-        'Kostenlos für iOS und Android — Strava oder intervals.icu verbinden, fahren, und FTP und VO2max Woche für Woche wachsen sehen.',
+        'Für iOS und Android, die ersten 14 Tage gratis: Strava oder intervals.icu verbinden, fahren, und FTP und VO2max Woche für Woche wachsen sehen.',
       backHome: 'Zurück zur Startseite'
     },
     'climbing-efficiency': {
@@ -666,7 +666,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       ],
       ctaTitle: 'Bewerte deine Anstiege',
       ctaBody:
-        'Kostenlos für iOS und Android — Strava oder intervals.icu verbinden und ENDURE die Anstiege in den Fahrten finden lassen, die du schon gemacht hast.',
+        'Für iOS und Android, die ersten 14 Tage gratis: Strava oder intervals.icu verbinden und ENDURE die Anstiege in den Fahrten finden lassen, die du schon gemacht hast.',
       backHome: 'Zurück zur Startseite'
     }
   }

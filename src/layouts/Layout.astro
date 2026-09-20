@@ -160,10 +160,11 @@ const storeUrls = Object.values(config.platforms)
       "name": "ENDURE",
       "applicationCategory": "HealthApplication",
       "operatingSystem": availableOs,
+      "isAccessibleForFree": false,
       "offers": {
         "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
+        "category": "subscription",
+        "availability": "https://schema.org/InStock"
       },
       "description": description,
       "screenshot": ogImage,

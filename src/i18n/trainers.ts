@@ -53,7 +53,7 @@ export const trainersContent = {
       'Look for "smart trainer" and Bluetooth in your trainer\'s specification — if the resistance is controlled electronically and the trainer pairs over Bluetooth, FTMS is almost certainly there.',
       'Install ENDURE, open the sensor screen and put the trainer in pairing mode. If it appears and can be selected, ENDURE can read it.',
       'Start a free ride and change the resistance. If the trainer responds, ERG control is working — that is the whole test.',
-      'It is free to try, so the fastest answer is to pair it and see.'
+      'Trying it is free for 14 days, so the fastest answer is to pair it and see.'
     ],
     dumbTitle: 'What about a classic trainer without electronic control?',
     dumbBody:
@@ -73,7 +73,7 @@ export const trainersContent = {
     faq: [
       {
         q: 'Does ENDURE work with a Wahoo Kickr or a Tacx Neo?',
-        a: 'Those trainers use the Bluetooth FTMS profile that ENDURE controls, so they pair and can be steered in ERG mode. We have not tested every model individually — pairing takes a minute and the app is free, so trying it is the definitive answer.'
+        a: 'Those trainers use the Bluetooth FTMS profile that ENDURE controls, so they pair and can be steered in ERG mode. We have not tested every model individually — pairing takes a minute and the trial is free, so trying it is the definitive answer.'
       },
       {
         q: 'Does the Zwift Hub work with ENDURE?',
@@ -99,7 +99,7 @@ export const trainersContent = {
     ],
     ctaTitle: 'Pair your trainer and ride',
     ctaBody:
-      'ENDURE is free on iOS and Android. Pair over Bluetooth and you are riding in under 30 seconds.',
+      'ENDURE is on iOS and Android, free for the first 14 days. Pair over Bluetooth and you are riding in under 30 seconds.',
     backHome: 'Back to Homepage'
   },
   de: {
@@ -135,7 +135,7 @@ export const trainersContent = {
       'Schau in die Spezifikation deines Trainers nach "Smart Trainer" und Bluetooth — wird der Widerstand elektronisch gesteuert und koppelt der Trainer per Bluetooth, ist FTMS nahezu sicher vorhanden.',
       'Installiere ENDURE, öffne den Sensor-Screen und versetze den Trainer in den Kopplungsmodus. Erscheint er und lässt sich auswählen, kann ENDURE ihn lesen.',
       'Starte einen Free Ride und ändere den Widerstand. Reagiert der Trainer, funktioniert die ERG-Steuerung — das ist der ganze Test.',
-      'Ausprobieren kostet nichts, die schnellste Antwort ist also: koppeln und schauen.'
+      'Ausprobieren ist 14 Tage gratis, die schnellste Antwort ist also: koppeln und schauen.'
     ],
     dumbTitle: 'Und eine klassische Rolle ohne elektronische Steuerung?',
     dumbBody:
@@ -155,7 +155,7 @@ export const trainersContent = {
     faq: [
       {
         q: 'Funktioniert ENDURE mit einem Wahoo Kickr oder einem Tacx Neo?',
-        a: 'Diese Trainer nutzen das Bluetooth-FTMS-Profil, das ENDURE steuert — sie koppeln und lassen sich im ERG-Modus ansteuern. Wir haben nicht jedes Modell einzeln getestet; das Koppeln dauert eine Minute und die App ist kostenlos, Ausprobieren ist also die definitive Antwort.'
+        a: 'Diese Trainer nutzen das Bluetooth-FTMS-Profil, das ENDURE steuert — sie koppeln und lassen sich im ERG-Modus ansteuern. Wir haben nicht jedes Modell einzeln getestet; das Koppeln dauert eine Minute und der Test ist gratis, Ausprobieren ist also die definitive Antwort.'
       },
       {
         q: 'Funktioniert der Zwift Hub mit ENDURE?',
@@ -181,7 +181,7 @@ export const trainersContent = {
     ],
     ctaTitle: 'Trainer koppeln und fahren',
     ctaBody:
-      'ENDURE ist kostenlos für iOS und Android. Per Bluetooth koppeln und in unter 30 Sekunden fahren.',
+      'ENDURE gibt es für iOS und Android, die ersten 14 Tage gratis. Per Bluetooth koppeln und in unter 30 Sekunden fahren.',
     backHome: 'Zurück zur Startseite'
   }
 } as const;
