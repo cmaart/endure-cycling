@@ -64,7 +64,7 @@ export const vsContent = {
         },
         {
           q: "Can I try ENDURE for free?",
-          a: "Yes, 14 days on a new account with the full Premium feature set. After that it is a monthly or annual subscription. Riders who created an account before Premium launched keep full access at no cost."
+          a: "Yes, 14 days on a new account with the full Premium feature set. After that it is a monthly or annual subscription."
         },
         {
           q: "Does ENDURE have virtual worlds like Zwift?",
@@ -213,7 +213,7 @@ export const vsContent = {
         },
         {
           q: "Kann ich ENDURE gratis testen?",
-          a: "Ja, 14 Tage lang mit dem vollen Premium-Funktionsumfang. Danach läuft ein monatliches oder jährliches Abo. Wer sein Konto vor dem Start von Premium angelegt hat, behält den vollen Zugriff dauerhaft kostenlos."
+          a: "Ja, 14 Tage lang mit dem vollen Premium-Funktionsumfang. Danach läuft ein monatliches oder jährliches Abo."
         },
         {
           q: "Hat ENDURE virtuelle Welten wie Zwift?",

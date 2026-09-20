@@ -239,7 +239,7 @@ export const translations = {
       items: [
         {
           q: "Is ENDURE free?",
-          a: "The trial is free, the app is not. ENDURE Premium is billed monthly or annually through the App Store or Google Play, and the price is deliberately kept at the low end of what training apps cost. Every new account starts with 14 days free, so you can pair your trainer and ride a few sessions before you decide. Accounts created before Premium launched keep full access at no cost."
+          a: "The trial is free, the app is not. ENDURE Premium is billed monthly or annually through the App Store or Google Play, and the price is deliberately kept at the low end of what training apps cost. Every new account starts with 14 days free, so you can pair your trainer and ride a few sessions before you decide."
         },
         {
           q: "Which smart trainers and sensors work with ENDURE?",
@@ -685,7 +685,7 @@ export const translations = {
       items: [
         {
           q: "Ist ENDURE kostenlos?",
-          a: "Gratis ist der Test, nicht die App. ENDURE Premium wird monatlich oder jährlich über den App Store oder Google Play abgerechnet, und der Preis liegt bewusst am unteren Ende dessen, was Trainings-Apps kosten. Jedes neue Konto startet mit 14 Tagen gratis, du kannst also deinen Trainer koppeln und ein paar Einheiten fahren, bevor du dich entscheidest. Konten, die vor dem Start von Premium angelegt wurden, behalten den vollen Zugriff dauerhaft kostenlos."
+          a: "Gratis ist der Test, nicht die App. ENDURE Premium wird monatlich oder jährlich über den App Store oder Google Play abgerechnet, und der Preis liegt bewusst am unteren Ende dessen, was Trainings-Apps kosten. Jedes neue Konto startet mit 14 Tagen gratis, du kannst also deinen Trainer koppeln und ein paar Einheiten fahren, bevor du dich entscheidest."
         },
         {
           q: "Welche Smart Trainer und Sensoren funktionieren mit ENDURE?",
