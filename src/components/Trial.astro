@@ -1,17 +1,15 @@
 ---
 import { getTranslations } from '../i18n/translations';
-import { getPricing } from '../utils/prices';
+import { getPricing, withPrices } from '../utils/prices';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).trial;
 const pricing = getPricing(lang);
 
-// The price line bolds the two amounts, so the placeholders become markup
-// rather than going through the plain-text withPrices().
-const strong = (label: string) => `<span class="font-semibold text-slate-700 whitespace-nowrap">${label}</span>`;
-const priceLine = t.priceLine
-  .replace('{monthly}', strong(pricing.monthlyLabel))
-  .replace('{annual}', strong(pricing.annualLabel));
+const plans = [
+  { label: t.monthlyLabel, price: pricing.monthlyLabel, unit: t.perMonth, note: null },
+  { label: t.annualLabel, price: pricing.annualLabel, unit: t.perYear, note: withPrices(t.annualPerMonth, lang) },
+];
 ---
 
 <section id="trial" class="py-24 px-6 md:px-16 relative scroll-mt-8">
@@ -66,7 +64,23 @@ const priceLine = t.priceLine
       </div>
     </div>
 
-    <p id="pricing" class="mt-7 px-6 py-4 text-sm text-slate-500 text-center" data-reveal set:html={priceLine} />
+    <div id="pricing" class="mt-10 max-w-[720px] mx-auto" data-reveal>
+      <p class="mb-3.5 text-sm text-slate-500 text-center">{t.priceIntro}</p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {plans.map((plan) => (
+          <div class="card-surface !rounded-2xl px-6 py-5 flex flex-col gap-1.5">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-mono text-xs tracking-[0.04em] text-slate-500">{plan.label}</div>
+              {plan.note && <span class="text-xs font-semibold text-accent">{plan.note}</span>}
+            </div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bold text-[28px] leading-[1.1] tracking-[-0.02em] text-slate-900">{plan.price}</span>
+              <span class="text-sm text-slate-600">{plan.unit}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
 </section>
 

@@ -117,7 +117,13 @@ export const translations = {
       notsTitle: "What you don't need",
       nots: ["Credit card", "PayPal or bank details", "Cancelling"],
       cta: "Start for free →",
-      priceLine: "If you keep going, Premium costs {monthly} a month or {annual} a year."
+      // Price cards under the trial grid
+      priceIntro: "If you keep going after the trial:",
+      monthlyLabel: "MONTHLY",
+      annualLabel: "ANNUAL",
+      perMonth: "per month",
+      perYear: "per year",
+      annualPerMonth: "{annualPerMonth} per month"
     },
     // Climbing Efficiency
     climbingEfficiency: {
@@ -598,7 +604,13 @@ export const translations = {
       notsTitle: "Das brauchst du nicht",
       nots: ["Kreditkarte", "PayPal oder Bankdaten", "Kündigung"],
       cta: "Jetzt gratis starten →",
-      priceLine: "Wenn du danach weitermachst, kostet Premium {monthly} im Monat oder {annual} im Jahr."
+      // Preiskarten unter dem Trial-Grid
+      priceIntro: "Wenn du nach dem Test weitermachst:",
+      monthlyLabel: "MONATLICH",
+      annualLabel: "JÄHRLICH",
+      perMonth: "im Monat",
+      perYear: "im Jahr",
+      annualPerMonth: "{annualPerMonth} im Monat"
     },
     // Climbing Efficiency
     climbingEfficiency: {
