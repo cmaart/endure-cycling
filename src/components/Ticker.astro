@@ -9,9 +9,9 @@ const items: string[] = getTranslations(lang).ticker;
   <div class="inline-flex gap-16 font-mono text-[15px] text-slate-600 animate-ticker">
     {[0, 1].map(() => (
       <span class="inline-flex gap-16">
-        {items.map((item) => (
+        {items.map((item, i) => (
           <>
-            <span>{item}</span>
+            <span class={i === 0 ? 'text-accent' : undefined}>{item}</span>
             <span>·</span>
           </>
         ))}

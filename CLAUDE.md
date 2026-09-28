@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Static marketing site for **ENDURE**, an indoor cycling app available on iOS and Android (currently free, subscription planned). Desktop versions are not currently planned and the site must not mention them. Live at https://www.endure-cycling.com. Built with Astro 5 + Tailwind CSS v4, deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `master`.
+Static marketing site for **ENDURE**, an indoor cycling app available on iOS and Android (ENDURE Premium subscription with a 14-day free trial, no payment details needed). Desktop versions are not currently planned and the site must not mention them. Live at https://www.endure-cycling.com. Built with Astro 5 + Tailwind CSS v4, deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `master`.
 
 ## Commands
 
@@ -29,6 +29,12 @@ Long-form SEO content lives in sibling files with the same en/de convention: `sr
 ### Per-platform availability
 
 `src/config.ts` exports `config.platforms` — an object keyed by `ios`, `android`, `windows`, `macos`, each with `{ available: boolean, url: string | null }`. Components (`Hero.astro`, `Roadmap.astro`) read these flags to render official store badges and green ✅ "Available" cards. Windows/macOS entries exist in the config but are not rendered anywhere (desktop is not currently planned); `Roadmap.astro` lists only `ios` and `android` in its `platformOrder`. Flip `available`, set `url`, and re-add the platform to `platformOrder` (plus its `roadmap` translation keys) at platform launch — do not hardcode availability state in components. The `PlatformKey` type is exported for typed iteration.
+
+### Prices live in config
+
+ENDURE Premium prices are set once in `config.pricing` in `src/config.ts`: the US price for `en`, the German price for `de`. They are maintained by hand, so update them there whenever the App Store Connect prices change. Copy uses `{monthly}`, `{annual}` and `{annualPerMonth}` placeholders, filled by `withPrices()` / `getPricing()` in `src/utils/prices.ts`. The same values feed the `SoftwareApplication` offer in `Layout.astro`. Never write a price into a translation string or a component.
+
+The 14-day trial is app-managed and needs no payment details, so copy must not describe it as a store introductory offer.
 
 ### Every URL ends in a slash
 

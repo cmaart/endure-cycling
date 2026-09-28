@@ -1,5 +1,6 @@
 ---
 import { getTranslations } from '../i18n/translations';
+import { withPrices } from '../utils/prices';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).comparison;
@@ -28,16 +29,16 @@ const t = getTranslations(lang).comparison;
             </tr>
           </thead>
           <tbody>
-            {t.rows.map((row: { feature: string; value: string }, idx: number) => (
-              <tr class={idx % 2 === 1 ? 'bg-slate-50' : ''}>
+            {t.rows.map((row: { feature: string; value: string; highlight?: boolean }, idx: number) => (
+              <tr class={row.highlight ? 'bg-accent/[0.06]' : idx % 2 === 1 ? 'bg-slate-50' : ''}>
                 <th
                   scope="row"
                   class="py-4 px-5 align-top font-semibold text-slate-900 whitespace-nowrap border-t border-slate-200"
                 >
                   {row.feature}
                 </th>
-                <td class="py-4 px-5 align-top text-slate-600 font-medium border-t border-slate-200">
-                  {row.value}
+                <td class={`py-4 px-5 align-top font-medium border-t border-slate-200 ${row.highlight ? 'text-slate-900' : 'text-slate-600'}`}>
+                  {withPrices(row.value, lang)}
                 </td>
               </tr>
             ))}

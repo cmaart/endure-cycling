@@ -20,6 +20,12 @@ export const config = {
       url: null,
     },
   },
+  // ENDURE Premium store prices shown on the site: US for English, Germany for
+  // German. Keep in sync with App Store Connect when prices change.
+  pricing: {
+    en: { currency: 'USD', monthly: 7.99, annual: 59.99 },
+    de: { currency: 'EUR', monthly: 8.99, annual: 69.99 },
+  },
 } as const;
 
 export type PlatformKey = keyof typeof config.platforms;

@@ -1,13 +1,17 @@
 ---
 import { getTranslations } from '../i18n/translations';
+import { withPrices } from '../utils/prices';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).faq;
+// Price answers carry {monthly}/{annual} placeholders; fill them once so the
+// visible text and the JSON-LD agree.
+const items: { q: string; a: string; highlight?: boolean }[] = t.items.map((item) => ({ ...item, a: withPrices(item.a, lang) }));
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": t.items.map((item: { q: string; a: string }) => ({
+  "mainEntity": items.map((item) => ({
     "@type": "Question",
     "name": item.q,
     "acceptedAnswer": {
@@ -33,9 +37,9 @@ const faqSchema = {
 
       <!-- Q&A list -->
       <div class="space-y-4">
-        {t.items.map((item: { q: string; a: string }, idx: number) => (
+        {items.map((item, idx) => (
           <div
-            class="card-surface p-6"
+            class:list={['card-surface p-6', item.highlight && '!border-accent/35']}
             data-reveal
             data-reveal-delay={Math.min(idx, 3) * 100}
           >

@@ -4,6 +4,7 @@ import { config } from '../config';
 import Nav from '../components/Nav.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import { hasGermanVersion, localeHref, localeUrl, siteUrl } from '../utils/paths';
+import { getPricing } from '../utils/prices';
 import '@fontsource/sora/400.css';
 import '@fontsource/sora/500.css';
 import '@fontsource/sora/600.css';
@@ -22,6 +23,7 @@ interface Props {
 
 const { lang = (Astro.currentLocale as 'en' | 'de') || 'en' } = Astro.props;
 const t = getTranslations(lang);
+const pricing = getPricing(lang);
 
 const title = Astro.props.title || t.seo.title;
 const description = Astro.props.description || t.seo.description;
@@ -160,11 +162,31 @@ const storeUrls = Object.values(config.platforms)
       "name": "ENDURE",
       "applicationCategory": "HealthApplication",
       "operatingSystem": availableOs,
+      // The download is free and every account starts with the 14-day trial;
+      // the recurring offer is ENDURE Premium at the store price for this locale.
       "isAccessibleForFree": false,
       "offers": {
         "@type": "Offer",
         "category": "subscription",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
+        "price": pricing.monthly.toFixed(2),
+        "priceCurrency": pricing.currency,
+        "priceSpecification": [
+          {
+            "@type": "UnitPriceSpecification",
+            "price": pricing.monthly.toFixed(2),
+            "priceCurrency": pricing.currency,
+            "billingDuration": "P1M",
+            "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" }
+          },
+          {
+            "@type": "UnitPriceSpecification",
+            "price": pricing.annual.toFixed(2),
+            "priceCurrency": pricing.currency,
+            "billingDuration": "P1Y",
+            "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "ANN" }
+          }
+        ]
       },
       "description": description,
       "screenshot": ogImage,
@@ -220,6 +242,14 @@ const storeUrls = Object.values(config.platforms)
       DE button falls back to the German homepage rather than linking to a URL
       that does not exist.
     -->
+    <a
+      href={localeHref(lang, '/#trial')}
+      class="flex flex-wrap justify-center items-center gap-x-2.5 gap-y-1 px-6 py-2.5 bg-slate-900 text-endure-bg-primary text-sm text-center"
+    >
+      <span class="font-mono text-xs tracking-[0.04em] text-[#E07A52]">{t.topBar.label}</span>
+      <span>{t.topBar.text}</span>
+      <span class="font-bold underline underline-offset-[3px]">{t.topBar.link}</span>
+    </a>
     <Nav
       lang={lang}
       enPath={localeHref('en', basePath)}

@@ -117,7 +117,7 @@ export const vsContent = {
       chooseOther: [
         "want a fully prescribed, hands-off training plan toward a target event",
         "like algorithm-driven progression management",
-        "don't mind a subscription for that coaching layer"
+        "are happy to pay for an algorithmic coaching layer"
       ],
       switchTitle: "Switching from TrainerRoad? Here is what you keep",
       switchBullets: [
@@ -266,7 +266,7 @@ export const vsContent = {
       chooseOther: [
         "einen komplett vorgeschriebenen Trainingsplan Richtung Zielevent willst",
         "algorithmisch gesteuerte Progression magst",
-        "ein Abo für diese Coaching-Schicht in Ordnung findest"
+        "gern für eine algorithmische Coaching-Schicht bezahlst"
       ],
       switchTitle: "Wechsel von TrainerRoad? Das behältst du",
       switchBullets: [

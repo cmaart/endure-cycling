@@ -39,7 +39,7 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
 
   <div class="relative text-center max-w-3xl mx-auto">
     <!-- Badge -->
-    <div data-reveal class="inline-flex items-center gap-2.5 rounded-full border border-slate-900/15 bg-slate-900/5 backdrop-blur-md px-5 py-2 text-sm text-slate-600 mb-8">
+    <div data-reveal class="inline-flex items-center gap-2.5 rounded-full border border-accent/35 bg-accent/[0.06] backdrop-blur-md px-5 py-2 text-sm text-slate-700 mb-8">
       <span class="w-[7px] h-[7px] rounded-full bg-accent"></span>
       {t.badge}
     </div>
@@ -63,14 +63,24 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
       {t.seoLine}
     </h2>
 
-    <!-- CTAs -->
-    <div data-reveal data-reveal-delay="300" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <a id="download-btn-ios" href={iosUrl} target="_blank" rel="noopener" aria-label={t.appStoreBadgeAlt}>
-        <img src={appStoreBadge} alt={t.appStoreBadgeAlt} class="h-12 w-auto" />
-      </a>
-      <a id="download-btn-android" href={androidUrl} target="_blank" rel="noopener" aria-label={t.googlePlayBadgeAlt}>
-        <img src={googlePlayBadge} alt={t.googlePlayBadgeAlt} class="h-12 w-auto" />
-      </a>
+    <!-- CTAs, with the trial terms right under the badges -->
+    <div data-reveal data-reveal-delay="300" class="inline-flex flex-col items-center gap-5 px-7 pt-6 pb-5 rounded-3xl bg-white border border-slate-200 shadow-[0_30px_80px_-30px_rgba(22,24,29,0.18)]">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a id="download-btn-ios" href={iosUrl} target="_blank" rel="noopener" aria-label={t.appStoreBadgeAlt}>
+          <img src={appStoreBadge} alt={t.appStoreBadgeAlt} class="h-12 w-auto" />
+        </a>
+        <a id="download-btn-android" href={androidUrl} target="_blank" rel="noopener" aria-label={t.googlePlayBadgeAlt}>
+          <img src={googlePlayBadge} alt={t.googlePlayBadgeAlt} class="h-12 w-auto" />
+        </a>
+      </div>
+      <ul class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-slate-700">
+        {t.checks.map((check) => (
+          <li class="inline-flex items-center gap-2">
+            <span class="w-[18px] h-[18px] rounded-full bg-accent/[0.12] text-accent inline-flex items-center justify-center text-[11px] font-bold" aria-hidden="true">✓</span>
+            {check}
+          </li>
+        ))}
+      </ul>
     </div>
 
     <p data-reveal data-reveal-delay="400" class="mt-5 text-sm text-slate-500 flex items-center justify-center gap-2">

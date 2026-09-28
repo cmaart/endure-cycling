@@ -5,15 +5,23 @@ export const translations = {
     nav: {
       features: "Features",
       virtualShifting: "Virtual Shifting",
-      comparison: "Comparison",
+      trial: "Free trial",
       guides: "Guides",
       roadmap: "Roadmap",
       faq: "FAQ",
-      cta: "Get the app"
+      cta: "Try free for 14 days"
+    },
+    // Announcement bar above the nav, on every page
+    topBar: {
+      label: "NEW",
+      text: "Try ENDURE Premium free for 14 days, no payment details needed.",
+      link: "How it works →"
     },
     // Hero
     hero: {
-      badge: "Now on iOS & Android",
+      badge: "Now on iOS & Android · 14 days free",
+      // Check marks under the store badges
+      checks: ["14 days free", "No payment details", "Ends on its own"],
       tagline: "Precision over gimmicks",
       headline1: "Train right.",
       headline2: "See the progress.",
@@ -77,8 +85,9 @@ export const translations = {
         alt: "ENDURE training calendar with rides, runs and swims synced from Strava"
       }
     },
-    // Ticker strip
+    // Ticker strip. The first item is shown in the accent color.
     ticker: [
+      "14 days free",
       "Ready in <30 s",
       "ERG mode",
       "Virtual Shifting",
@@ -90,6 +99,26 @@ export const translations = {
       ".ZWO import",
       "Climbing Efficiency"
     ],
+    // 14-day Premium trial. {monthly} / {annual} are filled from
+    // config.pricing (src/utils/prices.ts).
+    trial: {
+      eyebrow: "ENDURE PREMIUM · FREE TRIAL",
+      title: "Try it for 14 days.",
+      titleHighlight: "No payment details.",
+      intro: "Download the app and start riding. You don't need a credit card or PayPal for it. After two weeks you decide, in your own time, whether to keep going.",
+      cardTitle: "days of full access",
+      cardText: "Every Premium feature: ERG & SIM, lactate LT1/LT2, CORE heat zones, Climbing Efficiency, AI coaching.",
+      cardFoot: "NO PAYMENT DETAILS REQUIRED",
+      steps: [
+        { day: "DAY 1", title: "Download and ride", text: "Create an account and pair your trainer. We won't ask for payment details." },
+        { day: "DAY 1–14", title: "Everything is unlocked", text: "You use ENDURE Premium without limits and find out whether it suits your training." },
+        { day: "DAY 14", title: "Your call", text: "If you like ENDURE, you subscribe. If not, the trial simply ends." }
+      ],
+      notsTitle: "What you don't need",
+      nots: ["Credit card", "PayPal or bank details", "Cancelling"],
+      cta: "Start for free →",
+      priceLine: "If you keep going, Premium costs {monthly} a month or {annual} a year."
+    },
     // Climbing Efficiency
     climbingEfficiency: {
       badge: "New Feature",
@@ -218,7 +247,7 @@ export const translations = {
       featureLabel: "Capability",
       valueLabel: "What you get",
       rows: [
-        { feature: "Price", value: "ENDURE Premium subscription, monthly or annual, with a 14-day free trial" },
+        { feature: "Price", value: "Try free for 14 days, no payment details. Then ENDURE Premium for {monthly} / month or {annual} / year", highlight: true },
         { feature: "Platforms", value: "iOS & Android" },
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verified) — ERG target & trainer resistance from the bars, no simulated cassette" },
@@ -238,8 +267,13 @@ export const translations = {
       subtitle: "Everything you need to know before your first ride.",
       items: [
         {
-          q: "Is ENDURE free?",
-          a: "The trial is free, the app is not. ENDURE Premium is billed monthly or annually through the App Store or Google Play, and the price is deliberately kept at the low end of what training apps cost. Every new account starts with 14 days free, so you can pair your trainer and ride a few sessions before you decide."
+          q: "Can I try ENDURE for free?",
+          a: "Yes. For 14 days you can use all of ENDURE Premium, and you don't need a credit card or any other payment details for it. The trial ends on its own, so there is nothing to cancel.",
+          highlight: true
+        },
+        {
+          q: "How much does ENDURE Premium cost?",
+          a: "After the trial, ENDURE Premium costs {monthly} a month or {annual} a year. On the annual plan that works out to {annualPerMonth} a month. These are US prices; in other countries the store may charge a different amount."
         },
         {
           q: "Which smart trainers and sensors work with ENDURE?",
@@ -385,6 +419,7 @@ export const translations = {
       tagline: "Driven by data. Built to endure.",
       ctaTitle1: "Driven by data.",
       ctaTitle2: "Built to endure.",
+      ctaText: "Try ENDURE Premium free for 14 days. You don't enter any payment details and there is nothing to cancel.",
 
       linksTitle: "Links",
       vsZwift: "Zwift alternative",
@@ -451,15 +486,23 @@ export const translations = {
     nav: {
       features: "Features",
       virtualShifting: "Virtual Shifting",
-      comparison: "Vergleich",
+      trial: "Gratis testen",
       guides: "Guides",
       roadmap: "Roadmap",
       faq: "FAQ",
-      cta: "App laden"
+      cta: "14 Tage gratis testen"
+    },
+    // Hinweisleiste über der Nav, auf jeder Seite
+    topBar: {
+      label: "NEU",
+      text: "Teste ENDURE Premium 14 Tage gratis, ohne Zahlungsdaten.",
+      link: "So funktioniert's →"
     },
     // Hero
     hero: {
-      badge: "Jetzt für iOS & Android",
+      badge: "Jetzt für iOS & Android · 14 Tage gratis",
+      // Häkchen unter den Store-Badges
+      checks: ["14 Tage gratis", "Keine Zahlungsdaten", "Endet von selbst"],
       tagline: "Präzision statt Spielerei",
       headline1: "Richtig trainieren.",
       headline2: "Fortschritt sehen.",
@@ -523,8 +566,9 @@ export const translations = {
         alt: "ENDURE Trainingskalender mit Rides, Läufen und Schwimmeinheiten aus Strava"
       }
     },
-    // Ticker strip
+    // Ticker strip. Der erste Eintrag erscheint in der Akzentfarbe.
     ticker: [
+      "14 Tage gratis",
       "Fahrbereit in <30 s",
       "ERG-Modus",
       "Virtual Shifting",
@@ -536,6 +580,26 @@ export const translations = {
       ".ZWO-Import",
       "Climbing Efficiency"
     ],
+    // 14-Tage-Premium-Test. {monthly} / {annual} kommen aus
+    // config.pricing (src/utils/prices.ts).
+    trial: {
+      eyebrow: "ENDURE PREMIUM · GRATIS-TEST",
+      title: "14 Tage testen.",
+      titleHighlight: "Ohne Zahlungsdaten.",
+      intro: "Lade die App und fahr los. Kreditkarte oder PayPal brauchst du dafür nicht. Nach zwei Wochen entscheidest du in Ruhe, ob du weitermachst.",
+      cardTitle: "Tage voller Zugriff",
+      cardText: "Jedes Premium-Feature: ERG & SIM, Laktat LT1/LT2, CORE Heat Zones, Climbing Efficiency, AI Coaching.",
+      cardFoot: "KEINE ZAHLUNGSDATEN ERFORDERLICH",
+      steps: [
+        { day: "TAG 1", title: "App laden und losfahren", text: "Leg einen Account an und verbinde deinen Trainer. Nach Zahlungsdaten fragen wir nicht." },
+        { day: "TAG 1–14", title: "Alles ist freigeschaltet", text: "Du nutzt ENDURE Premium ohne Einschränkungen und siehst, ob es zu deinem Training passt." },
+        { day: "TAG 14", title: "Du entscheidest", text: "Gefällt dir ENDURE, schließt du ein Abo ab. Wenn nicht, endet der Test einfach." }
+      ],
+      notsTitle: "Das brauchst du nicht",
+      nots: ["Kreditkarte", "PayPal oder Bankdaten", "Kündigung"],
+      cta: "Jetzt gratis starten →",
+      priceLine: "Wenn du danach weitermachst, kostet Premium {monthly} im Monat oder {annual} im Jahr."
+    },
     // Climbing Efficiency
     climbingEfficiency: {
       badge: "Neues Feature",
@@ -664,7 +728,7 @@ export const translations = {
       featureLabel: "Funktion",
       valueLabel: "Das bekommst du",
       rows: [
-        { feature: "Preis", value: "ENDURE-Premium-Abo, monatlich oder jährlich, mit 14 Tagen Gratis-Test" },
+        { feature: "Preis", value: "14 Tage gratis testen, ohne Zahlungsdaten. Danach ENDURE Premium für {monthly} / Monat oder {annual} / Jahr", highlight: true },
         { feature: "Plattformen", value: "iOS & Android" },
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verifiziert) — ERG-Ziel & Trainer-Widerstand vom Lenker, ohne simulierte Kassette" },
@@ -684,8 +748,13 @@ export const translations = {
       subtitle: "Alles, was du vor deiner ersten Fahrt wissen musst.",
       items: [
         {
-          q: "Ist ENDURE kostenlos?",
-          a: "Gratis ist der Test, nicht die App. ENDURE Premium wird monatlich oder jährlich über den App Store oder Google Play abgerechnet, und der Preis liegt bewusst am unteren Ende dessen, was Trainings-Apps kosten. Jedes neue Konto startet mit 14 Tagen gratis, du kannst also deinen Trainer koppeln und ein paar Einheiten fahren, bevor du dich entscheidest."
+          q: "Kann ich ENDURE gratis testen?",
+          a: "Ja, 14 Tage lang kannst du ENDURE Premium komplett nutzen. Eine Kreditkarte oder andere Zahlungsdaten brauchst du dafür nicht. Der Test endet von selbst, kündigen musst du also nichts.",
+          highlight: true
+        },
+        {
+          q: "Was kostet ENDURE Premium?",
+          a: "Nach dem Test kostet ENDURE Premium {monthly} im Monat oder {annual} im Jahr. Mit dem Jahresabo zahlst du umgerechnet {annualPerMonth} im Monat. Das sind die Preise für Deutschland, in anderen Ländern kann der Store einen anderen Betrag verlangen."
         },
         {
           q: "Welche Smart Trainer und Sensoren funktionieren mit ENDURE?",
@@ -831,6 +900,7 @@ export const translations = {
       tagline: "Für alle, die es genau wissen wollen.",
       ctaTitle1: "Für alle,",
       ctaTitle2: "die es genau wissen wollen.",
+      ctaText: "Teste ENDURE Premium 14 Tage kostenlos. Du gibst keine Zahlungsdaten an und musst nichts kündigen.",
 
       linksTitle: "Links",
       vsZwift: "Zwift Alternative",
