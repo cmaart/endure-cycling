@@ -51,7 +51,7 @@ export const translations = {
       },
       zones: {
         label: "Time in zones",
-        alt: "ENDURE time in zones with the weekly Z1 to Z7 power distribution",
+        alt: "ENDURE weekly training time split into ride and run, with the overall zone distribution",
         caption: "Time in Zones: where your training time actually goes, week by week"
       },
       coaching: {
@@ -532,7 +532,7 @@ export const translations = {
       },
       zones: {
         label: "Zeit in Zonen",
-        alt: "ENDURE Zeit in Zonen mit der Wochenverteilung von Z1 bis Z7",
+        alt: "ENDURE Trainingszeit der Woche, aufgeteilt nach Rad und Laufen, mit der Zonenverteilung insgesamt",
         caption: "Zeit in Zonen: wo deine Trainingszeit wirklich landet, Woche für Woche"
       },
       coaching: {
