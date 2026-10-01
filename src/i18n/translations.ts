@@ -28,7 +28,7 @@ export const translations = {
       subline: "Smart trainer control, FTP and VO2max trends, lactate thresholds. From app start to riding in under 30 seconds.",
       // Rendered as an H2 under the subline: the headline carries the claim, this
       // line carries the terms riders actually search for.
-      seoLine: "Indoor cycling app for smart and turbo trainers — iOS & Android",
+      seoLine: "Indoor cycling app for smart and turbo trainers on iOS & Android",
       secondary: "Frequent updates, built together with the cycling community.",
       appStoreBadgeAlt: "Download on the App Store",
       googlePlayBadgeAlt: "Get it on Google Play",
@@ -47,7 +47,7 @@ export const translations = {
       vo2max: {
         label: "VO2max trend",
         alt: "ENDURE VO2max trend with age-group benchmark and the rides that moved it",
-        caption: "VO2max estimated from your rides — no lab test, with age-group benchmark"
+        caption: "VO2max estimated from your rides without a lab test, with age-group benchmark"
       },
       zones: {
         label: "Time in zones",
@@ -111,7 +111,7 @@ export const translations = {
       cardFoot: "NO PAYMENT DETAILS REQUIRED",
       steps: [
         { day: "DAY 1", title: "Download and ride", text: "Create an account and pair your trainer. We won't ask for payment details." },
-        { day: "DAY 1–14", title: "Everything is unlocked", text: "You use ENDURE Premium without limits and find out whether it suits your training." },
+        { day: "DAY 1-14", title: "Everything is unlocked", text: "You use ENDURE Premium without limits and find out whether it suits your training." },
         { day: "DAY 14", title: "Your call", text: "If you like ENDURE, you subscribe. If not, the trial simply ends." }
       ],
       notsTitle: "What you don't need",
@@ -181,11 +181,11 @@ export const translations = {
       badge: "New · Virtual Shifting",
       headline1: "Control from the bars.",
       headline2: "Hands stay where they are.",
-      description: "Virtual Shifting puts your effort on the handlebar: with a Zwift Click you change your ERG target in structured workouts and trainer resistance in SIM mode — no reaching for the phone mid-interval. It pairs over Bluetooth like any other sensor. Verified with Click v1.",
+      description: "Virtual Shifting puts your effort on the handlebar: with a Zwift Click you change your ERG target in structured workouts and trainer resistance in SIM mode, without reaching for the phone mid-interval. It pairs over Bluetooth like any other sensor. Verified with Click v1.",
       bullets: [
         "<strong>ERG target from the bars:</strong> Nudge your target watts up or down without touching the phone.",
         "<strong>Resistance in SIM mode:</strong> Click resistance up and down while you ride, no stopping.",
-        "<strong>Not a simulated cassette:</strong> The buttons act on resistance directly — same feel as shifting, no gear ratios modelled.",
+        "<strong>Not a simulated cassette:</strong> The buttons act on resistance directly. It feels the same as shifting, but no gear ratios are modelled.",
         "<strong>Click v1 verified:</strong> That is the hardware we have tested. A v2 is untested, so we do not claim it."
       ],
       moreLink: "Virtual Shifting without Zwift, in detail",
@@ -256,7 +256,7 @@ export const translations = {
         { feature: "Price", value: "Try free for 14 days, no payment details. Then ENDURE Premium for {monthly} / month or {annual} / year", highlight: true },
         { feature: "Platforms", value: "iOS & Android" },
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
-        { feature: "Virtual Shifting", value: "Zwift Click (v1 verified) — ERG target & trainer resistance from the bars, no simulated cassette" },
+        { feature: "Virtual Shifting", value: "Zwift Click (v1 verified): ERG target & trainer resistance from the bars, no simulated cassette" },
         { feature: "Workout import", value: ".ZWO, .MRC and .ERG files" },
         { feature: "Analytics", value: "FTP & VO2max trends, power profile, time-in-zones" },
         { feature: "Lactate LT1 / LT2", value: "In-ride & post-ride logging with auto-estimated thresholds" },
@@ -287,15 +287,15 @@ export const translations = {
         },
         {
           q: "Does ENDURE work with any turbo trainer?",
-          a: "For automatic resistance control, ENDURE needs a smart trainer that supports the Bluetooth standard FTMS — that covers the large majority of current models across all the well-known brands. A classic turbo trainer without electronic control cannot be steered, but you can still record the ride and all your analytics if you pair a power meter or heart-rate sensor."
+          a: "For automatic resistance control, ENDURE needs a smart trainer that supports the Bluetooth standard FTMS. That covers the large majority of current models across all the well-known brands. A classic turbo trainer without electronic control cannot be steered, but you can still record the ride and all your analytics if you pair a power meter or heart-rate sensor."
         },
         {
           q: "Does ENDURE support Virtual Shifting?",
-          a: "Yes, with a Zwift Click — but it is worth knowing what it does. The buttons change your ERG target inside a structured workout and trainer resistance in SIM mode; ENDURE does not simulate a cassette the way Zwift does with its Cog, so there is no gear number. The feel is the same, the mechanism is resistance. Verified with Click v1."
+          a: "Yes, with a Zwift Click, but it is worth knowing what it does. The buttons change your ERG target inside a structured workout and trainer resistance in SIM mode; ENDURE does not simulate a cassette the way Zwift does with its Cog, so there is no gear number. The feel is the same, the mechanism is resistance. Verified with Click v1."
         },
         {
           q: "Does my Zwift Click work with ENDURE?",
-          a: "A Click v1 does — that is the generation we have verified, on iOS and Android. It pairs over Bluetooth and changes your ERG target in workouts or trainer resistance in SIM mode. We have not tested a v2 yet, so we cannot promise it."
+          a: "A Click v1 does. That is the generation we have verified, on iOS and Android. It pairs over Bluetooth and changes your ERG target in workouts or trainer resistance in SIM mode. We have not tested a v2 yet, so we cannot promise it."
         },
         {
           q: "Which platforms is ENDURE available on?",
@@ -337,18 +337,18 @@ export const translations = {
     },
     // About
     about: {
-      seoTitle: "About ENDURE — The Precision Cycling Training App",
+      seoTitle: "About ENDURE | Precision Cycling Training App",
       seoDescription: "The story behind ENDURE, the precision cycling training app: who builds it, and how its FTP, VO2max, lactate, CORE heat and climbing metrics actually work.",
       headline: "About ENDURE",
-      intro: "ENDURE is an indoor cycling training app built around one idea: precision over gimmicks. No games, no filler — just the training and analysis that actually make you faster.",
+      intro: "ENDURE is an indoor cycling training app built around one idea: precision over gimmicks. No games, no filler, just the training and analysis that actually make you faster.",
       sections: [
         {
           title: "Who's behind ENDURE",
-          body: "ENDURE is built by Christoph Martin, a cyclist and developer based in Austria. It started from a simple frustration — indoor cycling apps were full of gimmicks and games, but thin on the honest analysis that helps you improve. ENDURE is the app we wanted to train with ourselves."
+          body: "ENDURE is built by Christoph Martin, a cyclist and developer based in Austria. It started from a simple frustration: indoor cycling apps were full of gimmicks and games, but thin on the honest analysis that helps you improve. ENDURE is the app we wanted to train with ourselves."
         },
         {
           title: "Precision over gimmicks",
-          body: "Every feature earns its place. The workout library carries only physiologically meaningful sessions — VO2max, threshold, sweet spot — with no filler. Sessions start in seconds, survive dropouts with auto-resume, and run smoothly without a gaming PC. We would rather do a few things exceptionally well than bury you in noise."
+          body: "Every feature earns its place. The workout library carries only physiologically meaningful sessions (VO2max, threshold, sweet spot) with no filler. Sessions start in seconds, survive dropouts with auto-resume, and run smoothly without a gaming PC. We would rather do a few things exceptionally well than bury you in noise."
         },
         {
           title: "How our metrics work",
@@ -356,13 +356,13 @@ export const translations = {
         },
         {
           title: "Built with the community",
-          body: "ENDURE ships frequent updates, and feature requests feed straight into the cycle. The direction of the app is shaped by the cyclists who ride with it — come along for the ride."
+          body: "ENDURE ships frequent updates, and feature requests feed straight into the cycle. The direction of the app is shaped by the cyclists who ride with it. Come along for the ride."
         }
       ],
       backHome: "Back to Homepage"
     },
     press: {
-      seoTitle: "Press Kit — ENDURE Cycling",
+      seoTitle: "Press Kit | ENDURE Cycling",
       seoDescription: "Press resources for ENDURE, the Austrian indoor cycling training app: fact sheet, story angles, founder bio, logos and screenshots.",
       headline: "Press Kit",
       intro: "ENDURE is an indoor cycling training app developed independently in Austria. The big platforms build virtual worlds; ENDURE puts its effort into performance diagnostics and smart-trainer control instead, with the ambition to keep up technologically with the international players. ENDURE is available for iOS and Android.",
@@ -438,7 +438,7 @@ export const translations = {
       featureFtp: "FTP & VO2max tracking",
       featureClimbing: "Climbing Efficiency",
       featuresTitle: "Features",
-      eventsCalendar: "Race Calendar 2026 – Cycling & Triathlon",
+      eventsCalendar: "Cycling & Triathlon Race Calendar 2026",
       instagram: "Instagram",
       about: "About",
       privacy: "Privacy Policy",
@@ -534,7 +534,7 @@ export const translations = {
       vo2max: {
         label: "VO2max-Trend",
         alt: "ENDURE VO2max-Trend mit Altersklassen-Vergleich und den Rides, die ihn bewegt haben",
-        caption: "VO2max aus deinen Rides geschätzt — ohne Labortest, mit Altersklassen-Vergleich"
+        caption: "VO2max aus deinen Rides geschätzt, ohne Labortest und mit Altersklassen-Vergleich"
       },
       zones: {
         label: "Zeit in Zonen",
@@ -598,7 +598,7 @@ export const translations = {
       cardFoot: "KEINE ZAHLUNGSDATEN ERFORDERLICH",
       steps: [
         { day: "TAG 1", title: "App laden und losfahren", text: "Leg einen Account an und verbinde deinen Trainer. Nach Zahlungsdaten fragen wir nicht." },
-        { day: "TAG 1–14", title: "Alles ist freigeschaltet", text: "Du nutzt ENDURE Premium ohne Einschränkungen und siehst, ob es zu deinem Training passt." },
+        { day: "TAG 1-14", title: "Alles ist freigeschaltet", text: "Du nutzt ENDURE Premium ohne Einschränkungen und siehst, ob es zu deinem Training passt." },
         { day: "TAG 14", title: "Du entscheidest", text: "Gefällt dir ENDURE, schließt du ein Abo ab. Wenn nicht, endet der Test einfach." }
       ],
       notsTitle: "Das brauchst du nicht",
@@ -668,11 +668,11 @@ export const translations = {
       badge: "Neu · Virtual Shifting",
       headline1: "Steuern vom Lenker.",
       headline2: "Hände bleiben, wo sie sind.",
-      description: "Virtual Shifting legt deine Belastung an den Lenker: mit einem Zwift Click änderst du dein ERG-Ziel im strukturierten Workout und den Trainer-Widerstand im SIM-Modus — ohne mitten im Intervall zum Handy zu greifen. Verbunden wird per Bluetooth wie jeder andere Sensor. Mit Click v1 verifiziert.",
+      description: "Virtual Shifting legt deine Belastung an den Lenker: mit einem Zwift Click änderst du dein ERG-Ziel im strukturierten Workout und den Trainer-Widerstand im SIM-Modus, ohne mitten im Intervall zum Handy zu greifen. Verbunden wird per Bluetooth wie jeder andere Sensor. Mit Click v1 verifiziert.",
       bullets: [
         "<strong>ERG-Ziel vom Lenker:</strong> Watt-Ziel rauf oder runter, ohne das Handy anzufassen.",
         "<strong>Widerstand im SIM-Modus:</strong> Klick den Widerstand während der Fahrt rauf und runter, ohne anzuhalten.",
-        "<strong>Keine simulierte Kassette:</strong> Die Tasten wirken direkt auf den Widerstand — gleiches Gefühl wie Schalten, ohne modellierte Übersetzungen.",
+        "<strong>Keine simulierte Kassette:</strong> Die Tasten wirken direkt auf den Widerstand. Das fühlt sich an wie Schalten, aber ohne modellierte Übersetzungen.",
         "<strong>Click v1 verifiziert:</strong> Das ist die Hardware, die wir getestet haben. Ein v2 ist ungetestet, also behaupten wir ihn nicht."
       ],
       moreLink: "Virtual Shifting ohne Zwift, im Detail",
@@ -743,7 +743,7 @@ export const translations = {
         { feature: "Preis", value: "14 Tage gratis testen, ohne Zahlungsdaten. Danach ENDURE Premium für {monthly} / Monat oder {annual} / Jahr", highlight: true },
         { feature: "Plattformen", value: "iOS & Android" },
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
-        { feature: "Virtual Shifting", value: "Zwift Click (v1 verifiziert) — ERG-Ziel & Trainer-Widerstand vom Lenker, ohne simulierte Kassette" },
+        { feature: "Virtual Shifting", value: "Zwift Click (v1 verifiziert): ERG-Ziel & Trainer-Widerstand vom Lenker, ohne simulierte Kassette" },
         { feature: "Workout-Import", value: ".ZWO, .MRC und .ERG Dateien" },
         { feature: "Analyse", value: "FTP- & VO2max-Trends, Power Profile, Zeit in Zonen" },
         { feature: "Laktat LT1 / LT2", value: "Eintrag während & nach der Fahrt, Schwellen automatisch geschätzt" },
@@ -774,15 +774,15 @@ export const translations = {
         },
         {
           q: "Funktioniert ENDURE mit jedem Rollentrainer?",
-          a: "Für die automatische Widerstandssteuerung braucht ENDURE einen Smart Trainer, der den Bluetooth-Standard FTMS unterstützt — das trifft auf die große Mehrheit der aktuellen Modelle aller bekannten Hersteller zu. Eine klassische Rolle ohne elektronische Steuerung lässt sich nicht ansteuern; aufzeichnen und auswerten kannst du die Fahrt trotzdem, wenn du einen Powermeter oder Herzfrequenz-Sensor verbindest."
+          a: "Für die automatische Widerstandssteuerung braucht ENDURE einen Smart Trainer, der den Bluetooth-Standard FTMS unterstützt. Das trifft auf die große Mehrheit der aktuellen Modelle aller bekannten Hersteller zu. Eine klassische Rolle ohne elektronische Steuerung lässt sich nicht ansteuern; aufzeichnen und auswerten kannst du die Fahrt trotzdem, wenn du einen Powermeter oder Herzfrequenz-Sensor verbindest."
         },
         {
           q: "Unterstützt ENDURE Virtual Shifting?",
-          a: "Ja, mit einem Zwift Click — es lohnt sich aber zu wissen, was dabei passiert. Die Tasten ändern dein ERG-Ziel im strukturierten Workout und den Trainer-Widerstand im SIM-Modus. ENDURE simuliert keine Kassette wie Zwift mit dem Cog, es gibt also keine Gangnummer. Das Gefühl ist dasselbe, der Mechanismus ist Widerstand. Mit Click v1 verifiziert."
+          a: "Ja, mit einem Zwift Click. Es lohnt sich aber zu wissen, was dabei passiert. Die Tasten ändern dein ERG-Ziel im strukturierten Workout und den Trainer-Widerstand im SIM-Modus. ENDURE simuliert keine Kassette wie Zwift mit dem Cog, es gibt also keine Gangnummer. Das Gefühl ist dasselbe, der Mechanismus ist Widerstand. Mit Click v1 verifiziert."
         },
         {
           q: "Funktioniert mein Zwift Click mit ENDURE?",
-          a: "Ein Click v1 ja — das ist die Generation, die wir verifiziert haben, auf iOS und Android. Er verbindet sich per Bluetooth und ändert dein ERG-Ziel im Workout oder den Trainer-Widerstand im SIM-Modus. Einen v2 haben wir nicht getestet, wir können ihn also nicht versprechen."
+          a: "Ein Click v1 ja. Das ist die Generation, die wir verifiziert haben, auf iOS und Android. Er verbindet sich per Bluetooth und ändert dein ERG-Ziel im Workout oder den Trainer-Widerstand im SIM-Modus. Einen v2 haben wir nicht getestet, wir können ihn also nicht versprechen."
         },
         {
           q: "Auf welchen Plattformen ist ENDURE verfügbar?",
@@ -824,32 +824,32 @@ export const translations = {
     },
     // About
     about: {
-      seoTitle: "Über ENDURE — Die präzise Cycling-Training-App",
+      seoTitle: "Über ENDURE | Präzise Cycling-Training-App",
       seoDescription: "Die Geschichte hinter ENDURE, der präzisen Cycling-Training-App: wer dahintersteht und wie FTP-, VO2max-, Laktat-, CORE-Heat- und Kletter-Metriken funktionieren.",
       headline: "Über ENDURE",
-      intro: "ENDURE ist eine Indoor-Cycling- und Trainings-App mit einer klaren Idee: Präzision statt Spielerei. Keine Spiele, kein Ballast — nur das Training und die Analyse, die dich wirklich schneller machen.",
+      intro: "ENDURE ist eine Indoor-Cycling- und Trainings-App mit einer klaren Idee: Präzision statt Spielerei. Keine Spiele, kein Ballast, nur das Training und die Analyse, die dich wirklich schneller machen.",
       sections: [
         {
           title: "Wer hinter ENDURE steht",
-          body: "ENDURE wird von Christoph Martin entwickelt, einem Radfahrer und Entwickler aus Österreich. Der Auslöser war simpler Frust — Indoor-Cycling-Apps waren voller Spielereien und Games, aber dünn bei der ehrlichen Analyse, die beim Besserwerden hilft. ENDURE ist die App, mit der wir selbst trainieren wollten."
+          body: "ENDURE wird von Christoph Martin entwickelt, einem Radfahrer und Entwickler aus Österreich. Der Auslöser war simpler Frust: Indoor-Cycling-Apps waren voller Spielereien und Games, aber dünn bei der ehrlichen Analyse, die beim Besserwerden hilft. ENDURE ist die App, mit der wir selbst trainieren wollten."
         },
         {
           title: "Präzision statt Spielerei",
-          body: "Jedes Feature muss sich seinen Platz verdienen. Die Workout-Bibliothek enthält nur physiologisch sinnvolle Einheiten — VO2max, Schwelle, Sweet Spot — ohne Ballast. Sessions starten in Sekunden, überstehen Verbindungsabbrüche per Auto-Resume und laufen flüssig ohne Gaming-PC. Lieber wenige Dinge herausragend als viel Lärm."
+          body: "Jedes Feature muss sich seinen Platz verdienen. Die Workout-Bibliothek enthält nur physiologisch sinnvolle Einheiten (VO2max, Schwelle, Sweet Spot) ohne Ballast. Sessions starten in Sekunden, überstehen Verbindungsabbrüche per Auto-Resume und laufen flüssig ohne Gaming-PC. Lieber wenige Dinge herausragend als viel Lärm."
         },
         {
           title: "Wie unsere Metriken funktionieren",
-          body: "FTP und VO2max werden aus deinen aufgezeichneten Power- und Herzfrequenzdaten über mehrere Fahrten modelliert, damit Trends echten Fortschritt zeigen. LT1 und LT2 werden aus Laktatwerten geschätzt, die du während oder nach der Fahrt einträgst — gefittet an eine Kurve mit Konfidenztunnel. Die Körperkerntemperatur kommt direkt vom nativ gekoppelten CORE-Sensor, live mit Heat Zones angezeigt — Hitzetraining wird so messbar wie Watt. Climbing Efficiency bewertet über deine Aufstiegsgeschwindigkeit (VAM), wie effektiv du Watt in Höhenmeter umsetzt."
+          body: "FTP und VO2max werden aus deinen aufgezeichneten Power- und Herzfrequenzdaten über mehrere Fahrten modelliert, damit Trends echten Fortschritt zeigen. LT1 und LT2 werden aus Laktatwerten geschätzt, die du während oder nach der Fahrt einträgst. ENDURE fittet sie an eine Kurve mit Konfidenztunnel. Die Körperkerntemperatur kommt direkt vom nativ gekoppelten CORE-Sensor, live mit Heat Zones angezeigt. Damit wird Hitzetraining so messbar wie Watt. Climbing Efficiency bewertet über deine Aufstiegsgeschwindigkeit (VAM), wie effektiv du Watt in Höhenmeter umsetzt."
         },
         {
           title: "Gemeinsam mit der Community gebaut",
-          body: "ENDURE bekommt häufige Updates, und Feature-Wünsche fließen direkt in den Zyklus ein. Die Richtung der App wird von den Radfahrern geprägt, die damit fahren — sei dabei."
+          body: "ENDURE bekommt häufige Updates, und Feature-Wünsche fließen direkt in den Zyklus ein. Die Richtung der App wird von den Radfahrern geprägt, die damit fahren. Sei dabei."
         }
       ],
       backHome: "Zurück zur Startseite"
     },
     press: {
-      seoTitle: "Presse — ENDURE Cycling",
+      seoTitle: "Presse | ENDURE Cycling",
       seoDescription: "Presse-Material zu ENDURE, der österreichischen Indoor-Cycling-Training-App: Fact Sheet, Story-Ideen, Gründer-Bio, Logos und Screenshots.",
       headline: "Presse",
       intro: "ENDURE ist eine Indoor-Cycling-Training-App, die unabhängig in Österreich entwickelt wird. Die großen Plattformen bauen virtuelle Welten; ENDURE steckt die Arbeit stattdessen in Leistungsdiagnostik und Smart-Trainer-Steuerung, mit dem Anspruch, technologisch mit den internationalen Anbietern mitzuhalten. ENDURE ist für iOS und Android verfügbar.",

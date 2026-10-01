@@ -11,7 +11,7 @@ const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : 
 const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
 
 /*
- * The carousel phones, in ring order — the second one starts centered, its two
+ * The carousel phones, in ring order. The second one starts centered, its two
  * neighbours sit left and right, the rest wait off-stage. The script below
  * derives everything else (dots, rotation, lightbox) from this list's length,
  * so adding or reordering entries here needs no other change.
@@ -89,7 +89,7 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
     </p>
   </div>
 
-  <!-- Floating phones — three on stage at a time; click a side phone (or swipe) to bring it into focus -->
+  <!-- Floating phones: three on stage at a time. click a side phone (or swipe) to bring it into focus -->
   <div id="phone-stage" data-reveal class="relative mt-16 md:mt-20 mx-auto w-full max-w-[820px] h-[460px] md:h-[680px]">
     {shots.map(({ key, src }, i) => {
       const screen = screens[key];
@@ -132,7 +132,7 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
     </div>
   </div>
 
-  <!-- Dot indicators — one per screenshot, active dot follows the centered phone -->
+  <!-- Dot indicators, one per screenshot. The active dot follows the centered phone -->
   <div id="phone-dots" data-reveal class="relative z-10 mt-8 flex justify-center items-center gap-2.5"></div>
 </header>
 
@@ -154,7 +154,7 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
   .slot-right  { --tx: 110px;  --s: 0.64; z-index: 1; cursor: pointer; }
   .slot-hidden { --tx: 0px;    --s: 0.5;  z-index: 0; opacity: 0; pointer-events: none; }
 
-  /* :global — the dots are created in JS, so they don't carry Astro's scope attribute */
+  /* :global because the dots are created in JS, so they don't carry Astro's scope attribute */
   :global(.phone-dot) {
     width: 8px;
     height: 8px;

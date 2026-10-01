@@ -2,7 +2,7 @@
 // Same convention as translations.ts: every key exists in both `en` and `de`.
 // Section titles are deliberately question-phrased (AEO: People-Also-Ask / snippets).
 
-// Slugs are English in both languages — see docs/adr/0002-shared-english-slugs.md
+// Slugs are English in both languages (see docs/adr/0002-shared-english-slugs.md)
 export type GuideKey =
   | 'lactate-threshold-training'
   | 'heat-training-core-sensor'
@@ -32,19 +32,19 @@ export interface Guide {
 
 export const guidesIndex = {
   en: {
-    seoTitle: "Cycling Training Guides — FTP, Zones, Lactate & Heat",
+    seoTitle: "Cycling Training Guides: FTP, Zones, Lactate & Heat",
     seoDescription: "Practical, science-based guides for cyclists: FTP testing and power zones, zone 2, sweet spot vs polarized, lactate LT1/LT2, heat training with CORE, and workout file formats.",
     h1: "Training Guides",
-    intro: "Practical, science-based knowledge for data-driven cyclists — written by the team behind ENDURE. FTP and power zones, zone 2 and training distribution, lactate thresholds, heat adaptation and the file formats in between. No fluff, just the physiology and how to apply it.",
+    intro: "Practical, science-based knowledge for data-driven cyclists, written by the team behind ENDURE. FTP and power zones, zone 2 and training distribution, lactate thresholds, heat adaptation and the file formats in between. No fluff, just the physiology and how to apply it.",
     readGuide: "Read guide",
     moreGuides: "More guides",
     backHome: "Back to Homepage"
   },
   de: {
-    seoTitle: "Trainings-Guides — FTP, Wattzonen, Laktat & Hitzetraining",
+    seoTitle: "Trainings-Guides: FTP, Wattzonen, Laktat & Hitzetraining",
     seoDescription: "Praktische, wissenschaftlich fundierte Guides für Radsportler: FTP-Test und Wattzonen, Zone 2, Sweet Spot vs. polarisiert, Laktat LT1/LT2, Hitzetraining mit CORE und Workout-Dateiformate.",
     h1: "Trainings-Guides",
-    intro: "Praktisches, wissenschaftlich fundiertes Wissen für datengetriebene Radsportler — vom Team hinter ENDURE. FTP und Wattzonen, Zone 2 und Trainingsverteilung, Laktatschwellen, Hitzeadaption und die Dateiformate dazwischen. Kein Ballast, nur Physiologie und ihre Anwendung.",
+    intro: "Praktisches, wissenschaftlich fundiertes Wissen für datengetriebene Radsportler, vom Team hinter ENDURE. FTP und Wattzonen, Zone 2 und Trainingsverteilung, Laktatschwellen, Hitzeadaption und die Dateiformate dazwischen. Kein Ballast, nur Physiologie und ihre Anwendung.",
     readGuide: "Guide lesen",
     moreGuides: "Weitere Guides",
     backHome: "Zurück zur Startseite"
@@ -54,8 +54,8 @@ export const guidesIndex = {
 export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
   en: {
     'lactate-threshold-training': {
-      seoTitle: "Lactate Threshold Training for Cyclists — LT1 & LT2 Explained",
-      seoDescription: "What LT1 and LT2 actually mean, how to test lactate at home, and how to train with threshold zones — a practical guide for cyclists, with automatic estimation in ENDURE.",
+      seoTitle: "Lactate Threshold Training for Cyclists: LT1 & LT2 Explained",
+      seoDescription: "What LT1 and LT2 actually mean, how to test lactate at home, and how to train with threshold zones: a practical guide for cyclists, with automatic estimation in ENDURE.",
       h1: "Lactate Threshold Training: LT1 & LT2 Explained",
       datePublished: "2026-07-20",
       dateModified: "2026-07-20",
@@ -63,87 +63,87 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       sections: [
         {
           title: "What is the lactate threshold?",
-          body: "Lactate is a by-product — and fuel — of carbohydrate metabolism that circulates in your blood at all times. At easy intensities, production and clearance stay in balance, so concentration hovers around a baseline of roughly 1–2 mmol/L. As intensity rises, production eventually outpaces clearance and blood lactate climbs. The intensities where this balance visibly changes are your lactate thresholds — the most direct physiological anchors for training zones that exist."
+          body: "Lactate is a by-product (and fuel) of carbohydrate metabolism that circulates in your blood at all times. At easy intensities, production and clearance stay in balance, so concentration hovers around a baseline of roughly 1-2 mmol/L. As intensity rises, production eventually outpaces clearance and blood lactate climbs. The intensities where this balance visibly changes are your lactate thresholds, the most direct physiological anchors for training zones that exist."
         },
         {
           title: "What is the difference between LT1 and LT2?",
-          body: "LT1, often called the aerobic threshold, is the first intensity at which lactate rises meaningfully above baseline. Below it, you can ride for hours; it marks the ceiling of true endurance riding. LT2 — the anaerobic threshold, closely related to MLSS (maximal lactate steady state) — is the highest intensity at which lactate remains stable. Above LT2, lactate accumulates rapidly and the clock starts ticking. Classic field markers put LT1 near 2 mmol/L and LT2 near 4 mmol/L, though individual curves vary — which is exactly why measuring your own values beats generic formulas."
+          body: "LT1, often called the aerobic threshold, is the first intensity at which lactate rises meaningfully above baseline. Below it, you can ride for hours; it marks the ceiling of true endurance riding. LT2 is the anaerobic threshold, closely related to MLSS (maximal lactate steady state). It is the highest intensity at which lactate remains stable. Above LT2, lactate accumulates rapidly and the clock starts ticking. Classic field markers put LT1 near 2 mmol/L and LT2 near 4 mmol/L, though individual curves vary, which is exactly why measuring your own values beats generic formulas."
         },
         {
           title: "Why train with LT1 and LT2 instead of FTP alone?",
-          body: "FTP is a single power number estimated from performance. LT1 and LT2 are two measured physiological markers, and the gap between them tells you more than either alone. Polarized and pyramidal training models — the backbone of most endurance programs — are defined in terms of these thresholds: the bulk of volume below LT1, targeted quality work around and above LT2. Two riders with identical FTP can have very different thresholds, and therefore need different zone boundaries."
+          body: "FTP is a single power number estimated from performance. LT1 and LT2 are two measured physiological markers, and the gap between them tells you more than either alone. Polarized and pyramidal training models, the backbone of most endurance programs, are defined in terms of these thresholds: the bulk of volume below LT1, targeted quality work around and above LT2. Two riders with identical FTP can have very different thresholds, and therefore need different zone boundaries."
         },
         {
           title: "How do you test your lactate thresholds at home?",
           body: "You need a handheld lactate meter (such as Lactate Plus or Lactate Pro 2), test strips, and a controlled protocol on a smart trainer. The standard approach is a graded step test:",
           bullets: [
-            "Warm up 10–15 minutes at an easy pace.",
-            "Ride steps of 3–5 minutes, starting well below your expected LT1 and increasing power by 20–25 W per step (ERG mode makes the steps precise).",
+            "Warm up 10-15 minutes at an easy pace.",
+            "Ride steps of 3-5 minutes, starting well below your expected LT1 and increasing power by 20-25 W per step (ERG mode makes the steps precise).",
             "Take a small blood sample from your earlobe or fingertip at the end of every step and note the value with the step's power.",
-            "Stop when lactate clearly exceeds ~4–6 mmol/L or you can no longer hold the step.",
+            "Stop when lactate clearly exceeds ~4-6 mmol/L or you can no longer hold the step.",
             "Plot lactate against power: the first sustained rise above baseline is LT1, the point where the curve steepens sharply is LT2."
           ]
         },
         {
           title: "How do you train with LT1 and LT2 zones?",
-          body: "Once you know both thresholds, the structure is straightforward. Ride the majority of your volume — typically around 80% — below LT1, where aerobic adaptations accumulate with minimal fatigue cost. Place your quality work deliberately: sweet-spot and threshold sessions just below LT2 raise sustainable power, while intervals above LT2 develop VO2max and race-winning capacity. Re-test every 6–8 weeks: as fitness improves, both thresholds shift right and your zones should follow."
+          body: "Once you know both thresholds, the structure is straightforward. Ride the majority of your volume (typically around 80%) below LT1, where aerobic adaptations accumulate with minimal fatigue cost. Place your quality work deliberately: sweet-spot and threshold sessions just below LT2 raise sustainable power, while intervals above LT2 develop VO2max and race-winning capacity. Re-test every 6-8 weeks: as fitness improves, both thresholds shift right and your zones should follow."
         },
         {
           title: "How does ENDURE estimate LT1 and LT2?",
-          body: "ENDURE is the first cycling app that lets you log lactate readings directly during a ride — or add them afterwards from your activity history. The app fits a curve through your readings and automatically estimates LT1 and LT2, including a confidence tunnel that shows how solid the estimate is. Your blood markers live next to your power data instead of in a spreadsheet, and every new reading refines the picture. Available on iOS and Android."
+          body: "ENDURE is the first cycling app that lets you log lactate readings directly during a ride, or add them afterwards from your activity history. The app fits a curve through your readings and automatically estimates LT1 and LT2, including a confidence tunnel that shows how solid the estimate is. Your blood markers live next to your power data instead of in a spreadsheet, and every new reading refines the picture. Available on iOS and Android."
         }
       ],
       ctaTitle: "Log your first lactate test in ENDURE",
-      ctaBody: "Now on iOS and Android — in-ride lactate logging, automatic LT1/LT2 estimation, and your full training picture in one app.",
+      ctaBody: "Now on iOS and Android: in-ride lactate logging, automatic LT1/LT2 estimation, and your full training picture in one app.",
       backToGuides: "All guides"
     },
     'heat-training-core-sensor': {
-      seoTitle: "Heat Training for Cyclists with the CORE Sensor — Heat Zones Explained",
-      seoDescription: "How heat training works, what the CORE body temperature sensor measures, what heat zones are, and how to run indoor heat sessions — natively integrated in ENDURE.",
+      seoTitle: "Heat Training for Cyclists with the CORE Sensor: Heat Zones Explained",
+      seoDescription: "How heat training works, what the CORE body temperature sensor measures, what heat zones are, and how to run indoor heat sessions, natively integrated in ENDURE.",
       h1: "Heat Training with the CORE Sensor: Heat Zones Explained",
       datePublished: "2026-07-20",
       dateModified: "2026-07-20",
-      directAnswer: "Heat training means riding with a deliberately elevated core body temperature — typically around 38.5 °C — to trigger adaptations like increased plasma volume and improved cooling. The CORE sensor measures core temperature continuously, and heat zones turn that number into controllable training ranges, the same way power zones structure your watts.",
+      directAnswer: "Heat training means riding with a deliberately elevated core body temperature (typically around 38.5 °C) to trigger adaptations like increased plasma volume and improved cooling. The CORE sensor measures core temperature continuously, and heat zones turn that number into controllable training ranges, the same way power zones structure your watts.",
       sections: [
         {
           title: "What is heat training?",
-          body: "Heat training is the deliberate use of thermal load as a training stimulus. Instead of avoiding heat, you spend controlled time at an elevated core temperature — through warm rooms, reduced cooling, extra layers, or simply riding indoors where heat builds naturally. Done consistently over roughly two weeks, the body adapts in ways that improve performance not only in hot races but, according to a growing body of research, in temperate conditions too."
+          body: "Heat training is the deliberate use of thermal load as a training stimulus. Instead of avoiding heat, you spend controlled time at an elevated core temperature, through warm rooms, reduced cooling, extra layers, or simply riding indoors where heat builds naturally. Done consistently over roughly two weeks, the body adapts in ways that improve performance not only in hot races but, according to a growing body of research, in temperate conditions too."
         },
         {
           title: "Why does heat training make you faster?",
-          body: "The best-documented adaptation is plasma volume expansion: more blood plasma means better stroke volume, cardiovascular stability and cooling capacity. Heat exposure also lowers your core temperature at a given workload, raises your sweat rate and starts sweating earlier — all of which delay heat-related fatigue. Research also points toward increases in haemoglobin mass with longer protocols, which is why heat training is increasingly discussed as a legal, practical complement to altitude training."
+          body: "The best-documented adaptation is plasma volume expansion: more blood plasma means better stroke volume, cardiovascular stability and cooling capacity. Heat exposure also lowers your core temperature at a given workload, raises your sweat rate and starts sweating earlier, all of which delay heat-related fatigue. Research also points toward increases in haemoglobin mass with longer protocols, which is why heat training is increasingly discussed as a legal, practical complement to altitude training."
         },
         {
           title: "What is the CORE body temperature sensor?",
-          body: "CORE (by greenTEG) is a small wearable sensor, typically clipped to the heart-rate strap, that measures core body temperature continuously and non-invasively using thermal energy transfer technology. It transmits over Bluetooth, which means training apps can read your core temperature live during a ride — no ingestible pills, no lab equipment."
+          body: "CORE (by greenTEG) is a small wearable sensor, typically clipped to the heart-rate strap, that measures core body temperature continuously and non-invasively using thermal energy transfer technology. It transmits over Bluetooth, which means training apps can read your core temperature live during a ride, with no ingestible pills and no lab equipment."
         },
         {
           title: "What are heat zones?",
-          body: "Heat zones translate core temperature into training ranges, exactly like power or heart-rate zones structure watts and pulse. The zone concept answers the key practical question of heat training: am I hot enough for an adaptation stimulus, or too hot to be productive? The adaptation sweet spot for most athletes sits around 38.3–38.8 °C. Below it, the thermal stimulus is minimal; far above it, performance and safety degrade. Live heat zones let you steer a session into the productive range and keep it there."
+          body: "Heat zones translate core temperature into training ranges, exactly like power or heart-rate zones structure watts and pulse. The zone concept answers the key practical question of heat training: am I hot enough for an adaptation stimulus, or too hot to be productive? The adaptation sweet spot for most athletes sits around 38.3-38.8 °C. Below it, the thermal stimulus is minimal; far above it, performance and safety degrade. Live heat zones let you steer a session into the productive range and keep it there."
         },
         {
           title: "How do you structure an indoor heat session?",
           body: "Indoor training is ideal for heat work because conditions are controllable. A proven starting pattern:",
           bullets: [
-            "Ride at an easy, steady endurance intensity — heat sessions are not interval sessions.",
+            "Ride at an easy, steady endurance intensity. Heat sessions are not interval sessions.",
             "Reduce cooling: fan off or low, moderate room temperature, optionally an extra layer.",
-            "Use live core temperature to reach your target heat zone (~38.3–38.8 °C), then hold it for 30–45 minutes.",
-            "Hydrate during and after; expect elevated heart rate at a given power — that is the stimulus, not a fitness loss.",
-            "Repeat 4–6 sessions per week for about two weeks for the initial adaptation block, then maintain with 1–2 weekly sessions."
+            "Use live core temperature to reach your target heat zone (~38.3-38.8 °C), then hold it for 30-45 minutes.",
+            "Hydrate during and after; expect elevated heart rate at a given power. That is the stimulus, not a fitness loss.",
+            "Repeat 4-6 sessions per week for about two weeks for the initial adaptation block, then maintain with 1-2 weekly sessions."
           ]
         },
         {
           title: "How does ENDURE integrate the CORE sensor?",
-          body: "ENDURE is the first indoor cycling app to natively integrate the CORE body temperature sensor — including a live heat-zone display right on the ride screen. Pair the sensor over Bluetooth like any power meter, watch your core temperature and current heat zone live while you ride, and find the full temperature trace stored with power and heart rate in your ride analysis afterwards. No second app, no workarounds — heat becomes a first-class training metric. Available on iOS and Android."
+          body: "ENDURE is the first indoor cycling app to natively integrate the CORE body temperature sensor, including a live heat-zone display right on the ride screen. Pair the sensor over Bluetooth like any power meter, watch your core temperature and current heat zone live while you ride, and find the full temperature trace stored with power and heart rate in your ride analysis afterwards. No second app, no workarounds: heat becomes a first-class training metric. Available on iOS and Android."
         }
       ],
-      ctaTitle: "Train heat like power — with ENDURE and CORE",
-      ctaBody: "Now on iOS and Android — native CORE integration, live heat zones on the ride screen, full post-ride analysis.",
+      ctaTitle: "Train heat like power with ENDURE and CORE",
+      ctaBody: "Now on iOS and Android: native CORE integration, live heat zones on the ride screen, full post-ride analysis.",
       backToGuides: "All guides"
     },
     'ftp-test-power-zones': {
-      seoTitle: "FTP Test & Power Zones — How to Test and Calculate Yours",
-      seoDescription: "Which FTP test to ride, how to calculate your power zones from the result, and how often to retest — a practical guide for cyclists training indoors.",
+      seoTitle: "FTP Test & Power Zones: How to Test and Calculate Yours",
+      seoDescription: "Which FTP test to ride, how to calculate your power zones from the result, and how often to retest: a practical guide for cyclists training indoors.",
       h1: "FTP Test and Power Zones: Testing and Calculating Yours",
       datePublished: "2026-07-27",
       dateModified: "2026-07-27",
@@ -151,7 +151,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       sections: [
         {
           title: "What is FTP?",
-          body: "FTP is the highest power you could sustain in a quasi-steady state for about an hour — the practical stand-in for the physiological threshold above which fatigue accelerates. It is not a physiological measurement in itself; it is a performance estimate that happens to sit close to LT2 for most riders. That distinction matters, because it explains why two riders with the same FTP can need different training zones."
+          body: "FTP is the highest power you could sustain in a quasi-steady state for about an hour, the practical stand-in for the physiological threshold above which fatigue accelerates. It is not a physiological measurement in itself; it is a performance estimate that happens to sit close to LT2 for most riders. That distinction matters, because it explains why two riders with the same FTP can need different training zones."
         },
         {
           title: "Which FTP test should you ride?",
@@ -160,25 +160,25 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
             "<strong>20-minute test:</strong> warm up thoroughly, ride 20 minutes as hard as you can hold evenly, multiply the average power by 0.95. Most accurate of the field tests, and the most dependent on even pacing.",
             "<strong>Ramp test:</strong> power rises steadily until you cannot continue; FTP is estimated at roughly 75% of your best one-minute power. Short and hard to pace badly, slightly less precise.",
             "<strong>8-minute test (2 × 8 min):</strong> two maximal 8-minute efforts, average multiplied by about 0.90. Easier to complete than a 20-minute effort, more sensitive to how you split the two.",
-            "<strong>Modelled estimate:</strong> no test at all — FTP is derived from your recorded rides. No test-day dependency, but it needs a body of data to settle."
+            "<strong>Modelled estimate:</strong> no test at all. FTP is derived from your recorded rides. No test-day dependency, but it needs a body of data to settle."
           ]
         },
         {
           title: "How do you calculate power zones from FTP?",
-          body: "The widely used seven-zone model expresses each zone as a percentage of FTP. Treat the boundaries as guidance rather than physiology — they are a convention that works well for most riders:",
+          body: "The widely used seven-zone model expresses each zone as a percentage of FTP. Treat the boundaries as guidance rather than physiology. They are a convention that works well for most riders:",
           bullets: [
-            "<strong>Zone 1 — active recovery:</strong> under 55% of FTP.",
-            "<strong>Zone 2 — endurance:</strong> 56–75%. The bulk of most training weeks.",
-            "<strong>Zone 3 — tempo:</strong> 76–90%.",
-            "<strong>Zone 4 — threshold:</strong> 91–105%. Sweet spot sits at the lower end, around 88–94%.",
-            "<strong>Zone 5 — VO2max:</strong> 106–120%.",
-            "<strong>Zone 6 — anaerobic capacity:</strong> 121–150%.",
-            "<strong>Zone 7 — neuromuscular:</strong> above 150%, too short to pace by power."
+            "<strong>Zone 1 (active recovery):</strong> under 55% of FTP.",
+            "<strong>Zone 2 (endurance):</strong> 56-75%. The bulk of most training weeks.",
+            "<strong>Zone 3 (tempo):</strong> 76-90%.",
+            "<strong>Zone 4 (threshold):</strong> 91-105%. Sweet spot sits at the lower end, around 88-94%.",
+            "<strong>Zone 5 (VO2max):</strong> 106-120%.",
+            "<strong>Zone 6 (anaerobic capacity):</strong> 121-150%.",
+            "<strong>Zone 7 (neuromuscular):</strong> above 150%, too short to pace by power."
           ]
         },
         {
           title: "How often should you retest?",
-          body: "Every six to eight weeks is the usual advice, and it exists because zones drift out of date as fitness changes. In practice, retesting is disruptive: a test day replaces a training day, and a bad test sets your zones wrong for the next block. A continuously modelled estimate sidesteps that problem — which is why it is worth having even if you also like the reference point of a hard test twice a year."
+          body: "Every six to eight weeks is the usual advice, and it exists because zones drift out of date as fitness changes. In practice, retesting is disruptive: a test day replaces a training day, and a bad test sets your zones wrong for the next block. A continuously modelled estimate sidesteps that problem, which is why it is worth having even if you also like the reference point of a hard test twice a year."
         },
         {
           title: "Why do zones from FTP alone have limits?",
@@ -194,7 +194,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       backToGuides: "All guides"
     },
     'zone-2-endurance-training': {
-      seoTitle: "Zone 2 Training for Cyclists — How Much, How Hard, Why",
+      seoTitle: "Zone 2 Training for Cyclists: How Much, How Hard, Why",
       seoDescription: "What zone 2 training is, why it works, how to tell you are actually in it, and how to do it indoors without the session drifting upward.",
       h1: "Zone 2 Training: How Much, How Hard, and Why It Works",
       datePublished: "2026-07-27",
@@ -269,24 +269,24 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       backToGuides: "All guides"
     },
     'sweet-spot-vs-polarized': {
-      seoTitle: "Sweet Spot vs Polarized Training — Which Fits Your Week?",
+      seoTitle: "Sweet Spot vs Polarized Training: Which Fits Your Week?",
       seoDescription: "Sweet spot, polarized and pyramidal training compared: what each model asks of you, what the evidence supports, and how to pick based on your available hours.",
       h1: "Sweet Spot vs Polarized Training: Which Model Fits You?",
       datePublished: "2026-07-27",
       dateModified: "2026-07-27",
-      directAnswer: "Sweet spot training concentrates work just below threshold, around 88–94% of FTP, to accumulate a large training load in limited hours. Polarized training splits the week into mostly easy riding below LT1 and a small amount of genuinely hard work above LT2, deliberately avoiding the middle. Sweet spot suits time-constrained riders; polarized suits higher volume.",
+      directAnswer: "Sweet spot training concentrates work just below threshold, around 88-94% of FTP, to accumulate a large training load in limited hours. Polarized training splits the week into mostly easy riding below LT1 and a small amount of genuinely hard work above LT2, deliberately avoiding the middle. Sweet spot suits time-constrained riders; polarized suits higher volume.",
       sections: [
         {
           title: "What is sweet spot training?",
-          body: "Sweet spot sits between tempo and threshold — hard enough to drive adaptation, sustainable enough that you can accumulate 20 to 60 minutes of it in a session and come back two days later. Its appeal is efficiency: for a rider with five or six hours a week, sweet spot intervals pack more useful stimulus into that time than the same hours ridden easy. The cost is that it is never truly easy, so recovery has to be managed deliberately."
+          body: "Sweet spot sits between tempo and threshold: hard enough to drive adaptation, sustainable enough that you can accumulate 20 to 60 minutes of it in a session and come back two days later. Its appeal is efficiency: for a rider with five or six hours a week, sweet spot intervals pack more useful stimulus into that time than the same hours ridden easy. The cost is that it is never truly easy, so recovery has to be managed deliberately."
         },
         {
           title: "What is polarized training?",
-          body: "Polarized training means roughly 80% of sessions at low intensity below LT1 and 20% at high intensity above LT2, with very little in between. The logic is that the easy work is easy enough to be genuinely restorative, which makes the hard work hard enough to matter. It is the pattern observed in many elite endurance athletes across sports — and part of why it works for them is that they have the volume for the easy 80% to add up to something."
+          body: "Polarized training means roughly 80% of sessions at low intensity below LT1 and 20% at high intensity above LT2, with very little in between. The logic is that the easy work is easy enough to be genuinely restorative, which makes the hard work hard enough to matter. It is the pattern observed in many elite endurance athletes across sports, and part of why it works for them is that they have the volume for the easy 80% to add up to something."
         },
         {
           title: "Why is the middle intensity treated as a problem?",
-          body: "The zone around tempo and just under threshold is often called the grey area: hard enough to accumulate fatigue, not hard enough to force a strong adaptation. Spend a whole week there and you arrive at the weekend tired without having trained anything sharply. That critique is aimed at unintentional middle-intensity riding — drifting up on easy days out of habit — rather than at sweet spot work, which is prescribed, bounded and followed by recovery."
+          body: "The zone around tempo and just under threshold is often called the grey area: hard enough to accumulate fatigue, not hard enough to force a strong adaptation. Spend a whole week there and you arrive at the weekend tired without having trained anything sharply. That critique is aimed at unintentional middle-intensity riding (drifting up on easy days out of habit) rather than at sweet spot work, which is prescribed, bounded and followed by recovery."
         },
         {
           title: "What about pyramidal training?",
@@ -297,7 +297,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
           body: "The honest answer is that available hours decide more than philosophy does:",
           bullets: [
             "<strong>Under about 6 hours a week:</strong> sweet spot and threshold work give you the most return per hour. Pure polarized wastes a short week on riding too easy to matter.",
-            "<strong>8 to 12 hours a week:</strong> a pyramidal distribution usually fits — a large easy base, some threshold work, a little VO2max.",
+            "<strong>8 to 12 hours a week:</strong> a pyramidal distribution usually fits: a large easy base, some threshold work, a little VO2max.",
             "<strong>Above 12 hours a week:</strong> polarized becomes viable, because the easy 80% is now a lot of hours and genuinely accumulates.",
             "<strong>Close to a target event:</strong> shift the hard portion towards the demands of the event and cut total volume, whichever model you started from.",
             "<strong>Whatever you pick:</strong> the easy rides have to actually be easy. That single discipline matters more than the choice of model."
@@ -305,7 +305,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "How does ENDURE fit into either model?",
-          body: "The workout library is curated by physiological purpose — VO2max, threshold, sweet spot — rather than assembled into an automated plan, so you build the distribution you have decided on instead of following one that was chosen for you. Time in zones after each ride shows what the week actually looked like, which is usually less polarized than intended. Logged lactate readings give you LT1 and LT2, the two boundaries both models are defined by. Available on iOS and Android."
+          body: "The workout library is curated by physiological purpose (VO2max, threshold, sweet spot) rather than assembled into an automated plan, so you build the distribution you have decided on instead of following one that was chosen for you. Time in zones after each ride shows what the week actually looked like, which is usually less polarized than intended. Logged lactate readings give you LT1 and LT2, the two boundaries both models are defined by. Available on iOS and Android."
         }
       ],
       ctaTitle: "Build the week you decided on",
@@ -313,7 +313,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       backToGuides: "All guides"
     },
     'zwo-mrc-erg-files': {
-      seoTitle: ".ZWO, .MRC and .ERG Workout Files — Formats and Import",
+      seoTitle: ".ZWO, .MRC and .ERG Workout Files: Formats and Import",
       seoDescription: "What .ZWO, .MRC and .ERG workout files contain, how they differ, and how to import them into ENDURE to ride them in ERG mode on iOS or Android.",
       h1: ".ZWO, .MRC and .ERG: Workout Files Explained",
       datePublished: "2026-07-27",
@@ -322,32 +322,32 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       sections: [
         {
           title: "What is in a workout file?",
-          body: "Nothing more than structure: a sequence of segments, each with a duration and an intensity target, plus optional cadence hints and text prompts. That is what makes the formats portable — the file describes the session, and the app decides how to drive your trainer to it. It also means a session you wrote years ago in one app still works in another."
+          body: "Nothing more than structure: a sequence of segments, each with a duration and an intensity target, plus optional cadence hints and text prompts. That is what makes the formats portable: the file describes the session, and the app decides how to drive your trainer to it. It also means a session you wrote years ago in one app still works in another."
         },
         {
           title: "What does a .ZWO file contain?",
-          body: "A .ZWO is an XML file, so you can open it in any text editor and read it. Inside, segments appear as elements like SteadyState, IntervalsT, Warmup and Cooldown, with power expressed as a fraction of FTP — 0.95 means 95% of your FTP, not 95 watts. Because the targets are relative, the same file scales correctly to any rider who imports it."
+          body: "A .ZWO is an XML file, so you can open it in any text editor and read it. Inside, segments appear as elements like SteadyState, IntervalsT, Warmup and Cooldown, with power expressed as a fraction of FTP (0.95 means 95% of your FTP, not 95 watts). Because the targets are relative, the same file scales correctly to any rider who imports it."
         },
         {
           title: "How do .MRC and .ERG differ?",
           body: "Both are plain-text formats from the earlier generation of indoor training software, and they share the same layout: a header block followed by rows of time and target. The difference is the unit, and it matters:",
           bullets: [
-            "<strong>.MRC</strong> specifies targets as a percentage of FTP, so the file adapts to whoever rides it — the same behaviour as .ZWO.",
+            "<strong>.MRC</strong> specifies targets as a percentage of FTP, so the file adapts to whoever rides it (the same behaviour as .ZWO).",
             "<strong>.ERG</strong> specifies targets in absolute watts, so the file encodes the FTP of whoever created it. Import someone else's .ERG and the numbers will be their numbers, not yours.",
             "<strong>In practice:</strong> prefer .ZWO or .MRC when sharing sessions, and treat .ERG as fine for your own use or when you deliberately want fixed wattages."
           ]
         },
         {
           title: "How do you import a workout into ENDURE?",
-          body: "Open the file on your phone and hand it to ENDURE, or import it from the workout screen — either way it lands in your library alongside the curated sessions and can be ridden immediately. There is no conversion step and no desktop tool in between. All three formats behave the same way once imported."
+          body: "Open the file on your phone and hand it to ENDURE, or import it from the workout screen. Either way it lands in your library alongside the curated sessions and can be ridden immediately. There is no conversion step and no desktop tool in between. All three formats behave the same way once imported."
         },
         {
           title: "What does ERG mode do with the file?",
-          body: "In ERG mode the app holds the target from the file by adjusting trainer resistance, so the session runs at the prescribed power whatever gear you are in. Two practical notes: cadence changes cause a brief lag while the trainer catches up, and if your power meter reports erratically, smoothing matters — ENDURE applies smart-smoothing so a spiky signal does not translate into resistance that surges and drops. Control happens over the Bluetooth FTMS standard, so it works with current smart trainers regardless of brand."
+          body: "In ERG mode the app holds the target from the file by adjusting trainer resistance, so the session runs at the prescribed power whatever gear you are in. Two practical notes: cadence changes cause a brief lag while the trainer catches up, and if your power meter reports erratically, smoothing matters. ENDURE applies smart-smoothing so a spiky signal does not translate into resistance that surges and drops. Control happens over the Bluetooth FTMS standard, so it works with current smart trainers regardless of brand."
         },
         {
           title: "Can you convert between the formats?",
-          body: "You rarely need to, because ENDURE reads all three. If you do want to move a session, the relative formats (.ZWO, .MRC) convert into each other cleanly, while converting .ERG requires knowing the FTP it was written against — otherwise the intensities land somewhere arbitrary. That is the whole argument for keeping shared workouts in a percentage-based format."
+          body: "You rarely need to, because ENDURE reads all three. If you do want to move a session, the relative formats (.ZWO, .MRC) convert into each other cleanly, while converting .ERG requires knowing the FTP it was written against. Without it, the intensities land somewhere arbitrary. That is the whole argument for keeping shared workouts in a percentage-based format."
         }
       ],
       ctaTitle: "Bring your workouts with you",
@@ -357,8 +357,8 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
   },
   de: {
     'lactate-threshold-training': {
-      seoTitle: "Laktatschwellen-Training für Radsportler — LT1 & LT2 erklärt",
-      seoDescription: "Was LT1 und LT2 wirklich bedeuten, wie du Laktat zuhause testest und wie du mit Schwellenzonen trainierst — praktischer Guide für Radsportler, mit automatischer Schätzung in ENDURE.",
+      seoTitle: "Laktatschwellen-Training für Radsportler: LT1 & LT2 erklärt",
+      seoDescription: "Was LT1 und LT2 wirklich bedeuten, wie du Laktat zuhause testest und wie du mit Schwellenzonen trainierst: ein praktischer Guide für Radsportler, mit automatischer Schätzung in ENDURE.",
       h1: "Laktatschwellen-Training: LT1 & LT2 erklärt",
       datePublished: "2026-07-20",
       dateModified: "2026-07-20",
@@ -366,130 +366,130 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       sections: [
         {
           title: "Was ist die Laktatschwelle?",
-          body: "Laktat ist ein Nebenprodukt — und Brennstoff — des Kohlenhydratstoffwechsels und zirkuliert permanent im Blut. Bei lockerer Intensität halten sich Produktion und Abbau die Waage, die Konzentration bleibt bei etwa 1–2 mmol/L. Steigt die Intensität, überholt die Produktion irgendwann den Abbau und das Blutlaktat klettert. Die Intensitäten, an denen sich dieses Gleichgewicht sichtbar verschiebt, sind deine Laktatschwellen — die direktesten physiologischen Anker für Trainingszonen, die es gibt."
+          body: "Laktat ist ein Nebenprodukt (und Brennstoff) des Kohlenhydratstoffwechsels und zirkuliert permanent im Blut. Bei lockerer Intensität halten sich Produktion und Abbau die Waage, die Konzentration bleibt bei etwa 1-2 mmol/L. Steigt die Intensität, überholt die Produktion irgendwann den Abbau und das Blutlaktat klettert. Die Intensitäten, an denen sich dieses Gleichgewicht sichtbar verschiebt, sind deine Laktatschwellen, die direktesten physiologischen Anker für Trainingszonen, die es gibt."
         },
         {
           title: "Was ist der Unterschied zwischen LT1 und LT2?",
-          body: "LT1, oft aerobe Schwelle genannt, ist die erste Intensität, bei der Laktat deutlich über das Grundniveau steigt. Darunter kannst du stundenlang fahren; sie markiert die Obergrenze des echten Grundlagentrainings. LT2 — die anaerobe Schwelle, eng verwandt mit dem MLSS (maximales Laktat-Steady-State) — ist die höchste Intensität, bei der Laktat stabil bleibt. Oberhalb von LT2 akkumuliert Laktat rasch und die Uhr läuft. Klassische Faustwerte legen LT1 bei etwa 2 mmol/L und LT2 bei etwa 4 mmol/L — individuelle Kurven weichen aber ab, und genau deshalb schlägt Messen jede generische Formel."
+          body: "LT1, oft aerobe Schwelle genannt, ist die erste Intensität, bei der Laktat deutlich über das Grundniveau steigt. Darunter kannst du stundenlang fahren; sie markiert die Obergrenze des echten Grundlagentrainings. LT2 ist die anaerobe Schwelle, eng verwandt mit dem MLSS (maximales Laktat-Steady-State). Sie ist die höchste Intensität, bei der Laktat stabil bleibt. Oberhalb von LT2 akkumuliert Laktat rasch und die Uhr läuft. Klassische Faustwerte legen LT1 bei etwa 2 mmol/L und LT2 bei etwa 4 mmol/L. Individuelle Kurven weichen aber ab, und genau deshalb schlägt Messen jede generische Formel."
         },
         {
           title: "Warum mit LT1 und LT2 trainieren statt nur mit FTP?",
-          body: "FTP ist eine einzelne, aus Leistung geschätzte Zahl. LT1 und LT2 sind zwei gemessene physiologische Marker — und der Abstand zwischen ihnen sagt mehr als jede Einzelzahl. Polarisierte und pyramidale Trainingsmodelle, das Rückgrat der meisten Ausdauerprogramme, sind über genau diese Schwellen definiert: der Großteil des Volumens unter LT1, gezielte Qualitätsarbeit um und über LT2. Zwei Fahrer mit identischer FTP können völlig unterschiedliche Schwellen haben — und brauchen entsprechend andere Zonengrenzen."
+          body: "FTP ist eine einzelne, aus Leistung geschätzte Zahl. LT1 und LT2 sind zwei gemessene physiologische Marker, und der Abstand zwischen ihnen sagt mehr als jede Einzelzahl. Polarisierte und pyramidale Trainingsmodelle, das Rückgrat der meisten Ausdauerprogramme, sind über genau diese Schwellen definiert: der Großteil des Volumens unter LT1, gezielte Qualitätsarbeit um und über LT2. Zwei Fahrer mit identischer FTP können völlig unterschiedliche Schwellen haben und brauchen entsprechend andere Zonengrenzen."
         },
         {
           title: "Wie testest du deine Laktatschwellen zuhause?",
           body: "Du brauchst ein Handmessgerät (z. B. Lactate Plus oder Lactate Pro 2), Teststreifen und ein kontrolliertes Protokoll am Smart Trainer. Standard ist der Stufentest:",
           bullets: [
-            "10–15 Minuten locker einfahren.",
-            "Stufen von 3–5 Minuten fahren, deutlich unter der erwarteten LT1 beginnend, pro Stufe 20–25 W steigern (der ERG-Modus macht die Stufen präzise).",
+            "10-15 Minuten locker einfahren.",
+            "Stufen von 3-5 Minuten fahren, deutlich unter der erwarteten LT1 beginnend, pro Stufe 20-25 W steigern (der ERG-Modus macht die Stufen präzise).",
             "Am Ende jeder Stufe einen kleinen Bluttropfen vom Ohrläppchen oder Finger messen und den Wert mit der Stufenleistung notieren.",
-            "Abbrechen, wenn Laktat klar über ~4–6 mmol/L liegt oder die Stufe nicht mehr haltbar ist.",
+            "Abbrechen, wenn Laktat klar über ~4-6 mmol/L liegt oder die Stufe nicht mehr haltbar ist.",
             "Laktat gegen Leistung auftragen: der erste anhaltende Anstieg über das Grundniveau ist LT1, der Punkt, an dem die Kurve scharf steiler wird, ist LT2."
           ]
         },
         {
           title: "Wie trainierst du mit LT1- und LT2-Zonen?",
-          body: "Sind beide Schwellen bekannt, ist die Struktur klar. Fahre den Großteil deines Volumens — typischerweise rund 80 % — unter LT1, wo sich aerobe Anpassungen mit minimalen Ermüdungskosten ansammeln. Setze Qualitätsarbeit gezielt: Sweet-Spot- und Schwelleneinheiten knapp unter LT2 heben die dauerhaft fahrbare Leistung, Intervalle über LT2 entwickeln VO2max und Rennhärte. Teste alle 6–8 Wochen nach: mit steigender Fitness wandern beide Schwellen nach rechts — deine Zonen sollten mitwandern."
+          body: "Sind beide Schwellen bekannt, ist die Struktur klar. Fahre den Großteil deines Volumens (typischerweise rund 80 %) unter LT1, wo sich aerobe Anpassungen mit minimalen Ermüdungskosten ansammeln. Setze Qualitätsarbeit gezielt: Sweet-Spot- und Schwelleneinheiten knapp unter LT2 heben die dauerhaft fahrbare Leistung, Intervalle über LT2 entwickeln VO2max und Rennhärte. Teste alle 6-8 Wochen nach: mit steigender Fitness wandern beide Schwellen nach rechts, und deine Zonen sollten mitwandern."
         },
         {
           title: "Wie schätzt ENDURE LT1 und LT2?",
-          body: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte direkt während der Fahrt eintragen kannst — oder im Nachhinein aus deiner Aktivitätshistorie. Die App fittet eine Kurve durch deine Werte und schätzt LT1 und LT2 automatisch, inklusive Konfidenztunnel, der zeigt, wie belastbar die Schätzung ist. Deine Blutwerte leben neben deinen Leistungsdaten statt in einem Spreadsheet — und jeder neue Wert schärft das Bild. Verfügbar auf iOS und Android."
+          body: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte direkt während der Fahrt eintragen kannst, oder im Nachhinein aus deiner Aktivitätshistorie. Die App fittet eine Kurve durch deine Werte und schätzt LT1 und LT2 automatisch, inklusive Konfidenztunnel, der zeigt, wie belastbar die Schätzung ist. Deine Blutwerte leben neben deinen Leistungsdaten statt in einem Spreadsheet, und jeder neue Wert schärft das Bild. Verfügbar auf iOS und Android."
         }
       ],
       ctaTitle: "Logge deinen ersten Laktattest in ENDURE",
-      ctaBody: "Jetzt auf iOS und Android — Laktat-Eintrag während der Fahrt, automatische LT1/LT2-Schätzung und dein komplettes Trainingsbild in einer App.",
+      ctaBody: "Jetzt auf iOS und Android: Laktat-Eintrag während der Fahrt, automatische LT1/LT2-Schätzung und dein komplettes Trainingsbild in einer App.",
       backToGuides: "Alle Guides"
     },
     'heat-training-core-sensor': {
-      seoTitle: "Hitzetraining für Radsportler mit dem CORE-Sensor — Heat Zones erklärt",
-      seoDescription: "Wie Hitzetraining wirkt, was der CORE Körpertemperatur-Sensor misst, was Heat Zones sind und wie du Indoor-Hitzeeinheiten fährst — nativ integriert in ENDURE.",
+      seoTitle: "Hitzetraining für Radsportler mit dem CORE-Sensor: Heat Zones erklärt",
+      seoDescription: "Wie Hitzetraining wirkt, was der CORE Körpertemperatur-Sensor misst, was Heat Zones sind und wie du Indoor-Hitzeeinheiten fährst, nativ integriert in ENDURE.",
       h1: "Hitzetraining mit dem CORE-Sensor: Heat Zones erklärt",
       datePublished: "2026-07-20",
       dateModified: "2026-07-20",
-      directAnswer: "Hitzetraining heißt: fahren mit bewusst erhöhter Körperkerntemperatur — typischerweise um 38,5 °C — um Anpassungen wie mehr Plasmavolumen und bessere Kühlung auszulösen. Der CORE-Sensor misst die Kerntemperatur kontinuierlich, und Heat Zones machen daraus steuerbare Trainingsbereiche — so wie Wattzonen dein Training strukturieren.",
+      directAnswer: "Hitzetraining heißt: fahren mit bewusst erhöhter Körperkerntemperatur (typischerweise um 38,5 °C), um Anpassungen wie mehr Plasmavolumen und bessere Kühlung auszulösen. Der CORE-Sensor misst die Kerntemperatur kontinuierlich, und Heat Zones machen daraus steuerbare Trainingsbereiche, so wie Wattzonen dein Training strukturieren.",
       sections: [
         {
           title: "Was ist Hitzetraining?",
-          body: "Hitzetraining ist der gezielte Einsatz thermischer Last als Trainingsreiz. Statt Hitze zu vermeiden, verbringst du kontrollierte Zeit bei erhöhter Kerntemperatur — durch warme Räume, reduzierte Kühlung, zusätzliche Kleidung oder schlicht Indoor-Fahren, wo sich Wärme ohnehin staut. Über etwa zwei Wochen konsequent umgesetzt, passt sich der Körper an — mit Leistungsvorteilen nicht nur bei heißen Rennen, sondern laut wachsender Studienlage auch bei gemäßigten Bedingungen."
+          body: "Hitzetraining ist der gezielte Einsatz thermischer Last als Trainingsreiz. Statt Hitze zu vermeiden, verbringst du kontrollierte Zeit bei erhöhter Kerntemperatur: durch warme Räume, reduzierte Kühlung, zusätzliche Kleidung oder schlicht Indoor-Fahren, wo sich Wärme ohnehin staut. Über etwa zwei Wochen konsequent umgesetzt, passt sich der Körper an, mit Leistungsvorteilen nicht nur bei heißen Rennen, sondern laut wachsender Studienlage auch bei gemäßigten Bedingungen."
         },
         {
           title: "Warum macht Hitzetraining schneller?",
-          body: "Die am besten belegte Anpassung ist die Ausdehnung des Plasmavolumens: mehr Blutplasma bedeutet besseres Schlagvolumen, kardiovaskuläre Stabilität und Kühlkapazität. Hitzeexposition senkt außerdem die Kerntemperatur bei gleicher Belastung, erhöht die Schweißrate und lässt das Schwitzen früher einsetzen — alles verzögert hitzebedingte Ermüdung. Studien deuten bei längeren Protokollen zudem auf eine Zunahme der Hämoglobinmasse hin — weshalb Hitzetraining zunehmend als legale, praktikable Ergänzung zum Höhentraining diskutiert wird."
+          body: "Die am besten belegte Anpassung ist die Ausdehnung des Plasmavolumens: mehr Blutplasma bedeutet besseres Schlagvolumen, kardiovaskuläre Stabilität und Kühlkapazität. Hitzeexposition senkt außerdem die Kerntemperatur bei gleicher Belastung, erhöht die Schweißrate und lässt das Schwitzen früher einsetzen. All das verzögert hitzebedingte Ermüdung. Studien deuten bei längeren Protokollen zudem auf eine Zunahme der Hämoglobinmasse hin, weshalb Hitzetraining zunehmend als legale, praktikable Ergänzung zum Höhentraining diskutiert wird."
         },
         {
           title: "Was ist der CORE Körpertemperatur-Sensor?",
-          body: "CORE (von greenTEG) ist ein kleiner Wearable-Sensor, typischerweise am Herzfrequenz-Gurt befestigt, der die Körperkerntemperatur kontinuierlich und nicht-invasiv über Wärmefluss-Technologie misst. Er sendet per Bluetooth — Trainings-Apps können deine Kerntemperatur also live während der Fahrt lesen. Keine Schluckpillen, kein Laborequipment."
+          body: "CORE (von greenTEG) ist ein kleiner Wearable-Sensor, typischerweise am Herzfrequenz-Gurt befestigt, der die Körperkerntemperatur kontinuierlich und nicht-invasiv über Wärmefluss-Technologie misst. Er sendet per Bluetooth, Trainings-Apps können deine Kerntemperatur also live während der Fahrt lesen. Keine Schluckpillen, kein Laborequipment."
         },
         {
           title: "Was sind Heat Zones?",
-          body: "Heat Zones übersetzen Kerntemperatur in Trainingsbereiche — exakt so, wie Watt- oder Herzfrequenzzonen Leistung und Puls strukturieren. Das Zonenkonzept beantwortet die praktische Kernfrage des Hitzetrainings: Bin ich heiß genug für einen Anpassungsreiz — oder zu heiß, um produktiv zu sein? Der Adaptions-Sweet-Spot liegt für die meisten Athleten um 38,3–38,8 °C. Darunter ist der thermische Reiz minimal, deutlich darüber leiden Leistung und Sicherheit. Live Heat Zones lassen dich eine Einheit gezielt in den produktiven Bereich steuern — und dort halten."
+          body: "Heat Zones übersetzen Kerntemperatur in Trainingsbereiche, exakt so, wie Watt- oder Herzfrequenzzonen Leistung und Puls strukturieren. Das Zonenkonzept beantwortet die praktische Kernfrage des Hitzetrainings: Bin ich heiß genug für einen Anpassungsreiz oder zu heiß, um produktiv zu sein? Der Adaptions-Sweet-Spot liegt für die meisten Athleten um 38,3-38,8 °C. Darunter ist der thermische Reiz minimal, deutlich darüber leiden Leistung und Sicherheit. Live Heat Zones lassen dich eine Einheit gezielt in den produktiven Bereich steuern und dort halten."
         },
         {
           title: "Wie strukturierst du eine Indoor-Hitzeeinheit?",
           body: "Indoor-Training ist ideal fürs Hitzetraining, weil die Bedingungen kontrollierbar sind. Ein bewährtes Einstiegsmuster:",
           bullets: [
-            "Fahre locker und gleichmäßig im Grundlagenbereich — Hitzeeinheiten sind keine Intervalleinheiten.",
+            "Fahre locker und gleichmäßig im Grundlagenbereich. Hitzeeinheiten sind keine Intervalleinheiten.",
             "Reduziere die Kühlung: Ventilator aus oder niedrig, moderate Raumtemperatur, optional eine zusätzliche Schicht.",
-            "Nutze die Live-Kerntemperatur, um deine Ziel-Heat-Zone (~38,3–38,8 °C) zu erreichen — und halte sie 30–45 Minuten.",
-            "Trinke währenddessen und danach; erwarte erhöhte Herzfrequenz bei gleicher Leistung — das ist der Reiz, kein Fitnessverlust.",
-            "Wiederhole 4–6 Einheiten pro Woche über etwa zwei Wochen für den initialen Adaptionsblock, danach 1–2 Einheiten pro Woche zum Erhalt."
+            "Nutze die Live-Kerntemperatur, um deine Ziel-Heat-Zone (~38,3-38,8 °C) zu erreichen, und halte sie dann 30-45 Minuten.",
+            "Trinke währenddessen und danach; erwarte erhöhte Herzfrequenz bei gleicher Leistung. Das ist der Reiz, kein Fitnessverlust.",
+            "Wiederhole 4-6 Einheiten pro Woche über etwa zwei Wochen für den initialen Adaptionsblock, danach 1-2 Einheiten pro Woche zum Erhalt."
           ]
         },
         {
           title: "Wie integriert ENDURE den CORE-Sensor?",
-          body: "ENDURE ist die erste Indoor-Cycling-App, die den CORE Körpertemperatur-Sensor nativ integriert — inklusive Live-Heat-Zone-Anzeige direkt am Ride-Screen. Kopple den Sensor per Bluetooth wie einen Power Meter, sieh Kerntemperatur und aktuelle Heat Zone live während der Fahrt und finde den kompletten Temperaturverlauf danach neben Watt und Herzfrequenz in deiner Analyse. Keine zweite App, keine Umwege — Hitze wird zur vollwertigen Trainingsmetrik. Verfügbar auf iOS und Android."
+          body: "ENDURE ist die erste Indoor-Cycling-App, die den CORE Körpertemperatur-Sensor nativ integriert, inklusive Live-Heat-Zone-Anzeige direkt am Ride-Screen. Kopple den Sensor per Bluetooth wie einen Power Meter, sieh Kerntemperatur und aktuelle Heat Zone live während der Fahrt und finde den kompletten Temperaturverlauf danach neben Watt und Herzfrequenz in deiner Analyse. Keine zweite App, keine Umwege: Hitze wird zur vollwertigen Trainingsmetrik. Verfügbar auf iOS und Android."
         }
       ],
-      ctaTitle: "Trainiere Hitze wie Watt — mit ENDURE und CORE",
-      ctaBody: "Jetzt auf iOS und Android — native CORE-Integration, Live Heat Zones am Ride-Screen, volle Analyse nach der Fahrt.",
+      ctaTitle: "Trainiere Hitze wie Watt mit ENDURE und CORE",
+      ctaBody: "Jetzt auf iOS und Android: native CORE-Integration, Live Heat Zones am Ride-Screen, volle Analyse nach der Fahrt.",
       backToGuides: "Alle Guides"
     },
     'ftp-test-power-zones': {
-      seoTitle: "FTP-Test & Wattzonen — testen und richtig berechnen",
-      seoDescription: "Welchen FTP-Test du fahren solltest, wie du deine Wattzonen daraus berechnest und wie oft du nachtesten musst — praktischer Guide für Indoor-Training.",
+      seoTitle: "FTP-Test & Wattzonen: testen und richtig berechnen",
+      seoDescription: "Welchen FTP-Test du fahren solltest, wie du deine Wattzonen daraus berechnest und wie oft du nachtesten musst: ein praktischer Guide für Indoor-Training.",
       h1: "FTP-Test und Wattzonen: testen und berechnen",
       datePublished: "2026-07-27",
       dateModified: "2026-07-27",
-      directAnswer: "Die FTP (Functional Threshold Power) ist die Leistung, die du etwa eine Stunde halten kannst — und die Zahl, aus der die meisten Trainingszonen berechnet werden. Übliche Feldtests sind ein 20-Minuten-Test mal 0,95, ein Rampentest bis zur Ausbelastung mal etwa 0,75 der besten Minute, oder eine laufend aus deinen Fahrtdaten modellierte Schätzung. Die Zonen werden dann als Prozentwerte davon gesetzt.",
+      directAnswer: "Die FTP (Functional Threshold Power) ist die Leistung, die du etwa eine Stunde halten kannst, und die Zahl, aus der die meisten Trainingszonen berechnet werden. Übliche Feldtests sind ein 20-Minuten-Test mal 0,95, ein Rampentest bis zur Ausbelastung mal etwa 0,75 der besten Minute, oder eine laufend aus deinen Fahrtdaten modellierte Schätzung. Die Zonen werden dann als Prozentwerte davon gesetzt.",
       sections: [
         {
           title: "Was ist die FTP?",
-          body: "Die FTP ist die höchste Leistung, die du quasi im Steady State etwa eine Stunde halten könntest — der praktische Stellvertreter für die physiologische Schwelle, oberhalb derer die Ermüdung beschleunigt. Sie ist selbst keine physiologische Messung, sondern eine Leistungsschätzung, die bei den meisten Fahrern nahe der LT2 liegt. Diese Unterscheidung ist wichtig, denn sie erklärt, warum zwei Fahrer mit identischer FTP unterschiedliche Zonen brauchen können."
+          body: "Die FTP ist die höchste Leistung, die du quasi im Steady State etwa eine Stunde halten könntest. Damit ist sie der praktische Stellvertreter für die physiologische Schwelle, oberhalb derer die Ermüdung beschleunigt. Sie ist selbst keine physiologische Messung, sondern eine Leistungsschätzung, die bei den meisten Fahrern nahe der LT2 liegt. Diese Unterscheidung ist wichtig, denn sie erklärt, warum zwei Fahrer mit identischer FTP unterschiedliche Zonen brauchen können."
         },
         {
           title: "Welchen FTP-Test solltest du fahren?",
           body: "Alle gängigen Protokolle funktionieren; sie unterscheiden sich darin, wie weh sie tun und wie stark sie von deinem Pacing-Gefühl abhängen.",
           bullets: [
-            "<strong>20-Minuten-Test:</strong> gründlich einfahren, 20 Minuten so hart wie gleichmäßig haltbar fahren, Durchschnittsleistung mal 0,95. Der genaueste Feldtest — und der, der am meisten von gleichmäßigem Pacing abhängt.",
+            "<strong>20-Minuten-Test:</strong> gründlich einfahren, 20 Minuten so hart wie gleichmäßig haltbar fahren, Durchschnittsleistung mal 0,95. Der genaueste Feldtest und zugleich der, der am meisten von gleichmäßigem Pacing abhängt.",
             "<strong>Rampentest:</strong> die Leistung steigt gleichmäßig, bis nichts mehr geht; die FTP wird bei etwa 75 % deiner besten Minutenleistung geschätzt. Kurz und schwer schlecht zu pacen, dafür etwas ungenauer.",
             "<strong>8-Minuten-Test (2 × 8 min):</strong> zwei maximale 8-Minuten-Belastungen, Mittelwert mal etwa 0,90. Leichter durchzuhalten als 20 Minuten, empfindlicher dafür, wie du die zwei Blöcke aufteilst.",
-            "<strong>Modellierte Schätzung:</strong> gar kein Test — die FTP wird aus deinen aufgezeichneten Fahrten abgeleitet. Keine Abhängigkeit von einem Testtag, braucht aber eine Datenbasis, bis sie sich einschwingt."
+            "<strong>Modellierte Schätzung:</strong> gar kein Test. Die FTP wird aus deinen aufgezeichneten Fahrten abgeleitet. Keine Abhängigkeit von einem Testtag, braucht aber eine Datenbasis, bis sie sich einschwingt."
           ]
         },
         {
           title: "Wie berechnest du Wattzonen aus der FTP?",
-          body: "Das verbreitete Sieben-Zonen-Modell drückt jede Zone als Prozentsatz der FTP aus. Behandle die Grenzen als Orientierung, nicht als Physiologie — sie sind eine Konvention, die für die meisten gut funktioniert:",
+          body: "Das verbreitete Sieben-Zonen-Modell drückt jede Zone als Prozentsatz der FTP aus. Behandle die Grenzen als Orientierung, nicht als Physiologie. Sie sind eine Konvention, die für die meisten gut funktioniert:",
           bullets: [
-            "<strong>Zone 1 — aktive Erholung:</strong> unter 55 % der FTP.",
-            "<strong>Zone 2 — Grundlage:</strong> 56–75 %. Der Großteil der meisten Trainingswochen.",
-            "<strong>Zone 3 — Tempo:</strong> 76–90 %.",
-            "<strong>Zone 4 — Schwelle:</strong> 91–105 %. Der Sweet Spot liegt am unteren Ende, etwa 88–94 %.",
-            "<strong>Zone 5 — VO2max:</strong> 106–120 %.",
-            "<strong>Zone 6 — anaerobe Kapazität:</strong> 121–150 %.",
-            "<strong>Zone 7 — neuromuskulär:</strong> über 150 %, zu kurz, um nach Watt zu pacen."
+            "<strong>Zone 1 (aktive Erholung):</strong> unter 55 % der FTP.",
+            "<strong>Zone 2 (Grundlage):</strong> 56-75 %. Der Großteil der meisten Trainingswochen.",
+            "<strong>Zone 3 (Tempo):</strong> 76-90 %.",
+            "<strong>Zone 4 (Schwelle):</strong> 91-105 %. Der Sweet Spot liegt am unteren Ende, etwa 88-94 %.",
+            "<strong>Zone 5 (VO2max):</strong> 106-120 %.",
+            "<strong>Zone 6 (anaerobe Kapazität):</strong> 121-150 %.",
+            "<strong>Zone 7 (neuromuskulär):</strong> über 150 %, zu kurz, um nach Watt zu pacen."
           ]
         },
         {
           title: "Wie oft solltest du nachtesten?",
-          body: "Alle sechs bis acht Wochen ist die übliche Empfehlung, und sie existiert, weil Zonen mit steigender Fitness veralten. In der Praxis stört Nachtesten: ein Testtag ersetzt einen Trainingstag, und ein schlechter Test stellt deine Zonen für den nächsten Block falsch ein. Eine laufend modellierte Schätzung umgeht dieses Problem — weshalb sie sich auch dann lohnt, wenn du zusätzlich zweimal im Jahr den Referenzpunkt eines harten Tests willst."
+          body: "Alle sechs bis acht Wochen ist die übliche Empfehlung, und sie existiert, weil Zonen mit steigender Fitness veralten. In der Praxis stört Nachtesten: ein Testtag ersetzt einen Trainingstag, und ein schlechter Test stellt deine Zonen für den nächsten Block falsch ein. Eine laufend modellierte Schätzung umgeht dieses Problem, weshalb sie sich auch dann lohnt, wenn du zusätzlich zweimal im Jahr den Referenzpunkt eines harten Tests willst."
         },
         {
           title: "Warum haben Zonen aus der FTP allein Grenzen?",
-          body: "Die FTP ist eine einzige Zahl, also ist jede Zonengrenze ein fester Prozentsatz davon. Echte Physiologie hat zwei Anker, LT1 und LT2, und der Abstand zwischen ihnen ist individuell. Ein Fahrer mit großem Abstand hat einen tatsächlich breiten aeroben Bereich, einer mit kleinem nicht — bei identischer FTP. Wenn sich deine Zone 2 immer zu hart anfühlt oder Schwellenarbeit verdächtig leicht, ist meist genau dieser Abstand der Grund."
+          body: "Die FTP ist eine einzige Zahl, also ist jede Zonengrenze ein fester Prozentsatz davon. Echte Physiologie hat zwei Anker, LT1 und LT2, und der Abstand zwischen ihnen ist individuell. Ein Fahrer mit großem Abstand hat einen tatsächlich breiten aeroben Bereich, einer mit kleinem nicht, auch bei identischer FTP. Wenn sich deine Zone 2 immer zu hart anfühlt oder Schwellenarbeit verdächtig leicht, ist meist genau dieser Abstand der Grund."
         },
         {
           title: "Wie geht ENDURE mit FTP und Zonen um?",
-          body: "ENDURE modelliert FTP und VO2max laufend aus aufgezeichneten Power- und Herzfrequenzdaten — Indoor und per Strava oder intervals.icu synchronisierte Outdoor-Fahrten. Du siehst also einen Trend statt eines Testergebnisses mit Ablaufdatum. Der ERG-Modus hält Teststufen präzise, wenn du doch ein Protokoll fahren willst, und die Zeit-in-Zonen-Auswertung zeigt danach, wie die Einheit tatsächlich verteilt war. Trägst du zusätzlich Laktatwerte ein, schätzt ENDURE LT1 und LT2 — dann kannst du deine prozentualen Zonen gegen gemessene Schwellen prüfen. Verfügbar auf iOS und Android."
+          body: "ENDURE modelliert FTP und VO2max laufend aus aufgezeichneten Power- und Herzfrequenzdaten, indoor wie outdoor (per Strava oder intervals.icu synchronisiert). Du siehst also einen Trend statt eines Testergebnisses mit Ablaufdatum. Der ERG-Modus hält Teststufen präzise, wenn du doch ein Protokoll fahren willst, und die Zeit-in-Zonen-Auswertung zeigt danach, wie die Einheit tatsächlich verteilt war. Trägst du zusätzlich Laktatwerte ein, schätzt ENDURE LT1 und LT2. Dann kannst du deine prozentualen Zonen gegen gemessene Schwellen prüfen. Verfügbar auf iOS und Android."
         }
       ],
       ctaTitle: "Hör auf, FTP-Tests zu planen",
@@ -497,7 +497,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       backToGuides: "Alle Guides"
     },
     'zone-2-endurance-training': {
-      seoTitle: "Zone-2-Training für Radsportler — wie viel, wie hart, warum",
+      seoTitle: "Zone-2-Training für Radsportler: wie viel, wie hart, warum",
       seoDescription: "Was Zone-2-Training ist, warum es wirkt, wie du erkennst, dass du wirklich drin bist, und wie du es indoor fährst, ohne nach oben zu driften.",
       h1: "Zone-2-Training: wie viel, wie hart und warum es wirkt",
       datePublished: "2026-07-27",
@@ -572,12 +572,12 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       backToGuides: "Alle Guides"
     },
     'sweet-spot-vs-polarized': {
-      seoTitle: "Sweet Spot vs. polarisiertes Training — was passt zu dir?",
+      seoTitle: "Sweet Spot vs. polarisiertes Training: was passt zu dir?",
       seoDescription: "Sweet Spot, polarisiertes und pyramidales Training im Vergleich: was jedes Modell verlangt, was die Studienlage stützt und wie du nach verfügbaren Stunden entscheidest.",
       h1: "Sweet Spot vs. polarisiertes Training: welches Modell passt?",
       datePublished: "2026-07-27",
       dateModified: "2026-07-27",
-      directAnswer: "Sweet-Spot-Training bündelt die Arbeit knapp unter der Schwelle, bei etwa 88–94 % der FTP, um in wenigen Stunden viel Trainingsreiz zu sammeln. Polarisiertes Training teilt die Woche in überwiegend lockeres Fahren unter LT1 und einen kleinen Anteil wirklich harter Arbeit über LT2 — die Mitte wird bewusst ausgelassen. Sweet Spot passt zu knapper Zeit, polarisiert zu hohem Volumen.",
+      directAnswer: "Sweet-Spot-Training bündelt die Arbeit knapp unter der Schwelle, bei etwa 88-94 % der FTP, um in wenigen Stunden viel Trainingsreiz zu sammeln. Polarisiertes Training teilt die Woche in überwiegend lockeres Fahren unter LT1 und einen kleinen Anteil wirklich harter Arbeit über LT2. Die Mitte wird bewusst ausgelassen. Sweet Spot passt zu knapper Zeit, polarisiert zu hohem Volumen.",
       sections: [
         {
           title: "Was ist Sweet-Spot-Training?",
@@ -585,11 +585,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "Was ist polarisiertes Training?",
-          body: "Polarisiert heißt etwa 80 % der Einheiten bei niedriger Intensität unter LT1 und 20 % bei hoher Intensität über LT2, mit sehr wenig dazwischen. Die Logik: das Lockere ist locker genug, um wirklich zu regenerieren, und das macht das Harte hart genug, um zu zählen. Es ist das Muster, das man bei vielen Eliteathleten mehrerer Ausdauersportarten beobachtet — und Teil des Grundes, warum es bei ihnen funktioniert, ist, dass sie das Volumen haben, damit die lockeren 80 % zu etwas summieren."
+          body: "Polarisiert heißt etwa 80 % der Einheiten bei niedriger Intensität unter LT1 und 20 % bei hoher Intensität über LT2, mit sehr wenig dazwischen. Die Logik: das Lockere ist locker genug, um wirklich zu regenerieren, und das macht das Harte hart genug, um zu zählen. Es ist das Muster, das man bei vielen Eliteathleten mehrerer Ausdauersportarten beobachtet, und Teil des Grundes, warum es bei ihnen funktioniert, ist, dass sie das Volumen haben, damit die lockeren 80 % zu etwas summieren."
         },
         {
           title: "Warum gilt die mittlere Intensität als Problem?",
-          body: "Der Bereich um Tempo und knapp unter der Schwelle wird oft Grauzone genannt: hart genug, um Ermüdung anzusammeln, nicht hart genug, um eine deutliche Anpassung zu erzwingen. Verbringst du eine ganze Woche dort, kommst du am Wochenende müde an, ohne etwas scharf trainiert zu haben. Diese Kritik richtet sich gegen unabsichtliches Fahren in der Mitte — gewohnheitsmäßiges Nach-oben-Driften an lockeren Tagen — nicht gegen Sweet-Spot-Arbeit, die vorgegeben, begrenzt und von Erholung gefolgt ist."
+          body: "Der Bereich um Tempo und knapp unter der Schwelle wird oft Grauzone genannt: hart genug, um Ermüdung anzusammeln, nicht hart genug, um eine deutliche Anpassung zu erzwingen. Verbringst du eine ganze Woche dort, kommst du am Wochenende müde an, ohne etwas scharf trainiert zu haben. Diese Kritik richtet sich gegen unabsichtliches Fahren in der Mitte (gewohnheitsmäßiges Nach-oben-Driften an lockeren Tagen), nicht gegen Sweet-Spot-Arbeit, die vorgegeben, begrenzt und von Erholung gefolgt ist."
         },
         {
           title: "Und pyramidales Training?",
@@ -600,15 +600,15 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
           body: "Die ehrliche Antwort: die verfügbaren Stunden entscheiden mehr als die Philosophie.",
           bullets: [
             "<strong>Unter etwa 6 Stunden pro Woche:</strong> Sweet Spot und Schwellenarbeit bringen den größten Ertrag pro Stunde. Rein polarisiert verschenkt eine kurze Woche an zu lockeres Fahren.",
-            "<strong>8 bis 12 Stunden pro Woche:</strong> eine pyramidale Verteilung passt meist — große locker gefahrene Basis, etwas Schwellenarbeit, ein wenig VO2max.",
+            "<strong>8 bis 12 Stunden pro Woche:</strong> eine pyramidale Verteilung passt meist: große locker gefahrene Basis, etwas Schwellenarbeit, ein wenig VO2max.",
             "<strong>Über 12 Stunden pro Woche:</strong> polarisiert wird tragfähig, weil die lockeren 80 % jetzt viele Stunden sind und tatsächlich summieren.",
-            "<strong>Kurz vor dem Zielevent:</strong> den harten Anteil an die Anforderungen des Events ausrichten und das Gesamtvolumen senken — egal, von welchem Modell du kommst.",
+            "<strong>Kurz vor dem Zielevent:</strong> den harten Anteil an die Anforderungen des Events ausrichten und das Gesamtvolumen senken, egal, von welchem Modell du kommst.",
             "<strong>Was du auch wählst:</strong> die lockeren Fahrten müssen wirklich locker sein. Diese einzige Disziplin zählt mehr als die Wahl des Modells."
           ]
         },
         {
           title: "Wie passt ENDURE in beide Modelle?",
-          body: "Die Workout-Bibliothek ist nach physiologischem Zweck kuratiert — VO2max, Schwelle, Sweet Spot — und nicht zu einem automatischen Plan zusammengesetzt. Du baust also die Verteilung, für die du dich entschieden hast, statt einer, die für dich gewählt wurde. Zeit in Zonen zeigt nach jeder Fahrt, wie die Woche tatsächlich aussah, und das ist meist weniger polarisiert als geplant. Eingetragene Laktatwerte liefern LT1 und LT2 — die zwei Grenzen, über die beide Modelle überhaupt definiert sind. Verfügbar auf iOS und Android."
+          body: "Die Workout-Bibliothek ist nach physiologischem Zweck kuratiert (VO2max, Schwelle, Sweet Spot) und nicht zu einem automatischen Plan zusammengesetzt. Du baust also die Verteilung, für die du dich entschieden hast, statt einer, die für dich gewählt wurde. Zeit in Zonen zeigt nach jeder Fahrt, wie die Woche tatsächlich aussah, und das ist meist weniger polarisiert als geplant. Eingetragene Laktatwerte liefern LT1 und LT2, die zwei Grenzen, über die beide Modelle überhaupt definiert sind. Verfügbar auf iOS und Android."
         }
       ],
       ctaTitle: "Bau die Woche, für die du dich entschieden hast",
@@ -616,7 +616,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       backToGuides: "Alle Guides"
     },
     'zwo-mrc-erg-files': {
-      seoTitle: ".ZWO, .MRC und .ERG — Workout-Dateien erklärt und importieren",
+      seoTitle: ".ZWO, .MRC und .ERG: Workout-Dateien erklärt und importieren",
       seoDescription: "Was in .ZWO-, .MRC- und .ERG-Workout-Dateien steckt, wie sie sich unterscheiden und wie du sie in ENDURE importierst und im ERG-Modus fährst.",
       h1: ".ZWO, .MRC und .ERG: Workout-Dateien erklärt",
       datePublished: "2026-07-27",
@@ -625,32 +625,32 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       sections: [
         {
           title: "Was steckt in einer Workout-Datei?",
-          body: "Nicht mehr als Struktur: eine Folge von Abschnitten mit je einer Dauer und einem Intensitätsziel, dazu optional Trittfrequenz-Hinweise und Textmeldungen. Genau das macht die Formate portabel — die Datei beschreibt die Einheit, und die App entscheidet, wie sie deinen Trainer dorthin steuert. Es heißt auch: eine Einheit, die du vor Jahren in einer anderen App geschrieben hast, funktioniert weiter."
+          body: "Nicht mehr als Struktur: eine Folge von Abschnitten mit je einer Dauer und einem Intensitätsziel, dazu optional Trittfrequenz-Hinweise und Textmeldungen. Genau das macht die Formate portabel: Die Datei beschreibt die Einheit, und die App entscheidet, wie sie deinen Trainer dorthin steuert. Es heißt auch: eine Einheit, die du vor Jahren in einer anderen App geschrieben hast, funktioniert weiter."
         },
         {
           title: "Was steht in einer .ZWO-Datei?",
-          body: "Eine .ZWO ist eine XML-Datei, du kannst sie also in jedem Texteditor öffnen und lesen. Darin erscheinen Abschnitte als Elemente wie SteadyState, IntervalsT, Warmup und Cooldown, die Leistung als Bruchteil der FTP — 0.95 heißt 95 % deiner FTP, nicht 95 Watt. Weil die Ziele relativ sind, skaliert dieselbe Datei korrekt für jeden, der sie importiert."
+          body: "Eine .ZWO ist eine XML-Datei, du kannst sie also in jedem Texteditor öffnen und lesen. Darin erscheinen Abschnitte als Elemente wie SteadyState, IntervalsT, Warmup und Cooldown, die Leistung als Bruchteil der FTP (0.95 heißt 95 % deiner FTP, nicht 95 Watt). Weil die Ziele relativ sind, skaliert dieselbe Datei korrekt für jeden, der sie importiert."
         },
         {
           title: "Wie unterscheiden sich .MRC und .ERG?",
           body: "Beide sind Klartext-Formate aus der früheren Generation von Indoor-Software und teilen denselben Aufbau: ein Kopfblock, danach Zeilen aus Zeit und Ziel. Der Unterschied liegt in der Einheit, und der ist wichtig:",
           bullets: [
-            "<strong>.MRC</strong> gibt Ziele als Prozent der FTP an, die Datei passt sich also an, wer sie fährt — wie bei .ZWO.",
+            "<strong>.MRC</strong> gibt Ziele als Prozent der FTP an, die Datei passt sich also an, wer sie fährt (wie bei .ZWO).",
             "<strong>.ERG</strong> gibt Ziele in absoluten Watt an, die Datei kodiert damit die FTP ihres Erstellers. Importierst du eine fremde .ERG, sind die Zahlen dessen Zahlen, nicht deine.",
             "<strong>In der Praxis:</strong> zum Teilen .ZWO oder .MRC bevorzugen; .ERG ist gut für eigene Zwecke oder wenn du bewusst feste Wattzahlen willst."
           ]
         },
         {
           title: "Wie importierst du ein Workout in ENDURE?",
-          body: "Öffne die Datei am Handy und übergib sie an ENDURE, oder importiere sie im Workout-Screen — so oder so landet sie in deiner Bibliothek neben den kuratierten Einheiten und ist sofort fahrbar. Kein Konvertierungsschritt, kein Desktop-Tool dazwischen. Alle drei Formate verhalten sich nach dem Import gleich."
+          body: "Öffne die Datei am Handy und übergib sie an ENDURE, oder importiere sie im Workout-Screen. So oder so landet sie in deiner Bibliothek neben den kuratierten Einheiten und ist sofort fahrbar. Kein Konvertierungsschritt, kein Desktop-Tool dazwischen. Alle drei Formate verhalten sich nach dem Import gleich."
         },
         {
           title: "Was macht der ERG-Modus mit der Datei?",
-          body: "Im ERG-Modus hält die App das Ziel aus der Datei, indem sie den Widerstand des Trainers nachregelt — die Einheit läuft also auf der vorgegebenen Leistung, egal in welchem Gang du fährst. Zwei praktische Hinweise: Trittfrequenzwechsel erzeugen eine kurze Verzögerung, bis der Trainer nachgezogen hat, und wenn dein Powermeter unruhig meldet, zählt Glättung — ENDURE nutzt Smart-Smoothing, damit ein zappeliges Signal nicht in auf- und abschießenden Widerstand übersetzt wird. Gesteuert wird über den Bluetooth-Standard FTMS, das funktioniert also mit aktuellen Smart Trainern unabhängig von der Marke."
+          body: "Im ERG-Modus hält die App das Ziel aus der Datei, indem sie den Widerstand des Trainers nachregelt. Die Einheit läuft also auf der vorgegebenen Leistung, egal in welchem Gang du fährst. Zwei praktische Hinweise: Trittfrequenzwechsel erzeugen eine kurze Verzögerung, bis der Trainer nachgezogen hat, und wenn dein Powermeter unruhig meldet, zählt Glättung. ENDURE nutzt Smart-Smoothing, damit ein zappeliges Signal nicht in auf- und abschießenden Widerstand übersetzt wird. Gesteuert wird über den Bluetooth-Standard FTMS, das funktioniert also mit aktuellen Smart Trainern unabhängig von der Marke."
         },
         {
           title: "Kannst du zwischen den Formaten konvertieren?",
-          body: "Meist brauchst du das nicht, weil ENDURE alle drei liest. Willst du eine Einheit doch umziehen: die relativen Formate (.ZWO, .MRC) lassen sich sauber ineinander überführen, während eine .ERG die FTP braucht, gegen die sie geschrieben wurde — sonst landen die Intensitäten irgendwo. Genau das ist das Argument dafür, geteilte Workouts in einem prozentbasierten Format zu halten."
+          body: "Meist brauchst du das nicht, weil ENDURE alle drei liest. Willst du eine Einheit doch umziehen: die relativen Formate (.ZWO, .MRC) lassen sich sauber ineinander überführen, während eine .ERG die FTP braucht, gegen die sie geschrieben wurde, sonst landen die Intensitäten irgendwo. Genau das ist das Argument dafür, geteilte Workouts in einem prozentbasierten Format zu halten."
         }
       ],
       ctaTitle: "Nimm deine Workouts mit",

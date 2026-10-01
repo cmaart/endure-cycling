@@ -4,7 +4,7 @@
 // This copy is deliberately independent of the homepage sections in
 // translations.ts. The homepage sells the feature in a few lines; these pages
 // answer the questions someone types into Google, so no sentence is shared
-// between the two — otherwise the landing pages would compete with `/` for the
+// between the two. Otherwise the landing pages would compete with `/` for the
 // same terms.
 //
 // Section titles are question-phrased (AEO: People-Also-Ask / snippets).
@@ -52,26 +52,26 @@ export const featuresIndexMeta = {
 export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent>> = {
   en: {
     'zwift-click': {
-      seoTitle: 'Virtual Shifting Without Zwift — Zwift Click in ENDURE',
+      seoTitle: 'Virtual Shifting Without Zwift | Zwift Click in ENDURE',
       seoDescription:
         'Virtual Shifting with your Zwift Click, no Zwift subscription: change your ERG target in workouts and trainer resistance in SIM mode from the handlebar. Verified on Click v1.',
       breadcrumb: 'Virtual Shifting',
-      h1: 'Virtual Shifting with the Zwift Click — without Zwift',
+      h1: 'Virtual Shifting with the Zwift Click, without Zwift',
       subtitle: 'Change resistance and ERG target from the bars. Verified on Click v1.',
       directAnswer:
-        'Yes — your Zwift Click works outside Zwift. Pair it with ENDURE over standard Bluetooth and the buttons change your ERG target in structured workouts and trainer resistance in SIM mode, so you adjust intensity from the handlebar instead of reaching for the phone. Verified with Click v1. Note that ENDURE does not simulate a cassette: the buttons act on resistance directly.',
+        'Yes, your Zwift Click works outside Zwift. Pair it with ENDURE over standard Bluetooth and the buttons change your ERG target in structured workouts and trainer resistance in SIM mode, so you adjust intensity from the handlebar instead of reaching for the phone. Verified with Click v1. Note that ENDURE does not simulate a cassette: the buttons act on resistance directly.',
       sections: [
         {
           title: 'What does Virtual Shifting do in ENDURE?',
           body:
-            'It puts control of your effort on the handlebar. Press up and the trainer gets harder, press down and it gets easier — the same gesture as shifting, applied directly to resistance or to your workout target rather than to a simulated gear ratio. Nothing moves on the bike, so there is no chain rub and no drivetrain wear, and you never have to sit up mid-interval to reach the screen.'
+            'It puts control of your effort on the handlebar. Press up and the trainer gets harder, press down and it gets easier. It is the same gesture as shifting, applied directly to resistance or to your workout target rather than to a simulated gear ratio. Nothing moves on the bike, so there is no chain rub and no drivetrain wear, and you never have to sit up mid-interval to reach the screen.'
         },
         {
           title: 'What exactly do the buttons change?',
           body:
             'The mapping follows what you are doing at that moment, so there is nothing to configure:',
           bullets: [
-            '<strong>In a structured workout:</strong> the buttons nudge your ERG target up or down in steps — useful when a block is a touch too hard on the day, or too easy.',
+            '<strong>In a structured workout:</strong> the buttons nudge your ERG target up or down in steps (useful when a block is a touch too hard on the day, or too easy).',
             '<strong>In SIM mode and free ride:</strong> the buttons step trainer resistance up and down, so you can simulate a rise or back off without stopping.',
             '<strong>What they do not do:</strong> ENDURE does not model a cassette, so there is no gear number to read and no gear ratio being calculated. The effect on your legs is the same; the mechanism is resistance, not gearing.'
           ]
@@ -86,25 +86,25 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
           body:
             'We name what we have actually tested rather than assuming the generations behave the same:',
           bullets: [
-            '<strong>Click v1 — verified.</strong> Pairing and handlebar control are confirmed end to end with v1 hardware.',
-            '<strong>Click v2 — not verified yet.</strong> We have not tested it, so we do not claim it. The trial is free, so pairing one is the fastest way to find out, and we would like to hear the result.'
+            '<strong>Click v1: verified.</strong> Pairing and handlebar control are confirmed end to end with v1 hardware.',
+            '<strong>Click v2: not verified yet.</strong> We have not tested it, so we do not claim it. The trial is free, so pairing one is the fastest way to find out, and we would like to hear the result.'
           ]
         },
         {
           title: 'Why does handlebar control matter indoors?',
           body:
-            'Interval work is exactly when reaching for a phone is worst: you are breathing hard, the bike is rocking, and a mistimed tap costs you the rest of the effort. Controls on the bars remove that. They also make ERG mode far more usable for riders who adjust often — a 10-watt correction in the third rep happens without breaking position.'
+            'Interval work is exactly when reaching for a phone is worst: you are breathing hard, the bike is rocking, and a mistimed tap costs you the rest of the effort. Controls on the bars remove that. They also make ERG mode far more usable for riders who adjust often: a 10-watt correction in the third rep happens without breaking position.'
         },
         {
           title: 'How do you pair the Click with ENDURE?',
           body:
-            'Wake the Click by pressing a button, open the sensor screen in ENDURE, and select it when it appears. Pairing is the same flow as any other Bluetooth device in the app — no second app, no bridge, no firmware juggling. It works the same way on iOS and Android.'
+            'Wake the Click by pressing a button, open the sensor screen in ENDURE, and select it when it appears. Pairing is the same flow as any other Bluetooth device in the app, with no second app, no bridge and no firmware juggling. It works the same way on iOS and Android.'
         }
       ],
       faq: [
         {
           q: 'Is this the same Virtual Shifting as in Zwift?',
-          a: 'Not mechanically. Zwift pairs a Click with the Zwift Cog and simulates a cassette, so you shift between calculated gear ratios. In ENDURE the Click acts directly on trainer resistance in SIM mode, or on your ERG target inside a workout. What you feel through the pedals is the same — harder, easier, from the bars — but ENDURE is not modelling gears, and there is no gear number on screen.'
+          a: 'Not mechanically. Zwift pairs a Click with the Zwift Cog and simulates a cassette, so you shift between calculated gear ratios. In ENDURE the Click acts directly on trainer resistance in SIM mode, or on your ERG target inside a workout. What you feel through the pedals is the same (harder, easier, from the bars), but ENDURE is not modelling gears, and there is no gear number on screen.'
         },
         {
           q: 'Does it work without a Zwift subscription?',
@@ -112,11 +112,11 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Does it work with Zwift Click v2?',
-          a: 'Not verified yet. Our confirmed hardware is Click v1. We have not tested a v2, so we do not claim it works — if you have one, pairing it costs nothing and we would like to know.'
+          a: 'Not verified yet. Our confirmed hardware is Click v1. We have not tested a v2, so we do not claim it works. If you have one, pairing it costs nothing and we would like to know.'
         },
         {
           q: 'Do I need a specific trainer for this?',
-          a: 'You need a smart trainer ENDURE can control, which means one that speaks the Bluetooth FTMS standard — the same requirement as ERG mode, since the buttons act on trainer resistance.'
+          a: 'You need a smart trainer ENDURE can control, which means one that speaks the Bluetooth FTMS standard. That is the same requirement as ERG mode, since the buttons act on trainer resistance.'
         }
       ],
       relatedTitle: 'Keep reading',
@@ -130,39 +130,39 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Back to Homepage'
     },
     'lactate-lt1-lt2': {
-      seoTitle: 'Lactate App for Cycling — Log Readings, Get LT1 & LT2',
+      seoTitle: 'Lactate App for Cycling: Log Readings, Get LT1 & LT2',
       seoDescription:
         'ENDURE is the first cycling app that logs lactate readings during or after a ride and estimates LT1 and LT2 automatically, with a confidence tunnel around the fitted curve.',
       breadcrumb: 'Lactate LT1 & LT2',
       h1: 'The lactate app that turns readings into thresholds',
       subtitle: 'Log in-ride or afterwards. LT1 and LT2 are estimated for you.',
       directAnswer:
-        'ENDURE lets you enter lactate readings while you are still on the bike — or add them later from your ride history — and fits a curve through them to estimate LT1 and LT2 automatically, including a confidence tunnel that shows how well-supported the estimate is. It is the first cycling app to do this inside the ride itself.',
+        'ENDURE lets you enter lactate readings while you are still on the bike (or add them later from your ride history) and fits a curve through them to estimate LT1 and LT2 automatically, including a confidence tunnel that shows how well-supported the estimate is. It is the first cycling app to do this inside the ride itself.',
       sections: [
         {
           title: 'What problem does in-app lactate logging solve?',
           body:
-            'A step test produces two streams of data that normally end up in different places: power and heart rate in your training app, blood values on a scrap of paper that becomes a spreadsheet. Joining them by hand is tedious enough that most riders test once, plot it, and never repeat it. ENDURE removes that friction — the reading is entered against the step you just rode, so the two streams never separate.'
+            'A step test produces two streams of data that normally end up in different places: power and heart rate in your training app, blood values on a scrap of paper that becomes a spreadsheet. Joining them by hand is tedious enough that most riders test once, plot it, and never repeat it. ENDURE removes that friction: the reading is entered against the step you just rode, so the two streams never separate.'
         },
         {
           title: 'How do you log a lactate reading during a ride?',
           body:
-            'At the end of a step, take your sample as usual and enter the value without leaving the ride screen. The app stamps it against the power you were holding, so the pairing is exact rather than reconstructed later. If you would rather concentrate on the test itself, note the values on paper and add them afterwards from the activity — the result is identical.'
+            'At the end of a step, take your sample as usual and enter the value without leaving the ride screen. The app stamps it against the power you were holding, so the pairing is exact rather than reconstructed later. If you would rather concentrate on the test itself, note the values on paper and add them afterwards from the activity. The result is identical.'
         },
         {
           title: 'How does ENDURE estimate LT1 and LT2?',
           body:
-            'The app fits a curve through your readings and reads the two thresholds off it: LT1 where lactate first rises meaningfully above your baseline, LT2 where the curve steepens into accumulation. Around the fit sits a confidence tunnel, which is the honest part — three readings give a wide tunnel, eight give a narrow one, and you can see at a glance whether to trust the number or take another sample.'
+            'The app fits a curve through your readings and reads the two thresholds off it: LT1 where lactate first rises meaningfully above your baseline, LT2 where the curve steepens into accumulation. Around the fit sits a confidence tunnel, which is the honest part. Three readings give a wide tunnel, eight give a narrow one, and you can see at a glance whether to trust the number or take another sample.'
         },
         {
           title: 'What can you do with LT1 and LT2 once you have them?',
           body:
-            'Threshold-based zones are the backbone of polarised and pyramidal training. Volume below LT1 builds the aerobic base at low fatigue cost; controlled work at and above LT2 raises the pace you can hold. Because the thresholds are measured rather than derived from a single FTP number, riders with identical FTP get correctly different zones — which is the entire argument for testing in the first place.'
+            'Threshold-based zones are the backbone of polarised and pyramidal training. Volume below LT1 builds the aerobic base at low fatigue cost; controlled work at and above LT2 raises the pace you can hold. Because the thresholds are measured rather than derived from a single FTP number, riders with identical FTP get correctly different zones, which is the entire argument for testing in the first place.'
         },
         {
           title: 'Do you need lab equipment?',
           body:
-            'No. A handheld lactate meter, test strips and a trainer you can hold steady steps on are enough — ERG mode makes those steps precise, which matters more for a usable curve than laboratory hardware does. The guide below walks through a full protocol.'
+            'No. A handheld lactate meter, test strips and a trainer you can hold steady steps on are enough. ERG mode makes those steps precise, which matters more for a usable curve than laboratory hardware does. The guide below walks through a full protocol.'
         }
       ],
       faq: [
@@ -176,7 +176,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Does ENDURE need a specific lactate meter?',
-          a: 'No. You enter the value yourself, so any handheld meter works — ENDURE does not read the device directly.'
+          a: 'No. You enter the value yourself, so any handheld meter works. ENDURE does not read the device directly.'
         }
       ],
       relatedTitle: 'Keep reading',
@@ -190,7 +190,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Back to Homepage'
     },
     'core-heat-zones': {
-      seoTitle: 'CORE Sensor App with Live Heat Zones — ENDURE',
+      seoTitle: 'CORE Sensor App with Live Heat Zones | ENDURE',
       seoDescription:
         'ENDURE is the first indoor cycling app with native CORE body temperature integration: pair over Bluetooth, see live heat zones on the ride screen, analyse the trace afterwards.',
       breadcrumb: 'CORE heat zones',
@@ -207,12 +207,12 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'Why do heat zones matter more than a raw number?',
           body:
-            'A core temperature of 38.4 °C means nothing on its own unless you already know your target range. Zones answer the only question that matters mid-session: am I hot enough to trigger an adaptation, or too hot to keep riding productively? For most athletes the productive band sits close to 38.3–38.8 °C, and holding it deliberately is what separates a heat session from simply being uncomfortable.'
+            'A core temperature of 38.4 °C means nothing on its own unless you already know your target range. Zones answer the only question that matters mid-session: am I hot enough to trigger an adaptation, or too hot to keep riding productively? For most athletes the productive band sits close to 38.3-38.8 °C, and holding it deliberately is what separates a heat session from simply being uncomfortable.'
         },
         {
           title: 'How do you steer a heat session with live feedback?',
           body:
-            'Ride an easy, steady endurance effort and use the live zone to find your range — less fan, warmer room, an extra layer if needed — then hold it. Heart rate will drift upward at the same power; that is the thermal load doing its work, not a loss of fitness. Live feedback is what keeps the session in the band instead of overshooting it.'
+            'Ride an easy, steady endurance effort and use the live zone to find your range (less fan, warmer room, an extra layer if needed), then hold it. Heart rate will drift upward at the same power; that is the thermal load doing its work, not a loss of fitness. Live feedback is what keeps the session in the band instead of overshooting it.'
         },
         {
           title: 'What does the data look like after the ride?',
@@ -245,7 +245,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Back to Homepage'
     },
     'ftp-vo2max-tracking': {
-      seoTitle: 'FTP & VO2max Tracking App for Cyclists — ENDURE',
+      seoTitle: 'FTP & VO2max Tracking App for Cyclists | ENDURE',
       seoDescription:
         'Track FTP and VO2max as trends instead of single test results. ENDURE models both from your recorded power and heart-rate data across indoor and Strava- or intervals.icu-synced outdoor rides.',
       breadcrumb: 'FTP & VO2max',
@@ -257,7 +257,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'Why is a trend more useful than a test result?',
           body:
-            'A ramp test measures one day: your sleep, your fuelling, your motivation and the weather all sit inside that number. A trend built from many rides averages those away and shows the direction you are actually moving. It also fails more gracefully — a bad week bends the line slightly instead of resetting your zones to something wrong.'
+            'A ramp test measures one day: your sleep, your fuelling, your motivation and the weather all sit inside that number. A trend built from many rides averages those away and shows the direction you are actually moving. It also fails more gracefully: a bad week bends the line slightly instead of resetting your zones to something wrong.'
         },
         {
           title: 'What data does the model use?',
@@ -267,14 +267,14 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'How do indoor and outdoor rides fit together?',
           body:
-            'Strava or intervals.icu sync pulls your outdoor rides in — including history on first launch — so the trend reflects your whole training load instead of only the indoor part. For most riders that is the difference between a curve that makes sense in July and one that appears to collapse every spring.'
+            'Strava or intervals.icu sync pulls your outdoor rides in, including history on first launch, so the trend reflects your whole training load instead of only the indoor part. For most riders that is the difference between a curve that makes sense in July and one that appears to collapse every spring.'
         },
         {
           title: 'What else does the power data tell you?',
           body:
             'Alongside the trends you get a power profile across durations and a time-in-zones breakdown per ride:',
           bullets: [
-            'The power profile shows where your strengths sit — sprint, pursuit, threshold, long endurance — which is what tells you whether a training block changed the thing it was aimed at.',
+            'The power profile shows where your strengths sit (sprint, pursuit, threshold, long endurance), which is what tells you whether a training block changed the thing it was aimed at.',
             'Time in zones shows how a session was actually distributed, which is often less polarised than intended.',
             'Both sit next to your lactate thresholds and heat data, so physiology and performance are read together.'
           ]
@@ -291,7 +291,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Are outdoor rides included?',
-          a: 'Yes, via Strava or intervals.icu sync — including your existing history when you first connect, so the trend does not start from zero.'
+          a: 'Yes, via Strava or intervals.icu sync. That includes your existing history when you first connect, so the trend does not start from zero.'
         }
       ],
       relatedTitle: 'Keep reading',
@@ -305,7 +305,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Back to Homepage'
     },
     'climbing-efficiency': {
-      seoTitle: 'Climbing Efficiency & VAM Score for Cyclists — ENDURE',
+      seoTitle: 'Climbing Efficiency & VAM Score for Cyclists | ENDURE',
       seoDescription:
         'ENDURE detects the climbs in your outdoor rides automatically and scores how efficiently you turn watts into vertical metres, using your ascent rate (VAM).',
       breadcrumb: 'Climbing Efficiency',
@@ -317,7 +317,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'What is VAM and why score against it?',
           body:
-            'VAM is your rate of vertical ascent, in metres per hour. It is the honest output measure on a climb: watts describe what you put in, VAM describes what actually happened to your altitude. Scoring the relationship between the two says something neither number says alone — whether the power you produced turned into height efficiently, or went into fighting the bike, the line and the gradient.'
+            'VAM is your rate of vertical ascent, in metres per hour. It is the honest output measure on a climb: watts describe what you put in, VAM describes what actually happened to your altitude. Scoring the relationship between the two says something neither number says alone: whether the power you produced turned into height efficiently, or went into fighting the bike, the line and the gradient.'
         },
         {
           title: 'How does automatic climb detection work?',
@@ -327,12 +327,12 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'What does the score actually tell you?',
           body:
-            'It gives climbing its own trend line. A rider whose FTP has been flat for two months may still be climbing better — steadier pacing, better position, less time out of the saddle at the wrong moment — and this is the metric that shows it. It is also a fairer comparison across climbs of different lengths and gradients than raw time is.'
+            'It gives climbing its own trend line. A rider whose FTP has been flat for two months may still be climbing better (steadier pacing, better position, less time out of the saddle at the wrong moment), and this is the metric that shows it. It is also a fairer comparison across climbs of different lengths and gradients than raw time is.'
         },
         {
           title: 'Does this work for indoor rides too?',
           body:
-            'Climbing Efficiency is built for outdoor rides, because it needs real elevation change. Your indoor sessions still feed FTP and VO2max trends, lactate thresholds and heat data — this particular metric is what your outdoor riding contributes to the picture.'
+            'Climbing Efficiency is built for outdoor rides, because it needs real elevation change. Your indoor sessions still feed FTP and VO2max trends, lactate thresholds and heat data. This particular metric is what your outdoor riding contributes to the picture.'
         }
       ],
       faq: [
@@ -362,26 +362,26 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
   },
   de: {
     'zwift-click': {
-      seoTitle: 'Virtual Shifting ohne Zwift — Zwift Click in ENDURE',
+      seoTitle: 'Virtual Shifting ohne Zwift | Zwift Click in ENDURE',
       seoDescription:
         'Virtual Shifting mit deinem Zwift Click, ohne Zwift-Abo: ERG-Ziel im Workout und Trainer-Widerstand im SIM-Modus direkt vom Lenker ändern. Mit Click v1 verifiziert.',
       breadcrumb: 'Virtual Shifting',
-      h1: 'Virtual Shifting mit dem Zwift Click — ohne Zwift',
+      h1: 'Virtual Shifting mit dem Zwift Click, ohne Zwift',
       subtitle: 'Widerstand und ERG-Ziel vom Lenker ändern. Mit Click v1 verifiziert.',
       directAnswer:
-        'Ja — dein Zwift Click funktioniert auch außerhalb von Zwift. Du verbindest ihn per Standard-Bluetooth mit ENDURE, und die Tasten ändern dein ERG-Ziel im strukturierten Workout sowie den Trainer-Widerstand im SIM-Modus. Du regelst die Intensität also am Lenker statt am Handy. Mit Click v1 verifiziert. Wichtig: ENDURE simuliert keine Kassette, die Tasten wirken direkt auf den Widerstand.',
+        'Ja, dein Zwift Click funktioniert auch außerhalb von Zwift. Du verbindest ihn per Standard-Bluetooth mit ENDURE, und die Tasten ändern dein ERG-Ziel im strukturierten Workout sowie den Trainer-Widerstand im SIM-Modus. Du regelst die Intensität also am Lenker statt am Handy. Mit Click v1 verifiziert. Wichtig: ENDURE simuliert keine Kassette, die Tasten wirken direkt auf den Widerstand.',
       sections: [
         {
           title: 'Was macht Virtual Shifting in ENDURE?',
           body:
-            'Es legt die Kontrolle über deine Belastung an den Lenker. Hochdrücken macht den Trainer schwerer, runterdrücken leichter — dieselbe Handbewegung wie beim Schalten, nur wirkt sie direkt auf den Widerstand oder auf dein Workout-Ziel und nicht auf ein simuliertes Übersetzungsverhältnis. Am Rad bewegt sich nichts, also kein Kettenschleifen und kein Antriebsverschleiß, und du musst mitten im Intervall nie aufrichten, um an den Screen zu kommen.'
+            'Es legt die Kontrolle über deine Belastung an den Lenker. Hochdrücken macht den Trainer schwerer, runterdrücken leichter. Es ist dieselbe Handbewegung wie beim Schalten, nur wirkt sie direkt auf den Widerstand oder auf dein Workout-Ziel und nicht auf ein simuliertes Übersetzungsverhältnis. Am Rad bewegt sich nichts, also kein Kettenschleifen und kein Antriebsverschleiß, und du musst mitten im Intervall nie aufrichten, um an den Screen zu kommen.'
         },
         {
           title: 'Was genau ändern die Tasten?',
           body:
-            'Die Belegung richtet sich danach, was du gerade fährst — einstellen musst du nichts:',
+            'Die Belegung richtet sich danach, was du gerade fährst. Einstellen musst du nichts:',
           bullets: [
-            '<strong>Im strukturierten Workout:</strong> die Tasten heben oder senken dein ERG-Ziel in Schritten — praktisch, wenn ein Block an diesem Tag einen Hauch zu hart ist oder zu leicht.',
+            '<strong>Im strukturierten Workout:</strong> die Tasten heben oder senken dein ERG-Ziel in Schritten (praktisch, wenn ein Block an diesem Tag einen Hauch zu hart ist oder zu leicht).',
             '<strong>Im SIM-Modus und Free Ride:</strong> die Tasten regeln den Trainer-Widerstand rauf und runter, du kannst also einen Anstieg simulieren oder zurücknehmen, ohne anzuhalten.',
             '<strong>Was sie nicht tun:</strong> ENDURE modelliert keine Kassette, es gibt also keine Gangnummer zu lesen und kein berechnetes Übersetzungsverhältnis. Die Wirkung auf die Beine ist dieselbe; der Mechanismus ist Widerstand, nicht Schaltung.'
           ]
@@ -389,32 +389,32 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'Funktioniert es ohne Zwift?',
           body:
-            'Ja. Der Click ist ein Bluetooth-Gerät und kein Zwift-exklusives Zubehör — jede App, die ihn ausliest, kann ihn nutzen. ENDURE tut es: der Click erscheint in der normalen Sensorliste neben Trainer, Powermeter und Herzfrequenzgurt, und einmal gekoppelt bleibt er gekoppelt. Kein Zwift-Konto, kein Abo, keine im Hintergrund laufende Zwift-App.'
+            'Ja. Der Click ist ein Bluetooth-Gerät und kein Zwift-exklusives Zubehör. Jede App, die ihn ausliest, kann ihn nutzen. ENDURE tut es: der Click erscheint in der normalen Sensorliste neben Trainer, Powermeter und Herzfrequenzgurt, und einmal gekoppelt bleibt er gekoppelt. Kein Zwift-Konto, kein Abo, keine im Hintergrund laufende Zwift-App.'
         },
         {
           title: 'Welche Zwift-Click-Generationen sind unterstützt?',
           body:
             'Wir nennen, was wir tatsächlich getestet haben, statt anzunehmen, dass sich die Generationen gleich verhalten:',
           bullets: [
-            '<strong>Click v1 — verifiziert.</strong> Pairing und Lenkersteuerung sind mit v1-Hardware durchgehend bestätigt.',
-            '<strong>Click v2 — noch nicht verifiziert.</strong> Wir haben ihn nicht getestet, also behaupten wir es nicht. Der Test ist gratis, Koppeln ist der schnellste Weg zur Antwort, und wir hören das Ergebnis gern.'
+            '<strong>Click v1: verifiziert.</strong> Pairing und Lenkersteuerung sind mit v1-Hardware durchgehend bestätigt.',
+            '<strong>Click v2: noch nicht verifiziert.</strong> Wir haben ihn nicht getestet, also behaupten wir es nicht. Der Test ist gratis, Koppeln ist der schnellste Weg zur Antwort, und wir hören das Ergebnis gern.'
           ]
         },
         {
           title: 'Warum ist Lenkersteuerung indoor so wichtig?',
           body:
-            'Intervalle sind der Moment, in dem der Griff zum Handy am meisten stört: du atmest schwer, das Rad wippt, und ein verrutschter Tap kostet dich den Rest der Belastung. Bedienung am Lenker nimmt das raus. Sie macht den ERG-Modus außerdem für alle brauchbarer, die häufig nachjustieren — 10 Watt weniger in der dritten Wiederholung, ohne die Position zu verlassen.'
+            'Intervalle sind der Moment, in dem der Griff zum Handy am meisten stört: du atmest schwer, das Rad wippt, und ein verrutschter Tap kostet dich den Rest der Belastung. Bedienung am Lenker nimmt das raus. Sie macht den ERG-Modus außerdem für alle brauchbarer, die häufig nachjustieren: 10 Watt weniger in der dritten Wiederholung, ohne die Position zu verlassen.'
         },
         {
           title: 'Wie koppelst du den Click mit ENDURE?',
           body:
-            'Click per Tastendruck aufwecken, in ENDURE den Sensor-Screen öffnen und ihn auswählen, sobald er auftaucht. Das Pairing läuft wie bei jedem anderen Bluetooth-Gerät in der App — keine zweite App, keine Bridge, kein Firmware-Gebastel. Auf iOS und Android identisch.'
+            'Click per Tastendruck aufwecken, in ENDURE den Sensor-Screen öffnen und ihn auswählen, sobald er auftaucht. Das Pairing läuft wie bei jedem anderen Bluetooth-Gerät in der App: keine zweite App, keine Bridge, kein Firmware-Gebastel. Auf iOS und Android identisch.'
         }
       ],
       faq: [
         {
           q: 'Ist das dasselbe Virtual Shifting wie in Zwift?',
-          a: 'Mechanisch nicht. Zwift kombiniert den Click mit dem Zwift Cog und simuliert eine Kassette, du schaltest also zwischen berechneten Übersetzungen. In ENDURE wirkt der Click direkt auf den Trainer-Widerstand im SIM-Modus oder auf dein ERG-Ziel im Workout. Was du in den Pedalen spürst, ist dasselbe — schwerer, leichter, vom Lenker — aber ENDURE modelliert keine Gänge, und es gibt keine Gangnummer am Screen.'
+          a: 'Mechanisch nicht. Zwift kombiniert den Click mit dem Zwift Cog und simuliert eine Kassette, du schaltest also zwischen berechneten Übersetzungen. In ENDURE wirkt der Click direkt auf den Trainer-Widerstand im SIM-Modus oder auf dein ERG-Ziel im Workout. Was du in den Pedalen spürst, ist dasselbe (schwerer, leichter, vom Lenker), aber ENDURE modelliert keine Gänge, und es gibt keine Gangnummer am Screen.'
         },
         {
           q: 'Funktioniert es ohne Zwift-Abo?',
@@ -422,11 +422,11 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Funktioniert es mit dem Zwift Click v2?',
-          a: 'Noch nicht verifiziert. Unsere bestätigte Hardware ist Click v1. Einen v2 haben wir nicht getestet, also behaupten wir nicht, dass er funktioniert — wenn du einen hast: Koppeln kostet nichts, und wir würden es gern wissen.'
+          a: 'Noch nicht verifiziert. Unsere bestätigte Hardware ist Click v1. Einen v2 haben wir nicht getestet, also behaupten wir nicht, dass er funktioniert. Wenn du einen hast: Koppeln kostet nichts, und wir würden es gern wissen.'
         },
         {
           q: 'Brauche ich dafür einen bestimmten Trainer?',
-          a: 'Du brauchst einen Smart Trainer, den ENDURE steuern kann — also einen, der den Bluetooth-Standard FTMS spricht. Dieselbe Voraussetzung wie beim ERG-Modus, denn die Tasten wirken auf den Trainer-Widerstand.'
+          a: 'Du brauchst einen Smart Trainer, den ENDURE steuern kann, also einen, der den Bluetooth-Standard FTMS spricht. Dieselbe Voraussetzung wie beim ERG-Modus, denn die Tasten wirken auf den Trainer-Widerstand.'
         }
       ],
       relatedTitle: 'Weiterlesen',
@@ -440,53 +440,53 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Zurück zur Startseite'
     },
     'lactate-lt1-lt2': {
-      seoTitle: 'Laktat-App für Radsportler — Werte eintragen, LT1 & LT2 erhalten',
+      seoTitle: 'Laktat-App für Radsportler: Werte eintragen, LT1 & LT2 erhalten',
       seoDescription:
-        'ENDURE ist die erste Cycling-App, die Laktatwerte während oder nach der Fahrt aufnimmt und LT1 und LT2 automatisch schätzt — inklusive Konfidenztunnel um die gefittete Kurve.',
+        'ENDURE ist die erste Cycling-App, die Laktatwerte während oder nach der Fahrt aufnimmt und LT1 und LT2 automatisch schätzt, inklusive Konfidenztunnel um die gefittete Kurve.',
       breadcrumb: 'Laktat LT1 & LT2',
       h1: 'Die Laktat-App, die aus Werten Schwellen macht',
       subtitle: 'Eintrag während oder nach der Fahrt. LT1 und LT2 kommen automatisch.',
       directAnswer:
-        'In ENDURE trägst du Laktatwerte ein, während du noch auf dem Rad sitzt — oder ergänzt sie später aus der Fahrthistorie. Die App fittet eine Kurve durch deine Werte und schätzt LT1 und LT2 automatisch, inklusive Konfidenztunnel, der zeigt, wie belastbar die Schätzung ist. Als erste Cycling-App direkt in der Fahrt.',
+        'In ENDURE trägst du Laktatwerte ein, während du noch auf dem Rad sitzt, oder ergänzt sie später aus der Fahrthistorie. Die App fittet eine Kurve durch deine Werte und schätzt LT1 und LT2 automatisch, inklusive Konfidenztunnel, der zeigt, wie belastbar die Schätzung ist. Als erste Cycling-App direkt in der Fahrt.',
       sections: [
         {
           title: 'Welches Problem löst der Laktat-Eintrag in der App?',
           body:
-            'Ein Stufentest produziert zwei Datenströme, die normalerweise an verschiedenen Orten landen: Watt und Herzfrequenz in der Trainings-App, Blutwerte auf einem Zettel, aus dem eine Tabelle wird. Beides von Hand zusammenzuführen ist mühsam genug, dass die meisten einmal testen, einmal plotten und es dann nie wiederholen. ENDURE nimmt diese Hürde raus — der Wert wird gegen die Stufe eingetragen, die du gerade gefahren bist, und damit trennen sich die beiden Ströme nie.'
+            'Ein Stufentest produziert zwei Datenströme, die normalerweise an verschiedenen Orten landen: Watt und Herzfrequenz in der Trainings-App, Blutwerte auf einem Zettel, aus dem eine Tabelle wird. Beides von Hand zusammenzuführen ist mühsam genug, dass die meisten einmal testen, einmal plotten und es dann nie wiederholen. ENDURE nimmt diese Hürde raus: Der Wert wird gegen die Stufe eingetragen, die du gerade gefahren bist, und damit trennen sich die beiden Ströme nie.'
         },
         {
           title: 'Wie trägst du einen Laktatwert während der Fahrt ein?',
           body:
-            'Am Ende einer Stufe nimmst du wie gewohnt deine Probe und trägst den Wert ein, ohne den Ride-Screen zu verlassen. Die App stempelt ihn auf die Leistung, die du gerade gehalten hast — die Zuordnung ist also exakt und nicht später rekonstruiert. Wenn du dich lieber ganz auf den Test konzentrierst, notierst du die Werte auf Papier und ergänzt sie danach in der Aktivität; das Ergebnis ist dasselbe.'
+            'Am Ende einer Stufe nimmst du wie gewohnt deine Probe und trägst den Wert ein, ohne den Ride-Screen zu verlassen. Die App stempelt ihn auf die Leistung, die du gerade gehalten hast. Die Zuordnung ist also exakt und nicht später rekonstruiert. Wenn du dich lieber ganz auf den Test konzentrierst, notierst du die Werte auf Papier und ergänzt sie danach in der Aktivität; das Ergebnis ist dasselbe.'
         },
         {
           title: 'Wie schätzt ENDURE LT1 und LT2?',
           body:
-            'Die App fittet eine Kurve durch deine Werte und liest beide Schwellen daran ab: LT1 dort, wo Laktat erstmals deutlich über dein Grundniveau steigt, LT2 dort, wo die Kurve in die Akkumulation kippt. Um den Fit liegt ein Konfidenztunnel, und das ist der ehrliche Teil — drei Werte ergeben einen weiten Tunnel, acht einen schmalen. Du siehst auf einen Blick, ob du der Zahl trauen kannst oder noch eine Probe brauchst.'
+            'Die App fittet eine Kurve durch deine Werte und liest beide Schwellen daran ab: LT1 dort, wo Laktat erstmals deutlich über dein Grundniveau steigt, LT2 dort, wo die Kurve in die Akkumulation kippt. Um den Fit liegt ein Konfidenztunnel, und das ist der ehrliche Teil: Drei Werte ergeben einen weiten Tunnel, acht einen schmalen. Du siehst auf einen Blick, ob du der Zahl trauen kannst oder noch eine Probe brauchst.'
         },
         {
           title: 'Was machst du mit LT1 und LT2, wenn du sie hast?',
           body:
-            'Schwellenbasierte Zonen sind das Rückgrat polarisierter und pyramidaler Trainingsmodelle. Volumen unter LT1 baut die aerobe Basis bei niedrigen Ermüdungskosten; kontrollierte Arbeit an und über LT2 hebt das Tempo, das du halten kannst. Weil die Schwellen gemessen und nicht aus einer einzelnen FTP-Zahl abgeleitet sind, bekommen zwei Fahrer mit identischer FTP zu Recht unterschiedliche Zonen — und genau das ist das Argument fürs Testen.'
+            'Schwellenbasierte Zonen sind das Rückgrat polarisierter und pyramidaler Trainingsmodelle. Volumen unter LT1 baut die aerobe Basis bei niedrigen Ermüdungskosten; kontrollierte Arbeit an und über LT2 hebt das Tempo, das du halten kannst. Weil die Schwellen gemessen und nicht aus einer einzelnen FTP-Zahl abgeleitet sind, bekommen zwei Fahrer mit identischer FTP zu Recht unterschiedliche Zonen. Genau das ist das Argument fürs Testen.'
         },
         {
           title: 'Brauchst du Laborausstattung?',
           body:
-            'Nein. Ein Handmessgerät, Teststreifen und ein Trainer, auf dem du saubere Stufen halten kannst, reichen — der ERG-Modus macht die Stufen präzise, und das zählt für eine brauchbare Kurve mehr als Laborhardware. Der Guide unten geht ein komplettes Protokoll durch.'
+            'Nein. Ein Handmessgerät, Teststreifen und ein Trainer, auf dem du saubere Stufen halten kannst, reichen. Der ERG-Modus macht die Stufen präzise, und das zählt für eine brauchbare Kurve mehr als Laborhardware. Der Guide unten geht ein komplettes Protokoll durch.'
         }
       ],
       faq: [
         {
           q: 'Kann ich Laktatwerte nach der Fahrt ergänzen?',
-          a: 'Ja. Werte lassen sich live während der Fahrt eintragen oder später aus der Aktivitätshistorie ergänzen — mit demselben Ergebnis.'
+          a: 'Ja. Werte lassen sich live während der Fahrt eintragen oder später aus der Aktivitätshistorie ergänzen, mit demselben Ergebnis.'
         },
         {
           q: 'Wie viele Werte brauche ich für brauchbare LT1 und LT2?',
-          a: 'Mehr Werte verengen den Konfidenztunnel um die gefittete Kurve. Ein Stufentest mit einer Handvoll Proben über einen ausreichend breiten Leistungsbereich ergibt eine brauchbare Schätzung; wenige Werte erzeugen einen sichtbar weiteren Tunnel — dein Hinweis, dass die Schätzung noch weich ist.'
+          a: 'Mehr Werte verengen den Konfidenztunnel um die gefittete Kurve. Ein Stufentest mit einer Handvoll Proben über einen ausreichend breiten Leistungsbereich ergibt eine brauchbare Schätzung; wenige Werte erzeugen einen sichtbar weiteren Tunnel. Das ist dein Hinweis, dass die Schätzung noch weich ist.'
         },
         {
           q: 'Braucht ENDURE ein bestimmtes Laktatmessgerät?',
-          a: 'Nein. Du trägst den Wert selbst ein, also funktioniert jedes Handmessgerät — ENDURE liest das Gerät nicht direkt aus.'
+          a: 'Nein. Du trägst den Wert selbst ein, also funktioniert jedes Handmessgerät. ENDURE liest das Gerät nicht direkt aus.'
         }
       ],
       relatedTitle: 'Weiterlesen',
@@ -500,14 +500,14 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Zurück zur Startseite'
     },
     'core-heat-zones': {
-      seoTitle: 'CORE-Sensor App mit Live Heat Zones — ENDURE',
+      seoTitle: 'CORE-Sensor App mit Live Heat Zones | ENDURE',
       seoDescription:
         'ENDURE ist die erste Indoor-Cycling-App mit nativer CORE-Körpertemperatur-Integration: per Bluetooth koppeln, Live Heat Zones am Ride-Screen sehen, den Verlauf danach auswerten.',
       breadcrumb: 'CORE Heat Zones',
       h1: 'Native CORE-Integration mit Live Heat Zones',
       subtitle: 'Körperkerntemperatur als Trainingsmetrik, nicht als Nebensache.',
       directAnswer:
-        'ENDURE koppelt den CORE Körpertemperatur-Sensor nativ per Bluetooth und zeigt Kerntemperatur und aktuelle Heat Zone live am Ride-Screen. Der komplette Verlauf wird neben Watt und Herzfrequenz aufgezeichnet — eine Hitzeeinheit lässt sich also während der Fahrt steuern und danach auswerten.',
+        'ENDURE koppelt den CORE Körpertemperatur-Sensor nativ per Bluetooth und zeigt Kerntemperatur und aktuelle Heat Zone live am Ride-Screen. Der komplette Verlauf wird neben Watt und Herzfrequenz aufgezeichnet. Eine Hitzeeinheit lässt sich also während der Fahrt steuern und danach auswerten.',
       sections: [
         {
           title: 'Was heißt native CORE-Unterstützung konkret?',
@@ -517,12 +517,12 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'Warum sind Heat Zones wichtiger als die rohe Zahl?',
           body:
-            'Eine Kerntemperatur von 38,4 °C sagt für sich genommen nichts, solange du deinen Zielbereich nicht im Kopf hast. Zonen beantworten die einzige Frage, die mitten in der Einheit zählt: Bin ich heiß genug für einen Anpassungsreiz — oder zu heiß, um produktiv weiterzufahren? Für die meisten Athleten liegt das produktive Band nahe 38,3–38,8 °C, und es bewusst zu halten unterscheidet eine Hitzeeinheit davon, einfach nur zu leiden.'
+            'Eine Kerntemperatur von 38,4 °C sagt für sich genommen nichts, solange du deinen Zielbereich nicht im Kopf hast. Zonen beantworten die einzige Frage, die mitten in der Einheit zählt: Bin ich heiß genug für einen Anpassungsreiz oder zu heiß, um produktiv weiterzufahren? Für die meisten Athleten liegt das produktive Band nahe 38,3-38,8 °C, und es bewusst zu halten unterscheidet eine Hitzeeinheit davon, einfach nur zu leiden.'
         },
         {
           title: 'Wie steuerst du eine Hitzeeinheit mit Live-Feedback?',
           body:
-            'Fahre locker und gleichmäßig im Grundlagenbereich und nutze die Live-Zone, um deinen Bereich zu finden — weniger Ventilator, wärmerer Raum, bei Bedarf eine Schicht mehr — und halte ihn dann. Die Herzfrequenz driftet bei gleicher Leistung nach oben; das ist die thermische Last bei der Arbeit, kein Fitnessverlust. Live-Feedback ist das, was die Einheit im Band hält statt darüber hinauszuschießen.'
+            'Fahre locker und gleichmäßig im Grundlagenbereich und nutze die Live-Zone, um deinen Bereich zu finden (weniger Ventilator, wärmerer Raum, bei Bedarf eine Schicht mehr), und halte ihn dann. Die Herzfrequenz driftet bei gleicher Leistung nach oben; das ist die thermische Last bei der Arbeit, kein Fitnessverlust. Live-Feedback ist das, was die Einheit im Band hält statt darüber hinauszuschießen.'
         },
         {
           title: 'Wie sehen die Daten nach der Fahrt aus?',
@@ -537,7 +537,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Muss für CORE eine zweite App laufen?',
-          a: 'Nein. Die Integration ist nativ — ENDURE liest den Sensor direkt und zeichnet den Verlauf in der Fahrt selbst auf.'
+          a: 'Nein. Die Integration ist nativ: ENDURE liest den Sensor direkt und zeichnet den Verlauf in der Fahrt selbst auf.'
         },
         {
           q: 'Wird die Kerntemperatur aufgezeichnet oder nur live angezeigt?',
@@ -555,9 +555,9 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Zurück zur Startseite'
     },
     'ftp-vo2max-tracking': {
-      seoTitle: 'FTP- & VO2max-Tracking App für Radsportler — ENDURE',
+      seoTitle: 'FTP- & VO2max-Tracking App für Radsportler | ENDURE',
       seoDescription:
-        'FTP und VO2max als Trend statt als Einzeltest. ENDURE modelliert beides aus deinen aufgezeichneten Power- und Herzfrequenzdaten — Indoor und per Strava oder intervals.icu synchronisierte Outdoor-Fahrten.',
+        'FTP und VO2max als Trend statt als Einzeltest. ENDURE modelliert beides aus deinen aufgezeichneten Power- und Herzfrequenzdaten: Indoor und per Strava oder intervals.icu synchronisierte Outdoor-Fahrten.',
       breadcrumb: 'FTP & VO2max',
       h1: 'FTP und VO2max als Trend, nicht als einmaliges Testergebnis',
       subtitle: 'Kontinuierlich modelliert aus den Fahrten, die du ohnehin machst.',
@@ -567,12 +567,12 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'Warum ist ein Trend nützlicher als ein Testergebnis?',
           body:
-            'Ein Rampentest misst einen Tag: Schlaf, Verpflegung, Motivation und Wetter stecken alle in dieser Zahl. Ein Trend aus vielen Fahrten mittelt das heraus und zeigt die Richtung, in die du tatsächlich gehst. Er scheitert außerdem eleganter — eine schlechte Woche biegt die Linie leicht, statt deine Zonen auf einen falschen Wert zurückzusetzen.'
+            'Ein Rampentest misst einen Tag: Schlaf, Verpflegung, Motivation und Wetter stecken alle in dieser Zahl. Ein Trend aus vielen Fahrten mittelt das heraus und zeigt die Richtung, in die du tatsächlich gehst. Er scheitert außerdem eleganter: Eine schlechte Woche biegt die Linie leicht, statt deine Zonen auf einen falschen Wert zurückzusetzen.'
         },
         {
           title: 'Welche Daten nutzt das Modell?',
           body:
-            'Aufgezeichnete Leistung und Herzfrequenz über deine Fahrten hinweg. Das heißt: jede Einheit trägt bei, auch die, die du nicht als Test gedacht hast — und die Schätzung wird mit wachsender Historie besser statt nach sechs Wochen abzulaufen.'
+            'Aufgezeichnete Leistung und Herzfrequenz über deine Fahrten hinweg. Das heißt: jede Einheit trägt bei, auch die, die du nicht als Test gedacht hast. Außerdem wird die Schätzung mit wachsender Historie besser, statt nach sechs Wochen abzulaufen.'
         },
         {
           title: 'Wie passen Indoor- und Outdoor-Fahrten zusammen?',
@@ -584,7 +584,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
           body:
             'Neben den Trends bekommst du ein Power Profile über verschiedene Dauern und eine Zeit-in-Zonen-Auswertung pro Fahrt:',
           bullets: [
-            'Das Power Profile zeigt, wo deine Stärken liegen — Sprint, Verfolgung, Schwelle, lange Ausdauer — und damit, ob ein Trainingsblock das verändert hat, worauf er gezielt war.',
+            'Das Power Profile zeigt, wo deine Stärken liegen (Sprint, Verfolgung, Schwelle, lange Ausdauer), und damit, ob ein Trainingsblock das verändert hat, worauf er gezielt war.',
             'Zeit in Zonen zeigt, wie eine Einheit tatsächlich verteilt war, und das ist häufig weniger polarisiert als geplant.',
             'Beides steht neben deinen Laktatschwellen und Heat-Daten, Physiologie und Leistung werden also zusammen gelesen.'
           ]
@@ -593,7 +593,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       faq: [
         {
           q: 'Muss ich in ENDURE einen FTP-Test fahren?',
-          a: 'Nein. FTP wird aus deinen aufgezeichneten Fahrtdaten modelliert. Du kannst einen Test fahren, wenn du den Referenzpunkt willst — deine Zonen hängen aber nicht davon ab.'
+          a: 'Nein. FTP wird aus deinen aufgezeichneten Fahrtdaten modelliert. Du kannst einen Test fahren, wenn du den Referenzpunkt willst. Deine Zonen hängen aber nicht davon ab.'
         },
         {
           q: 'Wie schätzt ENDURE VO2max?',
@@ -601,7 +601,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Sind Outdoor-Fahrten enthalten?',
-          a: 'Ja, über den Strava- oder intervals.icu-Sync — beim ersten Verbinden inklusive deiner bestehenden Historie, damit der Trend nicht bei null anfängt.'
+          a: 'Ja, über den Strava- oder intervals.icu-Sync, beim ersten Verbinden inklusive deiner bestehenden Historie, damit der Trend nicht bei null anfängt.'
         }
       ],
       relatedTitle: 'Weiterlesen',
@@ -615,7 +615,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Zurück zur Startseite'
     },
     'climbing-efficiency': {
-      seoTitle: 'Climbing Efficiency & VAM-Score für Radsportler — ENDURE',
+      seoTitle: 'Climbing Efficiency & VAM-Score für Radsportler | ENDURE',
       seoDescription:
         'ENDURE erkennt die Anstiege in deinen Outdoor-Fahrten automatisch und bewertet über deine Aufstiegsgeschwindigkeit (VAM), wie effizient du Watt in Höhenmeter umsetzt.',
       breadcrumb: 'Climbing Efficiency',
@@ -627,22 +627,22 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'Was ist VAM, und warum darauf scoren?',
           body:
-            'VAM ist deine vertikale Aufstiegsgeschwindigkeit in Metern pro Stunde. Am Berg ist sie das ehrliche Output-Maß: Watt beschreiben, was du hineingesteckt hast, VAM beschreibt, was mit deiner Höhe tatsächlich passiert ist. Die Beziehung zwischen beiden zu bewerten sagt etwas, das keine der Zahlen allein sagt — ob die Leistung effizient in Höhe umgesetzt wurde oder in den Kampf mit Rad, Linie und Steigung ging.'
+            'VAM ist deine vertikale Aufstiegsgeschwindigkeit in Metern pro Stunde. Am Berg ist sie das ehrliche Output-Maß: Watt beschreiben, was du hineingesteckt hast, VAM beschreibt, was mit deiner Höhe tatsächlich passiert ist. Die Beziehung zwischen beiden zu bewerten sagt etwas, das keine der Zahlen allein sagt: ob die Leistung effizient in Höhe umgesetzt wurde oder in den Kampf mit Rad, Linie und Steigung ging.'
         },
         {
           title: 'Wie funktioniert die automatische Anstiegserkennung?',
           body:
-            'Du markierst keine Segmente und richtest nichts ein. ENDURE liest das Höhenprofil einer Outdoor-Fahrt, identifiziert die Anstiege darin und bewertet sie. Über eine Saison macht das jede hügelige Fahrt zu Daten — nicht nur die, bei denen du daran gedacht hast.'
+            'Du markierst keine Segmente und richtest nichts ein. ENDURE liest das Höhenprofil einer Outdoor-Fahrt, identifiziert die Anstiege darin und bewertet sie. Über eine Saison macht das jede hügelige Fahrt zu Daten, nicht nur die, bei denen du daran gedacht hast.'
         },
         {
           title: 'Was sagt der Score tatsächlich aus?',
           body:
-            'Er gibt dem Klettern eine eigene Trendlinie. Ein Fahrer mit seit zwei Monaten flacher FTP kann trotzdem besser klettern — gleichmäßigere Einteilung, bessere Position, weniger Zeit im Wiegetritt zum falschen Moment — und genau das zeigt diese Metrik. Sie vergleicht Anstiege unterschiedlicher Länge und Steigung außerdem fairer als die reine Zeit.'
+            'Er gibt dem Klettern eine eigene Trendlinie. Ein Fahrer mit seit zwei Monaten flacher FTP kann trotzdem besser klettern (gleichmäßigere Einteilung, bessere Position, weniger Zeit im Wiegetritt zum falschen Moment), und genau das zeigt diese Metrik. Sie vergleicht Anstiege unterschiedlicher Länge und Steigung außerdem fairer als die reine Zeit.'
         },
         {
           title: 'Funktioniert das auch für Indoor-Fahrten?',
           body:
-            'Climbing Efficiency ist für Outdoor-Fahrten gebaut, weil sie echte Höhenänderung braucht. Deine Indoor-Einheiten füttern weiterhin FTP- und VO2max-Trends, Laktatschwellen und Heat-Daten — diese Metrik ist der Beitrag, den dein Outdoor-Fahren zum Gesamtbild leistet.'
+            'Climbing Efficiency ist für Outdoor-Fahrten gebaut, weil sie echte Höhenänderung braucht. Deine Indoor-Einheiten füttern weiterhin FTP- und VO2max-Trends, Laktatschwellen und Heat-Daten. Diese Metrik ist der Beitrag, den dein Outdoor-Fahren zum Gesamtbild leistet.'
         }
       ],
       faq: [

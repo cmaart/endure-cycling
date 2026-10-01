@@ -28,7 +28,7 @@ const pricing = getPricing(lang);
 const title = Astro.props.title || t.seo.title;
 const description = Astro.props.description || t.seo.description;
 
-// SEO URLs — derive per-page so each route self-canonicalizes.
+// SEO URLs: derive per page so each route self-canonicalizes.
 // `basePath` is the locale-independent route without slashes ('' for the
 // homepage, 'about', 'guides/zone-2-endurance-training'). Both locale URLs are
 // built from it through the shared helper, so canonical, hreflang, the language
@@ -54,7 +54,7 @@ const availableOs = Object.entries(config.platforms)
   .map(([key]) => ({ ios: 'iOS', android: 'Android', windows: 'Windows', macos: 'macOS' }[key]))
   .join(', ');
 // Store listing URLs, reused for schema downloadUrl/installUrl and the
-// Organization entity graph (sameAs) — derived from availability like the OS list.
+// Organization entity graph (sameAs), derived from availability like the OS list.
 const storeUrls = Object.values(config.platforms)
   .filter((p) => p.available && p.url)
   .map((p) => p.url as string);
@@ -201,13 +201,13 @@ const storeUrls = Object.values(config.platforms)
         "Climbing Efficiency (VAM-based climb scoring)",
         "Structured workout library",
         "Smart trainer connectivity via Bluetooth",
-        "Virtual Shifting — ERG target and trainer resistance from a Zwift Click (v1 verified)",
+        "Virtual Shifting: ERG target and trainer resistance from a Zwift Click (v1 verified)",
         "Strava and intervals.icu auto-upload",
         "Ride history analytics"
       ]
     })} />
 
-    <!-- Structured Data (JSON-LD) — brand entity for search / AI answer engines -->
+    <!-- Structured Data (JSON-LD): brand entity for search / AI answer engines -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -220,7 +220,7 @@ const storeUrls = Object.values(config.platforms)
       ]
     })} />
 
-    <!-- Structured Data (JSON-LD) — breadcrumb trail on inner pages -->
+    <!-- Structured Data (JSON-LD): breadcrumb trail on inner pages -->
     {basePath !== '' && (
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",

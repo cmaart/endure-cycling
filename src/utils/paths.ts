@@ -29,7 +29,7 @@ export function localeUrl(lang: Lang, path: string = '/'): string {
 
 /**
  * Routes that exist in English only. They have no `/de` counterpart, so pages
- * on them must not advertise an hreflang pair — an `hreflang="de"` pointing at a
+ * on them must not advertise an hreflang pair. An `hreflang="de"` pointing at a
  * URL that 404s is a broken annotation, and Google reports it as one. The same
  * list drives the sitemap filter in `astro.config.mjs`.
  */

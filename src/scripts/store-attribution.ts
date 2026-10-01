@@ -41,7 +41,7 @@ function store(utm: Utm): void {
   try {
     sessionStorage.setItem(STORAGE_KEY, JSON.stringify(utm));
   } catch {
-    /* storage blocked — attribution falls back to current URL only */
+    /* storage blocked: attribution falls back to current URL only */
   }
 }
 

@@ -17,8 +17,8 @@ const tr = getTranslations(lang);
 const guidesHref = localeHref(lang, '/guides');
 const index = getGuidesIndex(lang);
 
-// Sibling guides, derived from the content map rather than maintained per guide —
-// adding a guide links it from every other one automatically.
+// Sibling guides, derived from the content map rather than maintained per guide.
+// Adding a guide links it from every other one automatically.
 const siblings = (Object.entries(guides[lang]) as [GuideKey, typeof t][])
   .filter(([slug]) => slug !== guide)
   .slice(0, 3);

@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
-/* ENDURE Design System — "Endure Motion" tokens (light-only) */
+/* ENDURE Design System: "Endure Motion" tokens (light-only) */
 @theme {
-  /* Background Colors — warm off-white light theme */
+  /* Background Colors: warm off-white light theme */
   --color-endure-bg-primary: #FCFCFB;
   --color-endure-bg-secondary: #FCFCFB;
   --color-endure-surface: #ffffff;
   --color-endure-surface-light: #F4F4F2;
 
-  /* Primary accent — burnt sienna */
+  /* Primary accent: burnt sienna */
   --color-accent: #C2552B;
   --color-accent-hover: #A84620;
 
@@ -58,7 +58,7 @@ body {
 }
 
 /* Custom Utilities */
-/* Formerly a pink/purple gradient — Motion uses a single accent color. */
+/* Formerly a pink/purple gradient. Motion uses a single accent color. */
 .gradient-text,
 .text-gradient-primary {
   color: var(--color-accent);
@@ -175,7 +175,7 @@ body {
   }
 }
 
-/* Phone mockup frame — dark bezel, deep soft shadow */
+/* Phone mockup frame: dark bezel, deep soft shadow */
 .phone-frame {
   border: 8px solid #16181D;
   border-radius: 36px;
