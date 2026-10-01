@@ -45,7 +45,7 @@ const featureLinks = [
     </h2>
     <p data-reveal class="relative mx-auto max-w-[520px] text-lg leading-relaxed text-slate-600">{t.ctaText}</p>
 
-    <div data-reveal data-reveal-delay="100" class="relative flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
+    <div data-reveal data-reveal-delay="100" data-placement="footer-cta" class="relative flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
       <a id="footer-btn-ios" href={iosUrl} target="_blank" rel="noopener" aria-label={tr.hero.appStoreBadgeAlt}>
         <img src={appStoreBadge} alt={tr.hero.appStoreBadgeAlt} class="h-12 w-auto" />
       </a>
@@ -194,26 +194,3 @@ const featureLinks = [
     </div>
   </div>
 </footer>
-
-<script>
-  const footerButtons: Array<{ id: string; label: string }> = [
-    { id: 'footer-btn-ios', label: 'ios_app_store' },
-    { id: 'footer-btn-android', label: 'google_play_store' },
-  ];
-
-  for (const { id, label } of footerButtons) {
-    const btn = document.getElementById(id);
-    if (!btn) continue;
-    btn.addEventListener('click', () => {
-      // @ts-ignore
-      if (typeof gtag !== 'undefined') {
-        // @ts-ignore
-        gtag('event', 'download_click', {
-          'event_category': 'engagement',
-          'event_label': label,
-          'value': 1,
-        });
-      }
-    });
-  }
-</script>
