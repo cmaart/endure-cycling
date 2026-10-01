@@ -452,7 +452,7 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "ENDURE — Indoor Cycling App for Smart & Turbo Trainers",
+      title: "ENDURE | Indoor Cycling App for Smart Trainers",
       description: "Indoor cycling app for smart trainers: ERG control over Bluetooth, FTP & VO2max trends, lactate LT1/LT2 and native CORE heat zones. Ready to ride in 30 seconds."
     },
     // Cookie Banner
@@ -939,7 +939,7 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "ENDURE — Rollentrainer & Indoor Cycling App mit FTP & VO2max",
+      title: "ENDURE | Indoor Cycling App für Rollentrainer",
       description: "Indoor-Cycling-App für deinen Rollentrainer: ERG-Steuerung per Bluetooth, FTP- & VO2max-Trends, Laktat LT1/LT2 und native CORE Heat Zones. In 30 Sekunden fahrbereit."
     },
     // Cookie Banner
