@@ -1,0 +1,58 @@
+---
+import { getTranslations } from '../i18n/translations';
+
+const lang = Astro.currentLocale as 'en' | 'de' || 'en';
+const t = getTranslations(lang).guidance;
+---
+
+<section id="guidance" class="py-20 md:py-28 relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute -top-32 -right-36 w-[600px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(194,85,43,0.05),transparent_70%)]"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+      <!-- Text -->
+      <div class="flex-1 text-center lg:text-left" data-reveal="left">
+        <div class="flex items-center justify-center lg:justify-start gap-3 font-mono text-[13px] tracking-[0.04em] text-accent mb-6">
+          <span class="inline-block w-10 h-px bg-accent" aria-hidden="true"></span>
+          {t.eyebrow}
+        </div>
+
+        <h2 class="text-4xl md:text-6xl font-extrabold tracking-[-0.03em] mb-6 leading-[1.05] text-slate-900 text-balance">
+          {t.headline}
+        </h2>
+
+        <p class="text-base md:text-lg text-slate-600 leading-relaxed mb-7 max-w-xl mx-auto lg:mx-0">
+          {t.description}
+        </p>
+
+        <ul class="space-y-3 text-left max-w-xl mx-auto lg:mx-0">
+          {t.bullets.map((bullet: string) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-[9px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent"></span>
+              <span class="text-slate-600" set:html={bullet}></span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Phone -->
+      <div class="flex-1 w-full flex justify-center" data-reveal="right">
+        <div class="phone-frame w-[260px] md:w-[300px]">
+          <img
+            src="/assets/app/today_dashboard.webp"
+            alt={t.imageAlt}
+            width="300"
+            height="657"
+            loading="lazy"
+            decoding="async"
+            class="w-full"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

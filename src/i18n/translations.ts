@@ -191,6 +191,18 @@ export const translations = {
       ],
       moreLink: "More on CORE heat zones and heat training"
     },
+    // Daily guidance: Today's Prescription on the Today screen
+    guidance: {
+      eyebrow: "DAILY GUIDANCE",
+      headline: "\"What should I train today?\"",
+      description: "ENDURE answers that every morning. It looks at your recent rides, your training load and a short morning check-in, then picks the session for today: an easy spin when you are tired, a hard workout when you are fresh.",
+      bullets: [
+        "<strong>One tap to ride:</strong> start the workout and your smart trainer follows in ERG mode.",
+        "<strong>Two alternatives:</strong> one easier, one harder, if the pick does not suit your day.",
+        "<strong>Explained:</strong> every pick comes with the reason behind it, based on your own data."
+      ],
+      imageAlt: "ENDURE Today screen with recovery score, load balance, week goal and today's prescribed workout"
+    },
     // Zwift Click
     zwiftClick: {
       badge: "New · Virtual Shifting",
@@ -692,6 +704,18 @@ export const translations = {
         "<strong>Mit der Fahrt gespeichert:</strong> Die Kerntemperatur wird neben Watt und Herzfrequenz aufgezeichnet und ist nach der Fahrt bereit für die Analyse."
       ],
       moreLink: "Mehr zu CORE Heat Zones und Hitzetraining"
+    },
+    // Tägliche Empfehlung: Today's Prescription auf dem Heute-Screen
+    guidance: {
+      eyebrow: "JEDEN TAG",
+      headline: "„Was soll ich heute trainieren?“",
+      description: "ENDURE beantwortet die Frage jeden Morgen. Die App schaut auf deine letzten Fahrten, deine Trainingsbelastung und einen kurzen Morgen-Check-in und wählt daraus die Einheit für heute: locker rollen, wenn du müde bist, eine harte Einheit, wenn du frisch bist.",
+      bullets: [
+        "<strong>Ein Fingertipp, und du fährst:</strong> Workout starten, dein Smart Trainer folgt im ERG-Modus.",
+        "<strong>Zwei Alternativen:</strong> eine leichtere, eine härtere, falls die Empfehlung nicht zu deinem Tag passt.",
+        "<strong>Mit Begründung:</strong> Zu jeder Empfehlung steht, warum sie heute passt, abgeleitet aus deinen eigenen Daten."
+      ],
+      imageAlt: "ENDURE Heute-Screen mit Recovery Score, Load Balance, Wochenziel und dem empfohlenen Workout für heute"
     },
     // Zwift Click
     zwiftClick: {
