@@ -4,7 +4,7 @@ import { localeHref } from '../utils/paths';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).proof;
-const aboutHref = localeHref(lang, '/about');
+const trainersHref = localeHref(lang, '/supported-trainers');
 ---
 
 <section id="proof" class="py-20 px-6 md:px-16">
@@ -33,13 +33,13 @@ const aboutHref = localeHref(lang, '/about');
         <figcaption class="text-sm text-slate-500">{t.quoteSource}</figcaption>
       </figure>
 
-      <!-- Founder -->
+      <!-- Trainer compatibility -->
       <div data-reveal data-reveal-delay="200" class="card-surface p-8 flex flex-col justify-between gap-6">
         <div>
-          <div class="font-bold text-[17px] text-slate-900 mb-2">{t.founderTitle}</div>
-          <p class="text-sm leading-relaxed text-slate-600">{t.founderText}</p>
+          <div class="font-bold text-[17px] text-slate-900 mb-2">{t.trainersTitle}</div>
+          <p class="text-sm leading-relaxed text-slate-600">{t.trainersText}</p>
         </div>
-        <a href={aboutHref} class="text-accent font-semibold text-sm hover:underline">{t.founderLink} →</a>
+        <a href={trainersHref} class="text-accent font-semibold text-sm hover:underline">{t.trainersLink} →</a>
       </div>
     </div>
   </div>

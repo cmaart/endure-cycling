@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Static marketing site for **ENDURE**, an indoor cycling app available on iOS and Android (ENDURE Premium subscription with a 14-day free trial, no payment details needed). Desktop versions are not currently planned and the site must not mention them. Live at https://www.endure-cycling.com. Built with Astro 5 + Tailwind CSS v4, deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `master`.
 
+**Copy rule: never present ENDURE as a one-person project.** No "built by one person", "solo developer", "he develops everything himself", "no team" anywhere on the site. It undermines trust in a paid subscription. Naming the founder on `/about` and `/press` is fine; the framing is "developed in Austria", company voice ("we", "ENDURE"). Build trust with product facts instead: store ratings, real quotes, trainer compatibility, update cadence.
+
 ## Commands
 
 - `npm run dev` — local dev server (Astro)

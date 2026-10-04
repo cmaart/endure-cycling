@@ -25,7 +25,7 @@ export const translations = {
       tagline: "Precision over gimmicks",
       headline1: "Stop doing FTP tests.",
       headline2: "Your rides are the test.",
-      subline: "ENDURE estimates FTP, VO2max and lactate thresholds from your normal rides, indoor and outdoor. It controls your smart trainer in ERG and SIM mode and has you riding in under 30 seconds.",
+      subline: "ENDURE estimates FTP and VO2max from your normal rides, indoor and outdoor. It controls your smart trainer in ERG and SIM mode and has you riding in under 30 seconds.",
       // Rendered as an H2 under the subline: the headline carries the claim, this
       // line carries the terms riders actually search for.
       seoLine: "Indoor cycling app for smart and turbo trainers on iOS & Android",
@@ -108,11 +108,11 @@ export const translations = {
       ratingLabel: "App Store, Austria",
       ratingCount: "10 ratings, all five stars",
       ratingChecked: "Checked 4 Oct 2026",
-      quote: "Lactate measurement in an app? Where has this been all this time. Really clean design, fast performance and finally an indoor cycling app that focuses on actual training. Smart trainer connection works great and the analytics are genuinely useful.",
+      quote: "Really clean design, fast performance and finally an indoor cycling app that focuses on actual training. Smart trainer connection works great and the analytics are genuinely useful.",
       quoteSource: "sunocy, App Store review, Austria, May 2026",
-      founderTitle: "Built by one person",
-      founderText: "Christoph Martin, cyclist and developer in Austria, writes ENDURE alone. Updates ship about once a week, and he answers bug reports himself.",
-      founderLink: "About ENDURE"
+      trainersTitle: "Works with your trainer",
+      trainersText: "Wahoo, Tacx, Elite, Zwift Hub, Saris, JetBlack and every other Bluetooth FTMS trainer, plus power meters, heart rate straps and the CORE sensor. Pairing takes a minute.",
+      trainersLink: "Supported trainers"
     },
     // 14-day Premium trial. {monthly} / {annual} are filled from
     // config.pricing (src/utils/prices.ts).
@@ -407,7 +407,7 @@ export const translations = {
         }
       ],
       founderTitle: "About the founder",
-      founderBody: "Christoph Martin is a software engineer and endurance athlete based in Austria. He develops everything in ENDURE himself, from the Bluetooth trainer control to the performance analytics. The app started from a simple frustration: indoor cycling apps were full of gimmicks, but thin on the honest analysis that actually makes riders faster.",
+      founderBody: "Christoph Martin is a software engineer and endurance athlete based in Austria. ENDURE is developed there, from the Bluetooth trainer control to the performance analytics. The app started from a simple frustration: indoor cycling apps were full of gimmicks, but thin on the honest analysis that actually makes riders faster.",
       assetsTitle: "Logos & screenshots",
       logosTitle: "Logos",
       logos: [
@@ -468,7 +468,7 @@ export const translations = {
     // SEO
     seo: {
       title: "ENDURE | Indoor Cycling App for Smart Trainers, No FTP Test",
-      description: "Indoor cycling app for smart trainers that estimates FTP, VO2max and lactate thresholds from your normal rides. ERG and SIM control over Bluetooth, native CORE heat zones, riding in 30 seconds."
+      description: "Indoor cycling app for smart trainers that estimates FTP and VO2max from your normal rides. ERG and SIM control over Bluetooth, structured workouts, Strava and intervals.icu sync, riding in 30 seconds."
     },
     // Cookie Banner
     cookieBanner: {
@@ -527,7 +527,7 @@ export const translations = {
       tagline: "Präzision statt Spielerei",
       headline1: "Schluss mit FTP-Tests.",
       headline2: "Deine Fahrten sind der Test.",
-      subline: "ENDURE schätzt FTP, VO2max und Laktatschwellen aus deinen normalen Fahrten, drinnen wie draußen. Die App steuert deinen Smart Trainer in ERG und SIM, und du sitzt in unter 30 Sekunden am Rad.",
+      subline: "ENDURE schätzt FTP und VO2max aus deinen normalen Fahrten, drinnen wie draußen. Die App steuert deinen Smart Trainer in ERG und SIM, und du sitzt in unter 30 Sekunden am Rad.",
       // Als H2 unter der Subline gerendert: die Headline trägt den Claim, diese
       // Zeile trägt die Begriffe, mit denen tatsächlich gesucht wird.
       seoLine: "Indoor-Cycling- und Rollentrainer-App für iOS & Android",
@@ -610,11 +610,11 @@ export const translations = {
       ratingLabel: "App Store, Österreich",
       ratingCount: "10 Bewertungen, alle fünf Sterne",
       ratingChecked: "Stand 4. Okt. 2026",
-      quote: "Laktatmessung in einer App? Wo war das die ganze Zeit. Richtig sauberes Design, schnell, und endlich eine Indoor-Cycling-App, die sich ums Training kümmert. Die Smart-Trainer-Verbindung funktioniert tadellos und die Auswertungen bringen wirklich etwas.",
+      quote: "Richtig sauberes Design, schnell, und endlich eine Indoor-Cycling-App, die sich ums Training kümmert. Die Smart-Trainer-Verbindung funktioniert tadellos und die Auswertungen bringen wirklich etwas.",
       quoteSource: "sunocy, App-Store-Rezension, Österreich, Mai 2026 (aus dem Englischen)",
-      founderTitle: "Von einer Person gebaut",
-      founderText: "Christoph Martin, Radfahrer und Entwickler aus Österreich, schreibt ENDURE allein. Updates kommen etwa wöchentlich, und Bug-Reports beantwortet er selbst.",
-      founderLink: "Über ENDURE"
+      trainersTitle: "Läuft mit deinem Trainer",
+      trainersText: "Wahoo, Tacx, Elite, Zwift Hub, Saris, JetBlack und jeder andere Bluetooth-FTMS-Trainer, dazu Powermeter, Brustgurte und der CORE-Sensor. Koppeln dauert eine Minute.",
+      trainersLink: "Unterstützte Trainer"
     },
     // 14-Tage-Premium-Test. {monthly} / {annual} kommen aus
     // config.pricing (src/utils/prices.ts).
@@ -909,7 +909,7 @@ export const translations = {
         }
       ],
       founderTitle: "Über den Gründer",
-      founderBody: "Christoph Martin ist Softwareentwickler und Ausdauersportler aus Österreich. Er entwickelt alles an ENDURE selbst, von der Bluetooth-Trainersteuerung bis zur Leistungsanalyse. Die App entstand aus einem simplen Frust: Indoor-Cycling-Apps waren voller Spielereien, aber dünn bei der ehrlichen Analyse, die Sportler wirklich schneller macht.",
+      founderBody: "Christoph Martin ist Softwareentwickler und Ausdauersportler aus Österreich. ENDURE wird dort entwickelt, von der Bluetooth-Trainersteuerung bis zur Leistungsanalyse. Die App entstand aus einem simplen Frust: Indoor-Cycling-Apps waren voller Spielereien, aber dünn bei der ehrlichen Analyse, die Sportler wirklich schneller macht.",
       assetsTitle: "Logos & Screenshots",
       logosTitle: "Logos",
       logos: [
@@ -970,7 +970,7 @@ export const translations = {
     // SEO
     seo: {
       title: "ENDURE | Rollentrainer-App ohne FTP-Test",
-      description: "Indoor-Cycling-App für Rollentrainer, die FTP, VO2max und Laktatschwellen aus deinen normalen Fahrten schätzt. ERG- und SIM-Steuerung per Bluetooth, native CORE Heat Zones, in 30 Sekunden fahrbereit."
+      description: "Indoor-Cycling-App für Rollentrainer, die FTP und VO2max aus deinen normalen Fahrten schätzt. ERG- und SIM-Steuerung per Bluetooth, strukturierte Workouts, Strava- und intervals.icu-Sync, in 30 Sekunden fahrbereit."
     },
     // Cookie Banner
     cookieBanner: {
