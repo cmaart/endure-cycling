@@ -23,9 +23,9 @@ export const translations = {
       // Check marks under the store badges
       checks: ["14 days free", "No payment details", "Ends on its own"],
       tagline: "Precision over gimmicks",
-      headline1: "Train right.",
-      headline2: "See the progress.",
-      subline: "Smart trainer control, FTP and VO2max trends, lactate thresholds. From app start to riding in under 30 seconds.",
+      headline1: "Stop doing FTP tests.",
+      headline2: "Your rides are the test.",
+      subline: "ENDURE estimates FTP, VO2max and lactate thresholds from your normal rides, indoor and outdoor. It controls your smart trainer in ERG and SIM mode and has you riding in under 30 seconds.",
       // Rendered as an H2 under the subline: the headline carries the claim, this
       // line carries the terms riders actually search for.
       seoLine: "Indoor cycling app for smart and turbo trainers on iOS & Android",
@@ -88,7 +88,7 @@ export const translations = {
     // Ticker strip. The first item is shown in the accent color.
     ticker: [
       "14 days free",
-      "Ready in <30 s",
+      "Ready in under 30 s",
       "ERG mode",
       "Virtual Shifting",
       "SIM mode",
@@ -99,6 +99,21 @@ export const translations = {
       ".ZWO import",
       "Climbing Efficiency"
     ],
+    // Social proof under the ticker. Rating and quote are real: App Store
+    // Austria storefront (checked 2026-10-04) and the public review by
+    // "sunocy" from 2026-05-28. Update the count when the storefront changes.
+    proof: {
+      eyebrow: "WHAT RIDERS SAY",
+      ratingValue: "5.0",
+      ratingLabel: "App Store, Austria",
+      ratingCount: "10 ratings, all five stars",
+      ratingChecked: "Checked 4 Oct 2026",
+      quote: "Lactate measurement in an app? Where has this been all this time. Really clean design, fast performance and finally an indoor cycling app that focuses on actual training. Smart trainer connection works great and the analytics are genuinely useful.",
+      quoteSource: "sunocy, App Store review, Austria, May 2026",
+      founderTitle: "Built by one person",
+      founderText: "Christoph Martin, cyclist and developer in Austria, writes ENDURE alone. Updates ship about once a week, and he answers bug reports himself.",
+      founderLink: "About ENDURE"
+    },
     // 14-day Premium trial. {monthly} / {annual} are filled from
     // config.pricing (src/utils/prices.ts).
     trial: {
@@ -452,8 +467,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "ENDURE | Indoor Cycling App for Smart Trainers",
-      description: "Indoor cycling app for smart trainers: ERG control over Bluetooth, FTP & VO2max trends, lactate LT1/LT2 and native CORE heat zones. Ready to ride in 30 seconds."
+      title: "ENDURE | Indoor Cycling App for Smart Trainers, No FTP Test",
+      description: "Indoor cycling app for smart trainers that estimates FTP, VO2max and lactate thresholds from your normal rides. ERG and SIM control over Bluetooth, native CORE heat zones, riding in 30 seconds."
     },
     // Cookie Banner
     cookieBanner: {
@@ -510,9 +525,9 @@ export const translations = {
       // Häkchen unter den Store-Badges
       checks: ["14 Tage gratis", "Keine Zahlungsdaten", "Endet von selbst"],
       tagline: "Präzision statt Spielerei",
-      headline1: "Richtig trainieren.",
-      headline2: "Fortschritt sehen.",
-      subline: "Smart-Trainer-Steuerung, FTP- und VO2max-Trends, Laktatschwellen. Vom App-Start bis aufs Rad in unter 30 Sekunden.",
+      headline1: "Schluss mit FTP-Tests.",
+      headline2: "Deine Fahrten sind der Test.",
+      subline: "ENDURE schätzt FTP, VO2max und Laktatschwellen aus deinen normalen Fahrten, drinnen wie draußen. Die App steuert deinen Smart Trainer in ERG und SIM, und du sitzt in unter 30 Sekunden am Rad.",
       // Als H2 unter der Subline gerendert: die Headline trägt den Claim, diese
       // Zeile trägt die Begriffe, mit denen tatsächlich gesucht wird.
       seoLine: "Indoor-Cycling- und Rollentrainer-App für iOS & Android",
@@ -575,7 +590,7 @@ export const translations = {
     // Ticker strip. Der erste Eintrag erscheint in der Akzentfarbe.
     ticker: [
       "14 Tage gratis",
-      "Fahrbereit in <30 s",
+      "Fahrbereit in unter 30 s",
       "ERG-Modus",
       "Virtual Shifting",
       "SIM-Modus",
@@ -586,6 +601,21 @@ export const translations = {
       ".ZWO-Import",
       "Climbing Efficiency"
     ],
+    // Social Proof unter dem Ticker. Bewertung und Zitat sind echt: App Store
+    // Österreich (geprüft 2026-10-04) und die öffentliche Rezension von
+    // "sunocy" vom 2026-05-28 (hier übersetzt). Zahl bei Änderung nachziehen.
+    proof: {
+      eyebrow: "WAS FAHRER SAGEN",
+      ratingValue: "5,0",
+      ratingLabel: "App Store, Österreich",
+      ratingCount: "10 Bewertungen, alle fünf Sterne",
+      ratingChecked: "Stand 4. Okt. 2026",
+      quote: "Laktatmessung in einer App? Wo war das die ganze Zeit. Richtig sauberes Design, schnell, und endlich eine Indoor-Cycling-App, die sich ums Training kümmert. Die Smart-Trainer-Verbindung funktioniert tadellos und die Auswertungen bringen wirklich etwas.",
+      quoteSource: "sunocy, App-Store-Rezension, Österreich, Mai 2026 (aus dem Englischen)",
+      founderTitle: "Von einer Person gebaut",
+      founderText: "Christoph Martin, Radfahrer und Entwickler aus Österreich, schreibt ENDURE allein. Updates kommen etwa wöchentlich, und Bug-Reports beantwortet er selbst.",
+      founderLink: "Über ENDURE"
+    },
     // 14-Tage-Premium-Test. {monthly} / {annual} kommen aus
     // config.pricing (src/utils/prices.ts).
     trial: {
@@ -939,8 +969,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "ENDURE | Indoor Cycling App für Rollentrainer",
-      description: "Indoor-Cycling-App für deinen Rollentrainer: ERG-Steuerung per Bluetooth, FTP- & VO2max-Trends, Laktat LT1/LT2 und native CORE Heat Zones. In 30 Sekunden fahrbereit."
+      title: "ENDURE | Rollentrainer-App ohne FTP-Test",
+      description: "Indoor-Cycling-App für Rollentrainer, die FTP, VO2max und Laktatschwellen aus deinen normalen Fahrten schätzt. ERG- und SIM-Steuerung per Bluetooth, native CORE Heat Zones, in 30 Sekunden fahrbereit."
     },
     // Cookie Banner
     cookieBanner: {
