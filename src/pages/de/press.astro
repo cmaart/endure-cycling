@@ -4,6 +4,7 @@ import Footer from '../../components/Footer.astro';
 import { getTranslations } from '../../i18n/translations';
 import { localeHref } from '../../utils/paths';
 import { config } from '../../config';
+import { withPrices } from '../../utils/prices';
 
 const lang = 'de' as const;
 const t = getTranslations(lang).press;
@@ -36,7 +37,7 @@ const badgeSuffix = '-de';
         {t.facts.map((fact: { label: string; value: string }) => (
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-3">
             <dt class="font-semibold text-slate-900">{fact.label}</dt>
-            <dd class="sm:col-span-2 text-slate-700">{fact.value}</dd>
+            <dd class="sm:col-span-2 text-slate-700">{withPrices(fact.value, lang)}</dd>
           </div>
         ))}
       </dl>

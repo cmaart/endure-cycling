@@ -371,7 +371,7 @@ export const translations = {
       sections: [
         {
           title: "Who's behind ENDURE",
-          body: "ENDURE is built by Christoph Martin, a cyclist and developer based in Austria. It started from a simple frustration: indoor cycling apps were full of gimmicks and games, but thin on the honest analysis that helps you improve. ENDURE is the app we wanted to train with ourselves."
+          body: "ENDURE was founded by Christoph Martin, a cyclist and software engineer, and is developed in Austria. It started from a simple frustration: indoor cycling apps were full of gimmicks and games, but thin on the honest analysis that helps you improve. ENDURE is the app we wanted to train with ourselves."
         },
         {
           title: "Precision over gimmicks",
@@ -392,30 +392,32 @@ export const translations = {
       seoTitle: "Press Kit | ENDURE Cycling",
       seoDescription: "Press resources for ENDURE, the Austrian indoor cycling training app: fact sheet, story angles, founder bio, logos and screenshots.",
       headline: "Press Kit",
-      intro: "ENDURE is an indoor cycling training app developed independently in Austria. The big platforms build virtual worlds; ENDURE puts its effort into performance diagnostics and smart-trainer control instead, with the ambition to keep up technologically with the international players. ENDURE is available for iOS and Android.",
+      intro: "ENDURE is an indoor cycling app from Austria, built to compete with Zwift and TrainerRoad. Instead of a virtual world, ENDURE answers one question every morning: what should I train today? It controls the rider's smart trainer and works out fitness from the rides they already do. ENDURE is available for iOS and Android.",
       factsTitle: "Fact sheet",
       facts: [
-        { label: "Product", value: "ENDURE, indoor cycling training app" },
+        { label: "Product", value: "ENDURE, indoor cycling and training app" },
+        { label: "Origin", value: "Austria" },
+        { label: "Competes with", value: "Zwift, TrainerRoad" },
         { label: "Platforms", value: "iOS & Android" },
-        { label: "Pricing", value: "ENDURE Premium subscription (monthly or annual) with a 14-day free trial" },
-        { label: "Developer", value: "Christoph Martin, independent software engineer, Austria" },
+        { label: "Pricing", value: "ENDURE Premium, {monthly} a month or {annual} a year. 14-day trial without payment details" },
+        { label: "Founder", value: "Christoph Martin" },
         { label: "Website", value: "www.endure-cycling.com" },
         { label: "Contact", value: "info@endure-cycling.com" }
       ],
       anglesTitle: "Story angles",
-      anglesIntro: "Three areas where ENDURE differs from established platforms. Each works as a standalone story:",
+      anglesIntro: "Three areas where ENDURE differs from the established platforms. Each works as a standalone story:",
       angles: [
         {
-          title: "No more FTP tests",
-          body: "Most training apps make riders repeat ramp or 20-minute tests to keep their FTP current. ENDURE estimates FTP, VO2max and lactate thresholds (LT1/LT2) continuously from normal training rides. Fitness changes every ride, and the numbers follow automatically."
+          title: "\"What should I train today?\"",
+          body: "Zwift sells a virtual world, TrainerRoad sells training plans. ENDURE takes a third route: every morning it suggests the session that fits the day, based on recent rides and a short check-in on sleep and legs. An easy spin after a hard week, a hard session when the rider is fresh, with the reason shown and two alternatives. ENDURE costs less than half of a Zwift subscription."
         },
         {
-          title: "From Austria, up against the big platforms",
-          body: "A single Austrian software engineer is building a training platform that competes with VC-funded products like Zwift, TrainerRoad and Rouvy. The big providers build virtual worlds; ENDURE works on making the training itself smarter."
+          title: "No more FTP tests",
+          body: "On Zwift and most other platforms riders still repeat ramp or 20-minute tests to keep their FTP current. ENDURE estimates FTP and VO2max continuously from normal rides, indoors and outdoors. Fitness changes with every ride, and the numbers follow without a test."
         },
         {
           title: "The technology between app and trainer",
-          body: "What actually happens between a workout app and a smart trainer? ENDURE implements its own trainer control: Bluetooth FTMS, ERG-mode regulation, power-meter vs. trainer discrepancies and fluctuation damping. A story for readers who want to know why 250 watts on the trainer are not always 250 watts at the pedals."
+          body: "What actually happens between a workout app and a smart trainer? ENDURE runs its own trainer control: ERG and SIM mode over Bluetooth, older Tacx Neo models that lack the newer standard, and the Zwift Click, Play and Ride controllers without a Zwift subscription. A story for readers who want to know why 250 watts on the trainer are not always 250 watts at the pedals."
         }
       ],
       founderTitle: "About the founder",
@@ -444,7 +446,7 @@ export const translations = {
       ],
       assetsNote: "High-resolution originals and additional material are available on request.",
       contactTitle: "Press contact",
-      contactBody: "Email us at info@endure-cycling.com. Journalists and testers get full review access to ENDURE on request, including all analysis features.",
+      contactBody: "Email us at info@endure-cycling.com. Journalists and reviewers get a full review account with every feature unlocked, usually the same day.",
       backHome: "Back to Homepage"
     },
     // Footer
@@ -885,7 +887,7 @@ export const translations = {
       sections: [
         {
           title: "Wer hinter ENDURE steht",
-          body: "ENDURE wird von Christoph Martin entwickelt, einem Radfahrer und Entwickler aus Österreich. Der Auslöser war simpler Frust: Indoor-Cycling-Apps waren voller Spielereien und Games, aber dünn bei der ehrlichen Analyse, die beim Besserwerden hilft. ENDURE ist die App, mit der wir selbst trainieren wollten."
+          body: "ENDURE wurde von Christoph Martin gegründet, Radfahrer und Softwareentwickler, und wird in Österreich entwickelt. Der Auslöser war simpler Frust: Indoor-Cycling-Apps waren voller Spielereien und Games, aber dünn bei der ehrlichen Analyse, die beim Besserwerden hilft. ENDURE ist die App, mit der wir selbst trainieren wollten."
         },
         {
           title: "Präzision statt Spielerei",
@@ -906,30 +908,32 @@ export const translations = {
       seoTitle: "Presse | ENDURE Cycling",
       seoDescription: "Presse-Material zu ENDURE, der österreichischen Indoor-Cycling-Training-App: Fact Sheet, Story-Ideen, Gründer-Bio, Logos und Screenshots.",
       headline: "Presse",
-      intro: "ENDURE ist eine Indoor-Cycling-Training-App, die unabhängig in Österreich entwickelt wird. Die großen Plattformen bauen virtuelle Welten; ENDURE steckt die Arbeit stattdessen in Leistungsdiagnostik und Smart-Trainer-Steuerung, mit dem Anspruch, technologisch mit den internationalen Anbietern mitzuhalten. ENDURE ist für iOS und Android verfügbar.",
+      intro: "ENDURE ist eine Rollentrainer-App aus Österreich, die gegen Zwift und TrainerRoad antritt. Statt einer virtuellen Welt beantwortet ENDURE jeden Morgen eine Frage: Was soll ich heute trainieren? Die App steuert den eigenen Smart Trainer und schätzt die Form aus den Fahrten, die man ohnehin macht. ENDURE gibt es für iOS und Android.",
       factsTitle: "Fact Sheet",
       facts: [
-        { label: "Produkt", value: "ENDURE, Indoor-Cycling-Training-App" },
+        { label: "Produkt", value: "ENDURE, Rollentrainer- und Trainings-App" },
+        { label: "Herkunft", value: "Österreich" },
+        { label: "Mitbewerber", value: "Zwift, TrainerRoad" },
         { label: "Plattformen", value: "iOS & Android" },
-        { label: "Preis", value: "ENDURE-Premium-Abo (monatlich oder jährlich) mit 14 Tagen Gratis-Test" },
-        { label: "Entwickler", value: "Christoph Martin, unabhängiger Softwareentwickler, Österreich" },
+        { label: "Preis", value: "ENDURE Premium, {monthly} im Monat oder {annual} im Jahr. 14 Tage Test ohne Zahlungsdaten" },
+        { label: "Gründer", value: "Christoph Martin" },
         { label: "Website", value: "www.endure-cycling.com" },
         { label: "Kontakt", value: "info@endure-cycling.com" }
       ],
       anglesTitle: "Story-Ideen",
-      anglesIntro: "Drei Bereiche, in denen sich ENDURE von etablierten Plattformen unterscheidet. Jeder trägt eine eigene Geschichte:",
+      anglesIntro: "Drei Bereiche, in denen sich ENDURE von den etablierten Plattformen unterscheidet. Jeder trägt eine eigene Geschichte:",
       angles: [
         {
-          title: "Schluss mit FTP-Tests",
-          body: "Die meisten Training-Apps lassen ihre Nutzer regelmäßig Ramp- oder 20-Minuten-Tests fahren, um die FTP aktuell zu halten. ENDURE schätzt FTP, VO2max und Laktatschwellen (LT1/LT2) kontinuierlich aus normalen Trainingsfahrten. Die Form ändert sich mit jeder Fahrt, und die Zahlen ziehen automatisch nach."
+          title: "„Was soll ich heute trainieren?“",
+          body: "Zwift verkauft eine virtuelle Welt, TrainerRoad verkauft Trainingspläne. ENDURE geht einen dritten Weg: Jeden Morgen schlägt die App die Einheit vor, die zum Tag passt, abgeleitet aus den letzten Fahrten und einem kurzen Check-in zu Schlaf und Beinen. Locker rollen nach einer harten Woche, eine harte Einheit, wenn man ausgeruht ist, jeweils mit Begründung und zwei Alternativen. ENDURE kostet weniger als die Hälfte eines Zwift-Abos."
         },
         {
-          title: "Aus Österreich gegen die großen Plattformen",
-          body: "Ein einzelner österreichischer Softwareentwickler baut eine Trainingsplattform, die mit VC-finanzierten Produkten wie Zwift, TrainerRoad und Rouvy konkurriert. Die großen Anbieter bauen virtuelle Welten; ENDURE arbeitet daran, das Training selbst intelligenter zu machen."
+          title: "Schluss mit FTP-Tests",
+          body: "Bei Zwift und den meisten anderen Plattformen fahren Nutzer weiterhin Rampen- oder 20-Minuten-Tests, um die FTP aktuell zu halten. ENDURE schätzt FTP und VO2max fortlaufend aus normalen Fahrten, drinnen wie draußen. Die Form ändert sich mit jeder Fahrt, und die Werte ziehen ohne Test nach."
         },
         {
           title: "Die Technik zwischen App und Trainer",
-          body: "Was passiert eigentlich zwischen Workout-App und Smart-Trainer? ENDURE implementiert die Trainersteuerung selbst: Bluetooth FTMS, ERG-Regelung, Abweichungen zwischen Powermeter und Trainer, Glättung von Leistungsschwankungen. Eine Geschichte für alle, die wissen wollen, warum 250 Watt am Trainer nicht immer 250 Watt an den Pedalen sind."
+          body: "Was passiert eigentlich zwischen Trainings-App und Smart Trainer? ENDURE steuert den Trainer selbst: ERG- und SIM-Modus über Bluetooth, auch ältere Tacx Neo ohne den neueren Standard, dazu die Zwift-Controller Click, Play und Ride ohne Zwift-Abo. Eine Geschichte für alle, die wissen wollen, warum 250 Watt am Trainer nicht immer 250 Watt an den Pedalen sind."
         }
       ],
       founderTitle: "Über den Gründer",
@@ -958,7 +962,7 @@ export const translations = {
       ],
       assetsNote: "Hochauflösende Originale und weiteres Material stellen wir auf Anfrage gerne bereit.",
       contactTitle: "Pressekontakt",
-      contactBody: "Schreib uns an info@endure-cycling.com. Journalistinnen und Journalisten erhalten auf Anfrage vollen Testzugang zu ENDURE inklusive aller Analyse-Features.",
+      contactBody: "Schreiben Sie uns an info@endure-cycling.com. Journalistinnen, Journalisten und Testerinnen bekommen einen Zugang mit allen Funktionen, meist noch am selben Tag.",
       backHome: "Zurück zur Startseite"
     },
     // Footer
