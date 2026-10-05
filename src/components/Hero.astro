@@ -72,6 +72,17 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
         <a id="download-btn-android" href={androidUrl} target="_blank" rel="noopener" aria-label={t.googlePlayBadgeAlt}>
           <img src={googlePlayBadge} alt={t.googlePlayBadgeAlt} class="h-12 w-auto" />
         </a>
+        <!-- Windows: planned, not downloadable yet. Styled like a store badge so the
+             platform line-up reads at a glance, but muted and without a link. -->
+        <div class="h-12 inline-flex items-center gap-2.5 pl-3.5 pr-4 rounded-lg border border-dashed border-slate-300 bg-slate-50 text-slate-700 select-none" aria-label={`${t.windowsBadgeTop} ${t.windowsBadgeLabel}`}>
+          <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 5.1l7.4-1v7.2H3V5.1zm8.3-1.1L21 2.6v8.7h-9.7V4zM3 12.7h7.4v7.2L3 18.9v-6.2zm8.3 0H21v8.7l-9.7-1.4v-7.3z"/>
+          </svg>
+          <span class="flex flex-col leading-none text-left">
+            <span class="text-[10px] uppercase tracking-wide text-slate-500">{t.windowsBadgeTop}</span>
+            <span class="text-base font-semibold mt-0.5">{t.windowsBadgeLabel}</span>
+          </span>
+        </div>
       </div>
       <ul class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-slate-700">
         {t.checks.map((check) => (

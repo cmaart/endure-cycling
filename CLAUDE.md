@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Static marketing site for **ENDURE**, an indoor cycling app available on iOS and Android (ENDURE Premium subscription with a 14-day free trial, no payment details needed). Desktop versions are not currently planned and the site must not mention them. Live at https://www.endure-cycling.com. Built with Astro 5 + Tailwind CSS v4, deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `master`.
+Static marketing site for **ENDURE**, an indoor cycling app available on iOS and Android (ENDURE Premium subscription with a 14-day free trial, no payment details needed). A Windows version is planned for release in 2026 and is shown as planned on the roadmap, FAQ, comparison table and press fact sheet; macOS is not planned and the site must not mention it. Live at https://www.endure-cycling.com. Built with Astro 5 + Tailwind CSS v4, deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `master`.
 
 **Copy rule: never present ENDURE as a one-person project.** No "built by one person", "solo developer", "he develops everything himself", "no team" anywhere on the site. It undermines trust in a paid subscription. Naming the founder on `/about` and `/press` is fine; the framing is "developed in Austria", company voice ("we", "ENDURE"). Build trust with product facts instead: store ratings, real quotes, trainer compatibility, update cadence.
 
@@ -30,7 +30,7 @@ Long-form SEO content lives in sibling files with the same en/de convention: `sr
 
 ### Per-platform availability
 
-`src/config.ts` exports `config.platforms` — an object keyed by `ios`, `android`, `windows`, `macos`, each with `{ available: boolean, url: string | null }`. Components (`Hero.astro`, `Roadmap.astro`) read these flags to render official store badges and green ✅ "Available" cards. Windows/macOS entries exist in the config but are not rendered anywhere (desktop is not currently planned); `Roadmap.astro` lists only `ios` and `android` in its `platformOrder`. Flip `available`, set `url`, and re-add the platform to `platformOrder` (plus its `roadmap` translation keys) at platform launch — do not hardcode availability state in components. The `PlatformKey` type is exported for typed iteration.
+`src/config.ts` exports `config.platforms` — an object keyed by `ios`, `android`, `windows`, `macos`, each with `{ available: boolean, url: string | null }`. Components (`Hero.astro`, `Roadmap.astro`) read these flags to render official store badges and green ✅ "Available" cards. `Roadmap.astro` lists `ios`, `android` and `windows` in its `platformOrder`; Windows renders as a 📅 "Planned for 2026" card because `available` is false. The `macos` entry exists in the config but is not rendered anywhere (not planned). At Windows launch flip `available`, set `url` and change its `roadmap` status keys; for a new platform also add it to `platformOrder` (plus its `roadmap` translation keys) — do not hardcode availability state in components. The `PlatformKey` type is exported for typed iteration.
 
 ### Store links carry install attribution
 
