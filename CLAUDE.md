@@ -54,6 +54,10 @@ Never hand-write an internal path. `src/utils/paths.ts` exports `localeHref(lang
 
 `src/layouts/Layout.astro` emits canonical URL, hreflang (`en`/`de`/`x-default`), Open Graph, Twitter Card, and a `SoftwareApplication` JSON-LD block. Pages should pass `title`/`description` props rather than redefining `<head>` content.
 
+### Social preview image
+
+`Layout.astro` points `og:image` / `twitter:image` at `public/assets/og/endure-og.jpg` (1200×630, with a `?v=N` cache-buster). The source is `scripts/og/og-image.html`: serve the repo root over HTTP, screenshot the page in a headless browser at 1200×630, then run `node scripts/og/compress.cjs`. Bump `v` in `Layout.astro` after every change, otherwise WhatsApp, iMessage and LinkedIn keep serving the old cached preview. Pages can pass their own absolute `ogImage` prop.
+
 ### Styling
 
 Tailwind v4 via the `@tailwindcss/vite` plugin. Global styles import in `src/layouts/Layout.astro` from `src/styles/global.css`. Inter font is loaded via `@fontsource/inter` imports in the layout frontmatter (weights 300–800).

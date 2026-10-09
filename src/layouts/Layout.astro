@@ -19,6 +19,8 @@ interface Props {
   lang?: 'en' | 'de';
   /** Short label for the breadcrumb trail. Falls back to the full title. */
   breadcrumb?: string;
+  /** Absolute URL of a page-specific social preview image (1200x630). */
+  ogImage?: string;
 }
 
 const { lang = (Astro.currentLocale as 'en' | 'de') || 'en' } = Astro.props;
@@ -45,8 +47,14 @@ const canonicalUrl = lang === 'de' ? deUrl : enUrl;
 // than one half of it pointing at a URL that does not exist.
 const isTranslated = hasGermanVersion(basePath);
 
-// Store logo + preferred OG image, referenced from meta + JSON-LD below.
-const ogImage = `${siteUrl}/assets/screenshots/endure-dashboard.min.jpeg`;
+// Social preview image (WhatsApp, iMessage, LinkedIn, X). The default is
+// rendered from scripts/og/og-image.html; bump the `v` query when the file
+// changes so link previews that cached the old image refetch it.
+const ogImage = Astro.props.ogImage ?? `${siteUrl}/assets/og/endure-og.jpg?v=2`;
+const ogImageAlt =
+  lang === 'de'
+    ? 'ENDURE App: Schluss mit FTP-Tests. Deine Fahrten sind der Test. Zwei Smartphones mit Ride-Screen und Tages-Dashboard.'
+    : 'ENDURE app: Stop doing FTP tests. Your rides are the test. Two phones showing the ride screen and the daily dashboard.';
 const orgLogo = `${siteUrl}/assets/ENDURE_lockup_exact_icon_4k.png`;
 // operatingSystem for schema, derived from actual availability so it never drifts.
 const availableOs = Object.entries(config.platforms)
@@ -136,6 +144,12 @@ const storeUrls = Object.values(config.platforms)
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:site_name" content="ENDURE" />
     <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_US'} />
     <meta property="og:locale:alternate" content={lang === 'de' ? 'en_US' : 'de_DE'} />
     
@@ -145,6 +159,7 @@ const storeUrls = Object.values(config.platforms)
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
     
     <!-- Fonts -->
     <!-- Fonts -->
