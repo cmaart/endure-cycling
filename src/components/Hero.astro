@@ -34,6 +34,29 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
 ---
 
 <header class="relative px-6 pt-16 pb-20 md:px-16 md:pt-20 md:pb-28 overflow-hidden">
+  <!--
+    Ambient ride footage behind the hero. Black and white, muted, looped, and
+    washed out by the overlay so the headline stays readable on the light theme.
+    The poster paints immediately; the 1.3 MB clip is only attached by the script
+    below on wide viewports without reduced-motion / save-data, so phones and
+    cautious users never download it.
+  -->
+  <div class="hero-bg absolute inset-0 pointer-events-none" aria-hidden="true">
+    <video
+      id="hero-video"
+      class="absolute inset-0 w-full h-full object-cover"
+      muted
+      loop
+      playsinline
+      autoplay
+      disablepictureinpicture
+      preload="none"
+      poster="/videos/hero-ride.webp"
+      data-src="/videos/hero-ride.mp4"
+    ></video>
+    <div class="hero-bg-overlay absolute inset-0"></div>
+  </div>
+
   <!-- Accent glow behind the headline -->
   <div class="absolute -top-56 left-1/2 -translate-x-1/2 w-[900px] h-[600px] pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(194,85,43,0.08),rgba(194,85,43,0.03)_45%,transparent_70%)]" aria-hidden="true"></div>
 
@@ -148,6 +171,27 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
 </header>
 
 <style>
+  /* Background footage. The poster is the clip's first frame, so the switch
+     from poster to playback is invisible. The overlay keeps the centre column
+     light for the headline and dissolves into the page background where the
+     phones sit. */
+  .hero-bg {
+    /* Roughly the clip's 16:9 at viewport width, so the rider (lower third of
+       the frame) lands behind the subline and CTA instead of being cropped
+       away when the box stretches to the full hero height. */
+    bottom: auto;
+    height: min(100%, max(640px, 60vw));
+  }
+  .hero-bg video {
+    filter: grayscale(1) contrast(1.05);
+    object-position: 50% 70%;
+  }
+  .hero-bg-overlay {
+    background:
+      radial-gradient(ellipse 60% 55% at 50% 38%, rgba(252, 252, 251, 0.62), rgba(252, 252, 251, 0.2) 70%, transparent 100%),
+      linear-gradient(to bottom, rgba(252, 252, 251, 0.38) 0%, rgba(252, 252, 251, 0.42) 45%, rgba(252, 252, 251, 0.85) 72%, #FCFCFB 100%);
+  }
+
   /* Slot transforms live on the outer wrapper; the float keyframes animate the
      inner .phone-frame, so the two transforms never fight. */
   .hero-phone {
@@ -203,6 +247,19 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
 </style>
 
 <script>
+  // Background clip: attach the source only where it is worth the bytes.
+  const video = document.getElementById('hero-video') as HTMLVideoElement | null;
+  if (video) {
+    const wide = window.matchMedia('(min-width: 768px)').matches;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true;
+    const src = video.dataset.src;
+    if (wide && !reduced && !saveData && src) {
+      video.src = src;
+      video.play().catch(() => { /* autoplay blocked: poster stays */ });
+    }
+  }
+
   const stage = document.getElementById('phone-stage');
 
   if (stage) {
