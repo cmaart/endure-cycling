@@ -37,9 +37,9 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
   <!--
     Ambient ride footage behind the hero. Black and white, muted, looped, and
     washed out by the overlay so the headline stays readable on the light theme.
-    The poster paints immediately; the 1.3 MB clip is only attached by the script
-    below on wide viewports without reduced-motion / save-data, so phones and
-    cautious users never download it.
+    The poster paints immediately; the clip is attached by the script below,
+    1.3 MB on wide viewports and a 0.6 MB 640p variant on phones. Users with
+    reduced-motion or save-data keep the poster only.
   -->
   <div class="hero-bg absolute inset-0 pointer-events-none" aria-hidden="true">
     <video
@@ -53,6 +53,7 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
       preload="none"
       poster="/videos/hero-ride.webp"
       data-src="/videos/hero-ride.mp4"
+      data-src-mobile="/videos/hero-ride-mobile.mp4"
     ></video>
     <div class="hero-bg-overlay absolute inset-0"></div>
   </div>
@@ -247,14 +248,14 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
 </style>
 
 <script>
-  // Background clip: attach the source only where it is worth the bytes.
+  // Background clip: pick the source by viewport, skip it where motion or data is unwanted.
   const video = document.getElementById('hero-video') as HTMLVideoElement | null;
   if (video) {
     const wide = window.matchMedia('(min-width: 768px)').matches;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true;
-    const src = video.dataset.src;
-    if (wide && !reduced && !saveData && src) {
+    const src = wide ? video.dataset.src : video.dataset.srcMobile;
+    if (!reduced && !saveData && src) {
       video.src = src;
       video.play().catch(() => { /* autoplay blocked: poster stays */ });
     }
