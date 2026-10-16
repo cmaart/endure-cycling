@@ -28,7 +28,7 @@ export const translations = {
       subline: "ENDURE estimates FTP and VO2max from your normal rides, indoor and outdoor. It controls your smart trainer in ERG and SIM mode and has you riding in under 30 seconds.",
       // Rendered as an H2 under the subline: the headline carries the claim, this
       // line carries the terms riders actually search for.
-      seoLine: "Indoor cycling app for smart and turbo trainers on iOS & Android",
+      seoLine: "Indoor cycling app for smart and turbo trainers on iOS, Android & Windows",
       secondary: "Frequent updates, built together with the cycling community.",
       appStoreBadgeAlt: "Download on the App Store",
       googlePlayBadgeAlt: "Get it on Google Play",
@@ -547,7 +547,7 @@ export const translations = {
       subline: "ENDURE schätzt FTP und VO2max aus deinen normalen Fahrten, drinnen wie draußen. Die App steuert deinen Smart Trainer in ERG und SIM, und du sitzt in unter 30 Sekunden am Rad.",
       // Als H2 unter der Subline gerendert: die Headline trägt den Claim, diese
       // Zeile trägt die Begriffe, mit denen tatsächlich gesucht wird.
-      seoLine: "Indoor-Cycling- und Rollentrainer-App für iOS & Android",
+      seoLine: "Indoor-Cycling- und Rollentrainer-App für iOS, Android & Windows",
       secondary: "Laufend neue Updates, entwickelt gemeinsam mit der Community.",
       appStoreBadgeAlt: "Laden im App Store",
       googlePlayBadgeAlt: "Jetzt bei Google Play",

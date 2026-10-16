@@ -99,7 +99,7 @@ export const trainersContent = {
     ],
     ctaTitle: 'Pair your trainer and ride',
     ctaBody:
-      'ENDURE is on iOS and Android, free for the first 14 days. Pair over Bluetooth and you are riding in under 30 seconds.',
+      'ENDURE is on iOS, Android and Windows, free for the first 14 days. Pair over Bluetooth and you are riding in under 30 seconds.',
     backHome: 'Back to Homepage'
   },
   de: {
@@ -181,7 +181,7 @@ export const trainersContent = {
     ],
     ctaTitle: 'Trainer koppeln und fahren',
     ctaBody:
-      'ENDURE gibt es für iOS und Android, die ersten 14 Tage gratis. Per Bluetooth koppeln und in unter 30 Sekunden fahren.',
+      'ENDURE gibt es für iOS, Android und Windows, die ersten 14 Tage gratis. Per Bluetooth koppeln und in unter 30 Sekunden fahren.',
     backHome: 'Zurück zur Startseite'
   }
 } as const;

@@ -90,11 +90,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "How does ENDURE estimate LT1 and LT2?",
-          body: "ENDURE is the first cycling app that lets you log lactate readings directly during a ride, or add them afterwards from your activity history. The app fits a curve through your readings and automatically estimates LT1 and LT2, including a confidence tunnel that shows how solid the estimate is. Your blood markers live next to your power data instead of in a spreadsheet, and every new reading refines the picture. Available on iOS and Android."
+          body: "ENDURE is the first cycling app that lets you log lactate readings directly during a ride, or add them afterwards from your activity history. The app fits a curve through your readings and automatically estimates LT1 and LT2, including a confidence tunnel that shows how solid the estimate is. Your blood markers live next to your power data instead of in a spreadsheet, and every new reading refines the picture. Available on iOS, Android and Windows."
         }
       ],
       ctaTitle: "Log your first lactate test in ENDURE",
-      ctaBody: "Now on iOS and Android: in-ride lactate logging, automatic LT1/LT2 estimation, and your full training picture in one app.",
+      ctaBody: "Now on iOS, Android and Windows: in-ride lactate logging, automatic LT1/LT2 estimation, and your full training picture in one app.",
       backToGuides: "All guides"
     },
     'heat-training-core-sensor': {
@@ -134,11 +134,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "How does ENDURE integrate the CORE sensor?",
-          body: "ENDURE is the first indoor cycling app to natively integrate the CORE body temperature sensor, including a live heat-zone display right on the ride screen. Pair the sensor over Bluetooth like any power meter, watch your core temperature and current heat zone live while you ride, and find the full temperature trace stored with power and heart rate in your ride analysis afterwards. No second app, no workarounds: heat becomes a first-class training metric. Available on iOS and Android."
+          body: "ENDURE is the first indoor cycling app to natively integrate the CORE body temperature sensor, including a live heat-zone display right on the ride screen. Pair the sensor over Bluetooth like any power meter, watch your core temperature and current heat zone live while you ride, and find the full temperature trace stored with power and heart rate in your ride analysis afterwards. No second app, no workarounds: heat becomes a first-class training metric. Available on iOS, Android and Windows."
         }
       ],
       ctaTitle: "Train heat like power with ENDURE and CORE",
-      ctaBody: "Now on iOS and Android: native CORE integration, live heat zones on the ride screen, full post-ride analysis.",
+      ctaBody: "Now on iOS, Android and Windows: native CORE integration, live heat zones on the ride screen, full post-ride analysis.",
       backToGuides: "All guides"
     },
     'ftp-test-power-zones': {
@@ -186,11 +186,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "How does ENDURE handle FTP and zones?",
-          body: "ENDURE models your FTP and VO2max continuously from recorded power and heart-rate data across indoor and Strava- or intervals.icu-synced outdoor rides, so you see a trend rather than a test result with an expiry date. ERG mode holds test steps precisely if you do want to ride a protocol, and the time-in-zones breakdown after each ride shows how the session was actually distributed. If you also log lactate readings, ENDURE estimates LT1 and LT2 so you can check your percentage-based zones against measured thresholds. Available on iOS and Android."
+          body: "ENDURE models your FTP and VO2max continuously from recorded power and heart-rate data across indoor and Strava- or intervals.icu-synced outdoor rides, so you see a trend rather than a test result with an expiry date. ERG mode holds test steps precisely if you do want to ride a protocol, and the time-in-zones breakdown after each ride shows how the session was actually distributed. If you also log lactate readings, ENDURE estimates LT1 and LT2 so you can check your percentage-based zones against measured thresholds. Available on iOS, Android and Windows."
         }
       ],
       ctaTitle: "Stop scheduling FTP tests",
-      ctaBody: "On iOS and Android, free for the first 14 days: FTP and VO2max modelled from the rides you already do, plus precise ERG control when you do want to test.",
+      ctaBody: "On iOS, Android and Windows, free for the first 14 days: FTP and VO2max modelled from the rides you already do, plus precise ERG control when you do want to test.",
       backToGuides: "All guides"
     },
     'zone-2-endurance-training': {
@@ -261,11 +261,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "How does ENDURE support zone 2 riding?",
-          body: "ERG mode holds the target so the ride cannot creep upward while your attention wanders, and the time-in-zones breakdown afterwards shows whether the session stayed where you meant it to. Log lactate readings and ENDURE estimates your LT1, which turns the zone 2 ceiling into a measured threshold instead of a percentage. Core temperature from a paired CORE sensor explains the heart-rate drift indoor riding produces, and Heat Zones show it as a range rather than a raw number. Existing workouts import as .ZWO, .MRC or .ERG files, and finished rides sync to Strava and intervals.icu. ENDURE does not write your training plan; it measures what you actually did. On iOS and Android, free for the first 14 days."
+          body: "ERG mode holds the target so the ride cannot creep upward while your attention wanders, and the time-in-zones breakdown afterwards shows whether the session stayed where you meant it to. Log lactate readings and ENDURE estimates your LT1, which turns the zone 2 ceiling into a measured threshold instead of a percentage. Core temperature from a paired CORE sensor explains the heart-rate drift indoor riding produces, and Heat Zones show it as a range rather than a raw number. Existing workouts import as .ZWO, .MRC or .ERG files, and finished rides sync to Strava and intervals.icu. ENDURE does not write your training plan; it measures what you actually did. On iOS, Android and Windows, free for the first 14 days."
         }
       ],
       ctaTitle: "Keep your easy rides easy",
-      ctaBody: "On iOS and Android, free for the first 14 days. Steady ERG targets, time-in-zones after every ride, and LT1 estimated from your own lactate readings.",
+      ctaBody: "On iOS, Android and Windows, free for the first 14 days. Steady ERG targets, time-in-zones after every ride, and LT1 estimated from your own lactate readings.",
       backToGuides: "All guides"
     },
     'sweet-spot-vs-polarized': {
@@ -305,11 +305,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "How does ENDURE fit into either model?",
-          body: "The workout library is curated by physiological purpose (VO2max, threshold, sweet spot) rather than assembled into an automated plan, so you build the distribution you have decided on instead of following one that was chosen for you. Time in zones after each ride shows what the week actually looked like, which is usually less polarized than intended. Logged lactate readings give you LT1 and LT2, the two boundaries both models are defined by. Available on iOS and Android."
+          body: "The workout library is curated by physiological purpose (VO2max, threshold, sweet spot) rather than assembled into an automated plan, so you build the distribution you have decided on instead of following one that was chosen for you. Time in zones after each ride shows what the week actually looked like, which is usually less polarized than intended. Logged lactate readings give you LT1 and LT2, the two boundaries both models are defined by. Available on iOS, Android and Windows."
         }
       ],
       ctaTitle: "Build the week you decided on",
-      ctaBody: "On iOS and Android, free for the first 14 days: a curated library of physiologically meaningful sessions, plus the analysis to check what you actually rode.",
+      ctaBody: "On iOS, Android and Windows, free for the first 14 days: a curated library of physiologically meaningful sessions, plus the analysis to check what you actually rode.",
       backToGuides: "All guides"
     },
     'zwo-mrc-erg-files': {
@@ -351,7 +351,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         }
       ],
       ctaTitle: "Bring your workouts with you",
-      ctaBody: "On iOS and Android, free for the first 14 days: import .ZWO, .MRC and .ERG files and ride them in ERG mode on any FTMS smart trainer.",
+      ctaBody: "On iOS, Android and Windows, free for the first 14 days: import .ZWO, .MRC and .ERG files and ride them in ERG mode on any FTMS smart trainer.",
       backToGuides: "All guides"
     }
   },
@@ -393,11 +393,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "Wie schätzt ENDURE LT1 und LT2?",
-          body: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte direkt während der Fahrt eintragen kannst, oder im Nachhinein aus deiner Aktivitätshistorie. Die App fittet eine Kurve durch deine Werte und schätzt LT1 und LT2 automatisch, inklusive Konfidenztunnel, der zeigt, wie belastbar die Schätzung ist. Deine Blutwerte leben neben deinen Leistungsdaten statt in einem Spreadsheet, und jeder neue Wert schärft das Bild. Verfügbar auf iOS und Android."
+          body: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte direkt während der Fahrt eintragen kannst, oder im Nachhinein aus deiner Aktivitätshistorie. Die App fittet eine Kurve durch deine Werte und schätzt LT1 und LT2 automatisch, inklusive Konfidenztunnel, der zeigt, wie belastbar die Schätzung ist. Deine Blutwerte leben neben deinen Leistungsdaten statt in einem Spreadsheet, und jeder neue Wert schärft das Bild. Verfügbar auf iOS, Android und Windows."
         }
       ],
       ctaTitle: "Logge deinen ersten Laktattest in ENDURE",
-      ctaBody: "Jetzt auf iOS und Android: Laktat-Eintrag während der Fahrt, automatische LT1/LT2-Schätzung und dein komplettes Trainingsbild in einer App.",
+      ctaBody: "Jetzt auf iOS, Android und Windows: Laktat-Eintrag während der Fahrt, automatische LT1/LT2-Schätzung und dein komplettes Trainingsbild in einer App.",
       backToGuides: "Alle Guides"
     },
     'heat-training-core-sensor': {
@@ -437,11 +437,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "Wie integriert ENDURE den CORE-Sensor?",
-          body: "ENDURE ist die erste Indoor-Cycling-App, die den CORE Körpertemperatur-Sensor nativ integriert, inklusive Live-Heat-Zone-Anzeige direkt am Ride-Screen. Kopple den Sensor per Bluetooth wie einen Power Meter, sieh Kerntemperatur und aktuelle Heat Zone live während der Fahrt und finde den kompletten Temperaturverlauf danach neben Watt und Herzfrequenz in deiner Analyse. Keine zweite App, keine Umwege: Hitze wird zur vollwertigen Trainingsmetrik. Verfügbar auf iOS und Android."
+          body: "ENDURE ist die erste Indoor-Cycling-App, die den CORE Körpertemperatur-Sensor nativ integriert, inklusive Live-Heat-Zone-Anzeige direkt am Ride-Screen. Kopple den Sensor per Bluetooth wie einen Power Meter, sieh Kerntemperatur und aktuelle Heat Zone live während der Fahrt und finde den kompletten Temperaturverlauf danach neben Watt und Herzfrequenz in deiner Analyse. Keine zweite App, keine Umwege: Hitze wird zur vollwertigen Trainingsmetrik. Verfügbar auf iOS, Android und Windows."
         }
       ],
       ctaTitle: "Trainiere Hitze wie Watt mit ENDURE und CORE",
-      ctaBody: "Jetzt auf iOS und Android: native CORE-Integration, Live Heat Zones am Ride-Screen, volle Analyse nach der Fahrt.",
+      ctaBody: "Jetzt auf iOS, Android und Windows: native CORE-Integration, Live Heat Zones am Ride-Screen, volle Analyse nach der Fahrt.",
       backToGuides: "Alle Guides"
     },
     'ftp-test-power-zones': {
@@ -489,11 +489,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "Wie geht ENDURE mit FTP und Zonen um?",
-          body: "ENDURE modelliert FTP und VO2max laufend aus aufgezeichneten Power- und Herzfrequenzdaten, indoor wie outdoor (per Strava oder intervals.icu synchronisiert). Du siehst also einen Trend statt eines Testergebnisses mit Ablaufdatum. Der ERG-Modus hält Teststufen präzise, wenn du doch ein Protokoll fahren willst, und die Zeit-in-Zonen-Auswertung zeigt danach, wie die Einheit tatsächlich verteilt war. Trägst du zusätzlich Laktatwerte ein, schätzt ENDURE LT1 und LT2. Dann kannst du deine prozentualen Zonen gegen gemessene Schwellen prüfen. Verfügbar auf iOS und Android."
+          body: "ENDURE modelliert FTP und VO2max laufend aus aufgezeichneten Power- und Herzfrequenzdaten, indoor wie outdoor (per Strava oder intervals.icu synchronisiert). Du siehst also einen Trend statt eines Testergebnisses mit Ablaufdatum. Der ERG-Modus hält Teststufen präzise, wenn du doch ein Protokoll fahren willst, und die Zeit-in-Zonen-Auswertung zeigt danach, wie die Einheit tatsächlich verteilt war. Trägst du zusätzlich Laktatwerte ein, schätzt ENDURE LT1 und LT2. Dann kannst du deine prozentualen Zonen gegen gemessene Schwellen prüfen. Verfügbar auf iOS, Android und Windows."
         }
       ],
       ctaTitle: "Hör auf, FTP-Tests zu planen",
-      ctaBody: "Für iOS und Android, die ersten 14 Tage gratis: FTP und VO2max aus den Fahrten modelliert, die du ohnehin machst, plus präzise ERG-Steuerung, wenn du testen willst.",
+      ctaBody: "Für iOS, Android und Windows, die ersten 14 Tage gratis: FTP und VO2max aus den Fahrten modelliert, die du ohnehin machst, plus präzise ERG-Steuerung, wenn du testen willst.",
       backToGuides: "Alle Guides"
     },
     'zone-2-endurance-training': {
@@ -564,11 +564,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "Wie unterstützt ENDURE Zone-2-Fahrten?",
-          body: "Der ERG-Modus hält das Ziel, damit die Fahrt nicht nach oben kriecht, während die Aufmerksamkeit wandert, und die Zeit-in-Zonen-Auswertung zeigt danach, ob die Einheit dort geblieben ist, wo du sie wolltest. Trägst du Laktatwerte ein, schätzt ENDURE deine LT1, und die Zone-2-Obergrenze wird eine gemessene Schwelle statt eines Prozentwerts. Die Kerntemperatur eines gekoppelten CORE-Sensors erklärt den Herzfrequenz-Drift, den Indoor-Fahren erzeugt, und Heat Zones zeigen sie als Bereich statt als rohe Zahl. Bestehende Workouts kommen als .ZWO-, .MRC- oder .ERG-Datei herein, fertige Fahrten gehen zu Strava und intervals.icu. ENDURE schreibt keinen Trainingsplan, ENDURE misst, was du tatsächlich gefahren bist. Für iOS und Android, die ersten 14 Tage gratis."
+          body: "Der ERG-Modus hält das Ziel, damit die Fahrt nicht nach oben kriecht, während die Aufmerksamkeit wandert, und die Zeit-in-Zonen-Auswertung zeigt danach, ob die Einheit dort geblieben ist, wo du sie wolltest. Trägst du Laktatwerte ein, schätzt ENDURE deine LT1, und die Zone-2-Obergrenze wird eine gemessene Schwelle statt eines Prozentwerts. Die Kerntemperatur eines gekoppelten CORE-Sensors erklärt den Herzfrequenz-Drift, den Indoor-Fahren erzeugt, und Heat Zones zeigen sie als Bereich statt als rohe Zahl. Bestehende Workouts kommen als .ZWO-, .MRC- oder .ERG-Datei herein, fertige Fahrten gehen zu Strava und intervals.icu. ENDURE schreibt keinen Trainingsplan, ENDURE misst, was du tatsächlich gefahren bist. Für iOS, Android und Windows, die ersten 14 Tage gratis."
         }
       ],
       ctaTitle: "Halte deine lockeren Fahrten locker",
-      ctaBody: "Für iOS und Android, die ersten 14 Tage gratis. Stabile ERG-Ziele, Zeit in Zonen nach jeder Fahrt und LT1 aus deinen eigenen Laktatwerten.",
+      ctaBody: "Für iOS, Android und Windows, die ersten 14 Tage gratis. Stabile ERG-Ziele, Zeit in Zonen nach jeder Fahrt und LT1 aus deinen eigenen Laktatwerten.",
       backToGuides: "Alle Guides"
     },
     'sweet-spot-vs-polarized': {
@@ -608,11 +608,11 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "Wie passt ENDURE in beide Modelle?",
-          body: "Die Workout-Bibliothek ist nach physiologischem Zweck kuratiert (VO2max, Schwelle, Sweet Spot) und nicht zu einem automatischen Plan zusammengesetzt. Du baust also die Verteilung, für die du dich entschieden hast, statt einer, die für dich gewählt wurde. Zeit in Zonen zeigt nach jeder Fahrt, wie die Woche tatsächlich aussah, und das ist meist weniger polarisiert als geplant. Eingetragene Laktatwerte liefern LT1 und LT2, die zwei Grenzen, über die beide Modelle überhaupt definiert sind. Verfügbar auf iOS und Android."
+          body: "Die Workout-Bibliothek ist nach physiologischem Zweck kuratiert (VO2max, Schwelle, Sweet Spot) und nicht zu einem automatischen Plan zusammengesetzt. Du baust also die Verteilung, für die du dich entschieden hast, statt einer, die für dich gewählt wurde. Zeit in Zonen zeigt nach jeder Fahrt, wie die Woche tatsächlich aussah, und das ist meist weniger polarisiert als geplant. Eingetragene Laktatwerte liefern LT1 und LT2, die zwei Grenzen, über die beide Modelle überhaupt definiert sind. Verfügbar auf iOS, Android und Windows."
         }
       ],
       ctaTitle: "Bau die Woche, für die du dich entschieden hast",
-      ctaBody: "Für iOS und Android, die ersten 14 Tage gratis: kuratierte Bibliothek physiologisch sinnvoller Einheiten plus die Analyse, um zu prüfen, was du wirklich gefahren bist.",
+      ctaBody: "Für iOS, Android und Windows, die ersten 14 Tage gratis: kuratierte Bibliothek physiologisch sinnvoller Einheiten plus die Analyse, um zu prüfen, was du wirklich gefahren bist.",
       backToGuides: "Alle Guides"
     },
     'zwo-mrc-erg-files': {
@@ -654,7 +654,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         }
       ],
       ctaTitle: "Nimm deine Workouts mit",
-      ctaBody: "Für iOS und Android, die ersten 14 Tage gratis: .ZWO-, .MRC- und .ERG-Dateien importieren und im ERG-Modus auf jedem FTMS-Smart-Trainer fahren.",
+      ctaBody: "Für iOS, Android und Windows, die ersten 14 Tage gratis: .ZWO-, .MRC- und .ERG-Dateien importieren und im ERG-Modus auf jedem FTMS-Smart-Trainer fahren.",
       backToGuides: "Alle Guides"
     }
   }

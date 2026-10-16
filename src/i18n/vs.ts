@@ -7,7 +7,7 @@ export const vsContent = {
   en: {
     zwift: {
       seoTitle: "Zwift Alternative: ENDURE, the Precision Indoor Cycling App",
-      seoDescription: "Looking for a Zwift alternative? ENDURE on iOS and Android, 14 days free to try: ERG trainer control, FTP & VO2max trends, lactate LT1/LT2, CORE heat zones, and your Zwift Click v1 keeps working.",
+      seoDescription: "Looking for a Zwift alternative? ENDURE on iOS, Android and Windows, 14 days free to try: ERG trainer control, FTP & VO2max trends, lactate LT1/LT2, CORE heat zones, and your Zwift Click v1 keeps working.",
       breadcrumb: "Zwift alternative",
       h1: "ENDURE: the Zwift alternative for precision training",
       subtitle: "Looking to switch? Here is the honest comparison.",
@@ -20,7 +20,7 @@ export const vsContent = {
       rows: [
         { feature: "Core focus", endure: "Precision training & physiological analysis", other: "Virtual worlds, racing & social riding" },
         { feature: "Price", endure: "Affordable subscription, monthly or annual, with a 14-day free trial", other: "Paid monthly subscription" },
-        { feature: "Platforms", endure: "iOS & Android", other: "PC, Mac, iOS, Android, Apple TV" },
+        { feature: "Platforms", endure: "iOS, Android & Windows", other: "PC, Mac, iOS, Android, Apple TV" },
         { feature: "Smart trainer control (ERG)", endure: "Yes, over Bluetooth with smart-smoothing", other: "Yes" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verified): ERG target & resistance from the bars, no simulated cassette", other: "Yes, simulated gears via Zwift Cog & Click" },
         { feature: "Structured workouts", endure: "Curated physiological library + .ZWO/.MRC/.ERG import", other: "Large library + custom workouts" },
@@ -75,14 +75,14 @@ export const vsContent = {
           a: "Yes. ENDURE controls smart trainers over standard Bluetooth in ERG mode, and connects power meters and heart-rate monitors, the same hardware you use with Zwift. A Zwift Click v1 works too: it pairs like any sensor and controls your ERG target and trainer resistance from the handlebar, though ENDURE does not simulate a cassette the way Zwift does."
         }
       ],
-      ctaTitle: "Try ENDURE free for 14 days on iOS & Android",
+      ctaTitle: "Try ENDURE free for 14 days on iOS, Android & Windows",
       ctaBody: "Download ENDURE on iOS or Android, connect your trainer, and see your FTP, VO2max, lactate and heat metrics in one place. The first 14 days cost nothing.",
       disclaimer: "Zwift is a trademark of Zwift, Inc. This comparison reflects publicly available information as of July 2026 and describes ENDURE's current feature set. Check both vendors for current details.",
       backHome: "Back to Homepage"
     },
     trainerroad: {
       seoTitle: "TrainerRoad Alternative: ENDURE with Lactate & Heat Zones",
-      seoDescription: "Looking for a TrainerRoad alternative? ENDURE on iOS and Android, 14 days free to try: lactate LT1/LT2, native CORE heat zones, FTP & VO2max trends, and a curated library instead of an algorithm.",
+      seoDescription: "Looking for a TrainerRoad alternative? ENDURE on iOS, Android and Windows, 14 days free to try: lactate LT1/LT2, native CORE heat zones, FTP & VO2max trends, and a curated library instead of an algorithm.",
       breadcrumb: "TrainerRoad alternative",
       h1: "ENDURE: the TrainerRoad alternative for riders who want the data",
       subtitle: "Looking to switch? Here is the honest comparison.",
@@ -95,7 +95,7 @@ export const vsContent = {
       rows: [
         { feature: "Core focus", endure: "Precision training & physiological analysis", other: "Adaptive, algorithm-generated training plans" },
         { feature: "Price", endure: "Affordable subscription, monthly or annual, with a 14-day free trial", other: "Paid monthly/annual subscription" },
-        { feature: "Platforms", endure: "iOS & Android", other: "PC, Mac, iOS, Android" },
+        { feature: "Platforms", endure: "iOS, Android & Windows", other: "PC, Mac, iOS, Android" },
         { feature: "Smart trainer control (ERG)", endure: "Yes, over Bluetooth with smart-smoothing", other: "Yes" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verified): ERG target & resistance from the bars", other: "Not available" },
         { feature: "Training plans", endure: "Curated workout library (you stay in charge)", other: "Adaptive plans built by algorithms" },
@@ -147,7 +147,7 @@ export const vsContent = {
           a: "ENDURE. It is the first cycling app with in-ride lactate logging and automatic LT1/LT2 estimation, and the first with native CORE body temperature integration including live heat zones. TrainerRoad offers neither natively."
         }
       ],
-      ctaTitle: "Try ENDURE free for 14 days on iOS & Android",
+      ctaTitle: "Try ENDURE free for 14 days on iOS, Android & Windows",
       ctaBody: "Download ENDURE on iOS or Android, connect your trainer, and see your FTP, VO2max, lactate and heat metrics in one place.",
       disclaimer: "TrainerRoad is a trademark of TrainerRoad LLC. This comparison reflects publicly available information as of July 2026 and describes ENDURE's current feature set. Check both vendors for current details.",
       backHome: "Back to Homepage"
@@ -156,7 +156,7 @@ export const vsContent = {
   de: {
     zwift: {
       seoTitle: "ENDURE als Zwift Alternative: Präzision statt virtueller Welt",
-      seoDescription: "Du suchst eine Zwift Alternative? ENDURE für iOS und Android, 14 Tage gratis testen: ERG-Steuerung für Rollentrainer, FTP- & VO2max-Trends, Laktat LT1/LT2, CORE Heat Zones, und dein Zwift Click v1 läuft weiter.",
+      seoDescription: "Du suchst eine Zwift Alternative? ENDURE für iOS, Android und Windows, 14 Tage gratis testen: ERG-Steuerung für Rollentrainer, FTP- & VO2max-Trends, Laktat LT1/LT2, CORE Heat Zones, und dein Zwift Click v1 läuft weiter.",
       breadcrumb: "Zwift Alternative",
       h1: "ENDURE: die Zwift Alternative für präzises Training",
       subtitle: "Du überlegst zu wechseln? Hier der ehrliche Vergleich.",
@@ -169,7 +169,7 @@ export const vsContent = {
       rows: [
         { feature: "Kernfokus", endure: "Präzises Training & physiologische Analyse", other: "Virtuelle Welten, Rennen & Social Riding" },
         { feature: "Preis", endure: "Preiswertes Abo, monatlich oder jährlich, 14 Tage gratis testen", other: "Kostenpflichtiges Monatsabo" },
-        { feature: "Plattformen", endure: "iOS & Android", other: "PC, Mac, iOS, Android, Apple TV" },
+        { feature: "Plattformen", endure: "iOS, Android & Windows", other: "PC, Mac, iOS, Android, Apple TV" },
         { feature: "Smart-Trainer-Steuerung (ERG)", endure: "Ja, über Bluetooth mit Smart-Smoothing", other: "Ja" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verifiziert): ERG-Ziel & Widerstand vom Lenker, ohne simulierte Kassette", other: "Ja, simulierte Gänge über Zwift Cog & Click" },
         { feature: "Strukturierte Workouts", endure: "Kuratierte physiologische Bibliothek + .ZWO/.MRC/.ERG-Import", other: "Große Bibliothek + eigene Workouts" },
@@ -224,14 +224,14 @@ export const vsContent = {
           a: "Ja. ENDURE steuert Smart Trainer über Standard-Bluetooth im ERG-Modus und verbindet Power Meter und Herzfrequenz-Sensoren, also dieselbe Hardware, die du mit Zwift nutzt. Ein Zwift Click v1 funktioniert ebenfalls: er verbindet sich wie jeder Sensor und steuert ERG-Ziel und Trainer-Widerstand vom Lenker, wobei ENDURE keine Kassette simuliert wie Zwift."
         }
       ],
-      ctaTitle: "Probier ENDURE 14 Tage gratis auf iOS & Android",
+      ctaTitle: "Probier ENDURE 14 Tage gratis auf iOS, Android & Windows",
       ctaBody: "Lade ENDURE für iOS oder Android, verbinde deinen Trainer und sieh FTP, VO2max, Laktat und Heat-Metriken an einem Ort. Die ersten 14 Tage kosten nichts.",
       disclaimer: "Zwift ist eine Marke von Zwift, Inc. Dieser Vergleich basiert auf öffentlich verfügbaren Informationen (Stand Juli 2026) und beschreibt den aktuellen Funktionsumfang von ENDURE. Aktuelle Details bitte bei beiden Anbietern prüfen.",
       backHome: "Zurück zur Startseite"
     },
     trainerroad: {
       seoTitle: "TrainerRoad Alternative: ENDURE mit Laktat & Heat Zones",
-      seoDescription: "Du suchst eine TrainerRoad Alternative? ENDURE für iOS und Android, 14 Tage gratis testen: Laktat LT1/LT2, native CORE Heat Zones, FTP- & VO2max-Trends und eine kuratierte Bibliothek statt Algorithmus.",
+      seoDescription: "Du suchst eine TrainerRoad Alternative? ENDURE für iOS, Android und Windows, 14 Tage gratis testen: Laktat LT1/LT2, native CORE Heat Zones, FTP- & VO2max-Trends und eine kuratierte Bibliothek statt Algorithmus.",
       breadcrumb: "TrainerRoad Alternative",
       h1: "ENDURE: die TrainerRoad Alternative für alle, die die Daten wollen",
       subtitle: "Du überlegst zu wechseln? Hier der ehrliche Vergleich.",
@@ -244,7 +244,7 @@ export const vsContent = {
       rows: [
         { feature: "Kernfokus", endure: "Präzises Training & physiologische Analyse", other: "Adaptive, algorithmisch generierte Trainingspläne" },
         { feature: "Preis", endure: "Preiswertes Abo, monatlich oder jährlich, 14 Tage gratis testen", other: "Kostenpflichtiges Monats-/Jahresabo" },
-        { feature: "Plattformen", endure: "iOS & Android", other: "PC, Mac, iOS, Android" },
+        { feature: "Plattformen", endure: "iOS, Android & Windows", other: "PC, Mac, iOS, Android" },
         { feature: "Smart-Trainer-Steuerung (ERG)", endure: "Ja, über Bluetooth mit Smart-Smoothing", other: "Ja" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verifiziert): ERG-Ziel & Widerstand vom Lenker", other: "Nicht verfügbar" },
         { feature: "Trainingspläne", endure: "Kuratierte Workout-Bibliothek (du bleibst am Steuer)", other: "Adaptive Pläne vom Algorithmus" },
@@ -296,7 +296,7 @@ export const vsContent = {
           a: "ENDURE. Es ist die erste Cycling-App mit Laktat-Eintrag während der Fahrt und automatischer LT1/LT2-Schätzung und die erste mit nativer CORE-Körpertemperatur-Integration inklusive Live Heat Zones. TrainerRoad bietet beides nativ nicht."
         }
       ],
-      ctaTitle: "Probier ENDURE 14 Tage gratis auf iOS & Android",
+      ctaTitle: "Probier ENDURE 14 Tage gratis auf iOS, Android & Windows",
       ctaBody: "Lade ENDURE für iOS oder Android, verbinde deinen Trainer und sieh FTP, VO2max, Laktat und Heat-Metriken an einem Ort.",
       disclaimer: "TrainerRoad ist eine Marke von TrainerRoad LLC. Dieser Vergleich basiert auf öffentlich verfügbaren Informationen (Stand Juli 2026) und beschreibt den aktuellen Funktionsumfang von ENDURE. Aktuelle Details bitte bei beiden Anbietern prüfen.",
       backHome: "Zurück zur Startseite"
