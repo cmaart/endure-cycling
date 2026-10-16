@@ -12,8 +12,8 @@ export const config = {
       url: 'https://play.google.com/store/apps/details?id=com.cmart.endure',
     },
     windows: {
-      available: false,
-      url: null,
+      available: true,
+      url: 'https://apps.microsoft.com/detail/9P3LBDT9B17W',
     },
     macos: {
       available: false,

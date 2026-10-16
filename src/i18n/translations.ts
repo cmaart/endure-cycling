@@ -19,7 +19,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      badge: "Now on iOS & Android · 14 days free",
+      badge: "Now on iOS, Android & Windows · 14 days free",
       // Check marks under the store badges
       checks: ["14 days free", "No payment details", "Ends on its own"],
       tagline: "Precision over gimmicks",
@@ -32,9 +32,7 @@ export const translations = {
       secondary: "Frequent updates, built together with the cycling community.",
       appStoreBadgeAlt: "Download on the App Store",
       googlePlayBadgeAlt: "Get it on Google Play",
-      // Windows chip next to the store badges (planned, not linked yet)
-      windowsBadgeTop: "Coming 2026",
-      windowsBadgeLabel: "Windows",
+      microsoftStoreBadgeAlt: "Get it from Microsoft",
       // Aria-label for the carousel phones and their dots; {name} is an appScreens label.
       screenshotAction: "Show {name} screenshot"
     },
@@ -270,7 +268,7 @@ export const translations = {
       ios: "iOS",
       iosStatus: "Available",
       windows: "Windows",
-      windowsStatus: "Planned for 2026",
+      windowsStatus: "Available",
       
       communityTitle: "We're Building This Together",
       communityText: "Feature requests are welcome and feed straight into the update cycle. Your feedback shapes ENDURE.",
@@ -286,7 +284,7 @@ export const translations = {
       valueLabel: "What you get",
       rows: [
         { feature: "Price", value: "Try free for 14 days, no payment details. Then ENDURE Premium for {monthly} / month or {annual} / year", highlight: true },
-        { feature: "Platforms", value: "iOS & Android, Windows planned for 2026" },
+        { feature: "Platforms", value: "iOS, Android & Windows" },
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verified): ERG target & trainer resistance from the bars, no simulated cassette" },
         { feature: "Workout import", value: ".ZWO, .MRC and .ERG files" },
@@ -331,7 +329,7 @@ export const translations = {
         },
         {
           q: "Which platforms is ENDURE available on?",
-          a: "ENDURE is available on iOS and Android. A Windows version is planned and will be released in 2026."
+          a: "ENDURE is available on iOS, Android and Windows (Microsoft Store). You subscribe to ENDURE Premium on iOS or Android, and it works on Windows with the same account."
         },
         {
           q: "How does ENDURE estimate FTP and VO2max?",
@@ -397,13 +395,13 @@ export const translations = {
       seoTitle: "Press Kit | ENDURE Cycling",
       seoDescription: "Press resources for ENDURE, the Austrian indoor cycling training app: fact sheet, story angles, founder bio, logos and screenshots.",
       headline: "Press Kit",
-      intro: "ENDURE is an indoor cycling app from Austria, built to compete with Zwift and TrainerRoad. Instead of a virtual world, it puts training and analysis first: it takes the rider's smart trainer through structured workouts, analyses every ride indoors and out, and tracks fitness from the rides they already do. ENDURE is available for iOS and Android.",
+      intro: "ENDURE is an indoor cycling app from Austria, built to compete with Zwift and TrainerRoad. Instead of a virtual world, it puts training and analysis first: it takes the rider's smart trainer through structured workouts, analyses every ride indoors and out, and tracks fitness from the rides they already do. ENDURE is available for iOS, Android and Windows.",
       factsTitle: "Fact sheet",
       facts: [
         { label: "Product", value: "ENDURE, indoor cycling and training app" },
         { label: "Origin", value: "Austria" },
         { label: "Competes with", value: "Zwift, TrainerRoad" },
-        { label: "Platforms", value: "iOS & Android, Windows planned for 2026" },
+        { label: "Platforms", value: "iOS, Android & Windows" },
         { label: "Pricing", value: "ENDURE Premium, {monthly} a month or {annual} a year. 14-day trial without payment details" },
         { label: "Founder", value: "Christoph Martin" },
         { label: "Website", value: "www.endure-cycling.com" },
@@ -540,7 +538,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      badge: "Jetzt für iOS & Android · 14 Tage gratis",
+      badge: "Jetzt für iOS, Android & Windows · 14 Tage gratis",
       // Häkchen unter den Store-Badges
       checks: ["14 Tage gratis", "Keine Zahlungsdaten", "Endet von selbst"],
       tagline: "Präzision statt Spielerei",
@@ -553,9 +551,7 @@ export const translations = {
       secondary: "Laufend neue Updates, entwickelt gemeinsam mit der Community.",
       appStoreBadgeAlt: "Laden im App Store",
       googlePlayBadgeAlt: "Jetzt bei Google Play",
-      // Windows-Chip neben den Store-Badges (geplant, noch nicht verlinkt)
-      windowsBadgeTop: "Kommt 2026",
-      windowsBadgeLabel: "Windows",
+      microsoftStoreBadgeAlt: "Im Microsoft Store herunterladen",
       // Aria-Label der Karussell-Phones und ihrer Dots; {name} ist ein appScreens-Label.
       screenshotAction: "Screenshot {name} anzeigen"
     },
@@ -791,7 +787,7 @@ export const translations = {
       ios: "iOS",
       iosStatus: "Verfügbar",
       windows: "Windows",
-      windowsStatus: "Geplant für 2026",
+      windowsStatus: "Verfügbar",
       
       communityTitle: "Wir bauen das gemeinsam",
       communityText: "Feature-Wünsche sind willkommen und fließen direkt in den Update-Zyklus ein. Dein Feedback gestaltet ENDURE mit.",
@@ -807,7 +803,7 @@ export const translations = {
       valueLabel: "Das bekommst du",
       rows: [
         { feature: "Preis", value: "14 Tage gratis testen, ohne Zahlungsdaten. Danach ENDURE Premium für {monthly} / Monat oder {annual} / Jahr", highlight: true },
-        { feature: "Plattformen", value: "iOS & Android, Windows geplant für 2026" },
+        { feature: "Plattformen", value: "iOS, Android & Windows" },
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verifiziert): ERG-Ziel & Trainer-Widerstand vom Lenker, ohne simulierte Kassette" },
         { feature: "Workout-Import", value: ".ZWO, .MRC und .ERG Dateien" },
@@ -852,7 +848,7 @@ export const translations = {
         },
         {
           q: "Auf welchen Plattformen ist ENDURE verfügbar?",
-          a: "ENDURE ist für iOS und Android verfügbar. Eine Windows-Version ist geplant und erscheint noch 2026."
+          a: "ENDURE gibt es für iOS, Android und Windows (Microsoft Store). ENDURE Premium schließt du auf iOS oder Android ab, unter Windows gilt es mit demselben Konto."
         },
         {
           q: "Wie schätzt ENDURE FTP und VO2max?",
@@ -918,13 +914,13 @@ export const translations = {
       seoTitle: "Presse | ENDURE Cycling",
       seoDescription: "Presse-Material zu ENDURE, der österreichischen Indoor-Cycling-Training-App: Fact Sheet, Story-Ideen, Gründer-Bio, Logos und Screenshots.",
       headline: "Presse",
-      intro: "ENDURE ist eine Rollentrainer-App aus Österreich, die gegen Zwift und TrainerRoad antritt. Statt einer virtuellen Welt stehen Training und Auswertung im Mittelpunkt: Die App führt den eigenen Smart Trainer durch strukturierte Workouts, wertet jede Fahrt aus, drinnen wie draußen, und zeigt die Formentwicklung aus den Fahrten, die man ohnehin macht. ENDURE gibt es für iOS und Android.",
+      intro: "ENDURE ist eine Rollentrainer-App aus Österreich, die gegen Zwift und TrainerRoad antritt. Statt einer virtuellen Welt stehen Training und Auswertung im Mittelpunkt: Die App führt den eigenen Smart Trainer durch strukturierte Workouts, wertet jede Fahrt aus, drinnen wie draußen, und zeigt die Formentwicklung aus den Fahrten, die man ohnehin macht. ENDURE gibt es für iOS, Android und Windows.",
       factsTitle: "Fact Sheet",
       facts: [
         { label: "Produkt", value: "ENDURE, Rollentrainer- und Trainings-App" },
         { label: "Herkunft", value: "Österreich" },
         { label: "Mitbewerber", value: "Zwift, TrainerRoad" },
-        { label: "Plattformen", value: "iOS & Android, Windows geplant für 2026" },
+        { label: "Plattformen", value: "iOS, Android & Windows" },
         { label: "Preis", value: "ENDURE Premium, {monthly} im Monat oder {annual} im Jahr. 14 Tage Test ohne Zahlungsdaten" },
         { label: "Gründer", value: "Christoph Martin" },
         { label: "Website", value: "www.endure-cycling.com" },
