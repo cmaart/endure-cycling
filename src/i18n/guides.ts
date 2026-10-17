@@ -33,7 +33,7 @@ export interface Guide {
 export const guidesIndex = {
   en: {
     seoTitle: "Cycling Training Guides: FTP, Zones, Lactate & Heat",
-    seoDescription: "Practical, science-based guides for cyclists: FTP testing and power zones, zone 2, sweet spot vs polarized, lactate LT1/LT2, heat training with CORE, and workout file formats.",
+    seoDescription: "Science-based guides for cyclists: FTP tests and power zones, zone 2, sweet spot vs polarized, lactate LT1/LT2, heat training with CORE and workout files.",
     h1: "Training Guides",
     intro: "Practical, science-based knowledge for data-driven cyclists, written by the team behind ENDURE. FTP and power zones, zone 2 and training distribution, lactate thresholds, heat adaptation and the file formats in between. No fluff, just the physiology and how to apply it.",
     readGuide: "Read guide",
@@ -42,7 +42,7 @@ export const guidesIndex = {
   },
   de: {
     seoTitle: "Trainings-Guides: FTP, Wattzonen, Laktat & Hitzetraining",
-    seoDescription: "Praktische, wissenschaftlich fundierte Guides für Radsportler: FTP-Test und Wattzonen, Zone 2, Sweet Spot vs. polarisiert, Laktat LT1/LT2, Hitzetraining mit CORE und Workout-Dateiformate.",
+    seoDescription: "Fundierte Guides für Radsportler: FTP-Test und Wattzonen, Zone 2, Sweet Spot vs. polarisiert, Laktat LT1/LT2, Hitzetraining mit CORE und Workout-Dateiformate.",
     h1: "Trainings-Guides",
     intro: "Praktisches, wissenschaftlich fundiertes Wissen für datengetriebene Radsportler, vom Team hinter ENDURE. FTP und Wattzonen, Zone 2 und Trainingsverteilung, Laktatschwellen, Hitzeadaption und die Dateiformate dazwischen. Kein Ballast, nur Physiologie und ihre Anwendung.",
     readGuide: "Guide lesen",
@@ -55,7 +55,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
   en: {
     'lactate-threshold-training': {
       seoTitle: "Lactate Threshold Training for Cyclists: LT1 & LT2 Explained",
-      seoDescription: "What LT1 and LT2 actually mean, how to test lactate at home, and how to train with threshold zones: a practical guide for cyclists, with automatic estimation in ENDURE.",
+      seoDescription: "What LT1 and LT2 mean, how to test lactate at home, and how to train with threshold zones: a practical guide for cyclists, with automatic estimation in ENDURE.",
       h1: "Lactate Threshold Training: LT1 & LT2 Explained",
       datePublished: "2026-07-20",
       dateModified: "2026-07-20",
@@ -98,8 +98,8 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       backToGuides: "All guides"
     },
     'heat-training-core-sensor': {
-      seoTitle: "Heat Training for Cyclists with the CORE Sensor: Heat Zones Explained",
-      seoDescription: "How heat training works, what the CORE body temperature sensor measures, what heat zones are, and how to run indoor heat sessions, natively integrated in ENDURE.",
+      seoTitle: "Heat Training with the CORE Sensor: Heat Zones Explained",
+      seoDescription: "How heat training works, what the CORE body temperature sensor measures, what heat zones are, and how to run indoor heat sessions with ENDURE.",
       h1: "Heat Training with the CORE Sensor: Heat Zones Explained",
       datePublished: "2026-07-20",
       dateModified: "2026-07-20",
@@ -314,7 +314,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
     },
     'zwo-mrc-erg-files': {
       seoTitle: ".ZWO, .MRC and .ERG Workout Files: Formats and Import",
-      seoDescription: "What .ZWO, .MRC and .ERG workout files contain, how they differ, and how to import them into ENDURE to ride them in ERG mode on iOS or Android.",
+      seoDescription: "What .ZWO, .MRC and .ERG workout files contain, how they differ, and how to import them into ENDURE to ride them in ERG mode on iOS, Android or Windows.",
       h1: ".ZWO, .MRC and .ERG: Workout Files Explained",
       datePublished: "2026-07-27",
       dateModified: "2026-07-27",
@@ -358,7 +358,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
   de: {
     'lactate-threshold-training': {
       seoTitle: "Laktatschwellen-Training für Radsportler: LT1 & LT2 erklärt",
-      seoDescription: "Was LT1 und LT2 wirklich bedeuten, wie du Laktat zuhause testest und wie du mit Schwellenzonen trainierst: ein praktischer Guide für Radsportler, mit automatischer Schätzung in ENDURE.",
+      seoDescription: "Was LT1 und LT2 bedeuten, wie du Laktat zuhause testest und mit Schwellenzonen trainierst: ein Guide für Radsportler, mit automatischer Schätzung in ENDURE.",
       h1: "Laktatschwellen-Training: LT1 & LT2 erklärt",
       datePublished: "2026-07-20",
       dateModified: "2026-07-20",
@@ -401,7 +401,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       backToGuides: "Alle Guides"
     },
     'heat-training-core-sensor': {
-      seoTitle: "Hitzetraining für Radsportler mit dem CORE-Sensor: Heat Zones erklärt",
+      seoTitle: "Hitzetraining mit dem CORE-Sensor: Heat Zones erklärt",
       seoDescription: "Wie Hitzetraining wirkt, was der CORE Körpertemperatur-Sensor misst, was Heat Zones sind und wie du Indoor-Hitzeeinheiten fährst, nativ integriert in ENDURE.",
       h1: "Hitzetraining mit dem CORE-Sensor: Heat Zones erklärt",
       datePublished: "2026-07-20",
@@ -573,7 +573,7 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
     },
     'sweet-spot-vs-polarized': {
       seoTitle: "Sweet Spot vs. polarisiertes Training: was passt zu dir?",
-      seoDescription: "Sweet Spot, polarisiertes und pyramidales Training im Vergleich: was jedes Modell verlangt, was die Studienlage stützt und wie du nach verfügbaren Stunden entscheidest.",
+      seoDescription: "Sweet Spot, polarisiertes und pyramidales Training im Vergleich: was jedes Modell verlangt, was die Studien stützen und wie du nach deinen Stunden entscheidest.",
       h1: "Sweet Spot vs. polarisiertes Training: welches Modell passt?",
       datePublished: "2026-07-27",
       dateModified: "2026-07-27",

@@ -54,7 +54,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'zwift-click': {
       seoTitle: 'Virtual Shifting Without Zwift | Zwift Click in ENDURE',
       seoDescription:
-        'Virtual Shifting with your Zwift Click, no Zwift subscription: change your ERG target in workouts and trainer resistance in SIM mode from the handlebar. Verified on Click v1.',
+        'Virtual Shifting with your Zwift Click, no Zwift subscription: change your ERG target and trainer resistance straight from the handlebar. Verified on Click v1.',
       breadcrumb: 'Virtual Shifting',
       h1: 'Virtual Shifting with the Zwift Click, without Zwift',
       subtitle: 'Change resistance and ERG target from the bars. Verified on Click v1.',
@@ -132,7 +132,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'lactate-lt1-lt2': {
       seoTitle: 'Lactate App for Cycling: Log Readings, Get LT1 & LT2',
       seoDescription:
-        'ENDURE is the first cycling app that logs lactate readings during or after a ride and estimates LT1 and LT2 automatically, with a confidence tunnel around the fitted curve.',
+        'ENDURE is the first cycling app that logs lactate readings during or after a ride and estimates LT1 and LT2, with a confidence tunnel around the curve.',
       breadcrumb: 'Lactate LT1 & LT2',
       h1: 'The lactate app that turns readings into thresholds',
       subtitle: 'Log in-ride or afterwards. LT1 and LT2 are estimated for you.',
@@ -192,7 +192,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'core-heat-zones': {
       seoTitle: 'CORE Sensor App with Live Heat Zones | ENDURE',
       seoDescription:
-        'ENDURE is the first indoor cycling app with native CORE body temperature integration: pair over Bluetooth, see live heat zones on the ride screen, analyse the trace afterwards.',
+        'ENDURE is the first indoor cycling app with native CORE sensor integration: pair over Bluetooth, see live heat zones while riding, analyse the trace afterwards.',
       breadcrumb: 'CORE heat zones',
       h1: 'Native CORE integration with live heat zones',
       subtitle: 'Core body temperature as a training metric, not an afterthought.',
@@ -247,7 +247,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'ftp-vo2max-tracking': {
       seoTitle: 'FTP & VO2max Tracking App for Cyclists | ENDURE',
       seoDescription:
-        'Track FTP and VO2max as trends instead of single test results. ENDURE models both from your recorded power and heart-rate data across indoor and Strava- or intervals.icu-synced outdoor rides.',
+        'FTP and VO2max as trends, not single tests. ENDURE models both from your power and heart-rate data, indoor and Strava- or intervals.icu-synced outdoor rides.',
       breadcrumb: 'FTP & VO2max',
       h1: 'FTP and VO2max as trends, not one-off test results',
       subtitle: 'Modelled continuously from the rides you already do.',
@@ -364,7 +364,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'zwift-click': {
       seoTitle: 'Virtual Shifting ohne Zwift | Zwift Click in ENDURE',
       seoDescription:
-        'Virtual Shifting mit deinem Zwift Click, ohne Zwift-Abo: ERG-Ziel im Workout und Trainer-Widerstand im SIM-Modus direkt vom Lenker ändern. Mit Click v1 verifiziert.',
+        'Virtual Shifting mit deinem Zwift Click, ohne Zwift-Abo: ERG-Ziel und Trainer-Widerstand direkt vom Lenker ändern. Mit Click v1 verifiziert.',
       breadcrumb: 'Virtual Shifting',
       h1: 'Virtual Shifting mit dem Zwift Click, ohne Zwift',
       subtitle: 'Widerstand und ERG-Ziel vom Lenker ändern. Mit Click v1 verifiziert.',
@@ -440,9 +440,9 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Zurück zur Startseite'
     },
     'lactate-lt1-lt2': {
-      seoTitle: 'Laktat-App für Radsportler: Werte eintragen, LT1 & LT2 erhalten',
+      seoTitle: 'Laktat-App für Radsportler: Werte eintragen, LT1 & LT2',
       seoDescription:
-        'ENDURE ist die erste Cycling-App, die Laktatwerte während oder nach der Fahrt aufnimmt und LT1 und LT2 automatisch schätzt, inklusive Konfidenztunnel um die gefittete Kurve.',
+        'ENDURE ist die erste Cycling-App, die Laktatwerte während oder nach der Fahrt aufnimmt und LT1 und LT2 automatisch schätzt, mit Konfidenztunnel um die Kurve.',
       breadcrumb: 'Laktat LT1 & LT2',
       h1: 'Die Laktat-App, die aus Werten Schwellen macht',
       subtitle: 'Eintrag während oder nach der Fahrt. LT1 und LT2 kommen automatisch.',
@@ -502,7 +502,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'core-heat-zones': {
       seoTitle: 'CORE-Sensor App mit Live Heat Zones | ENDURE',
       seoDescription:
-        'ENDURE ist die erste Indoor-Cycling-App mit nativer CORE-Körpertemperatur-Integration: per Bluetooth koppeln, Live Heat Zones am Ride-Screen sehen, den Verlauf danach auswerten.',
+        'ENDURE ist die erste Indoor-Cycling-App mit nativer CORE-Sensor-Integration: per Bluetooth koppeln, Live Heat Zones beim Fahren sehen, Verlauf danach auswerten.',
       breadcrumb: 'CORE Heat Zones',
       h1: 'Native CORE-Integration mit Live Heat Zones',
       subtitle: 'Körperkerntemperatur als Trainingsmetrik, nicht als Nebensache.',
@@ -557,7 +557,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'ftp-vo2max-tracking': {
       seoTitle: 'FTP- & VO2max-Tracking App für Radsportler | ENDURE',
       seoDescription:
-        'FTP und VO2max als Trend statt als Einzeltest. ENDURE modelliert beides aus deinen aufgezeichneten Power- und Herzfrequenzdaten: Indoor und per Strava oder intervals.icu synchronisierte Outdoor-Fahrten.',
+        'FTP und VO2max als Trend statt Einzeltest. ENDURE modelliert beides aus Power- und Herzfrequenzdaten: indoor und Strava- oder intervals.icu-Outdoor-Fahrten.',
       breadcrumb: 'FTP & VO2max',
       h1: 'FTP und VO2max als Trend, nicht als einmaliges Testergebnis',
       subtitle: 'Kontinuierlich modelliert aus den Fahrten, die du ohnehin machst.',
@@ -617,7 +617,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'climbing-efficiency': {
       seoTitle: 'Climbing Efficiency & VAM-Score für Radsportler | ENDURE',
       seoDescription:
-        'ENDURE erkennt die Anstiege in deinen Outdoor-Fahrten automatisch und bewertet über deine Aufstiegsgeschwindigkeit (VAM), wie effizient du Watt in Höhenmeter umsetzt.',
+        'ENDURE erkennt Anstiege in deinen Outdoor-Fahrten automatisch und bewertet über die Aufstiegsgeschwindigkeit (VAM), wie effizient du Watt in Höhenmeter umsetzt.',
       breadcrumb: 'Climbing Efficiency',
       h1: 'Climbing Efficiency: ein Score dafür, wie gut du wirklich kletterst',
       subtitle: 'Automatische Anstiegserkennung, VAM-basiertes Scoring.',

@@ -23,7 +23,7 @@ export const trainersContent = {
   en: {
     seoTitle: 'Which Smart Trainers Work With ENDURE? (Bluetooth FTMS)',
     seoDescription:
-      'ENDURE controls smart trainers over the Bluetooth standard FTMS, so trainers from Wahoo, Tacx, Elite, Saris, JetBlack, Zwift Hub and others can be steered in ERG mode. Here is how to check yours.',
+      'ENDURE controls smart trainers over Bluetooth FTMS: Wahoo, Tacx, Elite, Saris, JetBlack, Zwift Hub and others run in ERG mode. Here is how to check yours.',
     breadcrumb: 'Supported trainers',
     h1: 'Which smart trainers work with ENDURE?',
     subtitle: 'If it speaks Bluetooth FTMS, ENDURE can steer it.',
@@ -105,7 +105,7 @@ export const trainersContent = {
   de: {
     seoTitle: 'Welche Rollentrainer funktionieren mit ENDURE? (Bluetooth FTMS)',
     seoDescription:
-      'ENDURE steuert Smart Trainer über den Bluetooth-Standard FTMS. Trainer von Wahoo, Tacx, Elite, Saris, JetBlack, Zwift Hub und weiteren lassen sich im ERG-Modus ansteuern. So prüfst du deinen.',
+      'ENDURE steuert Smart Trainer über Bluetooth FTMS: Wahoo, Tacx, Elite, Saris, JetBlack, Zwift Hub und weitere laufen im ERG-Modus. So prüfst du deinen.',
     breadcrumb: 'Unterstützte Trainer',
     h1: 'Welche Rollentrainer funktionieren mit ENDURE?',
     subtitle: 'Spricht er Bluetooth FTMS, kann ENDURE ihn steuern.',

@@ -93,14 +93,14 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
     <div data-reveal data-reveal-delay="300" class="inline-flex flex-col items-center gap-5 px-7 pt-6 pb-5 rounded-3xl bg-white border border-slate-200 shadow-[0_30px_80px_-30px_rgba(22,24,29,0.18)]">
       <div data-placement="hero" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a id="download-btn-ios" href={iosUrl} target="_blank" rel="noopener" aria-label={t.appStoreBadgeAlt}>
-          <img src={appStoreBadge} alt={t.appStoreBadgeAlt} class="h-12 w-auto" />
+          <img src={appStoreBadge} alt={t.appStoreBadgeAlt} width="135" height="40" class="h-12 w-auto" />
         </a>
         <a id="download-btn-android" href={androidUrl} target="_blank" rel="noopener" aria-label={t.googlePlayBadgeAlt}>
-          <img src={googlePlayBadge} alt={t.googlePlayBadgeAlt} class="h-12 w-auto" />
+          <img src={googlePlayBadge} alt={t.googlePlayBadgeAlt} width="135" height="40" class="h-12 w-auto" />
         </a>
         <!-- Official Microsoft Store badge (get.microsoft.com/images, dark). -->
         <a id="download-btn-windows" href={windowsUrl} target="_blank" rel="noopener" aria-label={t.microsoftStoreBadgeAlt}>
-          <img src={microsoftStoreBadge} alt={t.microsoftStoreBadgeAlt} class="h-12 w-auto" />
+          <img src={microsoftStoreBadge} alt={t.microsoftStoreBadgeAlt} width={lang === 'de' ? 183 : 161} height="44" class="h-12 w-auto" />
         </a>
       </div>
       <ul class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-slate-700">
@@ -143,6 +143,7 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
               width="300"
               height="657"
               loading={i < SLOTS.length ? 'eager' : 'lazy'}
+              fetchpriority={i === 1 ? 'high' : undefined}
               decoding="async"
               class="w-full"
             />

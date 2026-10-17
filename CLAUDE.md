@@ -48,7 +48,7 @@ The 14-day trial is app-managed and needs no payment details, so copy must not d
 
 Never hand-write an internal path. `src/utils/paths.ts` exports `localeHref(lang, path)` for hrefs and `localeUrl(lang, path)` for absolute URLs in canonical tags and JSON-LD, and both put the `/de` prefix and the trailing slash on for you. A link written as `/guides` instead of `localeHref(lang, '/guides')` still works, but every click and every crawl of it spends a redirect hop.
 
-`englishOnlyRoutes` in the same file lists the pages that have no German translation. It drives two things: the sitemap filter in `astro.config.mjs`, and whether `Layout.astro` emits an hreflang set at all. An English-only page gets none, because half a pair pointing at a URL that 404s is worse than no annotation.
+`englishOnlyRoutes` in the same file lists the pages that have no German translation. It drives two things: the sitemap filter in `astro.config.mjs`, and whether `Layout.astro` emits an hreflang set at all. An English-only page gets none, because half a pair pointing at a URL that 404s is worse than no annotation. The list is empty since 2026-10-17 (the legal pages got German versions); when adding a new English page, either add its `/de` twin in the same commit or list the route here until you do. The footer links the legal pages per locale.
 
 ### Layout owns SEO
 

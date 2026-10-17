@@ -35,6 +35,7 @@ const articleSchema = {
   "datePublished": t.datePublished,
   "dateModified": t.dateModified,
   "inLanguage": lang,
+  "image": `${siteUrl}/assets/og/endure-og.jpg`,
   "mainEntityOfPage": canonicalUrl,
   "author": {
     "@type": "Organization",
@@ -97,12 +98,12 @@ const articleSchema = {
         <div class="flex flex-wrap justify-center items-center gap-4">
           {config.platforms.ios.available && config.platforms.ios.url && (
             <a href={config.platforms.ios.url} target="_blank" rel="noopener" aria-label={tr.hero.appStoreBadgeAlt}>
-              <img src={appStoreBadge} alt={tr.hero.appStoreBadgeAlt} class="h-12 w-auto" />
+              <img src={appStoreBadge} alt={tr.hero.appStoreBadgeAlt} width="135" height="40" class="h-12 w-auto" />
             </a>
           )}
           {config.platforms.android.available && config.platforms.android.url && (
             <a href={config.platforms.android.url} target="_blank" rel="noopener" aria-label={tr.hero.googlePlayBadgeAlt}>
-              <img src={googlePlayBadge} alt={tr.hero.googlePlayBadgeAlt} class="h-12 w-auto" />
+              <img src={googlePlayBadge} alt={tr.hero.googlePlayBadgeAlt} width="135" height="40" class="h-12 w-auto" />
             </a>
           )}
         </div>

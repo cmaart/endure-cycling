@@ -3,6 +3,19 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { englishOnlyRoutes } from './src/utils/paths';
+import { guides } from './src/i18n/guides';
+
+// Guides carry a dateModified in their content map; surface it as <lastmod>
+// so crawlers can prioritise recently edited guides. Other pages have no
+// reliable modification date, so they get none rather than a build timestamp.
+const guideLastmod = new Map(
+  Object.entries(guides).flatMap(([lang, entries]) =>
+    Object.entries(entries).map(([slug, g]) => [
+      `https://www.endure-cycling.com/${lang === 'de' ? 'de/' : ''}guides/${slug}/`,
+      g.dateModified
+    ])
+  )
+);
 
 // https://astro.build/config
 export default defineConfig({
@@ -51,6 +64,8 @@ export default defineConfig({
       // The integration emits `en` and `de` alternates but never x-default, so we
       // add it here to match the hreflang set Layout renders in <head>.
       serialize: (item) => {
+        const lastmod = guideLastmod.get(item.url);
+        if (lastmod) item.lastmod = lastmod;
         const en = item.links?.find((l) => l.lang === 'en');
         if (en) {
           item.links = [...item.links, { lang: 'x-default', url: en.url }];

@@ -26,13 +26,21 @@ export const config = {
     en: { currency: 'USD', monthly: 7.99, annual: 59.99 },
     de: { currency: 'EUR', monthly: 8.99, annual: 69.99 },
   },
+  // App Store rating shown in the SoftwareApplication schema (Layout.astro).
+  // Source: App Store Austria storefront. The proof section copy in
+  // translations.ts quotes the same numbers, so update both together.
+  rating: {
+    value: 5.0,
+    count: 10,
+    checked: '2026-10-04',
+  },
   // Install attribution (see src/scripts/store-attribution.ts).
   // Apple App Analytics only reports campaign links (`ct=`) when they also carry
   // the provider token (`pt=`). Get it from App Store Connect → App Analytics →
   // Acquisition → Campaigns → "Generate Campaign Link" and paste it here.
   // While null, store links still carry `ct=` but Apple ignores it.
   attribution: {
-    appleProviderToken: null as string | null,
+    appleProviderToken: '516093' as string | null,
   },
 } as const;
 

@@ -43,8 +43,8 @@ const basePath = Astro.url.pathname
 const enUrl = localeUrl('en', basePath);
 const deUrl = localeUrl('de', basePath);
 const canonicalUrl = lang === 'de' ? deUrl : enUrl;
-// The legal pages are English-only, so they get no hreflang set at all rather
-// than one half of it pointing at a URL that does not exist.
+// A page without a German counterpart gets no hreflang set at all rather than
+// one half of it pointing at a URL that does not exist (see englishOnlyRoutes).
 const isTranslated = hasGermanVersion(basePath);
 
 // Social preview image (WhatsApp, iMessage, LinkedIn, X). The default is
@@ -204,6 +204,15 @@ const storeUrls = Object.values(config.platforms)
         ]
       },
       "description": description,
+      // Store rating, maintained by hand in config.rating together with the
+      // proof section copy in translations.ts.
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": config.rating.value,
+        "ratingCount": config.rating.count,
+        "bestRating": 5,
+        "worstRating": 1
+      },
       "screenshot": ogImage,
       "inLanguage": lang,
       "downloadUrl": storeUrls,
@@ -229,6 +238,19 @@ const storeUrls = Object.values(config.platforms)
       "name": "ENDURE",
       "url": siteUrl,
       "logo": orgLogo,
+      "email": "info@endure-cycling.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Großpetersdorf",
+        "postalCode": "7503",
+        "addressCountry": "AT"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@endure-cycling.com",
+        "contactType": "customer support",
+        "availableLanguage": ["en", "de"]
+      },
       "sameAs": [
         "https://www.instagram.com/endure_cycling_com/",
         ...storeUrls
@@ -253,9 +275,8 @@ const storeUrls = Object.values(config.platforms)
       locale counterparts, so the language switch keeps you on the same page.
     -->
     <!--
-      On an English-only page there is no German counterpart to switch to, so the
-      DE button falls back to the German homepage rather than linking to a URL
-      that does not exist.
+      On a page without a German counterpart the DE button falls back to the
+      German homepage rather than linking to a URL that does not exist.
     -->
     <a
       href={localeHref(lang, '/#trial')}

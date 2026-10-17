@@ -32,8 +32,12 @@ export function localeUrl(lang: Lang, path: string = '/'): string {
  * on them must not advertise an hreflang pair. An `hreflang="de"` pointing at a
  * URL that 404s is a broken annotation, and Google reports it as one. The same
  * list drives the sitemap filter in `astro.config.mjs`.
+ *
+ * Currently empty: the legal pages (privacy, terms, imprint) got German
+ * versions under `src/pages/de/`, so every route has both locales. Add a route
+ * here only while its German page does not exist yet.
  */
-export const englishOnlyRoutes = ['privacy', 'terms', 'imprint'];
+export const englishOnlyRoutes: string[] = [];
 
 /** Whether `basePath` (normalized, slash-free) has a German translation. */
 export function hasGermanVersion(basePath: string): boolean {

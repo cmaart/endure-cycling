@@ -21,12 +21,12 @@ const badgeSuffix = lang === 'de' ? '-de' : '';
     <div class="flex flex-wrap items-center gap-4 mb-14">
       {config.platforms.ios.available && config.platforms.ios.url && (
         <a href={config.platforms.ios.url} target="_blank" rel="noopener">
-          <img src={`/assets/badges/app-store-badge${badgeSuffix}.svg`} alt="App Store" class="h-12" loading="lazy" />
+          <img src={`/assets/badges/app-store-badge${badgeSuffix}.svg`} alt="App Store" width="135" height="40" class="h-12 w-auto" loading="lazy" />
         </a>
       )}
       {config.platforms.android.available && config.platforms.android.url && (
         <a href={config.platforms.android.url} target="_blank" rel="noopener">
-          <img src={`/assets/badges/google-play-badge${badgeSuffix}.svg`} alt="Google Play" class="h-12" loading="lazy" />
+          <img src={`/assets/badges/google-play-badge${badgeSuffix}.svg`} alt="Google Play" width="135" height="40" class="h-12 w-auto" loading="lazy" />
         </a>
       )}
     </div>
@@ -82,8 +82,11 @@ const badgeSuffix = lang === 'de' ? '-de' : '';
               <img
                 src={`/assets/press/${shot.file}.webp`}
                 alt={shot.caption}
+                width="1290"
+                height="2796"
                 class="rounded-xl border border-slate-200 w-full"
                 loading="lazy"
+                decoding="async"
               />
             </a>
             <figcaption class="text-sm text-slate-600 mt-2">

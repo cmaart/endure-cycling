@@ -1,0 +1,42 @@
+# ENDURE
+
+> ENDURE is an indoor cycling training app for smart trainers on iOS, Android and Windows. It estimates FTP and VO2max from normal rides instead of formal tests, controls Bluetooth FTMS trainers in ERG and SIM mode, logs lactate readings with automatic LT1/LT2 estimation, integrates the CORE body temperature sensor natively, and syncs with Strava and intervals.icu. Developed in Austria. ENDURE Premium is a subscription with a 14-day free trial that needs no payment details.
+
+Site: https://www.endure-cycling.com (English) and https://www.endure-cycling.com/de/ (German).
+
+## Product
+
+- [Homepage](https://www.endure-cycling.com/): features, pricing, FAQ
+- [FTP & VO2max tracking](https://www.endure-cycling.com/features/ftp-vo2max-tracking/): trends modelled from recorded rides
+- [Lactate LT1/LT2](https://www.endure-cycling.com/features/lactate-lt1-lt2/): log readings, get thresholds with a confidence tunnel
+- [CORE heat zones](https://www.endure-cycling.com/features/core-heat-zones/): native CORE sensor integration with live heat zones
+- [Climbing Efficiency](https://www.endure-cycling.com/features/climbing-efficiency/): VAM-based climb scoring
+- [Zwift Click virtual shifting](https://www.endure-cycling.com/features/zwift-click/): ERG target and resistance from the handlebar, no Zwift subscription
+- [Supported trainers](https://www.endure-cycling.com/supported-trainers/): Bluetooth FTMS compatibility (Wahoo, Tacx, Elite, Saris, JetBlack, Zwift Hub and others)
+
+## Comparisons
+
+- [ENDURE vs Zwift](https://www.endure-cycling.com/vs/zwift/)
+- [ENDURE vs TrainerRoad](https://www.endure-cycling.com/vs/trainerroad/)
+
+## Training guides
+
+- [Guides index](https://www.endure-cycling.com/guides/)
+- [FTP test and power zones](https://www.endure-cycling.com/guides/ftp-test-power-zones/)
+- [Zone 2 endurance training](https://www.endure-cycling.com/guides/zone-2-endurance-training/)
+- [Sweet spot vs polarized](https://www.endure-cycling.com/guides/sweet-spot-vs-polarized/)
+- [Lactate threshold training](https://www.endure-cycling.com/guides/lactate-threshold-training/)
+- [Heat training with the CORE sensor](https://www.endure-cycling.com/guides/heat-training-core-sensor/)
+- [.ZWO, .MRC and .ERG workout files](https://www.endure-cycling.com/guides/zwo-mrc-erg-files/)
+
+## Company
+
+- [About](https://www.endure-cycling.com/about/)
+- [Press kit](https://www.endure-cycling.com/press/)
+- Contact: info@endure-cycling.com
+
+## Stores
+
+- App Store: https://apps.apple.com/us/app/endure-cycling-early-access/id6768730624
+- Google Play: https://play.google.com/store/apps/details?id=com.cmart.endure
+- Microsoft Store: https://apps.microsoft.com/detail/9P3LBDT9B17W

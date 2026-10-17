@@ -485,7 +485,7 @@ export const translations = {
     // SEO
     seo: {
       title: "ENDURE | Indoor Cycling App for Smart Trainers, No FTP Test",
-      description: "Indoor cycling app for smart trainers that estimates FTP and VO2max from your normal rides. ERG and SIM control over Bluetooth, structured workouts, Strava and intervals.icu sync, riding in 30 seconds."
+      description: "Indoor cycling app for smart trainers that estimates FTP and VO2max from your normal rides. ERG control, structured workouts, Strava and intervals.icu sync."
     },
     // Cookie Banner
     cookieBanner: {
@@ -887,7 +887,7 @@ export const translations = {
     // About
     about: {
       seoTitle: "Über ENDURE | Präzise Cycling-Training-App",
-      seoDescription: "Die Geschichte hinter ENDURE, der präzisen Cycling-Training-App: wer dahintersteht und wie FTP-, VO2max-, Laktat-, CORE-Heat- und Kletter-Metriken funktionieren.",
+      seoDescription: "Die Geschichte hinter ENDURE: wer hinter der Cycling-Training-App steht und wie FTP-, VO2max-, Laktat-, CORE-Heat- und Kletter-Metriken funktionieren.",
       headline: "Über ENDURE",
       intro: "ENDURE ist eine Indoor-Cycling- und Trainings-App mit einer klaren Idee: Präzision statt Spielerei. Keine Spiele, kein Ballast, nur das Training und die Analyse, die dich wirklich schneller machen.",
       sections: [
@@ -1004,7 +1004,7 @@ export const translations = {
     // SEO
     seo: {
       title: "ENDURE | Rollentrainer-App ohne FTP-Test",
-      description: "Indoor-Cycling-App für Rollentrainer, die FTP und VO2max aus deinen normalen Fahrten schätzt. ERG- und SIM-Steuerung per Bluetooth, strukturierte Workouts, Strava- und intervals.icu-Sync, in 30 Sekunden fahrbereit."
+      description: "Indoor-Cycling-App für Rollentrainer, die FTP und VO2max aus deinen Fahrten schätzt. ERG-Steuerung, strukturierte Workouts, Strava- und intervals.icu-Sync."
     },
     // Cookie Banner
     cookieBanner: {
