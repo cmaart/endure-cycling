@@ -7,7 +7,6 @@ export const translations = {
       virtualShifting: "Virtual Shifting",
       trial: "Free trial",
       guides: "Guides",
-      roadmap: "Roadmap",
       faq: "FAQ",
       cta: "Try free for 14 days"
     },
@@ -256,24 +255,6 @@ export const translations = {
       
       analyticsLink: "FTP & VO2max tracking in detail",
       trainersLink: "Which smart trainers work with ENDURE"
-    },
-    // Roadmap
-    roadmap: {
-      title: "Available",
-      titleHighlight: "now",
-      subtitle: "Frequent updates, full gas ahead.",
-
-      android: "Android",
-      androidStatus: "Available",
-      ios: "iOS",
-      iosStatus: "Available",
-      windows: "Windows",
-      windowsStatus: "Available",
-      
-      communityTitle: "We're Building This Together",
-      communityText: "Feature requests are welcome and feed straight into the update cycle. Your feedback shapes ENDURE.",
-      feedbackLink: "Send feedback",
-      instagramLink: "ENDURE on Instagram"
     },
     // Comparison / capability table
     comparison: {
@@ -526,7 +507,6 @@ export const translations = {
       virtualShifting: "Virtual Shifting",
       trial: "Gratis testen",
       guides: "Guides",
-      roadmap: "Roadmap",
       faq: "FAQ",
       cta: "14 Tage gratis testen"
     },
@@ -775,24 +755,6 @@ export const translations = {
       
       analyticsLink: "FTP- & VO2max-Tracking im Detail",
       trainersLink: "Welche Rollentrainer mit ENDURE funktionieren"
-    },
-    // Roadmap
-    roadmap: {
-      title: "Jetzt",
-      titleHighlight: "verfügbar",
-      subtitle: "Häufige Updates, Vollgas voraus.",
-
-      android: "Android",
-      androidStatus: "Verfügbar",
-      ios: "iOS",
-      iosStatus: "Verfügbar",
-      windows: "Windows",
-      windowsStatus: "Verfügbar",
-      
-      communityTitle: "Wir bauen das gemeinsam",
-      communityText: "Feature-Wünsche sind willkommen und fließen direkt in den Update-Zyklus ein. Dein Feedback gestaltet ENDURE mit.",
-      feedbackLink: "Feedback senden",
-      instagramLink: "ENDURE auf Instagram"
     },
     // Comparison / capability table
     comparison: {

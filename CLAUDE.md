@@ -20,7 +20,7 @@ There is no test suite, no linter, and no formatter configured. TypeScript uses 
 
 ### i18n is centralized, not file-routed for content
 
-Astro's i18n config (`astro.config.mjs`) defines `en` (default, no prefix) and `de` (`/de` prefix), but **all translatable strings live in a single object** at `src/i18n/translations.ts` keyed by section (e.g. `hero`, `features`, `roadmap`). Components call `getTranslations(lang)` and read keys from the returned tree.
+Astro's i18n config (`astro.config.mjs`) defines `en` (default, no prefix) and `de` (`/de` prefix), but **all translatable strings live in a single object** at `src/i18n/translations.ts` keyed by section (e.g. `hero`, `features`, `faq`). Components call `getTranslations(lang)` and read keys from the returned tree.
 
 The `lang` flows top-down: `Layout.astro` resolves it from `Astro.props.lang ?? Astro.currentLocale ?? 'en'`. `src/pages/index.astro` is English; `src/pages/de/index.astro` is the same component tree wrapped in `<Layout lang="de">`. **When adding a new section/component, add the matching keys to both `en` and `de` in `translations.ts`** — there is no fallback per-key, only a whole-language fallback to `en`.
 
@@ -30,7 +30,7 @@ Long-form SEO content lives in sibling files with the same en/de convention: `sr
 
 ### Per-platform availability
 
-`src/config.ts` exports `config.platforms` — an object keyed by `ios`, `android`, `windows`, `macos`, each with `{ available: boolean, url: string | null }`. Components (`Hero.astro`, `Roadmap.astro`) read these flags to render official store badges and green ✅ "Available" cards. `Roadmap.astro` lists `ios`, `android` and `windows` in its `platformOrder`; all three are available. The `macos` entry exists in the config but is not rendered anywhere (not planned). The Microsoft Store badges (`public/assets/badges/microsoft-store-badge{,-de}.svg`) are Microsoft's official dark badges from `get.microsoft.com/images/`. For a new platform also add it to `platformOrder` (plus its `roadmap` translation keys) — do not hardcode availability state in components. The `PlatformKey` type is exported for typed iteration.
+`src/config.ts` exports `config.platforms` — an object keyed by `ios`, `android`, `windows`, `macos`, each with `{ available: boolean, url: string | null }`. `Hero.astro` and the shared `StoreBadges.astro` (used by the footer CTA, feature/guide/trainer/vs pages and `/press`) read these flags to render the official store badges; all three of `ios`, `android` and `windows` are available. The `macos` entry exists in the config but is not rendered anywhere (not planned). The former "Available now" roadmap section was removed on 2026-10-17 once every platform had shipped. The Microsoft Store badges (`public/assets/badges/microsoft-store-badge{,-de}.svg`) are Microsoft's official dark badges from `get.microsoft.com/images/`. For a new platform add its badge to `StoreBadges.astro` and `Hero.astro` plus `hero.*BadgeAlt` translation keys — do not hardcode availability state in components. The `PlatformKey` type is exported for typed iteration.
 
 ### Store links carry install attribution
 
