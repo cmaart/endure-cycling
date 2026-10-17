@@ -2,15 +2,12 @@
 import { getTranslations } from '../i18n/translations';
 import { config } from '../config';
 import { localeHref } from '../utils/paths';
+import StoreBadges from './StoreBadges.astro';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const tr = getTranslations(lang);
 const t = tr.footer;
 const currentYear = new Date().getFullYear();
-const iosUrl = config.platforms.ios.url;
-const androidUrl = config.platforms.android.url;
-const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
-const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
 const feedbackHref = localeHref(lang, '/feedback');
 const aboutHref = localeHref(lang, '/about');
 const guidesHref = localeHref(lang, '/guides');
@@ -46,12 +43,7 @@ const featureLinks = [
     <p data-reveal class="relative mx-auto max-w-[520px] text-lg leading-relaxed text-slate-600">{t.ctaText}</p>
 
     <div data-reveal data-reveal-delay="100" data-placement="footer-cta" class="relative flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
-      <a id="footer-btn-ios" href={iosUrl} target="_blank" rel="noopener" aria-label={tr.hero.appStoreBadgeAlt}>
-        <img src={appStoreBadge} alt={tr.hero.appStoreBadgeAlt} width="135" height="40" class="h-12 w-auto" />
-      </a>
-      <a id="footer-btn-android" href={androidUrl} target="_blank" rel="noopener" aria-label={tr.hero.googlePlayBadgeAlt}>
-        <img src={googlePlayBadge} alt={tr.hero.googlePlayBadgeAlt} width="135" height="40" class="h-12 w-auto" />
-      </a>
+      <StoreBadges lang={lang} idPrefix="footer-btn" lazy />
     </div>
   </section>
 

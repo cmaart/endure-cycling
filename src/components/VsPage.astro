@@ -4,6 +4,7 @@ import Footer from './Footer.astro';
 import { getTranslations } from '../i18n/translations';
 import { getVsContent, type VsKey } from '../i18n/vs';
 import { config } from '../config';
+import StoreBadges from './StoreBadges.astro';
 import { localeHref } from '../utils/paths';
 
 interface Props {
@@ -15,8 +16,6 @@ const { lang, competitor } = Astro.props;
 const t = getVsContent(lang, competitor);
 const tr = getTranslations(lang);
 const homeHref = localeHref(lang);
-const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
-const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -147,16 +146,7 @@ const faqSchema = {
       <h2 class="text-2xl font-bold text-slate-900 mb-3">{t.ctaTitle}</h2>
       <p class="text-lg leading-relaxed mb-6">{t.ctaBody}</p>
       <div class="flex flex-wrap justify-center items-center gap-4">
-        {config.platforms.ios.available && config.platforms.ios.url && (
-          <a href={config.platforms.ios.url} target="_blank" rel="noopener" aria-label={tr.hero.appStoreBadgeAlt}>
-            <img src={appStoreBadge} alt={tr.hero.appStoreBadgeAlt} width="135" height="40" class="h-12 w-auto" />
-          </a>
-        )}
-        {config.platforms.android.available && config.platforms.android.url && (
-          <a href={config.platforms.android.url} target="_blank" rel="noopener" aria-label={tr.hero.googlePlayBadgeAlt}>
-            <img src={googlePlayBadge} alt={tr.hero.googlePlayBadgeAlt} width="135" height="40" class="h-12 w-auto" />
-          </a>
-        )}
+        <StoreBadges lang={lang} lazy />
       </div>
     </section>
 
@@ -167,4 +157,4 @@ const faqSchema = {
     </a>
   </main>
   <Footer />
-</Layout>
+</Layout>

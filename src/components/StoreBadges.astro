@@ -1,0 +1,56 @@
+---
+/**
+ * The three official store badges (App Store, Google Play, Microsoft Store),
+ * one per available platform in `config.platforms`. Renders only the anchors,
+ * so the parent owns the layout wrapper and its `data-placement`.
+ */
+import { config } from '../config';
+import { getTranslations } from '../i18n/translations';
+
+interface Props {
+  lang: 'en' | 'de';
+  /** Prefix for per-anchor ids, e.g. "footer-btn" → footer-btn-ios. Omit for no ids. */
+  idPrefix?: string;
+  /** Lazy-load the badge images (below the fold). */
+  lazy?: boolean;
+}
+
+const { lang, idPrefix, lazy = false } = Astro.props;
+const t = getTranslations(lang).hero;
+const suffix = lang === 'de' ? '-de' : '';
+const loading = lazy ? 'lazy' : undefined;
+
+const badges = [
+  {
+    key: 'ios',
+    platform: config.platforms.ios,
+    src: `/assets/badges/app-store-badge${suffix}.svg`,
+    alt: t.appStoreBadgeAlt,
+    width: 135,
+    height: 40,
+  },
+  {
+    key: 'android',
+    platform: config.platforms.android,
+    src: `/assets/badges/google-play-badge${suffix}.svg`,
+    alt: t.googlePlayBadgeAlt,
+    width: 135,
+    height: 40,
+  },
+  {
+    // Official Microsoft Store badge (get.microsoft.com/images, dark).
+    key: 'windows',
+    platform: config.platforms.windows,
+    src: `/assets/badges/microsoft-store-badge${suffix}.svg`,
+    alt: t.microsoftStoreBadgeAlt,
+    width: lang === 'de' ? 183 : 161,
+    height: 44,
+  },
+] as const;
+---
+
+{badges.map(({ key, platform, src, alt, width, height }) => platform.available && platform.url && (
+  <a id={idPrefix ? `${idPrefix}-${key}` : undefined} href={platform.url} target="_blank" rel="noopener" aria-label={alt}>
+    <img src={src} alt={alt} width={width} height={height} class="h-12 w-auto" loading={loading} />
+  </a>
+))}

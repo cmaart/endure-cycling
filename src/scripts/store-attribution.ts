@@ -27,6 +27,7 @@ type Utm = Partial<Record<UtmKey, string>>;
 
 const APPLE_HOST = 'apps.apple.com';
 const PLAY_HOST = 'play.google.com';
+const MS_HOST = 'apps.microsoft.com';
 
 function readStored(): Utm | null {
   try {
@@ -83,7 +84,7 @@ function appleCampaignToken(utm: Utm): string {
   return raw.replace(/[^A-Za-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'organic';
 }
 
-function decorate(anchor: HTMLAnchorElement, utm: Utm): 'ios_app_store' | 'google_play_store' | null {
+function decorate(anchor: HTMLAnchorElement, utm: Utm): 'ios_app_store' | 'google_play_store' | 'microsoft_store' | null {
   let url: URL;
   try {
     url = new URL(anchor.href);
@@ -109,6 +110,13 @@ function decorate(anchor: HTMLAnchorElement, utm: Utm): 'ios_app_store' | 'googl
     url.searchParams.set('mt', '8');
     anchor.href = url.toString();
     return 'ios_app_store';
+  }
+
+  if (url.hostname.endsWith(MS_HOST)) {
+    // Partner Center → Acquisitions → Campaigns reports installs per `cid`.
+    url.searchParams.set('cid', appleCampaignToken(utm));
+    anchor.href = url.toString();
+    return 'microsoft_store';
   }
 
   return null;
@@ -141,7 +149,7 @@ function trackClick(label: string, placement: string, utm: Utm): void {
 function init(): void {
   const utm = resolveUtm();
   const anchors = document.querySelectorAll<HTMLAnchorElement>(
-    `a[href*="${APPLE_HOST}"], a[href*="${PLAY_HOST}"]`,
+    `a[href*="${APPLE_HOST}"], a[href*="${PLAY_HOST}"], a[href*="${MS_HOST}"]`,
   );
   anchors.forEach((anchor) => {
     const label = decorate(anchor, utm);
