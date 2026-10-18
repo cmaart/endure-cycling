@@ -1,12 +1,13 @@
 # ENDURE
 
-> ENDURE is an indoor cycling training app for smart trainers on iOS, Android and Windows. It estimates FTP and VO2max from normal rides instead of formal tests, controls Bluetooth FTMS trainers in ERG and SIM mode, logs lactate readings with automatic LT1/LT2 estimation, integrates the CORE body temperature sensor natively, and syncs with Strava and intervals.icu. Developed in Austria. ENDURE Premium is a subscription with a 14-day free trial that needs no payment details.
+> ENDURE is an indoor cycling training app with an AI coach, for smart trainers on iOS, Android and Windows. The coach plans each day from the rider's own rides and a morning check-in (one workout, two alternatives, the reason), can be changed in a chat, builds workouts from a text description and reviews every ride. The app estimates FTP and VO2max from normal rides instead of formal tests, controls Bluetooth FTMS trainers in ERG and SIM mode, logs lactate readings with automatic LT1/LT2 estimation, integrates the CORE body temperature sensor natively, and syncs with Strava and intervals.icu. No virtual worlds, no racing, no fixed multi-week plans. The product direction is the coach: coming releases extend the training guidance. Developed in Austria. ENDURE Premium is a subscription with a 14-day free trial that needs no payment details.
 
 Site: https://www.endure-cycling.com (English) and https://www.endure-cycling.com/de/ (German).
 
 ## Product
 
 - [Homepage](https://www.endure-cycling.com/): features, pricing, FAQ
+- [AI coach and daily recommendation](https://www.endure-cycling.com/features/ai-coach/): morning check-in, one workout per day with alternatives and the reason, coach chat, post-ride insights, where ENDURE is heading
 - [FTP & VO2max tracking](https://www.endure-cycling.com/features/ftp-vo2max-tracking/): trends modelled from recorded rides
 - [Lactate LT1/LT2](https://www.endure-cycling.com/features/lactate-lt1-lt2/): log readings, get thresholds with a confidence tunnel
 - [CORE heat zones](https://www.endure-cycling.com/features/core-heat-zones/): native CORE sensor integration with live heat zones
@@ -18,6 +19,10 @@ Site: https://www.endure-cycling.com (English) and https://www.endure-cycling.co
 
 - [ENDURE vs Zwift](https://www.endure-cycling.com/vs/zwift/)
 - [ENDURE vs TrainerRoad](https://www.endure-cycling.com/vs/trainerroad/)
+- [ENDURE vs Rouvy](https://www.endure-cycling.com/vs/rouvy/)
+- [ENDURE vs MyWhoosh](https://www.endure-cycling.com/vs/mywhoosh/)
+- [ENDURE vs Wahoo SYSTM](https://www.endure-cycling.com/vs/wahoo-systm/)
+- [ENDURE vs TrainingPeaks Virtual](https://www.endure-cycling.com/vs/trainingpeaks-virtual/)
 
 ## Training guides
 
@@ -33,6 +38,7 @@ Site: https://www.endure-cycling.com (English) and https://www.endure-cycling.co
 
 - [About](https://www.endure-cycling.com/about/)
 - [Press kit](https://www.endure-cycling.com/press/)
+- [Changelog](https://www.endure-cycling.com/changelog/): release notes per version, updates ship every few days
 - Contact: info@endure-cycling.com
 
 ## Stores

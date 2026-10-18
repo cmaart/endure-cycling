@@ -10,6 +10,7 @@
 // Section titles are question-phrased (AEO: People-Also-Ask / snippets).
 
 export type FeatureKey =
+  | 'ai-coach'
   | 'zwift-click'
   | 'lactate-lt1-lt2'
   | 'core-heat-zones'
@@ -29,6 +30,9 @@ interface RelatedLink {
 }
 
 export interface FeatureContent {
+  /** ISO dates for the page schema and sitemap lastmod. */
+  datePublished: string;
+  dateModified: string;
   seoTitle: string;
   seoDescription: string;
   breadcrumb: string;
@@ -51,7 +55,95 @@ export const featuresIndexMeta = {
 
 export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent>> = {
   en: {
+    'ai-coach': {
+      datePublished: '2026-10-18',
+      dateModified: '2026-10-18',
+      seoTitle: 'AI Cycling Coach: Daily Training Recommendation | ENDURE',
+      seoDescription:
+        'ENDURE has an AI cycling coach that plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. Change it in chat. iOS, Android, Windows.',
+      breadcrumb: 'AI coach',
+      h1: 'An AI cycling coach that plans your day from your own rides',
+      subtitle: 'Morning check-in, one recommended workout, the reason behind it. Change it in a chat.',
+      directAnswer:
+        'ENDURE has a built-in AI coach. Every morning it reads your recent rides, your training load and a short check-in, then puts one workout for today on your Today screen, with an easier and a harder alternative and the reason for the pick. If the day changes, you tell the coach in a chat and it proposes something else. After the ride it reviews what happened. The coach does not write a fixed multi-week plan; it decides one day at a time from your own data.',
+      sections: [
+        {
+          title: 'What does the coach do each morning?',
+          body:
+            'You open the app, answer a short check-in and get a card: a briefing on where you stand and the workout for today. If you add a note, for example that you feel sick or only have 45 minutes, the coach plans around it and the Recovery dial takes it into account. One tap starts the workout and your smart trainer follows in ERG mode.',
+          bullets: [
+            '<strong>One pick, two alternatives:</strong> the recommended session plus an easier and a harder option, in case the pick does not match your day.',
+            '<strong>With the reason:</strong> every pick says why it fits today, based on your own rides and load.',
+            '<strong>From your check-in:</strong> a note about sleep, illness or available time changes what the coach proposes.'
+          ]
+        },
+        {
+          title: 'What is the recommendation based on?',
+          body:
+            'On the data ENDURE already has about you. The coach knows your full training history, indoors and outdoors through the Strava or intervals.icu sync, your current training load and recovery, your FTP and VO2max as modelled from your rides, and the Potential analysis that shows whether your threshold or your aerobic ceiling is holding your FTP back. That is what lets it pick a session that works on the limiter rather than a generic workout for the weekday.'
+        },
+        {
+          title: 'Can you change the plan?',
+          body:
+            'Yes, in the coach chat. Say how your legs feel, how much time you have or what you would rather do, and the coach proposes a different workout. You decide what to ride. If no workout in the library matches what the coach has in mind, it builds one, and you can start it as is or adjust it first.'
+        },
+        {
+          title: 'Does the coach build workouts?',
+          body:
+            'Two ways. When the plan calls for a session the library does not have, the coach builds it. And you can type a workout yourself: write "3x10min sweet spot with 5min rest" and you get a finished session with warmup and cooldown. Not quite right? Tell it what to change and it adjusts. Give it a duration and the coach fills the gap with easy riding, so a 60-minute request really lasts 60 minutes.'
+        },
+        {
+          title: 'What happens after the ride?',
+          body:
+            'The coach reviews it. The Coaching Insights on the ride summary say what worked, what to fix and what to do next, in the context of your recent weeks. The ride itself feeds back into your FTP and VO2max trend, your load and the next morning’s recommendation, so the loop closes without you entering anything.'
+        },
+        {
+          title: 'Is this a training plan?',
+          body:
+            'No, and that is on purpose. A multi-week plan assumes it knows how you will feel in three weeks. The ENDURE coach decides one day at a time from how you actually are, and keeps the week goal and your load balance in view while it does. Riders who want a fixed schedule toward an event will find that in TrainerRoad; riders who want a coach that reacts to today get it here.'
+        },
+        {
+          title: 'Where is ENDURE heading?',
+          body:
+            'Toward the coach. ENDURE started as the training app without the game: ERG control, a curated workout library and analysis of FTP, VO2max, lactate and heat. The daily recommendation, the check-in, the chat and the Potential analysis are the newest layer on top of that, and the coming releases keep building there: training guidance that uses everything the app already knows about you. There are no plans for virtual worlds or racing. The roadmap in the app shows what is next, and the "I want this" button on each item tells us what matters to you.'
+        }
+      ],
+      faq: [
+        {
+          q: 'Does ENDURE have an AI coach?',
+          a: 'Yes. The coach plans each day from your recent rides, your training load and a morning check-in. It puts one workout on the Today screen with an easier and a harder alternative and the reason, and you can change the plan in a chat. After the ride it reviews what happened.'
+        },
+        {
+          q: 'Does the coach replace a human coach?',
+          a: 'No. A human coach knows your life, your goals and your season in ways an app does not. The ENDURE coach is good at the daily question, "what should I train today", and at reading your own data: load, recovery, FTP and VO2max trend, the Potential analysis. Many riders use it on their own; riders with a coach use the analysis alongside.'
+        },
+        {
+          q: 'Does the coach count outdoor rides?',
+          a: 'Yes. ENDURE syncs your Strava or intervals.icu rides, so outdoor rides count toward your load, your FTP and VO2max trend and the next recommendation. The coach sees the whole week, indoors and out.'
+        },
+        {
+          q: 'Does ENDURE write training plans?',
+          a: 'Not as fixed multi-week schedules. The coach plans one day at a time and keeps your week goal and load balance in view. You can also type a workout and have the AI build it, or import .ZWO, .MRC and .ERG files from a plan you follow elsewhere.'
+        },
+        {
+          q: 'Is the coach part of the free trial?',
+          a: 'Yes. ENDURE Premium includes the coach, and every new account gets 14 days of Premium without entering payment details.'
+        }
+      ],
+      relatedTitle: 'Keep reading',
+      related: [
+        { href: '/features/ftp-vo2max-tracking', label: 'How ENDURE estimates FTP and VO2max without a test' },
+        { href: '/vs/trainerroad', label: 'ENDURE as a TrainerRoad alternative' },
+        { href: '/changelog', label: 'Changelog: what shipped in the last releases' }
+      ],
+      ctaTitle: 'Ask the coach what to ride today',
+      ctaBody:
+        'ENDURE is on iOS, Android and Windows, free for the first 14 days. Sync your rides, answer the check-in, and the first recommendation is on your Today screen.',
+      backHome: 'Back to Homepage'
+    },
     'zwift-click': {
+      datePublished: '2026-07-28',
+      dateModified: '2026-10-17',
       seoTitle: 'Virtual Shifting Without Zwift | Zwift Click in ENDURE',
       seoDescription:
         'Virtual Shifting with your Zwift Click, no Zwift subscription: change your ERG target and trainer resistance straight from the handlebar. Verified on Click v1.',
@@ -130,6 +222,8 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Back to Homepage'
     },
     'lactate-lt1-lt2': {
+      datePublished: '2026-07-28',
+      dateModified: '2026-10-17',
       seoTitle: 'Lactate App for Cycling: Log Readings, Get LT1 & LT2',
       seoDescription:
         'ENDURE is the first cycling app that logs lactate readings during or after a ride and estimates LT1 and LT2, with a confidence tunnel around the curve.',
@@ -190,6 +284,8 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Back to Homepage'
     },
     'core-heat-zones': {
+      datePublished: '2026-07-28',
+      dateModified: '2026-10-17',
       seoTitle: 'CORE Sensor App with Live Heat Zones | ENDURE',
       seoDescription:
         'ENDURE is the first indoor cycling app with native CORE sensor integration: pair over Bluetooth, see live heat zones while riding, analyse the trace afterwards.',
@@ -245,6 +341,8 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Back to Homepage'
     },
     'ftp-vo2max-tracking': {
+      datePublished: '2026-07-28',
+      dateModified: '2026-10-17',
       seoTitle: 'FTP & VO2max Tracking App for Cyclists | ENDURE',
       seoDescription:
         'FTP and VO2max as trends, not single tests. ENDURE models both from your power and heart-rate data, indoor and Strava- or intervals.icu-synced outdoor rides.',
@@ -305,6 +403,8 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Back to Homepage'
     },
     'climbing-efficiency': {
+      datePublished: '2026-07-28',
+      dateModified: '2026-10-17',
       seoTitle: 'Climbing Efficiency & VAM Score for Cyclists | ENDURE',
       seoDescription:
         'ENDURE detects the climbs in your outdoor rides automatically and scores how efficiently you turn watts into vertical metres, using your ascent rate (VAM).',
@@ -361,7 +461,95 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     }
   },
   de: {
+    'ai-coach': {
+      datePublished: '2026-10-18',
+      dateModified: '2026-10-18',
+      seoTitle: 'KI-Radcoach: tägliche Trainingsempfehlung | ENDURE',
+      seoDescription:
+        'ENDURE hat einen KI-Coach, der jeden Tag aus deinen Fahrten und einem Morgen-Check-in plant: ein Workout, zwei Alternativen, die Begründung. Im Chat änderbar. iOS, Android, Windows.',
+      breadcrumb: 'KI-Coach',
+      h1: 'Ein KI-Radcoach, der deinen Tag aus deinen eigenen Fahrten plant',
+      subtitle: 'Morgen-Check-in, ein empfohlenes Workout, die Begründung dazu. Im Chat änderbar.',
+      directAnswer:
+        'ENDURE hat einen eingebauten KI-Coach. Jeden Morgen liest er deine letzten Fahrten, deine Trainingsbelastung und einen kurzen Check-in und legt ein Workout für heute auf deinen Heute-Screen, mit einer leichteren und einer härteren Alternative und der Begründung. Ändert sich der Tag, sagst du es dem Coach im Chat und er schlägt etwas anderes vor. Nach der Fahrt wertet er aus, was passiert ist. Der Coach schreibt keinen festen Mehrwochenplan; er entscheidet Tag für Tag aus deinen eigenen Daten.',
+      sections: [
+        {
+          title: 'Was macht der Coach jeden Morgen?',
+          body:
+            'Du öffnest die App, beantwortest einen kurzen Check-in und bekommst eine Karte: eine Einschätzung, wo du stehst, und das Workout für heute. Schreibst du eine Notiz dazu, etwa dass du krank bist oder nur 45 Minuten Zeit hast, plant der Coach danach und der Erholungs-Dial berücksichtigt sie. Ein Tipp startet das Workout, dein Smart Trainer folgt im ERG-Modus.',
+          bullets: [
+            '<strong>Eine Empfehlung, zwei Alternativen:</strong> die empfohlene Einheit plus eine leichtere und eine härtere Option, falls die Empfehlung nicht zu deinem Tag passt.',
+            '<strong>Mit Begründung:</strong> zu jeder Empfehlung steht, warum sie heute passt, abgeleitet aus deinen eigenen Fahrten und deiner Belastung.',
+            '<strong>Aus deinem Check-in:</strong> eine Notiz zu Schlaf, Krankheit oder verfügbarer Zeit ändert, was der Coach vorschlägt.'
+          ]
+        },
+        {
+          title: 'Worauf basiert die Empfehlung?',
+          body:
+            'Auf den Daten, die ENDURE schon über dich hat. Der Coach kennt deine gesamte Trainingshistorie, drinnen wie draußen über den Strava- oder intervals.icu-Sync, deine aktuelle Belastung und Erholung, deine aus Fahrten modellierte FTP und VO2max und die Potenzial-Analyse, die zeigt, ob deine Schwelle oder deine aerobe Ausdauer die FTP bremst. Deshalb kann er eine Einheit wählen, die am Limiter arbeitet, statt eines Standard-Workouts für den Wochentag.'
+        },
+        {
+          title: 'Kannst du den Plan ändern?',
+          body:
+            'Ja, im Coach-Chat. Sag, wie sich die Beine anfühlen, wie viel Zeit du hast oder was du lieber machen würdest, und der Coach schlägt ein anderes Workout vor. Du entscheidest, was du fährst. Passt kein Workout aus der Bibliothek zu dem, was der Coach vorhat, baut er eines, und du startest es so oder passt es vorher an.'
+        },
+        {
+          title: 'Baut der Coach Workouts?',
+          body:
+            'Auf zwei Wegen. Braucht der Plan eine Einheit, die die Bibliothek nicht hat, baut der Coach sie. Und du kannst ein Workout selbst eintippen: schreib "3x10min Sweetspot mit 5min Pause" und bekommst eine fertige Einheit mit Warmup und Cooldown. Passt es nicht ganz? Sag, was anders sein soll, und es wird angepasst. Gibst du eine Dauer an, füllt der Coach die Lücke mit lockerem Fahren, 60 Minuten heißen dann wirklich 60 Minuten.'
+        },
+        {
+          title: 'Was passiert nach der Fahrt?',
+          body:
+            'Der Coach wertet sie aus. Die Coaching Insights in der Zusammenfassung sagen, was funktioniert hat, was fehlt und was als Nächstes kommt, im Kontext deiner letzten Wochen. Die Fahrt selbst fließt in deinen FTP- und VO2max-Trend, deine Belastung und die Empfehlung am nächsten Morgen, der Kreis schließt sich also, ohne dass du etwas eingibst.'
+        },
+        {
+          title: 'Ist das ein Trainingsplan?',
+          body:
+            'Nein, und das ist Absicht. Ein Mehrwochenplan tut so, als wüsste er, wie du dich in drei Wochen fühlst. Der ENDURE-Coach entscheidet Tag für Tag danach, wie du tatsächlich dastehst, und behält dabei Wochenziel und Belastungsbalance im Blick. Wer einen festen Fahrplan Richtung Event will, findet den bei TrainerRoad; wer einen Coach will, der auf heute reagiert, bekommt ihn hier.'
+        },
+        {
+          title: 'Wohin entwickelt sich ENDURE?',
+          body:
+            'Zum Coach. ENDURE hat als Trainings-App ohne Spiel angefangen: ERG-Steuerung, eine kuratierte Workout-Bibliothek und ehrliche Analyse von FTP, VO2max, Laktat und Hitze. Die Tagesempfehlung, der Check-in, der Chat und die Potenzial-Analyse sind die neueste Schicht darauf, und die kommenden Releases bauen genau dort weiter: Trainingsführung, die alles nutzt, was die App schon über dich weiß. Virtuelle Welten oder Rennen sind nicht geplant. Die Roadmap in der App zeigt, was als Nächstes kommt, und mit "Will ich haben" sagst du uns, was dir wichtig ist.'
+        }
+      ],
+      faq: [
+        {
+          q: 'Hat ENDURE einen KI-Coach?',
+          a: 'Ja. Der Coach plant jeden Tag aus deinen letzten Fahrten, deiner Trainingsbelastung und einem Morgen-Check-in. Er legt ein Workout auf den Heute-Screen, mit einer leichteren und einer härteren Alternative und der Begründung, und du kannst den Plan im Chat ändern. Nach der Fahrt wertet er aus, was passiert ist.'
+        },
+        {
+          q: 'Ersetzt der Coach einen menschlichen Trainer?',
+          a: 'Nein. Ein menschlicher Trainer kennt dein Leben, deine Ziele und deine Saison auf eine Art, die eine App nicht kennt. Der ENDURE-Coach ist gut in der täglichen Frage "Was soll ich heute trainieren?" und im Lesen deiner eigenen Daten: Belastung, Erholung, FTP- und VO2max-Trend, Potenzial-Analyse. Viele fahren damit allein; wer einen Trainer hat, nutzt die Analyse daneben.'
+        },
+        {
+          q: 'Zählt der Coach Outdoor-Fahrten mit?',
+          a: 'Ja. ENDURE synchronisiert deine Strava- oder intervals.icu-Fahrten, Outdoor-Fahrten zählen also zu deiner Belastung, deinem FTP- und VO2max-Trend und der nächsten Empfehlung. Der Coach sieht die ganze Woche, drinnen und draußen.'
+        },
+        {
+          q: 'Schreibt ENDURE Trainingspläne?',
+          a: 'Nicht als feste Mehrwochenpläne. Der Coach plant Tag für Tag und behält Wochenziel und Belastungsbalance im Blick. Du kannst außerdem ein Workout eintippen und von der KI bauen lassen oder .ZWO-, .MRC- und .ERG-Dateien aus einem Plan importieren, dem du woanders folgst.'
+        },
+        {
+          q: 'Ist der Coach Teil der Gratis-Testphase?',
+          a: 'Ja. ENDURE Premium enthält den Coach, und jedes neue Konto bekommt 14 Tage Premium ohne Zahlungsdaten.'
+        }
+      ],
+      relatedTitle: 'Weiterlesen',
+      related: [
+        { href: '/features/ftp-vo2max-tracking', label: 'Wie ENDURE FTP und VO2max ohne Test schätzt' },
+        { href: '/vs/trainerroad', label: 'ENDURE als TrainerRoad Alternative' },
+        { href: '/changelog', label: 'Changelog: was in den letzten Releases kam' }
+      ],
+      ctaTitle: 'Frag den Coach, was du heute fährst',
+      ctaBody:
+        'ENDURE gibt es für iOS, Android und Windows, die ersten 14 Tage gratis. Fahrten synchronisieren, Check-in beantworten, und die erste Empfehlung liegt auf deinem Heute-Screen.',
+      backHome: 'Zurück zur Startseite'
+    },
     'zwift-click': {
+      datePublished: '2026-07-28',
+      dateModified: '2026-10-17',
       seoTitle: 'Virtual Shifting ohne Zwift | Zwift Click in ENDURE',
       seoDescription:
         'Virtual Shifting mit deinem Zwift Click, ohne Zwift-Abo: ERG-Ziel und Trainer-Widerstand direkt vom Lenker ändern. Mit Click v1 verifiziert.',
@@ -440,6 +628,8 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Zurück zur Startseite'
     },
     'lactate-lt1-lt2': {
+      datePublished: '2026-07-28',
+      dateModified: '2026-10-17',
       seoTitle: 'Laktat-App für Radsportler: Werte eintragen, LT1 & LT2',
       seoDescription:
         'ENDURE ist die erste Cycling-App, die Laktatwerte während oder nach der Fahrt aufnimmt und LT1 und LT2 automatisch schätzt, mit Konfidenztunnel um die Kurve.',
@@ -500,6 +690,8 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Zurück zur Startseite'
     },
     'core-heat-zones': {
+      datePublished: '2026-07-28',
+      dateModified: '2026-10-17',
       seoTitle: 'CORE-Sensor App mit Live Heat Zones | ENDURE',
       seoDescription:
         'ENDURE ist die erste Indoor-Cycling-App mit nativer CORE-Sensor-Integration: per Bluetooth koppeln, Live Heat Zones beim Fahren sehen, Verlauf danach auswerten.',
@@ -555,6 +747,8 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Zurück zur Startseite'
     },
     'ftp-vo2max-tracking': {
+      datePublished: '2026-07-28',
+      dateModified: '2026-10-17',
       seoTitle: 'FTP- & VO2max-Tracking App für Radsportler | ENDURE',
       seoDescription:
         'FTP und VO2max als Trend statt Einzeltest. ENDURE modelliert beides aus Power- und Herzfrequenzdaten: indoor und Strava- oder intervals.icu-Outdoor-Fahrten.',
@@ -615,6 +809,8 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Zurück zur Startseite'
     },
     'climbing-efficiency': {
+      datePublished: '2026-07-28',
+      dateModified: '2026-10-17',
       seoTitle: 'Climbing Efficiency & VAM-Score für Radsportler | ENDURE',
       seoDescription:
         'ENDURE erkennt Anstiege in deinen Outdoor-Fahrten automatisch und bewertet über die Aufstiegsgeschwindigkeit (VAM), wie effizient du Watt in Höhenmeter umsetzt.',

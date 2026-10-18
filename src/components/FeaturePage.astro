@@ -5,7 +5,7 @@ import { getTranslations } from '../i18n/translations';
 import { getFeatureContent, type FeatureKey } from '../i18n/features';
 import { config } from '../config';
 import StoreBadges from './StoreBadges.astro';
-import { localeHref } from '../utils/paths';
+import { localeHref, localeUrl, siteUrl } from '../utils/paths';
 
 interface Props {
   lang: 'en' | 'de';
@@ -16,6 +16,22 @@ const { lang, feature } = Astro.props;
 const t = getFeatureContent(lang, feature);
 const tr = getTranslations(lang);
 const homeHref = localeHref(lang);
+const canonicalUrl = localeUrl(lang, `/features/${feature}`);
+
+// Dated page entity so answer engines can see when the feature copy last changed.
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": t.h1,
+  "description": t.seoDescription,
+  "url": canonicalUrl,
+  "inLanguage": lang,
+  "datePublished": t.datePublished,
+  "dateModified": t.dateModified,
+  "about": { "@type": "SoftwareApplication", "name": "ENDURE", "url": siteUrl },
+  "author": { "@type": "Organization", "name": "ENDURE", "url": siteUrl },
+  "publisher": { "@type": "Organization", "name": "ENDURE", "url": siteUrl }
+};
 
 // FAQPage covers the question-phrased sections; the direct answer above them is
 // the featured-snippet target.
@@ -32,6 +48,7 @@ const faqSchema = {
 
 <Layout title={t.seoTitle} description={t.seoDescription} lang={lang} breadcrumb={t.breadcrumb}>
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} slot="head" />
 
   <main class="container mx-auto px-6 pt-10 pb-24 max-w-3xl text-slate-800">
     <article>

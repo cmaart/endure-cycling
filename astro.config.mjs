@@ -4,18 +4,26 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { englishOnlyRoutes } from './src/utils/paths';
 import { guides } from './src/i18n/guides';
+import { vsContent } from './src/i18n/vs';
+import { featurePages } from './src/i18n/features';
+import { latestRelease } from './src/i18n/changelog';
 
-// Guides carry a dateModified in their content map; surface it as <lastmod>
-// so crawlers can prioritise recently edited guides. Other pages have no
-// reliable modification date, so they get none rather than a build timestamp.
-const guideLastmod = new Map(
-  Object.entries(guides).flatMap(([lang, entries]) =>
-    Object.entries(entries).map(([slug, g]) => [
-      `https://www.endure-cycling.com/${lang === 'de' ? 'de/' : ''}guides/${slug}/`,
-      g.dateModified
-    ])
-  )
-);
+// Guides, comparison pages and feature pages carry a dateModified in their
+// content maps; surface it as <lastmod> so crawlers can prioritise recently
+// edited pages. The changelog is dated by its newest release. Other pages have
+// no reliable modification date, so they get none rather than a build timestamp.
+const pageUrl = (lang, path) => `https://www.endure-cycling.com/${lang === 'de' ? 'de/' : ''}${path}/`;
+const datedEntries = (map, prefix) =>
+  Object.entries(map).flatMap(([lang, entries]) =>
+    Object.entries(entries).map(([slug, page]) => [pageUrl(lang, `${prefix}/${slug}`), page.dateModified])
+  );
+const guideLastmod = new Map([
+  ...datedEntries(guides, 'guides'),
+  ...datedEntries(vsContent, 'vs'),
+  ...datedEntries(featurePages, 'features'),
+  [pageUrl('en', 'changelog'), latestRelease.date],
+  [pageUrl('de', 'changelog'), latestRelease.date]
+]);
 
 // https://astro.build/config
 export default defineConfig({

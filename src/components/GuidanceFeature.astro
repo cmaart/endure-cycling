@@ -1,8 +1,10 @@
 ---
 import { getTranslations } from '../i18n/translations';
+import { localeHref } from '../utils/paths';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).guidance;
+const coachHref = localeHref(lang, '/features/ai-coach');
 ---
 
 <section id="guidance" class="py-20 md:py-28 relative overflow-hidden">
@@ -36,6 +38,8 @@ const t = getTranslations(lang).guidance;
             </li>
           ))}
         </ul>
+
+        <a href={coachHref} class="inline-block mt-7 text-accent font-semibold hover:underline">{t.link} →</a>
       </div>
 
       <!-- Phone -->

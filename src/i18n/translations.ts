@@ -201,7 +201,8 @@ export const translations = {
         "<strong>Two alternatives:</strong> one easier, one harder, if the pick does not suit your day.",
         "<strong>Explained:</strong> every pick comes with the reason behind it, based on your own data."
       ],
-      imageAlt: "ENDURE Today screen with recovery score, load balance, week goal and today's prescribed workout"
+      imageAlt: "ENDURE Today screen with recovery score, load balance, week goal and today's prescribed workout",
+      link: "How the AI coach works"
     },
     // Zwift Click
     zwiftClick: {
@@ -267,6 +268,7 @@ export const translations = {
         { feature: "Price", value: "Try free for 14 days, no payment details. Then ENDURE Premium for {monthly} / month or {annual} / year", highlight: true },
         { feature: "Platforms", value: "iOS, Android & Windows" },
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
+        { feature: "AI coach", value: "Plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. Change it in chat" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verified): ERG target & trainer resistance from the bars, no simulated cassette" },
         { feature: "Workout import", value: ".ZWO, .MRC and .ERG files" },
         { feature: "Analytics", value: "FTP & VO2max trends, power profile, time-in-zones" },
@@ -291,6 +293,10 @@ export const translations = {
         {
           q: "How much does ENDURE Premium cost?",
           a: "After the trial, ENDURE Premium costs {monthly} a month or {annual} a year. On the annual plan that works out to {annualPerMonth} a month. These are US prices; in other countries the store may charge a different amount."
+        },
+        {
+          q: "Does ENDURE have an AI coach?",
+          a: "Yes. Every morning the coach reads your recent rides, your training load and a short check-in, then puts one workout for today on the Today screen with an easier and a harder alternative and the reason. Tell it in the chat how your legs feel or how much time you have and it proposes something else. It plans one day at a time rather than a fixed multi-week schedule, and it reviews every ride afterwards."
         },
         {
           q: "Which smart trainers and sensors work with ENDURE?",
@@ -364,6 +370,10 @@ export const translations = {
         {
           title: "How our metrics work",
           body: "FTP and VO2max are modelled from your recorded power and heart-rate data across rides, so trends reflect real progress over time. LT1 and LT2 are estimated from lactate readings you log in-ride or afterwards, fitted to a curve with a confidence tunnel. Core body temperature comes straight from a natively paired CORE sensor, shown live with heat zones so heat training becomes as measurable as power. Climbing Efficiency scores how effectively you turn watts into vertical metres using your ascent speed (VAM)."
+        },
+        {
+          title: "Where ENDURE is heading",
+          body: "Toward the coach. The metrics are the foundation; the AI coach is what we build on them. Today it plans each day from your rides and a morning check-in, explains the pick, offers alternatives, builds workouts and reviews every ride. The coming releases keep going in that direction: training guidance that uses everything the app knows about you. Virtual worlds and racing are not on the list and will not be. The roadmap in the app shows what is next."
         },
         {
           title: "Built with the community",
@@ -443,8 +453,14 @@ export const translations = {
       linksTitle: "Links",
       vsZwift: "Zwift alternative",
       vsTrainerroad: "TrainerRoad alternative",
+      vsRouvy: "Rouvy alternative",
+      vsMywhoosh: "MyWhoosh alternative",
+      vsWahooSystm: "Wahoo SYSTM alternative",
+      vsTrainingpeaksVirtual: "TrainingPeaks Virtual alternative",
+      changelog: "Changelog",
       guides: "Training Guides",
       supportedTrainers: "Supported trainers",
+      featureAiCoach: "AI coach & daily recommendation",
       featureZwiftClick: "Virtual Shifting & Zwift Click",
       featureLactate: "Lactate LT1 & LT2",
       featureCoreTemp: "CORE heat zones",
@@ -701,7 +717,8 @@ export const translations = {
         "<strong>Zwei Alternativen:</strong> eine leichtere, eine härtere, falls die Empfehlung nicht zu deinem Tag passt.",
         "<strong>Mit Begründung:</strong> Zu jeder Empfehlung steht, warum sie heute passt, abgeleitet aus deinen eigenen Daten."
       ],
-      imageAlt: "ENDURE Heute-Screen mit Recovery Score, Load Balance, Wochenziel und dem empfohlenen Workout für heute"
+      imageAlt: "ENDURE Heute-Screen mit Recovery Score, Load Balance, Wochenziel und dem empfohlenen Workout für heute",
+      link: "So arbeitet der KI-Coach"
     },
     // Zwift Click
     zwiftClick: {
@@ -767,6 +784,7 @@ export const translations = {
         { feature: "Preis", value: "14 Tage gratis testen, ohne Zahlungsdaten. Danach ENDURE Premium für {monthly} / Monat oder {annual} / Jahr", highlight: true },
         { feature: "Plattformen", value: "iOS, Android & Windows" },
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
+        { feature: "KI-Coach", value: "Plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Im Chat änderbar" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verifiziert): ERG-Ziel & Trainer-Widerstand vom Lenker, ohne simulierte Kassette" },
         { feature: "Workout-Import", value: ".ZWO, .MRC und .ERG Dateien" },
         { feature: "Analyse", value: "FTP- & VO2max-Trends, Power Profile, Zeit in Zonen" },
@@ -791,6 +809,10 @@ export const translations = {
         {
           q: "Was kostet ENDURE Premium?",
           a: "Nach dem Test kostet ENDURE Premium {monthly} im Monat oder {annual} im Jahr. Mit dem Jahresabo zahlst du umgerechnet {annualPerMonth} im Monat. Das sind die Preise für Deutschland, in anderen Ländern kann der Store einen anderen Betrag verlangen."
+        },
+        {
+          q: "Hat ENDURE einen KI-Coach?",
+          a: "Ja. Jeden Morgen liest der Coach deine letzten Fahrten, deine Trainingsbelastung und einen kurzen Check-in und legt ein Workout für heute auf den Heute-Screen, mit einer leichteren und einer härteren Alternative und der Begründung. Sag ihm im Chat, wie sich die Beine anfühlen oder wie viel Zeit du hast, und er schlägt etwas anderes vor. Er plant Tag für Tag statt eines festen Mehrwochenplans und wertet jede Fahrt danach aus."
         },
         {
           q: "Welche Smart Trainer und Sensoren funktionieren mit ENDURE?",
@@ -864,6 +886,10 @@ export const translations = {
         {
           title: "Wie unsere Metriken funktionieren",
           body: "FTP und VO2max werden aus deinen aufgezeichneten Power- und Herzfrequenzdaten über mehrere Fahrten modelliert, damit Trends echten Fortschritt zeigen. LT1 und LT2 werden aus Laktatwerten geschätzt, die du während oder nach der Fahrt einträgst. ENDURE fittet sie an eine Kurve mit Konfidenztunnel. Die Körperkerntemperatur kommt direkt vom nativ gekoppelten CORE-Sensor, live mit Heat Zones angezeigt. Damit wird Hitzetraining so messbar wie Watt. Climbing Efficiency bewertet über deine Aufstiegsgeschwindigkeit (VAM), wie effektiv du Watt in Höhenmeter umsetzt."
+        },
+        {
+          title: "Wohin sich ENDURE entwickelt",
+          body: "Zum Coach. Die Metriken sind das Fundament, der KI-Coach ist das, was wir darauf bauen. Heute plant er jeden Tag aus deinen Fahrten und einem Morgen-Check-in, begründet die Wahl, bietet Alternativen, baut Workouts und wertet jede Fahrt aus. Die kommenden Releases gehen genau in diese Richtung: Trainingsführung, die alles nutzt, was die App über dich weiß. Virtuelle Welten und Rennen stehen nicht auf der Liste und werden es nicht. Die Roadmap in der App zeigt, was als Nächstes kommt."
         },
         {
           title: "Gemeinsam mit der Community gebaut",
@@ -943,8 +969,14 @@ export const translations = {
       linksTitle: "Links",
       vsZwift: "Zwift Alternative",
       vsTrainerroad: "TrainerRoad Alternative",
+      vsRouvy: "Rouvy Alternative",
+      vsMywhoosh: "MyWhoosh Alternative",
+      vsWahooSystm: "Wahoo SYSTM Alternative",
+      vsTrainingpeaksVirtual: "TrainingPeaks Virtual Alternative",
+      changelog: "Changelog",
       guides: "Trainings-Guides",
       supportedTrainers: "Unterstützte Trainer",
+      featureAiCoach: "KI-Coach & Tagesempfehlung",
       featureZwiftClick: "Virtual Shifting & Zwift Click",
       featureLactate: "Laktat LT1 & LT2",
       featureCoreTemp: "CORE Heat Zones",

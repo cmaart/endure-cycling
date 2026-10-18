@@ -8,6 +8,8 @@ Static marketing site for **ENDURE**, an indoor cycling app available on iOS, An
 
 **Copy rule: never present ENDURE as a one-person project.** No "built by one person", "solo developer", "he develops everything himself", "no team" anywhere on the site. It undermines trust in a paid subscription. Naming the founder on `/about` and `/press` is fine; the framing is "developed in Austria", company voice ("we", "ENDURE"). Build trust with product facts instead: store ratings, real quotes, trainer compatibility, update cadence.
 
+**Positioning (since 2026-10-18): the AI coach is the lead feature and the product direction.** The coach plans each day from the rider's rides and a morning check-in (one workout, two alternatives, the reason), is changeable in chat, builds workouts from text and reviews every ride. It plans one day at a time; the site must not describe ENDURE as having fixed multi-week training plans, and must not say ENDURE has "no automated training" either. Virtual worlds and racing are explicitly not planned. The canonical copy is `/features/ai-coach/` (`src/i18n/features.ts`, key `ai-coach`); the home FAQ, the comparison table, `/about` ("Where ENDURE is heading"), the vs pages ("Daily coaching" row), the `SoftwareApplication` schema and `public/llms.txt` all carry the same framing. Keep them consistent when the coach changes.
+
 ## Commands
 
 - `npm run dev` — local dev server (Astro)
@@ -24,7 +26,13 @@ Astro's i18n config (`astro.config.mjs`) defines `en` (default, no prefix) and `
 
 The `lang` flows top-down: `Layout.astro` resolves it from `Astro.props.lang ?? Astro.currentLocale ?? 'en'`. `src/pages/index.astro` is English; `src/pages/de/index.astro` is the same component tree wrapped in `<Layout lang="de">`. **When adding a new section/component, add the matching keys to both `en` and `de` in `translations.ts`** — there is no fallback per-key, only a whole-language fallback to `en`.
 
-Long-form SEO content lives in sibling files with the same en/de convention: `src/i18n/vs.ts` (competitor comparison pages rendered by `components/VsPage.astro` → `/vs/zwift/`, `/vs/trainerroad/`) and `src/i18n/guides.ts` (training guides rendered by `components/GuidePage.astro` + `GuidesIndexPage.astro` → `/guides/*`). The sitemap is generated at build time by `@astrojs/sitemap`, so a new page under `src/pages/` needs no separate sitemap entry.
+Long-form SEO content lives in sibling files with the same en/de convention: `src/i18n/vs.ts` (competitor comparison pages rendered by `components/VsPage.astro` → `/vs/zwift/`, `/vs/trainerroad/`, `/vs/rouvy/`, `/vs/mywhoosh/`, `/vs/wahoo-systm/`, `/vs/trainingpeaks-virtual/`; `vsKeys` lists them in footer order), `src/i18n/features.ts` (`/features/*`), `src/i18n/guides.ts` (training guides rendered by `components/GuidePage.astro` + `GuidesIndexPage.astro` → `/guides/*`) and `src/i18n/changelog.ts` (release notes rendered by `components/ChangelogPage.astro` → `/changelog/`). The sitemap is generated at build time by `@astrojs/sitemap`, so a new page under `src/pages/` needs no separate sitemap entry.
+
+Every vs, feature and guide entry carries `datePublished` / `dateModified`. They feed a dated `WebPage` / `Article` JSON-LD block, the visible "Updated" line on vs pages and the sitemap `<lastmod>` (see `astro.config.mjs`). Bump `dateModified` whenever the copy changes; a new comparison page needs a route file under both `src/pages/vs/` and `src/pages/de/vs/`, its key in `vsKeys`, a footer label in `translations.ts` and a line in `public/llms.txt`.
+
+### Changelog is the freshness signal
+
+`src/i18n/changelog.ts` holds the release notes (newest first, en + de), copied from the App Store Connect "What's New" text (`asc localizations list --version <id>`). `Layout.astro` reads `latestRelease` for `softwareVersion`, `dateModified` and `releaseNotes` in the `SoftwareApplication` schema, so the top entry must be the version that is live in the stores. `releaseCount` / `releasesSince` are counted by hand from App Store Connect; bump them with each new entry. `public/llms.txt` is a hand-maintained index for AI crawlers and lists every public page; add new pages there too.
 
 `src/pages/index.astro` contains an inline script that auto-redirects German browsers to `/de` (gated by a `preferredLang` localStorage key set by `LanguageSwitcher`).
 

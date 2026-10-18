@@ -36,10 +36,12 @@ const articleSchema = {
   "inLanguage": lang,
   "image": `${siteUrl}/assets/og/endure-og.jpg`,
   "mainEntityOfPage": canonicalUrl,
+  // Named author for E-E-A-T; mirrors the Person entity on /about.
   "author": {
-    "@type": "Organization",
-    "name": "ENDURE",
-    "url": siteUrl
+    "@type": "Person",
+    "name": "Christoph Martin",
+    "url": localeUrl('en', '/about'),
+    "worksFor": { "@type": "Organization", "name": "ENDURE", "url": siteUrl }
   },
   "publisher": {
     "@type": "Organization",

@@ -5,7 +5,7 @@ import { getTranslations } from '../i18n/translations';
 import { getVsContent, type VsKey } from '../i18n/vs';
 import { config } from '../config';
 import StoreBadges from './StoreBadges.astro';
-import { localeHref } from '../utils/paths';
+import { localeHref, localeUrl, siteUrl } from '../utils/paths';
 
 interface Props {
   lang: 'en' | 'de';
@@ -16,6 +16,26 @@ const { lang, competitor } = Astro.props;
 const t = getVsContent(lang, competitor);
 const tr = getTranslations(lang);
 const homeHref = localeHref(lang);
+const canonicalUrl = localeUrl(lang, `/vs/${competitor}`);
+const formatDate = (iso: string) =>
+  new Date(`${iso}T00:00:00Z`).toLocaleDateString(lang === 'de' ? 'de-AT' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+const updatedLabel = lang === 'de' ? 'Aktualisiert' : 'Updated';
+
+// The comparison is dated content: answer engines weigh freshness, so the page
+// carries its own publish/modified dates in schema and in the visible copy.
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": t.h1,
+  "description": t.seoDescription,
+  "url": canonicalUrl,
+  "inLanguage": lang,
+  "datePublished": t.datePublished,
+  "dateModified": t.dateModified,
+  "about": { "@type": "SoftwareApplication", "name": "ENDURE", "url": siteUrl },
+  "author": { "@type": "Organization", "name": "ENDURE", "url": siteUrl },
+  "publisher": { "@type": "Organization", "name": "ENDURE", "url": siteUrl }
+};
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -30,10 +50,12 @@ const faqSchema = {
 
 <Layout title={t.seoTitle} description={t.seoDescription} lang={lang} breadcrumb={t.breadcrumb}>
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} slot="head" />
 
   <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
     <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-3">{t.h1}</h1>
-    <p class="text-xl md:text-2xl text-slate-600 font-semibold mb-8">{t.subtitle}</p>
+    <p class="text-xl md:text-2xl text-slate-600 font-semibold mb-3">{t.subtitle}</p>
+    <p class="font-mono text-xs tracking-[0.04em] text-slate-500 mb-8">{updatedLabel} <time datetime={t.dateModified}>{formatDate(t.dateModified)}</time></p>
 
     <!-- Direct answer (featured-snippet target) -->
     <p class="text-lg leading-relaxed font-medium bg-slate-50 border-l-4 border-accent rounded-r-xl px-6 py-5 mb-8">
