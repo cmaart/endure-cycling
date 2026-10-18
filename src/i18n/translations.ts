@@ -416,7 +416,7 @@ export const translations = {
       ],
       founderTitle: "About the founder",
       founderBody: "Christoph Martin is a software engineer and endurance athlete based in Austria. ENDURE is developed there, from the Bluetooth trainer control to the performance analytics. The app started from a simple frustration: indoor cycling apps were full of gimmicks, but thin on the honest analysis that actually makes riders faster.",
-      assetsTitle: "Logos & screenshots",
+      assetsTitle: "Logos, key visuals & screenshots",
       logosTitle: "Logos",
       logos: [
         { label: "ENDURE lockup (black, transparent PNG)", href: "/assets/ENDURE_lockup_exact_icon_4k.png" },
@@ -424,6 +424,13 @@ export const translations = {
         { label: "App icon (black, transparent PNG)", href: "/assets/ENDURE_E_icon_black_transparent_4k.png" },
         { label: "App icon (white, transparent PNG)", href: "/assets/ENDURE_E_icon_white_transparent_4k.png" },
         { label: "App icon (store, PNG)", href: "/assets/press/endure-app-icon.png" }
+      ],
+      keyVisualsTitle: "Key visuals",
+      keyVisualsIntro: "Landscape artwork for articles, social posts and store features. Preview below, full-resolution PNG on download.",
+      keyVisuals: [
+        { file: "key-visual-hero-en", caption: "Hero visual (English, 1920 × 1080): \"Stop doing FTP tests. Your rides are the test.\"" },
+        { file: "key-visual-hero-de", caption: "Hero visual (German, 1920 × 1080): \"Schluss mit FTP-Tests. Deine Fahrten sind der Test.\"" },
+        { file: "key-visual-rider-road", caption: "Rider on an open road, no text (2560 × 1440)" }
       ],
       screenshotsTitle: "Screenshots",
       screenshotsIntro: "Store screenshots in full resolution (1290 × 2796). Click to open, download link below each image.",
@@ -932,7 +939,7 @@ export const translations = {
       ],
       founderTitle: "Über den Gründer",
       founderBody: "Christoph Martin ist Softwareentwickler und Ausdauersportler aus Österreich. ENDURE wird dort entwickelt, von der Bluetooth-Trainersteuerung bis zur Leistungsanalyse. Die App entstand aus einem simplen Frust: Indoor-Cycling-Apps waren voller Spielereien, aber dünn bei der ehrlichen Analyse, die Sportler wirklich schneller macht.",
-      assetsTitle: "Logos & Screenshots",
+      assetsTitle: "Logos, Key Visuals & Screenshots",
       logosTitle: "Logos",
       logos: [
         { label: "ENDURE Lockup (schwarz, transparentes PNG)", href: "/assets/ENDURE_lockup_exact_icon_4k.png" },
@@ -940,6 +947,13 @@ export const translations = {
         { label: "App-Icon (schwarz, transparentes PNG)", href: "/assets/ENDURE_E_icon_black_transparent_4k.png" },
         { label: "App-Icon (weiß, transparentes PNG)", href: "/assets/ENDURE_E_icon_white_transparent_4k.png" },
         { label: "App-Icon (Store, PNG)", href: "/assets/press/endure-app-icon.png" }
+      ],
+      keyVisualsTitle: "Key Visuals",
+      keyVisualsIntro: "Querformat-Motive für Artikel, Social Posts und Store-Features. Vorschau unten, PNG in voller Auflösung zum Download.",
+      keyVisuals: [
+        { file: "key-visual-hero-de", caption: "Hero-Motiv (Deutsch, 1920 × 1080): \"Schluss mit FTP-Tests. Deine Fahrten sind der Test.\"" },
+        { file: "key-visual-hero-en", caption: "Hero-Motiv (Englisch, 1920 × 1080): \"Stop doing FTP tests. Your rides are the test.\"" },
+        { file: "key-visual-rider-road", caption: "Fahrer auf freier Straße, ohne Text (2560 × 1440)" }
       ],
       screenshotsTitle: "Screenshots",
       screenshotsIntro: "Store-Screenshots in voller Auflösung (1290 × 2796). Klick öffnet das Bild, Download-Link unter jedem Bild.",

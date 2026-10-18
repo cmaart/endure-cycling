@@ -64,6 +64,30 @@ const homeHref = localeHref(lang);
         ))}
       </ul>
 
+      <h3 class="text-xl font-bold text-slate-900 mb-2">{t.keyVisualsTitle}</h3>
+      <p class="text-slate-600 mb-4">{t.keyVisualsIntro}</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+        {t.keyVisuals.map((visual: { file: string; caption: string }) => (
+          <figure>
+            <a href={`/assets/press/${visual.file}.png`} target="_blank" rel="noopener">
+              <img
+                src={`/assets/press/${visual.file}.webp`}
+                alt={visual.caption}
+                width="1600"
+                height="900"
+                class="rounded-xl border border-slate-200 w-full"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <figcaption class="text-sm text-slate-600 mt-2">
+              {visual.caption}<br />
+              <a href={`/assets/press/${visual.file}.png`} download class="text-accent font-semibold hover:underline">{t.downloadPng}</a>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+
       <h3 class="text-xl font-bold text-slate-900 mb-2">{t.screenshotsTitle}</h3>
       <p class="text-slate-600 mb-4">{t.screenshotsIntro}</p>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
