@@ -90,7 +90,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'Does the coach build workouts?',
           body:
-            'Two ways. When the plan calls for a session the library does not have, the coach builds it. And you can type a workout yourself: write "3x10min sweet spot with 5min rest" and you get a finished session with warmup and cooldown. Not quite right? Tell it what to change and it adjusts. Give it a duration and the coach fills the gap with easy riding, so a 60-minute request really lasts 60 minutes.'
+            'Two ways. When the plan calls for a session the library does not have, the coach builds it. And you can type a workout yourself: write "3x10min sweet spot with 5min rest" and you get a finished session with warmup and cooldown. Not quite right? Tell it what to change and it adjusts. Give it a duration and the coach fills the gap with easy riding, so a 60-minute request really lasts 60 minutes. Any workout, built or imported, exports as a .ZWO, .ERG or .MRC file, and one tap sends it to Zwift as a custom workout.'
         },
         {
           title: 'What happens after the ride?',
@@ -496,7 +496,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         {
           title: 'Baut der Coach Workouts?',
           body:
-            'Auf zwei Wegen. Braucht der Plan eine Einheit, die die Bibliothek nicht hat, baut der Coach sie. Und du kannst ein Workout selbst eintippen: schreib "3x10min Sweetspot mit 5min Pause" und bekommst eine fertige Einheit mit Warmup und Cooldown. Passt es nicht ganz? Sag, was anders sein soll, und es wird angepasst. Gibst du eine Dauer an, füllt der Coach die Lücke mit lockerem Fahren, 60 Minuten heißen dann wirklich 60 Minuten.'
+            'Auf zwei Wegen. Braucht der Plan eine Einheit, die die Bibliothek nicht hat, baut der Coach sie. Und du kannst ein Workout selbst eintippen: schreib "3x10min Sweetspot mit 5min Pause" und bekommst eine fertige Einheit mit Warmup und Cooldown. Passt es nicht ganz? Sag, was anders sein soll, und es wird angepasst. Gibst du eine Dauer an, füllt der Coach die Lücke mit lockerem Fahren, 60 Minuten heißen dann wirklich 60 Minuten. Jedes Workout, gebaut oder importiert, lässt sich als .ZWO-, .ERG- oder .MRC-Datei exportieren, und ein Tipp schickt es als Custom Workout nach Zwift.'
         },
         {
           title: 'Was passiert nach der Fahrt?',

@@ -63,12 +63,12 @@ export const vsContent = {
       switchBullets: [
         "<strong>Your trainer:</strong> ENDURE controls smart trainers over the Bluetooth standard FTMS, so you keep riding the same hardware with no new purchase.",
         "<strong>Your Zwift Click:</strong> a v1 pairs like any other sensor and changes your ERG target or trainer resistance from the bars. ENDURE does not simulate a cassette, so it is resistance control rather than gears.",
-        "<strong>Your workouts:</strong> .ZWO files import directly, along with .MRC and .ERG, so your existing session library comes with you.",
+        "<strong>Your workouts:</strong> .ZWO files import directly, along with .MRC and .ERG, so your existing session library comes with you. It works the other way too: one tap sends an ENDURE workout to Zwift as a custom workout.",
         "<strong>Your history:</strong> ENDURE syncs your Strava or intervals.icu rides on first launch, so indoor and outdoor training sit in one picture from day one.",
         "<strong>Your hardware budget:</strong> ENDURE runs on the phone or tablet you already own, so there is no gaming PC to keep fed."
       ],
       bothTitle: "Can you use both?",
-      bothBody: "Absolutely, many riders do. A common setup: ride Zwift for races and social events, and use ENDURE for structured training sessions and as the analysis home for FTP, VO2max, lactate and heat metrics. ENDURE syncs your rides via Strava or intervals.icu, so nothing gets lost.",
+      bothBody: "Absolutely, many riders do. A common setup: ride Zwift for races and social events, and use ENDURE for structured training sessions and as the analysis home for FTP, VO2max, lactate and heat metrics. If you would rather ride the coach's workout inside Zwift, one tap sends it there as a custom workout, and the ride comes back through Strava or intervals.icu, so nothing gets lost.",
       faq: [
         {
           q: "What does ENDURE cost compared with Zwift?",
@@ -81,6 +81,10 @@ export const vsContent = {
         {
           q: "Does ENDURE have virtual worlds like Zwift?",
           a: "No, deliberately. ENDURE follows a precision-over-gimmicks philosophy: structured workouts, clean ride screens and deep analysis instead of avatars and virtual roads."
+        },
+        {
+          q: "Can I ride ENDURE workouts in Zwift?",
+          a: "Yes. One tap on the workout preview in ENDURE and the workout waits in Zwift the same day under Custom Workouts. The transfer runs through intervals.icu; the first time, the app walks you through the setup. Any workout also exports as a .ZWO file if you would rather move it by hand."
         },
         {
           q: "Can ENDURE control the same smart trainers as Zwift?",
@@ -519,12 +523,12 @@ export const vsContent = {
       switchBullets: [
         "<strong>Deinen Trainer:</strong> ENDURE steuert Smart Trainer über den Bluetooth-Standard FTMS, du fährst also mit derselben Hardware weiter und musst nichts neu kaufen.",
         "<strong>Deinen Zwift Click:</strong> ein v1 verbindet sich wie jeder andere Sensor und ändert ERG-Ziel oder Trainer-Widerstand vom Lenker. ENDURE simuliert keine Kassette, es ist also Widerstandssteuerung statt Schaltung.",
-        "<strong>Deine Workouts:</strong> .ZWO-Dateien lassen sich direkt importieren, ebenso .MRC und .ERG. Deine bestehende Einheiten-Sammlung kommt mit.",
+        "<strong>Deine Workouts:</strong> .ZWO-Dateien lassen sich direkt importieren, ebenso .MRC und .ERG. Deine bestehende Einheiten-Sammlung kommt mit. Umgekehrt geht es auch: ein Tipp schickt ein ENDURE-Workout als Custom Workout nach Zwift.",
         "<strong>Deine Historie:</strong> ENDURE synchronisiert deine Strava- oder intervals.icu-Fahrten beim ersten Start, Indoor und Outdoor stehen ab Tag eins in einem Bild.",
         "<strong>Dein Hardware-Budget:</strong> ENDURE läuft auf dem Handy oder Tablet, das du schon hast, und braucht keinen Gaming-PC."
       ],
       bothTitle: "Kannst du beide nutzen?",
-      bothBody: "Klar, das machen viele. Ein typisches Setup: Zwift für Rennen und Events, ENDURE für strukturierte Trainingseinheiten und als Analyse-Zuhause für FTP, VO2max, Laktat und Heat-Metriken. Über den Strava- oder intervals.icu-Sync geht keine Fahrt verloren.",
+      bothBody: "Klar, das machen viele. Ein typisches Setup: Zwift für Rennen und Events, ENDURE für strukturierte Trainingseinheiten und als Analyse-Zuhause für FTP, VO2max, Laktat und Heat-Metriken. Willst du das Workout des Coaches lieber in Zwift fahren, schickt es ein Tipp als Custom Workout dorthin, und die Fahrt kommt über Strava oder intervals.icu zurück. So geht keine Fahrt verloren.",
       faq: [
         {
           q: "Was kostet ENDURE im Vergleich zu Zwift?",
@@ -537,6 +541,10 @@ export const vsContent = {
         {
           q: "Hat ENDURE virtuelle Welten wie Zwift?",
           a: "Nein, bewusst nicht. ENDURE folgt der Philosophie Präzision statt Spielerei: strukturierte Workouts, klare Ride-Screens und tiefe Analyse statt Avatare und virtuelle Straßen."
+        },
+        {
+          q: "Kann ich ENDURE-Workouts in Zwift fahren?",
+          a: "Ja. Ein Tipp in der Workout-Vorschau in ENDURE, und das Workout wartet noch am selben Tag in Zwift unter Custom Workouts. Die Übertragung läuft über intervals.icu; beim ersten Mal führt dich die App durch die Einrichtung. Jedes Workout lässt sich auch als .ZWO-Datei exportieren, wenn du es lieber von Hand übertragen willst."
         },
         {
           q: "Steuert ENDURE dieselben Smart Trainer wie Zwift?",

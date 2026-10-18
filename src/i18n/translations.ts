@@ -242,7 +242,7 @@ export const translations = {
       training: {
         title: "Structured Training",
         feature1: "<strong>Targeted Workouts:</strong> Only physiologically meaningful sessions: VO2max, threshold, sweet spot.",
-        feature2: "<strong>Universal Import:</strong> Supports .ZWO, .MRC, and .ERG files.",
+        feature2: "<strong>Import & Export:</strong> .ZWO, .MRC and .ERG files in and out. One tap sends a workout to Zwift.",
         feature3: "<strong>Quick Free Ride:</strong> Optional ERG mode to ride by watts instantly."
       },
       
@@ -270,7 +270,7 @@ export const translations = {
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
         { feature: "AI coach", value: "Plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. Change it in chat" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verified): ERG target & trainer resistance from the bars, no simulated cassette" },
-        { feature: "Workout import", value: ".ZWO, .MRC and .ERG files" },
+        { feature: "Workout import & export", value: ".ZWO, .MRC and .ERG files in and out. One-tap send to Zwift via intervals.icu. Rides export as .FIT" },
         { feature: "Analytics", value: "FTP & VO2max trends, power profile, time-in-zones" },
         { feature: "Lactate LT1 / LT2", value: "In-ride & post-ride logging with auto-estimated thresholds" },
         { feature: "CORE body temperature", value: "Native CORE sensor integration with live heat zones, an industry first" },
@@ -345,6 +345,10 @@ export const translations = {
         {
           q: "Does ENDURE sync with Strava or intervals.icu?",
           a: "Yes. ENDURE auto-uploads your rides to Strava and intervals.icu, and can sync your ride history from either on first launch, combining indoor and outdoor activities into one complete performance picture."
+        },
+        {
+          q: "Can I ride ENDURE workouts in Zwift or another app?",
+          a: "Yes. Every workout in ENDURE, from the library, built by the coach or typed in by you, exports as a .ZWO, .ERG or .MRC file for Zwift, TrainerRoad, Wahoo SYSTM, Rouvy and others. For Zwift there is a shortcut: one tap on the workout preview and it waits in Zwift the same day under Custom Workouts, carried over through intervals.icu. The ride comes back to ENDURE through Strava or intervals.icu. Rides also export as .FIT files."
         },
         {
           q: "Where do I report problems or send feedback?",
@@ -765,7 +769,7 @@ export const translations = {
       training: {
         title: "Strukturiertes Training",
         feature1: "<strong>Zielgerichtete Workouts:</strong> Nur physiologisch sinnvolle Einheiten: VO2max, Schwelle, Sweet Spot.",
-        feature2: "<strong>Universeller Import:</strong> Unterstützt .ZWO, .MRC und .ERG Dateien.",
+        feature2: "<strong>Import & Export:</strong> .ZWO-, .MRC- und .ERG-Dateien rein und raus. Ein Tipp schickt ein Workout nach Zwift.",
         feature3: "<strong>Schnelles Freifahren:</strong> Optionaler ERG-Modus um sofort nach Watt zu fahren."
       },
       
@@ -793,7 +797,7 @@ export const translations = {
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
         { feature: "KI-Coach", value: "Plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Im Chat änderbar" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verifiziert): ERG-Ziel & Trainer-Widerstand vom Lenker, ohne simulierte Kassette" },
-        { feature: "Workout-Import", value: ".ZWO, .MRC und .ERG Dateien" },
+        { feature: "Workout-Import & -Export", value: ".ZWO-, .MRC- und .ERG-Dateien rein und raus. Ein Tipp schickt ein Workout über intervals.icu nach Zwift. Fahrten als .FIT exportierbar" },
         { feature: "Analyse", value: "FTP- & VO2max-Trends, Power Profile, Zeit in Zonen" },
         { feature: "Laktat LT1 / LT2", value: "Eintrag während & nach der Fahrt, Schwellen automatisch geschätzt" },
         { feature: "CORE Körpertemperatur", value: "Native CORE-Sensor-Integration mit Live Heat Zones, erstmals in einer Cycling-App" },
@@ -868,6 +872,10 @@ export const translations = {
         {
           q: "Synchronisiert ENDURE mit Strava oder intervals.icu?",
           a: "Ja. ENDURE lädt deine Fahrten automatisch zu Strava und intervals.icu hoch und kann beim ersten Start deinen Fahrtverlauf aus beiden Quellen synchronisieren. Indoor- und Outdoor-Aktivitäten ergeben so ein komplettes Leistungsbild."
+        },
+        {
+          q: "Kann ich ENDURE-Workouts in Zwift oder einer anderen App fahren?",
+          a: "Ja. Jedes Workout in ENDURE, aus der Bibliothek, vom Coach gebaut oder von dir eingetippt, lässt sich als .ZWO-, .ERG- oder .MRC-Datei für Zwift, TrainerRoad, Wahoo SYSTM, Rouvy und andere exportieren. Für Zwift gibt es eine Abkürzung: ein Tipp in der Workout-Vorschau, und es wartet noch am selben Tag in Zwift unter Custom Workouts, übertragen über intervals.icu. Die Fahrt kommt über Strava oder intervals.icu zurück zu ENDURE. Fahrten lassen sich außerdem als .FIT-Datei exportieren."
         },
         {
           q: "Wo melde ich Probleme oder Feedback?",
