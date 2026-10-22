@@ -1,0 +1,137 @@
+---
+import UnfoldLayout from '../../layouts/UnfoldLayout.astro';
+---
+
+<UnfoldLayout
+  title="Privacy Policy | Unfold"
+  description="How the Unfold app handles data: screen snapshots stay in memory, crash reports without personal data, no account, no tracking."
+>
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">PRIVACY POLICY</h1>
+    <p class="mb-8 text-slate-500 font-medium">Last updated: 2026-10-22</p>
+
+    <div class="space-y-6 text-lg">
+      <p>
+        This Privacy Policy explains how the Android app Unfold (package <code>com.cmart.unfold</code>, “Unfold”, “we”,
+        “us”) handles data. In short: Unfold has no account and no own server. Screen content never leaves your phone.
+        The only data we receive are crash and error reports without personal data.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">1. Controller / Contact</h2>
+      <p>
+        Controller: Christoph Martin<br />
+        Address: Fischerweg 8, 7503 Großpetersdorf, Austria<br />
+        Email: <a href="mailto:info@endure-cycling.com" class="text-accent hover:underline">info@endure-cycling.com</a>
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">2. Accessibility service and screen content</h2>
+      <p>
+        Unfold uses an Android accessibility service to draw the fold transition on top of the screen when you open or
+        close your phone. This is the only purpose of the service. It does not help users with disabilities and is not
+        declared as an accessibility tool.
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>
+          When a transition starts, the service takes a snapshot of the current screen and folds it. The snapshot exists
+          only in memory for the length of that one transition (about half a second). It is never saved, logged,
+          analysed or sent anywhere.
+        </li>
+        <li>On the lock screen and for apps that block screenshots, no snapshot is taken; the effect runs on a neutral surface instead.</li>
+        <li>
+          The service does not read text, does not record what you type, does not record which apps you use and does not
+          perform actions on your behalf. It only looks up the position of the top window so the snapshot covers the
+          right area.
+        </li>
+        <li>You enable the service yourself in the Android settings after Unfold explains what it does, and you can turn it off there at any time.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">3. Data stored on your phone</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Your settings (effect on/off, direction, fine-tuning, device profile) and onboarding progress</li>
+        <li>The start date of your 14-day trial</li>
+        <li>Whether you own the Lifetime Unlock (a cache of what Google Play reports)</li>
+        <li>Hinge sensor and display measurements for your phone model</li>
+      </ul>
+      <p>
+        These data stay on the device. If Android backup is enabled on your phone, Google may include the settings,
+        the trial start and the purchase cache in your device backup under Google's terms; device-specific measurements
+        are excluded.
+      </p>
+      <p>
+        The trial start date is also saved in Google Play services Block Store, so that a reinstall does not restart the
+        trial. Block Store keeps this single date on your Google account's device backup, end-to-end encrypted where
+        your device supports it. It is not linked to your identity by us, and we cannot read it.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">4. Crash and error reports (Sentry)</h2>
+      <p>
+        When Unfold crashes, freezes (ANR) or hits an error, it sends a report to Sentry (Functional Software, Inc.,
+        USA) so we can fix the problem. A report contains:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Stack trace and error message</li>
+        <li>App version, Android version, device maker and model, hinge sensor type</li>
+        <li>A random installation ID and session health (whether a session ended in a crash)</li>
+      </ul>
+      <p>
+        Reports never contain screenshots, screen content, session replays, the names of apps you use, your name, email
+        address or any other personal data; Unfold removes such fields before sending. Like any server, Sentry sees the
+        IP address of the connection that delivers a report.
+        Legal basis: our legitimate interest in a working app (GDPR Art. 6(1)(f)). Reports are kept for up to 90 days.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">5. Purchases (Google Play)</h2>
+      <p>
+        The Lifetime Unlock is sold through Google Play Billing. Google processes the payment as an independent
+        controller under its own privacy policy. Unfold only receives from Google Play whether you own the product and
+        the purchase confirmation needed to unlock it. We do not receive your name, email address or payment details.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">6. Notifications</h2>
+      <p>
+        If you allow notifications, Unfold reminds you two days before and on the day your trial ends. The reminders
+        are scheduled on the phone; no push service or server is involved.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">7. What we do not do</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>No account, no login, no own server</li>
+        <li>No analytics, no advertising, no tracking SDKs</li>
+        <li>No sale or sharing of data with third parties for their own purposes</li>
+        <li>No collection of location, contacts, photos, messages or other personal content</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">8. International transfers</h2>
+      <p>
+        Sentry may process crash reports in the United States. Where required, we rely on the EU Standard Contractual
+        Clauses and Sentry's data processing agreement.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">9. Your rights (EEA/UK/Switzerland)</h2>
+      <p>
+        You have the right to access, rectification, erasure, restriction, objection and data portability, and the right
+        to lodge a complaint with a supervisory authority (in Austria: Datenschutzbehörde, dsb.gv.at). Because crash
+        reports carry no personal identifiers, we usually cannot link a report to you; tell us your device model and the
+        approximate time of a crash and we will search for it. Contact:
+        <a href="mailto:info@endure-cycling.com" class="text-accent hover:underline">info@endure-cycling.com</a>.
+      </p>
+      <p>
+        Deleting data: uninstalling Unfold removes all data stored on the phone. To also remove the trial date from
+        Block Store, clear Unfold's data in the Android settings before uninstalling, or remove the app's backup in your
+        Google account. Crash reports expire automatically after 90 days, or earlier on request.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">10. This website</h2>
+      <p>
+        The Unfold pages on endure-cycling.com set no cookies and load no analytics. The site is hosted on GitHub Pages
+        (GitHub, Inc., USA), which processes your IP address to deliver the pages.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">11. Children</h2>
+      <p>Unfold is not directed at children under 13 and collects no personal data from anyone.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">12. Changes</h2>
+      <p>We may update this Privacy Policy. The “Last updated” date above shows the current version.</p>
+    </div>
+  </main>
+</UnfoldLayout>

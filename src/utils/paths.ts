@@ -33,11 +33,12 @@ export function localeUrl(lang: Lang, path: string = '/'): string {
  * URL that 404s is a broken annotation, and Google reports it as one. The same
  * list drives the sitemap filter in `astro.config.mjs`.
  *
- * Currently empty: the legal pages (privacy, terms, imprint) got German
- * versions under `src/pages/de/`, so every route has both locales. Add a route
- * here only while its German page does not exist yet.
+ * The legal pages (privacy, terms, imprint) got German versions under
+ * `src/pages/de/`. The Unfold pages stay English for good: Unfold is a separate
+ * Android app whose UI is English only. Add an ENDURE route here only while its
+ * German page does not exist yet.
  */
-export const englishOnlyRoutes: string[] = [];
+export const englishOnlyRoutes: string[] = ['unfold', 'unfold/privacy', 'unfold/devices'];
 
 /** Whether `basePath` (normalized, slash-free) has a German translation. */
 export function hasGermanVersion(basePath: string): boolean {

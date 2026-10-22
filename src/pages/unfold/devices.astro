@@ -1,0 +1,91 @@
+---
+import UnfoldLayout from '../../layouts/UnfoldLayout.astro';
+
+// Mirrors BundledProfiles.kt in the Unfold app (com.cmart.unfold.device). Update both together.
+// precise = continuous hinge sensor, Tracked Transition; steps = stops-only sensor, Timed Transition;
+// runtime = sensor not verified on hardware yet, the app checks it on first run and picks the matching transition.
+type Sensor = 'precise' | 'steps' | 'runtime';
+
+const devices: { maker: string; models: string[]; sensor: Sensor }[] = [
+  { maker: 'Google', models: ['Pixel Fold', 'Pixel 9 Pro Fold', 'Pixel 10 Pro Fold', 'Pixel 11 Pro Fold'], sensor: 'precise' },
+  {
+    maker: 'Samsung',
+    models: ['Galaxy Z Fold5', 'Galaxy Z Fold6', 'Galaxy Z Fold Special Edition', 'Galaxy Z Fold7', 'Galaxy Z Fold8', 'Galaxy Z Fold8 Ultra'],
+    sensor: 'steps'
+  },
+  { maker: 'Honor', models: ['Magic V2', 'Magic V3', 'Magic V5', 'Magic V6'], sensor: 'runtime' },
+  { maker: 'OPPO', models: ['Find N3', 'Find N5', 'Find N6'], sensor: 'runtime' },
+  { maker: 'OnePlus', models: ['OnePlus Open'], sensor: 'runtime' },
+  { maker: 'vivo', models: ['X Fold3 Pro', 'X Fold5', 'X Fold6'], sensor: 'runtime' },
+  { maker: 'Xiaomi', models: ['Mix Fold 3', 'Mix Fold 4'], sensor: 'runtime' }
+];
+
+const sensorLabel: Record<Sensor, string> = {
+  precise: 'Follows your hand',
+  steps: 'Timed transition per step',
+  runtime: 'Checked on first run'
+};
+---
+
+<UnfoldLayout
+  title="Supported devices | Unfold"
+  description="Book foldables supported by Unfold: Pixel Fold, Galaxy Z Fold, Honor Magic V, OPPO Find N, OnePlus Open, vivo X Fold and Xiaomi Mix Fold."
+>
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Supported devices</h1>
+
+    <div class="space-y-6 text-lg">
+      <p>
+        Unfold needs a book foldable with Android 13 or newer: a phone that opens like a book, with a cover display
+        outside and a large display inside. The devices below ship with a built-in profile. Other book foldables are
+        detected when the app starts and usually work too.
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-base">
+          <thead>
+            <tr class="border-b border-slate-300">
+              <th class="py-3 pr-6 font-semibold text-slate-900">Maker</th>
+              <th class="py-3 pr-6 font-semibold text-slate-900">Models</th>
+              <th class="py-3 font-semibold text-slate-900">Transition</th>
+            </tr>
+          </thead>
+          <tbody>
+            {devices.map((d) => (
+              <tr class="border-b border-slate-200 align-top">
+                <td class="py-3 pr-6 font-medium text-slate-900">{d.maker}</td>
+                <td class="py-3 pr-6">{d.models.join(', ')}</td>
+                <td class="py-3 text-slate-600">{sensorLabel[d.sensor]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">What the transition column means</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Follows your hand:</strong> the hinge sensor reports every angle, so the fold moves with the phone.</li>
+        <li>
+          <strong>Timed transition per step:</strong> the hinge sensor only reports a few positions (closed, half open,
+          open). Unfold plays a short animated fold at each step. Fully supported.
+        </li>
+        <li>
+          <strong>Checked on first run:</strong> Unfold reads the hinge sensor when it starts and picks one of the two
+          modes above.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">Not supported</h2>
+      <p>
+        Flip phones (such as Galaxy Z Flip and Motorola razr) and regular phones. Unfold recognizes them and tells you
+        so instead of starting the effect.
+      </p>
+
+      <p>
+        Your foldable is missing or behaves oddly? Write to
+        <a href="mailto:info@endure-cycling.com?subject=Unfold%20device" class="text-accent hover:underline">info@endure-cycling.com</a>
+        with the model name.
+      </p>
+    </div>
+  </main>
+</UnfoldLayout>

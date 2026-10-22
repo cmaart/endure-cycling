@@ -1,0 +1,61 @@
+---
+import UnfoldLayout from '../../layouts/UnfoldLayout.astro';
+
+const playUrl = 'https://play.google.com/store/apps/details?id=com.cmart.unfold';
+---
+
+<UnfoldLayout
+  title="Unfold: fold transition for book foldables"
+  description="Unfold plays a fold transition whenever you open or close your book foldable. Free 14-day trial, then a one-time Lifetime Unlock. No account, no tracking."
+>
+  <main class="container mx-auto px-6 pt-12 pb-24 max-w-4xl text-slate-800">
+    <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6">Unfold</h1>
+    <p class="text-xl text-slate-600 mb-10 max-w-2xl">
+      A fold transition for book foldables. When you open or close your phone, the screen folds with it, from the
+      cover display to the inner display and back.
+    </p>
+
+    <a
+      href={playUrl}
+      class="inline-block rounded-full bg-slate-900 text-white px-6 py-3 font-semibold hover:bg-slate-700 transition-colors"
+    >
+      Get it on Google Play
+    </a>
+
+    <div class="space-y-6 text-lg mt-16">
+      <h2 class="text-2xl font-bold text-slate-900">How it works</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>
+          On phones with a precise hinge sensor, such as the Pixel Fold series, the transition follows your hand as you
+          open or close the phone.
+        </li>
+        <li>
+          On phones that only report a few hinge positions, such as the Galaxy Z Fold series, a timed transition plays
+          at each step.
+        </li>
+        <li>
+          Unfold draws the effect through an Android accessibility service. A snapshot of the screen is held in memory
+          for the length of one transition and is never stored or sent.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">Price</h2>
+      <p>
+        Free to download with a 14-day trial, no payment details needed. After the trial, a one-time Lifetime Unlock
+        through Google Play keeps the effect on. No subscription, no account.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">Devices</h2>
+      <p>
+        Unfold runs on book foldables with Android 13 or newer. Flip phones and regular phones are not supported. See the
+        <a href="/unfold/devices/" class="text-accent hover:underline">list of supported devices</a>.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">Support</h2>
+      <p>
+        Questions, bug reports or a device that does not work as expected: write to
+        <a href="mailto:info@endure-cycling.com?subject=Unfold" class="text-accent hover:underline">info@endure-cycling.com</a>.
+      </p>
+    </div>
+  </main>
+</UnfoldLayout>
