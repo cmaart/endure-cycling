@@ -4,6 +4,7 @@ import { config } from '../config';
 import { localeHref } from '../utils/paths';
 import { vsKeys } from '../i18n/vs';
 import StoreBadges from './StoreBadges.astro';
+import WebAppLink from './WebAppLink.astro';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const tr = getTranslations(lang);
@@ -12,7 +13,6 @@ const currentYear = new Date().getFullYear();
 const feedbackHref = localeHref(lang, '/feedback');
 const aboutHref = localeHref(lang, '/about');
 const guidesHref = localeHref(lang, '/guides');
-const changelogHref = localeHref(lang, '/changelog');
 // One footer link per comparison page; the labels live in translations.ts.
 const vsLabels: Record<(typeof vsKeys)[number], string> = {
   zwift: t.vsZwift,
@@ -33,6 +33,7 @@ const imprintHref = localeHref(lang, '/imprint');
 // page links to them, not just the homepage sections they expand on.
 const featureLinks = [
   { href: localeHref(lang, '/features/ai-coach'), label: t.featureAiCoach },
+  { href: localeHref(lang, '/features/training-planning'), label: t.featureTrainingPlanning },
   { href: localeHref(lang, '/features/zwift-click'), label: t.featureZwiftClick },
   { href: localeHref(lang, '/features/lactate-lt1-lt2'), label: t.featureLactate },
   { href: localeHref(lang, '/features/core-heat-zones'), label: t.featureCoreTemp },
@@ -55,6 +56,9 @@ const featureLinks = [
 
     <div data-reveal data-reveal-delay="100" data-placement="footer-cta" class="relative flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
       <StoreBadges lang={lang} idPrefix="footer-btn" lazy />
+    </div>
+    <div data-reveal data-reveal-delay="150" class="relative mt-4">
+      <WebAppLink lang={lang} placement="footer-web" />
     </div>
   </section>
 
@@ -117,11 +121,6 @@ const featureLinks = [
           <li>
             <a href={guidesHref} class="text-slate-600 hover:text-accent transition-colors text-sm">
               {t.guides}
-            </a>
-          </li>
-          <li>
-            <a href={changelogHref} class="text-slate-600 hover:text-accent transition-colors text-sm">
-              {t.changelog}
             </a>
           </li>
           {vsLinks.map((link) => (

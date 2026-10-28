@@ -2,6 +2,7 @@
 import { getTranslations } from '../i18n/translations';
 import FeatureCard from './FeatureCard.astro';
 import { localeHref } from '../utils/paths';
+import { appShotDir } from '../utils/appShots';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).features;
@@ -13,12 +14,13 @@ const screens = getTranslations(lang).appScreens;
  * drift apart. The screens listed here are the ones that read cleanly at this
  * size. The rest of the set stays in the carousel.
  */
+const app = appShotDir(lang);
 const screenshots = [
-  { src: '/assets/app/ride_screen.webp', ...screens.ride },
-  { src: '/assets/app/vo2max_detail.webp', ...screens.vo2max },
-  { src: '/assets/app/time_in_zones.webp', ...screens.zones },
-  { src: '/assets/app/ai_coaching.webp', ...screens.coaching },
-  { src: '/assets/app/activity_detail.webp', ...screens.activity },
+  { src: `${app}/ride_screen.webp`, ...screens.ride },
+  { src: `${app}/vo2max_detail.webp`, ...screens.vo2max },
+  { src: `${app}/time_in_zones.webp`, ...screens.zones },
+  { src: `${app}/ai_coaching.webp`, ...screens.coaching },
+  { src: `${app}/activity_detail.webp`, ...screens.activity },
 ];
 ---
 

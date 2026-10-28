@@ -1,0 +1,46 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-28T11:00:00Z"},
+  "title": "ENDURE web app & training planning",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Header-1440.dc.html": {"x": 0, "y": 0, "w": 1440, "h": 200, "title": "Header · ≥1280 px · EN / DE"},
+    "Header-1024.dc.html": {"x": 1520, "y": 0, "w": 1024, "h": 200, "title": "Header · 1024–1279 px · EN / DE"},
+    "Header-768.dc.html": {"x": 2624, "y": 0, "w": 768, "h": 290, "title": "Header · 640–1023 px · EN / DE"},
+    "Header-390.dc.html": {"x": 3472, "y": 0, "w": 390, "h": 260, "title": "Header · <640 px · EN / DE"},
+    "Header.dc.html": {"x": 3942, "y": 0, "w": 1440, "h": 96, "title": "Header component (locale + breakpoint props)"},
+    "Download.dc.html": {"x": 0, "y": 700, "w": 1440, "h": 1320, "title": "Hero + footer download · 1440 · EN"},
+    "Download-1440-DE.dc.html": {"x": 1520, "y": 700, "w": 1440, "h": 1340, "title": "Hero + footer download · 1440 · DE"},
+    "Download-390-DE.dc.html": {"x": 3040, "y": 700, "w": 390, "h": 1950, "title": "Hero + footer download · 390 · DE"},
+    "Download-390-EN.dc.html": {"x": 3510, "y": 700, "w": 390, "h": 1850, "title": "Hero + footer download · 390 · EN"},
+    "Main.dc.html": {"x": 0, "y": 3050, "w": 1440, "h": 7000, "title": "/features/training-planning/ · 1440 · EN (DE via Tweaks)", "expand": "fill"},
+    "TrainingPlanning-390-DE.dc.html": {"x": 1520, "y": 3050, "w": 390, "h": 11000, "title": "/de/features/training-planning/ · 390 · DE"},
+    "TrainingPlanning-390-EN.dc.html": {"x": 1990, "y": 3050, "w": 390, "h": 10600, "title": "/features/training-planning/ · 390 · EN"},
+    "Teaser.dc.html": {"x": 0, "y": 14450, "w": 1440, "h": 680, "title": "Homepage teaser · 1440 · EN (DE via Tweaks)"},
+    "Teaser-390-DE.dc.html": {"x": 1520, "y": 14450, "w": 390, "h": 1250, "title": "Homepage teaser · 390 · DE"}
+  },
+  "order": [
+    "Header-1440.dc.html",
+    "Header-1024.dc.html",
+    "Header-768.dc.html",
+    "Header-390.dc.html",
+    "Header.dc.html",
+    "Download.dc.html",
+    "Download-1440-DE.dc.html",
+    "Download-390-DE.dc.html",
+    "Download-390-EN.dc.html",
+    "Main.dc.html",
+    "TrainingPlanning-390-DE.dc.html",
+    "TrainingPlanning-390-EN.dc.html",
+    "Teaser.dc.html",
+    "Teaser-390-DE.dc.html"
+  ],
+  "notes": {
+    "rowHeader": {"x": 0, "y": -300, "text": "1 · Header with “Open web app”", "kind": "title1", "maxW": 5380},
+    "rowDownload": {"x": 0, "y": 420, "text": "2 · Hero + footer download: browser link", "kind": "title1", "maxW": 3900},
+    "rowPage": {"x": 0, "y": 2770, "text": "3 · Feature page: Training planning", "kind": "title1", "maxW": 2380},
+    "rowTeaser": {"x": 0, "y": 14170, "text": "4 · Homepage teaser (after the AI coach section)", "kind": "title1", "maxW": 1910}
+  },
+  "designSystems": []
+}

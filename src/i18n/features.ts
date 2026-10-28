@@ -9,8 +9,11 @@
 //
 // Section titles are question-phrased (AEO: People-Also-Ask / snippets).
 
+import type { WebAppImageKey } from '../webAppImages';
+
 export type FeatureKey =
   | 'ai-coach'
+  | 'training-planning'
   | 'zwift-click'
   | 'lactate-lt1-lt2'
   | 'core-heat-zones'
@@ -21,6 +24,18 @@ interface FeatureSection {
   title: string;
   body: string;
   bullets?: string[];
+  /** Screenshot next to the section (rich layout only), key into webAppImages. */
+  image?: WebAppImageKey;
+  imageAlt?: string;
+}
+
+/** Browser vs. app comparison block on the training planning page. */
+interface FeaturePlatforms {
+  title: string;
+  body: string;
+  web: { title: string; items: string[] };
+  app: { title: string; items: string[] };
+  note: string;
 }
 
 interface RelatedLink {
@@ -46,6 +61,15 @@ export interface FeatureContent {
   ctaTitle: string;
   ctaBody: string;
   backHome: string;
+  // Rich layout (TrainingPlanningPage.astro); the plain FeaturePage ignores these.
+  eyebrow?: string;
+  directAnswerLabel?: string;
+  heroImageAlt?: string;
+  heroCaption?: string;
+  stepsTitle?: string;
+  steps?: { title: string; body: string }[];
+  platforms?: FeaturePlatforms;
+  faqTitle?: string;
 }
 
 export const featuresIndexMeta = {
@@ -57,7 +81,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
   en: {
     'ai-coach': {
       datePublished: '2026-10-18',
-      dateModified: '2026-10-18',
+      dateModified: '2026-10-28',
       seoTitle: 'AI Cycling Coach: Daily Training Recommendation | ENDURE',
       seoDescription:
         'ENDURE has an AI cycling coach that plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. Change it in chat. iOS, Android, Windows.',
@@ -65,7 +89,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       h1: 'An AI cycling coach that plans your day from your own rides',
       subtitle: 'Morning check-in, one recommended workout, the reason behind it. Change it in a chat.',
       directAnswer:
-        'ENDURE has a built-in AI coach. Every morning it reads your recent rides, your training load and a short check-in, then puts one workout for today on your Today screen, with an easier and a harder alternative and the reason for the pick. If the day changes, you tell the coach in a chat and it proposes something else. After the ride it reviews what happened. The coach does not write a fixed multi-week plan; it decides one day at a time from your own data.',
+        'ENDURE has a built-in AI coach. Every morning it reads your recent rides, your training load and a short check-in, then puts one workout for today on your Today screen, with an easier and a harder alternative and the reason for the pick. If the day changes, you tell the coach in a chat and it proposes something else. After the ride it reviews what happened. On request the coach also plans the coming weeks in your calendar, aimed at your goal event, and you apply each draft yourself. It never lays out a fixed plan for months ahead.',
       sections: [
         {
           title: 'What does the coach do each morning?',
@@ -98,9 +122,9 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
             'The coach reviews it. The Coaching Insights on the ride summary say what worked, what to fix and what to do next, in the context of your recent weeks. The ride itself feeds back into your FTP and VO2max trend, your load and the next morning’s recommendation, so the loop closes without you entering anything.'
         },
         {
-          title: 'Is this a training plan?',
+          title: 'Does the coach plan ahead?',
           body:
-            'No, and that is on purpose. A multi-week plan assumes it knows how you will feel in three weeks. The ENDURE coach decides one day at a time from how you actually are, and keeps the week goal and your load balance in view while it does. Riders who want a fixed schedule toward an event will find that in TrainerRoad; riders who want a coach that reacts to today get it here.'
+            'Yes. Tap Plan with coach in the calendar and the coach drafts the coming weeks from your rides, your training load and your free days, aimed at your goal event if you have one. You change the draft in chat and apply it; nothing lands in the calendar before that. A load forecast rates every week, and each planned ride comes with a lighter and a harder alternative. The coach does not lay out a fixed plan for months, because it cannot know how you will feel in six weeks. Each morning it checks today against your check-in and may propose one change, which you accept or skip.'
         },
         {
           title: 'Where is ENDURE heading?',
@@ -123,7 +147,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Does ENDURE write training plans?',
-          a: 'Not as fixed multi-week schedules. The coach plans one day at a time and keeps your week goal and load balance in view. You can also type a workout and have the AI build it, or import .ZWO, .MRC and .ERG files from a plan you follow elsewhere.'
+          a: 'Yes, for the coming weeks. The coach drafts them in your calendar, aimed at your goal event, and you apply the draft. It does not write fixed plans for months ahead. You can also type a workout and have the AI build it, or import .ZWO, .MRC and .ERG files from a plan you follow elsewhere.'
         },
         {
           q: 'Is the coach part of the free trial?',
@@ -134,11 +158,127 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       related: [
         { href: '/features/ftp-vo2max-tracking', label: 'How ENDURE estimates FTP and VO2max without a test' },
         { href: '/vs/trainerroad', label: 'ENDURE as a TrainerRoad alternative' },
-        { href: '/changelog', label: 'Changelog: what shipped in the last releases' }
+        { href: '/features/training-planning', label: 'Training planning: the coach plans your coming weeks' }
       ],
       ctaTitle: 'Ask the coach what to ride today',
       ctaBody:
         'ENDURE is on iOS, Android and Windows, free for the first 14 days. Sync your rides, answer the check-in, and the first recommendation is on your Today screen.',
+      backHome: 'Back to Homepage'
+    },
+    'training-planning': {
+      datePublished: '2026-10-28',
+      dateModified: '2026-10-28',
+      seoTitle: 'Training Planning with an AI Cycling Coach | ENDURE',
+      seoDescription:
+        'The ENDURE AI coach plans your coming weeks in a calendar, aimed at your goal event: planned vs. done, a load forecast per week, a coach verdict, lighter and harder options. You apply every draft.',
+      breadcrumb: 'Training planning',
+      eyebrow: 'New · Training planning',
+      h1: 'Training planning: the AI coach plans your coming weeks',
+      subtitle: 'Built from your own rides, aimed at your goal event if you have one. Nothing changes until you apply it.',
+      directAnswerLabel: 'SHORT ANSWER',
+      directAnswer:
+        'ENDURE’s AI coach plans your coming weeks of training in your calendar when you tap Plan with coach. It builds the weeks from your recent rides, your training load and your free days, and aims them at your goal event if you have set one. You see the draft first, change it in a chat with the coach and then apply it. Each week shows planned against done, a load forecast rated on track, borderline, too little or too much, and a short verdict from the coach. Every planned ride comes with a lighter and a harder alternative. Training planning works in the ENDURE apps for iOS, Android and Windows and in the web app.',
+      heroImageAlt: 'ENDURE web app calendar with two completed weeks, a coach draft for the coming weeks and the Week Planner with Apply and Discard',
+      heroCaption: 'The calendar in the ENDURE web app: completed weeks with the coach verdict, and the coach’s draft for the coming weeks next to the Week Planner.',
+      stepsTitle: 'How it works',
+      steps: [
+        { title: 'Set your days', body: 'Mark the days you can train and how long. A goal event with its date is optional; with one, the plan aims at it.' },
+        { title: 'The coach drafts', body: 'Tap Plan with coach. The coach drafts the coming weeks from your rides, your training load and your morning check-ins.' },
+        { title: 'You apply and ride', body: 'Change the draft in chat or apply it as it is. Each morning the coach may propose one change to today’s session, which you accept or skip.' }
+      ],
+      sections: [
+        {
+          title: 'Planned and done, week by week',
+          body:
+            'Each week row shows planned time and training load next to what you actually rode. The coach writes a short verdict on the week and updates it after you change something.',
+          bullets: [
+            '<strong>Planned vs. done</strong> for time and training load (TSS), per week.',
+            '<strong>Weekly verdict</strong> from the coach in one or two sentences.'
+          ],
+          image: 'weekRow',
+          imageAlt: 'Two weeks in the ENDURE calendar with planned and completed time, training load, the rating On track or Too little and the coach verdict'
+        },
+        {
+          title: 'A load forecast for every week',
+          body:
+            'Before a week starts, ENDURE checks it: how fast your fitness (CTL) would rise, how many hard days it holds compared with your usual week, and how fresh you would be. Each week gets one label: on track, borderline, too little or too much. With a goal event, the forecast also shows your form on the event day.',
+          bullets: [
+            '<strong>Four labels:</strong> on track, borderline, too little, too much.',
+            '<strong>With reasons:</strong> the sessions that tip a week over are marked in the calendar.'
+          ],
+          image: 'loadForecast',
+          imageAlt: 'ENDURE Week Planner with the week type Maintain, a target of 330 TSS and the rating On track'
+        },
+        {
+          title: 'Plan with coach',
+          body:
+            'Every week has a Plan with coach button. The coach drafts the week around the sessions you have already placed and shows the draft in the calendar. Ask for changes in the chat, for example a shorter Tuesday or a free weekend, and the coach revises the draft. Nothing lands in your calendar until you tap Apply.',
+          bullets: [
+            '<strong>Draft first:</strong> you see every session before it counts.',
+            '<strong>Change it in chat</strong> until the week fits.'
+          ],
+          image: 'planWithCoach',
+          imageAlt: 'A coach draft for two weeks in the ENDURE calendar, with the session list, the coach’s summary and the Apply and Discard buttons'
+        },
+        {
+          title: 'A lighter and a harder option for every ride',
+          body:
+            'Every planned ride comes with two alternatives from the workout library. If your legs or your schedule do not match the plan, swap in the lighter or the harder version from the session details.',
+          bullets: [
+            '<strong>Three versions</strong> per ride: lighter, planned, harder.',
+            '<strong>Swap and undo</strong> in the session details.'
+          ],
+          image: 'sessionAlternatives',
+          imageAlt: 'A planned ride in ENDURE with its lighter and harder alternative'
+        }
+      ],
+      platforms: {
+        title: 'Plan in the browser, ride in the app',
+        body:
+          'Training planning works in the ENDURE apps and in the web app at app.endure-cycling.com. The web app does everything except recording rides. Rides stay in the apps, which control your smart trainer. Account and subscription are the same in both.',
+        web: { title: 'Web app in the browser', items: ['AI coach and daily plan', 'Training planning in the calendar', 'Analysis', 'Workout library and builder'] },
+        app: { title: 'ENDURE app for iOS, Android and Windows', items: ['Coach, calendar and training planning', 'Analysis', 'Ride recording and smart trainer control in ERG and SIM'] },
+        note: 'You buy the subscription in the iOS or Android app. On a phone, the web app first points you to the store app.'
+      },
+      faqTitle: 'Questions about training planning',
+      faq: [
+        {
+          q: 'Does ENDURE create a training plan?',
+          a: 'Yes, for the coming weeks. Tap Plan with coach and the coach drafts those weeks in your calendar. It does not lay out a fixed plan for months ahead. When the weeks are done or your days change, you plan again from your actual rides.'
+        },
+        {
+          q: 'Do I have to apply every change?',
+          a: 'Yes. A draft from the coach only lands in your calendar when you tap Apply. Each morning the coach may propose one change to today’s planned session, for example a lighter version after a bad night. You accept it or keep your plan.'
+        },
+        {
+          q: 'What does the load forecast show?',
+          a: 'One label per week: on track, borderline, too little or too much. It looks at how fast your fitness (CTL) would rise, at hard days compared with your usual week and at how fresh you would be. With a goal event it also shows your form on the event day.'
+        },
+        {
+          q: 'Do I need a goal event?',
+          a: 'No. Without one, the coach plans from your training load, your free days and the week type you pick: recovery, maintain, build or focus. With a goal event, the weeks are aimed at its date.'
+        },
+        {
+          q: 'Can I use training planning in the browser?',
+          a: 'Yes. Open app.endure-cycling.com and sign in with your ENDURE account. Training planning also works in the ENDURE apps for iOS, Android and Windows. To ride, you use one of the apps.'
+        },
+        {
+          q: 'Is training planning part of ENDURE Premium?',
+          a: 'Yes. Training planning is part of ENDURE Premium, and the 14-day trial includes it, without payment details. You buy the subscription in the iOS or Android app.'
+        },
+        {
+          q: 'How do I switch training planning on?',
+          a: 'Training planning is in early access. Switch it on with Try it now in the What’s coming next card at the bottom of the Today screen. You can switch it off there at any time.'
+        }
+      ],
+      relatedTitle: 'Keep reading',
+      related: [
+        { href: '/features/ai-coach', label: 'AI coach and daily recommendation' },
+        { href: '/features/ftp-vo2max-tracking', label: 'How ENDURE estimates FTP and VO2max without a test' },
+        { href: '/vs/trainerroad', label: 'ENDURE as a TrainerRoad alternative' }
+      ],
+      ctaTitle: 'Let the coach plan your coming weeks',
+      ctaBody: 'Try ENDURE Premium free for 14 days. No payment details, nothing to cancel.',
       backHome: 'Back to Homepage'
     },
     'zwift-click': {
@@ -463,7 +603,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
   de: {
     'ai-coach': {
       datePublished: '2026-10-18',
-      dateModified: '2026-10-18',
+      dateModified: '2026-10-28',
       seoTitle: 'KI-Radcoach: tägliche Trainingsempfehlung | ENDURE',
       seoDescription:
         'ENDURE hat einen KI-Coach, der jeden Tag aus deinen Fahrten und einem Morgen-Check-in plant: ein Workout, zwei Alternativen, die Begründung. Im Chat änderbar. iOS, Android, Windows.',
@@ -471,7 +611,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       h1: 'Ein KI-Radcoach, der deinen Tag aus deinen eigenen Fahrten plant',
       subtitle: 'Morgen-Check-in, ein empfohlenes Workout, die Begründung dazu. Im Chat änderbar.',
       directAnswer:
-        'ENDURE hat einen eingebauten KI-Coach. Jeden Morgen liest er deine letzten Fahrten, deine Trainingsbelastung und einen kurzen Check-in und legt ein Workout für heute auf deinen Heute-Screen, mit einer leichteren und einer härteren Alternative und der Begründung. Ändert sich der Tag, sagst du es dem Coach im Chat und er schlägt etwas anderes vor. Nach der Fahrt wertet er aus, was passiert ist. Der Coach schreibt keinen festen Mehrwochenplan; er entscheidet Tag für Tag aus deinen eigenen Daten.',
+        'ENDURE hat einen eingebauten KI-Coach. Jeden Morgen liest er deine letzten Fahrten, deine Trainingsbelastung und einen kurzen Check-in und legt ein Workout für heute auf deinen Heute-Screen, mit einer leichteren und einer härteren Alternative und der Begründung. Ändert sich der Tag, sagst du es dem Coach im Chat und er schlägt etwas anderes vor. Nach der Fahrt wertet er aus, was passiert ist. Auf Wunsch plant der Coach auch die kommenden Wochen in deinem Kalender, ausgerichtet auf dein Zielevent, und jeden Entwurf übernimmst du selbst. Einen starren Plan über Monate legt er nie an.',
       sections: [
         {
           title: 'Was macht der Coach jeden Morgen?',
@@ -504,9 +644,9 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
             'Der Coach wertet sie aus. Die Coaching Insights in der Zusammenfassung sagen, was funktioniert hat, was fehlt und was als Nächstes kommt, im Kontext deiner letzten Wochen. Die Fahrt selbst fließt in deinen FTP- und VO2max-Trend, deine Belastung und die Empfehlung am nächsten Morgen, der Kreis schließt sich also, ohne dass du etwas eingibst.'
         },
         {
-          title: 'Ist das ein Trainingsplan?',
+          title: 'Plant der Coach auch voraus?',
           body:
-            'Nein, und das ist Absicht. Ein Mehrwochenplan tut so, als wüsste er, wie du dich in drei Wochen fühlst. Der ENDURE-Coach entscheidet Tag für Tag danach, wie du tatsächlich dastehst, und behält dabei Wochenziel und Belastungsbalance im Blick. Wer einen festen Fahrplan Richtung Event will, findet den bei TrainerRoad; wer einen Coach will, der auf heute reagiert, bekommt ihn hier.'
+            'Ja. Tipp im Kalender auf „Mit Coach planen“, und der Coach entwirft die kommenden Wochen aus deinen Fahrten, deiner Trainingsbelastung und deinen freien Tagen, ausgerichtet auf dein Zielevent, wenn du eines hast. Den Entwurf änderst du im Chat und übernimmst ihn; vorher landet nichts im Kalender. Eine Belastungsprognose bewertet jede Woche, und zu jeder geplanten Fahrt gibt es eine leichtere und eine härtere Alternative. Einen starren Plan über Monate legt der Coach nicht an, weil er nicht wissen kann, wie du dich in sechs Wochen fühlst. Jeden Morgen gleicht er den Tag mit deinem Check-in ab und schlägt bei Bedarf eine Änderung vor, die du annimmst oder nicht.'
         },
         {
           title: 'Wohin entwickelt sich ENDURE?',
@@ -529,7 +669,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Schreibt ENDURE Trainingspläne?',
-          a: 'Nicht als feste Mehrwochenpläne. Der Coach plant Tag für Tag und behält Wochenziel und Belastungsbalance im Blick. Du kannst außerdem ein Workout eintippen und von der KI bauen lassen oder .ZWO-, .MRC- und .ERG-Dateien aus einem Plan importieren, dem du woanders folgst.'
+          a: 'Ja, für die kommenden Wochen. Der Coach entwirft sie in deinem Kalender, ausgerichtet auf dein Zielevent, und du übernimmst den Entwurf. Starre Pläne über Monate schreibt er nicht. Du kannst außerdem ein Workout eintippen und von der KI bauen lassen oder .ZWO-, .MRC- und .ERG-Dateien aus einem Plan importieren, dem du woanders folgst.'
         },
         {
           q: 'Ist der Coach Teil der Gratis-Testphase?',
@@ -540,11 +680,127 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       related: [
         { href: '/features/ftp-vo2max-tracking', label: 'Wie ENDURE FTP und VO2max ohne Test schätzt' },
         { href: '/vs/trainerroad', label: 'ENDURE als TrainerRoad Alternative' },
-        { href: '/changelog', label: 'Changelog: was in den letzten Releases kam' }
+        { href: '/features/training-planning', label: 'Trainingsplanung: Der Coach plant deine kommenden Wochen' }
       ],
       ctaTitle: 'Frag den Coach, was du heute fährst',
       ctaBody:
         'ENDURE gibt es für iOS, Android und Windows, die ersten 14 Tage gratis. Fahrten synchronisieren, Check-in beantworten, und die erste Empfehlung liegt auf deinem Heute-Screen.',
+      backHome: 'Zurück zur Startseite'
+    },
+    'training-planning': {
+      datePublished: '2026-10-28',
+      dateModified: '2026-10-28',
+      seoTitle: 'Trainingsplanung mit KI-Coach fürs Radtraining | ENDURE',
+      seoDescription:
+        'Der KI-Coach von ENDURE plant deine kommenden Wochen im Kalender, ausgerichtet auf dein Zielevent: Geplant vs. absolviert, Belastungsprognose pro Woche, Fazit des Coaches, leichtere und härtere Optionen. Jeden Entwurf übernimmst du selbst.',
+      breadcrumb: 'Trainingsplanung',
+      eyebrow: 'Neu · Trainingsplanung',
+      h1: 'Trainingsplanung: Der KI-Coach plant deine kommenden Wochen',
+      subtitle: 'Aus deinen eigenen Fahrten, ausgerichtet auf dein Zielevent, wenn du eines hast. Es ändert sich nichts, bevor du es übernimmst.',
+      directAnswerLabel: 'KURZ GESAGT',
+      directAnswer:
+        'Der KI-Coach von ENDURE plant deine kommenden Trainingswochen in deinem Kalender, wenn du auf „Mit Coach planen“ tippst. Er baut die Wochen aus deinen letzten Fahrten, deiner Trainingsbelastung und deinen freien Tagen und richtet sie auf dein Zielevent aus, wenn du eines eingetragen hast. Du siehst zuerst den Entwurf, änderst ihn im Chat mit dem Coach und übernimmst ihn dann. Jede Woche zeigt Geplant neben Absolviert, eine Belastungsprognose mit der Bewertung Im Rahmen, Grenzwertig, Zu wenig oder Zu viel und ein kurzes Fazit des Coaches. Zu jeder geplanten Fahrt gibt es eine leichtere und eine härtere Alternative. Die Trainingsplanung läuft in den ENDURE-Apps für iOS, Android und Windows und in der Web-App.',
+      heroImageAlt: 'Kalender der ENDURE-Web-App mit zwei absolvierten Wochen, einem Entwurf des Coaches für die kommenden Wochen und dem Wochenplaner mit Übernehmen und Verwerfen',
+      heroCaption: 'Der Kalender in der ENDURE-Web-App: absolvierte Wochen mit dem Fazit des Coaches und sein Entwurf für die kommenden Wochen neben dem Wochenplaner.',
+      stepsTitle: 'So funktioniert es',
+      steps: [
+        { title: 'Tage festlegen', body: 'Markier die Tage, an denen du trainieren kannst, und wie lange. Ein Zielevent mit Datum ist optional; mit einem richtet sich der Plan danach.' },
+        { title: 'Der Coach entwirft', body: 'Tipp auf „Mit Coach planen“. Der Coach entwirft die kommenden Wochen aus deinen Fahrten, deiner Trainingsbelastung und deinen Morgen-Check-ins.' },
+        { title: 'Übernehmen und fahren', body: 'Änder den Entwurf im Chat oder übernimm ihn so, wie er ist. Jeden Morgen schlägt der Coach bei Bedarf eine Änderung an der heutigen Einheit vor, die du annimmst oder nicht.' }
+      ],
+      sections: [
+        {
+          title: 'Geplant und absolviert, Woche für Woche',
+          body:
+            'Jede Wochenzeile zeigt geplante Zeit und Trainingsbelastung neben dem, was du tatsächlich gefahren bist. Der Coach schreibt ein kurzes Fazit zur Woche und aktualisiert es, wenn du etwas änderst.',
+          bullets: [
+            '<strong>Geplant vs. absolviert</strong> für Zeit und Trainingsbelastung (TSS), pro Woche.',
+            '<strong>Wochenfazit</strong> des Coaches in ein, zwei Sätzen.'
+          ],
+          image: 'weekRow',
+          imageAlt: 'Zwei Wochen im ENDURE-Kalender mit geplanter und absolvierter Zeit, Trainingsbelastung, der Bewertung Im Rahmen oder Zu wenig und dem Fazit des Coaches'
+        },
+        {
+          title: 'Eine Belastungsprognose für jede Woche',
+          body:
+            'Bevor eine Woche beginnt, prüft ENDURE sie: wie schnell deine Fitness (CTL) steigen würde, wie viele harte Tage sie im Vergleich zu deiner üblichen Woche hat und wie frisch du wärst. Jede Woche bekommt eine Bewertung: Im Rahmen, Grenzwertig, Zu wenig oder Zu viel. Mit Zielevent zeigt die Prognose auch deine Form am Event-Tag.',
+          bullets: [
+            '<strong>Vier Bewertungen:</strong> Im Rahmen, Grenzwertig, Zu wenig, Zu viel.',
+            '<strong>Mit Begründung:</strong> Die Einheiten, die eine Woche kippen lassen, sind im Kalender markiert.'
+          ],
+          image: 'loadForecast',
+          imageAlt: 'ENDURE-Wochenplaner mit der Wochenart Erhalt, einem Ziel von 330 TSS und der Bewertung Passend'
+        },
+        {
+          title: 'Mit Coach planen',
+          body:
+            'Jede Woche hat einen Button „Mit Coach planen“. Der Coach entwirft die Woche rund um die Einheiten, die du schon eingetragen hast, und zeigt den Entwurf im Kalender. Wünsch dir im Chat Änderungen, zum Beispiel einen kürzeren Dienstag oder ein freies Wochenende, und der Coach überarbeitet den Entwurf. In deinen Kalender kommt erst etwas, wenn du auf „Übernehmen“ tippst.',
+          bullets: [
+            '<strong>Erst der Entwurf:</strong> Du siehst jede Einheit, bevor sie zählt.',
+            '<strong>Im Chat anpassen,</strong> bis die Woche passt.'
+          ],
+          image: 'planWithCoach',
+          imageAlt: 'Ein Entwurf des Coaches für zwei Wochen im ENDURE-Kalender, mit Liste der Einheiten, Zusammenfassung des Coaches und den Buttons Übernehmen und Verwerfen'
+        },
+        {
+          title: 'Eine leichtere und eine härtere Option für jede Fahrt',
+          body:
+            'Jede geplante Fahrt hat zwei Alternativen aus der Workout-Bibliothek. Passen Beine oder Zeitplan nicht zum Plan, tauschst du in den Details der Einheit auf die leichtere oder die härtere Variante.',
+          bullets: [
+            '<strong>Drei Varianten</strong> pro Fahrt: leichter, geplant, härter.',
+            '<strong>Tauschen und rückgängig machen</strong> in den Details der Einheit.'
+          ],
+          image: 'sessionAlternatives',
+          imageAlt: 'Eine geplante Fahrt in ENDURE mit leichterer und härterer Alternative'
+        }
+      ],
+      platforms: {
+        title: 'Im Browser planen, in der App fahren',
+        body:
+          'Die Trainingsplanung läuft in den ENDURE-Apps und in der Web-App unter app.endure-cycling.com. Die Web-App kann alles außer Fahrten aufzeichnen. Gefahren wird in den Apps, die deinen Smart Trainer steuern. Konto und Abo sind in beiden dieselben.',
+        web: { title: 'Web-App im Browser', items: ['KI-Coach und Tagesplan', 'Trainingsplanung im Kalender', 'Analyse', 'Workout-Bibliothek und Builder'] },
+        app: { title: 'ENDURE-App für iOS, Android und Windows', items: ['Coach, Kalender und Trainingsplanung', 'Analyse', 'Fahrten aufzeichnen, Smart Trainer in ERG und SIM steuern'] },
+        note: 'Das Abo schließt du in der iOS- oder Android-App ab. Am Smartphone verweist dich die Web-App zuerst auf die App im Store.'
+      },
+      faqTitle: 'Fragen zur Trainingsplanung',
+      faq: [
+        {
+          q: 'Erstellt ENDURE einen Trainingsplan?',
+          a: 'Ja, für die kommenden Wochen. Tipp auf „Mit Coach planen“, und der Coach entwirft diese Wochen in deinem Kalender. Einen starren Plan über Monate legt er nicht an. Sind die Wochen gefahren oder ändern sich deine Tage, planst du neu, aus deinen tatsächlichen Fahrten.'
+        },
+        {
+          q: 'Muss ich jede Änderung übernehmen?',
+          a: 'Ja. Ein Entwurf des Coaches landet erst in deinem Kalender, wenn du auf „Übernehmen“ tippst. Jeden Morgen schlägt der Coach bei Bedarf eine Änderung an der heutigen Einheit vor, zum Beispiel eine leichtere Variante nach einer schlechten Nacht. Du nimmst sie an oder behältst deinen Plan.'
+        },
+        {
+          q: 'Was zeigt die Belastungsprognose?',
+          a: 'Eine Bewertung pro Woche: Im Rahmen, Grenzwertig, Zu wenig oder Zu viel. Sie schaut, wie schnell deine Fitness (CTL) steigen würde, wie viele harte Tage die Woche im Vergleich zu deiner üblichen hat und wie frisch du wärst. Mit Zielevent zeigt sie auch deine Form am Event-Tag.'
+        },
+        {
+          q: 'Brauche ich ein Zielevent?',
+          a: 'Nein. Ohne Zielevent plant der Coach aus deiner Trainingsbelastung, deinen freien Tagen und der Wochenart, die du wählst: Erholung, Erhalt, Aufbau oder Fokus. Mit Zielevent richten sich die Wochen nach seinem Datum.'
+        },
+        {
+          q: 'Kann ich die Trainingsplanung im Browser nutzen?',
+          a: 'Ja. Öffne app.endure-cycling.com und melde dich mit deinem ENDURE-Konto an. Die Trainingsplanung läuft auch in den ENDURE-Apps für iOS, Android und Windows. Zum Fahren nimmst du eine der Apps.'
+        },
+        {
+          q: 'Ist die Trainingsplanung Teil von ENDURE Premium?',
+          a: 'Ja. Die Trainingsplanung gehört zu ENDURE Premium, und die 14 Tage Testphase enthalten sie, ohne Zahlungsdaten. Das Abo schließt du in der iOS- oder Android-App ab.'
+        },
+        {
+          q: 'Wie schalte ich die Trainingsplanung ein?',
+          a: 'Die Trainingsplanung ist im Early Access. Schalte sie mit „Jetzt ausprobieren“ in der Karte „Was als Nächstes kommt“ ganz unten am Heute-Screen ein. Dort kannst du sie jederzeit wieder abschalten.'
+        }
+      ],
+      relatedTitle: 'Weiterlesen',
+      related: [
+        { href: '/features/ai-coach', label: 'KI-Coach und Tagesempfehlung' },
+        { href: '/features/ftp-vo2max-tracking', label: 'Wie ENDURE FTP und VO2max ohne Test schätzt' },
+        { href: '/vs/trainerroad', label: 'ENDURE als TrainerRoad Alternative' }
+      ],
+      ctaTitle: 'Lass den Coach deine kommenden Wochen planen',
+      ctaBody: 'Teste ENDURE Premium 14 Tage gratis. Keine Zahlungsdaten, nichts zu kündigen.',
       backHome: 'Zurück zur Startseite'
     },
     'zwift-click': {

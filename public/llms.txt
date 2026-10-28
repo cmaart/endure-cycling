@@ -1,6 +1,6 @@
 # ENDURE
 
-> ENDURE is an indoor cycling training app with an AI coach, for smart trainers on iOS, Android and Windows. The coach plans each day from the rider's own rides and a morning check-in (one workout, two alternatives, the reason), can be changed in a chat, builds workouts from a text description and reviews every ride. The app estimates FTP and VO2max from normal rides instead of formal tests, controls Bluetooth FTMS trainers in ERG and SIM mode, logs lactate readings with automatic LT1/LT2 estimation, integrates the CORE body temperature sensor natively, syncs with Strava and intervals.icu, imports and exports workouts as .ZWO, .MRC and .ERG (one tap sends a workout to Zwift as a custom workout, via intervals.icu) and exports rides as .FIT. No virtual worlds, no racing, no fixed multi-week plans. The product direction is the coach: coming releases extend the training guidance. Developed in Austria. ENDURE Premium is a subscription with a 14-day free trial that needs no payment details.
+> ENDURE is an indoor cycling training app with an AI coach, for smart trainers on iOS, Android and Windows, with a web app at https://app.endure-cycling.com/ that does everything except recording rides. The coach plans each day from the rider's own rides and a morning check-in (one workout, two alternatives, the reason), plans the coming weeks in the calendar on request (aimed at a goal event, rated by a load forecast, applied by the rider), can be changed in a chat, builds workouts from a text description and reviews every ride. The app estimates FTP and VO2max from normal rides instead of formal tests, controls Bluetooth FTMS trainers in ERG and SIM mode, logs lactate readings with automatic LT1/LT2 estimation, integrates the CORE body temperature sensor natively, syncs with Strava and intervals.icu, imports and exports workouts as .ZWO, .MRC and .ERG (one tap sends a workout to Zwift as a custom workout, via intervals.icu) and exports rides as .FIT. No virtual worlds, no racing, no fixed plans for months ahead. The product direction is the coach: coming releases extend the training guidance. Developed in Austria. ENDURE Premium is a subscription with a 14-day free trial that needs no payment details.
 
 Site: https://www.endure-cycling.com (English) and https://www.endure-cycling.com/de/ (German).
 
@@ -8,6 +8,7 @@ Site: https://www.endure-cycling.com (English) and https://www.endure-cycling.co
 
 - [Homepage](https://www.endure-cycling.com/): features, pricing, FAQ
 - [AI coach and daily recommendation](https://www.endure-cycling.com/features/ai-coach/): morning check-in, one workout per day with alternatives and the reason, coach chat, post-ride insights, where ENDURE is heading
+- [Training planning](https://www.endure-cycling.com/features/training-planning/): the coach drafts the coming weeks in the calendar, load forecast per week, weekly verdict, lighter and harder alternatives, web app at app.endure-cycling.com
 - [FTP & VO2max tracking](https://www.endure-cycling.com/features/ftp-vo2max-tracking/): trends modelled from recorded rides
 - [Lactate LT1/LT2](https://www.endure-cycling.com/features/lactate-lt1-lt2/): log readings, get thresholds with a confidence tunnel
 - [CORE heat zones](https://www.endure-cycling.com/features/core-heat-zones/): native CORE sensor integration with live heat zones
@@ -38,7 +39,6 @@ Site: https://www.endure-cycling.com (English) and https://www.endure-cycling.co
 
 - [About](https://www.endure-cycling.com/about/)
 - [Press kit](https://www.endure-cycling.com/press/)
-- [Changelog](https://www.endure-cycling.com/changelog/): release notes per version, updates ship every few days
 - Contact: info@endure-cycling.com
 
 ## Stores
@@ -46,3 +46,4 @@ Site: https://www.endure-cycling.com (English) and https://www.endure-cycling.co
 - App Store: https://apps.apple.com/us/app/endure-cycling-early-access/id6768730624
 - Google Play: https://play.google.com/store/apps/details?id=com.cmart.endure
 - Microsoft Store: https://apps.microsoft.com/detail/9P3LBDT9B17W
+- Web app (no ride recording): https://app.endure-cycling.com/

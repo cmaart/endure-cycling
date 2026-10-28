@@ -20,6 +20,11 @@ export const config = {
       url: null,
     },
   },
+  // The browser version of the app. Not a store platform: it records no rides
+  // and sells nothing, so it stays out of `platforms` (badges, schema downloadUrl).
+  webApp: {
+    url: 'https://app.endure-cycling.com/',
+  },
   // ENDURE Premium store prices shown on the site: US for English, Germany for
   // German. Keep in sync with App Store Connect when prices change.
   pricing: {

@@ -5,7 +5,8 @@ import { getTranslations } from '../i18n/translations';
 import { getFeatureContent, type FeatureKey } from '../i18n/features';
 import { config } from '../config';
 import StoreBadges from './StoreBadges.astro';
-import { localeHref, localeUrl, siteUrl } from '../utils/paths';
+import { localeHref, localeUrl } from '../utils/paths';
+import { featureFaqSchema, featureWebPageSchema } from '../utils/featureSchema';
 
 interface Props {
   lang: 'en' | 'de';
@@ -18,32 +19,8 @@ const tr = getTranslations(lang);
 const homeHref = localeHref(lang);
 const canonicalUrl = localeUrl(lang, `/features/${feature}`);
 
-// Dated page entity so answer engines can see when the feature copy last changed.
-const pageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": t.h1,
-  "description": t.seoDescription,
-  "url": canonicalUrl,
-  "inLanguage": lang,
-  "datePublished": t.datePublished,
-  "dateModified": t.dateModified,
-  "about": { "@type": "SoftwareApplication", "name": "ENDURE", "url": siteUrl },
-  "author": { "@type": "Organization", "name": "ENDURE", "url": siteUrl },
-  "publisher": { "@type": "Organization", "name": "ENDURE", "url": siteUrl }
-};
-
-// FAQPage covers the question-phrased sections; the direct answer above them is
-// the featured-snippet target.
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": t.faq.map((item) => ({
-    "@type": "Question",
-    "name": item.q,
-    "acceptedAnswer": { "@type": "Answer", "text": item.a },
-  })),
-};
+const pageSchema = featureWebPageSchema(t, canonicalUrl, lang);
+const faqSchema = featureFaqSchema(t.faq);
 ---
 
 <Layout title={t.seoTitle} description={t.seoDescription} lang={lang} breadcrumb={t.breadcrumb}>

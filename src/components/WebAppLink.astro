@@ -1,0 +1,33 @@
+---
+/**
+ * Quiet text link to the web app (config.webApp.url), used under store badges
+ * and on the training planning page. `placement` names the spot for the GA4
+ * `web_app_click` event fired by store-attribution.ts.
+ */
+import { config } from '../config';
+import { getTranslations } from '../i18n/translations';
+import BrowserIcon from './BrowserIcon.astro';
+
+interface Props {
+  lang: 'en' | 'de';
+  placement: string;
+  /** Overrides the default label ("Or open it in your browser"). */
+  label?: string;
+  class?: string;
+}
+
+const { lang, placement, label, class: className } = Astro.props;
+const text = label ?? getTranslations(lang).hero.webLink;
+---
+
+<a
+  href={config.webApp.url}
+  target="_blank"
+  rel="noopener"
+  data-placement={placement}
+  class:list={['inline-flex items-center gap-2 min-h-11 text-[15px] font-semibold text-slate-900 group', className]}
+>
+  <BrowserIcon class="w-[18px] h-[18px] shrink-0" />
+  <span class="underline decoration-accent/55 decoration-2 underline-offset-[5px] group-hover:decoration-accent">{text}</span>
+  <span aria-hidden="true" class="text-accent">→</span>
+</a>

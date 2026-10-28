@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ENDURE header</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FCFCFB}
+a{color:#5F646D}a:hover{color:#16181D}
+</style>
+</helmet>
+<header style="width: 100%; box-sizing: border-box; padding: {{pad}}; background: #FCFCFB; font-family: 'Sora', system-ui, sans-serif; color: #16181D">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#" aria-label="ENDURE" style="display: flex; align-items: center; gap: 10px; flex: none; text-decoration: none">
+<span style="width: 12px; height: 12px; border-radius: 999px; background: #C2552B"></span>
+<span style="font-weight: 700; font-size: 19px; letter-spacing: 0.12em; color: #16181D">ENDURE</span>
+</a>
+
+<sc-if value="{{showLinks}}" hint-placeholder-val="{{ true }}">
+<nav aria-label="Main" style="display: flex; gap: 36px; font-size: 15px; white-space: nowrap">
+<sc-for list="{{l.links}}" as="link" hint-placeholder-count="5"><a href="#" style="text-decoration: none">{{link}}</a></sc-for>
+</nav>
+</sc-if>
+
+<div style="display: flex; align-items: center; gap: 12px; flex: none">
+<div style="display: flex; gap: 4px; border: 1px solid #E5E5E1; background: rgba(255,255,255,0.8); border-radius: 999px; padding: 4px; font-size: 14px; font-weight: 700">
+<a href="#" style="padding: 6px 12px; border-radius: 999px; text-decoration: none; background: {{enBg}}; color: {{enColor}}">EN</a>
+<a href="#" style="padding: 6px 12px; border-radius: 999px; text-decoration: none; background: {{deBg}}; color: {{deColor}}">DE</a>
+</div>
+
+<sc-if value="{{webFull}}" hint-placeholder-val="{{ true }}">
+<a href="https://app.endure-cycling.com/" style="display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border: 1px solid rgba(22,24,29,0.22); background: rgba(22,24,29,0.035); border-radius: 14px; font-size: 15px; font-weight: 600; color: #16181D; text-decoration: none; white-space: nowrap">
+<svg aria-hidden="true" viewBox="0 0 24 24" style="width: 17px; height: 17px" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><path d="M3 9h18"></path><path d="M6.5 6.5h.01M9 6.5h.01"></path></svg>
+<span>{{l.webFull}}</span>
+</a>
+</sc-if>
+
+<sc-if value="{{webShort}}" hint-placeholder-val="{{ false }}">
+<a href="https://app.endure-cycling.com/" aria-label="{{l.webAria}}" style="display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; border: 1px solid rgba(22,24,29,0.22); background: rgba(22,24,29,0.035); border-radius: 14px; font-size: 15px; font-weight: 600; color: #16181D; text-decoration: none; white-space: nowrap">
+<svg aria-hidden="true" viewBox="0 0 24 24" style="width: 17px; height: 17px" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><path d="M3 9h18"></path><path d="M6.5 6.5h.01M9 6.5h.01"></path></svg>
+<span>{{l.webShort}}</span>
+</a>
+</sc-if>
+
+<sc-if value="{{webIcon}}" hint-placeholder-val="{{ false }}">
+<a href="https://app.endure-cycling.com/" aria-label="{{l.webAria}}" title="{{l.webFull}}" style="display: inline-flex; align-items: center; justify-content: center; width: 47px; height: 47px; box-sizing: border-box; border: 1px solid rgba(22,24,29,0.22); background: rgba(22,24,29,0.035); border-radius: 14px; color: #16181D">
+<svg aria-hidden="true" viewBox="0 0 24 24" style="width: 19px; height: 19px" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><path d="M3 9h18"></path><path d="M6.5 6.5h.01M9 6.5h.01"></path></svg>
+</a>
+</sc-if>
+
+<sc-if value="{{showDownload}}" hint-placeholder-val="{{ true }}">
+<a href="#download" style="display: inline-flex; align-items: center; padding: 12px 24px; background: #16181D; color: #FCFCFB; border-radius: 14px; font-size: 15px; font-weight: 700; text-decoration: none; white-space: nowrap">{{l.cta}}</a>
+</sc-if>
+</div>
+</div>
+
+<sc-if value="{{showStrip}}" hint-placeholder-val="{{ false }}">
+<nav aria-label="Main" style="margin-top: 16px; display: flex; gap: 24px; overflow-x: auto; padding-bottom: 4px; font-size: 14px; white-space: nowrap; scrollbar-width: none">
+<sc-for list="{{l.links}}" as="link" hint-placeholder-count="5"><a href="#" style="text-decoration: none">{{link}}</a></sc-for>
+<sc-if value="{{stripWeb}}" hint-placeholder-val="{{ false }}">
+<a href="https://app.endure-cycling.com/" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none">
+<svg aria-hidden="true" viewBox="0 0 24 24" style="width: 15px; height: 15px" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><path d="M3 9h18"></path><path d="M6.5 6.5h.01M9 6.5h.01"></path></svg>
+<span>{{l.webShort}}</span>
+</a>
+</sc-if>
+</nav>
+</sc-if>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"locale":{"editor":"enum","options":["en","de"],"default":"en"},"bp":{"editor":"enum","options":["xl","lg","sm","xs"],"default":"xl"},"$preview":{"width":1440,"height":96}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const L = {
+      en: { links: ['Features', 'Virtual Shifting', 'Free trial', 'Guides', 'FAQ'], cta: 'Try free for 14 days', webFull: 'Launch app', webShort: 'Launch app', webAria: 'Launch the ENDURE web app' },
+      de: { links: ['Features', 'Virtual Shifting', 'Gratis testen', 'Guides', 'FAQ'], cta: '14 Tage gratis testen', webFull: 'App starten', webShort: 'App starten', webAria: 'ENDURE-Web-App starten' }
+    };
+    const locale = this.props.locale === 'de' ? 'de' : 'en';
+    const bp = ['xl', 'lg', 'sm', 'xs'].includes(this.props.bp) ? this.props.bp : 'xl';
+    const en = locale === 'en';
+    return {
+      l: L[locale],
+      pad: bp === 'xs' ? '20px 24px' : '24px 64px',
+      showLinks: bp === 'xl' || bp === 'lg',
+      showStrip: bp === 'sm' || bp === 'xs',
+      showDownload: bp !== 'xs',
+      webFull: bp === 'xl',
+      webIcon: bp === 'lg',
+      webShort: bp === 'sm',
+      stripWeb: bp === 'xs',
+      enBg: en ? '#16181D' : 'transparent', enColor: en ? '#FFFFFF' : '#5F646D',
+      deBg: en ? 'transparent' : '#16181D', deColor: en ? '#5F646D' : '#FFFFFF'
+    };
+  }
+}
+</script>
+</body>
+</html>

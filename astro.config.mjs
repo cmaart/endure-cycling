@@ -6,11 +6,10 @@ import { englishOnlyRoutes } from './src/utils/paths';
 import { guides } from './src/i18n/guides';
 import { vsContent } from './src/i18n/vs';
 import { featurePages } from './src/i18n/features';
-import { latestRelease } from './src/i18n/changelog';
 
 // Guides, comparison pages and feature pages carry a dateModified in their
 // content maps; surface it as <lastmod> so crawlers can prioritise recently
-// edited pages. The changelog is dated by its newest release. Other pages have
+// edited pages. Other pages have
 // no reliable modification date, so they get none rather than a build timestamp.
 const pageUrl = (lang, path) => `https://www.endure-cycling.com/${lang === 'de' ? 'de/' : ''}${path}/`;
 const datedEntries = (map, prefix) =>
@@ -20,15 +19,18 @@ const datedEntries = (map, prefix) =>
 const guideLastmod = new Map([
   ...datedEntries(guides, 'guides'),
   ...datedEntries(vsContent, 'vs'),
-  ...datedEntries(featurePages, 'features'),
-  [pageUrl('en', 'changelog'), latestRelease.date],
-  [pageUrl('de', 'changelog'), latestRelease.date]
+  ...datedEntries(featurePages, 'features')
 ]);
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.endure-cycling.com',
   output: 'static',
+  // The changelog page was removed on 2026-10-28; old links land on the homepage.
+  redirects: {
+    '/changelog': '/',
+    '/de/changelog': '/de/',
+  },
   // Every URL ends in a slash. With `format: 'directory'` each page builds as
   // `<route>/index.html`, which GitHub Pages serves at `/de/`, `/imprint/`,
   // and it answers the slash-less form `/de` with a real 301 onto the slash

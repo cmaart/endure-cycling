@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Spotlight 390</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&amp;family=Sora:wght@400;600;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FCFCFB}
+a{color:#16181D}a:hover{color:#A84620}
+</style>
+</helmet>
+<section style="width: 390px; height: 1050px; box-sizing: border-box; padding: 64px 16px; background: #FCFCFB; font-family: Sora, system-ui, sans-serif; color: #16181D; display: flex; flex-direction: column; align-items: center">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center">
+    <p style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; color: #C2552B"><span aria-hidden="true" style="display: block; width: 20px; height: 1px; background: #C2552B"></span>{{t.eyebrow}}<span aria-hidden="true" style="display: block; width: 20px; height: 1px; background: #C2552B"></span></p>
+    <h2 style="margin: 0; font-size: 32px; line-height: 1.12; font-weight: 800; letter-spacing: -0.03em; color: #16181D">{{t.headline}}</h2>
+    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5F646D">{{t.body}}</p>
+  </div>
+
+  <div role="group" aria-label="{{t.groupLabel}}" style="margin-top: 32px; align-self: stretch; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; padding: 4px; background: #F4F4F2; border: 1px solid #E5E5E1; border-radius: 999px">
+    <sc-for list="{{chips}}" as="item" hint-placeholder-count="4">
+      <button type="button" aria-pressed="{{item.pressed}}" onClick="{{item.pick}}" style="height: 44px; min-width: 0; padding: 0 4px; border: 0; border-radius: 999px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; {{item.style}}">{{item.label}}</button>
+    </sc-for>
+  </div>
+
+  <div style="margin-top: 20px; width: 358px; height: 440px; display: flex; align-items: center; justify-content: center">
+    <sc-if value="{{isWindows}}" hint-placeholder-val="{{true}}">
+      <button type="button" aria-label="{{t.openWindows}}" style="display: block; width: {{s.winW}}px; box-sizing: border-box; margin: 0; padding: 0; border: 1px solid rgba(22,24,29,0.18); border-radius: 6px; background: #FFFFFF; overflow: hidden; box-shadow: 0 20px 50px rgba(22,24,29,0.14); cursor: zoom-in; font: inherit">
+        <img src="../assets/windows.webp" width="1906" height="993" alt="{{t.altWindows}}" style="display: block; width: 100%; height: auto">
+      </button>
+    </sc-if>
+    <sc-if value="{{isBrowser}}" hint-placeholder-val="{{false}}">
+      <button type="button" aria-label="{{t.openBrowser}}" style="display: block; width: {{s.brW}}px; box-sizing: border-box; margin: 0; padding: 0; border: 1px solid #E5E5E1; border-radius: 8px; background: #FFFFFF; overflow: hidden; box-shadow: 0 20px 50px rgba(22,24,29,0.12); cursor: zoom-in; font: inherit; text-align: left">
+        <span style="position: relative; display: flex; align-items: center; height: {{s.bar}}px; padding: 0 9px; background: #F4F4F2; border-bottom: 1px solid #E5E5E1">
+          <span aria-hidden="true" style="display: flex; gap: 4px"><span style="width: 6px; height: 6px; border-radius: 999px; background: #D3D3CE"></span><span style="width: 6px; height: 6px; border-radius: 999px; background: #D3D3CE"></span><span style="width: 6px; height: 6px; border-radius: 999px; background: #D3D3CE"></span></span>
+          <span style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 2px 9px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E5E5E1; font-size: 10px; line-height: 1.2; color: #5F646D; white-space: nowrap">app.endure-cycling.com</span>
+        </span>
+        <img src="../assets/web.webp" width="1920" height="1120" alt="{{t.altBrowser}}" style="display: block; width: 100%; height: auto">
+      </button>
+    </sc-if>
+    <sc-if value="{{isTablet}}" hint-placeholder-val="{{false}}">
+      <button type="button" aria-label="{{t.openTablet}}" style="position: relative; display: block; width: {{s.tabW}}px; box-sizing: border-box; margin: 0; padding: {{s.rim}}px; border: 0; border-radius: {{s.tabR}}px; background: #4A4E57; box-shadow: 0 24px 60px rgba(22,24,29,0.16), inset 0 0 0 1px rgba(255,255,255,0.12); cursor: zoom-in; font: inherit">
+        <span aria-hidden="true" style="position: absolute; right: -3px; top: 9%; width: 3px; height: {{s.tk1}}px; border-radius: 0 2px 2px 0; background: #3A3E46"></span>
+        <span aria-hidden="true" style="position: absolute; right: -3px; top: 20%; width: 3px; height: {{s.tk2}}px; border-radius: 0 2px 2px 0; background: #3A3E46"></span>
+        <span style="position: relative; display: block; padding: {{s.tbz}}px; border-radius: {{s.tabR2}}px; background: #0E0F12">
+          <span aria-hidden="true" style="position: absolute; top: {{s.camTop}}px; right: 22%; width: {{s.cam}}px; height: {{s.cam}}px; border-radius: 999px; background: #2E3138"></span>
+          <span style="position: relative; display: block; border-radius: {{s.tabR3}}px; overflow: hidden; background: #FFFFFF">
+            <img src="../assets/tablet.webp" width="2076" height="2152" alt="{{t.altTablet}}" style="display: block; width: 100%; height: auto">
+            <span aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 6px; margin-left: -3px; background: linear-gradient(90deg, rgba(22,24,29,0), rgba(22,24,29,0.06), rgba(22,24,29,0))"></span>
+          </span>
+        </span>
+      </button>
+    </sc-if>
+    <sc-if value="{{isPhone}}" hint-placeholder-val="{{false}}">
+      <button type="button" aria-label="{{t.openPhone}}" style="position: relative; display: block; width: {{s.phW}}px; box-sizing: border-box; margin: 0; padding: {{s.rim}}px; border: 0; border-radius: {{s.phR}}px; background: #4A4E57; box-shadow: 0 24px 60px rgba(22,24,29,0.18), inset 0 0 0 1px rgba(255,255,255,0.12); cursor: zoom-in; font: inherit">
+        <span aria-hidden="true" style="position: absolute; right: -3px; top: 21%; width: 3px; height: {{s.pk1}}px; border-radius: 0 2px 2px 0; background: #3A3E46"></span>
+        <span aria-hidden="true" style="position: absolute; right: -3px; top: 31%; width: 3px; height: {{s.pk2}}px; border-radius: 0 2px 2px 0; background: #3A3E46"></span>
+        <span style="display: block; padding: {{s.pbz}}px; border-radius: {{s.phR2}}px; background: #0E0F12">
+          <span style="position: relative; display: block; border-radius: {{s.phR3}}px; overflow: hidden; background: #FFFFFF">
+            <img src="../assets/phone.webp" width="1080" height="2364" alt="{{t.altPhone}}" style="display: block; width: 100%; height: auto">
+            <span aria-hidden="true" style="position: absolute; left: 50%; top: {{s.punchTop}}px; width: {{s.punch}}px; height: {{s.punch}}px; margin-left: {{s.punchM}}px; border-radius: 999px; background: #0E0F12"></span>
+          </span>
+        </span>
+      </button>
+    </sc-if>
+  </div>
+
+  <a href="https://app.endure-cycling.com/" style="margin-top: 32px; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 16px; font-weight: 600; color: #16181D; text-decoration: none">
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path></svg>
+    <span style="border-bottom: 2px solid #C2552B; padding-bottom: 3px">{{t.link}}</span>
+    <span aria-hidden="true">→</span>
+  </a>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"lang":{"editor":"enum","options":["en","de"],"default":"en"},"start":{"editor":"enum","options":["phone","tablet","windows","browser"],"default":"phone"},"$preview":{"width":390,"height":1050}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sel: null };
+  }
+  renderVals() {
+    var self = this;
+    var de = this.props.lang === 'de';
+    var t = de ? {
+      eyebrow: 'HANDY · TABLET · WINDOWS · BROWSER',
+      headline: 'Ein Plan auf jedem Bildschirm.',
+      body: 'Kalender, Coach und Analyse findest du auf dem Handy, dem Tablet, in der Windows-App und im Browser, überall mit denselben Daten. Plan am Schreibtisch und fahr mit der App am Trainer.',
+      link: 'ENDURE im Browser öffnen',
+      groupLabel: 'Gerät wählen',
+      phone: 'Handy', tablet: 'Tablet', windows: 'Windows', browser: 'Browser',
+      altPhone: 'ENDURE-Kalenderwoche auf einem Android-Handy',
+      altTablet: 'ENDURE-Kalender auf einem aufgeklappten Pixel Fold',
+      altWindows: 'ENDURE-Kalender in der Windows-App',
+      altBrowser: 'ENDURE-Kalender in der Web-App im Browser',
+      openPhone: 'Handy-Ansicht in voller Größe öffnen',
+      openTablet: 'Tablet-Ansicht in voller Größe öffnen',
+      openWindows: 'Windows-Ansicht in voller Größe öffnen',
+      openBrowser: 'Browser-Ansicht in voller Größe öffnen'
+    } : {
+      eyebrow: 'PHONE · TABLET · WINDOWS · BROWSER',
+      headline: 'One plan on every screen.',
+      body: 'Your calendar, coach and analysis are on your phone, your tablet, the Windows app and the browser, with the same data on each. Plan at your desk and ride with the app on the trainer.',
+      link: 'Open ENDURE in your browser',
+      groupLabel: 'Choose a device',
+      phone: 'Phone', tablet: 'Tablet', windows: 'Windows', browser: 'Browser',
+      altPhone: 'ENDURE calendar week on an Android phone',
+      altTablet: 'ENDURE calendar on an unfolded Pixel Fold',
+      altWindows: 'ENDURE calendar in the Windows app',
+      altBrowser: 'ENDURE calendar in the web app in a browser',
+      openPhone: 'Open the phone view full size',
+      openTablet: 'Open the tablet view full size',
+      openWindows: 'Open the Windows view full size',
+      openBrowser: 'Open the browser view full size'
+    };
+    // Stage sizes for this breakpoint (screen heights drive phone and tablet width)
+    var c = { winW: 358, brW: 358, bar: 26, phH: 400, tabH: 342, rim: 2, pbz: 5, tbz: 5, phR: 34, tabR: 26, punch: 10, punchTop: 8, pk1: 40, pk2: 68, tk1: 28, tk2: 44, cam: 3 };
+    var s = {
+      winW: c.winW, brW: c.brW, bar: c.bar, rim: c.rim, pbz: c.pbz, tbz: c.tbz,
+      phW: Math.round(c.phH * 1080 / 2364) + 2 * (c.rim + c.pbz),
+      tabW: Math.round(c.tabH * 2076 / 2152) + 2 * (c.rim + c.tbz),
+      phR: c.phR, phR2: c.phR - c.rim, phR3: c.phR - c.rim - c.pbz,
+      tabR: c.tabR, tabR2: c.tabR - c.rim, tabR3: c.tabR - c.rim - c.tbz,
+      punch: c.punch, punchTop: c.punchTop, punchM: -c.punch / 2,
+      pk1: c.pk1, pk2: c.pk2, tk1: c.tk1, tk2: c.tk2,
+      cam: c.cam, camTop: (c.tbz - c.cam) / 2
+    };
+    var sel = this.state.sel || this.props.start || 'phone';
+    var defs = [
+      { id: 'phone', label: t.phone },
+      { id: 'tablet', label: t.tablet },
+      { id: 'windows', label: t.windows },
+      { id: 'browser', label: t.browser }
+    ];
+    var chips = defs.map(function (d) {
+      var on = d.id === sel;
+      return {
+        label: d.label,
+        pressed: on ? 'true' : 'false',
+        style: on ? 'background: #FFFFFF; color: #16181D; box-shadow: 0 1px 4px rgba(22,24,29,0.12)' : 'background: transparent; color: #5F646D',
+        pick: function () { self.setState({ sel: d.id }); }
+      };
+    });
+    return {
+      t: t, s: s, chips: chips,
+      isPhone: sel === 'phone', isTablet: sel === 'tablet',
+      isWindows: sel === 'windows', isBrowser: sel === 'browser'
+    };
+  }
+}
+</script>
+</body>
+</html>

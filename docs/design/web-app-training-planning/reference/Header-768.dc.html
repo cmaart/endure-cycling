@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Header 768 EN and DE</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FCFCFB}
+a{color:#5F646D}a:hover{color:#16181D}
+</style>
+</helmet>
+<div style="width: 768px; height: 290px; background: #FCFCFB; display: flex; flex-direction: column; justify-content: center">
+<dc-import name="Header" locale="en" bp="sm" hint-size="100%,140px"></dc-import>
+<div style="height: 1px; background: #E5E5E1"></div>
+<dc-import name="Header" locale="de" bp="sm" hint-size="100%,140px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":768,"height":290}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

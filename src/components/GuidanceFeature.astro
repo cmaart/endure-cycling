@@ -1,6 +1,7 @@
 ---
 import { getTranslations } from '../i18n/translations';
 import { localeHref } from '../utils/paths';
+import { appShotDir } from '../utils/appShots';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).guidance;
@@ -46,7 +47,7 @@ const coachHref = localeHref(lang, '/features/ai-coach');
       <div class="flex-1 w-full flex justify-center" data-reveal="right">
         <div class="phone-frame w-[260px] md:w-[300px]">
           <img
-            src="/assets/app/today_dashboard.webp"
+            src={`${appShotDir(lang)}/today_dashboard.webp`}
             alt={t.imageAlt}
             width="300"
             height="657"

@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Training planning feature page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FCFCFB}
+a{color:#5F646D}a:hover{color:#16181D}
+</style>
+</helmet>
+<div style="container-type: inline-size; width: 100%; background: #FCFCFB; color: #16181D; font-family: 'Sora', system-ui, sans-serif">
+
+<dc-import name="Header" locale="{{locale}}" bp="{{bp}}" hint-size="100%,96px"></dc-import>
+
+<main style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+
+<!-- HERO -->
+<section style="padding-top: clamp(16px, 2.4cqi, 32px); padding-bottom: clamp(48px, 6cqi, 88px)">
+<nav aria-label="Breadcrumb">
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; color: #5F646D">
+<li><a href="#" style="color: #5F646D; text-decoration: none">{{t.crumbs.home}}</a></li>
+<li aria-hidden="true">/</li>
+<li><a href="#" style="color: #5F646D; text-decoration: none">{{t.crumbs.features}}</a></li>
+<li aria-hidden="true">/</li>
+<li style="color: #16181D; font-weight: 600" aria-current="page">{{t.crumbs.page}}</li>
+</ol>
+</nav>
+
+<div style="max-width: 880px; margin: clamp(32px, 4.4cqi, 64px) auto 0; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center">
+<div style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(194,85,43,0.35); background: rgba(194,85,43,0.06); border-radius: 999px; padding: 8px 18px; font-size: 14px; color: #444951">
+<span style="width: 7px; height: 7px; border-radius: 999px; background: #C2552B"></span>
+<span>{{t.eyebrow}}</span>
+</div>
+<h1 style="margin: 0; font-size: clamp(34px, 4.6cqi, 64px); line-height: 1.06; font-weight: 800; letter-spacing: -0.03em; text-wrap: balance">{{t.h1}}</h1>
+<p style="margin: 0; max-width: 680px; font-size: clamp(18px, 1.6cqi, 22px); line-height: 1.5; font-weight: 500; color: #5F646D; text-wrap: pretty">{{t.subtitle}}</p>
+
+<div style="width: 100%; box-sizing: border-box; margin-top: 8px; text-align: left; background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 16px; padding: clamp(18px, 2cqi, 24px) clamp(20px, 2.4cqi, 28px)">
+<div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; color: #C2552B">{{t.shortLabel}}</div>
+<p style="margin: 8px 0 0; font-size: 17px; line-height: 1.65; color: #2A2D34">{{t.direct}}</p>
+</div>
+
+<div data-placement="feature-hero" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin-top: 8px">
+<a href="#" aria-label="{{t.alt.as}}"><img src="{{badges.as}}" alt="{{t.alt.as}}" style="display: block; height: 40px; width: auto"></a>
+<a href="#" aria-label="{{t.alt.gp}}"><img src="{{badges.gp}}" alt="{{t.alt.gp}}" style="display: block; height: 40px; width: auto"></a>
+<a href="#" aria-label="{{t.alt.ms}}"><img src="{{badges.ms}}" alt="{{t.alt.ms}}" style="display: block; height: 40px; width: auto"></a>
+</div>
+<a href="https://app.endure-cycling.com/" style="font-size: 14px; color: #5F646D; text-decoration: underline; text-decoration-color: #CBCCC8; text-underline-offset: 4px">{{t.webLink}}</a>
+</div>
+
+<!-- Browser frame with calendar (placeholder for the real screenshot) -->
+<figure style="margin: clamp(40px, 5cqi, 72px) auto 0; max-width: 1200px">
+<div style="position: relative; container-type: inline-size; background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 60px -40px rgba(22,24,29,0.22)">
+<div style="display: flex; align-items: center; gap: 1.2cqi; padding: 1cqi 1.4cqi; background: #F7F7F5; border-bottom: 1px solid #EDEDEA">
+<div style="display: flex; gap: 0.6cqi; width: 5cqi">
+<span style="width: 0.9cqi; height: 0.9cqi; border-radius: 999px; background: #D6D6D2"></span>
+<span style="width: 0.9cqi; height: 0.9cqi; border-radius: 999px; background: #D6D6D2"></span>
+<span style="width: 0.9cqi; height: 0.9cqi; border-radius: 999px; background: #D6D6D2"></span>
+</div>
+<div style="margin: 0 auto; display: flex; align-items: center; gap: 0.6cqi; background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 999px; padding: 0.4cqi 1.8cqi; font-size: 1.05cqi; color: #5F646D">
+<svg aria-hidden="true" viewBox="0 0 24 24" style="width: 1.1cqi; height: 1.1cqi" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+<span>app.endure-cycling.com</span>
+</div>
+<div style="width: 5cqi"></div>
+</div>
+
+<div style="display: flex">
+<div style="width: 5.4cqi; flex: none; border-right: 1px solid #F0F0ED; display: flex; flex-direction: column; align-items: center; gap: 1.4cqi; padding: 1.8cqi 0">
+<span style="width: 1.3cqi; height: 1.3cqi; border-radius: 999px; background: #C2552B"></span>
+<span style="width: 2.3cqi; height: 2.3cqi; border-radius: 0.6cqi; background: #F0F0ED"></span>
+<span style="width: 2.3cqi; height: 2.3cqi; border-radius: 0.6cqi; background: rgba(194,85,43,0.14)"></span>
+<span style="width: 2.3cqi; height: 2.3cqi; border-radius: 0.6cqi; background: #F0F0ED"></span>
+<span style="width: 2.3cqi; height: 2.3cqi; border-radius: 0.6cqi; background: #F0F0ED"></span>
+<span style="width: 2.3cqi; height: 2.3cqi; border-radius: 0.6cqi; background: #F0F0ED"></span>
+</div>
+<div style="flex: 1; min-width: 0; padding: 2cqi 2.4cqi; display: flex; flex-direction: column; gap: 1.2cqi">
+<div style="display: flex; align-items: center; gap: 1.2cqi">
+<span style="font-size: 2cqi; font-weight: 700">{{t.ui.calendar}}</span>
+<span style="width: 12cqi; height: 1cqi; border-radius: 999px; background: #E5E5E1"></span>
+<span style="flex: 1"></span>
+<span style="width: 2.4cqi; height: 2.4cqi; border-radius: 0.6cqi; border: 1px solid #E5E5E1"></span>
+<span style="width: 2.4cqi; height: 2.4cqi; border-radius: 0.6cqi; border: 1px solid #E5E5E1"></span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)) 17cqi; gap: 0.8cqi; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 1cqi; color: #5F646D">
+<sc-for list="{{t.days}}" as="day" hint-placeholder-count="7"><span>{{day}}</span></sc-for>
+<span></span>
+</div>
+<sc-for list="{{weeks}}" as="wk" hint-placeholder-count="2">
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)) 17cqi; gap: 0.8cqi">
+<sc-for list="{{wk.days}}" as="d" hint-placeholder-count="7">
+<div style="min-height: 9.5cqi; border: 1px solid #F0F0ED; border-radius: 0.8cqi; background: #FCFCFB; padding: 0.6cqi; display: flex; flex-direction: column; gap: 0.5cqi">
+<span style="font-size: 0.95cqi; color: #5F646D">{{d.num}}</span>
+<sc-if value="{{d.done}}" hint-placeholder-val="{{ true }}">
+<div style="border-radius: 0.6cqi; background: #EAF4EF; padding: 0.7cqi; display: flex; flex-direction: column; gap: 0.45cqi">
+<span style="height: 0.7cqi; width: {{d.w}}; border-radius: 999px; background: #5E9C80"></span>
+<span style="height: 0.55cqi; width: 40%; border-radius: 999px; background: #B9D8C8"></span>
+</div>
+</sc-if>
+<sc-if value="{{d.plan}}" hint-placeholder-val="{{ false }}">
+<div style="border-radius: 0.6cqi; background: #FFFFFF; border: 1px solid {{d.bc}}; padding: 0.7cqi; display: flex; flex-direction: column; gap: 0.45cqi">
+<span style="height: 0.7cqi; width: {{d.w}}; border-radius: 999px; background: {{d.bar}}"></span>
+<span style="height: 0.55cqi; width: 40%; border-radius: 999px; background: #E5E5E1"></span>
+</div>
+</sc-if>
+</div>
+</sc-for>
+<div style="border: 1px solid #F0F0ED; border-radius: 0.8cqi; padding: 0.9cqi; display: flex; flex-direction: column; gap: 0.6cqi; font-size: 0.95cqi; color: #5F646D">
+<span style="font-weight: 700; color: #16181D">{{wk.label}}</span>
+<span>{{t.ui.planned}}</span>
+<span style="height: 0.6cqi; border-radius: 999px; background: #F0F0ED; display: block"><span style="display: block; height: 100%; width: {{wk.pw}}; border-radius: 999px; background: #16181D"></span></span>
+<span>{{t.ui.done}}</span>
+<span style="height: 0.6cqi; border-radius: 999px; background: #F0F0ED; display: block"><span style="display: block; height: 100%; width: {{wk.dw}}; border-radius: 999px; background: #3F8A6A"></span></span>
+<sc-if value="{{wk.verdict}}" hint-placeholder-val="{{ true }}">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 0.4cqi; background: #E7F3EC; color: #0B6B4A; border-radius: 999px; padding: 0.3cqi 0.8cqi; font-weight: 600"><span style="width: 0.6cqi; height: 0.6cqi; border-radius: 999px; background: #0F7A55"></span>{{t.ui.onTrack}}</span>
+</sc-if>
+<sc-if value="{{wk.plan}}" hint-placeholder-val="{{ false }}">
+<span style="align-self: flex-start; background: #C2552B; color: #FFFFFF; border-radius: 0.6cqi; padding: 0.4cqi 0.8cqi; font-weight: 600">{{t.ui.plan}}</span>
+</sc-if>
+</div>
+</div>
+</sc-for>
+<div style="display: flex; align-items: center; gap: 1.6cqi; border: 1px solid #F0F0ED; border-radius: 0.8cqi; padding: 1cqi 1.4cqi">
+<span style="font-size: 1.05cqi; font-weight: 700; white-space: nowrap">{{t.ui.forecast}}</span>
+<svg aria-hidden="true" viewBox="0 0 600 60" preserveAspectRatio="none" style="flex: 1; height: 4cqi">
+<path d="M0 50 C80 47 160 44 240 38" fill="none" stroke="#16181D" stroke-width="2.5"></path>
+<path d="M240 38 C340 30 460 22 600 12" fill="none" stroke="#C2552B" stroke-width="2.5" stroke-dasharray="8 7"></path>
+<line x1="240" y1="0" x2="240" y2="60" stroke="#CBCCC8" stroke-dasharray="3 4"></line>
+</svg>
+<span style="display: inline-flex; align-items: center; gap: 0.4cqi; background: #E7F3EC; color: #0B6B4A; border-radius: 999px; padding: 0.3cqi 0.8cqi; font-size: 0.95cqi; font-weight: 600; white-space: nowrap"><span style="width: 0.6cqi; height: 0.6cqi; border-radius: 999px; background: #0F7A55"></span>{{t.ui.onTrack}}</span>
+</div>
+</div>
+</div>
+<span style="position: absolute; right: 1.4cqi; bottom: 1.4cqi; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: max(10px, 0.9cqi); background: #16181D; color: #FFFFFF; border-radius: 999px; padding: 4px 10px">Screenshot placeholder</span>
+</div>
+<figcaption style="margin-top: 14px; font-size: 14px; line-height: 1.5; color: #5F646D; text-align: center">{{t.caption}}</figcaption>
+</figure>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="padding-block: clamp(32px, 4cqi, 56px)">
+<h2 style="margin: 0 0 24px; font-size: clamp(26px, 2.6cqi, 36px); font-weight: 800; letter-spacing: -0.02em">{{t.stepsTitle}}</h2>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px">
+<sc-for list="{{t.steps}}" as="s" hint-placeholder-count="3">
+<li style="background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; color: #C2552B">{{s.n}}</span>
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">{{s.title}}</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5F646D">{{s.body}}</p>
+</li>
+</sc-for>
+</ol>
+</section>
+
+<!-- S1: week row -->
+<section style="padding-block: clamp(48px, 6cqi, 88px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(28px, 4cqi, 64px)">
+<div style="flex: 1 1 360px; min-width: 0">
+<h2 style="margin: 0 0 14px; font-size: clamp(26px, 2.6cqi, 36px); line-height: 1.15; font-weight: 800; letter-spacing: -0.02em">{{t.s1.title}}</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #444951">{{t.s1.body}}</p>
+<ul style="list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{t.s1.bullets}}" as="b" hint-placeholder-count="2">
+<li style="display: flex; align-items: flex-start; gap: 12px; font-size: 16px; line-height: 1.55; color: #444951">
+<span style="margin-top: 2px; flex: none; width: 20px; height: 20px; border-radius: 999px; background: rgba(194,85,43,0.1); border: 1px solid rgba(194,85,43,0.3); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" style="width: 12px; height: 12px; color: #C2552B" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"></path></svg></span>
+<span><strong style="color: #16181D">{{b.b}}</strong> {{b.r}}</span>
+</li>
+</sc-for>
+</ul>
+</div>
+<figure style="flex: 1.35 1 440px; min-width: 0; margin: 0">
+<div style="position: relative; container-type: inline-size; background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 16px; padding: 3.2cqi; box-sizing: border-box; display: flex; flex-direction: column; gap: 2.4cqi">
+<sc-for list="{{weeks}}" as="wk" hint-placeholder-count="2">
+<div style="display: flex; flex-direction: column; gap: 1.4cqi">
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)) 25cqi; gap: 1.1cqi; align-items: stretch">
+<sc-for list="{{wk.days}}" as="d" hint-placeholder-count="7">
+<div style="min-height: 13cqi; border-radius: 1.4cqi; border: 1px solid #F0F0ED; background: #FCFCFB; padding: 0.9cqi; display: flex; flex-direction: column; justify-content: flex-end; gap: 0.6cqi">
+<sc-if value="{{d.done}}" hint-placeholder-val="{{ true }}">
+<span style="display: block; height: 7cqi; border-radius: 1cqi; background: #EAF4EF; position: relative"><span style="position: absolute; left: 0.9cqi; right: 0.9cqi; bottom: 0.9cqi; height: 1cqi; border-radius: 999px; background: #5E9C80"></span></span>
+</sc-if>
+<sc-if value="{{d.plan}}" hint-placeholder-val="{{ false }}">
+<span style="display: block; height: 7cqi; border-radius: 1cqi; background: #FFFFFF; border: 1px solid {{d.bc}}; position: relative"><span style="position: absolute; left: 0.9cqi; right: 0.9cqi; bottom: 0.9cqi; height: 1cqi; border-radius: 999px; background: {{d.bar}}"></span></span>
+</sc-if>
+</div>
+</sc-for>
+<div style="display: flex; flex-direction: column; justify-content: center; gap: 0.9cqi; font-size: clamp(8px, 1.9cqi, 13px); color: #5F646D">
+<span style="font-weight: 700; color: #16181D">{{wk.label}}</span>
+<span style="display: flex; justify-content: space-between; gap: 1cqi"><span>{{t.ui.planned}}</span><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace">[h]</span></span>
+<span style="height: 1cqi; border-radius: 999px; background: #F0F0ED; display: block"><span style="display: block; height: 100%; width: {{wk.pw}}; border-radius: 999px; background: #16181D"></span></span>
+<span style="display: flex; justify-content: space-between; gap: 1cqi"><span>{{t.ui.done}}</span><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace">[h]</span></span>
+<span style="height: 1cqi; border-radius: 999px; background: #F0F0ED; display: block"><span style="display: block; height: 100%; width: {{wk.dw}}; border-radius: 999px; background: #3F8A6A"></span></span>
+<sc-if value="{{wk.verdict}}" hint-placeholder-val="{{ true }}">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 0.6cqi; background: #E7F3EC; color: #0B6B4A; border-radius: 999px; padding: 0.5cqi 1.2cqi; font-weight: 600"><span style="width: 1cqi; height: 1cqi; border-radius: 999px; background: #0F7A55"></span>{{t.ui.onTrack}}</span>
+</sc-if>
+<sc-if value="{{wk.plan}}" hint-placeholder-val="{{ false }}">
+<span style="align-self: flex-start; background: #C2552B; color: #FFFFFF; border-radius: 1cqi; padding: 0.7cqi 1.2cqi; font-weight: 600">{{t.ui.plan}}</span>
+</sc-if>
+</div>
+</div>
+<sc-if value="{{wk.verdict}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; align-items: flex-start; gap: 1.4cqi; background: #F7F7F5; border-radius: 1.4cqi; padding: 1.6cqi 2cqi">
+<span style="flex: none; width: 3.6cqi; height: 3.6cqi; border-radius: 999px; background: rgba(194,85,43,0.12); display: flex; align-items: center; justify-content: center"><span style="width: 1.3cqi; height: 1.3cqi; border-radius: 999px; background: #C2552B"></span></span>
+<span style="display: flex; flex-direction: column; gap: 0.6cqi; font-size: clamp(8px, 1.9cqi, 13px); color: #5F646D; flex: 1">
+<span style="font-weight: 700; color: #16181D">{{t.ui.verdict}}</span>
+<span style="display: block; height: 1cqi; width: 92%; border-radius: 999px; background: #E5E5E1"></span>
+<span style="display: block; height: 1cqi; width: 64%; border-radius: 999px; background: #E5E5E1"></span>
+</span>
+</div>
+</sc-if>
+</div>
+</sc-for>
+<span style="position: absolute; right: 2cqi; top: -11px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10px; background: #16181D; color: #FFFFFF; border-radius: 999px; padding: 4px 10px">Crop placeholder</span>
+</div>
+</figure>
+</section>
+
+<!-- S2: load forecast -->
+<section style="padding-block: clamp(48px, 6cqi, 88px); display: flex; flex-direction: row-reverse; flex-wrap: wrap; align-items: center; gap: clamp(28px, 4cqi, 64px); border-top: 1px solid #F0F0ED">
+<div style="flex: 1 1 360px; min-width: 0">
+<h2 style="margin: 0 0 14px; font-size: clamp(26px, 2.6cqi, 36px); line-height: 1.15; font-weight: 800; letter-spacing: -0.02em">{{t.s2.title}}</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #444951">{{t.s2.body}}</p>
+<ul style="list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{t.s2.bullets}}" as="b" hint-placeholder-count="2">
+<li style="display: flex; align-items: flex-start; gap: 12px; font-size: 16px; line-height: 1.55; color: #444951">
+<span style="margin-top: 2px; flex: none; width: 20px; height: 20px; border-radius: 999px; background: rgba(194,85,43,0.1); border: 1px solid rgba(194,85,43,0.3); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" style="width: 12px; height: 12px; color: #C2552B" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"></path></svg></span>
+<span><strong style="color: #16181D">{{b.b}}</strong> {{b.r}}</span>
+</li>
+</sc-for>
+</ul>
+</div>
+<figure style="flex: 1.35 1 440px; min-width: 0; margin: 0">
+<div style="position: relative; container-type: inline-size; background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 16px; padding: 3.2cqi; box-sizing: border-box; display: flex; flex-direction: column; gap: 2.4cqi">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.6cqi">
+<span style="font-size: clamp(10px, 2.4cqi, 16px); font-weight: 700">{{t.ui.forecast}} <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 400; color: #5F646D">· CTL</span></span>
+<span style="display: flex; flex-wrap: wrap; gap: 1cqi; font-size: clamp(8px, 1.8cqi, 13px)">
+<span style="display: inline-flex; align-items: center; gap: 0.7cqi; background: #E7F3EC; color: #0B6B4A; border: 1px solid #BFDFCD; border-radius: 999px; padding: 0.5cqi 1.3cqi; font-weight: 600"><span style="width: 1cqi; height: 1cqi; border-radius: 999px; background: #0F7A55"></span>{{t.ui.onTrack}}</span>
+<span style="display: inline-flex; align-items: center; gap: 0.7cqi; background: #FFFFFF; color: #5F646D; border: 1px solid #E5E5E1; border-radius: 999px; padding: 0.5cqi 1.3cqi"><span style="width: 1cqi; height: 1cqi; border-radius: 999px; background: #9DA0A6"></span>{{t.ui.tooLittle}}</span>
+<span style="display: inline-flex; align-items: center; gap: 0.7cqi; background: #FFFFFF; color: #5F646D; border: 1px solid #E5E5E1; border-radius: 999px; padding: 0.5cqi 1.3cqi"><span style="width: 1cqi; height: 1cqi; border-radius: 999px; background: #C2552B"></span>{{t.ui.tooMuch}}</span>
+</span>
+</div>
+<div style="position: relative">
+<svg aria-hidden="true" viewBox="0 0 600 260" style="display: block; width: 100%; height: auto">
+<line x1="0" y1="60" x2="600" y2="60" stroke="#F0F0ED"></line>
+<line x1="0" y1="120" x2="600" y2="120" stroke="#F0F0ED"></line>
+<line x1="0" y1="180" x2="600" y2="180" stroke="#F0F0ED"></line>
+<line x1="0" y1="240" x2="600" y2="240" stroke="#E5E5E1"></line>
+<path d="M300 136 L560 56 L560 108 L300 166 Z" fill="#0F7A55" fill-opacity="0.08"></path>
+<path d="M20 214 C90 206 150 196 210 180 S280 160 300 152" fill="none" stroke="#16181D" stroke-width="3" stroke-linecap="round"></path>
+<path d="M300 152 C380 134 470 108 560 82" fill="none" stroke="#C2552B" stroke-width="3" stroke-dasharray="9 8" stroke-linecap="round"></path>
+<line x1="300" y1="24" x2="300" y2="240" stroke="#9DA0A6" stroke-dasharray="3 5"></line>
+<circle cx="300" cy="152" r="6" fill="#FFFFFF" stroke="#16181D" stroke-width="3"></circle>
+<line x1="560" y1="30" x2="560" y2="240" stroke="#16181D" stroke-width="2"></line>
+<path d="M560 30 L586 38 L560 46 Z" fill="#C2552B"></path>
+</svg>
+<span style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); font-size: clamp(8px, 1.7cqi, 12px); color: #5F646D; background: #FFFFFF; padding: 0 0.6cqi">{{t.ui.today}}</span>
+<span style="position: absolute; right: 0; top: 0; font-size: clamp(8px, 1.7cqi, 12px); font-weight: 700; color: #16181D">{{t.ui.goal}}</span>
+</div>
+<span style="position: absolute; right: 2cqi; top: -11px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10px; background: #16181D; color: #FFFFFF; border-radius: 999px; padding: 4px 10px">Crop placeholder</span>
+</div>
+</figure>
+</section>
+
+<!-- S3: plan with coach -->
+<section style="padding-block: clamp(48px, 6cqi, 88px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(28px, 4cqi, 64px); border-top: 1px solid #F0F0ED">
+<div style="flex: 1 1 360px; min-width: 0">
+<h2 style="margin: 0 0 14px; font-size: clamp(26px, 2.6cqi, 36px); line-height: 1.15; font-weight: 800; letter-spacing: -0.02em">{{t.s3.title}}</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #444951">{{t.s3.body}}</p>
+<ul style="list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{t.s3.bullets}}" as="b" hint-placeholder-count="3">
+<li style="display: flex; align-items: flex-start; gap: 12px; font-size: 16px; line-height: 1.55; color: #444951">
+<span style="margin-top: 2px; flex: none; width: 20px; height: 20px; border-radius: 999px; background: rgba(194,85,43,0.1); border: 1px solid rgba(194,85,43,0.3); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" style="width: 12px; height: 12px; color: #C2552B" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"></path></svg></span>
+<span><strong style="color: #16181D">{{b.b}}</strong> {{b.r}}</span>
+</li>
+</sc-for>
+</ul>
+</div>
+<figure style="flex: 1.35 1 440px; min-width: 0; margin: 0">
+<div style="position: relative; container-type: inline-size; background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 16px; padding: 3.2cqi; box-sizing: border-box; display: flex; flex-direction: column; gap: 2.2cqi">
+<div style="display: flex; align-items: center; gap: 1.6cqi">
+<span style="font-size: clamp(10px, 2.4cqi, 16px); font-weight: 700">{{t.ui.nextWeek}}</span>
+<span style="width: 14cqi; height: 1.2cqi; border-radius: 999px; background: #E5E5E1"></span>
+<span style="flex: 1"></span>
+<span style="display: inline-flex; align-items: center; gap: 1cqi; background: #C2552B; color: #FFFFFF; border-radius: 1.6cqi; padding: 1.2cqi 2cqi; font-size: clamp(9px, 2.1cqi, 14px); font-weight: 700; box-shadow: 0 0 0 4px rgba(194,85,43,0.14)">
+<svg aria-hidden="true" viewBox="0 0 24 24" style="width: 2.4cqi; height: 2.4cqi" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>
+<span>{{t.ui.plan}}</span>
+</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 1cqi; opacity: 0.55">
+<sc-for list="{{nextDays}}" as="d" hint-placeholder-count="7">
+<span style="display: block; height: 7cqi; border-radius: 1cqi; border: 1px solid {{d.bc}}; background: #FCFCFB"></span>
+</sc-for>
+</div>
+<div style="align-self: flex-end; width: 82%; background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 2cqi; padding: 2.6cqi; box-shadow: 0 16px 36px -20px rgba(22,24,29,0.28); display: flex; flex-direction: column; gap: 1.8cqi; font-size: clamp(8px, 1.9cqi, 13px)">
+<div style="display: flex; align-items: center; gap: 1.2cqi">
+<span style="width: 3.4cqi; height: 3.4cqi; border-radius: 999px; background: rgba(194,85,43,0.12); display: flex; align-items: center; justify-content: center"><span style="width: 1.2cqi; height: 1.2cqi; border-radius: 999px; background: #C2552B"></span></span>
+<span style="font-weight: 700">{{t.ui.proposal}}</span>
+</div>
+<sc-for list="{{changes}}" as="c" hint-placeholder-count="3">
+<div style="display: grid; grid-template-columns: 6cqi minmax(0, 1fr) 3cqi minmax(0, 1fr); align-items: center; gap: 1.2cqi">
+<span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; color: #5F646D">{{c.day}}</span>
+<span style="position: relative; display: block; height: 3.6cqi; border-radius: 1cqi; background: #F4F4F2"><span style="position: absolute; left: 1cqi; top: 50%; width: {{c.oldW}}; height: 1px; background: #9DA0A6"></span></span>
+<svg aria-hidden="true" viewBox="0 0 24 24" style="width: 2.6cqi; height: 2.6cqi; color: #5F646D" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+<span style="position: relative; display: block; height: 3.6cqi; border-radius: 1cqi; background: rgba(194,85,43,0.1); border: 1px solid rgba(194,85,43,0.35)"><span style="position: absolute; left: 1cqi; top: calc(50% - 0.5cqi); width: {{c.newW}}; height: 1cqi; border-radius: 999px; background: #C2552B"></span></span>
+</div>
+</sc-for>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.2cqi; margin-top: 0.6cqi">
+<span style="background: #16181D; color: #FCFCFB; border-radius: 1.2cqi; padding: 1cqi 2cqi; font-weight: 700">{{t.ui.accept}}</span>
+<span style="border: 1px solid rgba(22,24,29,0.22); background: rgba(22,24,29,0.035); border-radius: 1.2cqi; padding: 1cqi 2cqi; font-weight: 600">{{t.ui.discard}}</span>
+<span style="color: #5F646D; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #CBCCC8">{{t.ui.chat}}</span>
+</div>
+</div>
+<span style="position: absolute; right: 2cqi; top: -11px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10px; background: #16181D; color: #FFFFFF; border-radius: 999px; padding: 4px 10px">Crop placeholder</span>
+</div>
+</figure>
+</section>
+
+<!-- S4: alternatives -->
+<section style="padding-block: clamp(48px, 6cqi, 88px); display: flex; flex-direction: row-reverse; flex-wrap: wrap; align-items: center; gap: clamp(28px, 4cqi, 64px); border-top: 1px solid #F0F0ED">
+<div style="flex: 1 1 360px; min-width: 0">
+<h2 style="margin: 0 0 14px; font-size: clamp(26px, 2.6cqi, 36px); line-height: 1.15; font-weight: 800; letter-spacing: -0.02em">{{t.s4.title}}</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #444951">{{t.s4.body}}</p>
+<ul style="list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{t.s4.bullets}}" as="b" hint-placeholder-count="2">
+<li style="display: flex; align-items: flex-start; gap: 12px; font-size: 16px; line-height: 1.55; color: #444951">
+<span style="margin-top: 2px; flex: none; width: 20px; height: 20px; border-radius: 999px; background: rgba(194,85,43,0.1); border: 1px solid rgba(194,85,43,0.3); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" style="width: 12px; height: 12px; color: #C2552B" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"></path></svg></span>
+<span><strong style="color: #16181D">{{b.b}}</strong> {{b.r}}</span>
+</li>
+</sc-for>
+</ul>
+</div>
+<figure style="flex: 1.35 1 440px; min-width: 0; margin: 0">
+<div style="position: relative; container-type: inline-size; background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 16px; padding: 3.2cqi; box-sizing: border-box; display: flex; flex-direction: column; gap: 2.4cqi">
+<div style="display: flex; align-items: center; gap: 1.6cqi">
+<span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: clamp(8px, 1.9cqi, 13px); color: #5F646D">{{dayThu}}</span>
+<span style="width: 26cqi; height: 1.4cqi; border-radius: 999px; background: #16181D; opacity: 0.85"></span>
+<span style="flex: 1"></span>
+<span style="width: 9cqi; height: 1.2cqi; border-radius: 999px; background: #E5E5E1"></span>
+</div>
+<svg aria-hidden="true" viewBox="0 0 300 80" preserveAspectRatio="none" style="display: block; width: 100%; height: 16cqi">
+<rect x="0" y="56" width="40" height="24" rx="3" fill="#CBCCC8"></rect>
+<rect x="44" y="20" width="34" height="60" rx="3" fill="#C2552B"></rect>
+<rect x="82" y="56" width="18" height="24" rx="3" fill="#CBCCC8"></rect>
+<rect x="104" y="20" width="34" height="60" rx="3" fill="#C2552B"></rect>
+<rect x="142" y="56" width="18" height="24" rx="3" fill="#CBCCC8"></rect>
+<rect x="164" y="20" width="34" height="60" rx="3" fill="#C2552B"></rect>
+<rect x="202" y="56" width="18" height="24" rx="3" fill="#CBCCC8"></rect>
+<rect x="224" y="20" width="34" height="60" rx="3" fill="#C2552B"></rect>
+<rect x="262" y="60" width="38" height="20" rx="3" fill="#CBCCC8"></rect>
+</svg>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.6cqi; font-size: clamp(8px, 1.9cqi, 13px)">
+<div style="border: 1px solid #E5E5E1; border-radius: 1.6cqi; padding: 1.8cqi; display: flex; flex-direction: column; gap: 1.2cqi">
+<span style="font-weight: 600; color: #444951">{{t.ui.lighter}}</span>
+<svg aria-hidden="true" viewBox="0 0 120 40" preserveAspectRatio="none" style="display: block; width: 100%; height: 7cqi"><rect x="0" y="28" width="18" height="12" rx="2" fill="#CBCCC8"></rect><rect x="21" y="18" width="18" height="22" rx="2" fill="#E4A385"></rect><rect x="42" y="28" width="10" height="12" rx="2" fill="#CBCCC8"></rect><rect x="55" y="18" width="18" height="22" rx="2" fill="#E4A385"></rect><rect x="76" y="28" width="10" height="12" rx="2" fill="#CBCCC8"></rect><rect x="89" y="18" width="18" height="22" rx="2" fill="#E4A385"></rect><rect x="110" y="30" width="10" height="10" rx="2" fill="#CBCCC8"></rect></svg>
+</div>
+<div style="border: 2px solid #16181D; border-radius: 1.6cqi; padding: 1.8cqi; display: flex; flex-direction: column; gap: 1.2cqi; background: #FCFCFB">
+<span style="font-weight: 700; color: #16181D">{{t.ui.plannedOpt}}</span>
+<svg aria-hidden="true" viewBox="0 0 120 40" preserveAspectRatio="none" style="display: block; width: 100%; height: 7cqi"><rect x="0" y="28" width="16" height="12" rx="2" fill="#CBCCC8"></rect><rect x="18" y="10" width="14" height="30" rx="2" fill="#C2552B"></rect><rect x="34" y="28" width="7" height="12" rx="2" fill="#CBCCC8"></rect><rect x="43" y="10" width="14" height="30" rx="2" fill="#C2552B"></rect><rect x="59" y="28" width="7" height="12" rx="2" fill="#CBCCC8"></rect><rect x="68" y="10" width="14" height="30" rx="2" fill="#C2552B"></rect><rect x="84" y="28" width="7" height="12" rx="2" fill="#CBCCC8"></rect><rect x="93" y="10" width="14" height="30" rx="2" fill="#C2552B"></rect><rect x="109" y="30" width="11" height="10" rx="2" fill="#CBCCC8"></rect></svg>
+</div>
+<div style="border: 1px solid #E5E5E1; border-radius: 1.6cqi; padding: 1.8cqi; display: flex; flex-direction: column; gap: 1.2cqi">
+<span style="font-weight: 600; color: #444951">{{t.ui.harder}}</span>
+<svg aria-hidden="true" viewBox="0 0 120 40" preserveAspectRatio="none" style="display: block; width: 100%; height: 7cqi"><rect x="0" y="28" width="12" height="12" rx="2" fill="#CBCCC8"></rect><rect x="14" y="2" width="12" height="38" rx="2" fill="#A84620"></rect><rect x="28" y="28" width="5" height="12" rx="2" fill="#CBCCC8"></rect><rect x="35" y="2" width="12" height="38" rx="2" fill="#A84620"></rect><rect x="49" y="28" width="5" height="12" rx="2" fill="#CBCCC8"></rect><rect x="56" y="2" width="12" height="38" rx="2" fill="#A84620"></rect><rect x="70" y="28" width="5" height="12" rx="2" fill="#CBCCC8"></rect><rect x="77" y="2" width="12" height="38" rx="2" fill="#A84620"></rect><rect x="91" y="28" width="5" height="12" rx="2" fill="#CBCCC8"></rect><rect x="98" y="2" width="12" height="38" rx="2" fill="#A84620"></rect><rect x="112" y="30" width="8" height="10" rx="2" fill="#CBCCC8"></rect></svg>
+</div>
+</div>
+<span style="position: absolute; right: 2cqi; top: -11px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10px; background: #16181D; color: #FFFFFF; border-radius: 999px; padding: 4px 10px">Crop placeholder</span>
+</div>
+</figure>
+</section>
+
+<!-- S5: browser + apps -->
+<section style="padding-block: clamp(48px, 6cqi, 88px); border-top: 1px solid #F0F0ED">
+<div style="max-width: 760px">
+<h2 style="margin: 0 0 14px; font-size: clamp(26px, 2.6cqi, 36px); line-height: 1.15; font-weight: 800; letter-spacing: -0.02em">{{t.s5.title}}</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #444951">{{t.s5.body}}</p>
+</div>
+<div style="margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 16px">
+<div style="background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: #F4F4F2; display: flex; align-items: center; justify-content: center; color: #16181D"><svg aria-hidden="true" viewBox="0 0 24 24" style="width: 20px; height: 20px" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><path d="M3 9h18"></path><path d="M6.5 6.5h.01M9 6.5h.01"></path></svg></span>
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">{{t.s5.web.title}}</h3>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{t.s5.web.items}}" as="it" hint-placeholder-count="4">
+<li style="display: flex; align-items: flex-start; gap: 10px; font-size: 16px; line-height: 1.5; color: #444951"><svg aria-hidden="true" viewBox="0 0 24 24" style="flex: none; margin-top: 3px; width: 16px; height: 16px; color: #C2552B" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"></path></svg><span>{{it}}</span></li>
+</sc-for>
+</ul>
+<a href="https://app.endure-cycling.com/" style="margin-top: auto; font-size: 15px; font-weight: 600; color: #16181D; text-decoration: underline; text-decoration-color: #CBCCC8; text-underline-offset: 4px">app.endure-cycling.com →</a>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: rgba(194,85,43,0.1); display: flex; align-items: center; justify-content: center; color: #C2552B"><svg aria-hidden="true" viewBox="0 0 24 24" style="width: 20px; height: 20px" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect><path d="M11 18.5h2"></path></svg></span>
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">{{t.s5.app.title}}</h3>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{t.s5.app.items}}" as="it" hint-placeholder-count="3">
+<li style="display: flex; align-items: flex-start; gap: 10px; font-size: 16px; line-height: 1.5; color: #444951"><svg aria-hidden="true" viewBox="0 0 24 24" style="flex: none; margin-top: 3px; width: 16px; height: 16px; color: #C2552B" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"></path></svg><span>{{it}}</span></li>
+</sc-for>
+</ul>
+</div>
+</div>
+<p style="margin: 16px 0 0; font-size: 15px; line-height: 1.6; color: #5F646D">{{t.s5.note}}</p>
+</section>
+
+<!-- FAQ -->
+<section style="padding-block: clamp(48px, 6cqi, 88px); border-top: 1px solid #F0F0ED">
+<h2 style="margin: 0 0 24px; font-size: clamp(26px, 2.6cqi, 36px); font-weight: 800; letter-spacing: -0.02em">{{t.faqTitle}}</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 16px">
+<sc-for list="{{t.faq}}" as="f" hint-placeholder-count="6">
+<div style="background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 16px; padding: 24px">
+<h3 style="margin: 0 0 8px; font-size: 18px; line-height: 1.35; font-weight: 700">{{f.q}}</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5F646D">{{f.a}}</p>
+</div>
+</sc-for>
+</div>
+</section>
+
+<!-- CTA -->
+<section style="margin-block: clamp(16px, 2cqi, 32px); text-align: center; background: rgba(22,24,29,0.03); border: 1px solid rgba(22,24,29,0.10); border-radius: 20px; padding: clamp(32px, 4.4cqi, 64px) clamp(20px, 3cqi, 48px); display: flex; flex-direction: column; align-items: center; gap: 16px">
+<h2 style="margin: 0; font-size: clamp(26px, 2.8cqi, 40px); line-height: 1.15; font-weight: 800; letter-spacing: -0.02em; text-wrap: balance">{{t.cta.title}}</h2>
+<p style="margin: 0; max-width: 520px; font-size: 17px; line-height: 1.6; color: #5F646D">{{t.cta.body}}</p>
+<div data-placement="feature-cta" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; margin-top: 8px">
+<a href="#" aria-label="{{t.alt.as}}"><img src="{{badges.as}}" alt="{{t.alt.as}}" style="display: block; height: 48px; width: auto"></a>
+<a href="#" aria-label="{{t.alt.gp}}"><img src="{{badges.gp}}" alt="{{t.alt.gp}}" style="display: block; height: 48px; width: auto"></a>
+<a href="#" aria-label="{{t.alt.ms}}"><img src="{{badges.ms}}" alt="{{t.alt.ms}}" style="display: block; height: 48px; width: auto"></a>
+</div>
+<a href="https://app.endure-cycling.com/" style="font-size: 14px; color: #5F646D; text-decoration: underline; text-decoration-color: #CBCCC8; text-underline-offset: 4px">{{t.webLink}}</a>
+</section>
+
+<!-- Related -->
+<section style="padding-block: clamp(40px, 4cqi, 56px) clamp(64px, 7cqi, 96px)">
+<h2 style="margin: 0 0 16px; font-size: 20px; font-weight: 700">{{t.relatedTitle}}</h2>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px">
+<sc-for list="{{t.related}}" as="r" hint-placeholder-count="4">
+<li><a href="#" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 0 16px; border: 1px solid #E5E5E1; border-radius: 999px; background: #FFFFFF; color: #A84620; font-size: 15px; font-weight: 600; text-decoration: none">{{r}} →</a></li>
+</sc-for>
+</ul>
+<a href="#" style="display: inline-flex; margin-top: 28px; color: #A84620; font-weight: 600; text-decoration: none">← {{t.back}}</a>
+</section>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"locale":{"editor":"enum","options":["en","de"],"default":"en"},"bp":{"editor":"enum","options":["xl","lg","sm","xs"],"default":"xl"},"$preview":{"width":1440,"height":7000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const T = {
+      en: {
+        crumbs: { home: 'Home', features: 'Features', page: 'Training planning' },
+        eyebrow: 'New · Training planning',
+        h1: 'Training planning: the AI coach plans your next two weeks',
+        subtitle: 'Aligned to your goal event, adjusted after every ride. You confirm each change.',
+        shortLabel: 'SHORT ANSWER',
+        direct: 'The ENDURE AI coach plans the next one to two weeks of training in a calendar, aligned to your goal event. Each week shows planned against done, a load forecast and a short verdict from the coach. Every session has a lighter and a harder alternative. The coach proposes, you confirm: nothing in your calendar changes without your OK. You plan in the calendar and ride the sessions in the ENDURE app on iOS, Android or Windows.',
+        webLink: 'Or open it in your browser →',
+        caption: 'The training planning calendar in the ENDURE web app: two weeks with planned and completed sessions, weekly totals and the coach verdict.',
+        alt: { as: 'Download on the App Store', gp: 'Get it on Google Play', ms: 'Get it from Microsoft' },
+        stepsTitle: 'How it works',
+        steps: [
+          { n: '01', title: 'Set your goal', body: 'Add the event you are training for and its date.' },
+          { n: '02', title: 'The coach proposes', body: 'It fills the next one to two weeks from your rides, your training load and your morning check-ins.' },
+          { n: '03', title: 'You confirm and ride', body: 'Accept each change or ask for something else in chat. After every ride the coach reviews it.' }
+        ],
+        s1: { title: 'Planned and done, week by week', body: 'Every week row shows the planned hours and load next to what you actually rode. The coach adds a short verdict, so you see at a glance whether the week went to plan.', bullets: [
+          { b: 'Planned vs. done', r: 'for hours and training load, per week.' },
+          { b: 'Weekly verdict', r: 'from the coach in one or two sentences.' }
+        ] },
+        s2: { title: 'A load forecast before you ride it', body: 'The calendar projects your fitness (CTL) across the planned weeks and checks the ramp against your goal. Before the week starts you see whether the plan is on track, too little or too much.', bullets: [
+          { b: 'Three states:', r: 'on track, too little, too much.' },
+          { b: 'Projected ramp', r: 'up to the date of your goal event.' }
+        ] },
+        s3: { title: 'Plan with coach, one week at a time', body: 'Each week has a Plan with coach button. The coach drafts the week from your recent rides and check-ins and shows you what would change. You accept it, or tell the coach in chat what should be different.', bullets: [
+          { b: 'Proposal first:', r: 'changes are shown before they apply.' },
+          { b: 'Your call:', r: 'nothing in the calendar changes without your confirmation.' },
+          { b: 'Adjust in chat,', r: 'for example a shorter Tuesday or a free weekend.' }
+        ] },
+        s4: { title: 'A lighter and a harder option for every session', body: 'Each planned session comes with two alternatives. If your legs or your schedule do not match the plan, swap in the lighter or the harder version.', bullets: [
+          { b: 'Three versions', r: 'per session: lighter, planned, harder.' },
+          { b: 'One click', r: 'to swap, right in the calendar.' }
+        ] },
+        s5: {
+          title: 'Plan in the browser, ride in the app',
+          body: 'The web app at app.endure-cycling.com does everything except recording rides. Rides stay in the ENDURE apps, which control your smart trainer. Same account, same subscription.',
+          web: { title: 'Web app in the browser', items: ['AI coach and daily plan', 'Training planning in the calendar', 'Analysis', 'Workout library and builder'] },
+          app: { title: 'ENDURE app for iOS, Android, Windows', items: ['Coach, calendar and analysis', 'Ride recording', 'Smart trainer control in ERG and SIM'] },
+          note: 'You buy the subscription in the iOS or Android app. On a phone, the web app first points you to the store app.'
+        },
+        faqTitle: 'Questions about training planning',
+        faq: [
+          { q: 'Does ENDURE create a training plan?', a: 'Yes. The AI coach plans the next one to two weeks in your calendar and keeps that window up to date as you ride. It does not lay out a fixed plan for months ahead; it re-plans from your actual rides.' },
+          { q: 'Do I have to accept every change?', a: 'Yes. The coach proposes changes and shows them in the calendar. They only apply once you confirm them.' },
+          { q: 'What does the load forecast show?', a: 'It projects your fitness (CTL) across the planned weeks and rates the ramp toward your goal as on track, too little or too much.' },
+          { q: 'Can I use training planning in the browser?', a: 'Yes. Open app.endure-cycling.com and sign in with your ENDURE account. The web app covers the coach, the calendar, analysis and workouts. To ride, you use the ENDURE app on iOS, Android or Windows.' },
+          { q: 'Do I need a goal event?', a: '[Placeholder: confirm how planning works without a goal event.]' },
+          { q: 'Is training planning part of ENDURE Premium?', a: '[Placeholder: confirm availability.] You can try ENDURE Premium free for 14 days without payment details. The subscription is bought in the iOS or Android app.' }
+        ],
+        cta: { title: 'Let the coach plan your next two weeks', body: 'Try ENDURE Premium free for 14 days. No payment details, nothing to cancel.' },
+        relatedTitle: 'Keep reading',
+        related: ['AI coach & daily recommendation', 'FTP & VO2max tracking', 'Supported trainers', 'Training guides'],
+        back: 'Back to Homepage',
+        days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        ui: { calendar: 'Calendar', thisWeek: 'This week', nextWeek: 'Next week', planned: 'Planned', done: 'Done', onTrack: 'On track', tooLittle: 'Too little', tooMuch: 'Too much', plan: 'Plan with coach', proposal: 'Coach proposal', accept: 'Accept', discard: 'Discard', chat: 'Change in chat', lighter: 'Lighter', plannedOpt: 'Planned', harder: 'Harder', forecast: 'Load forecast', goal: 'Goal event', today: 'Today', verdict: 'Coach verdict' }
+      },
+      de: {
+        crumbs: { home: 'Startseite', features: 'Features', page: 'Trainingsplanung' },
+        eyebrow: 'Neu · Trainingsplanung',
+        h1: 'Trainingsplanung: Der KI-Coach plant deine nächsten zwei Wochen',
+        subtitle: 'Ausgerichtet auf dein Zielevent, nach jeder Fahrt angepasst. Jede Änderung bestätigst du selbst.',
+        shortLabel: 'KURZ GESAGT',
+        direct: 'Der KI-Coach von ENDURE plant die nächsten ein bis zwei Wochen Training in einem Kalender, ausgerichtet auf dein Zielevent. Jede Woche zeigt Geplant und Erledigt, eine Belastungsprognose und ein kurzes Fazit des Coaches. Zu jeder Einheit gibt es eine leichtere und eine härtere Alternative. Der Coach schlägt vor, du bestätigst: Ohne dein OK ändert sich nichts in deinem Kalender. Geplant wird im Kalender, gefahren in der ENDURE-App für iOS, Android oder Windows.',
+        webLink: 'Oder direkt im Browser öffnen →',
+        caption: 'Der Kalender der Trainingsplanung in der ENDURE-Web-App: zwei Wochen mit geplanten und erledigten Einheiten, Wochensummen und dem Fazit des Coaches.',
+        alt: { as: 'Laden im App Store', gp: 'Jetzt bei Google Play', ms: 'Im Microsoft Store herunterladen' },
+        stepsTitle: 'So funktioniert es',
+        steps: [
+          { n: '01', title: 'Ziel festlegen', body: 'Trag das Event ein, auf das du trainierst, und sein Datum.' },
+          { n: '02', title: 'Der Coach schlägt vor', body: 'Er füllt die nächsten ein bis zwei Wochen aus deinen Fahrten, deiner Trainingsbelastung und deinen Morgen-Check-ins.' },
+          { n: '03', title: 'Bestätigen und fahren', body: 'Übernimm jede Änderung oder wünsch dir im Chat etwas anderes. Nach jeder Fahrt wertet der Coach sie aus.' }
+        ],
+        s1: { title: 'Geplant und erledigt, Woche für Woche', body: 'Jede Wochenzeile zeigt geplante Stunden und Belastung neben dem, was du tatsächlich gefahren bist. Dazu kommt ein kurzes Fazit des Coaches, damit du sofort siehst, ob die Woche nach Plan lief.', bullets: [
+          { b: 'Geplant vs. erledigt', r: 'für Stunden und Trainingsbelastung, pro Woche.' },
+          { b: 'Wochenfazit', r: 'des Coaches in ein, zwei Sätzen.' }
+        ] },
+        s2: { title: 'Belastungsprognose, bevor du losfährst', body: 'Der Kalender rechnet deine Fitness (CTL) über die geplanten Wochen hoch und prüft den Anstieg gegen dein Ziel. Schon vor Wochenbeginn siehst du, ob die Wochen im Plan liegen, zu wenig oder zu viel bringen.', bullets: [
+          { b: 'Drei Zustände:', r: 'im Plan, zu wenig, zu viel.' },
+          { b: 'Prognostizierter Anstieg', r: 'bis zum Datum deines Zielevents.' }
+        ] },
+        s3: { title: 'Mit Coach planen, Woche für Woche', body: 'Jede Woche hat einen Button „Mit Coach planen“. Der Coach entwirft die Woche aus deinen letzten Fahrten und Check-ins und zeigt dir, was sich ändern würde. Du übernimmst den Vorschlag oder sagst dem Coach im Chat, was anders sein soll.', bullets: [
+          { b: 'Erst der Vorschlag:', r: 'Änderungen siehst du, bevor sie gelten.' },
+          { b: 'Du entscheidest:', r: 'Ohne deine Bestätigung ändert sich nichts im Kalender.' },
+          { b: 'Anpassen im Chat,', r: 'zum Beispiel ein kürzerer Dienstag oder ein freies Wochenende.' }
+        ] },
+        s4: { title: 'Eine leichtere und eine härtere Option für jede Einheit', body: 'Jede geplante Einheit hat zwei Alternativen. Passen Beine oder Zeitplan nicht zum Plan, tauschst du auf die leichtere oder die härtere Variante.', bullets: [
+          { b: 'Drei Varianten', r: 'pro Einheit: leichter, geplant, härter.' },
+          { b: 'Ein Klick', r: 'zum Tauschen, direkt im Kalender.' }
+        ] },
+        s5: {
+          title: 'Im Browser planen, in der App fahren',
+          body: 'Die Web-App unter app.endure-cycling.com kann alles außer Fahrten aufzeichnen. Gefahren wird in der ENDURE-App, die deinen Smart Trainer steuert. Gleiches Konto, gleiches Abo.',
+          web: { title: 'Web-App im Browser', items: ['KI-Coach und Tagesplan', 'Trainingsplanung im Kalender', 'Analyse', 'Workout-Bibliothek und Builder'] },
+          app: { title: 'ENDURE-App für iOS, Android, Windows', items: ['Coach, Kalender und Analyse', 'Fahrten aufzeichnen', 'Smart Trainer in ERG und SIM steuern'] },
+          note: 'Das Abo schließt du in der iOS- oder Android-App ab. Am Smartphone verweist dich die Web-App zuerst auf die App im Store.'
+        },
+        faqTitle: 'Fragen zur Trainingsplanung',
+        faq: [
+          { q: 'Erstellt ENDURE einen Trainingsplan?', a: 'Ja. Der KI-Coach plant die nächsten ein bis zwei Wochen in deinem Kalender und hält dieses Fenster aktuell, während du fährst. Einen starren Plan über Monate legt er nicht an; er plant aus deinen tatsächlichen Fahrten neu.' },
+          { q: 'Muss ich jede Änderung bestätigen?', a: 'Ja. Der Coach schlägt Änderungen vor und zeigt sie im Kalender. Wirksam werden sie erst, wenn du sie bestätigst.' },
+          { q: 'Was zeigt die Belastungsprognose?', a: 'Sie rechnet deine Fitness (CTL) über die geplanten Wochen hoch und bewertet den Anstieg zu deinem Ziel als im Plan, zu wenig oder zu viel.' },
+          { q: 'Kann ich die Trainingsplanung im Browser nutzen?', a: 'Ja. Öffne app.endure-cycling.com und melde dich mit deinem ENDURE-Konto an. Die Web-App deckt Coach, Kalender, Analyse und Workouts ab. Zum Fahren nutzt du die ENDURE-App für iOS, Android oder Windows.' },
+          { q: 'Brauche ich ein Zielevent?', a: '[Platzhalter: klären, wie die Planung ohne Zielevent funktioniert.]' },
+          { q: 'Ist die Trainingsplanung Teil von ENDURE Premium?', a: '[Platzhalter: Verfügbarkeit bestätigen.] ENDURE Premium kannst du 14 Tage gratis testen, ohne Zahlungsdaten. Das Abo schließt du in der iOS- oder Android-App ab.' }
+        ],
+        cta: { title: 'Lass den Coach deine nächsten zwei Wochen planen', body: 'Teste ENDURE Premium 14 Tage gratis. Keine Zahlungsdaten, nichts zu kündigen.' },
+        relatedTitle: 'Weiterlesen',
+        related: ['KI-Coach & Tagesempfehlung', 'FTP- & VO2max-Tracking', 'Unterstützte Trainer', 'Trainings-Guides'],
+        back: 'Zurück zur Startseite',
+        days: ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'],
+        ui: { calendar: 'Kalender', thisWeek: 'Diese Woche', nextWeek: 'Nächste Woche', planned: 'Geplant', done: 'Erledigt', onTrack: 'Im Plan', tooLittle: 'Zu wenig', tooMuch: 'Zu viel', plan: 'Mit Coach planen', proposal: 'Vorschlag des Coaches', accept: 'Übernehmen', discard: 'Verwerfen', chat: 'Im Chat ändern', lighter: 'Leichter', plannedOpt: 'Geplant', harder: 'Härter', forecast: 'Belastungsprognose', goal: 'Zielevent', today: 'Heute', verdict: 'Wochenfazit' }
+      }
+    };
+    const locale = this.props.locale === 'de' ? 'de' : 'en';
+    const bp = this.props.bp ?? 'xl';
+    const t = T[locale];
+    const badges = locale === 'de'
+      ? { as: '/_blob/3368c320bcc43f824ec574334f9b2a14', gp: '/_blob/e60e323c185d38eb68d70c3b09bbd2a5', ms: '/_blob/e0f28f3e20513a5f78027903e5df1fba' }
+      : { as: '/_blob/b4a2c050af0d13824f291c851318e80c', gp: '/_blob/9e4130aa4268757b44281ef7b57b7336', ms: '/_blob/f29c0a7c19d27729cfa50024dd679d8e' };
+    const mk = (st, key, num, w) => ({
+      num, done: st === 'done', plan: st === 'plan', w: w || '0%',
+      bc: key ? 'rgba(194,85,43,0.55)' : '#E5E5E1',
+      bar: key ? '#C2552B' : '#9DA0A6'
+    });
+    const w1 = [mk('done', false, '20', '70%'), mk('rest', false, '21'), mk('done', true, '22', '85%'), mk('done', false, '23', '55%'), mk('plan', false, '24', '60%'), mk('plan', true, '25', '90%'), mk('rest', false, '26')];
+    const w2 = [mk('rest', false, '27'), mk('plan', false, '28', '65%'), mk('plan', true, '29', '85%'), mk('plan', false, '30', '50%'), mk('rest', false, '31'), mk('plan', true, '1', '95%'), mk('plan', false, '2', '70%')];
+    const weeks = [
+      { label: t.ui.thisWeek, days: w1, pw: '82%', dw: '58%', verdict: true, plan: false },
+      { label: t.ui.nextWeek, days: w2, pw: '88%', dw: '0%', verdict: false, plan: true }
+    ];
+    const changes = [
+      { day: t.days[1], oldW: '70%', newW: '45%' },
+      { day: t.days[3], oldW: '50%', newW: '75%' },
+      { day: t.days[5], oldW: '80%', newW: '62%' }
+    ];
+    return { t, locale, bp, badges, weeks, changes, nextDays: w2, dayThu: t.days[3] };
+  }
+}
+</script>
+</body>
+</html>

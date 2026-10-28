@@ -8,7 +8,9 @@ export const translations = {
       trial: "Free trial",
       guides: "Guides",
       faq: "FAQ",
-      cta: "Try free for 14 days"
+      cta: "Try free for 14 days",
+      webApp: "Launch app",
+      webAppAria: "Launch the ENDURE web app"
     },
     // Announcement bar above the nav, on every page
     topBar: {
@@ -18,20 +20,22 @@ export const translations = {
     },
     // Hero
     hero: {
-      badge: "Now on iOS, Android & Windows · 14 days free",
+      badge: "New: training planning · 14 days free",
       // Check marks under the store badges
       checks: ["14 days free", "No payment details", "Ends on its own"],
       tagline: "Precision over gimmicks",
-      headline1: "Stop doing FTP tests.",
-      headline2: "Your rides are the test.",
-      subline: "ENDURE estimates FTP and VO2max from your normal rides, indoor and outdoor. It controls your smart trainer in ERG and SIM mode and has you riding in under 30 seconds.",
+      headline1: "Stop guessing.",
+      headline2: "Train with a personalized plan.",
+      subline: "ENDURE plans today's workout and, on request, your coming weeks, from your rides, your training load and a short morning check-in. FTP and VO2max come from your normal rides, no test needed.",
       // Rendered as an H2 under the subline: the headline carries the claim, this
       // line carries the terms riders actually search for.
-      seoLine: "Indoor cycling app for smart and turbo trainers on iOS, Android & Windows",
+      seoLine: "AI cycling coach and indoor cycling app for smart trainers on iOS, Android & Windows, also in the browser",
       secondary: "Frequent updates, built together with the cycling community.",
       appStoreBadgeAlt: "Download on the App Store",
       googlePlayBadgeAlt: "Get it on Google Play",
       microsoftStoreBadgeAlt: "Get it from Microsoft",
+      // Text link to the web app under the store badges (hero, footer).
+      webLink: "Or open it in your browser",
       // Aria-label for the carousel phones and their dots; {name} is an appScreens label.
       screenshotAction: "Show {name} screenshot"
     },
@@ -87,6 +91,8 @@ export const translations = {
     },
     // Ticker strip. The first item is shown in the accent color.
     ticker: [
+      "AI coach",
+      "Training planning",
       "14 days free",
       "Ready in under 30 s",
       "ERG mode",
@@ -204,6 +210,32 @@ export const translations = {
       imageAlt: "ENDURE Today screen with recovery score, load balance, week goal and today's prescribed workout",
       link: "How the AI coach works"
     },
+    // Training planning teaser on the homepage, right after the guidance section
+    trainingPlanningTeaser: {
+      eyebrow: "NEW · TRAINING PLANNING",
+      headline: "Your coach now plans your coming weeks.",
+      description: "Tap Plan with coach and the AI coach fills the coming weeks of your calendar, aimed at your goal event if you have one. Each week shows planned against done, a load forecast and a short verdict. Nothing lands in your calendar until you apply it.",
+      chips: ["Planned vs. done", "Load forecast", "Lighter or harder option"],
+      link: "How training planning works",
+      webLink: "Also in your browser",
+      imageAlt: "Two weeks in the ENDURE calendar with planned and completed sessions, weekly totals and the coach verdict"
+    },
+    // Homepage section with the same calendar on phone, tablet, Windows and web
+    platforms: {
+      eyebrow: "PHONE · TABLET · WINDOWS · BROWSER",
+      headline: "One plan on every screen.",
+      description: "Your calendar, coach and analysis are on your phone, your tablet, the Windows app and the browser, with the same data on each. Plan at your desk and ride with the app on the trainer.",
+      labels: { phone: "Phone", tablet: "Tablet", windows: "Windows", web: "Browser" },
+      alts: {
+        phone: "The ENDURE calendar on a phone with completed rides and the planned week",
+        tablet: "The same ENDURE calendar on a tablet",
+        windows: "The same ENDURE calendar in the Windows app",
+        web: "The same ENDURE calendar in the web app"
+      },
+      // {name} is one of the labels above
+      zoom: "Show the {name} screenshot",
+      webLink: "Open ENDURE in your browser"
+    },
     // Zwift Click
     zwiftClick: {
       badge: "New · Virtual Shifting",
@@ -266,9 +298,9 @@ export const translations = {
       valueLabel: "What you get",
       rows: [
         { feature: "Price", value: "Try free for 14 days, no payment details. Then ENDURE Premium for {monthly} / month or {annual} / year", highlight: true },
-        { feature: "Platforms", value: "iOS, Android & Windows" },
+        { feature: "Platforms", value: "iOS, Android & Windows, plus a web app for coach, planning and analysis" },
         { feature: "Trainer control", value: "Bluetooth smart trainers, power meters & HR monitors (ERG mode)" },
-        { feature: "AI coach", value: "Plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. Change it in chat" },
+        { feature: "AI coach", value: "Plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. On request it plans the coming weeks in your calendar. Change it in chat" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verified): ERG target & trainer resistance from the bars, no simulated cassette" },
         { feature: "Workout import & export", value: ".ZWO, .MRC and .ERG files in and out. One-tap send to Zwift via intervals.icu. Rides export as .FIT" },
         { feature: "Analytics", value: "FTP & VO2max trends, power profile, time-in-zones" },
@@ -296,7 +328,7 @@ export const translations = {
         },
         {
           q: "Does ENDURE have an AI coach?",
-          a: "Yes. Every morning the coach reads your recent rides, your training load and a short check-in, then puts one workout for today on the Today screen with an easier and a harder alternative and the reason. Tell it in the chat how your legs feel or how much time you have and it proposes something else. It plans one day at a time rather than a fixed multi-week schedule, and it reviews every ride afterwards."
+          a: "Yes. Every morning the coach reads your recent rides, your training load and a short check-in, then puts one workout for today on the Today screen with an easier and a harder alternative and the reason. Tell it in the chat how your legs feel or how much time you have and it proposes something else. On request it also plans the coming weeks in your calendar, and nothing changes there until you apply it. After every ride it reviews what happened."
         },
         {
           q: "Which smart trainers and sensors work with ENDURE?",
@@ -316,7 +348,11 @@ export const translations = {
         },
         {
           q: "Which platforms is ENDURE available on?",
-          a: "ENDURE is available on iOS, Android and Windows (Microsoft Store). You subscribe to ENDURE Premium on iOS or Android, and it works on Windows with the same account."
+          a: "ENDURE is available on iOS, Android and Windows (Microsoft Store), and as a web app at app.endure-cycling.com. You subscribe to ENDURE Premium on iOS or Android, and it works on Windows and in the browser with the same account."
+        },
+        {
+          q: "Can I use ENDURE in the browser?",
+          a: "Yes, at app.endure-cycling.com. Sign in with your ENDURE account and you get the coach, training planning in the calendar, your analysis and the workout library and builder. Rides are recorded in the apps for iOS, Android and Windows, because they connect to your trainer over Bluetooth. Your account and subscription work in both. On a phone, use the app."
         },
         {
           q: "How does ENDURE estimate FTP and VO2max?",
@@ -377,7 +413,7 @@ export const translations = {
         },
         {
           title: "Where ENDURE is heading",
-          body: "Toward the coach. The metrics are the foundation; the AI coach is what we build on them. Today it plans each day from your rides and a morning check-in, explains the pick, offers alternatives, builds workouts and reviews every ride. The coming releases keep going in that direction: training guidance that uses everything the app knows about you. Virtual worlds and racing are not on the list and will not be. The roadmap in the app shows what is next."
+          body: "Toward the coach. The metrics are the foundation; the AI coach is what we build on them. Today it plans each day from your rides and a morning check-in, explains the pick, offers alternatives, builds workouts and reviews every ride. On request it plans the coming weeks in the calendar, aimed at your goal event, and you apply each draft yourself. The coming releases keep going in that direction: training guidance that uses everything the app knows about you. Virtual worlds and racing are not on the list and will not be. The roadmap in the app shows what is next."
         },
         {
           title: "Built with the community",
@@ -390,13 +426,13 @@ export const translations = {
       seoTitle: "Press Kit | ENDURE Cycling",
       seoDescription: "Press resources for ENDURE, the Austrian indoor cycling training app: fact sheet, story angles, founder bio, logos and screenshots.",
       headline: "Press Kit",
-      intro: "ENDURE is an indoor cycling app from Austria, built to compete with Zwift and TrainerRoad. Instead of a virtual world, it puts training and analysis first: it takes the rider's smart trainer through structured workouts, analyses every ride indoors and out, and tracks fitness from the rides they already do. ENDURE is available for iOS, Android and Windows.",
+      intro: "ENDURE is an indoor cycling app from Austria, built to compete with Zwift and TrainerRoad. Instead of a virtual world, it puts training and analysis first: it takes the rider's smart trainer through structured workouts, analyses every ride indoors and out, and tracks fitness from the rides they already do. ENDURE is available for iOS, Android and Windows, and as a web app in the browser.",
       factsTitle: "Fact sheet",
       facts: [
         { label: "Product", value: "ENDURE, indoor cycling and training app" },
         { label: "Origin", value: "Austria" },
         { label: "Competes with", value: "Zwift, TrainerRoad" },
-        { label: "Platforms", value: "iOS, Android & Windows" },
+        { label: "Platforms", value: "iOS, Android & Windows, web app in the browser" },
         { label: "Pricing", value: "ENDURE Premium, {monthly} a month or {annual} a year. 14-day trial without payment details" },
         { label: "Founder", value: "Christoph Martin" },
         { label: "Website", value: "www.endure-cycling.com" },
@@ -468,10 +504,10 @@ export const translations = {
       vsMywhoosh: "MyWhoosh alternative",
       vsWahooSystm: "Wahoo SYSTM alternative",
       vsTrainingpeaksVirtual: "TrainingPeaks Virtual alternative",
-      changelog: "Changelog",
       guides: "Training Guides",
       supportedTrainers: "Supported trainers",
       featureAiCoach: "AI coach & daily recommendation",
+      featureTrainingPlanning: "Training planning",
       featureZwiftClick: "Virtual Shifting & Zwift Click",
       featureLactate: "Lactate LT1 & LT2",
       featureCoreTemp: "CORE heat zones",
@@ -535,7 +571,9 @@ export const translations = {
       trial: "Gratis testen",
       guides: "Guides",
       faq: "FAQ",
-      cta: "14 Tage gratis testen"
+      cta: "14 Tage gratis testen",
+      webApp: "App starten",
+      webAppAria: "ENDURE-Web-App starten"
     },
     // Hinweisleiste über der Nav, auf jeder Seite
     topBar: {
@@ -545,20 +583,22 @@ export const translations = {
     },
     // Hero
     hero: {
-      badge: "Jetzt für iOS, Android & Windows · 14 Tage gratis",
+      badge: "Neu: Trainingsplanung · 14 Tage gratis",
       // Häkchen unter den Store-Badges
       checks: ["14 Tage gratis", "Keine Zahlungsdaten", "Endet von selbst"],
       tagline: "Präzision statt Spielerei",
-      headline1: "Schluss mit FTP-Tests.",
-      headline2: "Deine Fahrten sind der Test.",
-      subline: "ENDURE schätzt FTP und VO2max aus deinen normalen Fahrten, drinnen wie draußen. Die App steuert deinen Smart Trainer in ERG und SIM, und du sitzt in unter 30 Sekunden am Rad.",
+      headline1: "Schluss mit Raten.",
+      headline2: "Trainier nach deinem persönlichen Plan.",
+      subline: "ENDURE plant das heutige Workout und auf Wunsch deine kommenden Wochen, aus deinen Fahrten, deiner Trainingsbelastung und einem kurzen Morgen-Check-in. FTP und VO2max kommen aus deinen normalen Fahrten, ganz ohne Test.",
       // Als H2 unter der Subline gerendert: die Headline trägt den Claim, diese
       // Zeile trägt die Begriffe, mit denen tatsächlich gesucht wird.
-      seoLine: "Indoor-Cycling- und Rollentrainer-App für iOS, Android & Windows",
+      seoLine: "KI-Radcoach und Rollentrainer-App für iOS, Android & Windows, auch im Browser",
       secondary: "Laufend neue Updates, entwickelt gemeinsam mit der Community.",
       appStoreBadgeAlt: "Laden im App Store",
       googlePlayBadgeAlt: "Jetzt bei Google Play",
       microsoftStoreBadgeAlt: "Im Microsoft Store herunterladen",
+      // Textlink zur Web-App unter den Store-Badges (Hero, Footer).
+      webLink: "Oder direkt im Browser öffnen",
       // Aria-Label der Karussell-Phones und ihrer Dots; {name} ist ein appScreens-Label.
       screenshotAction: "Screenshot {name} anzeigen"
     },
@@ -614,6 +654,8 @@ export const translations = {
     },
     // Ticker strip. Der erste Eintrag erscheint in der Akzentfarbe.
     ticker: [
+      "KI-Coach",
+      "Trainingsplanung",
       "14 Tage gratis",
       "Fahrbereit in unter 30 s",
       "ERG-Modus",
@@ -731,6 +773,32 @@ export const translations = {
       imageAlt: "ENDURE Heute-Screen mit Recovery Score, Load Balance, Wochenziel und dem empfohlenen Workout für heute",
       link: "So arbeitet der KI-Coach"
     },
+    // Trainingsplanung-Teaser auf der Startseite, direkt nach dem Guidance-Abschnitt
+    trainingPlanningTeaser: {
+      eyebrow: "NEU · TRAININGSPLANUNG",
+      headline: "Dein Coach plant jetzt deine kommenden Wochen.",
+      description: "Tipp auf „Mit Coach planen“, und der KI-Coach füllt die kommenden Wochen deines Kalenders, ausgerichtet auf dein Zielevent, wenn du eines hast. Jede Woche zeigt Geplant neben Absolviert, eine Belastungsprognose und ein kurzes Fazit. In deinen Kalender kommt erst etwas, wenn du es übernimmst.",
+      chips: ["Geplant vs. absolviert", "Belastungsprognose", "Leichter oder härter"],
+      link: "So funktioniert die Trainingsplanung",
+      webLink: "Auch im Browser",
+      imageAlt: "Zwei Wochen im ENDURE-Kalender mit geplanten und absolvierten Einheiten, Wochensummen und dem Fazit des Coaches"
+    },
+    // Startseiten-Sektion: derselbe Kalender auf Handy, Tablet, Windows und Web
+    platforms: {
+      eyebrow: "HANDY · TABLET · WINDOWS · BROWSER",
+      headline: "Ein Plan auf jedem Bildschirm.",
+      description: "Kalender, Coach und Analyse findest du auf dem Handy, dem Tablet, in der Windows-App und im Browser, überall mit denselben Daten. Plan am Schreibtisch und fahr mit der App am Trainer.",
+      labels: { phone: "Handy", tablet: "Tablet", windows: "Windows", web: "Browser" },
+      alts: {
+        phone: "Der ENDURE-Kalender auf dem Handy mit gefahrenen Einheiten und der geplanten Woche",
+        tablet: "Derselbe ENDURE-Kalender auf dem Tablet",
+        windows: "Derselbe ENDURE-Kalender in der Windows-App",
+        web: "Derselbe ENDURE-Kalender in der Web-App"
+      },
+      // {name} ist eines der Labels oben
+      zoom: "Screenshot {name} anzeigen",
+      webLink: "ENDURE im Browser öffnen"
+    },
     // Zwift Click
     zwiftClick: {
       badge: "Neu · Virtual Shifting",
@@ -793,9 +861,9 @@ export const translations = {
       valueLabel: "Das bekommst du",
       rows: [
         { feature: "Preis", value: "14 Tage gratis testen, ohne Zahlungsdaten. Danach ENDURE Premium für {monthly} / Monat oder {annual} / Jahr", highlight: true },
-        { feature: "Plattformen", value: "iOS, Android & Windows" },
+        { feature: "Plattformen", value: "iOS, Android & Windows, dazu die Web-App für Coach, Planung und Analyse" },
         { feature: "Trainer-Steuerung", value: "Bluetooth Smart Trainer, Power Meter & HR-Monitore (ERG-Modus)" },
-        { feature: "KI-Coach", value: "Plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Im Chat änderbar" },
+        { feature: "KI-Coach", value: "Plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Auf Wunsch plant er die kommenden Wochen im Kalender. Im Chat änderbar" },
         { feature: "Virtual Shifting", value: "Zwift Click (v1 verifiziert): ERG-Ziel & Trainer-Widerstand vom Lenker, ohne simulierte Kassette" },
         { feature: "Workout-Import & -Export", value: ".ZWO-, .MRC- und .ERG-Dateien rein und raus. Ein Tipp schickt ein Workout über intervals.icu nach Zwift. Fahrten als .FIT exportierbar" },
         { feature: "Analyse", value: "FTP- & VO2max-Trends, Power Profile, Zeit in Zonen" },
@@ -823,7 +891,7 @@ export const translations = {
         },
         {
           q: "Hat ENDURE einen KI-Coach?",
-          a: "Ja. Jeden Morgen liest der Coach deine letzten Fahrten, deine Trainingsbelastung und einen kurzen Check-in und legt ein Workout für heute auf den Heute-Screen, mit einer leichteren und einer härteren Alternative und der Begründung. Sag ihm im Chat, wie sich die Beine anfühlen oder wie viel Zeit du hast, und er schlägt etwas anderes vor. Er plant Tag für Tag statt eines festen Mehrwochenplans und wertet jede Fahrt danach aus."
+          a: "Ja. Jeden Morgen liest der Coach deine letzten Fahrten, deine Trainingsbelastung und einen kurzen Check-in und legt ein Workout für heute auf den Heute-Screen, mit einer leichteren und einer härteren Alternative und der Begründung. Sag ihm im Chat, wie sich die Beine anfühlen oder wie viel Zeit du hast, und er schlägt etwas anderes vor. Auf Wunsch plant er auch die kommenden Wochen in deinem Kalender, und dort ändert sich nichts, bevor du es übernimmst. Nach jeder Fahrt wertet er aus, wie sie gelaufen ist."
         },
         {
           q: "Welche Smart Trainer und Sensoren funktionieren mit ENDURE?",
@@ -843,7 +911,11 @@ export const translations = {
         },
         {
           q: "Auf welchen Plattformen ist ENDURE verfügbar?",
-          a: "ENDURE gibt es für iOS, Android und Windows (Microsoft Store). ENDURE Premium schließt du auf iOS oder Android ab, unter Windows gilt es mit demselben Konto."
+          a: "ENDURE gibt es für iOS, Android und Windows (Microsoft Store) und als Web-App unter app.endure-cycling.com. ENDURE Premium schließt du auf iOS oder Android ab, unter Windows und im Browser gilt es mit demselben Konto."
+        },
+        {
+          q: "Kann ich ENDURE im Browser nutzen?",
+          a: "Ja, unter app.endure-cycling.com. Du meldest dich mit deinem ENDURE-Konto an und hast den Coach, die Trainingsplanung im Kalender, deine Analyse und die Workout-Bibliothek samt Builder. Gefahren wird in den Apps für iOS, Android und Windows, weil nur sie sich per Bluetooth mit deinem Trainer verbinden. Konto und Abo gelten in beiden. Am Smartphone nimmst du am besten die App."
         },
         {
           q: "Wie schätzt ENDURE FTP und VO2max?",
@@ -904,7 +976,7 @@ export const translations = {
         },
         {
           title: "Wohin sich ENDURE entwickelt",
-          body: "Zum Coach. Die Metriken sind das Fundament, der KI-Coach ist das, was wir darauf bauen. Heute plant er jeden Tag aus deinen Fahrten und einem Morgen-Check-in, begründet die Wahl, bietet Alternativen, baut Workouts und wertet jede Fahrt aus. Die kommenden Releases gehen genau in diese Richtung: Trainingsführung, die alles nutzt, was die App über dich weiß. Virtuelle Welten und Rennen stehen nicht auf der Liste und werden es nicht. Die Roadmap in der App zeigt, was als Nächstes kommt."
+          body: "Zum Coach. Die Metriken sind das Fundament, der KI-Coach ist das, was wir darauf bauen. Heute plant er jeden Tag aus deinen Fahrten und einem Morgen-Check-in, begründet die Wahl, bietet Alternativen, baut Workouts und wertet jede Fahrt aus. Auf Wunsch plant er die kommenden Wochen im Kalender, ausgerichtet auf dein Zielevent, und jeden Entwurf übernimmst du selbst. Die kommenden Releases gehen genau in diese Richtung: Trainingsführung, die alles nutzt, was die App über dich weiß. Virtuelle Welten und Rennen stehen nicht auf der Liste und werden es nicht. Die Roadmap in der App zeigt, was als Nächstes kommt."
         },
         {
           title: "Gemeinsam mit der Community gebaut",
@@ -917,13 +989,13 @@ export const translations = {
       seoTitle: "Presse | ENDURE Cycling",
       seoDescription: "Presse-Material zu ENDURE, der österreichischen Indoor-Cycling-Training-App: Fact Sheet, Story-Ideen, Gründer-Bio, Logos und Screenshots.",
       headline: "Presse",
-      intro: "ENDURE ist eine Rollentrainer-App aus Österreich, die gegen Zwift und TrainerRoad antritt. Statt einer virtuellen Welt stehen Training und Auswertung im Mittelpunkt: Die App führt den eigenen Smart Trainer durch strukturierte Workouts, wertet jede Fahrt aus, drinnen wie draußen, und zeigt die Formentwicklung aus den Fahrten, die man ohnehin macht. ENDURE gibt es für iOS, Android und Windows.",
+      intro: "ENDURE ist eine Rollentrainer-App aus Österreich, die gegen Zwift und TrainerRoad antritt. Statt einer virtuellen Welt stehen Training und Auswertung im Mittelpunkt: Die App führt den eigenen Smart Trainer durch strukturierte Workouts, wertet jede Fahrt aus, drinnen wie draußen, und zeigt die Formentwicklung aus den Fahrten, die man ohnehin macht. ENDURE gibt es für iOS, Android und Windows und als Web-App im Browser.",
       factsTitle: "Fact Sheet",
       facts: [
         { label: "Produkt", value: "ENDURE, Rollentrainer- und Trainings-App" },
         { label: "Herkunft", value: "Österreich" },
         { label: "Mitbewerber", value: "Zwift, TrainerRoad" },
-        { label: "Plattformen", value: "iOS, Android & Windows" },
+        { label: "Plattformen", value: "iOS, Android & Windows, Web-App im Browser" },
         { label: "Preis", value: "ENDURE Premium, {monthly} im Monat oder {annual} im Jahr. 14 Tage Test ohne Zahlungsdaten" },
         { label: "Gründer", value: "Christoph Martin" },
         { label: "Website", value: "www.endure-cycling.com" },
@@ -995,10 +1067,10 @@ export const translations = {
       vsMywhoosh: "MyWhoosh Alternative",
       vsWahooSystm: "Wahoo SYSTM Alternative",
       vsTrainingpeaksVirtual: "TrainingPeaks Virtual Alternative",
-      changelog: "Changelog",
       guides: "Trainings-Guides",
       supportedTrainers: "Unterstützte Trainer",
       featureAiCoach: "KI-Coach & Tagesempfehlung",
+      featureTrainingPlanning: "Trainingsplanung",
       featureZwiftClick: "Virtual Shifting & Zwift Click",
       featureLactate: "Laktat LT1 & LT2",
       featureCoreTemp: "CORE Heat Zones",

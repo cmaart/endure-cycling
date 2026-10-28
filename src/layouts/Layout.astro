@@ -5,7 +5,6 @@ import Nav from '../components/Nav.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import { hasGermanVersion, localeHref, localeUrl, siteUrl } from '../utils/paths';
 import { getPricing } from '../utils/prices';
-import { latestRelease } from '../i18n/changelog';
 import '@fontsource/sora/400.css';
 import '@fontsource/sora/500.css';
 import '@fontsource/sora/600.css';
@@ -178,10 +177,6 @@ const storeUrls = Object.values(config.platforms)
       "name": "ENDURE",
       "applicationCategory": "HealthApplication",
       "operatingSystem": availableOs,
-      // Newest shipped version, read from the changelog so it never drifts.
-      "softwareVersion": latestRelease.version,
-      "dateModified": latestRelease.date,
-      "releaseNotes": localeUrl(lang, '/changelog'),
       // The download is free and every account starts with the 14-day trial;
       // the recurring offer is ENDURE Premium at the store price for this locale.
       "isAccessibleForFree": false,
@@ -222,10 +217,12 @@ const storeUrls = Object.values(config.platforms)
       "inLanguage": lang,
       "downloadUrl": storeUrls,
       "installUrl": storeUrls,
-      "about": "Indoor cycling training app with an AI coach that plans each day from the rider's own rides and a morning check-in, smart trainer control over Bluetooth and ride analytics (FTP and VO2max estimated from normal rides, lactate LT1/LT2, CORE heat zones). No virtual worlds, no fixed multi-week plans.",
+      "about": "Indoor cycling training app with an AI coach that plans each day from the rider's own rides and a morning check-in, training planning for the coming weeks, smart trainer control over Bluetooth and ride analytics (FTP and VO2max estimated from normal rides, lactate LT1/LT2, CORE heat zones). Also runs in the browser as a web app without ride recording. No virtual worlds, no fixed plans for months ahead.",
       "featureList": [
         "AI coach: daily workout recommendation from your rides and a morning check-in, with alternatives and the reason",
         "Coach chat: change the day's plan, get a different workout, have one built from a text description",
+        "Training planning: the coach drafts the coming weeks in a calendar toward a goal event, with a load forecast per week and lighter and harder alternatives per ride",
+        "Web app at app.endure-cycling.com: coach, planning, analysis and workouts in the browser",
         "Post-ride coaching insights: what worked, what to fix, what to do next",
         "Potential analysis: whether threshold or aerobic capacity limits your FTP",
         "FTP & VO2max trend tracking",

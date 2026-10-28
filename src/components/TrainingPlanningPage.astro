@@ -1,0 +1,264 @@
+---
+/**
+ * /features/training-planning/: the lead feature page, with a richer layout
+ * than FeaturePage.astro (calendar screenshot in a browser frame, steps,
+ * text + screenshot sections, browser vs. app block). Content lives in
+ * features.ts under 'training-planning'; design handoff in
+ * docs/design/web-app-training-planning/.
+ */
+import Layout from '../layouts/Layout.astro';
+import Footer from './Footer.astro';
+import Lightbox from './Lightbox.astro';
+import StoreBadges from './StoreBadges.astro';
+import WebAppLink from './WebAppLink.astro';
+import BrowserIcon from './BrowserIcon.astro';
+import BetaTag from './BetaTag.astro';
+import { getFeatureContent } from '../i18n/features';
+import { getTranslations } from '../i18n/translations';
+import { localeHref, localeUrl } from '../utils/paths';
+import { featureFaqSchema, featureWebPageSchema } from '../utils/featureSchema';
+import { webAppImage } from '../webAppImages';
+import { config } from '../config';
+
+interface Props {
+  lang: 'en' | 'de';
+}
+
+const { lang } = Astro.props;
+const t = getFeatureContent(lang, 'training-planning');
+const nav = getTranslations(lang).nav;
+const homeHref = localeHref(lang);
+const canonicalUrl = localeUrl(lang, '/features/training-planning');
+const pageSchema = featureWebPageSchema(t, canonicalUrl, lang);
+const faqSchema = featureFaqSchema(t.faq);
+const hero = webAppImage(lang, 'calendar');
+const webAppHost = new URL(config.webApp.url).host;
+---
+
+<Layout title={t.seoTitle} description={t.seoDescription} lang={lang} breadcrumb={t.breadcrumb}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} slot="head" />
+
+  <main class="pb-24 text-slate-800">
+    <article>
+      <!-- Hero -->
+      <div class="container mx-auto px-6 pt-6 md:pt-10">
+        <nav aria-label="Breadcrumb" class="text-sm text-slate-600 mb-8 md:mb-12">
+          <a href={homeHref} class="hover:text-slate-900">{lang === 'de' ? 'Startseite' : 'Home'}</a>
+          <span class="mx-2 text-slate-400" aria-hidden="true">/</span>
+          <a href={localeHref(lang, '/#features')} class="hover:text-slate-900">{nav.features}</a>
+          <span class="mx-2 text-slate-400" aria-hidden="true">/</span>
+          <span class="text-slate-900" aria-current="page">{t.breadcrumb}</span>
+        </nav>
+
+        <div class="max-w-[880px] mx-auto text-center">
+          {t.eyebrow && (
+            <div class="inline-flex items-center gap-2.5 rounded-full border border-accent/35 bg-accent/[0.06] px-5 py-2 text-sm text-slate-700 mb-7">
+              <span class="w-[7px] h-[7px] rounded-full bg-accent" aria-hidden="true"></span>
+              {t.eyebrow}
+            </div>
+          )}
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.06] tracking-[-0.03em] text-slate-900 text-balance mb-5">{t.h1}<BetaTag /></h1>
+          <p class="text-lg md:text-xl font-medium text-slate-600 text-pretty mb-8">{t.subtitle}</p>
+
+          <!-- Direct answer (featured-snippet target): real text, not an image -->
+          <div class="text-left bg-white border border-slate-200 rounded-2xl p-6 md:p-8 mb-8">
+            {t.directAnswerLabel && <div class="mono-label mb-3">{t.directAnswerLabel}</div>}
+            <p class="text-[17px] leading-relaxed text-slate-800">{t.directAnswer}</p>
+          </div>
+
+          <div data-placement="feature-hero" class="flex flex-wrap justify-center items-center gap-3 [&_img]:!h-10">
+            <StoreBadges lang={lang} />
+          </div>
+          <div class="mt-3">
+            <WebAppLink lang={lang} placement="feature-hero" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Calendar screenshot in a CSS browser frame -->
+      <figure class="container mx-auto px-6 mt-12 md:mt-16">
+        <div class="max-w-[1200px] mx-auto rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-[0_30px_80px_-30px_rgba(22,24,29,0.18)]">
+          <div class="h-10 bg-slate-50 border-b border-slate-200 flex items-center px-4 gap-3" aria-hidden="true">
+            <span class="flex gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+            </span>
+            <span class="flex-1 flex justify-center">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-white border border-slate-200 px-3 py-0.5 text-xs text-slate-600">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg>
+                {webAppHost}
+              </span>
+            </span>
+            <span class="w-[42px]"></span>
+          </div>
+          <button type="button" class="block w-full cursor-zoom-in" data-lightbox-src={hero.src} data-lightbox-alt={t.heroImageAlt}>
+            <img src={hero.src} alt={t.heroImageAlt} width={hero.width} height={hero.height} fetchpriority="high" decoding="async" class="block w-full h-auto" />
+          </button>
+        </div>
+        {t.heroCaption && <figcaption class="max-w-[1200px] mx-auto mt-3 text-sm text-slate-600 text-center">{t.heroCaption}</figcaption>}
+      </figure>
+
+      <!-- How it works -->
+      {t.steps && (
+        <section class="container mx-auto px-6 mt-16 md:mt-24">
+          <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-[-0.02em] text-slate-900 mb-8 text-center">{t.stepsTitle}</h2>
+            <ol class="grid md:grid-cols-3 gap-4">
+              {t.steps.map((step, i) => (
+                <li class="bg-white border border-slate-200 rounded-2xl p-6">
+                  <div class="font-mono text-sm text-accent mb-3">{String(i + 1).padStart(2, '0')}</div>
+                  <h3 class="text-lg font-bold text-slate-900 mb-2">{step.title}</h3>
+                  <p class="leading-relaxed text-slate-600">{step.body}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
+
+      <!-- Text + screenshot sections, image side alternates -->
+      <div class="container mx-auto px-6 mt-8 md:mt-12">
+        <div class="max-w-6xl mx-auto">
+          {t.sections.map((section, i) => {
+            const img = section.image ? webAppImage(lang, section.image) : undefined;
+            return (
+              <section class:list={['py-12 md:py-20 border-t border-slate-100 flex flex-col gap-8 lg:gap-16 lg:items-center', i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse']}>
+                <div class="lg:basis-5/12">
+                  <h2 class="text-2xl md:text-3xl font-extrabold tracking-[-0.02em] text-slate-900 mb-4">{section.title}</h2>
+                  <p class="text-lg leading-relaxed">{section.body}</p>
+                  {section.bullets && (
+                    <ul class="mt-5 space-y-3">
+                      {section.bullets.map((bullet) => (
+                        <li class="flex items-start gap-3">
+                          <span class="mt-1.5 flex-shrink-0 w-5 h-5 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
+                            <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                            </svg>
+                          </span>
+                          <span class="text-lg leading-relaxed font-medium" set:html={bullet} />
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                {img && (
+                  <button type="button" class="lg:basis-7/12 min-w-0 block cursor-zoom-in" data-lightbox-src={img.src} data-lightbox-alt={section.imageAlt ?? ''}>
+                    <img
+                      style={`max-width: ${img.width / 2}px`}
+                      src={img.src}
+                      alt={section.imageAlt ?? ''}
+                      width={img.width}
+                      height={img.height}
+                      loading="lazy"
+                      decoding="async"
+                      class="w-full h-auto mx-auto rounded-2xl border border-slate-200 bg-white"
+                    />
+                  </button>
+                )}
+              </section>
+            );
+          })}
+        </div>
+      </div>
+
+      <!-- Browser vs. app -->
+      {t.platforms && (
+        <section class="container mx-auto px-6 py-12 md:py-20 border-t border-slate-100">
+          <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-[-0.02em] text-slate-900 mb-4 text-center">{t.platforms.title}</h2>
+            <p class="text-lg leading-relaxed text-slate-600 max-w-3xl mx-auto text-center mb-10">{t.platforms.body}</p>
+            <div class="grid md:grid-cols-2 gap-4">
+              {[
+                { block: t.platforms.web, icon: 'browser' },
+                { block: t.platforms.app, icon: 'phone' },
+              ].map(({ block, icon }) => (
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8">
+                  <div class="flex items-center gap-3 mb-5">
+                    {icon === 'browser' ? (
+                      <BrowserIcon class="w-6 h-6 text-slate-900" />
+                    ) : (
+                      <svg aria-hidden="true" class="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5" /><path d="M11 18.5h2" /></svg>
+                    )}
+                    <h3 class="text-lg font-bold text-slate-900">{block.title}</h3>
+                  </div>
+                  <ul class="space-y-2.5">
+                    {block.items.map((item) => (
+                      <li class="flex items-start gap-3 text-slate-700">
+                        <span class="mt-[9px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <p class="mt-6 text-sm text-slate-600 text-center">{t.platforms.note}</p>
+          </div>
+        </section>
+      )}
+
+      <!-- FAQ -->
+      <section class="container mx-auto px-6 py-12 md:py-20 border-t border-slate-100">
+        <div class="max-w-5xl mx-auto">
+          {t.faqTitle && <h2 class="text-3xl md:text-4xl font-extrabold tracking-[-0.02em] text-slate-900 mb-8 text-center">{t.faqTitle}</h2>}
+          <div class="grid md:grid-cols-2 gap-4">
+            {t.faq.map((item) => (
+              <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">{item.q}</h3>
+                <p class="leading-relaxed text-slate-600">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center card-surface p-8 md:p-10">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">{t.ctaTitle}</h2>
+          <p class="text-lg leading-relaxed mb-6">{t.ctaBody}</p>
+          <div data-placement="feature-cta" class="flex flex-wrap justify-center items-center gap-4">
+            <StoreBadges lang={lang} lazy />
+          </div>
+          <div class="mt-4">
+            <WebAppLink lang={lang} placement="feature-cta" />
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <!-- Related pages -->
+    <section class="container mx-auto px-6 mt-14">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-xl font-bold text-slate-900 mb-4">{t.relatedTitle}</h2>
+        <ul class="flex flex-wrap gap-3 mb-8">
+          {t.related.map((link) => (
+            <li>
+              <a href={localeHref(lang, link.href)} class="inline-flex items-center min-h-11 px-5 rounded-full border border-slate-200 bg-white text-accent-hover font-semibold hover:border-accent/50">
+                {link.label} →
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a href={homeHref} class="inline-flex items-center gap-2 text-accent font-semibold hover:underline">
+          ← {t.backHome}
+        </a>
+      </div>
+    </section>
+  </main>
+  <Lightbox />
+  <Footer />
+</Layout>
+
+<script>
+  // The hero screenshot opens full size in the shared lightbox.
+  document.querySelectorAll<HTMLElement>('[data-lightbox-src]').forEach((el) => {
+    el.addEventListener('click', () => {
+      document.dispatchEvent(new CustomEvent('lightbox:open', {
+        detail: { src: el.dataset.lightboxSrc, alt: el.dataset.lightboxAlt },
+      }));
+    });
+  });
+</script>

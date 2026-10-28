@@ -1,0 +1,365 @@
+---
+/**
+ * "One plan on every screen": the same calendar week on phone, tablet, the
+ * Windows app and the web app, composed as a desk stage (Claude Design option
+ * A, docs/design/platforms-showcase/design). Back to front: browser, Windows,
+ * tablet, phone. The stage keeps a fixed aspect ratio per breakpoint and every
+ * device sits at a percentage of it, so the composition scales between the
+ * four designed widths (390, 768, 1024, 1440) without reflowing.
+ * Screenshots per language in public/assets/platforms/<lang>/.
+ */
+import { getTranslations } from '../i18n/translations';
+import { config } from '../config';
+import WebAppLink from './WebAppLink.astro';
+
+const lang = Astro.currentLocale as 'en' | 'de' || 'en';
+const t = getTranslations(lang).platforms;
+const webAppHost = new URL(config.webApp.url).host;
+const dir = `/assets/platforms/${lang}`;
+
+// Keep width/height in sync with the files so the layout never shifts.
+const shots = {
+  phone:   { src: `${dir}/phone.webp`,   width: 1080, height: 2364 },
+  tablet:  { src: `${dir}/tablet.webp`,  width: 2076, height: 2152 },
+  windows: { src: `${dir}/windows.webp`, width: 1906, height: 993 },
+  web:     { src: `${dir}/web.webp`,     width: 1920, height: 1120 },
+} as const;
+
+const zoom = (key: keyof typeof shots) => t.zoom.replace('{name}', t.labels[key]);
+---
+
+<section id="platforms" class="py-16 md:py-20 lg:py-24 xl:py-28">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="max-w-[760px] mx-auto text-center" data-reveal>
+      <div class="flex items-center justify-center gap-2.5 md:gap-3.5 font-mono text-xs md:text-[13px] font-medium tracking-[0.04em] text-accent mb-4 md:mb-5">
+        <span class="inline-block w-5 md:w-8 lg:w-10 h-px bg-accent" aria-hidden="true"></span>
+        {t.eyebrow}
+        <span class="inline-block w-5 md:w-8 lg:w-10 h-px bg-accent" aria-hidden="true"></span>
+      </div>
+      <h2 class="text-[32px] md:text-[38px] lg:text-[42px] xl:text-[46px] font-extrabold tracking-[-0.03em] leading-[1.1] text-slate-900 text-balance mb-4 md:mb-5">
+        {t.headline}
+      </h2>
+      <p class="text-base md:text-[17px] xl:text-lg text-slate-600 leading-relaxed">{t.description}</p>
+    </div>
+
+    <div class="stage mt-10 md:mt-12 lg:mt-14 xl:mt-16" data-reveal>
+      <!-- 1 · Browser, back -->
+      <div class="device d-web">
+        <button
+          type="button"
+          class="browser"
+          data-lightbox-src={shots.web.src}
+          data-lightbox-alt={t.alts.web}
+          aria-label={zoom('web')}
+        >
+          <span class="browser-bar" aria-hidden="true">
+            <span class="browser-dots"><span></span><span></span><span></span></span>
+            <span class="browser-url">{webAppHost}</span>
+          </span>
+          <img src={shots.web.src} alt={t.alts.web} width={shots.web.width} height={shots.web.height} loading="lazy" decoding="async" />
+        </button>
+        <span class="chip">{t.labels.web}</span>
+      </div>
+
+      <!-- 2 · Windows, focal -->
+      <div class="device d-windows">
+        <button
+          type="button"
+          class="window"
+          data-lightbox-src={shots.windows.src}
+          data-lightbox-alt={t.alts.windows}
+          aria-label={zoom('windows')}
+        >
+          <img src={shots.windows.src} alt={t.alts.windows} width={shots.windows.width} height={shots.windows.height} loading="lazy" decoding="async" />
+        </button>
+        <span class="chip">{t.labels.windows}</span>
+      </div>
+
+      <!-- 3 · Tablet (unfolded Fold), front right -->
+      <div class="device d-tablet">
+        <button
+          type="button"
+          class="handset tablet"
+          data-lightbox-src={shots.tablet.src}
+          data-lightbox-alt={t.alts.tablet}
+          aria-label={zoom('tablet')}
+        >
+          <span class="key key-1" aria-hidden="true"></span>
+          <span class="key key-2" aria-hidden="true"></span>
+          <span class="bezel">
+            <span class="camera" aria-hidden="true"></span>
+            <span class="screen">
+              <img src={shots.tablet.src} alt={t.alts.tablet} width={shots.tablet.width} height={shots.tablet.height} loading="lazy" decoding="async" />
+              <span class="fold" aria-hidden="true"></span>
+            </span>
+          </span>
+        </button>
+        <span class="chip">{t.labels.tablet}</span>
+      </div>
+
+      <!-- 4 · Phone, front left -->
+      <div class="device d-phone">
+        <button
+          type="button"
+          class="handset phone"
+          data-lightbox-src={shots.phone.src}
+          data-lightbox-alt={t.alts.phone}
+          aria-label={zoom('phone')}
+        >
+          <span class="key key-1" aria-hidden="true"></span>
+          <span class="key key-2" aria-hidden="true"></span>
+          <span class="bezel">
+            <span class="screen">
+              <img src={shots.phone.src} alt={t.alts.phone} width={shots.phone.width} height={shots.phone.height} loading="lazy" decoding="async" />
+              <span class="camera" aria-hidden="true"></span>
+            </span>
+          </span>
+        </button>
+        <span class="chip">{t.labels.phone}</span>
+      </div>
+    </div>
+
+    <div class="mt-8 md:mt-10 lg:mt-12 xl:mt-14 flex justify-center">
+      <WebAppLink lang={lang} placement="home-platforms" label={t.webLink} />
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Stage geometry from the design artboards (README.md there): left and
+     width in % of the stage width, top in % of the stage height. Mobile first
+     = the 390 artboard (stage 358 × 530). */
+  .stage {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    aspect-ratio: 358 / 530;
+    --chip-h: 24px;
+    --chip-font: 11px;
+  }
+  .device { position: absolute; }
+  .d-web     { left: 11.173%; top: 2.642%;  width: 88.827%; z-index: 1; }
+  .d-windows { left: 0;       top: 9.057%;  width: 88.827%; z-index: 2; }
+  .d-tablet  { left: 0;       top: 35.849%; width: 55.866%; z-index: 3; }
+  .d-phone   { left: 51.955%; top: 30.943%; width: 48.045%; z-index: 4; }
+
+  @media (min-width: 768px) {
+    /* 768 artboard, stage 704 × 540 */
+    .stage { aspect-ratio: 704 / 540; --chip-h: 26px; --chip-font: 12px; }
+    .d-web     { left: 0;       top: 2.963%;  width: 50%; }
+    .d-windows { left: 11.790%; top: 10.370%; width: 78.125%; }
+    .d-tablet  { left: 69.886%; top: 34.444%; width: 28.693%; }
+    .d-phone   { left: 0;       top: 30.741%; width: 24.432%; }
+    /* The phone covers the Windows window's left edge here. */
+    .d-windows .chip { left: 110px; }
+  }
+  @media (min-width: 1024px) {
+    /* 1024 artboard, stage 944 × 610 */
+    .stage { aspect-ratio: 944 / 610; --chip-h: 28px; --chip-font: 12px; }
+    .d-web     { left: 0;       top: 2.623%;  width: 50%; }
+    .d-windows { left: 11.758%; top: 11.311%; width: 78.072%; }
+    .d-tablet  { left: 70.339%; top: 38.852%; width: 27.754%; }
+    .d-phone   { left: 3.178%;  top: 38.852%; width: 18.220%; }
+    .d-windows .chip { left: 14px; }
+  }
+  @media (min-width: 1280px) {
+    /* 1440 artboard, stage 1280 × 710 */
+    .stage { aspect-ratio: 1280 / 710; }
+    .d-web     { left: 0;       top: 2.254%;  width: 50%; }
+    .d-windows { left: 11.719%; top: 12.394%; width: 78.125%; }
+    .d-tablet  { left: 70.313%; top: 44.507%; width: 27.813%; }
+    .d-phone   { left: 3.125%;  top: 44.507%; width: 14.063%; }
+    .d-windows .chip { left: 16px; }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    text-align: left;
+    cursor: zoom-in;
+  }
+  img { display: block; width: 100%; height: auto; }
+  button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+
+  .chip {
+    position: absolute;
+    left: 12px;
+    top: calc(var(--chip-h) / -2);
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    height: var(--chip-h);
+    padding: 0 10px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid #E5E5E1;
+    box-shadow: 0 2px 8px rgba(22, 24, 29, 0.08);
+    font-size: var(--chip-font);
+    font-weight: 600;
+    line-height: 1;
+    color: #16181D;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  @media (min-width: 768px) { .chip { left: 14px; padding: 0 11px; } }
+  @media (min-width: 1024px) { .chip { left: 16px; padding: 0 12px; } }
+
+  /* Browser: light top bar, no screenshot chrome of its own. */
+  .browser {
+    --bar-h: 26px;
+    border: 1px solid #E5E5E1;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(22, 24, 29, 0.10);
+  }
+  .browser-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: var(--bar-h);
+    padding: 0 9px;
+    background: #F4F4F2;
+    border-bottom: 1px solid #E5E5E1;
+  }
+  .browser-dots { display: flex; gap: 5px; }
+  .browser-dots span { width: 6px; height: 6px; border-radius: 999px; background: #D3D3CE; }
+  .browser-url {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid #E5E5E1;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #5F646D;
+    white-space: nowrap;
+  }
+  @media (min-width: 768px) {
+    .browser { --bar-h: 30px; }
+    .browser-bar { padding: 0 10px; }
+    .browser-dots span { width: 7px; height: 7px; }
+  }
+  @media (min-width: 1024px) {
+    .browser { --bar-h: 34px; }
+    .browser-bar { padding: 0 12px; }
+    .browser-dots { gap: 6px; }
+    .browser-dots span { width: 8px; height: 8px; }
+    .browser-url { font-size: 11px; padding: 3px 12px; }
+  }
+  @media (min-width: 1280px) {
+    .browser { --bar-h: 40px; }
+    .browser-bar { padding: 0 14px; }
+    .browser-dots span { width: 10px; height: 10px; }
+    .browser-url { font-size: 12px; padding: 4px 14px; }
+  }
+
+  /* Windows: the screenshot carries its own title bar. */
+  .window {
+    border: 1px solid rgba(22, 24, 29, 0.18);
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(22, 24, 29, 0.14);
+  }
+
+  /* Phone and tablet: grey rim, black bezel, clipped screen. Each inner
+     radius is the outer one minus the layer's padding. */
+  .handset {
+    position: relative;
+    padding: var(--rim);
+    border-radius: var(--r);
+    background: #4A4E57;
+    box-shadow: 0 30px 80px rgba(22, 24, 29, 0.16), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  }
+  .bezel {
+    position: relative;
+    display: block;
+    padding: var(--bezel);
+    border-radius: calc(var(--r) - var(--rim));
+    background: #0E0F12;
+  }
+  .screen {
+    position: relative;
+    display: block;
+    border-radius: calc(var(--r) - var(--rim) - var(--bezel));
+    overflow: hidden;
+    background: #fff;
+  }
+  .key {
+    position: absolute;
+    right: -3px;
+    width: 3px;
+    border-radius: 0 2px 2px 0;
+    background: #3A3E46;
+  }
+  .phone { --rim: 2px; --bezel: 4px; --r: 30px; }
+  .phone .key-1 { top: 21%; height: 8%; }
+  .phone .key-2 { top: 31%; height: 13%; }
+  .phone .camera {
+    position: absolute;
+    left: 50%;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    margin-left: -4px;
+    border-radius: 999px;
+    background: #0E0F12;
+  }
+  .tablet { --rim: 2px; --bezel: 3px; --r: 20px; }
+  .tablet .key { display: none; }
+  .tablet .key-1 { top: 9%; height: 9%; }
+  .tablet .key-2 { top: 20%; height: 15%; }
+  .tablet .camera {
+    position: absolute;
+    top: 1px;
+    right: 22%;
+    width: 4px;
+    height: 4px;
+    border-radius: 999px;
+    background: #2E3138;
+  }
+  .tablet .fold {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 6px;
+    margin-left: -3px;
+    background: linear-gradient(90deg, rgba(22, 24, 29, 0), rgba(22, 24, 29, 0.06), rgba(22, 24, 29, 0));
+  }
+  @media (min-width: 768px) {
+    .phone { --bezel: 4px; --r: 32px; }
+    .tablet { --bezel: 4px; --r: 24px; }
+    .tablet .key { display: block; }
+  }
+  @media (min-width: 1024px) {
+    .tablet { --r: 26px; }
+  }
+  @media (min-width: 1280px) {
+    .phone { --rim: 3px; --bezel: 5px; --r: 36px; }
+    .phone .key-1 { height: 10%; }
+    .phone .key-2 { height: 17%; }
+    .phone .camera { top: 8px; width: 10px; height: 10px; margin-left: -5px; }
+    .tablet { --bezel: 6px; --r: 32px; }
+  }
+</style>
+
+<script>
+  // Each device opens full size in the shared lightbox.
+  document.querySelectorAll<HTMLElement>('#platforms [data-lightbox-src]').forEach((el) => {
+    el.addEventListener('click', () => {
+      document.dispatchEvent(new CustomEvent('lightbox:open', {
+        detail: { src: el.dataset.lightboxSrc, alt: el.dataset.lightboxAlt },
+      }));
+    });
+  });
+</script>

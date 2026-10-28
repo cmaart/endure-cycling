@@ -11,7 +11,8 @@
  *    - App Store: `pt=<provider token>&ct=<campaign>` → visible in App Store
  *      Connect → App Analytics → Campaigns. Needs `config.attribution.appleProviderToken`.
  * 3. Sends a GA4 `download_click` event with store + campaign for every badge
- *    click (replaces the former per-component click handlers).
+ *    click (replaces the former per-component click handlers), and a
+ *    `web_app_click` event for every link to the web app (`config.webApp.url`).
  *
  * Without UTM params the visit is attributed as organic website traffic
  * (`utm_source=endure-cycling.com`, `utm_medium=website`, `utm_campaign=organic`)
@@ -146,6 +147,23 @@ function trackClick(label: string, placement: string, utm: Utm): void {
   });
 }
 
+/**
+ * Web app links get no URL decoration (the web app reads no campaign params),
+ * only the GA4 `web_app_click` event with the placement.
+ */
+function trackWebAppClick(placement: string, utm: Utm): void {
+  const w = window as Window & { gtag?: (...args: unknown[]) => void };
+  if (typeof w.gtag !== 'function') return;
+  w.gtag('event', 'web_app_click', {
+    event_category: 'engagement',
+    placement,
+    campaign_source: utm.utm_source,
+    campaign_medium: utm.utm_medium,
+    campaign_name: utm.utm_campaign,
+    campaign_content: utm.utm_content,
+  });
+}
+
 function init(): void {
   const utm = resolveUtm();
   const anchors = document.querySelectorAll<HTMLAnchorElement>(
@@ -155,6 +173,11 @@ function init(): void {
     const label = decorate(anchor, utm);
     if (!label) return;
     anchor.addEventListener('click', () => trackClick(label, placementOf(anchor), utm));
+  });
+
+  const webAppHost = new URL(config.webApp.url).hostname;
+  document.querySelectorAll<HTMLAnchorElement>(`a[href*="${webAppHost}"]`).forEach((anchor) => {
+    anchor.addEventListener('click', () => trackWebAppClick(placementOf(anchor), utm));
   });
 }
 

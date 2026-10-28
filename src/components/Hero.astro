@@ -1,6 +1,8 @@
 ---
 import { getTranslations } from '../i18n/translations';
 import { config } from '../config';
+import WebAppLink from './WebAppLink.astro';
+import { appShotDir } from '../utils/appShots';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).hero;
@@ -16,19 +18,21 @@ const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg
  * The carousel phones, in ring order. The second one starts centered, its two
  * neighbours sit left and right, the rest wait off-stage. The script below
  * derives everything else (dots, rotation, lightbox) from this list's length,
- * so adding or reordering entries here needs no other change.
+ * so adding or reordering entries here needs no other change. Each language
+ * has its own screenshot set, taken with the app in that language.
  */
+const app = appShotDir(lang);
 const shots = [
-  { key: 'today',         src: '/assets/app/today_dashboard.webp' },
-  { key: 'ride',          src: '/assets/app/ride_screen.webp' },
-  { key: 'zones',         src: '/assets/app/time_in_zones.webp' },
-  { key: 'vo2max',        src: '/assets/app/vo2max_detail.webp' },
-  { key: 'kpis',          src: '/assets/app/kpi_dashboard.webp' },
-  { key: 'library',       src: '/assets/app/workout_library.webp' },
-  { key: 'coaching',      src: '/assets/app/ai_coaching.webp' },
-  { key: 'calendarMonth', src: '/assets/app/calendar_month.webp' },
-  { key: 'calendarWeek',  src: '/assets/app/calendar_week.webp' },
-  { key: 'activity',      src: '/assets/app/activity_detail.webp' },
+  { key: 'today',         src: `${app}/today_dashboard.webp` },
+  { key: 'coaching',      src: `${app}/ai_coaching.webp` },
+  { key: 'ride',          src: `${app}/ride_screen.webp` },
+  { key: 'calendarWeek',  src: `${app}/calendar_week.webp` },
+  { key: 'zones',         src: `${app}/time_in_zones.webp` },
+  { key: 'vo2max',        src: `${app}/vo2max_detail.webp` },
+  { key: 'kpis',          src: `${app}/kpi_dashboard.webp` },
+  { key: 'library',       src: `${app}/workout_library.webp` },
+  { key: 'calendarMonth', src: `${app}/calendar_month.webp` },
+  { key: 'activity',      src: `${app}/activity_detail.webp` },
 ] as const;
 
 // Only the first three are on stage at load, so only those are worth fetching eagerly.
@@ -71,7 +75,7 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
     </div>
 
     <!-- Headline -->
-    <h1 data-reveal data-reveal-delay="100" class="mb-6 font-extrabold text-5xl md:text-7xl lg:text-[84px] leading-[1.04] tracking-[-0.03em] text-slate-900 text-balance">
+    <h1 data-reveal data-reveal-delay="100" class="mb-6 font-extrabold text-[42px] sm:text-5xl md:text-7xl lg:text-[80px] leading-[1.04] tracking-[-0.03em] text-slate-900 text-balance lg:-mx-28">
       {t.headline1}<br />
       <span class="text-accent">{t.headline2}</span>
     </h1>
@@ -111,6 +115,9 @@ const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
           </li>
         ))}
       </ul>
+      <div class="self-stretch border-t border-slate-100 pt-2 text-center">
+        <WebAppLink lang={lang} placement="hero-web" />
+      </div>
     </div>
 
     <p data-reveal data-reveal-delay="400" class="mt-5 text-sm text-slate-500 flex items-center justify-center gap-2">

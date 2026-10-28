@@ -16,7 +16,7 @@ export const vsContent = {
   en: {
     zwift: {
       datePublished: "2026-07-20",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "Zwift Alternative: ENDURE, the Precision Indoor Cycling App",
       seoDescription: "Zwift alternative for iOS, Android and Windows: ERG control, FTP & VO2max trends, lactate LT1/LT2, CORE heat zones. Zwift Click v1 keeps working. 14 days free.",
       breadcrumb: "Zwift alternative",
@@ -31,8 +31,8 @@ export const vsContent = {
       rows: [
         { feature: "Core focus", endure: "Precision training & physiological analysis", other: "Virtual worlds, racing & social riding" },
         { feature: "Price", endure: "Affordable subscription, monthly or annual, with a 14-day free trial", other: "Paid monthly subscription" },
-        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. Change it in chat", other: "Training plans and workouts; no daily coach" },
-        { feature: "Platforms", endure: "iOS, Android & Windows", other: "PC, Mac, iOS, Android, Apple TV" },
+        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. On request it plans the coming weeks. Change it in chat", other: "Training plans and workouts; no daily coach" },
+        { feature: "Platforms", endure: "iOS, Android & Windows, plus a web app", other: "PC, Mac, iOS, Android, Apple TV" },
         { feature: "Smart trainer control (ERG)", endure: "Yes, over Bluetooth with smart-smoothing", other: "Yes" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verified): ERG target & resistance from the bars, no simulated cassette", other: "Yes, simulated gears via Zwift Cog & Click" },
         { feature: "Structured workouts", endure: "Curated physiological library + .ZWO/.MRC/.ERG import", other: "Large library + custom workouts" },
@@ -98,13 +98,13 @@ export const vsContent = {
     },
     trainerroad: {
       datePublished: "2026-07-20",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "TrainerRoad Alternative: ENDURE with Lactate & Heat Zones",
       seoDescription: "TrainerRoad alternative for iOS, Android and Windows: lactate LT1/LT2, native CORE heat zones, FTP & VO2max trends and a curated workout library. 14 days free.",
       breadcrumb: "TrainerRoad alternative",
       h1: "ENDURE: the TrainerRoad alternative for riders who want the data",
       subtitle: "Looking to switch? Here is the honest comparison.",
-      directAnswer: "ENDURE is an alternative to TrainerRoad for riders who want coaching that reacts to each day and analysis that shows their physiology. TrainerRoad is a subscription service built around adaptive multi-week training plans toward a target event. ENDURE's AI coach plans one day at a time from your recent rides and a morning check-in, and the app adds lactate LT1/LT2 thresholds, native CORE heat zones and FTP and VO2max trends.",
+      directAnswer: "ENDURE is an alternative to TrainerRoad for riders who want coaching that reacts to each day and analysis that shows their physiology. TrainerRoad is a subscription service built around adaptive multi-week training plans toward a target event. ENDURE's AI coach plans each day from your recent rides and a morning check-in, drafts the coming weeks toward your goal event when you ask, and the app adds lactate LT1/LT2 thresholds, native CORE heat zones and FTP and VO2max trends.",
       intro: "Both apps take structured indoor training seriously, with no virtual worlds on either side. The difference is philosophy: TrainerRoad prescribes your training, ENDURE measures your physiology and lets you train with precision. Here is the honest comparison.",
       tableCaption: "Feature comparison",
       colFeature: "Feature",
@@ -113,11 +113,11 @@ export const vsContent = {
       rows: [
         { feature: "Core focus", endure: "Daily AI coaching & physiological analysis", other: "Adaptive multi-week training plans" },
         { feature: "Price", endure: "Affordable subscription, monthly or annual, with a 14-day free trial", other: "Paid monthly/annual subscription" },
-        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. Change it in chat", other: "Adaptive multi-week plans; TrainNow suggests a workout" },
-        { feature: "Platforms", endure: "iOS, Android & Windows", other: "PC, Mac, iOS, Android" },
+        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. On request it plans the coming weeks. Change it in chat", other: "Adaptive multi-week plans; TrainNow suggests a workout" },
+        { feature: "Platforms", endure: "iOS, Android & Windows, plus a web app", other: "PC, Mac, iOS, Android" },
         { feature: "Smart trainer control (ERG)", endure: "Yes, over Bluetooth with smart-smoothing", other: "Yes" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verified): ERG target & resistance from the bars", other: "Not available" },
-        { feature: "Training plans", endure: "No fixed multi-week plan: the coach picks each day, you decide", other: "Adaptive multi-week plans built by algorithms" },
+        { feature: "Training plans", endure: "The coach drafts the coming weeks toward your goal event, you apply them. No fixed plan for months ahead", other: "Adaptive multi-week plans built by algorithms" },
         { feature: "Workout import", endure: ".ZWO, .MRC and .ERG files", other: "Workout creator + TrainNow" },
         { feature: "FTP & VO2max trends", endure: "Both modelled continuously from ride data", other: "AI FTP detection; no VO2max trend" },
         { feature: "Lactate LT1 / LT2", endure: "In-ride logging + automatic threshold estimation (industry first)", other: "Not available" },
@@ -151,11 +151,11 @@ export const vsContent = {
       faq: [
         {
           q: "How does ENDURE's pricing compare with TrainerRoad?",
-          a: "Both are subscriptions. ENDURE Premium is billed monthly or annually through the App Store or Google Play, kept at the low end on purpose, and new accounts start with 14 days free. It covers ERG smart trainer control, a curated workout library, FTP and VO2max trends, lactate LT1/LT2 estimation and CORE heat zones. What it does not do is lay out a multi-week plan toward an event, which is TrainerRoad's core; the ENDURE coach decides one day at a time."
+          a: "Both are subscriptions. ENDURE Premium is billed monthly or annually through the App Store or Google Play, kept at the low end on purpose, and new accounts start with 14 days free. It covers ERG smart trainer control, a curated workout library, FTP and VO2max trends, lactate LT1/LT2 estimation and CORE heat zones. What it does not do is lay out a fixed plan for months toward an event, which is TrainerRoad's core; the ENDURE coach plans a few weeks ahead and you apply each draft."
         },
         {
           q: "Does ENDURE build training plans like TrainerRoad?",
-          a: "Not as multi-week plans. ENDURE's AI coach plans each day: it reads your recent rides, your training load and a morning check-in, then picks today's session with an easier and a harder alternative and the reason. Say in the chat how your legs feel or how much time you have and it proposes something else. You decide what to ride."
+          a: "For the coming weeks, not for months. Tap Plan with coach and ENDURE's AI coach drafts those weeks in your calendar from your recent rides and training load, aimed at your goal event; you change the draft in chat and apply it. Each morning it also reads a short check-in and may propose one change to today's session. You decide what to ride."
         },
         {
           q: "Is ENDURE cheaper than TrainerRoad?",
@@ -173,7 +173,7 @@ export const vsContent = {
     },
     rouvy: {
       datePublished: "2026-10-18",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "Rouvy Alternative: ENDURE for Training Without Video Routes",
       seoDescription: "Rouvy alternative for iOS, Android and Windows: ERG control, FTP and VO2max from normal rides, lactate LT1/LT2, CORE heat zones, .ZWO export. 14 days free.",
       breadcrumb: "Rouvy alternative",
@@ -188,8 +188,8 @@ export const vsContent = {
       rows: [
         { feature: "Core focus", endure: "Structured training and physiological analysis", other: "Filmed real-world routes with gradient simulation" },
         { feature: "Price", endure: "Affordable subscription, monthly or annual, with a 14-day free trial", other: "Paid subscription, monthly or annual" },
-        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. Change it in chat", other: "Training plans; no daily coach" },
-        { feature: "Platforms", endure: "iOS, Android & Windows", other: "iOS, Android, Windows, macOS, Apple TV" },
+        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. On request it plans the coming weeks. Change it in chat", other: "Training plans; no daily coach" },
+        { feature: "Platforms", endure: "iOS, Android & Windows, plus a web app", other: "iOS, Android, Windows, macOS, Apple TV" },
         { feature: "Smart trainer control (ERG)", endure: "Yes, over Bluetooth with smart-smoothing", other: "Yes, plus gradient simulation on routes" },
         { feature: "Video routes", endure: "None", other: "Large library of filmed roads worldwide" },
         { feature: "Structured workouts", endure: "Curated physiological library, AI-built workouts, .ZWO/.MRC/.ERG import and export", other: "Workout library, training plans, file import" },
@@ -249,7 +249,7 @@ export const vsContent = {
     },
     mywhoosh: {
       datePublished: "2026-10-18",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "MyWhoosh Alternative: ENDURE for Training Without the Game",
       seoDescription: "MyWhoosh alternative for iOS, Android and Windows: ERG control, FTP and VO2max from your rides, lactate LT1/LT2, CORE heat zones, no virtual world. 14 days free.",
       breadcrumb: "MyWhoosh alternative",
@@ -264,8 +264,8 @@ export const vsContent = {
       rows: [
         { feature: "Core focus", endure: "Structured training and physiological analysis", other: "Free virtual worlds, racing and workouts" },
         { feature: "Price", endure: "Subscription, monthly or annual, with a 14-day free trial", other: "Free, with optional in-app purchases" },
-        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. Change it in chat", other: "Training plans and plan builder; no daily coach" },
-        { feature: "Platforms", endure: "iOS, Android & Windows", other: "iOS, Android, Windows, macOS, Apple TV" },
+        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. On request it plans the coming weeks. Change it in chat", other: "Training plans and plan builder; no daily coach" },
+        { feature: "Platforms", endure: "iOS, Android & Windows, plus a web app", other: "iOS, Android, Windows, macOS, Apple TV" },
         { feature: "Smart trainer control (ERG)", endure: "Yes, over Bluetooth with smart-smoothing", other: "Yes" },
         { feature: "Virtual world & racing", endure: "None", other: "Several worlds, races and group rides" },
         { feature: "Structured workouts", endure: "Curated physiological library, AI-built workouts, .ZWO/.MRC/.ERG import and export", other: "Large library, training plans and a plan builder" },
@@ -324,7 +324,7 @@ export const vsContent = {
     },
     'wahoo-systm': {
       datePublished: "2026-10-18",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "Wahoo SYSTM Alternative: ENDURE, FTP Without the Test",
       seoDescription: "Wahoo SYSTM alternative for iOS, Android and Windows: FTP and VO2max from normal rides instead of a test, lactate LT1/LT2, CORE heat zones, ERG control. 14 days free.",
       breadcrumb: "Wahoo SYSTM alternative",
@@ -339,8 +339,8 @@ export const vsContent = {
       rows: [
         { feature: "Core focus", endure: "Structured training and physiological analysis", other: "4DP-based cycling plans, video workouts and multi-sport sessions" },
         { feature: "Price", endure: "Affordable subscription, monthly or annual, with a 14-day free trial", other: "Paid subscription, monthly or annual, with a free trial" },
-        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. Change it in chat", other: "Plans scaled to your 4DP profile; no daily coach" },
-        { feature: "Platforms", endure: "iOS, Android & Windows", other: "iOS, Android, Windows, macOS" },
+        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. On request it plans the coming weeks. Change it in chat", other: "Plans scaled to your 4DP profile; no daily coach" },
+        { feature: "Platforms", endure: "iOS, Android & Windows, plus a web app", other: "iOS, Android, Windows, macOS" },
         { feature: "Smart trainer control (ERG)", endure: "Yes, over Bluetooth with smart-smoothing", other: "Yes" },
         { feature: "Fitness testing", endure: "No test. FTP and VO2max modelled from your rides", other: "Full Frontal test for the 4DP profile (5 s, 1 min, 5 min, 20 min)" },
         { feature: "Structured workouts", endure: "Curated physiological library, AI-built workouts, .ZWO/.MRC/.ERG import and export", other: "Video workouts and plans, scaled to your 4DP numbers" },
@@ -399,7 +399,7 @@ export const vsContent = {
     },
     'trainingpeaks-virtual': {
       datePublished: "2026-10-18",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "TrainingPeaks Virtual Alternative: ENDURE Without the 3D World",
       seoDescription: "TrainingPeaks Virtual alternative for iOS, Android and Windows: ERG workouts, FTP and VO2max from your rides, lactate LT1/LT2, CORE heat zones, no 3D world. 14 days free.",
       breadcrumb: "TrainingPeaks Virtual alternative",
@@ -414,8 +414,8 @@ export const vsContent = {
       rows: [
         { feature: "Core focus", endure: "Structured training and physiological analysis", other: "3D virtual world with racing physics, tied to the TrainingPeaks calendar" },
         { feature: "Price", endure: "Affordable subscription, monthly or annual, with a 14-day free trial", other: "Included in a TrainingPeaks Premium subscription" },
-        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. Change it in chat", other: "Workouts from your TrainingPeaks calendar" },
-        { feature: "Platforms", endure: "iOS, Android & Windows", other: "Windows, macOS, iOS, Android, Apple TV" },
+        { feature: "Daily coaching", endure: "AI coach plans each day from your rides and a morning check-in: one workout, two alternatives, the reason. On request it plans the coming weeks. Change it in chat", other: "Workouts from your TrainingPeaks calendar" },
+        { feature: "Platforms", endure: "iOS, Android & Windows, plus a web app", other: "Windows, macOS, iOS, Android, Apple TV" },
         { feature: "Smart trainer control (ERG)", endure: "Yes, over Bluetooth with smart-smoothing", other: "Yes" },
         { feature: "Virtual world & racing", endure: "None", other: "One virtual world; races with drafting, cornering and braking physics" },
         { feature: "Structured workouts", endure: "Curated physiological library, AI-built workouts, .ZWO/.MRC/.ERG import and export", other: "Workouts from your TrainingPeaks calendar and coach" },
@@ -476,7 +476,7 @@ export const vsContent = {
   de: {
     zwift: {
       datePublished: "2026-07-20",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "ENDURE als Zwift Alternative: Präzision statt virtueller Welt",
       seoDescription: "Zwift Alternative für iOS, Android und Windows: ERG-Steuerung, FTP- & VO2max-Trends, Laktat LT1/LT2, CORE Heat Zones. Zwift Click v1 läuft mit. 14 Tage gratis.",
       breadcrumb: "Zwift Alternative",
@@ -491,8 +491,8 @@ export const vsContent = {
       rows: [
         { feature: "Kernfokus", endure: "Präzises Training & physiologische Analyse", other: "Virtuelle Welten, Rennen & Social Riding" },
         { feature: "Preis", endure: "Preiswertes Abo, monatlich oder jährlich, 14 Tage gratis testen", other: "Kostenpflichtiges Monatsabo" },
-        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Im Chat änderbar", other: "Trainingspläne und Workouts; kein täglicher Coach" },
-        { feature: "Plattformen", endure: "iOS, Android & Windows", other: "PC, Mac, iOS, Android, Apple TV" },
+        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Auf Wunsch plant er die kommenden Wochen. Im Chat änderbar", other: "Trainingspläne und Workouts; kein täglicher Coach" },
+        { feature: "Plattformen", endure: "iOS, Android & Windows, dazu eine Web-App", other: "PC, Mac, iOS, Android, Apple TV" },
         { feature: "Smart-Trainer-Steuerung (ERG)", endure: "Ja, über Bluetooth mit Smart-Smoothing", other: "Ja" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verifiziert): ERG-Ziel & Widerstand vom Lenker, ohne simulierte Kassette", other: "Ja, simulierte Gänge über Zwift Cog & Click" },
         { feature: "Strukturierte Workouts", endure: "Kuratierte physiologische Bibliothek + .ZWO/.MRC/.ERG-Import", other: "Große Bibliothek + eigene Workouts" },
@@ -558,13 +558,13 @@ export const vsContent = {
     },
     trainerroad: {
       datePublished: "2026-07-20",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "TrainerRoad Alternative: ENDURE mit Laktat & Heat Zones",
       seoDescription: "TrainerRoad Alternative für iOS, Android und Windows: Laktat LT1/LT2, native CORE Heat Zones, FTP- & VO2max-Trends und kuratierte Bibliothek. 14 Tage gratis.",
       breadcrumb: "TrainerRoad Alternative",
       h1: "ENDURE: die TrainerRoad Alternative für alle, die die Daten wollen",
       subtitle: "Du überlegst zu wechseln? Hier der ehrliche Vergleich.",
-      directAnswer: "ENDURE ist eine Alternative zu TrainerRoad für alle, die Coaching wollen, das auf jeden Tag reagiert, und Analyse, die ihre Physiologie zeigt. TrainerRoad ist ein Abo-Dienst rund um adaptive Mehrwochenpläne Richtung Zielevent. Der KI-Coach von ENDURE plant Tag für Tag aus deinen letzten Fahrten und einem Morgen-Check-in, dazu kommen Laktat LT1/LT2, native CORE Heat Zones und FTP- und VO2max-Trends.",
+      directAnswer: "ENDURE ist eine Alternative zu TrainerRoad für alle, die Coaching wollen, das auf jeden Tag reagiert, und Analyse, die ihre Physiologie zeigt. TrainerRoad ist ein Abo-Dienst rund um adaptive Mehrwochenpläne Richtung Zielevent. Der KI-Coach von ENDURE plant jeden Tag aus deinen letzten Fahrten und einem Morgen-Check-in, entwirft auf Wunsch die kommenden Wochen Richtung Zielevent, dazu kommen Laktat LT1/LT2, native CORE Heat Zones und FTP- und VO2max-Trends.",
       intro: "Beide Apps nehmen strukturiertes Indoor-Training ernst, virtuelle Welten gibt es auf beiden Seiten nicht. Der Unterschied ist die Philosophie: TrainerRoad schreibt dein Training vor, ENDURE misst deine Physiologie und lässt dich präzise trainieren. Hier der ehrliche Vergleich.",
       tableCaption: "Feature-Vergleich",
       colFeature: "Feature",
@@ -573,11 +573,11 @@ export const vsContent = {
       rows: [
         { feature: "Kernfokus", endure: "Tägliches KI-Coaching & physiologische Analyse", other: "Adaptive Mehrwochenpläne" },
         { feature: "Preis", endure: "Preiswertes Abo, monatlich oder jährlich, 14 Tage gratis testen", other: "Kostenpflichtiges Monats-/Jahresabo" },
-        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Im Chat änderbar", other: "Adaptive Mehrwochenpläne; TrainNow schlägt ein Workout vor" },
-        { feature: "Plattformen", endure: "iOS, Android & Windows", other: "PC, Mac, iOS, Android" },
+        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Auf Wunsch plant er die kommenden Wochen. Im Chat änderbar", other: "Adaptive Mehrwochenpläne; TrainNow schlägt ein Workout vor" },
+        { feature: "Plattformen", endure: "iOS, Android & Windows, dazu eine Web-App", other: "PC, Mac, iOS, Android" },
         { feature: "Smart-Trainer-Steuerung (ERG)", endure: "Ja, über Bluetooth mit Smart-Smoothing", other: "Ja" },
         { feature: "Virtual Shifting", endure: "Zwift Click (v1 verifiziert): ERG-Ziel & Widerstand vom Lenker", other: "Nicht verfügbar" },
-        { feature: "Trainingspläne", endure: "Kein fester Mehrwochenplan: der Coach wählt jeden Tag, du entscheidest", other: "Adaptive Mehrwochenpläne vom Algorithmus" },
+        { feature: "Trainingspläne", endure: "Der Coach entwirft die kommenden Wochen Richtung Zielevent, du übernimmst sie. Kein starrer Plan über Monate", other: "Adaptive Mehrwochenpläne vom Algorithmus" },
         { feature: "Workout-Import", endure: ".ZWO, .MRC und .ERG Dateien", other: "Workout Creator + TrainNow" },
         { feature: "FTP- & VO2max-Trends", endure: "Beides kontinuierlich aus Fahrtdaten modelliert", other: "AI FTP Detection; kein VO2max-Trend" },
         { feature: "Laktat LT1 / LT2", endure: "Eintrag während der Fahrt + automatische Schwellen-Schätzung (erstmals in einer Cycling-App)", other: "Nicht verfügbar" },
@@ -611,11 +611,11 @@ export const vsContent = {
       faq: [
         {
           q: "Was kostet ENDURE im Vergleich zu TrainerRoad?",
-          a: "Beide kosten ein Abo. ENDURE Premium wird monatlich oder jährlich über den App Store oder Google Play abgerechnet und liegt bewusst am unteren Ende, neue Konten starten mit 14 Tagen gratis. Enthalten sind ERG-Steuerung für Smart Trainer, eine kuratierte Workout-Bibliothek, FTP- und VO2max-Trends, LT1/LT2-Schätzung aus Laktatwerten und CORE Heat Zones. Was ENDURE nicht macht, ist ein Mehrwochenplan Richtung Event, der Kern von TrainerRoad; der ENDURE-Coach entscheidet Tag für Tag."
+          a: "Beide kosten ein Abo. ENDURE Premium wird monatlich oder jährlich über den App Store oder Google Play abgerechnet und liegt bewusst am unteren Ende, neue Konten starten mit 14 Tagen gratis. Enthalten sind ERG-Steuerung für Smart Trainer, eine kuratierte Workout-Bibliothek, FTP- und VO2max-Trends, LT1/LT2-Schätzung aus Laktatwerten und CORE Heat Zones. Was ENDURE nicht macht, ist ein starrer Plan über Monate Richtung Event, der Kern von TrainerRoad; der ENDURE-Coach plant einige Wochen voraus, und jeden Entwurf übernimmst du selbst."
         },
         {
           q: "Erstellt ENDURE Trainingspläne wie TrainerRoad?",
-          a: "Nicht als Mehrwochenpläne. Der KI-Coach von ENDURE plant jeden Tag: Er liest deine letzten Fahrten, deine Trainingsbelastung und einen Morgen-Check-in und wählt die heutige Einheit, mit einer leichteren und einer härteren Alternative und der Begründung. Sag im Chat, wie sich die Beine anfühlen oder wie viel Zeit du hast, und er schlägt etwas anderes vor. Du entscheidest, was du fährst."
+          a: "Für die kommenden Wochen, nicht für Monate. Tipp auf „Mit Coach planen“, und der KI-Coach von ENDURE entwirft diese Wochen in deinem Kalender aus deinen letzten Fahrten und deiner Trainingsbelastung, ausgerichtet auf dein Zielevent; du änderst den Entwurf im Chat und übernimmst ihn. Jeden Morgen liest er außerdem einen kurzen Check-in und schlägt dir bei Bedarf eine Änderung an der heutigen Einheit vor. Du entscheidest, was du fährst."
         },
         {
           q: "Ist ENDURE günstiger als TrainerRoad?",
@@ -633,7 +633,7 @@ export const vsContent = {
     },
     rouvy: {
       datePublished: "2026-10-18",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "Rouvy Alternative: ENDURE, Training ohne Videostrecken",
       seoDescription: "Rouvy Alternative für iOS, Android und Windows: ERG-Steuerung, FTP und VO2max aus normalen Fahrten, Laktat LT1/LT2, CORE Heat Zones, .ZWO-Export. 14 Tage gratis.",
       breadcrumb: "Rouvy Alternative",
@@ -648,8 +648,8 @@ export const vsContent = {
       rows: [
         { feature: "Kernfokus", endure: "Strukturiertes Training & physiologische Analyse", other: "Gefilmte reale Strecken mit Steigungssimulation" },
         { feature: "Preis", endure: "Preiswertes Abo, monatlich oder jährlich, 14 Tage gratis testen", other: "Kostenpflichtiges Abo, monatlich oder jährlich" },
-        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Im Chat änderbar", other: "Trainingspläne; kein täglicher Coach" },
-        { feature: "Plattformen", endure: "iOS, Android & Windows", other: "iOS, Android, Windows, macOS, Apple TV" },
+        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Auf Wunsch plant er die kommenden Wochen. Im Chat änderbar", other: "Trainingspläne; kein täglicher Coach" },
+        { feature: "Plattformen", endure: "iOS, Android & Windows, dazu eine Web-App", other: "iOS, Android, Windows, macOS, Apple TV" },
         { feature: "Smart-Trainer-Steuerung (ERG)", endure: "Ja, über Bluetooth mit Smart-Smoothing", other: "Ja, plus Steigungssimulation auf Strecken" },
         { feature: "Videostrecken", endure: "Keine", other: "Große Bibliothek gefilmter Straßen weltweit" },
         { feature: "Strukturierte Workouts", endure: "Kuratierte physiologische Bibliothek, KI-gebaute Workouts, .ZWO/.MRC/.ERG-Import und -Export", other: "Workout-Bibliothek, Trainingspläne, Datei-Import" },
@@ -709,7 +709,7 @@ export const vsContent = {
     },
     mywhoosh: {
       datePublished: "2026-10-18",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "MyWhoosh Alternative: ENDURE, Training ohne Spiel",
       seoDescription: "MyWhoosh Alternative für iOS, Android und Windows: ERG-Steuerung, FTP und VO2max aus deinen Fahrten, Laktat LT1/LT2, CORE Heat Zones, keine virtuelle Welt. 14 Tage gratis.",
       breadcrumb: "MyWhoosh Alternative",
@@ -724,8 +724,8 @@ export const vsContent = {
       rows: [
         { feature: "Kernfokus", endure: "Strukturiertes Training & physiologische Analyse", other: "Kostenlose virtuelle Welten, Rennen und Workouts" },
         { feature: "Preis", endure: "Abo, monatlich oder jährlich, 14 Tage gratis testen", other: "Gratis, mit optionalen In-App-Käufen" },
-        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Im Chat änderbar", other: "Trainingspläne und Plan-Builder; kein täglicher Coach" },
-        { feature: "Plattformen", endure: "iOS, Android & Windows", other: "iOS, Android, Windows, macOS, Apple TV" },
+        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Auf Wunsch plant er die kommenden Wochen. Im Chat änderbar", other: "Trainingspläne und Plan-Builder; kein täglicher Coach" },
+        { feature: "Plattformen", endure: "iOS, Android & Windows, dazu eine Web-App", other: "iOS, Android, Windows, macOS, Apple TV" },
         { feature: "Smart-Trainer-Steuerung (ERG)", endure: "Ja, über Bluetooth mit Smart-Smoothing", other: "Ja" },
         { feature: "Virtuelle Welt & Rennen", endure: "Keine", other: "Mehrere Welten, Rennen und Gruppenfahrten" },
         { feature: "Strukturierte Workouts", endure: "Kuratierte physiologische Bibliothek, KI-gebaute Workouts, .ZWO/.MRC/.ERG-Import und -Export", other: "Große Bibliothek, Trainingspläne und Plan-Builder" },
@@ -784,7 +784,7 @@ export const vsContent = {
     },
     'wahoo-systm': {
       datePublished: "2026-10-18",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "Wahoo SYSTM Alternative: ENDURE, FTP ohne Test",
       seoDescription: "Wahoo SYSTM Alternative für iOS, Android und Windows: FTP und VO2max aus normalen Fahrten statt aus einem Test, Laktat LT1/LT2, CORE Heat Zones, ERG-Steuerung. 14 Tage gratis.",
       breadcrumb: "Wahoo SYSTM Alternative",
@@ -799,8 +799,8 @@ export const vsContent = {
       rows: [
         { feature: "Kernfokus", endure: "Strukturiertes Training & physiologische Analyse", other: "4DP-basierte Radpläne, Video-Workouts und Multisport-Einheiten" },
         { feature: "Preis", endure: "Preiswertes Abo, monatlich oder jährlich, 14 Tage gratis testen", other: "Kostenpflichtiges Abo, monatlich oder jährlich, mit Testphase" },
-        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Im Chat änderbar", other: "Pläne, skaliert auf dein 4DP-Profil; kein täglicher Coach" },
-        { feature: "Plattformen", endure: "iOS, Android & Windows", other: "iOS, Android, Windows, macOS" },
+        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Auf Wunsch plant er die kommenden Wochen. Im Chat änderbar", other: "Pläne, skaliert auf dein 4DP-Profil; kein täglicher Coach" },
+        { feature: "Plattformen", endure: "iOS, Android & Windows, dazu eine Web-App", other: "iOS, Android, Windows, macOS" },
         { feature: "Smart-Trainer-Steuerung (ERG)", endure: "Ja, über Bluetooth mit Smart-Smoothing", other: "Ja" },
         { feature: "Fitnesstest", endure: "Kein Test. FTP und VO2max aus deinen Fahrten modelliert", other: "Full-Frontal-Test für das 4DP-Profil (5 s, 1 min, 5 min, 20 min)" },
         { feature: "Strukturierte Workouts", endure: "Kuratierte physiologische Bibliothek, KI-gebaute Workouts, .ZWO/.MRC/.ERG-Import und -Export", other: "Video-Workouts und Pläne, skaliert auf deine 4DP-Werte" },
@@ -859,7 +859,7 @@ export const vsContent = {
     },
     'trainingpeaks-virtual': {
       datePublished: "2026-10-18",
-      dateModified: "2026-10-18",
+      dateModified: "2026-10-28",
       seoTitle: "TrainingPeaks Virtual Alternative: ENDURE ohne 3D-Welt",
       seoDescription: "TrainingPeaks Virtual Alternative für iOS, Android und Windows: ERG-Workouts, FTP und VO2max aus deinen Fahrten, Laktat LT1/LT2, CORE Heat Zones, keine 3D-Welt. 14 Tage gratis.",
       breadcrumb: "TrainingPeaks Virtual Alternative",
@@ -874,8 +874,8 @@ export const vsContent = {
       rows: [
         { feature: "Kernfokus", endure: "Strukturiertes Training & physiologische Analyse", other: "3D-Welt mit Rennphysik, an den TrainingPeaks-Kalender gekoppelt" },
         { feature: "Preis", endure: "Preiswertes Abo, monatlich oder jährlich, 14 Tage gratis testen", other: "In einem TrainingPeaks-Premium-Abo enthalten" },
-        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Im Chat änderbar", other: "Workouts aus deinem TrainingPeaks-Kalender" },
-        { feature: "Plattformen", endure: "iOS, Android & Windows", other: "Windows, macOS, iOS, Android, Apple TV" },
+        { feature: "Tägliche Trainingsführung", endure: "KI-Coach plant jeden Tag aus deinen Fahrten und einem Morgen-Check-in: ein Workout, zwei Alternativen, die Begründung. Auf Wunsch plant er die kommenden Wochen. Im Chat änderbar", other: "Workouts aus deinem TrainingPeaks-Kalender" },
+        { feature: "Plattformen", endure: "iOS, Android & Windows, dazu eine Web-App", other: "Windows, macOS, iOS, Android, Apple TV" },
         { feature: "Smart-Trainer-Steuerung (ERG)", endure: "Ja, über Bluetooth mit Smart-Smoothing", other: "Ja" },
         { feature: "Virtuelle Welt & Rennen", endure: "Keine", other: "Eine virtuelle Welt; Rennen mit Windschatten-, Kurven- und Bremsphysik" },
         { feature: "Strukturierte Workouts", endure: "Kuratierte physiologische Bibliothek, KI-gebaute Workouts, .ZWO/.MRC/.ERG-Import und -Export", other: "Workouts aus deinem TrainingPeaks-Kalender und vom Coach" },

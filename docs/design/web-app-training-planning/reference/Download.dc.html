@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hero and footer download blocks</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FCFCFB}
+a{color:#5F646D}a:hover{color:#16181D}
+</style>
+</helmet>
+<div style="container-type: inline-size; width: 100%; background: #FCFCFB; color: #16181D; font-family: 'Sora', system-ui, sans-serif">
+
+<dc-import name="Header" locale="{{locale}}" bp="{{bp}}" hint-size="100%,96px"></dc-import>
+
+<!-- HERO (background ride video and phone carousel unchanged, left out here) -->
+<section style="padding: clamp(40px, 5cqi, 80px) 24px clamp(56px, 6cqi, 96px); text-align: center">
+<div style="max-width: 768px; margin: 0 auto; display: flex; flex-direction: column; align-items: center">
+<div style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(194,85,43,0.35); background: rgba(194,85,43,0.06); border-radius: 999px; padding: 8px 20px; font-size: 14px; color: #444951; margin-bottom: 32px">
+<span style="flex: none; width: 7px; height: 7px; border-radius: 999px; background: #C2552B"></span>
+<span>{{t.pill}}</span>
+</div>
+<h1 style="margin: 0 0 24px; font-size: clamp(44px, 5.8cqi, 84px); line-height: 1.04; font-weight: 800; letter-spacing: -0.03em; text-wrap: balance">{{t.h1a}}<br><span style="color: #C2552B">{{t.h1b}}</span></h1>
+<p style="margin: 0 0 20px; max-width: 576px; font-size: clamp(18px, 1.4cqi, 20px); line-height: 1.6; color: #5F646D; text-wrap: pretty">{{t.sub}}</p>
+<h2 style="margin: 0 0 40px; max-width: 576px; font-size: clamp(14px, 1.1cqi, 16px); font-weight: 500; color: #5F646D; text-wrap: pretty">{{t.seo}}</h2>
+
+<!-- CTA card -->
+<div style="display: inline-flex; flex-direction: column; align-items: center; gap: 20px; padding: 24px 28px 18px; border-radius: 24px; background: #FFFFFF; border: 1px solid #E5E5E1; box-shadow: 0 30px 80px -30px rgba(22,24,29,0.18); max-width: 100%; box-sizing: border-box">
+<div data-placement="hero" style="display: flex; flex-direction: {{badgeDir}}; gap: 16px; justify-content: center; align-items: center">
+<a href="#" aria-label="{{t.alt.as}}"><img src="{{badges.as}}" alt="{{t.alt.as}}" style="display: block; height: 48px; width: auto"></a>
+<a href="#" aria-label="{{t.alt.gp}}"><img src="{{badges.gp}}" alt="{{t.alt.gp}}" style="display: block; height: 48px; width: auto"></a>
+<a href="#" aria-label="{{t.alt.ms}}"><img src="{{badges.ms}}" alt="{{t.alt.ms}}" style="display: block; height: 48px; width: auto"></a>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; font-size: 14px; color: #444951">
+<sc-for list="{{t.checks}}" as="c" hint-placeholder-count="3">
+<li style="display: inline-flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 18px; height: 18px; border-radius: 999px; background: rgba(194,85,43,0.12); color: #C2552B; display: inline-flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" style="width: 11px; height: 11px" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"></path></svg></span>{{c}}</li>
+</sc-for>
+</ul>
+<div style="align-self: stretch; border-top: 1px solid #F0F0ED; padding-top: 8px; text-align: center">
+<a href="https://app.endure-cycling.com/" data-placement="hero-web" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 15px; font-weight: 600; color: #16181D; text-decoration: none">
+<svg aria-hidden="true" viewBox="0 0 24 24" style="flex: none; width: 18px; height: 18px" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><path d="M3 9h18"></path><path d="M6.5 6.5h.01M9 6.5h.01"></path></svg>
+<span style="text-decoration: underline; text-decoration-color: rgba(194,85,43,0.55); text-decoration-thickness: 2px; text-underline-offset: 5px">{{t.web}}</span>
+<span aria-hidden="true" style="color: #C2552B">→</span>
+</a>
+</div>
+</div>
+
+<p style="margin: 20px 0 0; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; color: #5F646D">
+<span style="flex: none; width: 8px; height: 8px; border-radius: 999px; background: #10B981"></span>
+<span>{{t.secondary}}</span>
+</p>
+</div>
+</section>
+
+<div style="height: 1px; background: #E5E5E1; margin: 0 24px"></div>
+
+<!-- FOOTER download block (#download) -->
+<section id="download" style="padding: clamp(80px, 8cqi, 128px) 24px clamp(64px, 6cqi, 96px); text-align: center">
+<h2 style="margin: 0 0 20px; font-size: clamp(36px, 4.2cqi, 60px); line-height: 1.05; font-weight: 800; letter-spacing: -0.03em; text-wrap: balance">{{t.f1}}<br><span style="color: #C2552B">{{t.f2}}</span></h2>
+<p style="margin: 0 auto; max-width: 520px; font-size: 18px; line-height: 1.6; color: #5F646D">{{t.ftext}}</p>
+<div data-placement="footer-cta" style="display: flex; flex-direction: {{badgeDir}}; gap: 16px; justify-content: center; align-items: center; margin-top: 40px">
+<a href="#" aria-label="{{t.alt.as}}"><img src="{{badges.as}}" alt="{{t.alt.as}}" style="display: block; height: 48px; width: auto"></a>
+<a href="#" aria-label="{{t.alt.gp}}"><img src="{{badges.gp}}" alt="{{t.alt.gp}}" style="display: block; height: 48px; width: auto"></a>
+<a href="#" aria-label="{{t.alt.ms}}"><img src="{{badges.ms}}" alt="{{t.alt.ms}}" style="display: block; height: 48px; width: auto"></a>
+</div>
+<p style="margin: 16px 0 0">
+<a href="https://app.endure-cycling.com/" data-placement="footer-web" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 15px; font-weight: 600; color: #16181D; text-decoration: none">
+<svg aria-hidden="true" viewBox="0 0 24 24" style="flex: none; width: 18px; height: 18px" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><path d="M3 9h18"></path><path d="M6.5 6.5h.01M9 6.5h.01"></path></svg>
+<span style="text-decoration: underline; text-decoration-color: rgba(194,85,43,0.55); text-decoration-thickness: 2px; text-underline-offset: 5px">{{t.web}}</span>
+<span aria-hidden="true" style="color: #C2552B">→</span>
+</a>
+</p>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"locale":{"editor":"enum","options":["en","de"],"default":"en"},"narrow":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":1320}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const T = {
+      en: {
+        pill: 'Now on iOS, Android & Windows · 14 days free',
+        h1a: 'Stop doing FTP tests.', h1b: 'Your rides are the test.',
+        sub: 'ENDURE estimates FTP and VO2max from your normal rides, indoor and outdoor. It controls your smart trainer in ERG and SIM mode and has you riding in under 30 seconds.',
+        seo: 'Indoor cycling app for smart and turbo trainers on iOS, Android & Windows',
+        checks: ['14 days free', 'No payment details', 'Ends on its own'],
+        web: 'Or open it in your browser',
+        secondary: 'Frequent updates, built together with the cycling community.',
+        f1: 'Driven by data.', f2: 'Built to endure.',
+        ftext: 'Try ENDURE Premium free for 14 days. You don’t enter any payment details and there is nothing to cancel.',
+        alt: { as: 'Download on the App Store', gp: 'Get it on Google Play', ms: 'Get it from Microsoft' }
+      },
+      de: {
+        pill: 'Jetzt für iOS, Android & Windows · 14 Tage gratis',
+        h1a: 'Schluss mit FTP-Tests.', h1b: 'Deine Fahrten sind der Test.',
+        sub: 'ENDURE schätzt FTP und VO2max aus deinen normalen Fahrten, drinnen wie draußen. Die App steuert deinen Smart Trainer in ERG und SIM, und du sitzt in unter 30 Sekunden am Rad.',
+        seo: 'Indoor-Cycling- und Rollentrainer-App für iOS, Android & Windows',
+        checks: ['14 Tage gratis', 'Keine Zahlungsdaten', 'Endet von selbst'],
+        web: 'Oder direkt im Browser öffnen',
+        secondary: 'Laufend neue Updates, entwickelt gemeinsam mit der Community.',
+        f1: 'Für alle,', f2: 'die es genau wissen wollen.',
+        ftext: 'Teste ENDURE Premium 14 Tage kostenlos. Du gibst keine Zahlungsdaten an und musst nichts kündigen.',
+        alt: { as: 'Laden im App Store', gp: 'Jetzt bei Google Play', ms: 'Im Microsoft Store herunterladen' }
+      }
+    };
+    const locale = this.props.locale === 'de' ? 'de' : 'en';
+    const narrow = this.props.narrow === true || this.props.narrow === 'true';
+    const badges = locale === 'de'
+      ? { as: '/_blob/3368c320bcc43f824ec574334f9b2a14', gp: '/_blob/e60e323c185d38eb68d70c3b09bbd2a5', ms: '/_blob/e0f28f3e20513a5f78027903e5df1fba' }
+      : { as: '/_blob/b4a2c050af0d13824f291c851318e80c', gp: '/_blob/9e4130aa4268757b44281ef7b57b7336', ms: '/_blob/f29c0a7c19d27729cfa50024dd679d8e' };
+    return { t: T[locale], locale, badges, bp: narrow ? 'xs' : 'xl', badgeDir: narrow ? 'column' : 'row' };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homepage training planning teaser</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FCFCFB}
+a{color:#5F646D}a:hover{color:#16181D}
+</style>
+</helmet>
+<section id="training-planning" style="container-type: inline-size; width: 100%; box-sizing: border-box; background: #FCFCFB; color: #16181D; font-family: 'Sora', system-ui, sans-serif; padding: clamp(56px, 6.6cqi, 96px) 24px">
+<div style="max-width: 1080px; margin: 0 auto; background: #FFFFFF; border: 1px solid #E5E5E1; border-radius: 24px; padding: clamp(24px, 3.6cqi, 52px); box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: clamp(28px, 3.6cqi, 52px)">
+
+<div style="flex: 1 1 340px; min-width: 0">
+<div style="display: flex; align-items: center; gap: 12px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.04em; color: #C2552B; margin-bottom: 20px">
+<span aria-hidden="true" style="display: inline-block; width: 40px; height: 1px; background: #C2552B"></span>
+<span>{{t.eyebrow}}</span>
+</div>
+<h2 style="margin: 0 0 16px; font-size: clamp(30px, 3.2cqi, 46px); line-height: 1.08; font-weight: 800; letter-spacing: -0.03em; text-wrap: balance">{{t.h2}}</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #5F646D">{{t.body}}</p>
+<ul style="list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{t.chips}}" as="c" hint-placeholder-count="3">
+<li style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #E5E5E1; border-radius: 999px; padding: 7px 14px; font-size: 14px; color: #444951; background: #FCFCFB"><span style="width: 6px; height: 6px; border-radius: 999px; background: #C2552B"></span>{{c}}</li>
+</sc-for>
+</ul>
+<div style="margin-top: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px">
+<a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #A84620; font-weight: 600; font-size: 16px; text-decoration: none">{{t.link}} →</a>
+<a href="https://app.endure-cycling.com/" style="font-size: 14px; color: #5F646D; text-decoration: underline; text-decoration-color: #CBCCC8; text-underline-offset: 4px">{{t.web}}</a>
+</div>
+</div>
+
+<figure style="flex: 1.25 1 420px; min-width: 0; margin: 0">
+<div style="position: relative; container-type: inline-size; background: #FCFCFB; border: 1px solid #EDEDEA; border-radius: 16px; padding: 3.2cqi; box-sizing: border-box; display: flex; flex-direction: column; gap: 2.4cqi">
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)) 25cqi; gap: 1.1cqi; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: clamp(7px, 1.7cqi, 12px); color: #5F646D">
+<sc-for list="{{t.days}}" as="day" hint-placeholder-count="7"><span>{{day}}</span></sc-for>
+<span></span>
+</div>
+<sc-for list="{{weeks}}" as="wk" hint-placeholder-count="2">
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)) 25cqi; gap: 1.1cqi">
+<sc-for list="{{wk.days}}" as="d" hint-placeholder-count="7">
+<div style="min-height: 13cqi; border-radius: 1.4cqi; border: 1px solid #F0F0ED; background: #FFFFFF; padding: 0.9cqi; display: flex; flex-direction: column; justify-content: flex-end">
+<sc-if value="{{d.done}}" hint-placeholder-val="{{ true }}">
+<span style="display: block; height: 7cqi; border-radius: 1cqi; background: #EAF4EF; position: relative"><span style="position: absolute; left: 0.9cqi; right: 0.9cqi; bottom: 0.9cqi; height: 1cqi; border-radius: 999px; background: #5E9C80"></span></span>
+</sc-if>
+<sc-if value="{{d.plan}}" hint-placeholder-val="{{ false }}">
+<span style="display: block; height: 7cqi; border-radius: 1cqi; background: #FFFFFF; border: 1px solid {{d.bc}}; position: relative"><span style="position: absolute; left: 0.9cqi; right: 0.9cqi; bottom: 0.9cqi; height: 1cqi; border-radius: 999px; background: {{d.bar}}"></span></span>
+</sc-if>
+</div>
+</sc-for>
+<div style="display: flex; flex-direction: column; justify-content: center; gap: 0.9cqi; font-size: clamp(8px, 1.9cqi, 13px); color: #5F646D">
+<span style="font-weight: 700; color: #16181D">{{wk.label}}</span>
+<span>{{t.ui.planned}}</span>
+<span style="height: 1cqi; border-radius: 999px; background: #F0F0ED; display: block"><span style="display: block; height: 100%; width: {{wk.pw}}; border-radius: 999px; background: #16181D"></span></span>
+<span>{{t.ui.done}}</span>
+<span style="height: 1cqi; border-radius: 999px; background: #F0F0ED; display: block"><span style="display: block; height: 100%; width: {{wk.dw}}; border-radius: 999px; background: #3F8A6A"></span></span>
+<sc-if value="{{wk.verdict}}" hint-placeholder-val="{{ true }}">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 0.6cqi; background: #E7F3EC; color: #0B6B4A; border-radius: 999px; padding: 0.5cqi 1.2cqi; font-weight: 600"><span style="width: 1cqi; height: 1cqi; border-radius: 999px; background: #0F7A55"></span>{{t.ui.onTrack}}</span>
+</sc-if>
+<sc-if value="{{wk.plan}}" hint-placeholder-val="{{ false }}">
+<span style="align-self: flex-start; background: #C2552B; color: #FFFFFF; border-radius: 1cqi; padding: 0.7cqi 1.2cqi; font-weight: 600">{{t.ui.plan}}</span>
+</sc-if>
+</div>
+</div>
+</sc-for>
+<span style="position: absolute; right: 2cqi; top: -11px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10px; background: #16181D; color: #FFFFFF; border-radius: 999px; padding: 4px 10px">Crop placeholder</span>
+</div>
+</figure>
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"locale":{"editor":"enum","options":["en","de"],"default":"en"},"$preview":{"width":1440,"height":680}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const T = {
+      en: {
+        eyebrow: 'NEW · TRAINING PLANNING',
+        h2: 'Your coach now plans the next two weeks.',
+        body: 'Set a goal event and the AI coach fills your calendar one to two weeks ahead. For every week you see planned against done, a load forecast and a short verdict. Every change waits for your OK.',
+        chips: ['Planned vs. done', 'Load forecast', 'Lighter or harder option'],
+        link: 'How training planning works',
+        web: 'Also in your browser',
+        days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        ui: { thisWeek: 'This week', nextWeek: 'Next week', planned: 'Planned', done: 'Done', onTrack: 'On track', plan: 'Plan with coach' }
+      },
+      de: {
+        eyebrow: 'NEU · TRAININGSPLANUNG',
+        h2: 'Dein Coach plant jetzt die nächsten zwei Wochen.',
+        body: 'Leg ein Zielevent fest, und der KI-Coach füllt deinen Kalender ein bis zwei Wochen im Voraus. Für jede Woche siehst du Geplant und Erledigt, eine Belastungsprognose und ein kurzes Fazit. Jede Änderung wartet auf dein OK.',
+        chips: ['Geplant vs. erledigt', 'Belastungsprognose', 'Leichter oder härter'],
+        link: 'So funktioniert die Trainingsplanung',
+        web: 'Auch im Browser',
+        days: ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'],
+        ui: { thisWeek: 'Diese Woche', nextWeek: 'Nächste Woche', planned: 'Geplant', done: 'Erledigt', onTrack: 'Im Plan', plan: 'Mit Coach planen' }
+      }
+    };
+    const locale = this.props.locale === 'de' ? 'de' : 'en';
+    const t = T[locale];
+    const mk = (st, key) => ({
+      done: st === 'done', plan: st === 'plan',
+      bc: key ? 'rgba(194,85,43,0.55)' : '#E5E5E1',
+      bar: key ? '#C2552B' : '#9DA0A6'
+    });
+    const w1 = [mk('done'), mk('rest'), mk('done', true), mk('done'), mk('plan'), mk('plan', true), mk('rest')];
+    const w2 = [mk('rest'), mk('plan'), mk('plan', true), mk('plan'), mk('rest'), mk('plan', true), mk('plan')];
+    const weeks = [
+      { label: t.ui.thisWeek, days: w1, pw: '82%', dw: '58%', verdict: true, plan: false },
+      { label: t.ui.nextWeek, days: w2, pw: '88%', dw: '0%', verdict: false, plan: true }
+    ];
+    return { t, weeks };
+  }
+}
+</script>
+</body>
+</html>

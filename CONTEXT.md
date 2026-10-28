@@ -55,3 +55,22 @@ _Avoid_: Hitzezone, temperature zone
 **Climbing Efficiency**:
 ENDURE's VAM-based score for how effectively a rider converts watts into vertical metres, computed from automatically detected climbs in outdoor rides. Stays English in German copy.
 _Avoid_: Kletter-Effizienz, climb score
+
+**Training planning** / **Trainingsplanung**:
+The coach drafts the coming weeks of training in the calendar on request ("Plan with coach"), aimed at a goal event when the rider has one. The rider changes the draft in chat and applies it; nothing lands in the calendar before that. Available in the apps and in the web app.
+_Avoid_: training plan in the sense of a fixed multi-month program; naming the horizon as a number of weeks (it is a setting); "the plan adjusts after every ride" (it changes only on request, plus at most one proposed change to today's session each morning)
+
+**Plan with coach** / **Mit Coach planen**:
+The per-week button that starts a coach draft. Quoted with the app's exact label.
+
+**Load forecast** / **Belastungsprognose**:
+A per-week rating of the planned load: CTL ramp, hard days compared with the rider's usual week, and Form. Four labels, matching the app: **On track / Im Rahmen**, **Borderline / Grenzwertig**, **Too little / Zu wenig**, **Too much / Zu viel**. With a goal event it also shows Form on the event day.
+_Avoid_: "Im Plan"; describing it as a ramp toward the goal only
+
+**Goal event** / **Zielevent**:
+Optional date the planning aims at. Planning works without one (from load, free days and the week type).
+_Avoid_: implying planning requires an event
+
+**Web app** / **Web-App**:
+ENDURE in the browser at app.endure-cycling.com: coach, training planning, analysis, workout library and builder. Records no rides and sells nothing; the header button reads "Launch app" / "App starten".
+_Avoid_: listing it as a store platform; "web version" for a reduced app

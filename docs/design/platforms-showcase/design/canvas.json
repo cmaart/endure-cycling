@@ -1,0 +1,32 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-28T10:00:00Z"},
+  "title": "ENDURE · One plan on every screen",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "A-1440.dc.html": {"x": 0, "y": 300, "w": 1440, "h": 1330, "title": "A · Desk stage · 1440"},
+    "A-1024.dc.html": {"x": 1520, "y": 300, "w": 1024, "h": 1170, "title": "A · Desk stage · 1024"},
+    "A-768.dc.html": {"x": 2624, "y": 300, "w": 768, "h": 1080, "title": "A · Desk stage · 768"},
+    "A-390.dc.html": {"x": 3472, "y": 300, "w": 390, "h": 1090, "title": "A · Desk stage · 390"},
+    "B-1440.dc.html": {"x": 0, "y": 2050, "w": 1440, "h": 1500, "title": "B · Hero window · 1440"},
+    "B-1024.dc.html": {"x": 1520, "y": 2050, "w": 1024, "h": 1270, "title": "B · Hero window · 1024"},
+    "B-768.dc.html": {"x": 2624, "y": 2050, "w": 768, "h": 1160, "title": "B · Hero window · 768"},
+    "B-390.dc.html": {"x": 3472, "y": 2050, "w": 390, "h": 1000, "title": "B · Hero window · 390 (swipe row)"},
+    "C-1440.dc.html": {"x": 0, "y": 3970, "w": 1440, "h": 1370, "title": "C · Spotlight · 1440", "is_interactive": true},
+    "C-1024.dc.html": {"x": 1520, "y": 3970, "w": 1024, "h": 1170, "title": "C · Spotlight · 1024", "is_interactive": true},
+    "C-768.dc.html": {"x": 2624, "y": 3970, "w": 768, "h": 1050, "title": "C · Spotlight · 768", "is_interactive": true},
+    "C-390.dc.html": {"x": 3472, "y": 3970, "w": 390, "h": 1050, "title": "C · Spotlight · 390", "is_interactive": true}
+  },
+  "order": [
+    "A-1440.dc.html", "A-1024.dc.html", "A-768.dc.html", "A-390.dc.html",
+    "B-1440.dc.html", "B-1024.dc.html", "B-768.dc.html", "B-390.dc.html",
+    "C-1440.dc.html", "C-1024.dc.html", "C-768.dc.html", "C-390.dc.html"
+  ],
+  "notes": {
+    "rowA": {"x": 0, "y": 0, "text": "A · Desk stage: browser behind, Windows in the middle, phone and tablet in front", "kind": "title1", "maxW": 3862},
+    "rowB": {"x": 0, "y": 1750, "text": "B · Hero window: Windows large and readable, the other three tucked behind and in front", "kind": "title1", "maxW": 3862},
+    "rowC": {"x": 0, "y": 3670, "text": "C · Spotlight: one screen big, switch devices with the chips (click to try)", "kind": "title1", "maxW": 3862}
+  },
+  "designSystems": []
+}
