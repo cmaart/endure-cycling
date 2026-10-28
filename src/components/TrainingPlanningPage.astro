@@ -58,7 +58,7 @@ const webAppHost = new URL(config.webApp.url).host;
               {t.eyebrow}
             </div>
           )}
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.06] tracking-[-0.03em] text-slate-900 text-balance mb-5">{t.h1}<BetaTag /></h1>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.06] tracking-[-0.03em] text-slate-900 text-balance mb-5">{t.h1}{t.beta && <BetaTag />}</h1>
           <p class="text-lg md:text-xl font-medium text-slate-600 text-pretty mb-8">{t.subtitle}</p>
 
           <!-- Direct answer (featured-snippet target): real text, not an image -->

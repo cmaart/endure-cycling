@@ -2,6 +2,7 @@
 import { getTranslations } from '../i18n/translations';
 import { localeHref } from '../utils/paths';
 import { appShotDir } from '../utils/appShots';
+import BetaTag from './BetaTag.astro';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).guidance;
@@ -24,7 +25,7 @@ const coachHref = localeHref(lang, '/features/ai-coach');
         </div>
 
         <h2 class="text-4xl md:text-6xl font-extrabold tracking-[-0.03em] mb-6 leading-[1.05] text-slate-900 text-balance">
-          {t.headline}
+          {t.headline}<BetaTag />
         </h2>
 
         <p class="text-base md:text-lg text-slate-600 leading-relaxed mb-7 max-w-xl mx-auto lg:mx-0">

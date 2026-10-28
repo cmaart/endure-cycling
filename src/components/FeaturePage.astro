@@ -5,6 +5,7 @@ import { getTranslations } from '../i18n/translations';
 import { getFeatureContent, type FeatureKey } from '../i18n/features';
 import { config } from '../config';
 import StoreBadges from './StoreBadges.astro';
+import BetaTag from './BetaTag.astro';
 import { localeHref, localeUrl } from '../utils/paths';
 import { featureFaqSchema, featureWebPageSchema } from '../utils/featureSchema';
 
@@ -29,7 +30,7 @@ const faqSchema = featureFaqSchema(t.faq);
 
   <main class="container mx-auto px-6 pt-10 pb-24 max-w-3xl text-slate-800">
     <article>
-      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-3 leading-tight">{t.h1}</h1>
+      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-3 leading-tight">{t.h1}{t.beta && <BetaTag />}</h1>
       <p class="text-xl md:text-2xl text-slate-600 font-semibold mb-8">{t.subtitle}</p>
 
       <!-- Direct answer (featured-snippet target) -->

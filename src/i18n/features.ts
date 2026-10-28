@@ -61,6 +61,8 @@ export interface FeatureContent {
   ctaTitle: string;
   ctaBody: string;
   backHome: string;
+  /** Shows a quiet superscript "Beta" after the h1 (BetaTag.astro). */
+  beta?: boolean;
   // Rich layout (TrainingPlanningPage.astro); the plain FeaturePage ignores these.
   eyebrow?: string;
   directAnswerLabel?: string;
@@ -80,6 +82,7 @@ export const featuresIndexMeta = {
 export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent>> = {
   en: {
     'ai-coach': {
+      beta: true,
       datePublished: '2026-10-18',
       dateModified: '2026-10-28',
       seoTitle: 'AI Cycling Coach: Daily Training Recommendation | ENDURE',
@@ -166,6 +169,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Back to Homepage'
     },
     'training-planning': {
+      beta: true,
       datePublished: '2026-10-28',
       dateModified: '2026-10-28',
       seoTitle: 'Training Planning with an AI Cycling Coach | ENDURE',
@@ -602,6 +606,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
   },
   de: {
     'ai-coach': {
+      beta: true,
       datePublished: '2026-10-18',
       dateModified: '2026-10-28',
       seoTitle: 'KI-Radcoach: tägliche Trainingsempfehlung | ENDURE',
@@ -688,6 +693,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       backHome: 'Zurück zur Startseite'
     },
     'training-planning': {
+      beta: true,
       datePublished: '2026-10-28',
       dateModified: '2026-10-28',
       seoTitle: 'Trainingsplanung mit KI-Coach fürs Radtraining | ENDURE',
