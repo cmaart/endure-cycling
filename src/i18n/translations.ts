@@ -59,13 +59,13 @@ export const translations = {
         caption: "Time in Zones: where your training time actually goes, week by week"
       },
       coaching: {
-        label: "AI coaching",
-        alt: "ENDURE AI coaching insights with training analysis and coach tips",
-        caption: "AI Coaching Insights: what worked, what to fix, what to do next"
+        label: "Coach session",
+        alt: "ENDURE session detail of a threshold workout the coach built, with its intervals and a lighter and a harder alternative",
+        caption: "A session the coach built, with a lighter and a harder alternative"
       },
       activity: {
         label: "Activity detail",
-        alt: "ENDURE activity detail with power, heart rate, TSS and efficiency metrics",
+        alt: "ENDURE activity detail with route map, weather along the route and the power and heart rate chart",
         caption: "Every ride in detail: NP, IF, TSS, Pw:Hr and efficiency factor"
       },
       today: {
@@ -86,7 +86,7 @@ export const translations = {
       },
       calendarWeek: {
         label: "Weekly calendar",
-        alt: "ENDURE training calendar with rides, runs and swims synced from Strava"
+        alt: "ENDURE calendar week planned with the coach: easy runs, a threshold session the coach built and the week's load check"
       }
     },
     // Ticker strip. The first item is shown in the accent color.
@@ -622,13 +622,13 @@ export const translations = {
         caption: "Zeit in Zonen: wo deine Trainingszeit wirklich landet, Woche für Woche"
       },
       coaching: {
-        label: "AI Coaching",
-        alt: "ENDURE AI Coaching Insights mit Trainingsanalyse und Coach-Tipps",
-        caption: "AI Coaching Insights: was funktioniert hat, was fehlt, was als Nächstes kommt"
+        label: "Coach-Einheit",
+        alt: "ENDURE Session-Detail einer Schwellen-Einheit, die der Coach gebaut hat, mit ihren Intervallen und einer leichteren und einer härteren Alternative",
+        caption: "Eine Einheit, die der Coach gebaut hat, mit leichterer und härterer Alternative"
       },
       activity: {
         label: "Aktivitätsdetail",
-        alt: "ENDURE Aktivitätsdetail mit Power-, Herzfrequenz-, TSS- und Effizienzwerten",
+        alt: "ENDURE Aktivitätsdetail mit Streckenkarte, Wetter entlang der Strecke und Leistungs- und Herzfrequenzkurve",
         caption: "Jede Einheit im Detail: NP, IF, TSS, Pw:Hr und Efficiency Factor"
       },
       today: {
@@ -649,7 +649,7 @@ export const translations = {
       },
       calendarWeek: {
         label: "Wochenkalender",
-        alt: "ENDURE Trainingskalender mit Rides, Läufen und Schwimmeinheiten aus Strava"
+        alt: "ENDURE Kalenderwoche, mit dem Coach geplant: lockere Läufe, eine Schwellen-Einheit, die der Coach gebaut hat, und die Belastungsprüfung der Woche"
       }
     },
     // Ticker strip. Der erste Eintrag erscheint in der Akzentfarbe.

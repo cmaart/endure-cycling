@@ -1,9 +1,8 @@
 /**
  * Folder of the phone screenshots (hero carousel, features, guidance) per
- * language. Each language gets its own set, taken with the app in that
- * language. Until the English set exists, English pages keep the previous
- * set in /assets/app/.
+ * language. Each language has its own set, taken with the app in that
+ * language.
  */
 export function appShotDir(lang: 'en' | 'de'): string {
-  return lang === 'de' ? '/assets/app/de' : '/assets/app';
+  return `/assets/app/${lang}`;
 }
