@@ -213,7 +213,7 @@ export const translations = {
     // Training planning teaser on the homepage, right after the guidance section
     trainingPlanningTeaser: {
       eyebrow: "NEW · TRAINING PLANNING",
-      headline: "Your coach now plans your coming weeks.",
+      headline: "A coach that turns your data into a plan.",
       description: "Tap Plan with coach and the AI coach fills the coming weeks of your calendar, aimed at your goal event if you have one. Each week shows planned against done, a load forecast and a short verdict. Nothing lands in your calendar until you apply it.",
       chips: ["Planned vs. done", "Load forecast", "Lighter or harder option"],
       link: "How training planning works",
@@ -776,7 +776,7 @@ export const translations = {
     // Trainingsplanung-Teaser auf der Startseite, direkt nach dem Guidance-Abschnitt
     trainingPlanningTeaser: {
       eyebrow: "NEU · TRAININGSPLANUNG",
-      headline: "Dein Coach plant jetzt deine kommenden Wochen.",
+      headline: "Ein Coach, der aus deinen Daten einen Plan macht.",
       description: "Tipp auf „Mit Coach planen“, und der KI-Coach füllt die kommenden Wochen deines Kalenders, ausgerichtet auf dein Zielevent, wenn du eines hast. Jede Woche zeigt Geplant neben Absolviert, eine Belastungsprognose und ein kurzes Fazit. In deinen Kalender kommt erst etwas, wenn du es übernimmst.",
       chips: ["Geplant vs. absolviert", "Belastungsprognose", "Leichter oder härter"],
       link: "So funktioniert die Trainingsplanung",
