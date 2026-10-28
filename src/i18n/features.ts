@@ -82,7 +82,6 @@ export const featuresIndexMeta = {
 export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent>> = {
   en: {
     'ai-coach': {
-      beta: true,
       datePublished: '2026-10-18',
       dateModified: '2026-10-28',
       seoTitle: 'AI Cycling Coach: Daily Training Recommendation | ENDURE',
@@ -606,7 +605,6 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
   },
   de: {
     'ai-coach': {
-      beta: true,
       datePublished: '2026-10-18',
       dateModified: '2026-10-28',
       seoTitle: 'KI-Radcoach: tägliche Trainingsempfehlung | ENDURE',
