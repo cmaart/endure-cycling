@@ -8,10 +8,10 @@ import Layout from '../layouts/Layout.astro';
 >
   <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
     <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">PRIVACY POLICY</h1>
-    <p class="mb-8 text-slate-500 font-medium">Last updated: 2026-08-07</p>
+    <p class="mb-8 text-slate-500 font-medium">Last updated: 2026-10-29</p>
     
     <div class="space-y-6 text-lg">
-      <p>This Privacy Policy explains how ENDURE (“we”, “us”, “our”) collects, uses, and shares data when you use the ENDURE mobile app, desktop app (if available), and website endure-cycling.com (together, the “Services”).</p>
+      <p>This Privacy Policy explains how ENDURE (“we”, “us”, “our”) collects, uses, and shares data when you use the ENDURE mobile app, desktop app, web app and website endure-cycling.com (together, the “Services”).</p>
       
       <h2 class="text-2xl font-bold text-slate-900 pt-6">1. Controller / Contact</h2>
       <p>Controller: Christoph Martin (ENDURE)<br>
@@ -59,6 +59,21 @@ import Layout from '../layouts/Layout.astro';
         <li>Cookies and similar identifiers may be used depending on configuration and applicable consent requirements.</li>
       </ul>
 
+      <h3 class="text-xl font-semibold text-slate-900">2.7 Data from connected platforms (Strava, intervals.icu, Garmin Connect)</h3>
+      <p>If you connect one of these platforms in the app, we receive data from it until you disconnect it:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Activities and their details (e.g., type, time, duration, distance, GPS route, power, heart rate, cadence, laps, device name)</li>
+        <li>From Garmin Connect, if you allow it in your Garmin account: daily wellness data such as sleep, heart rate variability (HRV), resting heart rate and Body Battery. We store it for a future daily recovery estimate; it is not shown in the app or sent to the coach yet.</li>
+        <li>The account ID the platform assigns to you, and access tokens that let us fetch data on your behalf</li>
+      </ul>
+      <p>In the other direction, ENDURE puts the workout planned or recommended for today and tomorrow on your Garmin Connect calendar automatically, so it appears on your device. Workouts you send to intervals.icu, and rides recorded in ENDURE that you upload to Strava or intervals.icu, are sent only when you choose to.</p>
+
+      <h3 class="text-xl font-semibold text-slate-900">2.8 Coach data</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Your morning check-ins and notes, ride ratings and notes, messages to the AI coach and its replies</li>
+        <li>Facts the coach keeps about your training from these conversations (coach memory)</li>
+      </ul>
+
       <h2 class="text-2xl font-bold text-slate-900 pt-6">3. Why we process your data (purposes) and legal bases (GDPR)</h2>
       <p>If you are located in the EEA/UK/Switzerland, we process personal data based on one or more of the following legal bases:</p>
 
@@ -68,6 +83,8 @@ import Layout from '../layouts/Layout.astro';
         <li>Store, display, and analyze your workouts and sessions</li>
         <li>Provide imports, history, and progress views</li>
         <li>Provide device connection features (trainer/sensors) where supported</li>
+        <li>Import activities from, and send planned workouts to, the platforms you connect</li>
+        <li>Provide the AI coach (daily recommendations, training plans, ride analysis, chat); see section 3.5</li>
       </ul>
 
       <h3 class="text-xl font-semibold text-slate-900">3.2 Improve reliability, security, and support (GDPR Art. 6(1)(f): legitimate interests)</h3>
@@ -88,6 +105,14 @@ import Layout from '../layouts/Layout.astro';
       <p>You can withdraw your consent at any time in the app settings. If you withdraw consent, we will stop collecting and processing new health data for the affected features. You can also request deletion of existing data (see Section 8).</p>
       <p>If you do not provide consent, you may still use parts of the Services that do not require processing of health data (feature availability may be limited).</p>
 
+      <h3 id="ai" class="text-xl font-semibold text-slate-900">3.5 AI Transparency Statement</h3>
+      <p>The ENDURE coach uses large language models from OpenAI to write daily recommendations, training plans, ride analyses and chat replies. For each request we send OpenAI the data the coach needs to answer: your profile values (e.g., FTP, weight, heart rate limits), your recent activities and training load, check-ins and notes, coach memory and the conversation. Activities imported from connected platforms, including Garmin Connect, are part of this data. OpenAI may keep requests for up to 30 days to detect abuse and then deletes them.</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>The output is a training suggestion. It makes no decision with legal or similar effect on you, and you decide whether to follow it.</li>
+        <li>We do not use your data to train AI models, and OpenAI does not use data sent through its API to train its models. Garmin data and anything derived from it is never used to train, evaluate or improve AI models.</li>
+        <li>Garmin data reaches the AI coach only with your explicit consent, which you give on the Garmin connection screen before you connect. You can withdraw it at any time by disconnecting Garmin in the app (Settings, Connections) or by removing ENDURE in Garmin Connect. We then stop using Garmin data and delete it (see section 6). Texts the coach already wrote before that stay in your coach history.</li>
+      </ul>
+
       <h2 class="text-2xl font-bold text-slate-900 pt-6">4. Sharing of data / Processors and recipients</h2>
       <p>We share data only as necessary to operate the Services:</p>
       <ul class="list-disc pl-6 space-y-2">
@@ -96,7 +121,12 @@ import Layout from '../layouts/Layout.astro';
         <li>Google Analytics: website analytics (processor)</li>
         <li>Firebase Cloud Messaging (FCM) / Apple Push Notification service (APNs): delivery of push notifications (service providers)</li>
         <li>RevenueCat: subscription and entitlement management (processor)</li>
+        <li>OpenAI (United States): AI models behind the ENDURE coach, see section 3.5 (processor)</li>
+        <li>Open-Meteo: historical weather and forecasts, based on the locations and times of your outdoor activities (service provider)</li>
+        <li>Geoapify: map preview images of outdoor activities, based on the GPS route (service provider)</li>
       </ul>
+      <p><strong>Connected platforms (Strava, intervals.icu, Garmin Connect)</strong><br>
+      These platforms are independent controllers of the data they hold about you, under their own privacy policies. We exchange data with a platform only after you connect it in the app (see section 2.7). Data we receive from Garmin Connect is processed only by us and by Supabase (hosting), OpenAI (AI coach), Open-Meteo (weather), Geoapify (map previews) and Sentry (error reports, where an error involves such data). We use it only to provide the Services to you and never sell, rent or share it with other users or third parties for their own purposes.</p>
       <p>We use RevenueCat to validate purchases made in the app stores and to determine whether your account has access to paid features. RevenueCat processes:</p>
       <ul class="list-disc pl-6 space-y-2">
         <li>an app user identifier (for ENDURE this is your ENDURE user ID), so that a purchase can be matched to your account across devices,</li>
@@ -118,6 +148,8 @@ import Layout from '../layouts/Layout.astro';
         <li>Account + training data: retained while your account is active.</li>
         <li>Crash/error data (Sentry): typically retained for 90 days (depending on configuration).</li>
         <li>Website analytics (Google Analytics): retained per GA settings (typically 14 months).</li>
+        <li>Data from Garmin Connect: deleted when you disconnect Garmin or delete your account. An activity that also exists on another connected platform is kept with that platform's data; all other activities, the metrics derived from them, wellness data and further data received from Garmin are deleted. Texts the coach already wrote stay in your coach history.</li>
+        <li>Data from Strava and intervals.icu: retained while your account is active; you can ask us to delete it at any time.</li>
       </ul>
       <p>You can request deletion (Section 8).</p>
 
@@ -126,7 +158,8 @@ import Layout from '../layouts/Layout.astro';
 
       <h2 class="text-2xl font-bold text-slate-900 pt-6">8. Your rights (EEA/UK/Switzerland)</h2>
       <p>Depending on your location, you may have rights to access, rectify, delete, restrict, object, and port your data, and to withdraw consent.</p>
-      <p>How to exercise rights: email <a href="mailto:info@endure-cycling.com" class="text-accent hover:underline">info@endure-cycling.com</a> from the email address linked to your account.</p>
+      <p>In the app you can see your data in your history and analyses, correct your profile values in the settings, download activities recorded in ENDURE or imported as FIT files (e.g., from Garmin Connect or intervals.icu) as a FIT file from their summary, and stop the exchange with a connected platform by disconnecting it.</p>
+      <p>How to exercise rights, including a full export or deletion of your data: email <a href="mailto:info@endure-cycling.com" class="text-accent hover:underline">info@endure-cycling.com</a> from the email address linked to your account.</p>
       <p>Account deletion: You can request account deletion by emailing <a href="mailto:info@endure-cycling.com" class="text-accent hover:underline">info@endure-cycling.com</a> from your registered email address. We will delete or anonymize your account data unless we must retain certain information for legal obligations or to resolve disputes.</p>
 
       <h2 class="text-2xl font-bold text-slate-900 pt-6">9. Cookies (website)</h2>
@@ -137,6 +170,8 @@ import Layout from '../layouts/Layout.astro';
 
       <h2 class="text-2xl font-bold text-slate-900 pt-6">11. Changes</h2>
       <p>We may update this Privacy Policy. We will update the “Last updated” date and may provide notice for material changes.</p>
+
+      <p class="text-base text-slate-500 pt-6">Garmin and Garmin Connect are trademarks of Garmin Ltd. or its subsidiaries. Strava is a trademark of Strava, Inc.</p>
     </div>
   </main>
 </Layout>
