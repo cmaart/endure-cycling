@@ -1,0 +1,23 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-29T10:00:00Z"},
+  "title": "ENDURE homepage · AI coach section",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1440, "h": 3560, "title": "Coach section · 1440 · EN", "expand": "fill"},
+    "Coach-1440-DE.dc.html": {"x": 1520, "y": 0, "w": 1440, "h": 3640, "title": "Coach section · 1440 · DE", "expand": "fill"},
+    "Coach-390-EN.dc.html": {"x": 3040, "y": 0, "w": 390, "h": 4000, "title": "Coach section · 390 · EN"},
+    "Coach-390-DE.dc.html": {"x": 3510, "y": 0, "w": 390, "h": 4300, "title": "Coach section · 390 · DE"}
+  },
+  "order": [
+    "Main.dc.html",
+    "Coach-1440-DE.dc.html",
+    "Coach-390-EN.dc.html",
+    "Coach-390-DE.dc.html"
+  ],
+  "notes": {
+    "rowCoach": {"x": 0, "y": -300, "text": "Homepage · AI coach section (after Hero + Ticker, replaces teaser + daily guidance)", "kind": "title1", "maxW": 3900}
+  },
+  "designSystems": []
+}

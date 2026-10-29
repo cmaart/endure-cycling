@@ -63,9 +63,20 @@ _Avoid_: training plan in the sense of a fixed multi-month program; naming the h
 **Plan with coach** / **Mit Coach planen**:
 The per-week button that starts a coach draft. Quoted with the app's exact label.
 
+**Week planner** / **Wochenplaner**:
+Where the rider sets what each coming week should be before the coach plans: a week type and the TSS target it implies, rated by the load forecast. Named as in the app. The first step of training planning in homepage copy.
+_Avoid_: "week target" as a feature name; calling the week planner itself the load forecast
+
+**Week type** / **Wochentyp**:
+One of **Recovery / Erholung**, **Maintain / Erhalt**, **Build / Aufbau**, **Focus / Fokus**, matching the app. Decides how much fitness (CTL) the week should add.
+
 **Load forecast** / **Belastungsprognose**:
 A per-week rating of the planned load: CTL ramp, hard days compared with the rider's usual week, and Form. Four labels, matching the app: **On track / Im Rahmen**, **Borderline / Grenzwertig**, **Too little / Zu wenig**, **Too much / Zu viel**. With a goal event it also shows Form on the event day.
 _Avoid_: "Im Plan"; describing it as a ramp toward the goal only
+
+**Daily guidance** / **Tägliche Empfehlung**:
+The coach picking today's session each morning from recent rides and the check-in, with the reason and a lighter and a harder alternative. Part of the one AI coach, not a separate feature; on the homepage it is the last step after the week planner and training planning, since training planning leads.
+_Avoid_: presenting daily guidance as the coach's main feature; "AI coach light"
 
 **Goal event** / **Zielevent**:
 Optional date the planning aims at. Planning works without one (from load, free days and the week type).

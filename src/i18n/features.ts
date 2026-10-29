@@ -170,7 +170,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'training-planning': {
       beta: true,
       datePublished: '2026-10-28',
-      dateModified: '2026-10-28',
+      dateModified: '2026-10-29',
       seoTitle: 'Training Planning with an AI Cycling Coach | ENDURE',
       seoDescription:
         'The ENDURE AI coach plans your coming weeks in a calendar, aimed at your goal event: planned vs. done, a load forecast per week, a coach verdict, lighter and harder options. You apply every draft.',
@@ -181,8 +181,8 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
       directAnswerLabel: 'SHORT ANSWER',
       directAnswer:
         'ENDURE’s AI coach plans your coming weeks of training in your calendar when you tap Plan with coach. It builds the weeks from your recent rides, your training load and your free days, and aims them at your goal event if you have set one. You see the draft first, change it in a chat with the coach and then apply it. Each week shows planned against done, a load forecast rated on track, borderline, too little or too much, and a short verdict from the coach. Every planned ride comes with a lighter and a harder alternative. Training planning works in the ENDURE apps for iOS, Android and Windows and in the web app.',
-      heroImageAlt: 'ENDURE web app calendar with two completed weeks, a coach draft for the coming weeks and the Week Planner with Apply and Discard',
-      heroCaption: 'The calendar in the ENDURE web app: completed weeks with the coach verdict, and the coach’s draft for the coming weeks next to the Week Planner.',
+      heroImageAlt: 'ENDURE web app calendar with two completed weeks, a coach draft for the coming weeks and the Week planner with Apply and Discard',
+      heroCaption: 'The calendar in the ENDURE web app: completed weeks with the coach verdict, and the coach’s draft for the coming weeks next to the Week planner.',
       stepsTitle: 'How it works',
       steps: [
         { title: 'Set your days', body: 'Mark the days you can train and how long. A goal event with its date is optional; with one, the plan aims at it.' },
@@ -202,15 +202,15 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
           imageAlt: 'Two weeks in the ENDURE calendar with planned and completed time, training load, the rating On track or Too little and the coach verdict'
         },
         {
-          title: 'A load forecast for every week',
+          title: 'Week planner: set each week, then check it',
           body:
-            'Before a week starts, ENDURE checks it: how fast your fitness (CTL) would rise, how many hard days it holds compared with your usual week, and how fresh you would be. Each week gets one label: on track, borderline, too little or too much. With a goal event, the forecast also shows your form on the event day.',
+            'In the Week planner you pick a week type for each coming week (recovery, maintain, build or focus) and its TSS target. Before the week starts, the load forecast checks it: how fast your fitness (CTL) would rise, how many hard days it holds compared with your usual week, and how fresh you would be. Each week gets one label: on track, borderline, too little or too much. With a goal event, the forecast also shows your form on the event day.',
           bullets: [
             '<strong>Four labels:</strong> on track, borderline, too little, too much.',
             '<strong>With reasons:</strong> the sessions that tip a week over are marked in the calendar.'
           ],
-          image: 'loadForecast',
-          imageAlt: 'ENDURE Week Planner with the week type Maintain, a target of 330 TSS and the rating On track'
+          image: 'weekPlanner',
+          imageAlt: 'The ENDURE Week planner with the week type Maintain, a target of 330 TSS and the rating On track'
         },
         {
           title: 'Plan with coach',
@@ -693,7 +693,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     'training-planning': {
       beta: true,
       datePublished: '2026-10-28',
-      dateModified: '2026-10-28',
+      dateModified: '2026-10-29',
       seoTitle: 'Trainingsplanung mit KI-Coach fürs Radtraining | ENDURE',
       seoDescription:
         'Der KI-Coach von ENDURE plant deine kommenden Wochen im Kalender, ausgerichtet auf dein Zielevent: Geplant vs. absolviert, Belastungsprognose pro Woche, Fazit des Coaches, leichtere und härtere Optionen. Jeden Entwurf übernimmst du selbst.',
@@ -725,15 +725,15 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
           imageAlt: 'Zwei Wochen im ENDURE-Kalender mit geplanter und absolvierter Zeit, Trainingsbelastung, der Bewertung Im Rahmen oder Zu wenig und dem Fazit des Coaches'
         },
         {
-          title: 'Eine Belastungsprognose für jede Woche',
+          title: 'Wochenplaner: jede Woche festlegen und prüfen',
           body:
-            'Bevor eine Woche beginnt, prüft ENDURE sie: wie schnell deine Fitness (CTL) steigen würde, wie viele harte Tage sie im Vergleich zu deiner üblichen Woche hat und wie frisch du wärst. Jede Woche bekommt eine Bewertung: Im Rahmen, Grenzwertig, Zu wenig oder Zu viel. Mit Zielevent zeigt die Prognose auch deine Form am Event-Tag.',
+            'Im Wochenplaner wählst du für jede kommende Woche einen Wochentyp (Erholung, Erhalt, Aufbau oder Fokus) und ihr TSS-Ziel. Bevor die Woche beginnt, prüft die Belastungsprognose sie: wie schnell deine Fitness (CTL) steigen würde, wie viele harte Tage sie im Vergleich zu deiner üblichen Woche hat und wie frisch du wärst. Jede Woche bekommt eine Bewertung: Im Rahmen, Grenzwertig, Zu wenig oder Zu viel. Mit Zielevent zeigt die Prognose auch deine Form am Event-Tag.',
           bullets: [
             '<strong>Vier Bewertungen:</strong> Im Rahmen, Grenzwertig, Zu wenig, Zu viel.',
             '<strong>Mit Begründung:</strong> Die Einheiten, die eine Woche kippen lassen, sind im Kalender markiert.'
           ],
-          image: 'loadForecast',
-          imageAlt: 'ENDURE-Wochenplaner mit der Wochenart Erhalt, einem Ziel von 330 TSS und der Bewertung Passend'
+          image: 'weekPlanner',
+          imageAlt: 'Der ENDURE-Wochenplaner mit dem Wochentyp Erhalt, einem Ziel von 330 TSS und der Bewertung Passend'
         },
         {
           title: 'Mit Coach planen',
@@ -782,7 +782,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Brauche ich ein Zielevent?',
-          a: 'Nein. Ohne Zielevent plant der Coach aus deiner Trainingsbelastung, deinen freien Tagen und der Wochenart, die du wählst: Erholung, Erhalt, Aufbau oder Fokus. Mit Zielevent richten sich die Wochen nach seinem Datum.'
+          a: 'Nein. Ohne Zielevent plant der Coach aus deiner Trainingsbelastung, deinen freien Tagen und dem Wochentyp, den du wählst: Erholung, Erhalt, Aufbau oder Fokus. Mit Zielevent richten sich die Wochen nach seinem Datum.'
         },
         {
           q: 'Kann ich die Trainingsplanung im Browser nutzen?',

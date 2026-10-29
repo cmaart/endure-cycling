@@ -197,28 +197,42 @@ export const translations = {
       ],
       moreLink: "More on CORE heat zones and heat training"
     },
-    // Daily guidance: Today's Prescription on the Today screen
-    guidance: {
-      eyebrow: "DAILY GUIDANCE",
-      headline: "\"What should I train today?\"",
-      description: "ENDURE answers that every morning. It looks at your recent rides, your training load and a short morning check-in, then picks the session for today: an easy spin when you are tired, a hard workout when you are fresh.",
-      bullets: [
-        "<strong>One tap to ride:</strong> start the workout and your smart trainer follows in ERG mode.",
-        "<strong>Two alternatives:</strong> one easier, one harder, if the pick does not suit your day.",
-        "<strong>Explained:</strong> every pick comes with the reason behind it, based on your own data."
+    // Homepage AI coach section, first section after the hero (2026-10-29).
+    // Training planning leads; daily guidance is part of the last step.
+    coach: {
+      eyebrow: "AI COACH · TRAINING PLANNING",
+      headline: "You set the week. The coach plans every session.",
+      intro: "ENDURE’s AI coach drafts your coming weeks against the targets you set, explains every session and picks today’s session each morning. The coach drafts, you decide: nothing lands in your calendar until you apply it.",
+      // Order matters: Week planner → Plan with coach → Every session explained
+      steps: [
+        {
+          title: "Week planner",
+          body: "Choose a week type for each coming week (Recovery, Maintain, Build or Focus) and set its TSS target. The load forecast rates every week before you ride it: On track, Borderline, Too little or Too much.",
+          imageAlt: "The Week planner in the ENDURE web app: weeks 45 and 46, week type Maintain, a target of 330 TSS (about 5:52 h) and the rating On track"
+        },
+        {
+          title: "Plan with coach",
+          body: "Tap Plan with coach and the coach drafts the coming weeks against your targets, aimed at your goal event if you have one. It explains the draft in a conversation: ask for a shorter Tuesday or a free Sunday and it revises it. Nothing lands in your calendar until you tap Apply.",
+          imageAlt: "A coach draft for weeks 45 and 46 in the ENDURE calendar: the sessions per day with target and planned TSS, the rating Borderline, the coach’s explanation under Conversation, and the Apply and Discard buttons"
+        },
+        {
+          title: "Every session explained",
+          body: "Each planned session comes with the coach’s reasoning and two alternatives: a lighter one if your legs feel heavy, a harder one if you feel fresh. Swap in the session details.",
+          imageAlt: "Details of a planned session in ENDURE: the coach’s reasoning, duration, TSS and workout profile, and a lighter and a harder alternative"
+        }
       ],
-      imageAlt: "ENDURE Today screen with recovery score, load balance, week goal and today's prescribed workout",
-      link: "How the AI coach works"
-    },
-    // Training planning teaser on the homepage, right after the guidance section
-    trainingPlanningTeaser: {
-      eyebrow: "NEW · TRAINING PLANNING",
-      headline: "A coach that turns your data into a plan.",
-      description: "Tap Plan with coach and the AI coach fills the coming weeks of your calendar, aimed at your goal event if you have one. Each week shows planned against done, a load forecast and a short verdict. Nothing lands in your calendar until you apply it.",
-      chips: ["Planned vs. done", "Load forecast", "Lighter or harder option"],
+      // Callout inside step 3
+      daily: {
+        label: "DAILY GUIDANCE",
+        body: "Every morning the coach reads your check-in and your recent rides and picks today’s session, with the reason. When today is already planned, it may propose one change, and you accept or skip it. One tap starts the workout, and your smart trainer follows in ERG mode."
+      },
+      // Under the step 2 image when it shows the mobile focus crop (< 768 px)
+      cropNote: "Showing the coach’s draft. Tap for the full calendar.",
+      // Chip on the screenshots (visible on touch, on hover/focus with a pointer)
+      enlarge: "Enlarge",
       link: "How training planning works",
-      webLink: "Also in your browser",
-      imageAlt: "Two weeks in the ENDURE calendar with planned and completed sessions, weekly totals and the coach verdict"
+      coachLink: "How the AI coach works",
+      webLink: "Also in your browser"
     },
     // Homepage section with the same calendar on phone, tablet, Windows and web
     platforms: {
@@ -760,28 +774,38 @@ export const translations = {
       ],
       moreLink: "Mehr zu CORE Heat Zones und Hitzetraining"
     },
-    // Tägliche Empfehlung: Today's Prescription auf dem Heute-Screen
-    guidance: {
-      eyebrow: "JEDEN TAG",
-      headline: "„Was soll ich heute trainieren?“",
-      description: "ENDURE beantwortet die Frage jeden Morgen. Die App schaut auf deine letzten Fahrten, deine Trainingsbelastung und einen kurzen Morgen-Check-in und wählt daraus die Einheit für heute: locker rollen, wenn du müde bist, eine harte Einheit, wenn du frisch bist.",
-      bullets: [
-        "<strong>Ein Fingertipp, und du fährst:</strong> Workout starten, dein Smart Trainer folgt im ERG-Modus.",
-        "<strong>Zwei Alternativen:</strong> eine leichtere, eine härtere, falls die Empfehlung nicht zu deinem Tag passt.",
-        "<strong>Mit Begründung:</strong> Zu jeder Empfehlung steht, warum sie heute passt, abgeleitet aus deinen eigenen Daten."
+    // Startseiten-Sektion KI-Coach, erste Sektion nach dem Hero (2026-10-29).
+    // Die Trainingsplanung führt; die tägliche Empfehlung ist Teil des letzten Schritts.
+    coach: {
+      eyebrow: "KI-COACH · TRAININGSPLANUNG",
+      headline: "Du legst die Woche fest. Der Coach plant jede Einheit.",
+      intro: "Der KI-Coach von ENDURE entwirft deine kommenden Wochen nach den Zielen, die du vorgibst, begründet jede Einheit und wählt jeden Morgen die Einheit für heute. Der Coach entwirft, du entscheidest: In deinen Kalender kommt erst etwas, wenn du es übernimmst.",
+      steps: [
+        {
+          title: "Wochenplaner",
+          body: "Wähl für jede kommende Woche einen Wochentyp (Erholung, Erhalt, Aufbau oder Fokus) und leg ihr TSS-Ziel fest. Die Belastungsprognose bewertet jede Woche, bevor du sie fährst: Im Rahmen, Grenzwertig, Zu wenig oder Zu viel.",
+          imageAlt: "Der Wochenplaner in der ENDURE-Web-App: KW 45 und 46, Wochentyp Erhalt, ein Ziel von 330 TSS (rund 5:52 h) und die Bewertung Passend"
+        },
+        {
+          title: "Mit Coach planen",
+          body: "Tipp auf „Mit Coach planen“, und der Coach entwirft die kommenden Wochen nach deinen Zielen, ausgerichtet auf dein Zielevent, wenn du eines hast. Den Entwurf erklärt er dir im Gespräch: Wünsch dir einen kürzeren Dienstag oder einen freien Sonntag, und er überarbeitet ihn. In deinen Kalender kommt erst etwas, wenn du auf „Übernehmen“ tippst.",
+          imageAlt: "Ein Entwurf des Coaches für KW 45 und 46 im ENDURE-Kalender: die Einheiten pro Tag mit Ziel und geplantem TSS, die Bewertung Grenzwertig, die Erklärung des Coaches unter Gespräch und die Buttons Übernehmen und Verwerfen"
+        },
+        {
+          title: "Jede Einheit begründet",
+          body: "Zu jeder geplanten Einheit gibt es die Begründung des Coaches und zwei Alternativen: eine leichtere, wenn die Beine schwer sind, eine härtere, wenn du frisch bist. Getauscht wird in den Details der Einheit.",
+          imageAlt: "Details einer geplanten Einheit in ENDURE: Begründung des Coaches, Dauer, TSS und Workout-Profil sowie eine leichtere und eine härtere Alternative"
+        }
       ],
-      imageAlt: "ENDURE Heute-Screen mit Recovery Score, Load Balance, Wochenziel und dem empfohlenen Workout für heute",
-      link: "So arbeitet der KI-Coach"
-    },
-    // Trainingsplanung-Teaser auf der Startseite, direkt nach dem Guidance-Abschnitt
-    trainingPlanningTeaser: {
-      eyebrow: "NEU · TRAININGSPLANUNG",
-      headline: "Ein Coach, der aus deinen Daten einen Plan macht.",
-      description: "Tipp auf „Mit Coach planen“, und der KI-Coach füllt die kommenden Wochen deines Kalenders, ausgerichtet auf dein Zielevent, wenn du eines hast. Jede Woche zeigt Geplant neben Absolviert, eine Belastungsprognose und ein kurzes Fazit. In deinen Kalender kommt erst etwas, wenn du es übernimmst.",
-      chips: ["Geplant vs. absolviert", "Belastungsprognose", "Leichter oder härter"],
+      daily: {
+        label: "TÄGLICHE EMPFEHLUNG",
+        body: "Jeden Morgen liest der Coach deinen Check-in und deine letzten Fahrten und wählt die Einheit für heute, mit Begründung. Ist heute schon etwas geplant, schlägt er bei Bedarf eine Änderung vor, die du annimmst oder nicht. Ein Fingertipp startet das Workout, dein Smart Trainer folgt im ERG-Modus."
+      },
+      cropNote: "Ausschnitt: der Entwurf des Coaches. Tippen für den ganzen Kalender.",
+      enlarge: "Vergrößern",
       link: "So funktioniert die Trainingsplanung",
-      webLink: "Auch im Browser",
-      imageAlt: "Zwei Wochen im ENDURE-Kalender mit geplanten und absolvierten Einheiten, Wochensummen und dem Fazit des Coaches"
+      coachLink: "So arbeitet der KI-Coach",
+      webLink: "Auch im Browser"
     },
     // Startseiten-Sektion: derselbe Kalender auf Handy, Tablet, Windows und Web
     platforms: {

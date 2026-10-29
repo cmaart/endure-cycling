@@ -8,7 +8,7 @@ Site: https://www.endure-cycling.com (English) and https://www.endure-cycling.co
 
 - [Homepage](https://www.endure-cycling.com/): features, pricing, FAQ
 - [AI coach and daily recommendation](https://www.endure-cycling.com/features/ai-coach/): morning check-in, one workout per day with alternatives and the reason, coach chat, post-ride insights, where ENDURE is heading
-- [Training planning](https://www.endure-cycling.com/features/training-planning/): the coach drafts the coming weeks in the calendar, load forecast per week, weekly verdict, lighter and harder alternatives, web app at app.endure-cycling.com
+- [Training planning](https://www.endure-cycling.com/features/training-planning/): week planner (week type and TSS target per week), the coach drafts the coming weeks in the calendar, load forecast per week, weekly verdict, lighter and harder alternatives, web app at app.endure-cycling.com
 - [FTP & VO2max tracking](https://www.endure-cycling.com/features/ftp-vo2max-tracking/): trends modelled from recorded rides
 - [Lactate LT1/LT2](https://www.endure-cycling.com/features/lactate-lt1-lt2/): log readings, get thresholds with a confidence tunnel
 - [CORE heat zones](https://www.endure-cycling.com/features/core-heat-zones/): native CORE sensor integration with live heat zones
