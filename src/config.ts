@@ -28,8 +28,8 @@ export const config = {
   // ENDURE Premium store prices shown on the site: US for English, Germany for
   // German. Keep in sync with App Store Connect when prices change.
   pricing: {
-    en: { currency: 'USD', monthly: 7.99, annual: 59.99 },
-    de: { currency: 'EUR', monthly: 8.99, annual: 69.99 },
+    en: { currency: 'USD', monthly: 11.99, annual: 89 },
+    de: { currency: 'EUR', monthly: 11.99, annual: 89 },
   },
   // App Store rating shown in the SoftwareApplication schema (Layout.astro).
   // Source: App Store Austria storefront. The proof section copy in
