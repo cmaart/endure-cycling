@@ -1,0 +1,159 @@
+---
+import LastseenLayout from '../../layouts/LastseenLayout.astro';
+---
+
+<LastseenLayout
+  title="Privacy Policy | Lastseen"
+  description="How the Lastseen app handles data: Bluetooth history and places stay on your phone, crash reports without personal data, no account, no tracking."
+>
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">PRIVACY POLICY</h1>
+    <p class="mb-8 text-slate-500 font-medium">Last updated: 2026-11-01</p>
+
+    <div class="space-y-6 text-lg">
+      <p>
+        This Privacy Policy explains how the Android app Lastseen, listed on Google Play as “Bluetooth: Last known
+        Location” (package <code>com.cmart.bluetoothfinder</code>, “Lastseen”, “we”, “us”), handles data. Lastseen
+        records when and where your phone was connected to your Bluetooth devices, so you can find a lost device. In
+        short: your history and your locations never leave your phone. Lastseen has no account and no own server. The
+        only data we receive are crash and error reports without personal data, and you can switch them off.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">1. Controller / Contact</h2>
+      <p>
+        Controller: Christoph Martin<br />
+        Address: Fischerweg 8, 7503 Großpetersdorf, Austria<br />
+        Email: <a href="mailto:info@endure-cycling.com" class="text-accent hover:underline">info@endure-cycling.com</a>
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">2. Data stored on your phone</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Devices: the name and Bluetooth address of devices your phone connects to, and the names you give them</li>
+        <li>Events: when a device connected, disconnected, came into range or left range</li>
+        <li>
+          Places: the position of your phone at these moments, with accuracy and age. Places are only recorded if you
+          allow location access.
+        </li>
+        <li>Gaps: periods in which Lastseen could not record reliably</li>
+        <li>Your settings, the start date of your 10-day trial, and whether you own the Lifetime Unlock</li>
+      </ul>
+      <p>
+        These data are kept in the app's private storage on your phone. They are not sent to us or to anyone else.
+        Android's app backup is switched off for Lastseen, so they are not part of your Google device backup either.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">3. Location, also in the background</h2>
+      <p>
+        Lastseen uses your phone's location to remember where a Bluetooth device was connected or disconnected. A
+        device usually gets lost while the app is closed, so Lastseen asks for location access “all the time”. With this
+        permission it takes one location fix when a device connects or disconnects, also when the app is closed or not
+        in use. During this fix (at most 30 seconds) a notification is shown. Lastseen does not track your location
+        continuously and does not record a route.
+      </p>
+      <p>
+        Location data are used only to show you where your devices were. They are stored on your phone only and are
+        never transmitted, sold or shared. You can withdraw location access at any time in Android's settings; Lastseen
+        then records events without a place.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">4. Bluetooth and nearby devices</h2>
+      <p>
+        Lastseen uses the Bluetooth permission to see which paired devices connect and disconnect, and Android's
+        companion device feature to notice when a linked device comes into or leaves range. Nearby Search scans for
+        Bluetooth signals only while you have it open, to show how close a lost device is. Signals of other people's
+        devices are not stored.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">5. Map</h2>
+      <p>
+        When you open a map, Lastseen loads map images for the visible area from OpenFreeMap (tiles.openfreemap.org).
+        Like any server, OpenFreeMap sees your IP address and which map area is requested. It does not receive your
+        history, your device list or the places Lastseen stored.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">6. Crash and error reports (Sentry)</h2>
+      <p>
+        When Lastseen crashes, freezes (ANR) or hits an error, it sends a report to Sentry (Functional Software, Inc.,
+        USA) so we can fix the problem. A report contains:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Stack trace and error message</li>
+        <li>App version, Android version, device maker and model</li>
+        <li>A random installation ID and session health (whether a session ended in a crash)</li>
+      </ul>
+      <p>
+        Reports never contain places or coordinates, Bluetooth device names or addresses, screenshots, your name, email
+        address or any other personal data; Lastseen removes such fields before sending. Like any server, Sentry sees
+        the IP address of the connection that delivers a report. Crash reports are on by default; you can switch them
+        off in Settings. Legal basis: our legitimate interest in a working app (GDPR Art. 6(1)(f)). Reports are kept
+        for up to 90 days.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">7. Trial and purchases (Google Play)</h2>
+      <p>
+        The Lifetime Unlock is sold through Google Play Billing. Google processes the payment as an independent
+        controller under its own privacy policy. Lastseen only receives from Google Play whether you own the product and
+        the purchase confirmation needed to unlock it. We do not receive your name, email address or payment details.
+      </p>
+      <p>
+        The trial start date is also saved in Google Play services Block Store, so that a reinstall does not restart the
+        trial. Block Store keeps this single date with your Google account's device backup, end-to-end encrypted where
+        your device supports it. It contains no other data, and we cannot read it.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">8. Notifications</h2>
+      <p>
+        If you allow notifications, Lastseen shows a short notification while it records a place, tells you about a
+        newly connected device, warns you when recording is not reliable, and reminds you before your trial ends. All notifications are created on the phone;
+        no push service or server is involved.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">9. Exports</h2>
+      <p>
+        An export of your history or the diagnostic log only leaves your phone if you share it yourself, to a recipient
+        you choose.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">10. What we do not do</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>No account, no login, no own server, no cloud sync</li>
+        <li>No analytics, no advertising, no tracking SDKs</li>
+        <li>No sale or sharing of data with third parties for their own purposes</li>
+        <li>No collection of contacts, photos, messages or other personal content</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">11. International transfers</h2>
+      <p>
+        Sentry may process crash reports in the United States. Where required, we rely on the EU Standard Contractual
+        Clauses and Sentry's data processing agreement.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">12. Your rights (EEA/UK/Switzerland)</h2>
+      <p>
+        You have the right to access, rectification, erasure, restriction, objection and data portability, and the right
+        to lodge a complaint with a supervisory authority (in Austria: Datenschutzbehörde, dsb.gv.at). Because crash
+        reports carry no personal identifiers, we usually cannot link a report to you; tell us your device model and the
+        approximate time of a crash and we will search for it. Contact:
+        <a href="mailto:info@endure-cycling.com" class="text-accent hover:underline">info@endure-cycling.com</a>.
+      </p>
+      <p>
+        Deleting data: Settings › Data › “Delete history” removes all recorded events and places. Uninstalling Lastseen
+        or clearing its storage removes everything stored on the phone. To also remove the trial date from Block Store,
+        clear Lastseen's data in the Android settings before uninstalling. Crash reports expire automatically after 90
+        days, or earlier on request.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">13. This website</h2>
+      <p>
+        The Lastseen pages on endure-cycling.com set no cookies and load no analytics. The site is hosted on GitHub Pages
+        (GitHub, Inc., USA), which processes your IP address to deliver the pages.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">14. Children</h2>
+      <p>Lastseen is not directed at children under 13.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 pt-6">15. Changes</h2>
+      <p>We may update this Privacy Policy. The “Last updated” date above shows the current version.</p>
+    </div>
+  </main>
+</LastseenLayout>
