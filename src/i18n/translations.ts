@@ -542,8 +542,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "ENDURE | Indoor Cycling App for Smart Trainers, No FTP Test",
-      description: "Indoor cycling app for smart trainers that estimates FTP and VO2max from your normal rides. ERG control, structured workouts, Strava and intervals.icu sync."
+      title: "ENDURE | Indoor Cycling App with AI Coach & Training Plan",
+      description: "Indoor cycling app with an AI coach: a daily workout from your rides, a plan for the coming weeks, changeable in chat. Smart trainer ERG control, FTP and VO2max without a test."
     },
     // Cookie Banner
     cookieBanner: {
@@ -1115,8 +1115,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "ENDURE | Rollentrainer-App ohne FTP-Test",
-      description: "Indoor-Cycling-App für Rollentrainer, die FTP und VO2max aus deinen Fahrten schätzt. ERG-Steuerung, strukturierte Workouts, Strava- und intervals.icu-Sync."
+      title: "ENDURE | Rollentrainer-App mit KI-Coach & Trainingsplan",
+      description: "Indoor-Cycling-App mit KI-Coach: täglich ein Workout aus deinen Fahrten, ein Plan für die kommenden Wochen, im Chat anpassbar. ERG-Steuerung, FTP und VO2max ohne Test."
     },
     // Cookie Banner
     cookieBanner: {

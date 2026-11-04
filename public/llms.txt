@@ -4,6 +4,8 @@
 
 Site: https://www.endure-cycling.com (English) and https://www.endure-cycling.com/de/ (German).
 
+Full text of every product, comparison and guide page in one file: https://www.endure-cycling.com/llms-full.txt
+
 ## Product
 
 - [Homepage](https://www.endure-cycling.com/): features, pricing, FAQ
