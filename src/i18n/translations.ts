@@ -225,8 +225,18 @@ export const translations = {
         },
         {
           title: "Ride it in the app",
-          body: "One tap starts the workout and your smart trainer follows in ERG mode. The ride screen shows power against target, heart rate, cadence, the current interval and the whole workout. Afterwards the coach reviews the ride: pacing, execution and what it trained.",
+          body: "One tap starts the workout and your smart trainer follows in ERG mode. The ride screen shows power against target, heart rate, cadence, the current interval and the whole workout. ",
           imageAlt: "The ENDURE ride screen during a workout: current power against the target, heart rate, cadence, NP, IF and TSS, the current interval with its time left and the workout chart"
+        },
+        {
+          title: "Review your ride",
+          body: "See your route, weather along the way and your ride data together. The AI coach reviews your pacing and execution and explains what the session trained.",
+          imageAlt: "Ride details with route map, weather along the route and power and heart-rate chart"
+        },
+        {
+          title: "See your training pay off",
+          body: "Follow your FTP and VO2max estimates over time, based on your recorded rides. See how your fitness changes without a separate test.",
+          imageAlt: "VO2max estimate and trend, age-group comparison and rides that influenced it"
         }
       ],
       // Cards that pop out of the phone in steps 3 and 4, quoting the app.
@@ -614,8 +624,8 @@ export const translations = {
       // Häkchen unter den Store-Badges
       checks: ["14 Tage gratis", "Keine Zahlungsdaten", "Endet von selbst"],
       tagline: "Präzision statt Spielerei",
-      headline1: "Schluss mit Raten.",
-      headline2: "Trainier nach deinem persönlichen Plan.",
+      headline1: "Jede Fahrt bringt dich weiter",
+      headline2: "Trainier nach deinem persönlichen Plan",
       subline: "ENDURE plant das heutige Workout und auf Wunsch deine kommenden Wochen, aus deinen Fahrten, deiner Trainingsbelastung und einem kurzen Morgen-Check-in. FTP und VO2max kommen aus deinen normalen Fahrten, ganz ohne Test.",
       // Als H2 unter der Subline gerendert: die Headline trägt den Claim, diese
       // Zeile trägt die Begriffe, mit denen tatsächlich gesucht wird.
@@ -813,8 +823,18 @@ export const translations = {
         },
         {
           title: "In der App fahren",
-          body: "Ein Fingertipp startet das Workout, dein Smart Trainer folgt im ERG-Modus. Der Ride-Screen zeigt Leistung und Ziel, Herzfrequenz, Trittfrequenz, das aktuelle Intervall und das ganze Workout. Danach wertet der Coach die Fahrt aus: Pacing, Ausführung und was sie trainiert hat.",
+          body: "Ein Fingertipp startet das Workout, dein Smart Trainer folgt im ERG-Modus. Der Ride-Screen zeigt Leistung und Ziel, Herzfrequenz, Trittfrequenz, das aktuelle Intervall und das ganze Workout. ",
           imageAlt: "Der Ride-Screen von ENDURE während eines Workouts: aktuelle Leistung und Ziel, Herzfrequenz, Trittfrequenz, NP, IF und TSS, das aktuelle Intervall mit Restzeit und der Workout-Verlauf"
+        },
+        {
+          title: "Fahrt auswerten",
+          body: "Sieh deine Strecke, das Wetter entlang der Route und deine Fahrtdaten auf einen Blick. Der KI-Coach bewertet Pacing und Ausführung und erklärt, was die Einheit trainiert hat.",
+          imageAlt: "Fahrtdetails mit Streckenkarte, Wetter entlang der Route sowie Leistungs- und Herzfrequenzkurve"
+        },
+        {
+          title: "Sieh, ob dein Training wirkt",
+          body: "Verfolge deine FTP- und VO2max-Schätzungen über die Zeit, berechnet aus deinen aufgezeichneten Fahrten. So siehst du deine Entwicklung ohne separaten Test.",
+          imageAlt: "VO2max-Schätzung und Verlauf mit Altersklassenvergleich und den Fahrten, die den Wert beeinflusst haben"
         }
       ],
       // Karten, die in Schritt 3 und 4 aus dem Handy herausragen; sie zitieren die App.
