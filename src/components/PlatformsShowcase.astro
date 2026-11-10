@@ -28,8 +28,8 @@ const shots = {
 const zoom = (key: keyof typeof shots) => t.zoom.replace('{name}', t.labels[key]);
 ---
 
-<section id="platforms" class="py-16 md:py-20 lg:py-24 xl:py-28">
-  <div class="container mx-auto px-4 md:px-6">
+<section id="platforms" class="py-20 md:py-28">
+  <div class="page-container">
     <div class="max-w-[760px] mx-auto text-center" data-reveal>
       <h2 class="text-[32px] md:text-[38px] lg:text-[42px] xl:text-[46px] font-extrabold tracking-[-0.03em] leading-[1.1] text-slate-900 text-balance mb-4 md:mb-5">
         {t.headline}

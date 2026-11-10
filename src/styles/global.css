@@ -224,3 +224,29 @@ html.js [data-reveal].is-revealed {
 a {
   text-underline-offset: 3px;
 }
+
+/* One page container for every home section: same left edge everywhere */
+.page-container {
+  width: 100%;
+  max-width: 1248px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 768px) {
+  .page-container { padding-inline: 4rem; }
+}
+
+/* One list style for feature bullets: a short accent dash */
+.feature-list > li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.feature-list > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 0.625rem;
+  height: 1px;
+  background: var(--color-accent);
+}

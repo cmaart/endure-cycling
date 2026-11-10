@@ -12,8 +12,8 @@ const t = getTranslations(lang).zwiftClick;
     <div class="absolute -top-32 -left-36 w-[600px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(194,85,43,0.04),transparent_70%)]"></div>
   </div>
 
-  <div class="container mx-auto px-6 relative z-10">
-    <div class="max-w-5xl mx-auto">
+  <div class="page-container relative z-10">
+    <div>
 
     <!-- Two-column layout: text left, image right -->
     <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -21,7 +21,7 @@ const t = getTranslations(lang).zwiftClick;
       <!-- Left: Text content -->
       <div class="flex-1 text-center lg:text-left" data-reveal>
         <h2 class="text-4xl md:text-5xl font-bold tracking-[-0.02em] mb-4 leading-[1.1] text-slate-900 text-balance">
-          {t.headline1}<br/>
+          {t.headline1}{' '}
           <span class="text-accent">{t.headline2}</span>
         </h2>
 
@@ -30,12 +30,9 @@ const t = getTranslations(lang).zwiftClick;
         </p>
 
         <!-- Bullet points -->
-        <ul class="space-y-3 text-left">
+        <ul class="feature-list space-y-3 text-left">
           {t.bullets.map((bullet: string) => (
-            <li class="flex items-start gap-3">
-              <span class="mt-[9px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent"></span>
-              <span class="text-slate-600" set:html={bullet}></span>
-            </li>
+            <li class="text-slate-600" set:html={bullet}></li>
           ))}
         </ul>
 

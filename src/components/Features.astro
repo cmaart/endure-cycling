@@ -30,8 +30,8 @@ const screenshots = [
 ];
 ---
 
-<section id="features" class="py-24 relative">
-  <div class="container mx-auto px-6">
+<section id="features" class="py-20 md:py-28 relative">
+  <div class="page-container">
     <!-- Section Header -->
     <div class="text-center mb-16" data-reveal>
       <h2 class="text-4xl md:text-5xl font-bold tracking-[-0.02em] mb-4 text-slate-900">
@@ -53,13 +53,13 @@ const screenshots = [
     </div>
 
     <!-- Feature list: ruled rows, one group per row -->
-    <div class="max-w-5xl mx-auto border-t border-slate-200">
+    <div class="border-t border-slate-200">
       {groups.map((group) => (
         <div class="grid md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] gap-4 md:gap-12 py-8 md:py-10 border-b border-slate-200">
           <h3 class="text-xl md:text-2xl font-bold tracking-[-0.01em] text-slate-900">{group.title}</h3>
-          <ul class="grid sm:grid-cols-2 gap-x-10 gap-y-3">
+          <ul class="feature-list grid sm:grid-cols-2 gap-x-10 gap-y-3">
             {group.items.map((item) => (
-              <li class="relative pl-5 text-slate-600 text-[15px] leading-relaxed before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-accent">
+              <li class="text-slate-600 text-[15px] leading-relaxed">
                 <span set:html={item} />
               </li>
             ))}

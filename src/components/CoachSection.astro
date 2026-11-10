@@ -27,8 +27,8 @@ const chip = 'absolute right-3 bottom-3 inline-flex items-center gap-1.5 rounded
 ---
 
 <section id="coach" class="py-20 md:py-28">
-  <div class="container mx-auto px-6">
-    <div class="max-w-6xl mx-auto">
+  <div class="page-container">
+    <div>
 
       <header data-reveal class="flex flex-col lg:flex-row lg:items-end gap-5 lg:gap-16">
         <div class="lg:basis-7/12">
@@ -42,7 +42,7 @@ const chip = 'absolute right-3 bottom-3 inline-flex items-center gap-1.5 rounded
       <ol class="mt-12 md:mt-[72px]">
 
         <!-- 01 Week planner: text | image -->
-        <li class="py-12 md:py-16 border-t border-slate-100 flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16">
+        <li class="py-12 md:py-16 border-t border-slate-100 flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-16">
           <div data-reveal class="lg:basis-5/12 max-w-2xl">
             <div class={stepNumber}>01</div>
             <h3 class={stepTitle}>{weekPlanner.title}<BetaTag /></h3>

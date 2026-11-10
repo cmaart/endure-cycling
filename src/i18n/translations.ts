@@ -144,7 +144,8 @@ export const translations = {
       annualLabel: "ANNUAL",
       perMonth: "per month",
       perYear: "per year",
-      annualPerMonth: "{annualPerMonth} per month"
+      annualPerMonth: "{annualPerMonth} per month",
+      annualSave: "Save {percent}%"
     },
     // Climbing Efficiency
     climbingEfficiency: {
@@ -186,6 +187,7 @@ export const translations = {
       headline1: "Heat is a metric.",
       headline2: "CORE body temperature & heat zones, live in your ride.",
       description: "ENDURE is the first indoor cycling app to natively integrate the CORE body temperature sensor, with a live heat-zone display right on the ride screen. Pair it over Bluetooth like any other sensor. Your core temperature is recorded next to power and heart rate, ready for heat-training analysis after the ride.",
+      imageAlt: "ENDURE ride screen with live core body temperature of 37.4 °C and heat zone 3 next to power, heart rate and cadence",
       stat1Title: "Live core temp",
       stat1Sub: "On the ride screen",
       stat2Title: "Heat zones",
@@ -721,7 +723,8 @@ export const translations = {
       annualLabel: "JÄHRLICH",
       perMonth: "im Monat",
       perYear: "im Jahr",
-      annualPerMonth: "{annualPerMonth} im Monat"
+      annualPerMonth: "{annualPerMonth} im Monat",
+      annualSave: "{percent} % sparen"
     },
     // Climbing Efficiency
     climbingEfficiency: {
@@ -763,6 +766,7 @@ export const translations = {
       headline1: "Hitze ist eine Metrik.",
       headline2: "CORE Körpertemperatur & Heat Zones, live in deiner Fahrt.",
       description: "ENDURE ist die erste Indoor-Cycling-App, die den CORE Körpertemperatur-Sensor nativ integriert, inklusive Live-Anzeige deiner Heat Zone direkt am Ride-Screen. Du verbindest ihn per Bluetooth wie jeden anderen Sensor. Deine Kerntemperatur wird neben Watt und Herzfrequenz aufgezeichnet und steht nach der Fahrt für die Hitzetraining-Analyse bereit.",
+      imageAlt: "ENDURE Ride Screen mit Live-Kerntemperatur von 37,4 °C und Heat Zone 3 neben Leistung, Herzfrequenz und Trittfrequenz",
       stat1Title: "Live Kerntemperatur",
       stat1Sub: "Direkt am Ride-Screen",
       stat2Title: "Heat Zones",

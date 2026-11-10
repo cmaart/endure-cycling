@@ -6,17 +6,17 @@ const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).lactate;
 ---
 
-<section id="lactate" class="relative px-6 py-20 md:px-16 md:py-28 overflow-hidden">
+<section id="lactate" class="relative py-20 md:py-28 overflow-hidden">
   <!-- Accent glow, bottom-left -->
   <div class="absolute -bottom-48 -left-36 w-[600px] h-[500px] pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(194,85,43,0.04),transparent_70%)]" aria-hidden="true"></div>
 
-  <div class="container mx-auto relative">
+  <div class="page-container relative">
     <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
       <!-- Left: copy + numbered steps -->
       <div data-reveal class="relative">
         <h2 class="mb-5 font-bold text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] text-slate-900 text-balance">
-          {t.headline1}<br />
+          {t.headline1}{' '}
           <span class="text-accent">{t.headline2}</span>
         </h2>
 
