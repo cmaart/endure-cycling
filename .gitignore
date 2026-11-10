@@ -24,3 +24,6 @@ pnpm-debug.log*
 .idea/
 
 .playwright-mcp
+
+# Raw source footage (4K, hundreds of MB): kept locally, never committed or deployed
+public/videos/VN*.mp4

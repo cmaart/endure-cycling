@@ -1,5 +1,5 @@
-// Screenshots of the ENDURE web app used on the training planning page and the
-// homepage coach section, one set per language (public/assets/web-app/<lang>/).
+// Screenshots of the ENDURE web app used on the training planning page, one set
+// per language (public/assets/web-app/<lang>/).
 // Taken at 1920 × 1080 with 2× pixel density; the real browser chrome is not
 // in the files, the page draws its own frame. Keep width/height in sync with
 // the files so the layout never shifts.

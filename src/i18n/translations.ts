@@ -30,7 +30,6 @@ export const translations = {
       // Rendered as an H2 under the subline: the headline carries the claim, this
       // line carries the terms riders actually search for.
       seoLine: "AI cycling coach and indoor cycling app for smart trainers on iOS, Android & Windows, also in the browser",
-      secondary: "Frequent updates, built together with the cycling community.",
       appStoreBadgeAlt: "Download on the App Store",
       googlePlayBadgeAlt: "Get it on Google Play",
       microsoftStoreBadgeAlt: "Get it from Microsoft",
@@ -199,42 +198,54 @@ export const translations = {
       ],
       moreLink: "More on CORE heat zones and heat training"
     },
-    // Homepage AI coach section, first section after the hero (2026-10-29).
-    // Training planning leads; daily guidance is part of the last step.
+    // Homepage AI coach section, first section after the hero (2026-10-29,
+    // four pinned steps since 2026-11-10). Training planning leads; daily
+    // guidance is step 3, the ride and the coach's review step 4.
     coach: {
       eyebrow: "AI COACH · TRAINING PLANNING",
       headline: "You set the week. The coach plans every session.",
       intro: "ENDURE’s AI coach drafts your coming weeks against the targets you set, explains every session and picks today’s session each morning. The coach drafts, you decide: nothing lands in your calendar until you apply it.",
-      // Order matters: Week planner → Plan with coach → Every session explained
+      // Order matters: Week planner, Plan with coach, Every session explained, Ride.
+      // Each step shows a phone screenshot (public/assets/coach/<lang>/).
       steps: [
         {
           title: "Week planner",
-          body: "Choose a week type for each coming week (Recovery, Maintain, Build or Focus) and set its TSS target. The load forecast rates every week before you ride it: On track, Borderline, Too little or Too much.",
-          imageAlt: "The Week planner in the ENDURE web app: weeks 45 and 46, week type Maintain, a target of 330 TSS (about 5:52 h) and the rating On track"
+          body: "Set the type and the TSS target of each coming week. The load forecast rates every week before you ride it: On track, Borderline, Too little or Too much.",
+          imageAlt: "The ENDURE calendar for November 2026: a planned week of 6:20 h and 357 TSS rated On track, the coach’s summary of the week, the Plan with coach button and the sessions per day"
         },
         {
           title: "Plan with coach",
-          body: "Tap Plan with coach and the coach drafts the coming weeks against your targets, aimed at your goal event if you have one. It explains the draft in a conversation: ask for a shorter Tuesday or a free Sunday and it revises it. Nothing lands in your calendar until you tap Apply.",
-          imageAlt: "A coach draft for weeks 45 and 46 in the ENDURE calendar: the sessions per day with target and planned TSS, the rating Borderline, the coach’s explanation under Conversation, and the Apply and Discard buttons"
+          body: "Tap Plan with coach and the coach drafts the coming weeks against your targets, aimed at your goal event if you have one. Change it in the chat: can’t ride tomorrow, and the coach moves the session. Nothing lands in your calendar until you accept.",
+          imageAlt: "A chat with the ENDURE coach: the rider can’t train tomorrow, the coach moves the 30/30 session to Thursday and shows the calendar change with Accept and Keep plan"
         },
         {
           title: "Every session explained",
-          body: "Each planned session comes with the coach’s reasoning and two alternatives: a lighter one if your legs feel heavy, a harder one if you feel fresh. Swap in the session details.",
-          imageAlt: "Details of a planned session in ENDURE: the coach’s reasoning, duration, TSS and workout profile, and a lighter and a harder alternative"
+          body: "Every morning the coach reads your check-in and your recent rides, picks today’s session and tells you why. Two alternatives are one tap away: a lighter one if your legs feel heavy, a harder one if you feel fresh.",
+          imageAlt: "The ENDURE today screen: the morning check-in, the coach’s reason for today’s 30/30 micro-intervals, the confirmed session with its workout profile and the Start button"
+        },
+        {
+          title: "Ride it in the app",
+          body: "One tap starts the workout and your smart trainer follows in ERG mode. The ride screen shows power against target, heart rate, cadence, the current interval and the whole workout. Afterwards the coach reviews the ride: pacing, execution and what it trained.",
+          imageAlt: "The ENDURE ride screen during a workout: current power against the target, heart rate, cadence, NP, IF and TSS, the current interval with its time left and the workout chart"
         }
       ],
-      // Callout inside step 3
-      daily: {
-        label: "DAILY GUIDANCE",
-        body: "Every morning the coach reads your check-in and your recent rides and picks today’s session, with the reason. When today is already planned, it may propose one change, and you accept or skip it. One tap starts the workout, and your smart trainer follows in ERG mode."
+      // Cards that pop out of the phone in steps 3 and 4, quoting the app.
+      cards: {
+        today: { label: "COACH · PLAN FROM 08:17", text: "The 30/30 fits: your legs are fresh and your last VO2max work was over three weeks ago. Skip the run today: yesterday was already 115 TSS.", tag: "Hard" },
+        review: { label: "AI COACHING INSIGHTS", text: "You held the hard 30-second efforts at 120 to 133% of FTP, with no average power drop within the reps.", tags: ["Anaerobic", "Execution 8/10", "Strong pacing"] }
       },
-      // Under the step 2 image when it shows the mobile focus crop (< 768 px)
-      cropNote: "Showing the coach’s draft. Tap for the full calendar.",
-      // Chip on the screenshots (visible on touch, on hover/focus with a pointer)
-      enlarge: "Enlarge",
+      // Accessible name of the phone screenshots, which open full size; {name} is the step title.
+      enlarge: "Enlarge the {name} screenshot",
       link: "How training planning works",
       coachLink: "How the AI coach works",
       webLink: "Also in your browser"
+    },
+    // Full-bleed ride film between Proof and Trial (VideoBand.astro, 2026-11-10)
+    videoBand: {
+      headline: "Every ride, reviewed.",
+      body: "After each workout the coach looks at your pacing, your execution and what the ride trained.",
+      pause: "Pause the video",
+      play: "Play the video"
     },
     // Homepage section with the same calendar on phone, tablet, Windows and web
     platforms: {
@@ -609,7 +620,6 @@ export const translations = {
       // Als H2 unter der Subline gerendert: die Headline trägt den Claim, diese
       // Zeile trägt die Begriffe, mit denen tatsächlich gesucht wird.
       seoLine: "KI-Radcoach und Rollentrainer-App für iOS, Android & Windows, auch im Browser",
-      secondary: "Laufend neue Updates, entwickelt gemeinsam mit der Community.",
       appStoreBadgeAlt: "Laden im App Store",
       googlePlayBadgeAlt: "Jetzt bei Google Play",
       microsoftStoreBadgeAlt: "Im Microsoft Store herunterladen",
@@ -778,8 +788,9 @@ export const translations = {
       ],
       moreLink: "Mehr zu CORE Heat Zones und Hitzetraining"
     },
-    // Startseiten-Sektion KI-Coach, erste Sektion nach dem Hero (2026-10-29).
-    // Die Trainingsplanung führt; die tägliche Empfehlung ist Teil des letzten Schritts.
+    // Startseiten-Sektion KI-Coach, erste Sektion nach dem Hero (2026-10-29,
+    // seit 2026-11-10 vier gepinnte Schritte). Die Trainingsplanung führt; die
+    // tägliche Empfehlung ist Schritt 3, die Fahrt und die Auswertung Schritt 4.
     coach: {
       eyebrow: "KI-COACH · TRAININGSPLANUNG",
       headline: "Du legst die Woche fest. Der Coach plant jede Einheit.",
@@ -787,29 +798,42 @@ export const translations = {
       steps: [
         {
           title: "Wochenplaner",
-          body: "Wähl für jede kommende Woche einen Wochentyp (Erholung, Erhalt, Aufbau oder Fokus) und leg ihr TSS-Ziel fest. Die Belastungsprognose bewertet jede Woche, bevor du sie fährst: Im Rahmen, Grenzwertig, Zu wenig oder Zu viel.",
-          imageAlt: "Der Wochenplaner in der ENDURE-Web-App: KW 45 und 46, Wochentyp Erhalt, ein Ziel von 330 TSS (rund 5:52 h) und die Bewertung Passend"
+          body: "Leg für jede kommende Woche den Wochentyp und das TSS-Ziel fest. Die Belastungsprognose bewertet jede Woche, bevor du sie fährst: Im Rahmen, Grenzwertig, Zu wenig oder Zu viel.",
+          imageAlt: "Der ENDURE-Kalender für November 2026: eine geplante Woche mit 6:20 h und 357 TSS, bewertet mit Im Rahmen, die Zusammenfassung des Coaches, der Button „Mit Coach planen“ und die Einheiten pro Tag"
         },
         {
           title: "Mit Coach planen",
-          body: "Tipp auf „Mit Coach planen“, und der Coach entwirft die kommenden Wochen nach deinen Zielen, ausgerichtet auf dein Zielevent, wenn du eines hast. Den Entwurf erklärt er dir im Gespräch: Wünsch dir einen kürzeren Dienstag oder einen freien Sonntag, und er überarbeitet ihn. In deinen Kalender kommt erst etwas, wenn du auf „Übernehmen“ tippst.",
-          imageAlt: "Ein Entwurf des Coaches für KW 45 und 46 im ENDURE-Kalender: die Einheiten pro Tag mit Ziel und geplantem TSS, die Bewertung Grenzwertig, die Erklärung des Coaches unter Gespräch und die Buttons Übernehmen und Verwerfen"
+          body: "Tipp auf „Mit Coach planen“, und der Coach entwirft die kommenden Wochen nach deinen Zielen, ausgerichtet auf dein Zielevent, wenn du eines hast. Ändern geht im Chat: Morgen klappt es nicht, und der Coach verschiebt die Einheit. In deinen Kalender kommt erst etwas, wenn du zustimmst.",
+          imageAlt: "Ein Chat mit dem ENDURE-Coach: Morgen klappt das Training nicht, der Coach verschiebt die 30/30-Einheit auf Donnerstag und zeigt die Kalenderänderung zum Übernehmen oder Beibehalten"
         },
         {
           title: "Jede Einheit begründet",
-          body: "Zu jeder geplanten Einheit gibt es die Begründung des Coaches und zwei Alternativen: eine leichtere, wenn die Beine schwer sind, eine härtere, wenn du frisch bist. Getauscht wird in den Details der Einheit.",
-          imageAlt: "Details einer geplanten Einheit in ENDURE: Begründung des Coaches, Dauer, TSS und Workout-Profil sowie eine leichtere und eine härtere Alternative"
+          body: "Jeden Morgen liest der Coach deinen Check-in und deine letzten Fahrten, wählt die Einheit für heute und sagt dir, warum. Zwei Alternativen sind einen Fingertipp entfernt: eine leichtere, wenn die Beine schwer sind, eine härtere, wenn du frisch bist.",
+          imageAlt: "Der Heute-Screen von ENDURE: der Morgen-Check-in, die Begründung des Coaches für die 30/30-Micro-Intervals, die bestätigte Einheit mit Workout-Profil und der Starten-Button"
+        },
+        {
+          title: "In der App fahren",
+          body: "Ein Fingertipp startet das Workout, dein Smart Trainer folgt im ERG-Modus. Der Ride-Screen zeigt Leistung und Ziel, Herzfrequenz, Trittfrequenz, das aktuelle Intervall und das ganze Workout. Danach wertet der Coach die Fahrt aus: Pacing, Ausführung und was sie trainiert hat.",
+          imageAlt: "Der Ride-Screen von ENDURE während eines Workouts: aktuelle Leistung und Ziel, Herzfrequenz, Trittfrequenz, NP, IF und TSS, das aktuelle Intervall mit Restzeit und der Workout-Verlauf"
         }
       ],
-      daily: {
-        label: "TÄGLICHE EMPFEHLUNG",
-        body: "Jeden Morgen liest der Coach deinen Check-in und deine letzten Fahrten und wählt die Einheit für heute, mit Begründung. Ist heute schon etwas geplant, schlägt er bei Bedarf eine Änderung vor, die du annimmst oder nicht. Ein Fingertipp startet das Workout, dein Smart Trainer folgt im ERG-Modus."
+      // Karten, die in Schritt 3 und 4 aus dem Handy herausragen; sie zitieren die App.
+      cards: {
+        today: { label: "COACH · PLAN VON 08:01", text: "Die 30/30 passen: Deine Beine sind frisch, und dein letzter VO2max-Reiz ist über drei Wochen her. Den Lauf lässt du heute weg: Gestern waren es schon 115 TSS.", tag: "Hart" },
+        review: { label: "AI COACHING INSIGHTS", text: "Die 30-Sekunden-Belastungen lagen bei 333 bis 370 W und trafen damit den hochintensiven Bereich.", tags: ["VO2max Intervals", "Ausführung 8/10", "Gutes Pacing"] }
       },
-      cropNote: "Ausschnitt: der Entwurf des Coaches. Tippen für den ganzen Kalender.",
-      enlarge: "Vergrößern",
+      // Accessible Name der Handy-Screenshots, die sich groß öffnen; {name} ist der Schritt-Titel.
+      enlarge: "Screenshot „{name}“ vergrößern",
       link: "So funktioniert die Trainingsplanung",
       coachLink: "So arbeitet der KI-Coach",
       webLink: "Auch im Browser"
+    },
+    // Vollbild-Fahrtfilm zwischen Proof und Trial (VideoBand.astro, 2026-11-10)
+    videoBand: {
+      headline: "Jede Fahrt ausgewertet.",
+      body: "Nach jedem Workout schaut sich der Coach dein Pacing an, deine Ausführung und was die Fahrt trainiert hat.",
+      pause: "Video anhalten",
+      play: "Video abspielen"
     },
     // Startseiten-Sektion: derselbe Kalender auf Handy, Tablet, Windows und Web
     platforms: {

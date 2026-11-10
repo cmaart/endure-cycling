@@ -1,8 +1,17 @@
 ---
+/**
+ * Homepage hero, photo-editorial (2026-11-10, prototype "C"): a full-bleed
+ * ride photo, the headline in the sky, subline and store badges on the road,
+ * the coach screen on a phone at the right. Nav floats over it
+ * (Layout `navOverlay`). Below `lg` the photo ends above the text, which sits
+ * on a dark ground continuing the grass, so nothing covers the rider.
+ */
+import { Picture } from 'astro:assets';
 import { getTranslations } from '../i18n/translations';
 import { config } from '../config';
 import WebAppLink from './WebAppLink.astro';
 import { appShotDir } from '../utils/appShots';
+import ridePhoto from '../assets/hero/ride-field.jpg';
 
 const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).hero;
@@ -13,328 +22,228 @@ const windowsUrl = config.platforms.windows.url;
 const microsoftStoreBadge = lang === 'de' ? '/assets/badges/microsoft-store-badge-de.svg' : '/assets/badges/microsoft-store-badge.svg';
 const appStoreBadge = lang === 'de' ? '/assets/badges/app-store-badge-de.svg' : '/assets/badges/app-store-badge.svg';
 const googlePlayBadge = lang === 'de' ? '/assets/badges/google-play-badge-de.svg' : '/assets/badges/google-play-badge.svg';
-
-/*
- * The carousel phones, in ring order. The second one starts centered, its two
- * neighbours sit left and right, the rest wait off-stage. The script below
- * derives everything else (dots, rotation, lightbox) from this list's length,
- * so adding or reordering entries here needs no other change. Each language
- * has its own screenshot set, taken with the app in that language.
- */
-const app = appShotDir(lang);
-const shots = [
-  { key: 'today',         src: `${app}/today_dashboard.webp` },
-  { key: 'coaching',      src: `${app}/ai_coaching.webp` },
-  { key: 'ride',          src: `${app}/ride_screen.webp` },
-  { key: 'calendarWeek',  src: `${app}/calendar_week.webp` },
-  { key: 'zones',         src: `${app}/time_in_zones.webp` },
-  { key: 'vo2max',        src: `${app}/vo2max_detail.webp` },
-  { key: 'kpis',          src: `${app}/kpi_dashboard.webp` },
-  { key: 'library',       src: `${app}/workout_library.webp` },
-  { key: 'calendarMonth', src: `${app}/calendar_month.webp` },
-  { key: 'activity',      src: `${app}/activity_detail.webp` },
-] as const;
-
-// Only the first three are on stage at load, so only those are worth fetching eagerly.
-const SLOTS = ['slot-left', 'slot-center', 'slot-right'];
+const coachShot = `${appShotDir(lang)}/ai_coaching.webp`;
 ---
 
-<header class="relative px-6 pt-12 pb-16 md:px-16 md:pt-16 md:pb-24 overflow-hidden">
-  <!--
-    Ambient ride footage behind the hero. Black and white, muted, looped, and
-    washed out by the overlay so the headline stays readable on the light theme.
-    The poster paints immediately; the clip is attached by the script below,
-    1.3 MB on wide viewports and a 0.6 MB 640p variant on phones. Users with
-    reduced-motion or save-data keep the poster only.
-  -->
-  <div class="hero-bg absolute inset-0 pointer-events-none" aria-hidden="true">
-    <video
-      id="hero-video"
-      class="absolute inset-0 w-full h-full object-cover"
-      muted
-      loop
-      playsinline
-      autoplay
-      disablepictureinpicture
-      preload="none"
-      poster="/videos/hero-ride.webp"
-      data-src="/videos/hero-ride.mp4"
-      data-src-mobile="/videos/hero-ride-mobile.mp4"
-    ></video>
-    <div class="hero-bg-overlay absolute inset-0"></div>
+<header class="hero relative isolate overflow-hidden text-white">
+  <!-- Photo: full bleed from lg, the top part of the hero below it. -->
+  <div class="hero-photo" aria-hidden="true">
+    <Picture
+      src={ridePhoto}
+      alt=""
+      formats={['avif', 'webp']}
+      widths={[640, 960, 1280, 1920, 2560, 3200, 3840]}
+      sizes="100vw"
+      loading="eager"
+      fetchpriority="high"
+      class="hero-photo-img"
+    />
   </div>
 
-  <div class="relative text-center max-w-3xl mx-auto">
-    <!-- Headline -->
-    <h1 class="mb-6 font-extrabold text-[42px] sm:text-5xl md:text-6xl lg:text-[64px] leading-[1.05] tracking-[-0.03em] text-slate-900 text-balance lg:-mx-40">
-      {t.headline1}<br />
-      <span class="text-accent">{t.headline2}</span>
+  <div class="hero-head">
+    <h1 class="hero-title page-container font-extrabold">
+      <span class="hero-line"><span style="--i:0">{t.headline1}</span></span>
+      <span class="hero-line hero-line--thin"><span style="--i:1">{t.headline2}</span></span>
     </h1>
+    <!-- In the sky under the headline, so the road stays clear for the rider. -->
+    <div class="hero-copy page-container hero-enter" style="--i:3">
+      <p class="text-[17px] md:text-lg leading-relaxed text-white/95 text-pretty hero-shadow">{t.subline}</p>
+      <!--
+        Keyword-bearing line. The H1 carries the claim, so this is where the
+        terms riders search for live. Deliberately quiet.
+      -->
+      <p class="mt-2 text-sm text-white/75 text-pretty hero-shadow">{t.seoLine}</p>
+    </div>
+  </div>
 
-    <!-- Subline -->
-    <p class="mx-auto mb-3 max-w-xl text-lg md:text-xl leading-relaxed text-slate-700 text-pretty">
-      {t.subline}
-    </p>
-
-    <!--
-      Keyword-bearing line. The H1 above carries the claim, so this is where the
-      terms riders search for live. Deliberately quiet in the visual hierarchy.
-    -->
-    <p class="mx-auto mb-8 max-w-xl text-sm md:text-base text-slate-600 text-pretty">
-      {t.seoLine}
-    </p>
-
-    <!-- CTAs, with the trial terms right under the badges -->
-    <div class="inline-flex flex-col items-center gap-5">
-      <div data-placement="hero" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a id="download-btn-ios" href={iosUrl} target="_blank" rel="noopener" aria-label={t.appStoreBadgeAlt}>
-          <img src={appStoreBadge} alt={t.appStoreBadgeAlt} width="135" height="40" class="h-12 w-auto" />
+  <div class="hero-foot page-container">
+    <div class="hero-enter" style="--i:5">
+      <div data-placement="hero" class="flex flex-wrap gap-3 items-center">
+        <a id="download-btn-ios" href={iosUrl} target="_blank" rel="noopener" aria-label={t.appStoreBadgeAlt} class="hero-badge">
+          <img src={appStoreBadge} alt={t.appStoreBadgeAlt} width="135" height="40" class="h-11 md:h-12 w-auto" />
         </a>
-        <a id="download-btn-android" href={androidUrl} target="_blank" rel="noopener" aria-label={t.googlePlayBadgeAlt}>
-          <img src={googlePlayBadge} alt={t.googlePlayBadgeAlt} width="135" height="40" class="h-12 w-auto" />
+        <a id="download-btn-android" href={androidUrl} target="_blank" rel="noopener" aria-label={t.googlePlayBadgeAlt} class="hero-badge">
+          <img src={googlePlayBadge} alt={t.googlePlayBadgeAlt} width="135" height="40" class="h-11 md:h-12 w-auto" />
         </a>
         <!-- Official Microsoft Store badge (get.microsoft.com/images, dark). -->
-        <a id="download-btn-windows" href={windowsUrl} target="_blank" rel="noopener" aria-label={t.microsoftStoreBadgeAlt}>
-          <img src={microsoftStoreBadge} alt={t.microsoftStoreBadgeAlt} width={lang === 'de' ? 183 : 161} height="44" class="h-12 w-auto" />
+        <a id="download-btn-windows" href={windowsUrl} target="_blank" rel="noopener" aria-label={t.microsoftStoreBadgeAlt} class="hero-badge">
+          <img src={microsoftStoreBadge} alt={t.microsoftStoreBadgeAlt} width={lang === 'de' ? 183 : 161} height="44" class="h-11 md:h-12 w-auto" />
         </a>
       </div>
-      <ul class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-slate-700">
+      <ul class="mt-4 flex flex-wrap gap-x-5 gap-y-1.5 text-sm text-white/85">
         {t.checks.map((check) => (
           <li class="inline-flex items-center gap-2">
-            <svg class="w-4 h-4 shrink-0 text-accent" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" /></svg>
+            <svg class="w-4 h-4 shrink-0 text-[#F08A5D]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" /></svg>
             {check}
           </li>
         ))}
       </ul>
-      <div class="self-stretch border-t border-slate-100 pt-2 text-center">
-        <WebAppLink lang={lang} placement="hero-web" />
+      <div class="mt-2">
+        <WebAppLink lang={lang} placement="hero-web" class="!text-white" />
       </div>
     </div>
 
-    <p class="mt-5 text-sm text-slate-600">
-      {t.secondary}
-    </p>
+    <!-- The coach screen, from lg. Opens full size in the shared Lightbox. -->
+    <button
+      type="button"
+      class="hero-phone hero-enter"
+      style="--i:6"
+      data-lightbox-src={coachShot}
+      data-lightbox-alt={screens.coaching.alt}
+      aria-label={t.screenshotAction.replace('{name}', screens.coaching.label)}
+    >
+      <img src={coachShot} alt="" width="300" height="657" decoding="async" class="block w-full rounded-[30px]" />
+    </button>
   </div>
-
-  <!-- Floating phones: three on stage at a time. click a side phone (or swipe) to bring it into focus -->
-  <div id="phone-stage" class="relative mt-12 md:mt-14 mx-auto w-full max-w-[820px] h-[460px] md:h-[680px]">
-    {shots.map(({ key, src }, i) => {
-      const screen = screens[key];
-      return (
-        <div
-          class={`hero-phone ${SLOTS[i] ?? 'slot-hidden'}`}
-          role="button"
-          tabindex="0"
-          aria-label={t.screenshotAction.replace('{name}', screen.label)}
-        >
-          <div
-            class="phone-frame rounded-[32px] md:rounded-[40px]"
-          >
-            <img
-              src={src}
-              alt={screen.alt}
-              width="300"
-              height="657"
-              loading={i < SLOTS.length ? 'eager' : 'lazy'}
-              fetchpriority={i === 1 ? 'high' : undefined}
-              decoding="async"
-              class="w-full"
-            />
-          </div>
-        </div>
-      );
-    })}
-
-  </div>
-
-  <!-- Dot indicators, one per screenshot. The active dot follows the centered phone -->
-  <div id="phone-dots" class="relative z-10 mt-8 flex justify-center items-center gap-2.5"></div>
 </header>
 
 <style>
-  /* Background footage. The poster is the clip's first frame, so the switch
-     from poster to playback is invisible. The overlay keeps the centre column
-     light for the headline and dissolves into the page background where the
-     phones sit. */
-  .hero-bg {
-    /* Roughly the clip's 16:9 at viewport width, so the rider (lower third of
-       the frame) lands behind the subline and CTA instead of being cropped
-       away when the box stretches to the full hero height. */
-    bottom: auto;
-    height: min(100%, max(640px, 60vw));
+  /* Mobile first: three grid rows share one column; the photo spans the first
+     two (headline + open sky and rider), the text sits in the third on a dark
+     ground that continues the grass. */
+  .hero {
+    display: grid;
+    /* headline | sky and rider | subline | badges */
+    grid-template-rows: auto minmax(34svh, 1fr) auto auto;
+    background: #12170f;
   }
-  .hero-bg video {
-    filter: grayscale(1) contrast(1.05);
-    object-position: 50% 70%;
+  .hero-photo {
+    grid-row: 1 / 3;
+    grid-column: 1;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
   }
-  .hero-bg-overlay {
-    background:
-      radial-gradient(ellipse 70% 60% at 50% 40%, rgba(252, 252, 251, 0.86), rgba(252, 252, 251, 0.45) 70%, transparent 100%),
-      linear-gradient(to bottom, rgba(252, 252, 251, 0.38) 0%, rgba(252, 252, 251, 0.42) 45%, rgba(252, 252, 251, 0.85) 72%, #FCFCFB 100%);
-  }
-
-  /* Slot transforms live on the outer wrapper; the float keyframes animate the
-     inner .phone-frame, so the two transforms never fight. */
-  .hero-phone {
+  .hero-photo :global(img) {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 200px;
-    transform: translateX(calc(-50% + var(--tx))) scale(var(--s));
-    transform-origin: bottom center;
-    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease;
-    -webkit-tap-highlight-color: transparent;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 70%;
+    animation: settle 2.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   }
-  .slot-left   { --tx: -110px; --s: 0.64; z-index: 1; cursor: pointer; }
-  .slot-center { --tx: 0px;    --s: 1;    z-index: 10; cursor: zoom-in; }
-  .slot-center .phone-frame { animation: float 6s ease-in-out infinite; }
-  .slot-right  { --tx: 110px;  --s: 0.64; z-index: 1; cursor: pointer; }
-  .slot-hidden { --tx: 0px;    --s: 0.5;  z-index: 0; opacity: 0; pointer-events: none; }
-
-  /* :global because the dots are created in JS, so they don't carry Astro's scope attribute */
-  :global(.phone-dot) {
-    box-sizing: content-box;
-    width: 8px;
-    height: 8px;
-    border-radius: 9999px;
-    background: var(--color-slate-300);
-    background-clip: content-box;
-    cursor: pointer;
-    /* 24px touch target around the 8px dot */
-    padding: 8px;
-    border: none;
-    transition: width 0.3s ease, background-color 0.3s ease;
+  .hero-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(8 30 50 / 0.5), rgb(8 30 50 / 0.15) 50%, rgb(18 23 15 / 0) 72%, #12170f);
   }
-  :global(.phone-dot:hover) {
-    background: var(--color-slate-400);
-    background-clip: content-box;
+  /* Below lg the head's two parts take their own rows: the headline over the
+     photo, the subline under it, so the rider stays clear. */
+  .hero-head { display: contents; }
+  .hero-title {
+    grid-row: 1;
+    grid-column: 1;
+    /* room for the floating nav, which is taller below lg (link strip) */
+    padding-top: 150px;
   }
-  :global(.phone-dot.active) {
-    width: 24px;
-    background: var(--color-accent);
-    background-clip: content-box;
+  .hero-copy {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .hero-copy > p { max-width: 40rem; }
+  .hero-foot {
+    grid-row: 4;
+    grid-column: 1;
+    padding-top: 28px;
+    padding-bottom: 48px;
   }
 
-  .slot-left:hover,
-  .slot-right:hover {
-    --s: 0.68;
+  .hero-title {
+    font-size: clamp(46px, 7.4vw, 116px);
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+    text-shadow: 0 2px 30px rgb(0 30 60 / 0.25);
+  }
+  /* Each line rises out of its own mask. The padding keeps descenders (g, p)
+     inside the mask; the negative margin gives the space back. */
+  .hero-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.16em;
+    margin-bottom: -0.16em;
+  }
+  .hero-line > span {
+    display: block;
+    animation: rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(var(--i) * 120ms + 250ms);
+  }
+  .hero-line--thin {
+    font-size: 0.46em;
+    margin-top: 0.3em;
+    padding-bottom: 0.2em;
+  }
+  .hero-line--thin > span {
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+  .hero-enter {
+    animation: enter 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+    animation-delay: calc(var(--i) * 90ms + 250ms);
+  }
+  .hero-shadow { text-shadow: 0 1px 18px rgb(0 25 50 / 0.45); }
+  .hero-badge { display: block; transition: transform 0.2s ease; }
+  .hero-badge:hover { transform: translateY(-2px); }
+
+  .hero-phone {
+    display: none;
+    width: 240px;
+    padding: 9px;
+    border-radius: 40px;
+    background: #0b0b0c;
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08), 0 40px 80px -30px rgb(0 0 0 / 0.6);
+    cursor: zoom-in;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .hero-phone:hover { transform: translateY(-4px); }
+  .hero-phone:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+
+  @media (min-width: 1024px) {
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100svh;
+      min-height: max(100svh, 760px);
+    }
+    .hero-photo { position: absolute; inset: 0; }
+    .hero-photo :global(img) { object-position: 35% 60%; }
+    .hero-photo::after {
+      background: linear-gradient(180deg, rgb(8 30 50 / 0.45), rgb(8 30 50 / 0.12) 38%, rgb(0 0 0 / 0) 55%, rgb(0 0 0 / 0.6));
+    }
+    .hero-head { display: block; padding-top: 116px; }
+    .hero-title { padding-top: 0; }
+    .hero-copy { margin-top: 28px; }
+    /* The phone sits on the container's right edge, out of the flow, so it
+       never makes the hero taller than the screen. */
+    .hero-phone {
+      display: block;
+      position: absolute;
+      right: max(4rem, calc((100vw - 1248px) / 2 + 4rem));
+      bottom: 48px;
+      width: min(230px, 17vw);
+    }
   }
 
-  @media (min-width: 768px) {
-    .hero-phone { width: 300px; }
-    .slot-left   { --tx: -265px; --s: 0.77; }
-    .slot-right  { --tx: 265px;  --s: 0.77; }
-    .slot-left:hover,
-    .slot-right:hover { --s: 0.81; }
-  }
+  @keyframes settle { from { transform: scale(1.07); } to { transform: none; } }
+  @keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+  @keyframes enter { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 
   @media (prefers-reduced-motion: reduce) {
-    .hero-phone { transition: none; }
-    .slot-center .phone-frame { animation: none; }
+    .hero-photo :global(img), .hero-line > span, .hero-enter { animation: none; }
+    .hero-badge, .hero-phone { transition: none; }
   }
 </style>
 
 <script>
-  // Background clip: pick the source by viewport, skip it where motion or data is unwanted.
-  const video = document.getElementById('hero-video') as HTMLVideoElement | null;
-  if (video) {
-    const wide = window.matchMedia('(min-width: 768px)').matches;
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true;
-    const src = wide ? video.dataset.src : video.dataset.srcMobile;
-    if (!reduced && !saveData && src) {
-      video.src = src;
-      video.play().catch(() => { /* autoplay blocked: poster stays */ });
-    }
-  }
-
-  const stage = document.getElementById('phone-stage');
-
-  if (stage) {
-    const phones = Array.from(stage.querySelectorAll<HTMLElement>('.hero-phone'));
-    const n = phones.length;
-
-    // Phones form a ring in DOM order; only center and its two neighbours are visible.
-    let center = phones.findIndex((p) => p.classList.contains('slot-center'));
-
-    // One dot per phone, active dot = centered phone
-    const dotsContainer = document.getElementById('phone-dots');
-    const dots = phones.map((p, i) => {
-      const dot = document.createElement('button');
-      dot.className = 'phone-dot';
-      dot.type = 'button';
-      dot.setAttribute('aria-label', p.getAttribute('aria-label') ?? `Show screenshot ${i + 1}`);
-      dot.addEventListener('click', () => {
-        center = i;
-        apply();
-      });
-      dotsContainer?.appendChild(dot);
-      return dot;
-    });
-
-    const apply = () => {
-      phones.forEach((p, i) => {
-        p.classList.remove('slot-left', 'slot-center', 'slot-right', 'slot-hidden');
-        if (i === center) p.classList.add('slot-center');
-        else if (i === (center - 1 + n) % n) p.classList.add('slot-left');
-        else if (i === (center + 1) % n) p.classList.add('slot-right');
-        else p.classList.add('slot-hidden');
-        const hidden = p.classList.contains('slot-hidden');
-        p.tabIndex = hidden ? -1 : 0;
-        p.setAttribute('aria-hidden', hidden ? 'true' : 'false');
-      });
-      dots.forEach((d, i) => {
-        d.classList.toggle('active', i === center);
-        d.setAttribute('aria-current', i === center ? 'true' : 'false');
-      });
-    };
-    apply();
-
-    // dir = +1 brings the right phone to center, -1 brings the left one.
-    const rotate = (dir: number) => {
-      center = (center + dir + n) % n;
-      apply();
-    };
-
-    // Center phone opens the lightbox with its full-size screenshot
-    const zoomCenter = (p: HTMLElement) => {
-      const img = p.querySelector('img');
-      if (!img) return;
+  document.querySelectorAll<HTMLElement>('.hero [data-lightbox-src]').forEach((el) => {
+    el.addEventListener('click', () => {
       document.dispatchEvent(new CustomEvent('lightbox:open', {
-        detail: { src: img.src, alt: img.alt },
+        detail: { src: el.dataset.lightboxSrc, alt: el.dataset.lightboxAlt },
       }));
-    };
-
-    phones.forEach((p) => {
-      p.addEventListener('click', () => {
-        if (p.classList.contains('slot-right')) rotate(1);
-        else if (p.classList.contains('slot-left')) rotate(-1);
-        else zoomCenter(p);
-      });
-      p.addEventListener('keydown', (e) => {
-        if (e.key !== 'Enter' && e.key !== ' ') return;
-        e.preventDefault();
-        if (p.classList.contains('slot-right')) rotate(1);
-        else if (p.classList.contains('slot-left')) rotate(-1);
-        else zoomCenter(p);
-      });
     });
-
-    // Arrow keys move the carousel while focus is inside the stage
-    stage.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') { e.preventDefault(); rotate(1); }
-      else if (e.key === 'ArrowLeft') { e.preventDefault(); rotate(-1); }
-    });
-
-    // Horizontal swipe on touch devices
-    let startX: number | null = null;
-    stage.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
-    stage.addEventListener('touchend', (e) => {
-      if (startX === null) return;
-      const dx = e.changedTouches[0].clientX - startX;
-      startX = null;
-      if (Math.abs(dx) < 40) return;
-      rotate(dx < 0 ? 1 : -1);
-    }, { passive: true });
-  }
+  });
 </script>

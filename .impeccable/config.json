@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "createdAt": "2026-11-10T12:56:17.964Z",
+        "reason": "Claude decision: CoachSection quote cards imitate the ENDURE app UI, whose screenshots beside them are set in Roboto; the site itself uses Sora"
+      }
+    ]
+  }
+}

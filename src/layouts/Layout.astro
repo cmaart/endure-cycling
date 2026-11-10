@@ -21,6 +21,8 @@ interface Props {
   breadcrumb?: string;
   /** Absolute URL of a page-specific social preview image (1200x630). */
   ogImage?: string;
+  /** Nav floats over a full-bleed photo hero (homepage). */
+  navOverlay?: boolean;
 }
 
 const { lang = (Astro.currentLocale as 'en' | 'de') || 'en' } = Astro.props;
@@ -290,6 +292,7 @@ const storeUrls = Object.values(config.platforms)
       lang={lang}
       enPath={localeHref('en', basePath)}
       dePath={isTranslated ? localeHref('de', basePath) : localeHref('de')}
+      overlay={Astro.props.navOverlay}
     />
     <slot />
     <CookieBanner lang={lang} />

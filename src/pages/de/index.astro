@@ -6,6 +6,7 @@ import Proof from '../../components/Proof.astro';
 import CoachSection from '../../components/CoachSection.astro';
 import PlatformsShowcase from '../../components/PlatformsShowcase.astro';
 import Trial from '../../components/Trial.astro';
+import VideoBand from '../../components/VideoBand.astro';
 import ZwiftClickFeature from '../../components/ZwiftClickFeature.astro';
 import LactateFeature from '../../components/LactateFeature.astro';
 import CoreTempFeature from '../../components/CoreTempFeature.astro';
@@ -17,14 +18,14 @@ import Lightbox from '../../components/Lightbox.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<Layout lang="de">
-  <link rel="preload" as="image" href="/videos/hero-ride.webp" fetchpriority="high" slot="head" />
+<Layout lang="de" navOverlay>
   <main>
     <Hero />
     <Ticker />
     <CoachSection />
     <PlatformsShowcase />
     <Proof />
+    <VideoBand />
     <Trial />
     <Features />
     <ZwiftClickFeature />

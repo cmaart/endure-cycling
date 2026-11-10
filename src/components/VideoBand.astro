@@ -1,0 +1,149 @@
+---
+/**
+ * Full-bleed ride film between Proof and Trial (2026-11-10, trial run: the
+ * team decides after seeing it live whether it stays). A 9.4 s seamless loop
+ * cut from the 4K drone shot (0:06 to 0:16, last 0.6 s crossfaded into the
+ * start): 1080p 3.5 MB, 720p 2.2 MB on phones. The clip loads only when the
+ * band comes near the viewport and pauses off screen; reduced motion and
+ * save-data keep the poster. One button pauses and resumes it.
+ */
+import { getTranslations } from '../i18n/translations';
+
+const lang = (Astro.currentLocale as 'en' | 'de') || 'en';
+const t = getTranslations(lang).videoBand;
+---
+
+<section class="video-band relative isolate overflow-hidden text-white" aria-labelledby="video-band-title">
+  <video
+    class="video-band-film"
+    muted
+    loop
+    playsinline
+    disablepictureinpicture
+    preload="none"
+    poster="/videos/ride-loop.webp"
+    data-src="/videos/ride-loop.mp4"
+    data-src-mobile="/videos/ride-loop-mobile.mp4"
+    aria-hidden="true"
+  ></video>
+
+  <div class="video-band-copy page-container">
+    <h2 id="video-band-title" class="text-4xl md:text-6xl lg:text-[88px] font-extrabold tracking-[-0.05em] leading-[0.95] text-balance">{t.headline}</h2>
+    <p class="mt-4 max-w-[32rem] text-base md:text-lg leading-relaxed text-white/90 text-pretty">{t.body}</p>
+  </div>
+
+  <button type="button" class="video-band-toggle" hidden data-pause={t.pause} data-play={t.play} aria-label={t.pause}>
+    <svg class="icon-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1" /><rect x="9.5" y="2" width="3.5" height="12" rx="1" /></svg>
+    <svg class="icon-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" /></svg>
+  </button>
+</section>
+
+<style>
+  .video-band {
+    height: 100svh;
+    min-height: 560px;
+    max-height: 1100px;
+    background: #2b3a2a url('/videos/ride-loop.webp') center / cover;
+  }
+  .video-band-film {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 40% 50%;
+  }
+  /* Darkens the lower right, where the copy sits; the rider rides on the left. */
+  .video-band::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(110deg, rgb(0 0 0 / 0) 45%, rgb(0 0 0 / 0.55));
+  }
+  .video-band-copy {
+    position: absolute;
+    inset: auto 0 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    text-shadow: 0 1px 18px rgb(0 0 0 / 0.35);
+  }
+  .video-band-copy h2 { max-width: 12ch; }
+  .video-band-toggle {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 9999px;
+    border: 1px solid rgb(255 255 255 / 0.4);
+    background: rgb(0 0 0 / 0.35);
+    color: #fff;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  .video-band-toggle:hover { background: rgb(0 0 0 / 0.55); transform: translateY(-1px); }
+  .video-band-toggle:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  .video-band-toggle[hidden] { display: none; }
+  .video-band-toggle svg { width: 16px; height: 16px; }
+  .video-band-toggle .icon-play { display: none; }
+  .video-band-toggle[data-state='paused'] .icon-pause { display: none; }
+  .video-band-toggle[data-state='paused'] .icon-play { display: block; }
+
+  @media (max-width: 767px) {
+    .video-band { height: 80svh; }
+    .video-band-film { object-position: 35% 50%; }
+    .video-band::after { background: linear-gradient(180deg, rgb(0 0 0 / 0) 35%, rgb(0 0 0 / 0.5) 60%, rgb(0 0 0 / 0.8)); }
+    .video-band-copy { inset: auto 0 84px; align-items: flex-start; text-align: left; }
+  }
+</style>
+
+<script>
+  const band = document.querySelector<HTMLElement>('.video-band');
+  const video = band?.querySelector<HTMLVideoElement>('video');
+  const toggle = band?.querySelector<HTMLButtonElement>('.video-band-toggle');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true;
+
+  if (band && video && toggle && !reduced && !saveData && 'IntersectionObserver' in window) {
+    let userPaused = false;
+    const setState = (paused: boolean) => {
+      toggle.dataset.state = paused ? 'paused' : 'playing';
+      toggle.setAttribute('aria-label', (paused ? toggle.dataset.play : toggle.dataset.pause) ?? '');
+    };
+
+    // Attach the source shortly before the band scrolls in; play only while visible.
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (!video.src) {
+            const wide = window.matchMedia('(min-width: 768px)').matches;
+            video.src = (wide ? video.dataset.src : video.dataset.srcMobile) ?? '';
+            toggle.hidden = false;
+          }
+          if (!userPaused) video.play().then(() => setState(false)).catch(() => setState(true));
+        } else if (video.src) {
+          video.pause();
+        }
+      });
+    }, { rootMargin: '200px 0px' });
+    observer.observe(band);
+
+    toggle.addEventListener('click', () => {
+      if (video.paused) {
+        userPaused = false;
+        video.play().then(() => setState(false)).catch(() => setState(true));
+      } else {
+        userPaused = true;
+        video.pause();
+        setState(true);
+      }
+    });
+  }
+</script>
