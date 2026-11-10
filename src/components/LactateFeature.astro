@@ -53,7 +53,7 @@ const t = getTranslations(lang).lactate;
 
       <!-- Right: in-app demo video in a floating phone frame -->
       <div data-reveal class="flex flex-col items-center">
-        <div class="w-[280px] md:w-[320px] phone-frame rounded-[42px] !border-[9px]">
+        <div class="relative w-[280px] md:w-[320px] phone-frame rounded-[42px] !border-[9px]">
           <video
             loop
             muted
@@ -65,8 +65,11 @@ const t = getTranslations(lang).lactate;
           >
             <source src="/videos/lactate_entry.mp4" type="video/mp4" />
           </video>
+          <button type="button" class="lactate-toggle absolute bottom-3 right-3 grid h-11 w-11 place-items-center rounded-full border border-white/40 bg-black/70 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" data-play={lang === 'de' ? 'Video abspielen' : 'Play video'} data-pause={lang === 'de' ? 'Video pausieren' : 'Pause video'} aria-label={lang === 'de' ? 'Video abspielen' : 'Play video'}>
+            <svg class="lactate-play h-4 w-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" /></svg>
+            <svg class="lactate-pause hidden h-4 w-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1" /><rect x="9.5" y="2" width="3.5" height="12" rx="1" /></svg>
+          </button>
         </div>
-        <button type="button" class="lactate-toggle mt-4 min-h-11 px-4 rounded-full border border-slate-300 font-semibold text-slate-700" data-play={lang === 'de' ? 'Video abspielen' : 'Play video'} data-pause={lang === 'de' ? 'Video pausieren' : 'Pause video'}>{lang === 'de' ? 'Video abspielen' : 'Play video'}</button>
         <p class="text-center text-slate-500 text-sm mt-4">
           {t.videoCaption}
         </p>
@@ -104,7 +107,11 @@ const t = getTranslations(lang).lactate;
   const video = document.querySelector<HTMLVideoElement>('#lactate video');
   const button = document.querySelector<HTMLButtonElement>('#lactate .lactate-toggle');
   if (video && button) {
-    const update = () => { button.textContent = video.paused ? button.dataset.play ?? '' : button.dataset.pause ?? ''; };
+    const update = () => {
+      button.setAttribute('aria-label', (video.paused ? button.dataset.play : button.dataset.pause) ?? '');
+      button.querySelector('.lactate-play')?.classList.toggle('hidden', !video.paused);
+      button.querySelector('.lactate-pause')?.classList.toggle('hidden', video.paused);
+    };
     video.addEventListener('play', update);
     video.addEventListener('pause', update);
     button.addEventListener('click', () => { if (video.paused) void video.play().catch(update); else video.pause(); });
