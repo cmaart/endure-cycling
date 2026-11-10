@@ -16,7 +16,8 @@ import LastseenLayout from '../../layouts/LastseenLayout.astro';
         Location” (package <code>com.cmart.bluetoothfinder</code>, “Lastseen”, “we”, “us”), handles data. Lastseen
         records when and where your phone was connected to your Bluetooth devices, so you can find a lost device. In
         short: your history and your locations never leave your phone. Lastseen has no account and no own server. The
-        only data we receive are crash and error reports without personal data, and you can switch them off.
+        only data we receive are anonymous usage statistics (how many installations use the app) and crash reports,
+        both without personal data. You can switch crash reports off.
       </p>
 
       <h2 class="text-2xl font-bold text-slate-900 pt-6">1. Controller / Contact</h2>
@@ -87,6 +88,12 @@ import LastseenLayout from '../../layouts/LastseenLayout.astro';
         the IP address of the connection that delivers a report. Crash reports are on by default; you can switch them
         off in Settings. Legal basis: our legitimate interest in a working app (GDPR Art. 6(1)(f)). Reports are kept
         for up to 90 days.
+      </p>
+      <p>
+        Usage statistics are always on and not affected by this switch: when the app starts and stops, Lastseen sends a
+        session ping to Sentry with the random installation ID, app version, Android version and whether the session
+        ended in a crash. It tells us how many installations use the app and how stable it is. It contains no places,
+        device names, Bluetooth addresses or other personal data. Legal basis and retention as above.
       </p>
 
       <h2 class="text-2xl font-bold text-slate-900 pt-6">7. Trial and purchases (Google Play)</h2>
