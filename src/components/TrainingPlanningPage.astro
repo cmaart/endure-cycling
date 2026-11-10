@@ -52,18 +52,11 @@ const webAppHost = new URL(config.webApp.url).host;
         </nav>
 
         <div class="max-w-[880px] mx-auto text-center">
-          {t.eyebrow && (
-            <div class="inline-flex items-center gap-2.5 rounded-full border border-accent/35 bg-accent/[0.06] px-5 py-2 text-sm text-slate-700 mb-7">
-              <span class="w-[7px] h-[7px] rounded-full bg-accent" aria-hidden="true"></span>
-              {t.eyebrow}
-            </div>
-          )}
           <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.06] tracking-[-0.03em] text-slate-900 text-balance mb-5">{t.h1}{t.beta && <BetaTag />}</h1>
           <p class="text-lg md:text-xl font-medium text-slate-600 text-pretty mb-8">{t.subtitle}</p>
 
           <!-- Direct answer (featured-snippet target): real text, not an image -->
           <div class="text-left bg-white border border-slate-200 rounded-2xl p-6 md:p-8 mb-8">
-            {t.directAnswerLabel && <div class="mono-label mb-3">{t.directAnswerLabel}</div>}
             <p class="text-[17px] leading-relaxed text-slate-800">{t.directAnswer}</p>
           </div>
 

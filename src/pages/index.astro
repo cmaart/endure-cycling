@@ -18,6 +18,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
+  <link rel="preload" as="image" href="/videos/hero-ride.webp" fetchpriority="high" slot="head" />
   <script is:inline slot="head">
     // Auto-redirect to German if browser is German and no preference set
     (function() {

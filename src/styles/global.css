@@ -4,7 +4,6 @@
 @theme {
   /* Background Colors: warm off-white light theme */
   --color-endure-bg-primary: #FCFCFB;
-  --color-endure-bg-secondary: #FCFCFB;
   --color-endure-surface: #ffffff;
   --color-endure-surface-light: #F4F4F2;
 
@@ -24,7 +23,7 @@
   /* Text Colors */
   --color-endure-text-primary: #16181D;
   --color-endure-text-secondary: #5F646D;
-  --color-endure-text-muted: #7A7E86;
+  --color-endure-text-muted: #6B6F77;
 
   /* Remap the slate scale used across components onto Motion neutrals,
      so the whole site picks up the ink (#16181D) / muted (#5F646D) palette. */
@@ -33,7 +32,7 @@
   --color-slate-200: #E5E5E1;
   --color-slate-300: #CBCCC8;
   --color-slate-400: #9DA0A6;
-  --color-slate-500: #7A7E86;
+  --color-slate-500: #6B6F77;
   --color-slate-600: #5F646D;
   --color-slate-700: #444951;
   --color-slate-800: #2A2D34;
@@ -58,21 +57,6 @@ body {
 }
 
 /* Custom Utilities */
-/* Formerly a pink/purple gradient. Motion uses a single accent color. */
-.gradient-text,
-.text-gradient-primary {
-  color: var(--color-accent);
-}
-
-.glow-pink {
-  box-shadow: 0 0 60px 20px rgba(194, 85, 43, 0.05),
-              0 0 100px 40px rgba(95, 100, 109, 0.05);
-}
-
-.glow-orange {
-  box-shadow: 0 0 30px 10px rgba(194, 85, 43, 0.1);
-}
-
 .card-surface {
   background: rgba(22, 24, 29, 0.03);
   border: 1px solid rgba(22, 24, 29, 0.10);
@@ -90,7 +74,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
 }
 
@@ -112,7 +96,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
 }
 
@@ -148,15 +132,6 @@ body {
   animation: float-tilt 5.5s ease-in-out infinite;
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(194, 85, 43, 0.35); }
-  50% { box-shadow: 0 0 0 10px rgba(194, 85, 43, 0); }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2.6s ease-in-out infinite;
-}
-
 @keyframes ticker-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -169,7 +144,6 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
   .animate-float-tilt,
-  .animate-pulse-glow,
   .animate-ticker {
     animation: none;
   }
@@ -182,22 +156,6 @@ body {
   overflow: hidden;
   background: #000;
   box-shadow: 0 30px 80px rgba(22, 24, 29, 0.16);
-}
-
-/* Floating stat chip over the hero phones */
-.stat-chip {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  padding: 14px 20px;
-}
-
-@media (max-width: 767px) {
-  .stat-chip {
-    padding: 8px 12px;
-    border-radius: 12px;
-  }
 }
 
 /* Card surface transition + lift-on-hover with accent-tinted shadow */
@@ -215,16 +173,15 @@ body {
 }
 
 /* Scroll-reveal: elements with [data-reveal] start hidden + slightly translated, ease in when .is-revealed */
-[data-reveal] {
+html.js [data-reveal] {
   opacity: 0;
-  transform: translateY(36px);
+  transform: translateY(24px);
   transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
               transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-[data-reveal="left"] { transform: translateX(-48px); }
-[data-reveal="right"] { transform: translateX(48px); }
-[data-reveal].is-revealed {
+  }
+html.js [data-reveal="left"] { transform: translateX(-32px); }
+html.js [data-reveal="right"] { transform: translateX(32px); }
+html.js [data-reveal].is-revealed {
   opacity: 1;
   transform: none;
 }
@@ -235,9 +192,35 @@ body {
 [data-reveal][data-reveal-delay="500"] { transition-delay: 500ms; }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal] {
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .hover-lift:hover {
+    transform: none;
+  }
+  html.js [data-reveal] {
     opacity: 1;
     transform: none;
     transition: none;
   }
+}
+
+/* Browser surfaces themed from the palette */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+  border-radius: 14px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 28%, white);
+  color: var(--color-endure-text-primary);
+}
+
+a {
+  text-underline-offset: 3px;
 }

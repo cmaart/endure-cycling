@@ -58,7 +58,7 @@ const faqSchema = {
     <p class="font-mono text-xs tracking-[0.04em] text-slate-500 mb-8">{updatedLabel} <time datetime={t.dateModified}>{formatDate(t.dateModified)}</time></p>
 
     <!-- Direct answer (featured-snippet target) -->
-    <p class="text-lg leading-relaxed font-medium bg-slate-50 border-l-4 border-accent rounded-r-xl px-6 py-5 mb-8">
+    <p class="text-lg leading-relaxed font-medium bg-accent/[0.06] rounded-2xl px-6 py-5 mb-8">
       {t.directAnswer}
     </p>
 
@@ -179,4 +179,4 @@ const faqSchema = {
     </a>
   </main>
   <Footer />
-</Layout>
+</Layout>

@@ -32,10 +32,6 @@ const chip = 'absolute right-3 bottom-3 inline-flex items-center gap-1.5 rounded
 
       <header data-reveal class="flex flex-col lg:flex-row lg:items-end gap-5 lg:gap-16">
         <div class="lg:basis-7/12">
-          <div class="flex items-center gap-3 font-mono text-[13px] tracking-[0.04em] text-accent mb-5 md:mb-6">
-            <span class="inline-block w-10 h-px bg-accent" aria-hidden="true"></span>
-            {t.eyebrow}
-          </div>
           <h2 class="text-4xl md:text-6xl font-extrabold tracking-[-0.03em] leading-[1.05] text-slate-900 text-balance">
             {t.headline}
           </h2>
@@ -52,7 +48,7 @@ const chip = 'absolute right-3 bottom-3 inline-flex items-center gap-1.5 rounded
             <h3 class={stepTitle}>{weekPlanner.title}<BetaTag /></h3>
             <p class={stepBody}>{weekPlanner.body}</p>
           </div>
-          <div data-reveal data-reveal-delay="100" class="lg:basis-7/12 min-w-0">
+          <div data-reveal class="lg:basis-7/12 min-w-0">
             <button type="button" class:list={[imageButton, 'max-w-[480px] mx-auto']} data-lightbox-src={weekPlannerImg.src} data-lightbox-alt={weekPlanner.imageAlt}>
               <img src={weekPlannerImg.src} alt={weekPlanner.imageAlt} width={weekPlannerImg.width} height={weekPlannerImg.height} loading="lazy" decoding="async" class="block w-full h-auto" />
               <span aria-hidden="true" class={chip}>
@@ -72,7 +68,7 @@ const chip = 'absolute right-3 bottom-3 inline-flex items-center gap-1.5 rounded
             </div>
             <p class:list={[stepBody, 'lg:basis-7/12 max-w-2xl']}>{planWithCoach.body}</p>
           </div>
-          <figure data-reveal data-reveal-delay="100" class="mt-8 md:mt-10">
+          <figure data-reveal class="mt-8 md:mt-10">
             <button type="button" class:list={[imageButton, 'aspect-[580/1289] md:aspect-auto md:rounded-[20px]']} data-lightbox-src={planWithCoachImg.src} data-lightbox-alt={planWithCoach.imageAlt}>
               <img src={planWithCoachImg.src} alt={planWithCoach.imageAlt} width={planWithCoachImg.width} height={planWithCoachImg.height} loading="lazy" decoding="async" class="block w-full h-full object-cover object-right-top md:h-auto" />
               <span aria-hidden="true" class={chip}>
@@ -98,7 +94,7 @@ const chip = 'absolute right-3 bottom-3 inline-flex items-center gap-1.5 rounded
               <p class="text-[15px] md:text-base leading-relaxed text-slate-600">{t.daily.body}</p>
             </div>
           </div>
-          <div data-reveal data-reveal-delay="100" class="lg:basis-7/12 min-w-0">
+          <div data-reveal class="lg:basis-7/12 min-w-0">
             <button type="button" class:list={[imageButton, 'max-w-[600px] lg:max-w-[620px] mx-auto']} data-lightbox-src={sessionImg.src} data-lightbox-alt={session.imageAlt}>
               <img src={sessionImg.src} alt={session.imageAlt} width={sessionImg.width} height={sessionImg.height} loading="lazy" decoding="async" class="block w-full h-auto" />
               <span aria-hidden="true" class={chip}>

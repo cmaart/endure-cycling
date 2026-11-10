@@ -1,6 +1,5 @@
 ---
 import { getTranslations } from '../i18n/translations';
-import FeatureCard from './FeatureCard.astro';
 import { localeHref } from '../utils/paths';
 import { appShotDir } from '../utils/appShots';
 
@@ -15,6 +14,13 @@ const screens = getTranslations(lang).appScreens;
  * size. The rest of the set stays in the carousel.
  */
 const app = appShotDir(lang);
+const groups = [
+  { title: t.performance.title, items: [t.performance.feature1, t.performance.feature2, t.performance.feature3] },
+  { title: t.analytics.title, items: [t.analytics.feature1, t.analytics.feature2, t.analytics.feature3] },
+  { title: t.training.title, items: [t.training.feature1, t.training.feature2, t.training.feature3] },
+  { title: t.connectivity.title, items: [t.connectivity.feature1, t.connectivity.feature2, t.connectivity.feature3, t.connectivity.feature4] },
+];
+
 const screenshots = [
   { src: `${app}/ride_screen.webp`, ...screens.ride },
   { src: `${app}/vo2max_detail.webp`, ...screens.vo2max },
@@ -46,66 +52,26 @@ const screenshots = [
       </div>
     </div>
 
-    <!-- Feature Grid -->
-    <div class="grid md:grid-cols-2 gap-5">
-      <!-- Fast & Rock-Solid -->
-      <div data-reveal>
-        <FeatureCard
-          title={t.performance.title}
-          stat="< 30 s"
-          features={[
-            t.performance.feature1,
-            t.performance.feature2,
-            t.performance.feature3
-          ]}
-        />
-      </div>
-
-      <!-- Deep Progress Analytics -->
-      <div data-reveal data-reveal-delay="100">
-        <FeatureCard
-          title={t.analytics.title}
-          stat="FTP · VO2"
-          features={[
-            t.analytics.feature1,
-            t.analytics.feature2,
-            t.analytics.feature3
-          ]}
-        />
-      </div>
-
-      <!-- Structured Training -->
-      <div data-reveal data-reveal-delay="200">
-        <FeatureCard
-          title={t.training.title}
-          stat="ERG"
-          features={[
-            t.training.feature1,
-            t.training.feature2,
-            t.training.feature3
-          ]}
-        />
-      </div>
-
-      <!-- Connectivity & Sync -->
-      <div data-reveal data-reveal-delay="300">
-        <FeatureCard
-          title={t.connectivity.title}
-          stat="BLE"
-          features={[
-            t.connectivity.feature1,
-            t.connectivity.feature2,
-            t.connectivity.feature3,
-            t.connectivity.feature4
-          ]}
-        />
-      </div>
+    <!-- Feature list: ruled rows, one group per row -->
+    <div class="max-w-5xl mx-auto border-t border-slate-200">
+      {groups.map((group) => (
+        <div class="grid md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] gap-4 md:gap-12 py-8 md:py-10 border-b border-slate-200">
+          <h3 class="text-xl md:text-2xl font-bold tracking-[-0.01em] text-slate-900">{group.title}</h3>
+          <ul class="grid sm:grid-cols-2 gap-x-10 gap-y-3">
+            {group.items.map((item) => (
+              <li class="relative pl-5 text-slate-600 text-[15px] leading-relaxed before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-accent">
+                <span set:html={item} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
 
     <!-- Screenshot showcase -->
-    <div class="mt-20 mx-auto max-w-[900px] flex flex-wrap justify-center gap-x-8 gap-y-12">
-      {screenshots.map((shot, idx) => (
-        <div class="w-[240px] md:w-[260px]" data-reveal data-reveal-delay={idx % 2 === 1 ? 100 : undefined}>
+    <div class="mt-20 mx-auto max-w-[900px] flex flex-wrap justify-center gap-x-8 gap-y-12" data-reveal>
+      {screenshots.map((shot) => (
+        <div class="w-[240px] md:w-[260px]">
           <img
             src={shot.src}
             alt={shot.alt}

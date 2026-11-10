@@ -161,10 +161,11 @@ const storeUrls = Object.values(config.platforms)
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={ogImageAlt} />
     
-    <!-- Fonts -->
-    <!-- Fonts -->
-    <!-- Inter font is now imported in the frontmatter via @fontsource/inter -->
-    
+    <!-- Fonts (Sora, IBM Plex Mono) are imported in the frontmatter via @fontsource -->
+
+    <!-- Scroll-reveal hides elements only when JS runs, so no-JS visitors and crawlers see everything -->
+    <script is:inline>document.documentElement.classList.add('js');</script>
+
     <!-- Styles -->
     <style is:global>
       @import "../styles/global.css";
