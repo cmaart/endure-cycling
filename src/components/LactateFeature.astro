@@ -55,18 +55,18 @@ const t = getTranslations(lang).lactate;
       <div data-reveal class="flex flex-col items-center">
         <div class="w-[280px] md:w-[320px] phone-frame rounded-[42px] !border-[9px]">
           <video
-            autoplay
             loop
             muted
             playsinline
             preload="metadata"
             poster="/assets/screenshots/lactate_lt1_lt2_estimate.png"
-            aria-label="Lactate entry demo"
+            aria-label={lang === 'de' ? 'Laktateingabe-Demo' : 'Lactate entry demo'}
             class="w-full h-auto"
           >
             <source src="/videos/lactate_entry.mp4" type="video/mp4" />
           </video>
         </div>
+        <button type="button" class="lactate-toggle mt-4 min-h-11 px-4 rounded-full border border-slate-300 font-semibold text-slate-700" data-play={lang === 'de' ? 'Video abspielen' : 'Play video'} data-pause={lang === 'de' ? 'Video pausieren' : 'Pause video'}>{lang === 'de' ? 'Video abspielen' : 'Play video'}</button>
         <p class="text-center text-slate-500 text-sm mt-4">
           {t.videoCaption}
         </p>
@@ -100,3 +100,14 @@ const t = getTranslations(lang).lactate;
     </div>
   </div>
 </section>
+<script>
+  const video = document.querySelector<HTMLVideoElement>('#lactate video');
+  const button = document.querySelector<HTMLButtonElement>('#lactate .lactate-toggle');
+  if (video && button) {
+    const update = () => { button.textContent = video.paused ? button.dataset.play ?? '' : button.dataset.pause ?? ''; };
+    video.addEventListener('play', update);
+    video.addEventListener('pause', update);
+    button.addEventListener('click', () => { if (video.paused) void video.play().catch(update); else video.pause(); });
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) void video.play().catch(update);
+  }
+</script>

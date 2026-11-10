@@ -47,8 +47,7 @@ const steps = t.steps.map((step, i) => ({ ...step, ...shots[i] }));
           {steps.map((step, i) => (
             <li class="coach-step" data-step={i}>
               <h3 class="coach-step-title">
-                <span class="coach-step-n">0{i + 1}</span>
-                <span>{step.title}{step.beta && <BetaTag />}</span>
+                <button type="button" class="coach-step-control" disabled><span class="coach-step-n">0{i + 1}</span><span>{step.title}{step.beta && <BetaTag />}</span></button>
               </h3>
               <div class="coach-step-body">
                 <p>{step.body}</p>
@@ -121,6 +120,8 @@ const steps = t.steps.map((step, i) => ({ ...step, ...shots[i] }));
     letter-spacing: -0.03em;
     color: var(--color-slate-900);
   }
+  .coach-step-control { display: flex; align-items: baseline; gap: 14px; text-align: left; font: inherit; color: inherit; }
+  .coach-step-control:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
   .coach-step-n {
     flex: none;
     font: 800 15px var(--font-sans);
@@ -155,7 +156,7 @@ const steps = t.steps.map((step, i) => ({ ...step, ...shots[i] }));
   /* ---------- Pinned layout (lg, motion allowed) ---------- */
   @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
     .coach-pin {
-      height: calc(var(--n) * 90vh + 10vh);
+      height: calc(var(--n) * 50vh + 50vh);
       margin-top: 24px;
     }
     .coach-chap {
@@ -167,9 +168,11 @@ const steps = t.steps.map((step, i) => ({ ...step, ...shots[i] }));
       gap: 64px;
       align-items: center;
     }
-    .coach-step { padding: 22px 0; cursor: pointer; transition: border-color 0.35s; }
+    .coach-step { padding: 22px 0; transition: border-color 0.35s; }
     .coach-step-title { font-size: 26px; color: var(--color-slate-500); transition: color 0.35s; }
-    .coach-step-n { opacity: 0.6; transition: opacity 0.35s; }
+    .coach-step-control { display: flex; align-items: baseline; gap: 14px; text-align: left; font: inherit; color: inherit; }
+  .coach-step-control:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+  .coach-step-n { opacity: 0.6; transition: opacity 0.35s; }
     .coach-step-body {
       display: grid;
       grid-template-rows: 0fr;
@@ -315,7 +318,7 @@ const steps = t.steps.map((step, i) => ({ ...step, ...shots[i] }));
     const show = (i: number) => {
       if (i === current) return;
       current = i;
-      steps.forEach((s, k) => s.classList.toggle('on', k === i));
+      steps.forEach((s, k) => { s.classList.toggle('on', k === i); s.querySelector('.coach-step-control')?.setAttribute('aria-current', k === i ? 'step' : 'false'); });
       comps.forEach((c, k) => {
         c.classList.toggle('on', k === i);
         c.querySelector('button')?.setAttribute('tabindex', k === i ? '0' : '-1');
@@ -337,7 +340,8 @@ const steps = t.steps.map((step, i) => ({ ...step, ...shots[i] }));
     };
 
     // A click on a closed step scrolls to its share of the pinned range.
-    steps.forEach((s, k) => s.addEventListener('click', () => {
+    const updateControls = () => steps.forEach((s) => { const button = s.querySelector<HTMLButtonElement>('.coach-step-control'); if (button) button.disabled = !pinned.matches; });
+    steps.forEach((s, k) => s.querySelector('.coach-step-control')?.addEventListener('click', () => {
       if (!pinned.matches) return;
       const top = pin.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: top + (pin.offsetHeight - window.innerHeight) * (k + 0.1) / steps.length, behavior: 'smooth' });
@@ -346,7 +350,8 @@ const steps = t.steps.map((step, i) => ({ ...step, ...shots[i] }));
     show(0);
     window.addEventListener('scroll', tick, { passive: true });
     window.addEventListener('resize', tick);
-    pinned.addEventListener('change', tick);
+    pinned.addEventListener('change', () => { updateControls(); tick(); });
+    updateControls();
     tick();
   }
 </script>
