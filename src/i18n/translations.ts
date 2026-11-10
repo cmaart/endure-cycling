@@ -45,8 +45,8 @@ export const translations = {
     appScreens: {
       ride: {
         label: "Ride screen",
-        alt: "ENDURE ride screen with ERG target power, heart rate, cadence and CORE heat zone",
-        caption: "Ride Screen: precise ERG control with live CORE heat zones"
+        alt: "ENDURE ride screen with ERG target power, heart rate, cadence, interval progress and the workout chart",
+        caption: "Ride Screen: precise ERG control with the whole workout in view"
       },
       vo2max: {
         label: "VO2max trend",
@@ -622,8 +622,8 @@ export const translations = {
     appScreens: {
       ride: {
         label: "Ride Screen",
-        alt: "ENDURE Ride Screen mit ERG-Zielleistung, Herzfrequenz, Trittfrequenz und CORE Heat Zone",
-        caption: "Ride Screen: präzise ERG-Steuerung mit Live CORE Heat Zones"
+        alt: "ENDURE Ride Screen mit ERG-Zielleistung, Herzfrequenz, Trittfrequenz, Intervallfortschritt und Workout-Diagramm",
+        caption: "Ride Screen: präzise ERG-Steuerung mit dem ganzen Workout im Blick"
       },
       vo2max: {
         label: "VO2max-Trend",
