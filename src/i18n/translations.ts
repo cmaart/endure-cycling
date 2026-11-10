@@ -625,7 +625,7 @@ export const translations = {
       checks: ["14 Tage gratis", "Keine Zahlungsdaten", "Endet von selbst"],
       tagline: "Präzision statt Spielerei",
       headline1: "Jede Fahrt bringt dich weiter",
-      headline2: "Trainier nach deinem persönlichen Plan",
+      headline2: "Trainiere nach deinem persönlichen Plan",
       subline: "ENDURE plant das heutige Workout und auf Wunsch deine kommenden Wochen, aus deinen Fahrten, deiner Trainingsbelastung und einem kurzen Morgen-Check-in. FTP und VO2max kommen aus deinen normalen Fahrten, ganz ohne Test.",
       // Als H2 unter der Subline gerendert: die Headline trägt den Claim, diese
       // Zeile trägt die Begriffe, mit denen tatsächlich gesucht wird.
