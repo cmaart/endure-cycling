@@ -368,7 +368,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'What should I lower first when a workout is too hard?',
-          a: 'The ENDURE coach eases a hard session in this order: intensity first, then the number of reps, then the length of each rep. The Click covers the first step from the handlebar. A press lowers your ERG target, and the intervals stay as planned.'
+          a: 'Lower the intensity and keep the intervals as planned. The Click does that from the handlebar: a press lowers your ERG target. The ENDURE coach also suggests an easier alternative for each day.'
         },
         {
           q: 'Do I need a specific trainer for this?',
@@ -907,7 +907,7 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Was nehme ich zuerst zurück, wenn ein Workout zu hart ist?',
-          a: 'Der ENDURE-Coach nimmt eine harte Einheit in dieser Reihenfolge zurück: zuerst die Intensität, dann die Zahl der Wiederholungen, dann die Länge jeder Wiederholung. Den ersten Schritt erledigt der Click vom Lenker. Ein Druck senkt dein ERG-Ziel, und die Intervalle bleiben wie geplant.'
+          a: 'Nimm die Intensität zurück und lass die Intervalle wie geplant. Das erledigt der Click vom Lenker: Ein Druck senkt dein ERG-Ziel. Der ENDURE-Coach schlägt außerdem für jeden Tag eine leichtere Alternative vor.'
         },
         {
           q: 'Brauche ich dafür einen bestimmten Trainer?',

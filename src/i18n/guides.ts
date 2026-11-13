@@ -113,16 +113,8 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
           body: "Once you know both thresholds, ride most of your volume (typically around 80%) below LT1, where aerobic adaptations accumulate at a low fatigue cost. Place the quality work on purpose: sweet-spot and threshold sessions just below LT2 raise sustainable power, and intervals above LT2 develop VO2max. Re-test every 6-8 weeks. As fitness improves, both thresholds move to higher power, and your zones should follow."
         },
         {
-          title: "How does the ENDURE coach dose threshold work?",
-          body: "The AI coach in ENDURE plans threshold and sweet-spot sessions by a fixed set of rules. It states intensity in % of FTP and uses heart rate and perceived effort as a check. The rules work the same way if you plan your own week:",
-          bullets: [
-            "By default a week holds at most two hard days, with at least one easy day between them. The rest is easy endurance.",
-            "A typical threshold session is 3 × 8 minutes. Sweet spot is 3 × 12 minutes by default, ridden steadily.",
-            "No threshold or sweet-spot block runs longer than 20 minutes at a stretch. More work is split into more intervals.",
-            "The dose grows by time in zone: a planned session holds at most 1.5 times the most zone time you rode in a single ride in the last 28 days.",
-            "After a recovery week, the progression continues where it stopped.",
-            "Every session comes with its reason: how it fits the days around it and which signal in your data led to it."
-          ]
+          title: "How does the ENDURE coach plan threshold work?",
+          body: "The AI coach in ENDURE plans along the lines of this guide. Most of the week stays easy, and the hard days are few and spaced apart. It builds threshold and sweet-spot work up from what you have ridden recently, so a session asks for a little more than the last one and stays finishable. Each session comes with its reason, and you can change it in the chat."
         },
         {
           title: "How does ENDURE estimate LT1 and LT2?",
@@ -449,16 +441,8 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
           body: "Kennst du beide Schwellen, fährst du den Großteil deines Volumens (typischerweise rund 80 %) unter LT1. Dort sammeln sich aerobe Anpassungen bei geringen Ermüdungskosten an. Die Qualitätsarbeit setzt du gezielt: Sweet-Spot- und Schwelleneinheiten knapp unter LT2 heben die dauerhaft fahrbare Leistung, Intervalle über LT2 entwickeln die VO2max. Teste alle 6-8 Wochen nach. Mit steigender Fitness wandern beide Schwellen zu höherer Leistung, und deine Zonen sollten mitwandern."
         },
         {
-          title: "Wie dosiert der ENDURE-Coach Schwellentraining?",
-          body: "Der KI-Coach in ENDURE plant Schwellen- und Sweet-Spot-Einheiten nach festen Regeln. Die Intensität gibt er in % der FTP an, Herzfrequenz und Belastungsempfinden dienen als Kontrolle. Die Regeln gelten genauso, wenn du deine Woche selbst planst:",
-          bullets: [
-            "Eine Woche enthält standardmäßig höchstens zwei harte Tage, dazwischen liegt mindestens ein lockerer Tag. Der Rest ist lockere Grundlage.",
-            "Eine typische Schwelleneinheit ist 3 × 8 Minuten. Sweet Spot ist standardmäßig 3 × 12 Minuten, gleichmäßig gefahren.",
-            "Kein Schwellen- oder Sweet-Spot-Block dauert länger als 20 Minuten am Stück. Mehr Umfang wird auf mehr Intervalle verteilt.",
-            "Die Dosis wächst über die Zeit in der Zone: Eine geplante Einheit enthält höchstens das 1,5-Fache der längsten Zonenzeit, die du in den letzten 28 Tagen in einer einzelnen Fahrt gefahren bist.",
-            "Nach einer Erholungswoche geht die Progression dort weiter, wo sie stand.",
-            "Zu jeder Einheit nennt der Coach den Grund: wie sie zu den Tagen davor und danach passt und welches Signal in deinen Daten dazu geführt hat."
-          ]
+          title: "Wie plant der ENDURE-Coach Schwellentraining?",
+          body: "Der KI-Coach in ENDURE plant nach den Grundsätzen dieses Guides. Der Großteil der Woche bleibt locker, harte Tage sind wenige und liegen auseinander. Schwellen- und Sweet-Spot-Arbeit baut er auf dem auf, was du zuletzt gefahren bist. Eine Einheit verlangt also etwas mehr als die letzte und bleibt fahrbar. Zu jeder Einheit nennt der Coach den Grund, und du kannst sie im Chat ändern."
         },
         {
           title: "Wie schätzt ENDURE LT1 und LT2?",
