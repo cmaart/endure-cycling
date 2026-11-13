@@ -4,7 +4,10 @@
  * ride photo, the headline in the sky, subline and store badges on the road,
  * the coach screen on a phone at the right. Nav floats over it
  * (Layout `navOverlay`). Below `lg` the photo ends above the text, which sits
- * on a dark ground continuing the grass, so nothing covers the rider.
+ * on a dark ground continuing the grass, so nothing covers the rider. There
+ * the store badges come straight after the photo and before the subline, so
+ * they sit on the first screen of a phone (2026-11-13: under the subline they
+ * started at 851px on a 750px screen and download clicks dropped).
  */
 import { Picture } from 'astro:assets';
 import { getTranslations } from '../i18n/translations';
@@ -58,7 +61,7 @@ const coachShot = `${appShotDir(lang)}/ai_coaching.webp`;
 
   <div class="hero-foot page-container">
     <div class="hero-enter" style="--i:5">
-      <div data-placement="hero" class="flex flex-wrap gap-3 items-center">
+      <div data-placement="hero" class="hero-badges flex flex-wrap gap-3 items-center">
         <a id="download-btn-ios" href={iosUrl} target="_blank" rel="noopener" aria-label={t.appStoreBadgeAlt} class="hero-badge">
           <img src={appStoreBadge} alt={t.appStoreBadgeAlt} width="135" height="40" class="h-11 md:h-12 w-auto" />
         </a>
@@ -66,10 +69,14 @@ const coachShot = `${appShotDir(lang)}/ai_coaching.webp`;
           <img src={googlePlayBadge} alt={t.googlePlayBadgeAlt} width="135" height="40" class="h-11 md:h-12 w-auto" />
         </a>
         <!-- Official Microsoft Store badge (get.microsoft.com/images, dark). -->
-        <a id="download-btn-windows" href={windowsUrl} target="_blank" rel="noopener" aria-label={t.microsoftStoreBadgeAlt} class="hero-badge">
+        <a id="download-btn-windows" href={windowsUrl} target="_blank" rel="noopener" aria-label={t.microsoftStoreBadgeAlt} class="hero-badge hero-badge--windows">
           <img src={microsoftStoreBadge} alt={t.microsoftStoreBadgeAlt} width={lang === 'de' ? 183 : 161} height="44" class="h-11 md:h-12 w-auto" />
         </a>
       </div>
+      <!-- Android visitors get Google Play first. Inline so it runs before paint. -->
+      <script is:inline>
+        if (/Android/i.test(navigator.userAgent)) document.querySelector('.hero-badges')?.classList.add('hero-badges--android');
+      </script>
       <ul class="mt-4 flex flex-wrap gap-x-5 gap-y-1.5 text-sm text-white/85">
         {t.checks.map((check) => (
           <li class="inline-flex items-center gap-2">
@@ -103,8 +110,8 @@ const coachShot = `${appShotDir(lang)}/ai_coaching.webp`;
      ground that continues the grass. */
   .hero {
     display: grid;
-    /* headline | sky and rider | subline | badges */
-    grid-template-rows: auto minmax(34svh, 1fr) auto auto;
+    /* headline | sky and rider | badges | subline */
+    grid-template-rows: auto minmax(30svh, 1fr) auto auto;
     background: #12170f;
   }
   .hero-photo {
@@ -139,15 +146,16 @@ const coachShot = `${appShotDir(lang)}/ai_coaching.webp`;
     padding-top: 150px;
   }
   .hero-copy {
-    grid-row: 3;
-    grid-column: 1;
-  }
-  .hero-copy > p { max-width: 40rem; }
-  .hero-foot {
     grid-row: 4;
     grid-column: 1;
     padding-top: 28px;
     padding-bottom: 48px;
+  }
+  .hero-copy > p { max-width: 40rem; }
+  .hero-foot {
+    grid-row: 3;
+    grid-column: 1;
+    padding-top: 12px;
   }
 
   .hero-title {
@@ -187,6 +195,12 @@ const coachShot = `${appShotDir(lang)}/ai_coaching.webp`;
   .hero-shadow { text-shadow: 0 1px 18px rgb(0 25 50 / 0.45); }
   .hero-badge { display: block; transition: transform 0.2s ease; }
   .hero-badge:hover { transform: translateY(-2px); }
+  .hero-badges--android #download-btn-android { order: -1; }
+  /* A phone or tablet cannot install the Windows app; without it the two
+     mobile stores fit on one row. */
+  @media (hover: none) and (pointer: coarse) and (max-width: 1023px) {
+    .hero-badge--windows { display: none; }
+  }
 
   .hero-phone {
     display: none;
@@ -216,7 +230,8 @@ const coachShot = `${appShotDir(lang)}/ai_coaching.webp`;
     }
     .hero-head { display: block; padding-top: 116px; }
     .hero-title { padding-top: 0; }
-    .hero-copy { margin-top: 28px; }
+    .hero-copy { margin-top: 28px; padding-block: 0; }
+    .hero-foot { padding-top: 28px; padding-bottom: 48px; }
     /* The phone sits on the container's right edge, out of the flow, so it
        never makes the hero taller than the screen. */
     .hero-phone {
