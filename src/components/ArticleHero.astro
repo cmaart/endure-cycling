@@ -1,0 +1,55 @@
+---
+/**
+ * Picture hero for feature and guide pages that set `hero` in their content:
+ * headline and store badges on the left, the product on the right. Below `lg`
+ * the badges come before the picture, so they stay on a phone's first screen.
+ */
+import StoreBadges from './StoreBadges.astro';
+import WebAppLink from './WebAppLink.astro';
+import BetaTag from './BetaTag.astro';
+import { getArticleStrings, type ArticleImage } from '../i18n/article';
+
+interface Props {
+  lang: 'en' | 'de';
+  title: string;
+  /** One line under the headline. */
+  subtitle?: string;
+  beta?: boolean;
+  image: ArticleImage;
+  /** Line under the badges; defaults to the trial note. */
+  note?: string;
+  /** Names the badge group for the GA4 `download_click` event. */
+  placement: string;
+}
+
+const { lang, title, subtitle, beta, image, note, placement } = Astro.props;
+const s = getArticleStrings(lang);
+---
+
+<div class="page-container pt-8 md:pt-12">
+  <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+    <div>
+      <h1 class="mb-4 text-4xl font-extrabold leading-[1.08] tracking-[-0.025em] text-slate-900 text-balance md:text-5xl">
+        {title}{beta && <BetaTag />}
+      </h1>
+      {subtitle && <p class="mb-7 text-lg font-medium text-slate-600 text-pretty md:text-xl">{subtitle}</p>}
+      <div data-placement={placement} class="flex flex-wrap items-center gap-3">
+        <StoreBadges lang={lang} />
+      </div>
+      <p class="mt-4 text-sm font-medium text-slate-600">{note ?? s.trialNote}</p>
+      <WebAppLink lang={lang} placement={`${placement}_web`} class="mt-1" />
+    </div>
+
+    <div class="overflow-hidden rounded-3xl border border-slate-200 shadow-[0_30px_80px_rgba(22,24,29,0.14)]">
+      <img
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        fetchpriority="high"
+        decoding="async"
+        class="h-auto w-full transition-transform duration-500 ease-out motion-safe:hover:scale-[1.02]"
+      />
+    </div>
+  </div>
+</div>

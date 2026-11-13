@@ -6,6 +6,10 @@ import { getGuide, getGuidesIndex, guides, type GuideKey } from '../i18n/guides'
 import { config } from '../config';
 import StoreBadges from './StoreBadges.astro';
 import { localeHref, localeUrl, siteUrl } from '../utils/paths';
+import ArticleHero from './ArticleHero.astro';
+import ArticleAside from './ArticleAside.astro';
+import ArticleSection from './ArticleSection.astro';
+import { sectionId } from '../i18n/article';
 
 interface Props {
   lang: 'en' | 'de';
@@ -55,9 +59,18 @@ const articleSchema = {
 <Layout title={t.seoTitle} description={t.seoDescription} lang={lang} breadcrumb={t.h1}>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
 
-  <main class="container mx-auto px-6 pt-10 pb-24 max-w-3xl text-slate-800">
+  <!--
+    Two layouts share this markup. A guide with `hero` gets the picture hero
+    and the sticky download rail; every other guide keeps the single column.
+  -->
+  <main class:list={['pb-24 text-slate-800', !t.hero && 'container mx-auto px-6 pt-10 max-w-3xl']}>
+    {t.hero && (
+      <ArticleHero lang={lang} title={t.h1} image={t.hero} note={t.heroNote} placement="guide_hero" />
+    )}
+    <div class:list={[t.hero && 'page-container mt-12 grid gap-x-16 lg:mt-16 lg:grid-cols-[minmax(0,1fr)_18rem]']}>
+    <div class:list={[t.hero && 'max-w-3xl']}>
     <article>
-      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">{t.h1}</h1>
+      {!t.hero && <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">{t.h1}</h1>}
 
       <!-- Direct answer (featured-snippet target) -->
       <p class="text-lg leading-relaxed font-medium bg-accent/[0.06] rounded-2xl px-6 py-5 mb-12">
@@ -65,30 +78,16 @@ const articleSchema = {
       </p>
 
       <div class="space-y-12">
-        {t.sections.map((section) => (
-          <section>
-            <h2 class="text-2xl font-bold text-slate-900 mb-3">{section.title}</h2>
-            <p class="text-lg leading-relaxed">{section.body}</p>
-            {section.bullets && (
-              <ul class="mt-4 space-y-3">
-                {section.bullets.map((bullet) => (
-                  <li class="flex items-start gap-3">
-                    <span class="mt-1.5 flex-shrink-0 w-5 h-5 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
-                      <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-                    <!--
-                      Bullets carry inline markup (`<strong>` on the lead-in
-                      term), so they render with set:html like every other
-                      bullet list on the site. Section bodies stay plain text.
-                    -->
-                    <span class="text-lg leading-relaxed font-medium" set:html={bullet} />
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
+        {t.sections.map((section, i) => (
+          <ArticleSection
+            id={sectionId(i)}
+            title={section.title}
+            body={section.body}
+            bullets={section.bullets}
+            ordered={section.ordered}
+            image={section.image}
+            video={section.video}
+          />
         ))}
       </div>
 
@@ -96,7 +95,7 @@ const articleSchema = {
       <section class="text-center card-surface p-8 mt-14 mb-10">
         <h2 class="text-2xl font-bold text-slate-900 mb-3">{t.ctaTitle}</h2>
         <p class="text-lg leading-relaxed mb-6">{t.ctaBody}</p>
-        <div class="flex flex-wrap justify-center items-center gap-4">
+        <div data-placement="guide_cta" class="flex flex-wrap justify-center items-center gap-4">
           <StoreBadges lang={lang} lazy />
         </div>
       </section>
@@ -119,6 +118,11 @@ const articleSchema = {
     <a href={guidesHref} class="inline-flex items-center gap-2 text-accent font-semibold hover:underline">
       ← {t.backToGuides}
     </a>
+    </div>
+    {t.hero && (
+      <ArticleAside lang={lang} sections={t.sections.map((section) => section.title)} title={t.ctaTitle} placement="guide_rail" />
+    )}
+    </div>
   </main>
   <Footer />
 </Layout>

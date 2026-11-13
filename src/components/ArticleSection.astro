@@ -1,0 +1,76 @@
+---
+/**
+ * One titled section of a feature or guide article: body text, an optional
+ * bullet list (numbered when the order matters) and an optional picture or
+ * screen recording of the app.
+ */
+import type { ArticleImage, ArticleVideo } from '../i18n/article';
+
+interface Props {
+  id?: string;
+  title: string;
+  body: string;
+  bullets?: string[];
+  /** Numbers the bullets: a protocol or a pairing flow. */
+  ordered?: boolean;
+  image?: ArticleImage;
+  video?: ArticleVideo;
+}
+
+const { id, title, body, bullets, ordered, image, video } = Astro.props;
+---
+
+<section id={id} class="scroll-mt-8">
+  <h2 class="mb-3 text-2xl font-bold text-slate-900">{title}</h2>
+  <p class="text-lg leading-relaxed">{body}</p>
+
+  {bullets && ordered && (
+    <ol class="mt-5 space-y-3">
+      {bullets.map((bullet, i) => (
+        <li class="card-surface flex items-start gap-4 rounded-[14px] px-5 py-4">
+          <span class="pt-0.5 font-mono text-accent" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+          <span class="text-lg leading-relaxed" set:html={bullet} />
+        </li>
+      ))}
+    </ol>
+  )}
+
+  {bullets && !ordered && (
+    <ul class="feature-list mt-4 space-y-3">
+      {/* Bullets carry inline markup (`<strong>` on the lead-in term), hence set:html. */}
+      {bullets.map((bullet) => <li class="text-lg leading-relaxed" set:html={bullet} />)}
+    </ul>
+  )}
+
+  {image && (
+    <div class="mt-6 max-w-xl overflow-hidden rounded-3xl shadow-[0_24px_60px_rgba(22,24,29,0.16)]">
+      <img
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        loading="lazy"
+        decoding="async"
+        class="h-auto w-full transition-transform duration-500 ease-out motion-safe:hover:scale-[1.02]"
+      />
+    </div>
+  )}
+
+  {video && (
+    <div class="phone-frame mt-6 w-[260px] md:w-[300px]">
+      <video
+        controls
+        muted
+        playsinline
+        preload="none"
+        poster={video.poster}
+        width={video.width}
+        height={video.height}
+        aria-label={video.label}
+        class="h-auto w-full"
+      >
+        <source src={video.src} type="video/mp4" />
+      </video>
+    </div>
+  )}
+</section>

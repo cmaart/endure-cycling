@@ -10,6 +10,7 @@
 // Section titles are question-phrased (AEO: People-Also-Ask / snippets).
 
 import type { WebAppImageKey } from '../webAppImages';
+import type { ArticleImage } from './article';
 
 export type FeatureKey =
   | 'ai-coach'
@@ -24,6 +25,8 @@ interface FeatureSection {
   title: string;
   body: string;
   bullets?: string[];
+  /** Numbers the bullets (a pairing flow, a protocol). */
+  ordered?: boolean;
   /** Screenshot next to the section (rich layout only), key into webAppImages. */
   image?: WebAppImageKey;
   imageAlt?: string;
@@ -63,6 +66,8 @@ export interface FeatureContent {
   backHome: string;
   /** Shows a quiet superscript "Beta" after the h1 (BetaTag.astro). */
   beta?: boolean;
+  /** Picture for the hero; setting it switches FeaturePage to the hero + download rail layout. */
+  hero?: ArticleImage;
   // Rich layout (TrainingPlanningPage.astro); the plain FeaturePage ignores these.
   eyebrow?: string;
   directAnswerLabel?: string;
@@ -286,60 +291,72 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     },
     'zwift-click': {
       datePublished: '2026-07-28',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-13',
       seoTitle: 'Virtual Shifting Without Zwift | Zwift Click in ENDURE',
       seoDescription:
         'Virtual Shifting with your Zwift Click, no Zwift subscription: change your ERG target and trainer resistance straight from the handlebar. Verified on Click v1.',
       breadcrumb: 'Virtual Shifting',
       h1: 'Virtual Shifting with the Zwift Click, without Zwift',
       subtitle: 'Change resistance and ERG target from the bars. Verified on Click v1.',
+      hero: {
+        src: '/assets/zwift_click/zwift_click_landscape.min.webp',
+        width: 1536,
+        height: 1024,
+        alt: 'Two Zwift Click remotes next to a phone running an ENDURE workout in ERG mode'
+      },
       directAnswer:
-        'Yes, your Zwift Click works outside Zwift. Pair it with ENDURE over standard Bluetooth and the buttons change your ERG target in structured workouts and trainer resistance in SIM mode, so you adjust intensity from the handlebar instead of reaching for the phone. Verified with Click v1. Note that ENDURE does not simulate a cassette: the buttons act on resistance directly.',
+        'Yes, your Zwift Click works outside Zwift. Pair it with ENDURE over standard Bluetooth and the buttons change your ERG target in structured workouts and trainer resistance in SIM mode, so you adjust intensity from the handlebar and leave the phone alone. Verified with Click v1. ENDURE does not simulate a cassette: the buttons act on resistance directly.',
       sections: [
         {
           title: 'What does Virtual Shifting do in ENDURE?',
           body:
-            'It puts control of your effort on the handlebar. Press up and the trainer gets harder, press down and it gets easier. It is the same gesture as shifting, applied directly to resistance or to your workout target rather than to a simulated gear ratio. Nothing moves on the bike, so there is no chain rub and no drivetrain wear, and you never have to sit up mid-interval to reach the screen.'
+            'It puts control of your effort on the handlebar. Press up and the trainer gets harder, press down and it gets easier. The gesture is the same as shifting, but it acts on resistance or on your workout target directly, because ENDURE does not simulate gear ratios. Nothing moves on the bike, so the chain does not rub and the drivetrain does not wear, and you do not have to sit up mid-interval to reach the screen.'
         },
         {
           title: 'What exactly do the buttons change?',
           body:
-            'The mapping follows what you are doing at that moment, so there is nothing to configure:',
+            'The mapping follows what you are riding at that moment, and you do not configure anything:',
           bullets: [
-            '<strong>In a structured workout:</strong> the buttons nudge your ERG target up or down in steps (useful when a block is a touch too hard on the day, or too easy).',
-            '<strong>In SIM mode and free ride:</strong> the buttons step trainer resistance up and down, so you can simulate a rise or back off without stopping.',
-            '<strong>What they do not do:</strong> ENDURE does not model a cassette, so there is no gear number to read and no gear ratio being calculated. The effect on your legs is the same; the mechanism is resistance, not gearing.'
+            '<strong>In a structured workout:</strong> the buttons move your ERG target up or down in steps. That helps when a block is slightly too hard on the day, or too easy.',
+            '<strong>In SIM mode and Free Ride:</strong> the buttons step trainer resistance up and down, so you can simulate a rise or back off without stopping.',
+            '<strong>What they do not do:</strong> ENDURE does not model a cassette, so no gear number is shown and no gear ratio is calculated. Your legs feel the same change, but it comes from trainer resistance.'
           ]
         },
         {
           title: 'Can you use it without Zwift?',
           body:
-            'Yes. The Click is a Bluetooth device, not a Zwift-only accessory, so any app that reads it can use it. ENDURE does: the Click appears in the normal sensor list next to your trainer, power meter and heart-rate strap, and once paired it stays paired. No Zwift account, no subscription, no Zwift app running in the background.'
+            'Yes. The Click is a Bluetooth device, and any app that reads it can use it. In ENDURE it appears in the normal sensor list next to your trainer, power meter and heart-rate strap, and once paired it stays paired. You do not need a Zwift account or a subscription, and the Zwift app does not have to run in the background.'
         },
         {
           title: 'Which Zwift Click generations are supported?',
           body:
-            'We name what we have actually tested rather than assuming the generations behave the same:',
+            'We have tested one generation so far, and that is the only one we claim:',
           bullets: [
             '<strong>Click v1: verified.</strong> Pairing and handlebar control are confirmed end to end with v1 hardware.',
-            '<strong>Click v2: not verified yet.</strong> We have not tested it, so we do not claim it. The trial is free, so pairing one is the fastest way to find out, and we would like to hear the result.'
+            '<strong>Click v2: not verified yet.</strong> We have not tested it. The trial is free, so pairing one is the fastest way to find out, and we would like to hear the result.'
           ]
         },
         {
           title: 'Why does handlebar control matter indoors?',
           body:
-            'Interval work is exactly when reaching for a phone is worst: you are breathing hard, the bike is rocking, and a mistimed tap costs you the rest of the effort. Controls on the bars remove that. They also make ERG mode far more usable for riders who adjust often: a 10-watt correction in the third rep happens without breaking position.'
+            'Intervals are the worst time to reach for a phone: you are breathing hard, the bike is rocking, and a mistimed tap costs you the rest of the effort. With the controls on the bars, your hands stay where they are. ERG mode also becomes more usable for riders who adjust often, because a 10-watt correction in the third rep happens without breaking position.'
         },
         {
           title: 'How do you pair the Click with ENDURE?',
           body:
-            'Wake the Click by pressing a button, open the sensor screen in ENDURE, and select it when it appears. Pairing is the same flow as any other Bluetooth device in the app, with no second app, no bridge and no firmware juggling. It works the same way on iOS and Android.'
+            'Pairing is the same flow as for any other Bluetooth device in the app, and it works the same way on iOS and Android. You do not need a second app or a bridge, and you do not have to touch the firmware.',
+          ordered: true,
+          bullets: [
+            'Wake the Click by pressing a button.',
+            'Open the sensor screen in ENDURE.',
+            'Select the Click when it appears in the list.'
+          ]
         }
       ],
       faq: [
         {
           q: 'Is this the same Virtual Shifting as in Zwift?',
-          a: 'Not mechanically. Zwift pairs a Click with the Zwift Cog and simulates a cassette, so you shift between calculated gear ratios. In ENDURE the Click acts directly on trainer resistance in SIM mode, or on your ERG target inside a workout. What you feel through the pedals is the same (harder, easier, from the bars), but ENDURE is not modelling gears, and there is no gear number on screen.'
+          a: 'Not mechanically. Zwift pairs a Click with the Zwift Cog and simulates a cassette, so you shift between calculated gear ratios. In ENDURE the Click acts directly on trainer resistance in SIM mode, or on your ERG target inside a workout. The pedals feel the same (harder or easier, from the bars), but ENDURE does not model gears and shows no gear number.'
         },
         {
           q: 'Does it work without a Zwift subscription?',
@@ -347,7 +364,11 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Does it work with Zwift Click v2?',
-          a: 'Not verified yet. Our confirmed hardware is Click v1. We have not tested a v2, so we do not claim it works. If you have one, pairing it costs nothing and we would like to know.'
+          a: 'Not verified yet. Our confirmed hardware is Click v1, and we have not tested a v2. If you have one, pairing it costs nothing and we would like to know.'
+        },
+        {
+          q: 'What should I lower first when a workout is too hard?',
+          a: 'The ENDURE coach eases a hard session in this order: intensity first, then the number of reps, then the length of each rep. The Click covers the first step from the handlebar. A press lowers your ERG target, and the intervals stay as planned.'
         },
         {
           q: 'Do I need a specific trainer for this?',
@@ -809,60 +830,72 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
     },
     'zwift-click': {
       datePublished: '2026-07-28',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-13',
       seoTitle: 'Virtual Shifting ohne Zwift | Zwift Click in ENDURE',
       seoDescription:
         'Virtual Shifting mit deinem Zwift Click, ohne Zwift-Abo: ERG-Ziel und Trainer-Widerstand direkt vom Lenker ändern. Mit Click v1 verifiziert.',
       breadcrumb: 'Virtual Shifting',
       h1: 'Virtual Shifting mit dem Zwift Click, ohne Zwift',
       subtitle: 'Widerstand und ERG-Ziel vom Lenker ändern. Mit Click v1 verifiziert.',
+      hero: {
+        src: '/assets/zwift_click/zwift_click_landscape.min.webp',
+        width: 1536,
+        height: 1024,
+        alt: 'Zwei Zwift-Click-Fernbedienungen neben einem Handy, auf dem ein ENDURE-Workout im ERG-Modus läuft'
+      },
       directAnswer:
-        'Ja, dein Zwift Click funktioniert auch außerhalb von Zwift. Du verbindest ihn per Standard-Bluetooth mit ENDURE, und die Tasten ändern dein ERG-Ziel im strukturierten Workout sowie den Trainer-Widerstand im SIM-Modus. Du regelst die Intensität also am Lenker statt am Handy. Mit Click v1 verifiziert. Wichtig: ENDURE simuliert keine Kassette, die Tasten wirken direkt auf den Widerstand.',
+        'Ja, dein Zwift Click funktioniert auch außerhalb von Zwift. Du verbindest ihn per Standard-Bluetooth mit ENDURE, und die Tasten ändern dein ERG-Ziel im strukturierten Workout sowie den Trainer-Widerstand im SIM-Modus. Du regelst die Intensität also am Lenker und lässt das Handy liegen. Mit Click v1 verifiziert. ENDURE simuliert keine Kassette: Die Tasten wirken direkt auf den Widerstand.',
       sections: [
         {
           title: 'Was macht Virtual Shifting in ENDURE?',
           body:
-            'Es legt die Kontrolle über deine Belastung an den Lenker. Hochdrücken macht den Trainer schwerer, runterdrücken leichter. Es ist dieselbe Handbewegung wie beim Schalten, nur wirkt sie direkt auf den Widerstand oder auf dein Workout-Ziel und nicht auf ein simuliertes Übersetzungsverhältnis. Am Rad bewegt sich nichts, also kein Kettenschleifen und kein Antriebsverschleiß, und du musst mitten im Intervall nie aufrichten, um an den Screen zu kommen.'
+            'Es legt die Kontrolle über deine Belastung an den Lenker. Hochdrücken macht den Trainer schwerer, runterdrücken leichter. Die Handbewegung ist dieselbe wie beim Schalten, sie wirkt aber direkt auf den Widerstand oder auf dein Workout-Ziel, weil ENDURE keine Übersetzungen simuliert. Am Rad bewegt sich nichts, die Kette schleift also nicht und der Antrieb verschleißt nicht, und du musst dich mitten im Intervall nicht aufrichten, um an den Screen zu kommen.'
         },
         {
           title: 'Was genau ändern die Tasten?',
           body:
             'Die Belegung richtet sich danach, was du gerade fährst. Einstellen musst du nichts:',
           bullets: [
-            '<strong>Im strukturierten Workout:</strong> die Tasten heben oder senken dein ERG-Ziel in Schritten (praktisch, wenn ein Block an diesem Tag einen Hauch zu hart ist oder zu leicht).',
-            '<strong>Im SIM-Modus und Free Ride:</strong> die Tasten regeln den Trainer-Widerstand rauf und runter, du kannst also einen Anstieg simulieren oder zurücknehmen, ohne anzuhalten.',
-            '<strong>Was sie nicht tun:</strong> ENDURE modelliert keine Kassette, es gibt also keine Gangnummer zu lesen und kein berechnetes Übersetzungsverhältnis. Die Wirkung auf die Beine ist dieselbe; der Mechanismus ist Widerstand, nicht Schaltung.'
+            '<strong>Im strukturierten Workout:</strong> Die Tasten heben oder senken dein ERG-Ziel in Schritten. Das hilft, wenn ein Block an diesem Tag etwas zu hart ist oder zu leicht.',
+            '<strong>Im SIM-Modus und Free Ride:</strong> Die Tasten regeln den Trainer-Widerstand rauf und runter. So simulierst du einen Anstieg oder nimmst zurück, ohne anzuhalten.',
+            '<strong>Was sie nicht tun:</strong> ENDURE modelliert keine Kassette. Es wird also keine Gangnummer angezeigt und keine Übersetzung berechnet. Deine Beine spüren dieselbe Änderung, sie kommt aber vom Trainer-Widerstand.'
           ]
         },
         {
           title: 'Funktioniert es ohne Zwift?',
           body:
-            'Ja. Der Click ist ein Bluetooth-Gerät und kein Zwift-exklusives Zubehör. Jede App, die ihn ausliest, kann ihn nutzen. ENDURE tut es: der Click erscheint in der normalen Sensorliste neben Trainer, Powermeter und Herzfrequenzgurt, und einmal gekoppelt bleibt er gekoppelt. Kein Zwift-Konto, kein Abo, keine im Hintergrund laufende Zwift-App.'
+            'Ja. Der Click ist ein Bluetooth-Gerät, und jede App, die ihn ausliest, kann ihn nutzen. In ENDURE erscheint er in der normalen Sensorliste neben Trainer, Powermeter und Herzfrequenzgurt, und einmal gekoppelt bleibt er gekoppelt. Du brauchst weder ein Zwift-Konto noch ein Abo, und die Zwift-App muss nicht im Hintergrund laufen.'
         },
         {
           title: 'Welche Zwift-Click-Generationen sind unterstützt?',
           body:
-            'Wir nennen, was wir tatsächlich getestet haben, statt anzunehmen, dass sich die Generationen gleich verhalten:',
+            'Bisher haben wir eine Generation getestet, und nur für die sagen wir zu, dass sie funktioniert:',
           bullets: [
             '<strong>Click v1: verifiziert.</strong> Pairing und Lenkersteuerung sind mit v1-Hardware durchgehend bestätigt.',
-            '<strong>Click v2: noch nicht verifiziert.</strong> Wir haben ihn nicht getestet, also behaupten wir es nicht. Der Test ist gratis, Koppeln ist der schnellste Weg zur Antwort, und wir hören das Ergebnis gern.'
+            '<strong>Click v2: noch nicht verifiziert.</strong> Wir haben ihn nicht getestet. Der Test ist gratis, Koppeln ist also der schnellste Weg zur Antwort, und wir hören das Ergebnis gern.'
           ]
         },
         {
           title: 'Warum ist Lenkersteuerung indoor so wichtig?',
           body:
-            'Intervalle sind der Moment, in dem der Griff zum Handy am meisten stört: du atmest schwer, das Rad wippt, und ein verrutschter Tap kostet dich den Rest der Belastung. Bedienung am Lenker nimmt das raus. Sie macht den ERG-Modus außerdem für alle brauchbarer, die häufig nachjustieren: 10 Watt weniger in der dritten Wiederholung, ohne die Position zu verlassen.'
+            'Im Intervall stört der Griff zum Handy am meisten: Du atmest schwer, das Rad wippt, und ein verrutschter Tap kostet dich den Rest der Belastung. Mit der Bedienung am Lenker bleiben die Hände, wo sie sind. Der ERG-Modus wird außerdem für alle brauchbarer, die häufig nachjustieren: 10 Watt weniger in der dritten Wiederholung, ohne die Position zu verlassen.'
         },
         {
           title: 'Wie koppelst du den Click mit ENDURE?',
           body:
-            'Click per Tastendruck aufwecken, in ENDURE den Sensor-Screen öffnen und ihn auswählen, sobald er auftaucht. Das Pairing läuft wie bei jedem anderen Bluetooth-Gerät in der App: keine zweite App, keine Bridge, kein Firmware-Gebastel. Auf iOS und Android identisch.'
+            'Das Pairing läuft wie bei jedem anderen Bluetooth-Gerät in der App, auf iOS und Android identisch. Du brauchst keine zweite App und keine Bridge, und an der Firmware musst du nichts ändern.',
+          ordered: true,
+          bullets: [
+            'Click per Tastendruck aufwecken.',
+            'In ENDURE den Sensor-Screen öffnen.',
+            'Den Click auswählen, sobald er in der Liste auftaucht.'
+          ]
         }
       ],
       faq: [
         {
           q: 'Ist das dasselbe Virtual Shifting wie in Zwift?',
-          a: 'Mechanisch nicht. Zwift kombiniert den Click mit dem Zwift Cog und simuliert eine Kassette, du schaltest also zwischen berechneten Übersetzungen. In ENDURE wirkt der Click direkt auf den Trainer-Widerstand im SIM-Modus oder auf dein ERG-Ziel im Workout. Was du in den Pedalen spürst, ist dasselbe (schwerer, leichter, vom Lenker), aber ENDURE modelliert keine Gänge, und es gibt keine Gangnummer am Screen.'
+          a: 'Mechanisch nicht. Zwift kombiniert den Click mit dem Zwift Cog und simuliert eine Kassette, du schaltest also zwischen berechneten Übersetzungen. In ENDURE wirkt der Click direkt auf den Trainer-Widerstand im SIM-Modus oder auf dein ERG-Ziel im Workout. In den Pedalen fühlt es sich gleich an (schwerer oder leichter, vom Lenker), ENDURE modelliert aber keine Gänge und zeigt keine Gangnummer.'
         },
         {
           q: 'Funktioniert es ohne Zwift-Abo?',
@@ -870,7 +903,11 @@ export const featurePages: Record<'en' | 'de', Record<FeatureKey, FeatureContent
         },
         {
           q: 'Funktioniert es mit dem Zwift Click v2?',
-          a: 'Noch nicht verifiziert. Unsere bestätigte Hardware ist Click v1. Einen v2 haben wir nicht getestet, also behaupten wir nicht, dass er funktioniert. Wenn du einen hast: Koppeln kostet nichts, und wir würden es gern wissen.'
+          a: 'Noch nicht verifiziert. Unsere bestätigte Hardware ist Click v1, einen v2 haben wir nicht getestet. Wenn du einen hast: Koppeln kostet nichts, und wir würden das Ergebnis gern wissen.'
+        },
+        {
+          q: 'Was nehme ich zuerst zurück, wenn ein Workout zu hart ist?',
+          a: 'Der ENDURE-Coach nimmt eine harte Einheit in dieser Reihenfolge zurück: zuerst die Intensität, dann die Zahl der Wiederholungen, dann die Länge jeder Wiederholung. Den ersten Schritt erledigt der Click vom Lenker. Ein Druck senkt dein ERG-Ziel, und die Intervalle bleiben wie geplant.'
         },
         {
           q: 'Brauche ich dafür einen bestimmten Trainer?',

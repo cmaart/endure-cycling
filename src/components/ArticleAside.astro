@@ -1,0 +1,51 @@
+---
+/**
+ * Sticky rail next to an article on desktop: the section list and a download
+ * card that stays in view while reading. Hidden below `lg`, where the hero
+ * badges and the closing CTA carry the download.
+ */
+import StoreBadges from './StoreBadges.astro';
+import WebAppLink from './WebAppLink.astro';
+import { getArticleStrings, sectionId } from '../i18n/article';
+
+interface Props {
+  lang: 'en' | 'de';
+  /** Section titles, in page order. */
+  sections: string[];
+  /** Headline of the download card. */
+  title: string;
+  placement: string;
+}
+
+const { lang, sections, title, placement } = Astro.props;
+const s = getArticleStrings(lang);
+---
+
+<aside class="hidden lg:block">
+  <div class="sticky top-8 space-y-8">
+    <nav aria-label={s.tocTitle}>
+      <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-500">{s.tocTitle}</p>
+      <ul class="border-l border-slate-200">
+        {sections.map((sectionTitle, i) => (
+          <li>
+            <a
+              href={`#${sectionId(i)}`}
+              class="-ml-px block border-l border-transparent py-1.5 pl-4 text-sm leading-snug text-slate-600 transition-colors hover:border-accent hover:text-slate-900"
+            >
+              {sectionTitle}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="card-surface p-5">
+      <p class="font-bold leading-snug text-slate-900">{title}</p>
+      <p class="mb-4 mt-1 text-sm text-slate-600">{s.trialNote}</p>
+      <div data-placement={placement} class="flex flex-col items-start gap-2.5">
+        <StoreBadges lang={lang} lazy />
+      </div>
+      <WebAppLink lang={lang} placement={`${placement}_web`} label={s.webLinkShort} class="mt-2" />
+    </div>
+  </div>
+</aside>

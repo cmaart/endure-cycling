@@ -11,10 +11,16 @@ export type GuideKey =
   | 'sweet-spot-vs-polarized'
   | 'zwo-mrc-erg-files';
 
+import type { ArticleImage, ArticleVideo } from './article';
+
 interface GuideSection {
   title: string;
   body: string;
   bullets?: string[];
+  /** Numbers the bullets (a test protocol). */
+  ordered?: boolean;
+  image?: ArticleImage;
+  video?: ArticleVideo;
 }
 
 export interface Guide {
@@ -28,6 +34,10 @@ export interface Guide {
   ctaTitle: string;
   ctaBody: string;
   backToGuides: string;
+  /** Picture for the hero; setting it switches GuidePage to the hero + download rail layout. */
+  hero?: ArticleImage;
+  /** Line under the hero badges; defaults to the trial note. */
+  heroNote?: string;
 }
 
 export const guidesIndex = {
@@ -58,24 +68,38 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       seoDescription: "What LT1 and LT2 mean, how to test lactate at home, and how to train with threshold zones: a practical guide for cyclists, with automatic estimation in ENDURE.",
       h1: "Lactate Threshold Training: LT1 & LT2 Explained",
       datePublished: "2026-07-20",
-      dateModified: "2026-07-20",
-      directAnswer: "Lactate threshold training structures your riding around two physiological markers: LT1 (aerobic threshold), the intensity where blood lactate first rises above baseline, and LT2 (anaerobic threshold), where lactate accumulates faster than your body can clear it. Training below LT1 builds your aerobic engine; controlled work near LT2 raises the pace you can sustain.",
+      dateModified: "2026-11-13",
+      hero: {
+        src: "/assets/lactate/lactate-curve.webp",
+        width: 1031,
+        height: 834,
+        alt: "ENDURE lactate curve fitted through logged readings, with LT1 at 252 W, LT2 at 295 W and a confidence tunnel"
+      },
+      heroNote: "ENDURE estimates LT1 and LT2 from your lactate readings. 14 days free, no payment details needed.",
+      directAnswer: "Lactate threshold training structures your riding around two physiological markers: LT1 (aerobic threshold), the intensity where blood lactate first rises above baseline, and LT2 (anaerobic threshold), where lactate accumulates faster than your body can clear it. Training below LT1 builds your aerobic base, and controlled work near LT2 raises the pace you can sustain.",
       sections: [
         {
           title: "What is the lactate threshold?",
-          body: "Lactate is a by-product (and fuel) of carbohydrate metabolism that circulates in your blood at all times. At easy intensities, production and clearance stay in balance, so concentration hovers around a baseline of roughly 1-2 mmol/L. As intensity rises, production eventually outpaces clearance and blood lactate climbs. The intensities where this balance visibly changes are your lactate thresholds, the most direct physiological anchors for training zones that exist."
+          body: "Lactate is a by-product (and fuel) of carbohydrate metabolism that circulates in your blood at all times. At easy intensities, production and clearance stay in balance, so concentration stays around a baseline of roughly 1-2 mmol/L. As intensity rises, production eventually outpaces clearance and blood lactate climbs. The intensities where this balance visibly changes are your lactate thresholds. They are the most direct physiological anchor for training zones."
         },
         {
           title: "What is the difference between LT1 and LT2?",
-          body: "LT1, often called the aerobic threshold, is the first intensity at which lactate rises meaningfully above baseline. Below it, you can ride for hours; it marks the ceiling of true endurance riding. LT2 is the anaerobic threshold, closely related to MLSS (maximal lactate steady state). It is the highest intensity at which lactate remains stable. Above LT2, lactate accumulates rapidly and the clock starts ticking. Classic field markers put LT1 near 2 mmol/L and LT2 near 4 mmol/L, though individual curves vary, which is exactly why measuring your own values beats generic formulas."
+          body: "LT1, often called the aerobic threshold, is the first intensity at which lactate rises clearly above baseline. Below it you can ride for hours, so it is the upper limit of endurance riding. LT2 is the anaerobic threshold, closely related to MLSS (maximal lactate steady state): the highest intensity at which lactate remains stable. Above LT2, lactate accumulates rapidly and you can hold the effort only for a limited time. Classic field markers put LT1 near 2 mmol/L and LT2 near 4 mmol/L, but individual curves vary, so your own measured values are more reliable than a generic formula.",
+          image: {
+            src: "/assets/lactate/lactate-profile.webp",
+            width: 1031,
+            height: 816,
+            alt: "ENDURE lactate profile: lactate readings against power, with the ranges below LT1, between LT1 and LT2 and above LT2 shaded"
+          }
         },
         {
           title: "Why train with LT1 and LT2 instead of FTP alone?",
-          body: "FTP is a single power number estimated from performance. LT1 and LT2 are two measured physiological markers, and the gap between them tells you more than either alone. Polarized and pyramidal training models, the backbone of most endurance programs, are defined in terms of these thresholds: the bulk of volume below LT1, targeted quality work around and above LT2. Two riders with identical FTP can have very different thresholds, and therefore need different zone boundaries."
+          body: "FTP is a single power number estimated from performance. LT1 and LT2 are two measured physiological markers, and the gap between them tells you more than either alone. Polarized and pyramidal training models, which most endurance programs follow, are defined by these thresholds: most of the volume below LT1, targeted quality work around and above LT2. Two riders with identical FTP can have very different thresholds, and then they need different zone boundaries."
         },
         {
           title: "How do you test your lactate thresholds at home?",
           body: "You need a handheld lactate meter (such as Lactate Plus or Lactate Pro 2), test strips, and a controlled protocol on a smart trainer. The standard approach is a graded step test:",
+          ordered: true,
           bullets: [
             "Warm up 10-15 minutes at an easy pace.",
             "Ride steps of 3-5 minutes, starting well below your expected LT1 and increasing power by 20-25 W per step (ERG mode makes the steps precise).",
@@ -86,15 +110,34 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "How do you train with LT1 and LT2 zones?",
-          body: "Once you know both thresholds, the structure is straightforward. Ride the majority of your volume (typically around 80%) below LT1, where aerobic adaptations accumulate with minimal fatigue cost. Place your quality work deliberately: sweet-spot and threshold sessions just below LT2 raise sustainable power, while intervals above LT2 develop VO2max and race-winning capacity. Re-test every 6-8 weeks: as fitness improves, both thresholds shift right and your zones should follow."
+          body: "Once you know both thresholds, ride most of your volume (typically around 80%) below LT1, where aerobic adaptations accumulate at a low fatigue cost. Place the quality work on purpose: sweet-spot and threshold sessions just below LT2 raise sustainable power, and intervals above LT2 develop VO2max. Re-test every 6-8 weeks. As fitness improves, both thresholds move to higher power, and your zones should follow."
+        },
+        {
+          title: "How does the ENDURE coach dose threshold work?",
+          body: "The AI coach in ENDURE plans threshold and sweet-spot sessions by a fixed set of rules. It states intensity in % of FTP and uses heart rate and perceived effort as a check. The rules work the same way if you plan your own week:",
+          bullets: [
+            "By default a week holds at most two hard days, with at least one easy day between them. The rest is easy endurance.",
+            "A typical threshold session is 3 × 8 minutes. Sweet spot is 3 × 12 minutes by default, ridden steadily.",
+            "No threshold or sweet-spot block runs longer than 20 minutes at a stretch. More work is split into more intervals.",
+            "The dose grows by time in zone: a planned session holds at most 1.5 times the most zone time you rode in a single ride in the last 28 days.",
+            "After a recovery week, the progression continues where it stopped.",
+            "Every session comes with its reason: how it fits the days around it and which signal in your data led to it."
+          ]
         },
         {
           title: "How does ENDURE estimate LT1 and LT2?",
-          body: "ENDURE is the first cycling app that lets you log lactate readings directly during a ride, or add them afterwards from your activity history. The app fits a curve through your readings and automatically estimates LT1 and LT2, including a confidence tunnel that shows how solid the estimate is. Your blood markers live next to your power data instead of in a spreadsheet, and every new reading refines the picture. Available on iOS, Android and Windows."
+          body: "ENDURE is the first cycling app that lets you log lactate readings directly during a ride, or add them afterwards from your activity history. The app fits a curve through your readings and estimates LT1 and LT2 automatically. A confidence tunnel around the curve shows how solid the estimate is. Your lactate values sit next to your power data, so you do not need a spreadsheet, and each new reading refines the estimate. Available on iOS, Android and Windows.",
+          video: {
+            src: "/videos/lactate_entry.mp4",
+            poster: "/assets/lactate/lactate-entry-poster.webp",
+            width: 640,
+            height: 1400,
+            label: "Screen recording: adding a lactate reading to a ride in ENDURE"
+          }
         }
       ],
       ctaTitle: "Log your first lactate test in ENDURE",
-      ctaBody: "Now on iOS, Android and Windows: in-ride lactate logging, automatic LT1/LT2 estimation, and your full training picture in one app.",
+      ctaBody: "In-ride lactate logging and automatic LT1/LT2 estimation, on iOS, Android and Windows. Free for the first 14 days, no payment details needed.",
       backToGuides: "All guides"
     },
     'heat-training-core-sensor': {
@@ -361,24 +404,38 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
       seoDescription: "Was LT1 und LT2 bedeuten, wie du Laktat zuhause testest und mit Schwellenzonen trainierst: ein Guide für Radsportler, mit automatischer Schätzung in ENDURE.",
       h1: "Laktatschwellen-Training: LT1 & LT2 erklärt",
       datePublished: "2026-07-20",
-      dateModified: "2026-07-20",
-      directAnswer: "Laktatschwellen-Training strukturiert dein Training um zwei physiologische Marker: LT1 (aerobe Schwelle), die Intensität, bei der Blutlaktat erstmals über das Grundniveau steigt, und LT2 (anaerobe Schwelle), ab der Laktat schneller anfällt, als dein Körper es abbauen kann. Training unter LT1 baut deinen aeroben Motor auf; gezielte Arbeit nahe LT2 hebt das Tempo, das du halten kannst.",
+      dateModified: "2026-11-13",
+      hero: {
+        src: "/assets/lactate/lactate-curve.webp",
+        width: 1031,
+        height: 834,
+        alt: "Laktatkurve in ENDURE, durch eingetragene Messwerte gefittet, mit LT1 bei 252 W, LT2 bei 295 W und Konfidenztunnel"
+      },
+      heroNote: "ENDURE schätzt LT1 und LT2 aus deinen Laktatwerten. 14 Tage gratis, ohne Zahlungsdaten.",
+      directAnswer: "Laktatschwellen-Training strukturiert dein Training um zwei physiologische Marker: LT1 (aerobe Schwelle), die Intensität, bei der Blutlaktat erstmals über das Grundniveau steigt, und LT2 (anaerobe Schwelle), ab der Laktat schneller anfällt, als dein Körper es abbauen kann. Training unter LT1 baut deine aerobe Basis auf, und gezielte Arbeit nahe LT2 hebt das Tempo, das du halten kannst.",
       sections: [
         {
           title: "Was ist die Laktatschwelle?",
-          body: "Laktat ist ein Nebenprodukt (und Brennstoff) des Kohlenhydratstoffwechsels und zirkuliert permanent im Blut. Bei lockerer Intensität halten sich Produktion und Abbau die Waage, die Konzentration bleibt bei etwa 1-2 mmol/L. Steigt die Intensität, überholt die Produktion irgendwann den Abbau und das Blutlaktat klettert. Die Intensitäten, an denen sich dieses Gleichgewicht sichtbar verschiebt, sind deine Laktatschwellen, die direktesten physiologischen Anker für Trainingszonen, die es gibt."
+          body: "Laktat ist ein Nebenprodukt (und Brennstoff) des Kohlenhydratstoffwechsels und zirkuliert permanent im Blut. Bei lockerer Intensität halten sich Produktion und Abbau die Waage, die Konzentration bleibt bei etwa 1-2 mmol/L. Steigt die Intensität, überholt die Produktion irgendwann den Abbau und das Blutlaktat klettert. Die Intensitäten, an denen sich dieses Gleichgewicht sichtbar verschiebt, sind deine Laktatschwellen. Sie sind der direkteste physiologische Anker für Trainingszonen."
         },
         {
           title: "Was ist der Unterschied zwischen LT1 und LT2?",
-          body: "LT1, oft aerobe Schwelle genannt, ist die erste Intensität, bei der Laktat deutlich über das Grundniveau steigt. Darunter kannst du stundenlang fahren; sie markiert die Obergrenze des echten Grundlagentrainings. LT2 ist die anaerobe Schwelle, eng verwandt mit dem MLSS (maximales Laktat-Steady-State). Sie ist die höchste Intensität, bei der Laktat stabil bleibt. Oberhalb von LT2 akkumuliert Laktat rasch und die Uhr läuft. Klassische Faustwerte legen LT1 bei etwa 2 mmol/L und LT2 bei etwa 4 mmol/L. Individuelle Kurven weichen aber ab, und genau deshalb schlägt Messen jede generische Formel."
+          body: "LT1, oft aerobe Schwelle genannt, ist die erste Intensität, bei der Laktat deutlich über das Grundniveau steigt. Darunter kannst du stundenlang fahren, sie ist also die Obergrenze des Grundlagentrainings. LT2 ist die anaerobe Schwelle, eng verwandt mit dem MLSS (maximales Laktat-Steady-State): die höchste Intensität, bei der Laktat stabil bleibt. Oberhalb von LT2 steigt Laktat rasch an, und du hältst die Belastung nur noch begrenzte Zeit. Klassische Faustwerte legen LT1 bei etwa 2 mmol/L und LT2 bei etwa 4 mmol/L. Individuelle Kurven weichen aber ab, deshalb sind deine eigenen Messwerte verlässlicher als eine generische Formel.",
+          image: {
+            src: "/assets/lactate/lactate-profile.webp",
+            width: 1031,
+            height: 816,
+            alt: "Laktatprofil in ENDURE: Laktatwerte über der Leistung, die Bereiche unter LT1, zwischen LT1 und LT2 und über LT2 farbig hinterlegt"
+          }
         },
         {
           title: "Warum mit LT1 und LT2 trainieren statt nur mit FTP?",
-          body: "FTP ist eine einzelne, aus Leistung geschätzte Zahl. LT1 und LT2 sind zwei gemessene physiologische Marker, und der Abstand zwischen ihnen sagt mehr als jede Einzelzahl. Polarisierte und pyramidale Trainingsmodelle, das Rückgrat der meisten Ausdauerprogramme, sind über genau diese Schwellen definiert: der Großteil des Volumens unter LT1, gezielte Qualitätsarbeit um und über LT2. Zwei Fahrer mit identischer FTP können völlig unterschiedliche Schwellen haben und brauchen entsprechend andere Zonengrenzen."
+          body: "FTP ist eine einzelne, aus Leistung geschätzte Zahl. LT1 und LT2 sind zwei gemessene physiologische Marker, und der Abstand zwischen ihnen sagt mehr als jede Einzelzahl. Polarisierte und pyramidale Trainingsmodelle, denen die meisten Ausdauerprogramme folgen, sind über diese Schwellen definiert: der Großteil des Volumens unter LT1, gezielte Qualitätsarbeit um und über LT2. Zwei Fahrer mit identischer FTP können sehr unterschiedliche Schwellen haben und brauchen dann andere Zonengrenzen."
         },
         {
           title: "Wie testest du deine Laktatschwellen zuhause?",
           body: "Du brauchst ein Handmessgerät (z. B. Lactate Plus oder Lactate Pro 2), Teststreifen und ein kontrolliertes Protokoll am Smart Trainer. Standard ist der Stufentest:",
+          ordered: true,
           bullets: [
             "10-15 Minuten locker einfahren.",
             "Stufen von 3-5 Minuten fahren, deutlich unter der erwarteten LT1 beginnend, pro Stufe 20-25 W steigern (der ERG-Modus macht die Stufen präzise).",
@@ -389,15 +446,34 @@ export const guides: Record<'en' | 'de', Record<GuideKey, Guide>> = {
         },
         {
           title: "Wie trainierst du mit LT1- und LT2-Zonen?",
-          body: "Sind beide Schwellen bekannt, ist die Struktur klar. Fahre den Großteil deines Volumens (typischerweise rund 80 %) unter LT1, wo sich aerobe Anpassungen mit minimalen Ermüdungskosten ansammeln. Setze Qualitätsarbeit gezielt: Sweet-Spot- und Schwelleneinheiten knapp unter LT2 heben die dauerhaft fahrbare Leistung, Intervalle über LT2 entwickeln VO2max und Rennhärte. Teste alle 6-8 Wochen nach: mit steigender Fitness wandern beide Schwellen nach rechts, und deine Zonen sollten mitwandern."
+          body: "Kennst du beide Schwellen, fährst du den Großteil deines Volumens (typischerweise rund 80 %) unter LT1. Dort sammeln sich aerobe Anpassungen bei geringen Ermüdungskosten an. Die Qualitätsarbeit setzt du gezielt: Sweet-Spot- und Schwelleneinheiten knapp unter LT2 heben die dauerhaft fahrbare Leistung, Intervalle über LT2 entwickeln die VO2max. Teste alle 6-8 Wochen nach. Mit steigender Fitness wandern beide Schwellen zu höherer Leistung, und deine Zonen sollten mitwandern."
+        },
+        {
+          title: "Wie dosiert der ENDURE-Coach Schwellentraining?",
+          body: "Der KI-Coach in ENDURE plant Schwellen- und Sweet-Spot-Einheiten nach festen Regeln. Die Intensität gibt er in % der FTP an, Herzfrequenz und Belastungsempfinden dienen als Kontrolle. Die Regeln gelten genauso, wenn du deine Woche selbst planst:",
+          bullets: [
+            "Eine Woche enthält standardmäßig höchstens zwei harte Tage, dazwischen liegt mindestens ein lockerer Tag. Der Rest ist lockere Grundlage.",
+            "Eine typische Schwelleneinheit ist 3 × 8 Minuten. Sweet Spot ist standardmäßig 3 × 12 Minuten, gleichmäßig gefahren.",
+            "Kein Schwellen- oder Sweet-Spot-Block dauert länger als 20 Minuten am Stück. Mehr Umfang wird auf mehr Intervalle verteilt.",
+            "Die Dosis wächst über die Zeit in der Zone: Eine geplante Einheit enthält höchstens das 1,5-Fache der längsten Zonenzeit, die du in den letzten 28 Tagen in einer einzelnen Fahrt gefahren bist.",
+            "Nach einer Erholungswoche geht die Progression dort weiter, wo sie stand.",
+            "Zu jeder Einheit nennt der Coach den Grund: wie sie zu den Tagen davor und danach passt und welches Signal in deinen Daten dazu geführt hat."
+          ]
         },
         {
           title: "Wie schätzt ENDURE LT1 und LT2?",
-          body: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte direkt während der Fahrt eintragen kannst, oder im Nachhinein aus deiner Aktivitätshistorie. Die App fittet eine Kurve durch deine Werte und schätzt LT1 und LT2 automatisch, inklusive Konfidenztunnel, der zeigt, wie belastbar die Schätzung ist. Deine Blutwerte leben neben deinen Leistungsdaten statt in einem Spreadsheet, und jeder neue Wert schärft das Bild. Verfügbar auf iOS, Android und Windows."
+          body: "ENDURE ist die erste Cycling-App, mit der du Laktatwerte direkt während der Fahrt eintragen kannst, oder im Nachhinein aus deiner Aktivitätshistorie. Die App fittet eine Kurve durch deine Werte und schätzt LT1 und LT2 automatisch. Ein Konfidenztunnel um die Kurve zeigt, wie belastbar die Schätzung ist. Deine Laktatwerte stehen neben deinen Leistungsdaten, du brauchst also kein Spreadsheet, und jeder neue Wert verfeinert die Schätzung. Verfügbar auf iOS, Android und Windows.",
+          video: {
+            src: "/videos/lactate_entry.mp4",
+            poster: "/assets/lactate/lactate-entry-poster.webp",
+            width: 640,
+            height: 1400,
+            label: "Bildschirmaufnahme: einen Laktatwert zu einer Fahrt in ENDURE eintragen"
+          }
         }
       ],
       ctaTitle: "Logge deinen ersten Laktattest in ENDURE",
-      ctaBody: "Jetzt auf iOS, Android und Windows: Laktat-Eintrag während der Fahrt, automatische LT1/LT2-Schätzung und dein komplettes Trainingsbild in einer App.",
+      ctaBody: "Laktat-Eintrag während der Fahrt und automatische LT1/LT2-Schätzung, auf iOS, Android und Windows. Die ersten 14 Tage gratis, ohne Zahlungsdaten.",
       backToGuides: "Alle Guides"
     },
     'heat-training-core-sensor': {
