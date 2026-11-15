@@ -6,7 +6,7 @@ const h2 = 'text-2xl font-bold text-slate-900 pt-6';
 <CouchpilotLayout
   lang="en"
   title="Privacy Policy | Couchpilot"
-  description="How the Couchpilot app handles data: works without an account, no ads, no tracking, optional sign-in to sync ratings and watchlist."
+  description="How the Couchpilot app handles data: no ads, no tracking, ratings and watchlist backed up on our EU server, optional sign-in to use them on other devices."
 >
   <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
     <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">PRIVACY POLICY</h1>
@@ -16,8 +16,10 @@ const h2 = 'text-2xl font-bold text-slate-900 pt-6';
       <p>
         This Privacy Policy explains how the app Couchpilot (package and bundle ID <code>com.cmart.couchpilot</code>,
         “Couchpilot”, “we”, “us”) handles data. Couchpilot recommends films and series and shows where they stream. In
-        short: Couchpilot works without an account. Your ratings, your watchlist and your settings then stay on your
-        device. We don't sell data, we don't show ads and we don't use tracking or analytics SDKs.
+        short: you don't need an account. The app stores your ratings, watchlist and settings on your device and backs
+        them up on our server in the EU under a random user ID, so they are not lost. Signing in with Apple or Google is
+        optional and lets you use the same data on other devices. We don't sell data, we don't show ads and we don't use
+        tracking or analytics SDKs.
       </p>
 
       <h2 class={h2}>1. Controller / Contact</h2>
@@ -31,26 +33,26 @@ const h2 = 'text-2xl font-bold text-slate-900 pt-6';
       <p>
         Ratings, watchlist, titles marked “Not for me”, people you like, your streaming services, favourite genres,
         country, language and app settings. Also a copy of the catalog data you have viewed, so the app starts offline.
-        These data stay in the app's storage on your device.
       </p>
 
-      <h2 class={h2}>3. What our server receives when you are not signed in</h2>
+      <h2 class={h2}>3. Data on our server, without an account</h2>
       <p>
-        The app loads the catalog from our server (Supabase, data centre in Frankfurt, Germany). It sends the country
-        you picked. To calculate your recommendations, the app also sends your ratings, liked people, services and
-        favourite genres with each request. The server uses them for that answer only and does not store them while you
-        are not signed in. When you open a title, the server may look up where it streams; this lookup contains only the
-        title, nothing about you. As with any connection, the server sees your IP address; technical logs are kept for at
-        most 7 days. Legal basis: providing the app you asked for (GDPR Art. 6(1)(b)) and our legitimate interest in a
-        secure, working service (Art. 6(1)(f)).
+        On first launch the app creates a random user ID on our server (Supabase, data centre in Frankfurt, Germany).
+        It contains no name and no email address. Under this ID we store your ratings, watchlist, “Not for me” titles,
+        liked people, streaming services, favourite genres and country, so they are backed up and your recommendations
+        can be calculated on the server. When you open a title, the server may look up where it streams; this lookup
+        contains only the title, nothing about you. As with any connection, the server sees your IP address; technical
+        logs are kept for at most 7 days. If an ID without an account is not used for 180 days, we delete it with all its
+        data, unless it holds an active Couchpilot Pro subscription. Legal basis: providing the app you asked for (GDPR
+        Art. 6(1)(b)) and our legitimate interest in a secure, working service (Art. 6(1)(f)).
       </p>
 
       <h2 class={h2}>4. When you sign in (optional)</h2>
       <p>
-        If you sign in with Apple or Google, we store your user ID, your email address (if the provider shares it) and
-        sync your ratings, watchlist, “Not for me” titles, liked people, services, favourite genres and country, so you
-        have them on all your devices. Apple and Google process the sign-in as independent controllers under their own
-        privacy policies. We keep these data until you delete them (see section 9). Legal basis: GDPR Art. 6(1)(b).
+        If you sign in with Apple or Google, we link the sign-in to your existing user ID and store your email address
+        (if the provider shares it). You can then use your ratings and watchlist on all your devices. Apple and Google
+        process the sign-in as independent controllers under their own privacy policies. We keep these data until you
+        delete them (see section 9). Legal basis: GDPR Art. 6(1)(b).
       </p>
 
       <h2 class={h2}>5. Crash reports</h2>
@@ -84,8 +86,8 @@ const h2 = 'text-2xl font-bold text-slate-900 pt-6';
 
       <h2 class={h2}>9. Deleting your data</h2>
       <p>
-        “Delete all my data” in your profile removes everything from this device. If you are signed in, the same step
-        also deletes your account and all its data on our server. You can also ask us by email to delete your account
+        “Delete all my data” in your profile removes everything from this device and deletes your user ID and all its
+        data on our server, with or without an account. You can also ask us by email to delete your account
         and data: <a href="mailto:info@endure-cycling.com" class="cp-accent">info@endure-cycling.com</a>.
       </p>
 
