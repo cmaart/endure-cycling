@@ -1,0 +1,90 @@
+---
+import CouchpilotLayout from '../../layouts/CouchpilotLayout.astro';
+const h2 = 'text-2xl font-bold text-slate-900 pt-6';
+---
+
+<CouchpilotLayout
+  lang="en"
+  title="Terms of Use | Couchpilot"
+  description="Terms of use for the Couchpilot app: free recommendations, third-party streaming data without guarantee, and the Couchpilot Pro subscription."
+>
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">TERMS OF USE</h1>
+    <p class="mb-8 text-slate-500 font-medium">Last updated: 2026-11-15</p>
+
+    <div class="space-y-6 text-lg">
+      <p>
+        These terms apply to the app Couchpilot (package and bundle ID <code>com.cmart.couchpilot</code>). By using the
+        app you agree to them.
+      </p>
+
+      <h2 class={h2}>1. Provider</h2>
+      <p>
+        Christoph Martin<br />
+        Fischerweg 8, 7503 Großpetersdorf, Austria<br />
+        Email: <a href="mailto:info@endure-cycling.com" class="cp-accent">info@endure-cycling.com</a>
+      </p>
+
+      <h2 class={h2}>2. What Couchpilot does</h2>
+      <p>
+        Couchpilot recommends films and series based on your ratings and shows where they stream, can be rented or
+        bought. The app is free and works without an account. Couchpilot does not stream any content itself; you watch
+        on the provider's own service.
+      </p>
+
+      <h2 class={h2}>3. Data from third parties</h2>
+      <p>
+        Availability, prices, top 10 lists, scores and descriptions come from third parties: the Streaming Availability
+        API by Movie of the Night, Trakt, Wikidata and Wikipedia. Providers change their catalogs and prices often, so
+        this information can be out of date or wrong. Check the provider's offer before you subscribe, rent or buy. We
+        don't guarantee that a title is available or that a price is correct. Links to providers can be affiliate links.
+      </p>
+
+      <h2 class={h2}>4. Couchpilot Pro</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Couchpilot Pro is an optional subscription, sold monthly or yearly through the App Store or Google Play.
+          The app shows the price before you buy.</li>
+        <li>New subscribers get a free trial when the app offers one (currently 7 days). If you don't cancel during the
+          trial, the paid subscription starts.</li>
+        <li>The subscription renews automatically unless you cancel it at least 24 hours before the end of the current
+          period. Cancel in your App Store or Google Play account settings. Deleting the app does not cancel it.</li>
+        <li>Payment, refunds and cancellation are handled by Apple or Google under their terms. We can't issue refunds
+          ourselves.</li>
+        <li>Pro features are described on the paywall in the app. We may improve or change them; if we remove a paid
+          feature, you can cancel the subscription.</li>
+      </ul>
+
+      <h2 class={h2}>5. Account</h2>
+      <p>
+        Signing in with Apple or Google is optional. You can delete your account and all data in the app under Profile.
+        How we handle data is described in the <a href="/couchpilot/privacy/" class="cp-accent">privacy policy</a>.
+      </p>
+
+      <h2 class={h2}>6. Fair use</h2>
+      <p>
+        Don't access the app's servers automatically (scripts, scraping) and don't use the app in a way that harms the
+        service or other users. We may block access in case of misuse.
+      </p>
+
+      <h2 class={h2}>7. Liability</h2>
+      <p>
+        We are liable without limitation for intent and gross negligence and for injury to life, body or health. For
+        slight negligence we are liable only for breaches of essential obligations and only for typical, foreseeable
+        damage. Mandatory consumer protection law stays unaffected.
+      </p>
+
+      <h2 class={h2}>8. App Store version</h2>
+      <p>
+        For the version from Apple's App Store, Apple's
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="cp-accent">standard licence
+        agreement (EULA)</a> applies in addition to these terms.
+      </p>
+
+      <h2 class={h2}>9. Changes and applicable law</h2>
+      <p>
+        We may update these terms; the date above shows the current version. Austrian law applies. If you are a
+        consumer, the mandatory consumer protection rules of the country you live in stay in force.
+      </p>
+    </div>
+  </main>
+</CouchpilotLayout>

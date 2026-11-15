@@ -1,0 +1,93 @@
+---
+import CouchpilotLayout from '../../layouts/CouchpilotLayout.astro';
+const h2 = 'text-2xl font-bold text-slate-900 pt-6';
+---
+
+<CouchpilotLayout
+  lang="de"
+  title="Nutzungsbedingungen | Couchpilot"
+  description="Nutzungsbedingungen der App Couchpilot: kostenlose Empfehlungen, Streaming-Daten von Dritten ohne Gewähr und das Abo Couchpilot Pro."
+>
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">NUTZUNGSBEDINGUNGEN</h1>
+    <p class="mb-8 text-slate-500 font-medium">Stand: 15.11.2026</p>
+
+    <div class="space-y-6 text-lg">
+      <p>
+        Diese Bedingungen gelten für die App Couchpilot (Paket- und Bundle-ID <code>com.cmart.couchpilot</code>). Mit
+        der Nutzung der App stimmst du ihnen zu.
+      </p>
+
+      <h2 class={h2}>1. Anbieter</h2>
+      <p>
+        Christoph Martin<br />
+        Fischerweg 8, 7503 Großpetersdorf, Österreich<br />
+        E-Mail: <a href="mailto:info@endure-cycling.com" class="cp-accent">info@endure-cycling.com</a>
+      </p>
+
+      <h2 class={h2}>2. Was Couchpilot macht</h2>
+      <p>
+        Couchpilot empfiehlt Filme und Serien nach deinen Bewertungen und zeigt, wo sie im Abo laufen, zum Leihen oder
+        Kaufen. Die App ist kostenlos und funktioniert ohne Konto. Couchpilot streamt selbst keine Inhalte; du schaust
+        beim jeweiligen Anbieter.
+      </p>
+
+      <h2 class={h2}>3. Daten von Dritten</h2>
+      <p>
+        Verfügbarkeit, Preise, Top-10-Listen, Wertungen und Beschreibungen stammen von Dritten: Streaming Availability
+        API by Movie of the Night, Trakt, Wikidata und Wikipedia. Anbieter ändern Kataloge und Preise oft, deshalb
+        können diese Angaben veraltet oder falsch sein. Prüf das Angebot beim Anbieter, bevor du ein Abo abschließt,
+        leihst oder kaufst. Wir garantieren nicht, dass ein Titel verfügbar oder ein Preis richtig ist. Links zu
+        Anbietern können Affiliate-Links sein.
+      </p>
+
+      <h2 class={h2}>4. Couchpilot Pro</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Couchpilot Pro ist ein freiwilliges Abo, monatlich oder jährlich, verkauft über den App Store oder Google
+          Play. Den Preis zeigt die App vor dem Kauf.</li>
+        <li>Neue Abonnenten bekommen einen Gratis-Zeitraum, wenn die App einen anbietet (derzeit 7 Tage). Kündigst du
+          in dieser Zeit nicht, beginnt das bezahlte Abo.</li>
+        <li>Das Abo verlängert sich automatisch, wenn du es nicht mindestens 24 Stunden vor Ende des laufenden
+          Zeitraums kündigst. Gekündigt wird in den Einstellungen deines App-Store- oder Google-Play-Kontos. Das Löschen
+          der App kündigt das Abo nicht.</li>
+        <li>Zahlung, Erstattung und Kündigung laufen über Apple oder Google nach deren Bedingungen. Wir selbst können
+          keine Erstattungen ausführen.</li>
+        <li>Was Pro enthält, steht in der App auf der Abo-Seite. Wir können Funktionen verbessern oder ändern; fällt
+          eine bezahlte Funktion weg, kannst du das Abo kündigen.</li>
+      </ul>
+
+      <h2 class={h2}>5. Konto</h2>
+      <p>
+        Die Anmeldung mit Apple oder Google ist freiwillig. Konto und alle Daten kannst du in der App unter Profil
+        löschen. Wie wir mit Daten umgehen, steht in der
+        <a href="/couchpilot/datenschutz/" class="cp-accent">Datenschutzerklärung</a>.
+      </p>
+
+      <h2 class={h2}>6. Faire Nutzung</h2>
+      <p>
+        Greif nicht automatisiert auf die Server der App zu (Skripte, Scraping) und nutz die App nicht so, dass sie dem
+        Dienst oder anderen schadet. Bei Missbrauch können wir den Zugang sperren.
+      </p>
+
+      <h2 class={h2}>7. Haftung</h2>
+      <p>
+        Wir haften unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie bei Verletzung von Leben, Körper oder
+        Gesundheit. Bei leichter Fahrlässigkeit haften wir nur für die Verletzung wesentlicher Pflichten und nur für
+        den typischen, vorhersehbaren Schaden. Zwingende Verbraucherschutzrechte bleiben unberührt.
+      </p>
+
+      <h2 class={h2}>8. Version aus dem App Store</h2>
+      <p>
+        Für die Version aus Apples App Store gilt zusätzlich Apples
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="cp-accent">Standard-Lizenzvertrag
+        (EULA)</a>.
+      </p>
+
+      <h2 class={h2}>9. Änderungen und anwendbares Recht</h2>
+      <p>
+        Wir können diese Bedingungen anpassen; das Datum oben zeigt die aktuelle Fassung. Es gilt österreichisches
+        Recht. Als Verbraucher behältst du den Schutz der zwingenden Vorschriften des Landes, in dem du lebst.
+      </p>
+    </div>
+  </main>
+</CouchpilotLayout>

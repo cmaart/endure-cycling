@@ -2,7 +2,7 @@
 // Layout for the Couchpilot pages (/couchpilot/*). Couchpilot is a separate film and series app by the same
 // developer, so these pages carry none of the ENDURE chrome: no ENDURE nav, no ENDURE schema, no analytics or ad
 // scripts (the Couchpilot privacy policy promises the site sets no cookies). English and German pages are separate
-// routes (privacy/datenschutz, support/hilfe); `lang` picks the nav and footer labels.
+// routes (privacy/datenschutz, support/hilfe, terms/nutzungsbedingungen); `lang` picks the nav and footer labels.
 import { siteUrl } from '../utils/paths';
 import '@fontsource/sora/400.css';
 import '@fontsource/sora/600.css';
@@ -21,20 +21,32 @@ const labels =
     ? {
         privacy: 'Datenschutz',
         support: 'Hilfe',
+        terms: 'Nutzungsbedingungen',
         privacyHref: '/couchpilot/datenschutz/',
         supportHref: '/couchpilot/hilfe/',
+        termsHref: '/couchpilot/nutzungsbedingungen/',
         other: 'English',
-        otherHref: Astro.url.pathname.includes('hilfe') ? '/couchpilot/support/' : '/couchpilot/privacy/',
+        otherHref: Astro.url.pathname.includes('hilfe')
+          ? '/couchpilot/support/'
+          : Astro.url.pathname.includes('nutzungsbedingungen')
+            ? '/couchpilot/terms/'
+            : '/couchpilot/privacy/',
         made: 'Couchpilot, entwickelt in Österreich',
         imprint: 'Impressum',
       }
     : {
         privacy: 'Privacy',
         support: 'Support',
+        terms: 'Terms',
         privacyHref: '/couchpilot/privacy/',
         supportHref: '/couchpilot/support/',
+        termsHref: '/couchpilot/terms/',
         other: 'Deutsch',
-        otherHref: Astro.url.pathname.includes('support') ? '/couchpilot/hilfe/' : '/couchpilot/datenschutz/',
+        otherHref: Astro.url.pathname.includes('support')
+          ? '/couchpilot/hilfe/'
+          : Astro.url.pathname.includes('terms')
+            ? '/couchpilot/nutzungsbedingungen/'
+            : '/couchpilot/datenschutz/',
         made: 'Couchpilot, developed in Austria',
         imprint: 'Imprint',
       };
@@ -70,6 +82,7 @@ const labels =
         <div class="flex gap-6 text-sm text-slate-600">
           <a href={labels.privacyHref} class="hover:text-slate-900 transition-colors">{labels.privacy}</a>
           <a href={labels.supportHref} class="hover:text-slate-900 transition-colors">{labels.support}</a>
+          <a href={labels.termsHref} class="hover:text-slate-900 transition-colors">{labels.terms}</a>
           <a href={labels.otherHref} class="hover:text-slate-900 transition-colors" lang={lang === 'de' ? 'en' : 'de'}>{labels.other}</a>
         </div>
       </nav>
@@ -80,6 +93,7 @@ const labels =
         <span>{labels.made}</span>
         <a href="mailto:info@endure-cycling.com" class="hover:text-slate-900 transition-colors">info@endure-cycling.com</a>
         <a href={labels.privacyHref} class="hover:text-slate-900 transition-colors">{labels.privacy}</a>
+        <a href={labels.termsHref} class="hover:text-slate-900 transition-colors">{labels.terms}</a>
         <a href={lang === 'de' ? '/de/imprint/' : '/imprint/'} class="hover:text-slate-900 transition-colors">{labels.imprint}</a>
       </div>
     </footer>
