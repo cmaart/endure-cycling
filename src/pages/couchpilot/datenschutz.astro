@@ -61,10 +61,12 @@ const h2 = 'text-2xl font-bold text-slate-900 pt-6';
 
       <h2 class={h2}>5. Absturzberichte</h2>
       <p>
-        Die aktuelle Version von Couchpilot sendet keine Absturzberichte. Schalten wir sie in einer späteren Version
-        ein, schickt die App bei Fehlern einen technischen Bericht an Sentry (Functional Software, Inc., USA):
-        Gerätetyp, Systemversion, App-Version und den Fehlerverlauf, ohne Name, E-Mail oder Bewertungen. Du wirst das im
-        Profil ausschalten können, und wir passen diese Erklärung vorher an.
+        Stürzt Couchpilot ab oder tritt ein Fehler auf, schickt die App einen technischen Bericht an Sentry (Functional
+        Software, Inc.): Gerätetyp, Systemversion, App-Version und den Fehlerverlauf, ohne Name, E-Mail oder
+        Bewertungen. Dazu zählt Sentry App-Sitzungen mit einer zufälligen Installations-Kennung, damit wir sehen, wie
+        viele Installationen die App nutzen und wie viele davon fehlerfrei laufen. Die Daten liegen in Sentrys
+        EU-Rechenzentrum (Frankfurt). Rechtsgrundlage ist unser berechtigtes Interesse an einer stabilen App (Art. 6
+        Abs. 1 lit. f DSGVO). Im Profil kannst du die Berichte unter „Absturzberichte senden“ ausschalten.
       </p>
 
       <h2 class={h2}>6. Couchpilot Pro</h2>
@@ -107,7 +109,8 @@ const h2 = 'text-2xl font-bold text-slate-900 pt-6';
       <h2 class={h2}>11. Auftragsverarbeiter und Übermittlung in Drittländer</h2>
       <p>
         Supabase (Supabase, Inc.) betreibt unsere Datenbank und Server-Funktionen in der EU (Frankfurt) als unser
-        Auftragsverarbeiter. RevenueCat und, falls später eingeschaltet, Sentry können Daten in den USA verarbeiten.
+        Auftragsverarbeiter, Sentry (Functional Software, Inc.) unsere Fehlerberichte ebenfalls in der EU (Frankfurt).
+        RevenueCat und, für den Support, Sentry können Daten auch in den USA verarbeiten.
         Soweit nötig, stützen wir uns auf die EU-Standardvertragsklauseln und die Auftragsverarbeitungsverträge der
         Anbieter.
       </p>

@@ -57,10 +57,12 @@ const h2 = 'text-2xl font-bold text-slate-900 pt-6';
 
       <h2 class={h2}>5. Crash reports</h2>
       <p>
-        The current version of Couchpilot sends no crash reports. If we switch them on in a later version, the app will
-        send a technical report to Sentry (Functional Software, Inc., USA) when something goes wrong: device type, system
-        version, app version and the error trace, without name, email or ratings. You will be able to turn this off in
-        your profile, and we will update this policy before that happens.
+        When Couchpilot crashes or hits an error, the app sends a technical report to Sentry (Functional Software, Inc.):
+        device type, system version, app version and the error trace, without name, email or ratings. Sentry also counts
+        app sessions under a random installation ID, so we can see how many installations use the app and how many run
+        without errors. The data is stored in Sentry's EU data centre (Frankfurt). The legal basis is our legitimate
+        interest in a stable app (Art. 6(1)(f) GDPR). You can turn the reports off in your profile under "Send crash
+        reports".
       </p>
 
       <h2 class={h2}>6. Couchpilot Pro</h2>
@@ -100,8 +102,9 @@ const h2 = 'text-2xl font-bold text-slate-900 pt-6';
 
       <h2 class={h2}>11. Processors and international transfers</h2>
       <p>
-        Supabase (Supabase, Inc.) hosts our database and server functions in the EU (Frankfurt) as our processor.
-        RevenueCat, and Sentry if it is switched on later, may process data in the United States. Where required, we
+        Supabase (Supabase, Inc.) hosts our database and server functions in the EU (Frankfurt) as our processor, and
+        Sentry (Functional Software, Inc.) stores our error reports in the EU (Frankfurt) as well. RevenueCat, and Sentry
+        for support, may also process data in the United States. Where required, we
         rely on the EU Standard Contractual Clauses and the providers' data processing agreements.
       </p>
 
