@@ -1,0 +1,126 @@
+---
+import CouchpilotLayout from '../../layouts/CouchpilotLayout.astro';
+const h2 = 'text-2xl font-bold text-slate-900 pt-6';
+---
+
+<CouchpilotLayout
+  lang="en"
+  title="Privacy Policy | Couchpilot"
+  description="How the Couchpilot app handles data: works without an account, no ads, no tracking, optional sign-in to sync ratings and watchlist."
+>
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">PRIVACY POLICY</h1>
+    <p class="mb-8 text-slate-500 font-medium">Last updated: 2026-11-15</p>
+
+    <div class="space-y-6 text-lg">
+      <p>
+        This Privacy Policy explains how the app Couchpilot (package and bundle ID <code>com.cmart.couchpilot</code>,
+        “Couchpilot”, “we”, “us”) handles data. Couchpilot recommends films and series and shows where they stream. In
+        short: Couchpilot works without an account. Your ratings, your watchlist and your settings then stay on your
+        device. We don't sell data, we don't show ads and we don't use tracking or analytics SDKs.
+      </p>
+
+      <h2 class={h2}>1. Controller / Contact</h2>
+      <p>
+        Controller: Christoph Martin<br />
+        Address: Fischerweg 8, 7503 Großpetersdorf, Austria<br />
+        Email: <a href="mailto:info@endure-cycling.com" class="cp-accent">info@endure-cycling.com</a>
+      </p>
+
+      <h2 class={h2}>2. Data stored on your device</h2>
+      <p>
+        Ratings, watchlist, titles marked “Not for me”, people you like, your streaming services, favourite genres,
+        country, language and app settings. Also a copy of the catalog data you have viewed, so the app starts offline.
+        These data stay in the app's storage on your device.
+      </p>
+
+      <h2 class={h2}>3. What our server receives when you are not signed in</h2>
+      <p>
+        The app loads the catalog from our server (Supabase, data centre in Frankfurt, Germany). It sends the country
+        you picked. To calculate your recommendations, the app also sends your ratings, liked people, services and
+        favourite genres with each request. The server uses them for that answer only and does not store them while you
+        are not signed in. When you open a title, the server may look up where it streams; this lookup contains only the
+        title, nothing about you. As with any connection, the server sees your IP address; technical logs are kept for at
+        most 7 days. Legal basis: providing the app you asked for (GDPR Art. 6(1)(b)) and our legitimate interest in a
+        secure, working service (Art. 6(1)(f)).
+      </p>
+
+      <h2 class={h2}>4. When you sign in (optional)</h2>
+      <p>
+        If you sign in with Apple or Google, we store your user ID, your email address (if the provider shares it) and
+        sync your ratings, watchlist, “Not for me” titles, liked people, services, favourite genres and country, so you
+        have them on all your devices. Apple and Google process the sign-in as independent controllers under their own
+        privacy policies. We keep these data until you delete them (see section 9). Legal basis: GDPR Art. 6(1)(b).
+      </p>
+
+      <h2 class={h2}>5. Crash reports</h2>
+      <p>
+        The current version of Couchpilot sends no crash reports. If we switch them on in a later version, the app will
+        send a technical report to Sentry (Functional Software, Inc., USA) when something goes wrong: device type, system
+        version, app version and the error trace, without name, email or ratings. You will be able to turn this off in
+        your profile, and we will update this policy before that happens.
+      </p>
+
+      <h2 class={h2}>6. Couchpilot Pro</h2>
+      <p>
+        Couchpilot Pro is a subscription sold through the App Store or Google Play. Apple and Google process the payment
+        as independent controllers. RevenueCat (RevenueCat, Inc., USA) keeps track of the subscription status using a
+        random identifier or your user ID. We never see payment details. Legal basis: GDPR Art. 6(1)(b).
+      </p>
+
+      <h2 class={h2}>7. Where the catalog comes from</h2>
+      <p>
+        Titles, people, genres and critic scores come from Wikidata, descriptions from Wikipedia, posters, user ratings
+        and trending lists from Trakt, and streaming availability from the Streaming Availability API by Movie of the
+        Night. Our server fetches these data. Your device never talks to these services, and they receive nothing about
+        you.
+      </p>
+
+      <h2 class={h2}>8. Links to providers</h2>
+      <p>
+        When you tap a provider, its app or website opens, and its own privacy rules apply from there. Some links may be
+        affiliate links, which tell the provider that you came from Couchpilot. They carry no personal data from us.
+      </p>
+
+      <h2 class={h2}>9. Deleting your data</h2>
+      <p>
+        “Delete all my data” in your profile removes everything from this device. If you are signed in, the same step
+        also deletes your account and all its data on our server. You can also ask us by email to delete your account
+        and data: <a href="mailto:info@endure-cycling.com" class="cp-accent">info@endure-cycling.com</a>.
+      </p>
+
+      <h2 class={h2}>10. What we do not do</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>No ads, no analytics, no tracking SDKs, no advertising ID</li>
+        <li>No sale or sharing of data with third parties for their own purposes</li>
+        <li>No access to your contacts, photos, location or other personal content</li>
+      </ul>
+
+      <h2 class={h2}>11. Processors and international transfers</h2>
+      <p>
+        Supabase (Supabase, Inc.) hosts our database and server functions in the EU (Frankfurt) as our processor.
+        RevenueCat, and Sentry if it is switched on later, may process data in the United States. Where required, we
+        rely on the EU Standard Contractual Clauses and the providers' data processing agreements.
+      </p>
+
+      <h2 class={h2}>12. Your rights (EEA/UK/Switzerland)</h2>
+      <p>
+        You have the right to access, rectification, erasure, restriction, objection and data portability, and the right
+        to lodge a complaint with a supervisory authority (in Austria: Datenschutzbehörde, dsb.gv.at). Contact:
+        <a href="mailto:info@endure-cycling.com" class="cp-accent">info@endure-cycling.com</a>.
+      </p>
+
+      <h2 class={h2}>13. This website</h2>
+      <p>
+        The Couchpilot pages on endure-cycling.com set no cookies and load no analytics. The site is hosted on GitHub
+        Pages (GitHub, Inc., USA), which processes your IP address to deliver the pages.
+      </p>
+
+      <h2 class={h2}>14. Children</h2>
+      <p>Couchpilot is not directed at children.</p>
+
+      <h2 class={h2}>15. Changes</h2>
+      <p>We may update this Privacy Policy. The “Last updated” date above shows the current version.</p>
+    </div>
+  </main>
+</CouchpilotLayout>

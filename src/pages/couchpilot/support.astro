@@ -1,0 +1,60 @@
+---
+import CouchpilotLayout from '../../layouts/CouchpilotLayout.astro';
+const h2 = 'text-2xl font-bold text-slate-900 pt-6';
+---
+
+<CouchpilotLayout
+  lang="en"
+  title="Support | Couchpilot"
+  description="Help for the Couchpilot app: contact, deleting your data, where the data comes from and how to cancel Couchpilot Pro."
+>
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">SUPPORT</h1>
+
+    <div class="space-y-6 text-lg">
+      <p>
+        Something not working, or an idea? Write to
+        <a href="mailto:info@endure-cycling.com" class="cp-accent">info@endure-cycling.com</a>. Tell us your device,
+        the app version (bottom of your profile) and what you did, and we'll get back to you.
+      </p>
+
+      <h2 class={h2}>How do I delete my data?</h2>
+      <p>
+        Open your profile and tap “Delete all my data”. This removes everything from your device and, if you are signed
+        in, also deletes your account and its data on our server. You can also ask us by email.
+      </p>
+
+      <h2 class={h2}>Where does the data come from?</h2>
+      <p>
+        Titles, people, genres and critic scores come from Wikidata, descriptions from Wikipedia, posters, user ratings
+        and trending lists from Trakt, and streaming availability and the top 10 lists from the Streaming Availability
+        API by Movie of the Night. Couchpilot uses Trakt but is not endorsed or certified by Trakt.
+      </p>
+
+      <h2 class={h2}>Why does a title say “not checked yet”?</h2>
+      <p>
+        Our catalog has around 200,000 films and series. Where each one streams is checked step by step, the most popular
+        titles first. When you open a title we have not checked yet, the app checks it right away. On busy days the
+        daily limit for these checks can be reached; then try again later.
+      </p>
+
+      <h2 class={h2}>A provider or price is wrong</h2>
+      <p>
+        Streaming catalogs change daily, and we update them every day. If something is still wrong after a day, send us
+        the title and your country.
+      </p>
+
+      <h2 class={h2}>How do I cancel Couchpilot Pro?</h2>
+      <p>
+        Pro is a subscription in the App Store or Google Play, so you cancel it there: on iPhone in Settings › your name ›
+        Subscriptions, on Android in the Play Store › profile › Payments &amp; subscriptions › Subscriptions. Deleting the
+        app does not cancel the subscription.
+      </p>
+
+      <h2 class={h2}>Privacy</h2>
+      <p>
+        Read our <a href="/couchpilot/privacy/" class="cp-accent">Privacy Policy</a>.
+      </p>
+    </div>
+  </main>
+</CouchpilotLayout>

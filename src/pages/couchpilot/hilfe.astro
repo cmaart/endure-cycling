@@ -1,0 +1,61 @@
+---
+import CouchpilotLayout from '../../layouts/CouchpilotLayout.astro';
+const h2 = 'text-2xl font-bold text-slate-900 pt-6';
+---
+
+<CouchpilotLayout
+  lang="de"
+  title="Hilfe | Couchpilot"
+  description="Hilfe zur App Couchpilot: Kontakt, Daten löschen, woher die Daten kommen und wie du Couchpilot Pro kündigst."
+>
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">HILFE</h1>
+
+    <div class="space-y-6 text-lg">
+      <p>
+        Etwas funktioniert nicht, oder du hast eine Idee? Schreib an
+        <a href="mailto:info@endure-cycling.com" class="cp-accent">info@endure-cycling.com</a>. Nenn uns dein Gerät,
+        die App-Version (ganz unten im Profil) und was du gemacht hast, dann melden wir uns.
+      </p>
+
+      <h2 class={h2}>Wie lösche ich meine Daten?</h2>
+      <p>
+        Öffne dein Profil und tippe auf „Alle meine Daten löschen“. Das entfernt alles von deinem Gerät und löscht, wenn
+        du angemeldet bist, auch dein Konto und die Daten dazu auf unserem Server. Du kannst uns auch per E-Mail
+        schreiben.
+      </p>
+
+      <h2 class={h2}>Woher kommen die Daten?</h2>
+      <p>
+        Titel, Personen, Genres und Kritiker-Wertungen stammen aus Wikidata, Beschreibungen aus Wikipedia, Poster,
+        Nutzerwertungen und Trends von Trakt, die Streaming-Infos und Top-10-Listen von der Streaming Availability API von
+        Movie of the Night. Couchpilot uses Trakt but is not endorsed or certified by Trakt.
+      </p>
+
+      <h2 class={h2}>Warum steht bei einem Titel „noch nicht geprüft“?</h2>
+      <p>
+        Unser Katalog hat rund 200.000 Filme und Serien. Wo jeder davon läuft, prüfen wir nach und nach, die beliebtesten
+        zuerst. Öffnest du einen Titel, den wir noch nicht geprüft haben, prüft die App ihn sofort. An vollen Tagen kann
+        das Tageslimit für diese Prüfungen erreicht sein; dann schau später noch einmal vorbei.
+      </p>
+
+      <h2 class={h2}>Ein Anbieter oder Preis stimmt nicht</h2>
+      <p>
+        Die Kataloge der Streamingdienste ändern sich täglich, und wir aktualisieren sie jeden Tag. Stimmt etwas nach
+        einem Tag immer noch nicht, schick uns den Titel und dein Land.
+      </p>
+
+      <h2 class={h2}>Wie kündige ich Couchpilot Pro?</h2>
+      <p>
+        Pro ist ein Abo im App Store oder bei Google Play, gekündigt wird deshalb dort: am iPhone unter Einstellungen ›
+        dein Name › Abonnements, unter Android im Play Store › Profil › Zahlungen und Abos › Abos. Die App zu löschen
+        kündigt das Abo nicht.
+      </p>
+
+      <h2 class={h2}>Datenschutz</h2>
+      <p>
+        Lies unsere <a href="/couchpilot/datenschutz/" class="cp-accent">Datenschutzerklärung</a>.
+      </p>
+    </div>
+  </main>
+</CouchpilotLayout>

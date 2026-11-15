@@ -1,0 +1,132 @@
+---
+import CouchpilotLayout from '../../layouts/CouchpilotLayout.astro';
+const h2 = 'text-2xl font-bold text-slate-900 pt-6';
+---
+
+<CouchpilotLayout
+  lang="de"
+  title="Datenschutzerklärung | Couchpilot"
+  description="Wie die App Couchpilot mit Daten umgeht: funktioniert ohne Konto, keine Werbung, kein Tracking, optionale Anmeldung zum Synchronisieren von Bewertungen und Merkliste."
+>
+  <main class="container mx-auto px-6 pt-10 pb-24 max-w-4xl text-slate-800">
+    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">DATENSCHUTZERKLÄRUNG</h1>
+    <p class="mb-8 text-slate-500 font-medium">Stand: 15.11.2026</p>
+
+    <div class="space-y-6 text-lg">
+      <p>
+        Diese Datenschutzerklärung beschreibt, wie die App Couchpilot (Paket- und Bundle-ID
+        <code>com.cmart.couchpilot</code>, „Couchpilot“, „wir“) mit Daten umgeht. Couchpilot empfiehlt Filme und Serien
+        und zeigt, wo sie laufen. Kurz gesagt: Couchpilot funktioniert ohne Konto. Deine Bewertungen, deine Merkliste
+        und deine Einstellungen bleiben dann auf deinem Gerät. Wir verkaufen keine Daten, zeigen keine Werbung und
+        nutzen keine Tracking- oder Analyse-SDKs.
+      </p>
+
+      <h2 class={h2}>1. Verantwortlicher / Kontakt</h2>
+      <p>
+        Verantwortlich: Christoph Martin<br />
+        Adresse: Fischerweg 8, 7503 Großpetersdorf, Österreich<br />
+        E-Mail: <a href="mailto:info@endure-cycling.com" class="cp-accent">info@endure-cycling.com</a>
+      </p>
+
+      <h2 class={h2}>2. Was auf deinem Gerät gespeichert wird</h2>
+      <p>
+        Bewertungen, Merkliste, Titel mit „Kein Interesse“, Personen, die dir gefallen, deine Abos, Lieblingsgenres,
+        Land, Sprache und App-Einstellungen. Dazu eine Kopie der Katalogdaten, die du angesehen hast, damit die App auch
+        offline startet. Diese Daten bleiben im Speicher der App auf deinem Gerät.
+      </p>
+
+      <h2 class={h2}>3. Was unser Server bekommt, ohne dass du angemeldet bist</h2>
+      <p>
+        Die App lädt den Katalog von unserem Server (Supabase, Rechenzentrum in Frankfurt). Dabei wird dein gewähltes
+        Land übertragen. Für deine Empfehlungen schickt die App bei jeder Anfrage auch deine Bewertungen, Personen, Abos
+        und Lieblingsgenres mit. Der Server nutzt sie nur für diese Antwort und speichert sie nicht, solange du nicht
+        angemeldet bist. Öffnest du einen Titel, kann der Server nachsehen, wo er läuft; diese Abfrage enthält nur den
+        Titel, nichts über dich. Wie bei jeder Verbindung sieht der Server deine IP-Adresse; technische Protokolle
+        bleiben höchstens 7 Tage gespeichert. Rechtsgrundlage: Bereitstellung der App, die du nutzen willst (Art. 6
+        Abs. 1 lit. b DSGVO), und unser berechtigtes Interesse an einem sicheren, funktionierenden Dienst (Art. 6 Abs. 1
+        lit. f DSGVO).
+      </p>
+
+      <h2 class={h2}>4. Wenn du dich anmeldest (optional)</h2>
+      <p>
+        Meldest du dich mit Apple oder Google an, speichern wir deine Nutzer-ID und deine E-Mail-Adresse (sofern der
+        Anbieter sie weitergibt) und synchronisieren Bewertungen, Merkliste, „Kein Interesse“, Personen, Abos,
+        Lieblingsgenres und Land. So hast du sie auf allen Geräten. Apple und Google verarbeiten die Anmeldung als eigene
+        Verantwortliche nach ihren Datenschutzbestimmungen. Wir speichern diese Daten, bis du sie löschst (siehe
+        Abschnitt 9). Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.
+      </p>
+
+      <h2 class={h2}>5. Absturzberichte</h2>
+      <p>
+        Die aktuelle Version von Couchpilot sendet keine Absturzberichte. Schalten wir sie in einer späteren Version
+        ein, schickt die App bei Fehlern einen technischen Bericht an Sentry (Functional Software, Inc., USA):
+        Gerätetyp, Systemversion, App-Version und den Fehlerverlauf, ohne Name, E-Mail oder Bewertungen. Du wirst das im
+        Profil ausschalten können, und wir passen diese Erklärung vorher an.
+      </p>
+
+      <h2 class={h2}>6. Couchpilot Pro</h2>
+      <p>
+        Couchpilot Pro ist ein Abo, das über den App Store oder Google Play verkauft wird. Apple und Google verarbeiten
+        die Zahlung als eigene Verantwortliche. Den Abo-Status verwaltet RevenueCat (RevenueCat, Inc., USA) mit einer
+        zufälligen Kennung oder deiner Nutzer-ID. Zahlungsdaten sehen wir nie. Rechtsgrundlage: Art. 6 Abs. 1 lit. b
+        DSGVO.
+      </p>
+
+      <h2 class={h2}>7. Woher der Katalog kommt</h2>
+      <p>
+        Titel, Personen, Genres und Kritiker-Wertungen stammen aus Wikidata, Beschreibungen aus Wikipedia, Poster,
+        Nutzerwertungen und Trends von Trakt, die Streaming-Infos von der Streaming Availability API von Movie of the
+        Night. Diese Daten holt unser Server. Dein Gerät spricht nie direkt mit diesen Diensten, und sie erfahren nichts
+        über dich.
+      </p>
+
+      <h2 class={h2}>8. Links zu Anbietern</h2>
+      <p>
+        Wenn du auf einen Anbieter tippst, öffnet sich dessen App oder Website. Ab dann gelten deren Datenschutzregeln.
+        Manche Links können Affiliate-Links sein; der Anbieter erfährt dann, dass du über Couchpilot kamst. Von uns
+        enthalten sie keine personenbezogenen Daten.
+      </p>
+
+      <h2 class={h2}>9. Daten löschen</h2>
+      <p>
+        „Alle meine Daten löschen“ im Profil entfernt alles von diesem Gerät. Bist du angemeldet, löscht derselbe Schritt
+        auch dein Konto und alle Daten dazu auf unserem Server. Du kannst die Löschung auch per E-Mail verlangen:
+        <a href="mailto:info@endure-cycling.com" class="cp-accent">info@endure-cycling.com</a>.
+      </p>
+
+      <h2 class={h2}>10. Was wir nicht tun</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Keine Werbung, keine Analyse, keine Tracking-SDKs, keine Werbe-ID</li>
+        <li>Kein Verkauf und keine Weitergabe von Daten an Dritte für deren Zwecke</li>
+        <li>Kein Zugriff auf Kontakte, Fotos, Standort oder andere persönliche Inhalte</li>
+      </ul>
+
+      <h2 class={h2}>11. Auftragsverarbeiter und Übermittlung in Drittländer</h2>
+      <p>
+        Supabase (Supabase, Inc.) betreibt unsere Datenbank und Server-Funktionen in der EU (Frankfurt) als unser
+        Auftragsverarbeiter. RevenueCat und, falls später eingeschaltet, Sentry können Daten in den USA verarbeiten.
+        Soweit nötig, stützen wir uns auf die EU-Standardvertragsklauseln und die Auftragsverarbeitungsverträge der
+        Anbieter.
+      </p>
+
+      <h2 class={h2}>12. Deine Rechte</h2>
+      <p>
+        Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit sowie
+        das Recht, dich bei einer Aufsichtsbehörde zu beschweren (in Österreich: Datenschutzbehörde, dsb.gv.at).
+        Kontakt: <a href="mailto:info@endure-cycling.com" class="cp-accent">info@endure-cycling.com</a>.
+      </p>
+
+      <h2 class={h2}>13. Diese Website</h2>
+      <p>
+        Die Couchpilot-Seiten auf endure-cycling.com setzen keine Cookies und laden keine Analyse. Die Website liegt bei
+        GitHub Pages (GitHub, Inc., USA), das zur Auslieferung deine IP-Adresse verarbeitet.
+      </p>
+
+      <h2 class={h2}>14. Kinder</h2>
+      <p>Couchpilot richtet sich nicht an Kinder.</p>
+
+      <h2 class={h2}>15. Änderungen</h2>
+      <p>Wir können diese Erklärung anpassen. Das Datum oben zeigt die aktuelle Fassung.</p>
+    </div>
+  </main>
+</CouchpilotLayout>
