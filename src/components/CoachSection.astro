@@ -55,13 +55,35 @@ const steps = t.steps.map((step, i) => ({ ...step, ...shots[i] }));
                 <p>{step.body}</p>
                 <div class="coach-bar" aria-hidden="true"><i></i></div>
               </div>
-              <!-- Stacked layout (below lg, reduced motion): the screenshot under its step. -->
-              <button type="button" class="coach-mobile-shot" data-lightbox-src={`${step.app ? `/assets/app/${lang}` : dir}/${step.phone}`} data-lightbox-alt={step.imageAlt} aria-label={t.enlarge.replace('{name}', step.title)}>
-                <img src={`${step.app ? `/assets/app/${lang}` : dir}/${step.phone}`} alt="" width="720" height={step.h} loading="lazy" decoding="async" />
-              </button>
-              {step.progress && <button type="button" class="coach-mobile-shot" data-lightbox-src={`/assets/app/${lang}/ftp_detail.webp`} data-lightbox-alt={lang === 'de' ? 'FTP-Schätzung mit Verlauf und relevanten Fahrten' : 'FTP estimate with trend and contributing rides'} aria-label={lang === 'de' ? 'FTP-Ansicht vergrößern' : 'Enlarge FTP estimate'}>
-                <img src={`/assets/app/${lang}/ftp_detail.webp`} alt="" width="720" height="1600" loading="lazy" decoding="async" />
-              </button>}
+              <!-- Stacked layout (below lg, reduced motion): the step's composition under it,
+                   the same phone + card (or second phone) as the pinned frame. -->
+              <div class:list={['coach-mobile-comp', (step.card || step.quote || step.progress) && 'coach-mobile-comp--duo']}>
+                <button type="button" class="coach-mobile-shot" data-lightbox-src={`${step.app ? `/assets/app/${lang}` : dir}/${step.phone}`} data-lightbox-alt={step.imageAlt} aria-label={t.enlarge.replace('{name}', step.title)}>
+                  <img src={`${step.app ? `/assets/app/${lang}` : dir}/${step.phone}`} alt="" width="720" height={step.h} loading="lazy" decoding="async" />
+                </button>
+                {step.progress && <button type="button" class="coach-mobile-shot coach-mobile-shot--second" data-lightbox-src={`/assets/app/${lang}/ftp_detail.webp`} data-lightbox-alt={lang === 'de' ? 'FTP-Schätzung mit Verlauf und relevanten Fahrten' : 'FTP estimate with trend and contributing rides'} aria-label={lang === 'de' ? 'FTP-Ansicht vergrößern' : 'Enlarge FTP estimate'}>
+                  <img src={`/assets/app/${lang}/ftp_detail.webp`} alt="" width="720" height="1600" loading="lazy" decoding="async" />
+                </button>}
+                {(step.card || step.quote) && (
+                  <div class:list={['coach-mobile-card', step.card?.narrow && 'coach-mobile-card--narrow']} aria-hidden="true">
+                    {step.card && <img src={`${dir}/${step.card.img}`} alt="" width={step.card.w} height={step.card.h} loading="lazy" decoding="async" />}
+                    {step.quote === 'today' && (
+                      <div class="coach-quote">
+                        <small>{t.cards.today.label}</small>
+                        <p>{t.cards.today.text}</p>
+                        <span class="coach-quote-pill">● {t.cards.today.tag}</span>
+                      </div>
+                    )}
+                    {step.quote === 'review' && (
+                      <div class="coach-quote">
+                        <small>{t.cards.review.label}</small>
+                        <p>{t.cards.review.text}</p>
+                        <div class="coach-quote-tags">{t.cards.review.tags.map((tag) => <span>{tag}</span>)}</div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </li>
           ))}
         </ol>
@@ -143,21 +165,67 @@ const steps = t.steps.map((step, i) => ({ ...step, ...shots[i] }));
     max-width: 36rem;
   }
   .coach-bar { display: none; }
+  .coach-mobile-comp {
+    position: relative;
+    margin-top: 22px;
+    padding: 24px 0 28px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #17181a;
+    isolation: isolate;
+  }
+  .coach-mobile-comp::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(60% 50% at 40% 45%, rgb(194 85 43 / 0.28), transparent 70%);
+  }
   .coach-mobile-shot {
     display: block;
-    width: 100%;
-    margin-top: 22px;
-    padding: 24px 0;
-    border-radius: 16px;
-    background: #17181a;
-    cursor: zoom-in;
-  }
-  .coach-mobile-shot img {
     width: min(62%, 280px);
     margin-inline: auto;
+    cursor: zoom-in;
+  }
+  /* With a card or a second phone, the phone moves left to make room, as in the pinned frame. */
+  .coach-mobile-comp--duo .coach-mobile-shot { margin-left: 9%; width: min(56%, 260px); }
+  .coach-mobile-shot img {
+    width: 100%;
     border-radius: 26px;
     border: 7px solid #0b0b0c;
-    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08);
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08), 0 30px 60px -25px #000;
+  }
+  .coach-mobile-comp--duo .coach-mobile-shot--second {
+    position: absolute;
+    right: 6%;
+    top: 14%;
+    width: min(44%, 210px);
+    margin: 0;
+  }
+  .coach-mobile-shot--second img { border-width: 6px; border-radius: 22px; }
+  .coach-mobile-card {
+    position: absolute;
+    right: 4%;
+    bottom: 9%;
+    width: min(66%, 320px);
+    pointer-events: none;
+    filter: drop-shadow(0 24px 32px rgb(0 0 0 / 0.5));
+  }
+  .coach-mobile-card--narrow { width: min(52%, 250px); }
+  .coach-mobile-card img { width: 100%; border-radius: 16px; }
+  .coach-mobile-card .coach-quote { padding: 14px 16px; border-radius: 16px; }
+  .coach-mobile-card .coach-quote small { margin-bottom: 6px; font-size: 9px; }
+  .coach-mobile-card .coach-quote p { font-size: 13px; line-height: 1.4; }
+  .coach-mobile-card .coach-quote-pill { margin-top: 8px; padding: 3px 9px; font-size: 11px; }
+  .coach-mobile-card .coach-quote-tags { gap: 5px; margin-top: 9px; }
+  .coach-mobile-card .coach-quote-tags span { padding: 4px 7px; font-size: 11px; border-radius: 8px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .coach-mobile-card {
+      opacity: 0;
+      transform: translateX(24px) scale(0.97);
+      transition: opacity 0.5s ease 0.2s, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s;
+    }
+    .coach-mobile-comp.in .coach-mobile-card { opacity: 1; transform: none; }
   }
   .coach-frame { display: none; }
 
@@ -200,7 +268,7 @@ const steps = t.steps.map((step, i) => ({ ...step, ...shots[i] }));
     .coach-step.on .coach-step-title { color: var(--color-slate-900); }
     .coach-step.on .coach-step-n { opacity: 1; }
     .coach-step.on .coach-step-body { grid-template-rows: 1fr; }
-    .coach-mobile-shot { display: none; }
+    .coach-mobile-comp { display: none; }
 
     .coach-frame {
       display: block;
@@ -328,6 +396,19 @@ const steps = t.steps.map((step, i) => ({ ...step, ...shots[i] }));
       }));
     });
   });
+
+  // Stacked layout: each card pops out of its phone once the composition is on screen.
+  const mobileComps = document.querySelectorAll<HTMLElement>('#coach .coach-mobile-comp');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }), { threshold: 0.45 });
+    mobileComps.forEach((el) => io.observe(el));
+  } else {
+    mobileComps.forEach((el) => el.classList.add('in'));
+  }
 
   // Pinned chapters: the step whose share of the pinned scroll is current opens,
   // its bar fills with the scroll, the frame shows its composition.
